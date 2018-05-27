@@ -72,7 +72,7 @@ Vector3D Vector3D::CrossProduct(Vector3D& v3d)
 
 /* Operator overloading functions */
 
-Vector3D Vector3D::operator+(Vector3D v3d)
+Vector3D Vector3D::operator+(Vector3D& v3d)
 {
 	Vector3D newVector = Vector3D(x + v3d.x , y + v3d.y, z + v3d.z);
 	return newVector;
@@ -84,21 +84,7 @@ Vector3D Vector3D::operator+(float f)
 	return newVector;
 }
 
-// Should this be void??
-Vector3D Vector3D::operator+=(Vector3D v3d)
-{
-	*this = *this + v3d;
-	return NULL;
-}
-
-// Should this be void??
-Vector3D Vector3D::operator+=(float f)
-{
-	*this = *this + f;
-	return NULL;
-}
-
-Vector3D Vector3D::operator-(Vector3D v3d)
+Vector3D Vector3D::operator-(Vector3D& v3d)
 {
 	Vector3D newVector = Vector3D(x - v3d.x , y - v3d.y , z - v3d.z);
 	return newVector;
@@ -110,19 +96,7 @@ Vector3D Vector3D::operator-(float f)
 	return newVector;
 }
 
-Vector3D Vector3D::operator-=(Vector3D v3d)
-{
-	*this = *this - v3d;
-	return NULL;
-}
-
-Vector3D Vector3D::operator-=(float f)
-{
-	*this = *this - f;
-	return NULL;
-}
-
-Vector3D Vector3D::operator*(Vector3D v3d)
+Vector3D Vector3D::operator*(Vector3D& v3d)
 {
 	Vector3D newVector = Vector3D(x * v3d.x , y * v3d.y , z * v3d.z);
 	return newVector;
@@ -134,18 +108,8 @@ Vector3D Vector3D::operator*(float f)
 	return newVector;
 }
 
-Vector3D Vector3D::operator*=(Vector3D v3d)
-{
-	*this = *this * v3d;
-}
-
-Vector3D Vector3D::operator*=(float f)
-{
-	*this = *this * f;
-}
-
 // Might need to check this 
-Vector3D Vector3D::operator/(Vector3D v3d)
+Vector3D Vector3D::operator/(Vector3D& v3d)
 {
 	// this might not work
 	if (v3d.x == 0.0f || v3d.y == 0.0f || v3d.z == 0.0f) return NULL;
@@ -163,12 +127,69 @@ Vector3D Vector3D::operator/(float f)
 	return newVector;
 }
 
-Vector3D Vector3D::operator/=(Vector3D v3d)
+// Should this be void??
+Vector3D Vector3D::operator+=(Vector3D& v3d)
+{
+	*this = *this + v3d;
+	return NULL;
+}
+
+// Should this be void??
+Vector3D Vector3D::operator+=(float f)
+{
+	*this = *this + f;
+	return NULL;
+}
+
+Vector3D Vector3D::operator-=(Vector3D& v3d)
+{
+	*this = *this - v3d;
+	return NULL;
+}
+
+Vector3D Vector3D::operator-=(float f)
+{
+	*this = *this - f;
+	return NULL;
+}
+
+Vector3D Vector3D::operator*=(Vector3D& v3d)
+{
+	*this = *this * v3d;
+	return NULL;
+}
+
+Vector3D Vector3D::operator*=(float f)
+{
+	*this = *this * f;
+	return NULL;
+}
+
+Vector3D Vector3D::operator/=(Vector3D& v3d)
 {
 	*this = *this / v3d;
+	return NULL;
 }
 
 Vector3D Vector3D::operator/=(float f)
 {
 	*this = *this / f;
+	return NULL;
+}
+
+// not something we generally want to use 
+float Vector3D::operator[](int index)
+{
+	if (index < 0 || index > 2) return NULL;
+	else if (index == 0) return x;
+	else if (index == 1) return y;
+	else if (index == 2) return z;
+}
+
+std::ostream& operator<<(std::ostream& os , const Vector3D& v3d)
+{
+	os << "x: " << v3d.x << "\n"
+		<< "y: " << v3d.y << "\n"
+		<< "z: " << v3d.z;
+	return os;
 }

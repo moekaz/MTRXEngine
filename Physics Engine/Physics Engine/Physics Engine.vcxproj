@@ -115,10 +115,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\code\Mat3.cpp" />
     <ClCompile Include="source\code\Tester.cpp" />
     <ClCompile Include="source\code\Vector3D.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="source\headers\Mat3.h" />
     <ClInclude Include="source\headers\Vector3D.h" />
     <ClInclude Include="source\headers\RigidBody.h" />
   </ItemGroup>

@@ -3,6 +3,8 @@
 	Description: Rigid bodies implementation
 */
 
+#include <iostream>
+
 class RigidBody
 {
 public:
