@@ -23,10 +23,10 @@ Vector3D::~Vector3D() {}
 void Vector3D::Normalize()
 {
 	// Maybe we can normalize by using the squares instead of the actual magnitude that would be faster runtime-wise 
-	float magSqr = MagnitudeSquared();
-	x = (x * x) / magSqr;
-	y = (y * y) / magSqr;
-	z = (z * z) / magSqr;
+	float mag = Magnitude();
+	x = x / mag;
+	y = y / mag;
+	z = z / mag;
 }
 
 // Finding the magnitude of a vector

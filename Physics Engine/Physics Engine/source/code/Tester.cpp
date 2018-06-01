@@ -28,8 +28,7 @@ int main()
 	std::cout << mat1 << std::endl << std::endl;
 	std::cout << mat2 << std::endl << std::endl;
 
-
 	//just to hold the console open in vs studio
-	std::cin.get();
+	while (true) {}
 	return 0;
 }
