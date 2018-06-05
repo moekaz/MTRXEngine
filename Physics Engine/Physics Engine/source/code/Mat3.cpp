@@ -6,7 +6,7 @@
 #include "../headers/Mat3.h"
 
 // Constructor
-Mat3::Mat3(Vector3D& col1 , Vector3D& col2 , Vector3D& col3)
+Mat3::Mat3(Vector3D col1 , Vector3D col2 , Vector3D col3)
 {
 	matrix[0] = col1;
 	matrix[1] = col2;
@@ -68,15 +68,6 @@ Mat3 Mat3::AdjugateMatrix()
 
 /* Operator overloading */
 
-// Print the values of the matrix
-std::ostream& operator<<(std::ostream& os , Mat3& matrix)
-{
-	os << matrix[0].x << " , " << matrix[0].y << " , " << matrix[0].z << "\n" << matrix[1].x << " , " 
-		<< matrix[1].y << " , " << matrix[1].z << "\n" << matrix[2].x << " , " << matrix[2].y << " , "
-		<< matrix[2].z;
-	return os;
-}
-
 // Return a certain column of the matrix
 Vector3D& Mat3::operator[](int index)
 {
@@ -87,45 +78,40 @@ Vector3D& Mat3::operator[](int index)
 // Matrix addition 
 Mat3 Mat3::operator+(Mat3& mat)
 {
-	Vector3D col1 = matrix[0] + mat[0];
-	Vector3D col2 = matrix[1] + mat[1];
-	Vector3D col3 = matrix[2] + mat[2];
-
-	return Mat3(col1, col2, col3);
+	return Mat3((*this)[0] + mat[0], (*this)[1] + mat[1], (*this)[2] + mat[2]);
 }
 
 // Matrix Subtraction
 Mat3 Mat3::operator-(Mat3& mat)
 {
-	Vector3D col1 = matrix[0] - mat[0];
-	Vector3D col2 = matrix[1] - mat[1];
-	Vector3D col3 = matrix[2] - mat[2];
-	
-	return Mat3(col1, col2, col3);
+	return Mat3((*this)[0] - mat[0], (*this)[1] - mat[1], (*this)[2] - mat[2]);
 }
 
 // Matrix Multiplication
 Mat3 Mat3::operator*(Mat3& mat)
 {
-	Vector3D row1 = Vector3D(matrix[0].x, matrix[1].x, matrix[2].x);
-	Vector3D row2= Vector3D(matrix[0].y, matrix[1].y, matrix[2].y);
-	Vector3D row3 = Vector3D(matrix[0].z, matrix[1].z, matrix[2].z);
+	Vector3D col1 = Vector3D(mat[0].x, mat[1].x, mat[2].x);
+	Vector3D col2 = Vector3D(mat[0].y, mat[1].y, mat[2].y);
+	Vector3D col3 = Vector3D(mat[0].z, mat[1].z, mat[2].z);
+	
+	// Lets hope for some compiler optimizations
+	float a = ((*this)[0] * col1).x + ((*this)[0] * col1).y + ((*this)[0] * col1).z;
+	float b = ((*this)[0] * col2).x + ((*this)[0] * col2).y + ((*this)[0] * col2).z;
+	float c = ((*this)[0] * col3).x + ((*this)[0] * col3).y + ((*this)[0] * col3).z;
+	float d = ((*this)[1] * col1).x + ((*this)[1] * col1).y + ((*this)[1] * col1).z;
+	float e = ((*this)[1] * col2).x + ((*this)[1] * col2).y + ((*this)[1] * col2).z;
+	float f = ((*this)[1] * col3).x + ((*this)[1] * col3).y + ((*this)[1] * col3).z;
+	float g = ((*this)[2] * col1).x + ((*this)[2] * col1).y + ((*this)[2] * col1).z;
+	float h = ((*this)[2] * col2).x + ((*this)[2] * col2).y + ((*this)[2] * col2).z;
+	float i = ((*this)[2] * col3).x + ((*this)[2] * col3).y + ((*this)[2] * col3).z;
 
-	Vector3D col1 = row1 * mat[0];
-	Vector3D col2 = row2 * mat[1];
-	Vector3D col3 = row3 * mat[2];
-
-	return Mat3(col1, col2, col3);
+	return Mat3(a , b , c , d , e , f , g , h , i);
 }
 
 // Matrix by float multiplication
 Mat3 Mat3::operator*(float scalar)
 {
-	Vector3D col1 = matrix[0] * scalar;
-	Vector3D col2 = matrix[1] * scalar;
-	Vector3D col3 = matrix[2] * scalar;
-
-	return Mat3(col1 , col2 , col3);
+	return Mat3((*this)[0] * scalar, (*this)[1] * scalar, (*this)[2] * scalar);
 }
 
 // Matrix Division
@@ -169,4 +155,14 @@ Mat3 Mat3::operator/=(Mat3& mat)
 {
 	*this = *this / mat;
 	return  *this;
+}
+
+// Print the values of the matrix
+std::ostream& operator<<(std::ostream& os, const Mat3& mat)
+{
+	Mat3 mat1 = mat;
+	os << mat1[0].x << " , " << mat1[0].y << " , " << mat1[0].z << "\n" << mat1[1].x << " , "
+		<< mat1[1].y << " , " << mat1[1].z << "\n" << mat1[2].x << " , " << mat1[2].y << " , "
+		<< mat1[2].z;
+	return os;
 }

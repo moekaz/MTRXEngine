@@ -20,13 +20,17 @@ Vector3D::~Vector3D() {}
 /* Functions */
 
 // Normalization of a vector
-void Vector3D::Normalize()
+Vector3D Vector3D::Normalize()
 {
 	// Maybe we can normalize by using the squares instead of the actual magnitude that would be faster runtime-wise 
 	float mag = Magnitude();
+	if (mag == 0) return *this;
+
 	x = x / mag;
 	y = y / mag;
 	z = z / mag;
+
+	return *this;
 }
 
 // Finding the magnitude of a vector

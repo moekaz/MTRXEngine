@@ -21,7 +21,7 @@ public:
     ~Vector3D();															// Destructor
 
 	/* Functions */
-    void Normalize();														// Normalizes a 3DVector
+    Vector3D Normalize();													// Normalizes a 3DVector
     float Magnitude();														// Finds the Magnitude of a 3DVector
     float MagnitudeSquared();												// Finds the Magnitude squared of a 3DVector
 	Vector3D Difference(Vector3D&);											// Finds the difference Vector between 2 vectors
