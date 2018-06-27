@@ -9,7 +9,6 @@
 #include <iostream>
 #include "../headers/Vector3D.h"
 
-// Might need to implement this in a 2d float array instead since vector3's subscript operator is inefficient
 class Mat3
 {
 public:

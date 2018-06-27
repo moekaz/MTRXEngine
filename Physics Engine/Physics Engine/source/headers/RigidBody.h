@@ -3,19 +3,19 @@
 	Description: Rigid bodies implementation
 */
 
-#include <iostream>
+#ifndef RIGIDBODY_H
+#define RIGIDBODY_H
 
-class RigidBody
+class Rigidbody
 {
 public:
 	int mass;
 	
-
-	RigidBody();
-	~RigidBody();
+	Rigidbody();
+	~Rigidbody();
 private:
 
 protected:
 
 };
-
+#endif // RIGIDBODY_H

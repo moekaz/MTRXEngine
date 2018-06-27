@@ -24,6 +24,9 @@
     <ClCompile Include="source\code\Mat3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="source\code\Utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\headers\RigidBody.h">
