@@ -9,7 +9,7 @@
 #include <iostream>
 #include "../headers/Vector3D.h"
 
-//might need to implement this in a 2d float array instead since vector3's subscript operator is inefficient
+// Might need to implement this in a 2d float array instead since vector3's subscript operator is inefficient
 class Mat3
 {
 public:
@@ -25,7 +25,7 @@ public:
 	float Determinant();																// Find the determinant of the matrix
 
 	/* Operator Overloading */
-	friend std::ostream& operator<<(std::ostream& , const Mat3&);								// Print out values of the matrix
+	friend std::ostream& operator<<(std::ostream& , const Mat3&);						// Print out values of the matrix
 	Vector3D& operator[](int);															// Getting the rows as an array
 	Mat3 operator+(Mat3&);																// Adding 2 matrices		
 	Mat3 operator+=(Mat3&);																// Adding 2 matrices using +=

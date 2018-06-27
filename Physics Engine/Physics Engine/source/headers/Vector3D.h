@@ -8,14 +8,28 @@
 
 #include <iostream>
 
+
+
 class Vector3D
 {
 public:
 	/* Member variables */
-    float x;																// x position of the vector
-    float y;																// y position of the vector
-    float z;																// z position of the vector
-    
+    //float x;																// x position of the vector
+    //float y;																// y position of the vector
+    //float z;																// z position of the vector
+	
+	// Use a union to use either x y z values or an array for the values that way we can use regular vectors and also in arrays like matrices 
+	union
+	{
+		struct
+		{
+			float x;
+			float y;
+			float z;
+		};
+		float values[3];	// Array of 3 floats
+	};
+
 	/* Constructors and Destructors */
     Vector3D(float x = 0, float y = 0, float z = 0);						// all unused variables will be set to 0
     ~Vector3D();															// Destructor

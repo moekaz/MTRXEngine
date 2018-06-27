@@ -185,9 +185,7 @@ Vector3D Vector3D::operator/=(float f)
 float Vector3D::operator[](int index)
 {
 	if (index < 0 || index > 2) return NULL;
-	else if (index == 0) return x;
-	else if (index == 1) return y;
-	else if (index == 2) return z;
+	return values[index];
 }
 
 std::ostream& operator<<(std::ostream& os , const Vector3D& v3d)
