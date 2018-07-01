@@ -6,9 +6,10 @@
 #include "../headers/SphereCollider.h"
 
 /* Constructor */
-SphereCollider::SphereCollider(Vector3D center) : Collider(center)
+SphereCollider::SphereCollider(const Vector3D& center , float radius) : Collider(center)
 {
 	type = ColliderType::Sphere;
+	this->radius = radius;
 }
 
 /* Destructor */
@@ -33,16 +34,19 @@ bool SphereCollider::SphereCollision(Collider& col)
 // Sphere Box collision detection
 bool SphereCollider::BoxCollision(Collider&) 
 {
+	return false;
 }
 
 // Sphere capsule collision detection
 bool SphereCollider::CapsuleCollision(Collider&) 
 {
+	return false;
 }
 
 // Sphere mesh collision detection 
 bool SphereCollider::MeshCollision(Collider&) 
 {
+	return false;
 }
 
 // Print out values of the collider

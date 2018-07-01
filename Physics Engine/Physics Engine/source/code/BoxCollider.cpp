@@ -6,7 +6,7 @@
 #include "../headers/BoxCollider.h"
 
 /* Constructor */
-BoxCollider::BoxCollider() 
+BoxCollider::BoxCollider(const Vector3D& center) : Collider(center)
 {
 	type = ColliderType::Box;
 }

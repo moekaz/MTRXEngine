@@ -6,12 +6,14 @@
 #ifndef BOXCOLLIDER_H
 #define BOXCOLLIDER_H
 
+#include <iostream>
+
 #include "Collider.h"
 
 class BoxCollider : public Collider
 {
 public:
-	BoxCollider();
+	BoxCollider(const Vector3D& = Vector3D::zero);
 	~BoxCollider();
 
 	void Update();

@@ -17,19 +17,19 @@
 class SphereCollider : public Collider
 {
 public:
-	float radius;				// Radius of a sphere collider
+	float radius;																	// Radius of a sphere collider
 
-	SphereCollider(Vector3D vec = Vector3D());			// Constructor 
-	~SphereCollider();			// Destructor
+	SphereCollider(const Vector3D& vec = Vector3D::zero, float radius = 1);			// Constructor 
+	~SphereCollider();																// Destructor
 
-	void Update(const Vector3D&);				// Update collider values
-	friend std::ostream& operator<<(std::ostream& , const SphereCollider&);
+	void Update(const Vector3D&);													// Update collider values
+	friend std::ostream& operator<<(std::ostream& , const SphereCollider&);			// Print out values of the collider
 
 private:
 protected:
-	bool SphereCollision(Collider&);
-	bool BoxCollision(Collider&);
-	bool CapsuleCollision(Collider&);
-	bool MeshCollision(Collider&);
+	bool SphereCollision(Collider&);												// Sphere sphere collision detection
+	bool BoxCollision(Collider&);													// Sphere box collision detection
+	bool CapsuleCollision(Collider&);												// Sphere capsule collision detection
+	bool MeshCollision(Collider&);													// Sphere Mesh collision detection
 };
 #endif // SPHERECOLLIDER_H

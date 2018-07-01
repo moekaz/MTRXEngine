@@ -18,7 +18,7 @@ public:
 	~Mat3();	
 
 	/* Functions */
-	Mat3 InverseMatrix();															// Find the inverse matrix of this matrix
+	Mat3 InverseMatrix();																// Find the inverse matrix of this matrix
 	Mat3 Transpose();																	// Find the transpose of a matrix
 	Mat3 AdjugateMatrix();																// Find the adjugate of a matrix
 	float Determinant();																// Find the determinant of the matrix
