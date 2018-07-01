@@ -115,16 +115,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\code\BoxCollider.cpp" />
+    <ClCompile Include="source\code\Collider.cpp" />
     <ClCompile Include="source\code\Mat3.cpp" />
+    <ClCompile Include="source\code\SphereCollider.cpp" />
     <ClCompile Include="source\code\Tester.cpp" />
     <ClCompile Include="source\code\Utils.cpp" />
     <ClCompile Include="source\code\Vector3D.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="source\headers\BoxCollider.h" />
     <ClInclude Include="source\headers\Collider.h" />
+    <ClInclude Include="source\headers\Defs.h" />
     <ClInclude Include="source\headers\Mat3.h" />
+    <ClInclude Include="source\headers\MTRX.h" />
+    <ClInclude Include="source\headers\Rigidbody.h" />
+    <ClInclude Include="source\headers\SphereCollider.h" />
     <ClInclude Include="source\headers\Vector3D.h" />
-    <ClInclude Include="source\headers\RigidBody.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

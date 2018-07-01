@@ -6,6 +6,7 @@
 #include <iostream>
 #include "../headers/Vector3D.h"
 #include "../headers/Mat3.h"
+#include "../headers/SphereCollider.h"
 
 // Testing 3d vectors
 void VectorTesting()
@@ -143,8 +144,9 @@ void VectorTesting()
 void MatrixTesting()
 {
 	// Testing Mat3
-	Mat3 mat1 = Mat3(Vector3D(1 , 7 , 5) ,  Vector3D(-5 , 4 , 8) , Vector3D(10 , -2 , 2));
+	Mat3 mat1 = Mat3(Vector3D(1 , 7 , 5) , Vector3D(-5 , 4 , 8) , Vector3D(10 , -2 , 2));
 	Mat3 mat2 = Mat3(6 , 4 , 7 , -1 , -5 , 5 , 7 , 10 , 1);
+
 
 	std::cout << "Testing 3x3 matrices: " << std::endl;
 	std::cout << "---------------------" << std::endl << std::endl;
@@ -207,16 +209,31 @@ void MatrixTesting()
 
 	std::cout << "Dividing 3x3 matrices: " << std::endl << std::endl;
 
-	std::cout << mat1 / mat2 << std::endl << std::endl;
-	std::cout << mat2 / mat1 << std::endl << std::endl;
+	//std::cout << mat1 / mat2 << std::endl << std::endl;
+	//std::cout << mat2 / mat1 << std::endl << std::endl;
 }
 
+void SphereColliderTesting()
+{
+	int i = 300;
+	SphereCollider collider1 = SphereCollider();
+	SphereCollider collider2 = SphereCollider(Vector3D(30,0,0));
+
+	while (i > 0)
+	{
+		std::cout << "i: " << i << std::endl;
+		collider2.Update(collider2.center - Vector3D(1,0,0));
+		std::cout << collider2.CheckCollision(collider1) << std::endl;
+		i--;
+	}
+}
 
 int main()
 {
 	// Testing classes
 	VectorTesting();
 	MatrixTesting();
+	SphereColliderTesting();
 
 	//just to hold the console open in vs studio
 	while (true) {}

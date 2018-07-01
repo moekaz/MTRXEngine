@@ -6,7 +6,7 @@
 #include "../headers/Mat3.h"
 
 // Constructor
-Mat3::Mat3(Vector3D col1 , Vector3D col2 , Vector3D col3)
+Mat3::Mat3(const Vector3D& col1 , const Vector3D& col2 , const Vector3D& col3)
 {
 	matrix[0] = col1;
 	matrix[1] = col2;
@@ -29,7 +29,8 @@ Mat3::~Mat3(){}
 // Inverse of this 3x3 matrix
 Mat3 Mat3::InverseMatrix()
 {
-	return AdjugateMatrix() * (1 / Determinant());
+	if (Determinant() != 0) return AdjugateMatrix() * (1 / Determinant());
+	else return NULL;
 }
 
 // Finding the transpose of this 3x3 matrix
@@ -75,20 +76,25 @@ Vector3D& Mat3::operator[](int index)
 	return matrix[index];
 }
 
+const Vector3D& Mat3::operator[](int index) const
+{
+	return matrix[index];
+}
+
 // Matrix addition 
-Mat3 Mat3::operator+(Mat3& mat)
+Mat3 Mat3::operator+(const Mat3& mat)
 {
 	return Mat3((*this)[0] + mat[0], (*this)[1] + mat[1], (*this)[2] + mat[2]);
 }
 
 // Matrix Subtraction
-Mat3 Mat3::operator-(Mat3& mat)
+Mat3 Mat3::operator-(const Mat3& mat)
 {
 	return Mat3((*this)[0] - mat[0], (*this)[1] - mat[1], (*this)[2] - mat[2]);
 }
 
 // Matrix Multiplication
-Mat3 Mat3::operator*(Mat3& mat)
+Mat3 Mat3::operator*(const Mat3& mat)
 {
 	Vector3D col1 = Vector3D(mat[0][0], mat[1][0], mat[2][0]);
 	Vector3D col2 = Vector3D(mat[0][1], mat[1][1], mat[2][1]);
@@ -114,32 +120,35 @@ Mat3 Mat3::operator*(float scalar)
 	return Mat3((*this)[0] * scalar, (*this)[1] * scalar, (*this)[2] * scalar);
 }
 
+/*
 // Matrix Division
-Mat3 Mat3::operator/(Mat3& mat)
+Mat3 Mat3::operator/(const Mat3& mat)
 {
 	//use the inverse matrix to be able to do this A x B^-1
 	Mat3 inverse = mat.InverseMatrix();
 	return *this * inverse;
 }
+*/
 
 // Matrix += addition
-Mat3 Mat3::operator+=(Mat3& mat)
+Mat3 Mat3::operator+=(const Mat3& mat)
 {
 	*this = *this + mat;
 	return *this;
 }
 
 // Matrix -= subtraction
-Mat3 Mat3::operator-=(Mat3& mat)
+Mat3 Mat3::operator-=(const Mat3& mat)
 {
 	*this = *this - mat;
 	return *this;
 }
 
 // Matrix *= multiplication
-Mat3 Mat3::operator*=(Mat3& mat)
+Mat3 Mat3::operator*=(const Mat3& mat)
 {
 	*this = *this * mat;
+
 	return *this;
 }
 
@@ -150,19 +159,20 @@ Mat3 Mat3::operator*=(float scalar)
 	return *this;
 }
 
+/*
 // Matrix /= division
-Mat3 Mat3::operator/=(Mat3& mat)
+Mat3 Mat3::operator/=(const Mat3& mat)
 {
 	*this = *this / mat;
 	return  *this;
 }
+*/
 
 // Print the values of the matrix
 std::ostream& operator<<(std::ostream& os, const Mat3& mat)
 {
-	Mat3 mat1 = mat; // We have to make a copy then (cannot access a const)
-	os << mat1[0][0] << " , " << mat1[0][1] << " , " << mat1[0][2] << "\n" << mat1[1][0] << " , "
-		<< mat1[1][1] << " , " << mat1[1][2] << "\n" << mat1[2][0] << " , " << mat1[2][1] << " , "
-		<< mat1[2][2];
+	os << mat[0][0] << " , " << mat[0][1] << " , " << mat[0][2] << "\n" << mat[1][0] << " , "
+		<< mat[1][1] << " , " << mat[1][2] << "\n" << mat[2][0] << " , " << mat[2][1] << " , "
+		<< mat[2][2];
 	return os;
 }
