@@ -7,6 +7,9 @@
 #define SPHERECOLLIDER_H
 
 #include "Collider.h"
+#include "BoxCollider.h"
+//#include "CapsuleCollider.h"
+//#include "MeshCollider.h"
 
 class SphereCollider : Collider
 {
@@ -15,13 +18,12 @@ public:
 	~SphereCollider();			// Destructor
 
 	void Update();				// Update collider values
-	bool CheckCollision();		// Check for collision
 
-	// These might need to be virtual functions as they could have the same implementation
-	void CollisionEnter();		// Check whether we entered collsiion
-	void CollisionStay();		// Check whether we are still in collision	
-	void CollisionExit();		// Check whether we have exited collision
 private:
 protected:
+	bool SphereCollision(Collider&);
+	bool BoxCollision(Collider&);
+	bool CapsuleCollision(Collider&);
+	bool MeshCollision(Collider&);
 };
 #endif // SPHERECOLLIDER_H

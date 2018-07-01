@@ -1,24 +1,38 @@
 /*
-	Author: mohamed kazma
+	Author: Mohamed Kazma
 	Description: implementation of a sphere collider
 */
 
 #include "../headers/SphereCollider.h"
 
 /* Constructor */
-SphereCollider::SphereCollider() {}
+SphereCollider::SphereCollider() 
+{
+	type = ColliderType::Sphere;
+}
 
 /* Destructor */
 SphereCollider::~SphereCollider() {}
 
 /* Functions */
 
-void SphereCollider::Update() {}
+void SphereCollider::Update() 
+{
+}
 
-bool SphereCollider::CheckCollision() { return false; }
+bool SphereCollider::SphereCollision(Collider&) 
+{
+}
 
-void SphereCollider::CollisionEnter() {}
+bool SphereCollider::BoxCollision(Collider&) 
+{
+}
 
-void SphereCollider::CollisionStay() {}
+bool SphereCollider::CapsuleCollision(Collider&) 
+{
+}
 
-void SphereCollider::CollisionExit() {}
+bool SphereCollider::MeshCollision(Collider&) 
+{
+}
+

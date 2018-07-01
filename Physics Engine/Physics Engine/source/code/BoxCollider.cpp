@@ -1,11 +1,15 @@
 /*
-	Author: mohamed kazma
+	Author: Mohamed Kazma
 	Description: Implementation of a box collider
 */
+
 #include "../headers/BoxCollider.h"
 
 /* Constructor */
-BoxCollider::BoxCollider() {}
+BoxCollider::BoxCollider() 
+{
+	type = ColliderType::Box;
+}
 
 /* Destructor */
 BoxCollider::~BoxCollider() {}

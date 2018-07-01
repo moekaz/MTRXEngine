@@ -13,7 +13,7 @@ class Mat3
 {
 public:
 	/* Constructors and Destructors */
-	Mat3(Vector3D , Vector3D , Vector3D);
+	Mat3(Vector3D row1 = Vector3D() , Vector3D row2 = Vector3D() , Vector3D row3 = Vector3D());
 	Mat3(float x1 = 0 , float y1 = 0 , float z1 = 0 , float x2 = 0 , float y2 = 0 , float z2 = 0 , float x3 = 0 , float y3 = 0 , float z3 = 0); 
 	~Mat3();	
 
