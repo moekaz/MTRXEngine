@@ -76,19 +76,19 @@ Vector3D& Mat3::operator[](int index)
 }
 
 // Matrix addition 
-Mat3 Mat3::operator+(Mat3& mat)
+Mat3 Mat3::operator+(const Mat3& mat)
 {
 	return Mat3((*this)[0] + mat[0], (*this)[1] + mat[1], (*this)[2] + mat[2]);
 }
 
 // Matrix Subtraction
-Mat3 Mat3::operator-(Mat3& mat)
+Mat3 Mat3::operator-(const Mat3& mat)
 {
 	return Mat3((*this)[0] - mat[0], (*this)[1] - mat[1], (*this)[2] - mat[2]);
 }
 
 // Matrix Multiplication
-Mat3 Mat3::operator*(Mat3& mat)
+Mat3 Mat3::operator*(const Mat3& mat)
 {
 	Vector3D col1 = Vector3D(mat[0][0], mat[1][0], mat[2][0]);
 	Vector3D col2 = Vector3D(mat[0][1], mat[1][1], mat[2][1]);

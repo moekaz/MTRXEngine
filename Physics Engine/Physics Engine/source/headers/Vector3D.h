@@ -38,21 +38,21 @@ public:
 
     /* Operator overloading */
 	friend std::ostream& operator<<(std::ostream&, const Vector3D&);		// Operator overloading to print out a 3d vector (just like a toString())
-	Vector3D operator+(Vector3D&);											// Adding 2 3d vectors
+	Vector3D operator+(const Vector3D&);											// Adding 2 3d vectors
 	Vector3D operator+(float);												// Adding a float to a 3d vector
-	Vector3D operator+=(Vector3D&);											// Adding 2 3d vectors using +=
+	Vector3D operator+=(const Vector3D&);											// Adding 2 3d vectors using +=
 	Vector3D operator+=(float);												// Adding a float to a 3d vector using +=
-	Vector3D operator-(Vector3D&);											// Subtracting 2 3d vectors
+	Vector3D operator-(const Vector3D&);											// Subtracting 2 3d vectors
 	Vector3D operator-(float);												// Subtracting a float from a 3d vector 
-	Vector3D operator-=(Vector3D&);											// Subtracting 2 3d vectors using -=
+	Vector3D operator-=(const Vector3D&);											// Subtracting 2 3d vectors using -=
 	Vector3D operator-=(float);												// Subtracting a float from a 3d vector using -= 
-	Vector3D operator*(Vector3D&);											// Multiplying 2 3d vectors
+	Vector3D operator*(const Vector3D&);											// Multiplying 2 3d vectors
 	Vector3D operator*(float);												// Multiplying a 3d vector by a float
-	Vector3D operator*=(Vector3D&);											// Multiplying 2 3d vectors using *=
+	Vector3D operator*=(const Vector3D&);											// Multiplying 2 3d vectors using *=
 	Vector3D operator*=(float);												// Multiplying a 3d vector by a float using *=
-	Vector3D operator/(Vector3D&);											// Dividing 2 3d vectors
+	Vector3D operator/(const Vector3D&);											// Dividing 2 3d vectors
 	Vector3D operator/(float);												// Dividing a 3d vector by a float
-	Vector3D operator/=(Vector3D&);											// Dividing 2 3d vectors using /=
+	Vector3D operator/=(const Vector3D&);											// Dividing 2 3d vectors using /=
 	Vector3D operator/=(float);												// Dividing a 3d vector by a float using /=
 	float operator[](int);													// Get the values of the vector like an array
 

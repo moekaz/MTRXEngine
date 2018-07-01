@@ -6,18 +6,24 @@
 #ifndef SPHERECOLLIDER_H
 #define SPHERECOLLIDER_H
 
+#include <iostream>
+
+#include "Vector3D.h"
 #include "Collider.h"
 #include "BoxCollider.h"
 //#include "CapsuleCollider.h"
 //#include "MeshCollider.h"
 
-class SphereCollider : Collider
+class SphereCollider : public Collider
 {
 public:
-	SphereCollider();			// Constructor 
+	float radius;				// Radius of a sphere collider
+
+	SphereCollider(Vector3D vec = Vector3D());			// Constructor 
 	~SphereCollider();			// Destructor
 
-	void Update();				// Update collider values
+	void Update(const Vector3D&);				// Update collider values
+	friend std::ostream& operator<<(std::ostream& , const SphereCollider&);
 
 private:
 protected:

@@ -76,7 +76,7 @@ Vector3D Vector3D::CrossProduct(Vector3D& v3d)
 
 /* Operator overloading functions */
 
-Vector3D Vector3D::operator+(Vector3D& v3d)
+Vector3D Vector3D::operator+(const Vector3D& v3d)
 {
 	Vector3D newVector = Vector3D(x + v3d.x , y + v3d.y, z + v3d.z);
 	return newVector;

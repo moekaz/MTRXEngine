@@ -26,16 +26,16 @@ public:
 	/* Operator Overloading */
 	friend std::ostream& operator<<(std::ostream& , const Mat3&);						// Print out values of the matrix
 	Vector3D& operator[](int);															// Getting the rows as an array
-	Mat3 operator+(Mat3&);																// Adding 2 matrices		
-	Mat3 operator+=(Mat3&);																// Adding 2 matrices using +=
-	Mat3 operator-(Mat3&);																// Subtracting 2 matrices
-	Mat3 operator-=(Mat3&);																// Subtracting 2 matrices using -=
-	Mat3 operator*(Mat3&);																// Multiplying 2 matrices
+	Mat3 operator+(const Mat3&);																// Adding 2 matrices		
+	Mat3 operator+=(const Mat3&);																// Adding 2 matrices using +=
+	Mat3 operator-(const Mat3&);																// Subtracting 2 matrices
+	Mat3 operator-=(const Mat3&);																// Subtracting 2 matrices using -=
+	Mat3 operator*(const Mat3&);																// Multiplying 2 matrices
 	Mat3 operator*(float);																// Multiplying a matrix by a float
-	Mat3 operator*=(Mat3&);																// Multiplying 2 matrices using *=
+	Mat3 operator*=(const Mat3&);																// Multiplying 2 matrices using *=
 	Mat3 operator*=(float);																// Multiplying a matrix by a float *=
-	Mat3 operator/(Mat3&);																// Does division exist for matrices?
-	Mat3 operator/=(Mat3&);																// Same using /=
+	Mat3 operator/(const Mat3&);																// Does division exist for matrices?
+	Mat3 operator/=(const Mat3&);																// Same using /=
 
 private:
 	/* Member Variables */

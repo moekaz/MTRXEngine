@@ -6,6 +6,7 @@
 #include <iostream>
 #include "../headers/Vector3D.h"
 #include "../headers/Mat3.h"
+#include "../headers/SphereCollider.h"
 
 // Testing 3d vectors
 void VectorTesting()
@@ -211,12 +212,26 @@ void MatrixTesting()
 	std::cout << mat2 / mat1 << std::endl << std::endl;
 }
 
+void SphereColliderTesting()
+{
+	int i = 300;
+	SphereCollider collider1 = SphereCollider();
+	SphereCollider collider2 = SphereCollider(Vector3D(30,0,0));
+
+	while (i > 0)
+	{
+		collider2.Update(collider2.center - Vector3D(1,0,0));
+		std::cout << collider2.CheckCollision(collider1) << std::endl;
+		i--;
+	}
+}
 
 int main()
 {
 	// Testing classes
 	VectorTesting();
 	MatrixTesting();
+	SphereColliderTesting();
 
 	//just to hold the console open in vs studio
 	while (true) {}

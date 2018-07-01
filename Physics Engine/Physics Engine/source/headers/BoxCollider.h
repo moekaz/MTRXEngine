@@ -8,7 +8,7 @@
 
 #include "Collider.h"
 
-class BoxCollider : Collider
+class BoxCollider : public Collider
 {
 public:
 	BoxCollider();
@@ -16,10 +16,6 @@ public:
 
 	void Update();
 	bool CheckCollision();
-	
-	void CollisionEnter();
-	void CollisionStay();
-	void CollisionExit();
 
 private:
 protected:

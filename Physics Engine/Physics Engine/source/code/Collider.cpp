@@ -53,7 +53,31 @@ bool Collider::CheckCollision(Collider& col)
 		{
 			// If shit hits the fan
 			std::cout << "Houston we have a problem" << std::endl;
+			isColliding = false; 
 		}
+	}
+	
+	// Do some checks on what is the state of the collision
+	if (isColliding)
+	{
+		if (enteredCollision)
+		{
+			enteredCollision = false;	// Entering collision only happens on one frame
+			stillColliding = true;		// Still in collision
+		}
+		else if (!stillColliding)
+		{
+			enteredCollision = true;
+		}
+	}
+	else
+	{
+		if (exitedCollision) exitedCollision = false;	// exiting collision only occurs once
+		else if (stillColliding || enteredCollision) exitedCollision = true;
+
+		// reset the values
+		enteredCollision = false;
+		stillColliding = false;
 	}
 
 	return isColliding;
@@ -62,15 +86,22 @@ bool Collider::CheckCollision(Collider& col)
 // Checking for whether we just entered collision
 bool Collider::CollisionEnter()
 {
+	return false;
 }
 
 // Checking for whether we just exited collision
 bool Collider::CollisionExit()
 {
+	return false;
 }
 
 // Checking for whether we are staying in collision
 bool Collider::CollisionStay()
 {
+	return false;
 }
 
+std::ostream& operator<<(std::ostream& os , const Collider& col)
+{
+	return os;
+}

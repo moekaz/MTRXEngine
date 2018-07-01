@@ -1,6 +1,84 @@
-﻿  Mat3.cpp
-  Tester.cpp
-  Utils.cpp
+﻿  BoxCollider.cpp
+  Mat3.cpp
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(80): error C2511: 'Mat3 Mat3::operator +(Mat3 &)': overloaded member function not found in 'Mat3'
+  c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\headers\mat3.h(13): note: see declaration of 'Mat3'
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(81): error C2671: 'Mat3::+': static member functions do not have 'this' pointers
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(81): error C2512: 'Mat3': no appropriate default constructor available
+  c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(81): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(86): error C2511: 'Mat3 Mat3::operator -(Mat3 &)': overloaded member function not found in 'Mat3'
+  c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\headers\mat3.h(13): note: see declaration of 'Mat3'
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(87): error C2671: 'Mat3::-': static member functions do not have 'this' pointers
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(87): error C2512: 'Mat3': no appropriate default constructor available
+  c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(87): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(92): error C2511: 'Mat3 Mat3::operator *(Mat3 &)': overloaded member function not found in 'Mat3'
+  c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\headers\mat3.h(13): note: see declaration of 'Mat3'
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(98): error C2671: 'Mat3::*': static member functions do not have 'this' pointers
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(99): error C2671: 'Mat3::*': static member functions do not have 'this' pointers
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(100): error C2671: 'Mat3::*': static member functions do not have 'this' pointers
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(101): error C2671: 'Mat3::*': static member functions do not have 'this' pointers
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(102): error C2671: 'Mat3::*': static member functions do not have 'this' pointers
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(103): error C2671: 'Mat3::*': static member functions do not have 'this' pointers
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(104): error C2671: 'Mat3::*': static member functions do not have 'this' pointers
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(105): error C2671: 'Mat3::*': static member functions do not have 'this' pointers
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(106): error C2671: 'Mat3::*': static member functions do not have 'this' pointers
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(119): error C2511: 'Mat3 Mat3::operator /(Mat3 &)': overloaded member function not found in 'Mat3'
+  c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\headers\mat3.h(13): note: see declaration of 'Mat3'
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(122): error C2671: 'Mat3::/': static member functions do not have 'this' pointers
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(127): error C2511: 'Mat3 Mat3::operator +=(Mat3 &)': overloaded member function not found in 'Mat3'
+  c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\headers\mat3.h(13): note: see declaration of 'Mat3'
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(128): error C2671: 'Mat3::+=': static member functions do not have 'this' pointers
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(129): error C2671: 'Mat3::+=': static member functions do not have 'this' pointers
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(134): error C2511: 'Mat3 Mat3::operator -=(Mat3 &)': overloaded member function not found in 'Mat3'
+  c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\headers\mat3.h(13): note: see declaration of 'Mat3'
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(135): error C2671: 'Mat3::-=': static member functions do not have 'this' pointers
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(136): error C2671: 'Mat3::-=': static member functions do not have 'this' pointers
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(141): error C2511: 'Mat3 Mat3::operator *=(Mat3 &)': overloaded member function not found in 'Mat3'
+  c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\headers\mat3.h(13): note: see declaration of 'Mat3'
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(142): error C2671: 'Mat3::*=': static member functions do not have 'this' pointers
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(143): error C2671: 'Mat3::*=': static member functions do not have 'this' pointers
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(155): error C2511: 'Mat3 Mat3::operator /=(Mat3 &)': overloaded member function not found in 'Mat3'
+  c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\headers\mat3.h(13): note: see declaration of 'Mat3'
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(156): error C2671: 'Mat3::/=': static member functions do not have 'this' pointers
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\mat3.cpp(157): error C2671: 'Mat3::/=': static member functions do not have 'this' pointers
+  SphereCollider.cpp
   Vector3D.cpp
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\vector3d.cpp(92): error C2511: 'Vector3D Vector3D::operator -(Vector3D &)': overloaded member function not found in 'Vector3D'
+  c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\headers\vector3d.h(12): note: see declaration of 'Vector3D'
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\vector3d.cpp(93): error C2597: illegal reference to non-static member 'Vector3D::<unnamed-tag>::x'
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\vector3d.cpp(93): error C3867: 'Vector3D::<unnamed-tag>::x': non-standard syntax; use '&' to create a pointer to member
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\vector3d.cpp(93): error C2597: illegal reference to non-static member 'Vector3D::<unnamed-tag>::y'
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\vector3d.cpp(93): error C3867: 'Vector3D::<unnamed-tag>::y': non-standard syntax; use '&' to create a pointer to member
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\vector3d.cpp(93): error C2597: illegal reference to non-static member 'Vector3D::<unnamed-tag>::z'
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\vector3d.cpp(93): error C3867: 'Vector3D::<unnamed-tag>::z': non-standard syntax; use '&' to create a pointer to member
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\vector3d.cpp(104): error C2511: 'Vector3D Vector3D::operator *(Vector3D &)': overloaded member function not found in 'Vector3D'
+  c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\headers\vector3d.h(12): note: see declaration of 'Vector3D'
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\vector3d.cpp(105): error C2597: illegal reference to non-static member 'Vector3D::<unnamed-tag>::x'
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\vector3d.cpp(105): error C3867: 'Vector3D::<unnamed-tag>::x': non-standard syntax; use '&' to create a pointer to member
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\vector3d.cpp(105): error C2597: illegal reference to non-static member 'Vector3D::<unnamed-tag>::y'
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\vector3d.cpp(105): error C3867: 'Vector3D::<unnamed-tag>::y': non-standard syntax; use '&' to create a pointer to member
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\vector3d.cpp(105): error C2597: illegal reference to non-static member 'Vector3D::<unnamed-tag>::z'
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\vector3d.cpp(105): error C3867: 'Vector3D::<unnamed-tag>::z': non-standard syntax; use '&' to create a pointer to member
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\vector3d.cpp(117): error C2511: 'Vector3D Vector3D::operator /(Vector3D &)': overloaded member function not found in 'Vector3D'
+  c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\headers\vector3d.h(12): note: see declaration of 'Vector3D'
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\vector3d.cpp(121): error C2597: illegal reference to non-static member 'Vector3D::<unnamed-tag>::x'
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\vector3d.cpp(121): error C3867: 'Vector3D::<unnamed-tag>::x': non-standard syntax; use '&' to create a pointer to member
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\vector3d.cpp(121): error C2597: illegal reference to non-static member 'Vector3D::<unnamed-tag>::y'
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\vector3d.cpp(121): error C3867: 'Vector3D::<unnamed-tag>::y': non-standard syntax; use '&' to create a pointer to member
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\vector3d.cpp(121): error C2597: illegal reference to non-static member 'Vector3D::<unnamed-tag>::z'
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\vector3d.cpp(121): error C3867: 'Vector3D::<unnamed-tag>::z': non-standard syntax; use '&' to create a pointer to member
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\vector3d.cpp(136): error C2511: 'Vector3D Vector3D::operator +=(Vector3D &)': overloaded member function not found in 'Vector3D'
+  c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\headers\vector3d.h(12): note: see declaration of 'Vector3D'
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\vector3d.cpp(137): error C2671: 'Vector3D::+=': static member functions do not have 'this' pointers
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\vector3d.cpp(149): error C2511: 'Vector3D Vector3D::operator -=(Vector3D &)': overloaded member function not found in 'Vector3D'
+  c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\headers\vector3d.h(12): note: see declaration of 'Vector3D'
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\vector3d.cpp(150): error C2671: 'Vector3D::-=': static member functions do not have 'this' pointers
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\vector3d.cpp(161): error C2511: 'Vector3D Vector3D::operator *=(Vector3D &)': overloaded member function not found in 'Vector3D'
+  c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\headers\vector3d.h(12): note: see declaration of 'Vector3D'
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\vector3d.cpp(162): error C2671: 'Vector3D::*=': static member functions do not have 'this' pointers
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\vector3d.cpp(173): error C2511: 'Vector3D Vector3D::operator /=(Vector3D &)': overloaded member function not found in 'Vector3D'
+  c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\headers\vector3d.h(12): note: see declaration of 'Vector3D'
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\vector3d.cpp(174): error C2671: 'Vector3D::/=': static member functions do not have 'this' pointers
   Generating Code...
-  Physics Engine.vcxproj -> C:\Users\mohamed\Desktop\PhysicsEngine\Physics Engine\Debug\Physics Engine.exe
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\spherecollider.cpp(41): error C4716: 'SphereCollider::CapsuleCollision': must return a value
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\spherecollider.cpp(36): error C4716: 'SphereCollider::BoxCollision': must return a value
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\spherecollider.cpp(46): error C4716: 'SphereCollider::MeshCollision': must return a value
