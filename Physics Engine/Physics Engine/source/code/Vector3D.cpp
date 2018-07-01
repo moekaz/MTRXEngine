@@ -6,6 +6,9 @@
 #include <cmath>
 #include "../headers/Vector3D.h"
 
+// Setting up the zero vector
+Vector3D Vector3D::zero = Vector3D();
+
 // Constructor
 Vector3D::Vector3D(float x, float y, float z)
 {
@@ -88,7 +91,7 @@ Vector3D Vector3D::operator+(float f)
 	return newVector;
 }
 
-Vector3D Vector3D::operator-(Vector3D& v3d)
+Vector3D Vector3D::operator-(const Vector3D& v3d)
 {
 	Vector3D newVector = Vector3D(x - v3d.x , y - v3d.y , z - v3d.z);
 	return newVector;
@@ -100,7 +103,7 @@ Vector3D Vector3D::operator-(float f)
 	return newVector;
 }
 
-Vector3D Vector3D::operator*(Vector3D& v3d)
+Vector3D Vector3D::operator*(const Vector3D& v3d)
 {
 	Vector3D newVector = Vector3D(x * v3d.x , y * v3d.y , z * v3d.z);
 	return newVector;
@@ -113,7 +116,7 @@ Vector3D Vector3D::operator*(float f)
 }
 
 // Might need to check this 
-Vector3D Vector3D::operator/(Vector3D& v3d)
+Vector3D Vector3D::operator/(const Vector3D& v3d)
 {
 	// this might not work
 	if (v3d.x == 0.0f || v3d.y == 0.0f || v3d.z == 0.0f) return NULL;
@@ -132,7 +135,7 @@ Vector3D Vector3D::operator/(float f)
 }
 
 // Should this be void??
-Vector3D Vector3D::operator+=(Vector3D& v3d)
+Vector3D Vector3D::operator+=(const Vector3D& v3d)
 {
 	*this = *this + v3d;
 	return NULL;
@@ -145,7 +148,7 @@ Vector3D Vector3D::operator+=(float f)
 	return NULL;
 }
 
-Vector3D Vector3D::operator-=(Vector3D& v3d)
+Vector3D Vector3D::operator-=(const Vector3D& v3d)
 {
 	*this = *this - v3d;
 	return NULL;
@@ -157,7 +160,7 @@ Vector3D Vector3D::operator-=(float f)
 	return NULL;
 }
 
-Vector3D Vector3D::operator*=(Vector3D& v3d)
+Vector3D Vector3D::operator*=(const Vector3D& v3d)
 {
 	*this = *this * v3d;
 	return NULL;
@@ -169,7 +172,7 @@ Vector3D Vector3D::operator*=(float f)
 	return NULL;
 }
 
-Vector3D Vector3D::operator/=(Vector3D& v3d)
+Vector3D Vector3D::operator/=(const Vector3D& v3d)
 {
 	*this = *this / v3d;
 	return NULL;
@@ -181,10 +184,15 @@ Vector3D Vector3D::operator/=(float f)
 	return NULL;
 }
 
-// not something we generally want to use 
 float Vector3D::operator[](int index)
 {
 	if (index < 0 || index > 2) return NULL;
+	return values[index];
+}
+
+// Fpr consts
+float Vector3D::operator[](int index) const
+{
 	return values[index];
 }
 
