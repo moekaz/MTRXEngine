@@ -8,7 +8,13 @@
 
 #include <iostream>
 
+#include "Vector3D.h"
 #include "Collider.h"
+#include "CollisionUtil.h"
+
+class SphereCollider;
+class CapsuleCollider;
+class MeshCollider;
 
 class BoxCollider : public Collider
 {

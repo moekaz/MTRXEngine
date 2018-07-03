@@ -7,6 +7,7 @@
 #define VECTOR3D_H
 
 #include <iostream>
+#include <cmath>
 
 class Vector3D
 {

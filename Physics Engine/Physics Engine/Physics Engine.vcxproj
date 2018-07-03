@@ -117,6 +117,7 @@
   <ItemGroup>
     <ClCompile Include="source\code\BoxCollider.cpp" />
     <ClCompile Include="source\code\Collider.cpp" />
+    <ClCompile Include="source\code\CollisionUtil.cpp" />
     <ClCompile Include="source\code\Mat3.cpp" />
     <ClCompile Include="source\code\SphereCollider.cpp" />
     <ClCompile Include="source\code\Tester.cpp" />
@@ -126,6 +127,7 @@
   <ItemGroup>
     <ClInclude Include="source\headers\BoxCollider.h" />
     <ClInclude Include="source\headers\Collider.h" />
+    <ClInclude Include="source\headers\CollisionUtil.h" />
     <ClInclude Include="source\headers\Defs.h" />
     <ClInclude Include="source\headers\Mat3.h" />
     <ClInclude Include="source\headers\MTRX.h" />

@@ -3,7 +3,6 @@
     Description: Cpp for implemnenating a 3D vector's functionality
 */
 
-#include <cmath>
 #include "../headers/Vector3D.h"
 
 // Setting up the zero vector

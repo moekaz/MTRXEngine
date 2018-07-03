@@ -5,10 +5,8 @@
 
 #include "../headers/Collider.h"
 
-#include <iostream>
-
 /* Constructor */
-Collider::Collider(const Vector3D vec)
+Collider::Collider(const Vector3D& vec)
 {	
 	enabled = true;					// Is the collider turned on 
 	trigger = false;				// Is it a trigger collider
@@ -24,43 +22,9 @@ Collider::~Collider() {}
 
 /* Functions */
 
-// Collision detection checks for colliders
-bool Collider::CheckCollision(Collider& col)
+// Update collision info 
+void Collider::UpdateCollisionInfo()
 {
-	switch (col.type) 
-	{
-		case ColliderType::Sphere: 
-		{
-			std::cout << "checking collision with sphere" << std::endl;	// Check collision with sphere (use static casts unfortunately)
-			isColliding = SphereCollision(col);
-			break;
-		}
-		case ColliderType::Box:
-		{
-			std::cout << "checking collision with box collider" << std::endl;
-			isColliding = BoxCollision(col);
-			break;
-		}
-		case ColliderType::Capsule:
-		{
-			std::cout << "checking collision with capsule collider" << std::endl;
-			isColliding = CapsuleCollision(col);
-			break;
-		}
-		case ColliderType::Mesh:
-		{
-			std::cout << "checking collision with a mesh collider" << std::endl;
-			isColliding = CapsuleCollision(col);
-			break;
-		}
-		default: 
-		{
-			// If shit hits the fan
-			std::cout << "Houston we have a problem" << std::endl;
-			isColliding = false; 
-		}
-	}
-	
 	// Do some checks on what is the state of the collision
 	if (isColliding)
 	{
@@ -83,8 +47,6 @@ bool Collider::CheckCollision(Collider& col)
 		enteredCollision = false;
 		stillColliding = false;
 	}
-
-	return isColliding;
 }
 
 // Checking for whether we just entered collision

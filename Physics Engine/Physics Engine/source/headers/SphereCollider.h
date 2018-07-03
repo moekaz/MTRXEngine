@@ -10,9 +10,11 @@
 
 #include "Vector3D.h"
 #include "Collider.h"
-#include "BoxCollider.h"
-//#include "CapsuleCollider.h"
-//#include "MeshCollider.h"
+#include "CollisionUtil.h"
+
+class BoxCollider;
+class CapsulesCollider;
+class MeshCollider;
 
 class SphereCollider : public Collider
 {
@@ -25,11 +27,9 @@ public:
 	void Update(const Vector3D&);													// Update collider values
 	friend std::ostream& operator<<(std::ostream& , const SphereCollider&);			// Print out values of the collider
 
+	bool CheckCollision(Collider&);													// Sphere collision detection
+
 private:
 protected:
-	bool SphereCollision(Collider&);												// Sphere sphere collision detection
-	bool BoxCollision(Collider&);													// Sphere box collision detection
-	bool CapsuleCollision(Collider&);												// Sphere capsule collision detection
-	bool MeshCollision(Collider&);													// Sphere Mesh collision detection
 };
 #endif // SPHERECOLLIDER_H
