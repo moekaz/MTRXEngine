@@ -25,7 +25,7 @@ public:
 		float values[3];													// Array of 3 floats
 	};
 
-	static Vector3D zero;
+	static Vector3D zero;													// Some static zero vector that is used for default parameters and for lazy people who want a zero vector
 
 	/* Constructors and Destructors */
     Vector3D(float x = 0, float y = 0, float z = 0);						// All unused variables will be set to 0
@@ -59,6 +59,7 @@ public:
 	Vector3D operator/=(float);												// Dividing a 3d vector by a float using /=
 	float operator[](int);													// Get the values of the vector like an array
 	float operator[](int) const;											// For consts
+	bool operator == (const Vector3D&);										// Checking for equality between vectors
 
 private:
 

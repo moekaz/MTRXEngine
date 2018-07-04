@@ -8,7 +8,7 @@ hoping it will be a nice learning experience and some nice things can be accompl
 TO DO:
 - Implement GJK collision detection which allows for collision detection between convex hulls
 
-- Add some collision response by calculating some collision info within GJK for example 
+- Add some collision response by calculating some collision info within GJK for example (EPA)
 
 - Add a build a convex hull function that will allow us to build convex hulls
 

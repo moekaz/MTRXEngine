@@ -67,6 +67,7 @@ bool Collider::CollisionStay()
 	return false;
 }
 
+// Print the general values of a collider
 std::ostream& operator<<(std::ostream& os , const Collider& col)
 {
 	return os;

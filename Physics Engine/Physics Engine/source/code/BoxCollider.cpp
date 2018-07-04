@@ -4,6 +4,9 @@
 */
 
 #include "../headers/BoxCollider.h"
+#include "../headers/SphereCollider.h"
+//#include "../headers/CapsuleCollider.h"
+//#include "../headers/MeshCollider"
 
 /* Constructor */
 BoxCollider::BoxCollider(const Vector3D& center) : Collider(center)
@@ -25,4 +28,11 @@ void BoxCollider::Update()
 bool BoxCollider::CheckCollision()
 {
 	return false;
+}
+
+// Print the values of the box collider
+std::ostream& operator<<(std::ostream& os, const BoxCollider&)
+{
+
+	return os;
 }

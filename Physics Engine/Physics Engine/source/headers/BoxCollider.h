@@ -12,6 +12,7 @@
 #include "Collider.h"
 #include "CollisionUtil.h"
 
+// Forward declarations
 class SphereCollider;
 class CapsuleCollider;
 class MeshCollider;
@@ -24,6 +25,8 @@ public:
 
 	void Update();
 	bool CheckCollision();
+
+	friend std::ostream& operator<<(std::ostream& os , const BoxCollider&);
 
 private:
 protected:

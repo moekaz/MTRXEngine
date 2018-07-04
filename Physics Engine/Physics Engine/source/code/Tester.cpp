@@ -4,9 +4,11 @@
 */
 
 #include <iostream>
+#include <vector>
 #include "../headers/Vector3D.h"
 #include "../headers/Mat3.h"
 #include "../headers/SphereCollider.h"
+#include "../headers/ConvexShapeCollider.h"
 
 // Testing 3d vectors
 void VectorTesting()
@@ -219,13 +221,43 @@ void SphereColliderTesting()
 	SphereCollider collider1 = SphereCollider();
 	SphereCollider collider2 = SphereCollider(Vector3D(30,0,0));
 
+	std::vector<Vector3D*> vertices1 = 
+	{ 
+		new Vector3D(4 , 11 , 0), 
+		new Vector3D(4 , 5 , 0),
+		new Vector3D(9 , 9, 0),
+	};
+
+	std::vector<Vector3D*> vertices2 = 
+	{
+		new Vector3D(5 , 7 , 0),
+		new Vector3D(7 , 3 , 0),
+		new Vector3D(10 , 2 , 0),
+		new Vector3D(12 , 7 , 0)
+	};
+
+	ConvexShapeCollider col1 = ConvexShapeCollider();
+	ConvexShapeCollider col2 = ConvexShapeCollider();
+	col1.vertices = vertices1;
+	col2.vertices = vertices2;
+
+	std::cout << "Collision of convex shapes: " << col1.CheckCollision(col2) << std::endl;
+
+	/*
 	while (i > 0)
 	{
 		std::cout << "i: " << i << std::endl;
 		collider2.Update(collider2.center - Vector3D(1,0,0));
-		std::cout << collider2.CheckCollision(collider1) << std::endl;
+		std::cout << "Collider1: " << std::endl <<  collider1 << std::endl;
+		std::cout << "Collider2: " << std::endl << collider2 << std::endl;
+		std::cout << "COLLISION: " << collider2.CheckCollision(collider1) << std::endl;
+
+
+		std::cout << std::endl;	// Separating line
 		i--;
 	}
+	*/
+	// Delete the vertices
 }
 
 int main()

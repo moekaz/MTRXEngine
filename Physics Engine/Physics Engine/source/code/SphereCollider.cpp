@@ -4,6 +4,9 @@
 */
 
 #include "../headers/SphereCollider.h"
+#include "../headers/BoxCollider.h"
+//#include "../headers/CapsuleCollider.h"
+//#include "../headers/MeshCollider"
 
 /* Constructor */
 SphereCollider::SphereCollider(const Vector3D& center , float radius) : Collider(center)
@@ -23,6 +26,7 @@ void SphereCollider::Update(const Vector3D& newCenter)
 	center = newCenter;
 }
 
+// Checking for collision since this is going to be polymorphic it would make sense to use a general collider and work from there
 bool SphereCollider::CheckCollision(Collider& col)
 {
 	switch (col.type)
@@ -65,18 +69,13 @@ bool SphereCollider::CheckCollision(Collider& col)
 	return isColliding;
 }
 
-// Sphere Sphere collision detection
-//bool SphereCollider::SphereCollision(Collider& col) 
-//{	
-//}
-
 // Print out values of the collider
 std::ostream& operator<<(std::ostream& os , const SphereCollider& sphCollider)
 {
 	os << "Sphere Collider:" << std::endl
 		<< "---------------" << std::endl
 		<< "Center: " << sphCollider.center << std::endl
-		<< "Radius: " << sphCollider.radius << std::endl;
+		<< "Radius: " << sphCollider.radius;
 
 	return os;
 }

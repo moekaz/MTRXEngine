@@ -12,6 +12,7 @@
 #include "Collider.h"
 #include "CollisionUtil.h"
 
+// Forward declarations
 class BoxCollider;
 class CapsulesCollider;
 class MeshCollider;
@@ -25,9 +26,9 @@ public:
 	~SphereCollider();																// Destructor
 
 	void Update(const Vector3D&);													// Update collider values
-	friend std::ostream& operator<<(std::ostream& , const SphereCollider&);			// Print out values of the collider
-
 	bool CheckCollision(Collider&);													// Sphere collision detection
+
+	friend std::ostream& operator<<(std::ostream&, const SphereCollider&);			// Print out values of the collider
 
 private:
 protected:

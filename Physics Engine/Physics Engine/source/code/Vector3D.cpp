@@ -189,10 +189,16 @@ float Vector3D::operator[](int index)
 	return values[index];
 }
 
-// Fpr consts
+// For consts
 float Vector3D::operator[](int index) const
 {
 	return values[index];
+}
+
+// Checking for equality of vectors
+bool Vector3D::operator==(const Vector3D& vec)
+{
+	return x == vec.x && y == vec.y && z == vec.z;
 }
 
 std::ostream& operator<<(std::ostream& os , const Vector3D& v3d)

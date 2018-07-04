@@ -1,9 +1,4 @@
-﻿  BoxCollider.cpp
-  Collider.cpp
-  CollisionUtil.cpp
-  SphereCollider.cpp
-c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\spherecollider.cpp(40): error C2440: 'static_cast': cannot convert from 'Collider' to 'BoxCollider &'
-  c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\spherecollider.cpp(40): note: static_cast and safe_cast to reference can only be used for valid initializations or for lvalue casts between related classes
-c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\spherecollider.cpp(40): error C2530: 'collider': references must be initialized
-  Tester.cpp
-  Generating Code...
+﻿  ConvexShapeCollider.cpp
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\convexshapecollider.cpp(31): warning C4018: '<': signed/unsigned mismatch
+c:\users\mohamed\desktop\physicsengine\physics engine\physics engine\source\code\convexshapecollider.cpp(22): warning C4172: returning address of local variable or temporary: p3
+  Physics Engine.vcxproj -> C:\Users\mohamed\Desktop\PhysicsEngine\Physics Engine\Debug\Physics Engine.exe
