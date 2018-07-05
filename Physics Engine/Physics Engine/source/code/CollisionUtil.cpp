@@ -17,24 +17,24 @@
 namespace CollisionUtil
 {
 	// Sphere sphere collision detection
-	bool CollisionUtil::SphereSphereCollision(SphereCollider& sphereCollider1, SphereCollider& sphereCollider2)
+	bool SphereSphereCollision(SphereCollider& sphereCollider1, SphereCollider& sphereCollider2)
 	{
 		Vector3D diff = sphereCollider1.center - sphereCollider2.center;
 		return diff.MagnitudeSquared() <= (sphereCollider1.radius + sphereCollider2.radius) * (sphereCollider1.radius + sphereCollider2.radius);
 	}
 
 	// Sphere box collision detection
-	bool CollisionUtil::SphereBoxCollision(SphereCollider& sphereCollider, BoxCollider& boxCollider)
+	bool SphereBoxCollision(SphereCollider& sphereCollider, BoxCollider& boxCollider)
 	{
 		return false;
 	}
 
-	bool CollisionUtil::SphereCapsuleCollision()
+	bool SphereCapsuleCollision()
 	{
 		return false;
 	}
 
-	bool CollisionUtil::SphereMeshCollision()
+	bool SphereMeshCollision()
 	{
 		return false;
 	}
@@ -44,27 +44,27 @@ namespace CollisionUtil
 		return false;
 	}
 
-	bool CollisionUtil::BoxCapsuleCollision()
+	bool BoxCapsuleCollision()
 	{
 		return false;
 	}
 
-	bool CollisionUtil::BoxMeshCollision()
+	bool BoxMeshCollision()
 	{
 		return false;
 	}
 
-	bool CollisionUtil::CapsuleCapsuleCollision()
+	bool CapsuleCapsuleCollision()
 	{
 		return false;
 	}
 
-	bool CollisionUtil::CapsuleMeshCollision()
+	bool CapsuleMeshCollision()
 	{
 		return false;
 	}
 
-	bool CollisionUtil::MeshMeshCollision()
+	bool MeshMeshCollision()
 	{
 		return false;
 	}
@@ -160,13 +160,17 @@ namespace CollisionUtil
 	// Line simplex update
 	bool LineSimplexUpdate(std::vector<Vector3D*>& simplex, Vector3D& direction)
 	{
-		Vector3D& A = *simplex[simplex.size() - 1]; // Last point added
+		Vector3D& A = *simplex[1]; // Last point added
 		Vector3D& B = *simplex[0];	// First point added
 		Vector3D AB = B - A;
 		Vector3D AO = Vector3D::zero - A;
 
+		direction = AB.CrossProduct(AO).CrossProduct(AB);
+
+		/*
 		if (AB.DotProduct(AO) > 0) direction = AB.CrossProduct(AO).CrossProduct(AB);
 		else direction = AO;
+		*/
 
 		return false;
 	}
