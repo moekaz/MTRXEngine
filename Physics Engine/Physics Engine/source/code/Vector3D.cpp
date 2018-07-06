@@ -102,6 +102,12 @@ Vector3D Vector3D::operator-(float f)
 	return newVector;
 }
 
+// Negation of a vector
+Vector3D Vector3D::operator-()
+{
+	return Vector3D(-x , -y , -z);
+}
+
 Vector3D Vector3D::operator*(const Vector3D& v3d)
 {
 	Vector3D newVector = Vector3D(x * v3d.x , y * v3d.y , z * v3d.z);

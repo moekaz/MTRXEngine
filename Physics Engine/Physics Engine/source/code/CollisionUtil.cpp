@@ -80,37 +80,19 @@ namespace CollisionUtil
 		std::vector<Vector3D*> simplex;	// We will need to store the simplex
 		Vector3D a, b, c, d, ab, ao;
 		Vector3D searchDirection = convexCollider1.center - convexCollider2.center;	// It doesn't really matter
-
+		searchDirection = Vector3D(0 , -1 , 0);
 		a = convexCollider1.Support(convexCollider2, searchDirection);
-		searchDirection = ao = Vector3D::zero - a;	// Don't have a minus operator atm
-
-		//b = convexCollider1.Support(convexCollider2, searchDirection);
-
-		//if (searchDirection.DotProduct(b) > 0) return false; // There cannot be a collision
-
-		// CHECK THE RESULT OF THIS
-		// a x (b x c) = b(a . c) - c(a . b)
-		//ab = b - a;
-
-		//searchDirection = ab.CrossProduct(ao).CrossProduct(ab);	// Testing
-		//searchDirection = ab * (ab.DotProduct(ao)) - ao * (ab.DotProduct(ab));	// No idea
-
-		//c = convexCollider1.Support(convexCollider2, searchDirection);
-
-		//if (a == Vector3D::zero || b == Vector3D::zero || c == Vector3D::zero) return true;		// Checks for the degenrate case where the intersection is one point
-
-		//searchDirection = -searchDirection;	// new search direction
-		//b = convexCollider2.Support(convexCollider1 , searchDirection - searchDirection * 2);
-
-		//searchDirection = ab.CrossProduct(ao).CrossProduct(ab);	// (AB x AO) x AB
-
-		//c = convexCollider1.Support(convexCollider2, searchDirection);
+		//std::cout << "first vector:" << std::endl << a << std::endl;
+		searchDirection = ao = -a;	// Don't have a minus operator atm
 
 		simplex.push_back(&a);
 	
 		for (int i = 0; i < MAX_NUM_ITERATIONS; i++)
 		{
-			simplex.push_back(&convexCollider1.Support(convexCollider2, searchDirection));	// Add a new point to the simplex
+			Vector3D p = convexCollider1.Support(convexCollider2, searchDirection);
+			//std::cout << "new vectors:" << std::endl << p << std::endl;
+
+			simplex.push_back(&p);	// Add a new point to the simplex
 			std::cout << simplex.size() << std::endl;
 
 			if ((*simplex[simplex.size() - 1]).DotProduct(searchDirection) < 0)
@@ -163,7 +145,7 @@ namespace CollisionUtil
 		Vector3D& A = *simplex[1]; // Last point added
 		Vector3D& B = *simplex[0];	// First point added
 		Vector3D AB = B - A;
-		Vector3D AO = Vector3D::zero - A;
+		Vector3D AO = -A;
 
 		direction = AB.CrossProduct(AO).CrossProduct(AB);
 
@@ -180,7 +162,7 @@ namespace CollisionUtil
 	{
 		Vector3D AB = *simplex[1] - *simplex[0];
 		Vector3D AC = *simplex[2] - *simplex[0];
-		Vector3D AO = Vector3D::zero - *simplex[0];	
+		Vector3D AO = -*simplex[0];	
 		direction = AB.CrossProduct(AC);			// The normal of the triangle
 
 		if (direction.DotProduct(AO) < 0) direction *= -1;	// If it is not closer to the origin flip to use the other normal
@@ -260,7 +242,7 @@ namespace CollisionUtil
 		Vector3D DC = C - D;
 
 		// We have already checked the triangle ABC so we will check the other triangles
-		Vector3D DO = Vector3D::zero - D;	// We will use that to check if we are closer to the origin
+		Vector3D DO = -D;	// We will use that to check if we are closer to the origin
 
 		Vector3D ABD, ACD, BCD;
 		

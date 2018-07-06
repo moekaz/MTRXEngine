@@ -225,7 +225,7 @@ void SphereColliderTesting()
 	{ 
 		new Vector3D(4 , 11 , 0), 
 		new Vector3D(4 , 5 , 0),
-		new Vector3D(9 , 9, 0),
+		new Vector3D(9 , 9 , 0),
 	};
 
 	std::vector<Vector3D*> vertices2 = 

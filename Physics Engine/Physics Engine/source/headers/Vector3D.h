@@ -60,6 +60,7 @@ public:
 	float operator[](int);													// Get the values of the vector like an array
 	float operator[](int) const;											// For consts
 	bool operator == (const Vector3D&);										// Checking for equality between vectors
+	Vector3D operator-();													// Negation of a 3d vector
 
 private:
 
