@@ -1,6 +1,11 @@
 /*
 	Author: Mohamed Kazma
 	Description: Util file that includes implementations of collider collision detection
+	Implementation of GJK is based upon:
+	https://caseymuratori.com/blog_0003
+	http://www.dyn4j.org/2010/04/gjk-gilbert-johnson-keerthi/#gjk-minkowski
+	http://vec3.ca/gjk/implementation/
+	http://in2gpu.com/2014/05/18/gjk-algorithm-3d/
 */
 
 // Fix for cyclic dependencies
@@ -77,207 +82,200 @@ namespace CollisionUtil
 	// Gilbert-Johnson-Keerthi collision detection algorithm for collision
 	bool GJK(ConvexShapeCollider& convexCollider1, ConvexShapeCollider& convexCollider2)
 	{
-		std::vector<Vector3D*> simplex;	// We will need to store the simplex
-		Vector3D a, b, c, d, ab, ao;
-		Vector3D searchDirection = convexCollider1.center - convexCollider2.center;	// It doesn't really matter
-		searchDirection = Vector3D(0 , -1 , 0);
-		a = convexCollider1.Support(convexCollider2, searchDirection);
-		//std::cout << "first vector:" << std::endl << a << std::endl;
-		searchDirection = ao = -a;	// Don't have a minus operator atm
+		Simplex simplex;
+		Vector3D searchDirection = Vector3D(-1, 0, 0);
 
-		simplex.push_back(&a);
-	
+		simplex.c = convexCollider1.Support(convexCollider2, searchDirection);
+
+		searchDirection = -simplex.c;	// Negative direction
+
+		simplex.b = convexCollider1.Support(convexCollider2, searchDirection);
+
+		if (simplex.b.DotProduct(searchDirection) < 0) return false;
+
+		Vector3D BC = simplex.c - simplex.b;
+		Vector3D BO = -simplex.b;
+
+		searchDirection = BC.CrossProduct(BO).CrossProduct(BC);
+
+		simplex.size = 2;	// Simplex has 2 points
+
 		for (int i = 0; i < MAX_NUM_ITERATIONS; i++)
 		{
-			Vector3D p = convexCollider1.Support(convexCollider2, searchDirection);
-			//std::cout << "new vectors:" << std::endl << p << std::endl;
+			Vector3D a = convexCollider1.Support(convexCollider2, searchDirection);
 
-			simplex.push_back(&p);	// Add a new point to the simplex
-			std::cout << simplex.size() << std::endl;
+			std::cout << "Iterations: " << i << std::endl;
 
-			if ((*simplex[simplex.size() - 1]).DotProduct(searchDirection) < 0)
+			if (a.DotProduct(searchDirection) < 0)
 			{
 				std::cout << "WE CANNOT FIND A POINT PAST THE ORIGIN" << std::endl;
 				return false;		// We cannot have a collision
 			}
 
-			if (UpdateSimplex(simplex, searchDirection))
+			if (UpdateSimplex(simplex, searchDirection, a))
 			{
 				std::cout << "THE ORIGIN IS INSIDE OUR TETRAHEDRON" << std::endl;
 				return true;		// Update the simplex and set a new direction vector
 			}
 		}
 
-		return false;
+		return true;
 	}
 
 	// Updates the simplex
-	bool UpdateSimplex(std::vector<Vector3D*>& simplex, Vector3D& direction)
+	bool UpdateSimplex(Simplex& simplex, Vector3D& direction, Vector3D& a)
 	{
 		bool collision = false;
-		// The simplex will hold at most 2 points at all times
-		if (simplex.size() == 2)	// line Segment
-		{
-			std::cout << "LINE SEGMENT SIMPLEX CHECK" << std::endl;
-			collision = LineSimplexUpdate(simplex, direction);
-		}
-		else if (simplex.size() == 3)	// Triangle
+
+		if (simplex.size == 2)	// Triangle
 		{
 			std::cout << "TRIANGLE SIMPLEX CHECK" << std::endl;
-			collision = TriangleSimplexUpdate(simplex, direction);
+			collision = TriangleSimplexUpdate(simplex, direction, a);
 		}
-		else if (simplex.size() == 4) // Tetrahedron
+		else if (simplex.size == 3) // Tetrahedron
 		{
 			std::cout << "TETRAHEDRON SIMPLEX CHECK" << std::endl;
-			collision = TetrahedronSimplexUpdate(simplex, direction);
+			collision = TetrahedronSimplexUpdate(simplex, direction, a);
 		}
-		else if (simplex.size() > 4)
+		else if (simplex.size > 3)
 		{
 			std::cout << "HOUSTON WE HAVE A PROBLEM" << std::endl;
 		}
 
 		return collision;
 	}
-	
-	// Line simplex update
-	bool LineSimplexUpdate(std::vector<Vector3D*>& simplex, Vector3D& direction)
-	{
-		Vector3D& A = *simplex[1]; // Last point added
-		Vector3D& B = *simplex[0];	// First point added
-		Vector3D AB = B - A;
-		Vector3D AO = -A;
 
-		direction = AB.CrossProduct(AO).CrossProduct(AB);
-
-		/*
-		if (AB.DotProduct(AO) > 0) direction = AB.CrossProduct(AO).CrossProduct(AB);
-		else direction = AO;
-		*/
-
-		return false;
-	}
-	
 	// Triangle simplex update
-	bool TriangleSimplexUpdate(std::vector<Vector3D*>& simplex, Vector3D& direction)
+	bool TriangleSimplexUpdate(Simplex& simplex, Vector3D& direction, Vector3D& a)
 	{
-		Vector3D AB = *simplex[1] - *simplex[0];
-		Vector3D AC = *simplex[2] - *simplex[0];
-		Vector3D AO = -*simplex[0];	
-		direction = AB.CrossProduct(AC);			// The normal of the triangle
+		Vector3D AB = simplex.b - a;
+		Vector3D AC = simplex.c - a;
+		Vector3D AO = -a;
 
-		if (direction.DotProduct(AO) < 0) direction *= -1;	// If it is not closer to the origin flip to use the other normal
+		Vector3D ABC = AB.CrossProduct(AC);			// The normal of the triangle
+		Vector3D ABP = AB.CrossProduct(ABC);		// Calculate a vector inside the triangle away from AB
+		Vector3D ACP = ABC.CrossProduct(AC);		// Same as the one above
 
-		/*
-		Vector3D& A = simplex[simplex.size];
-		Vector3D& B = simplex[1];
-		Vector3D& C = simplex[0];
-
-		Vector3D AO = Vector3D::zero - A;
-		Vector3D AB = B - A;
-		Vector3D AC = C - A;
-
-		Vector3D ABC = AB.CrossProduct(AC);	// Get the normal of the triangle's plane
-
-		if (ABC.CrossProduct(AC).DotProduct(AO) > 0)
+		if (ABP.DotProduct(AO) > 0)
 		{
-			if (AC.DotProduct(AO) > 0)
-			{
-				simplex.erase(simplex.begin() + 1);	// Remove B as the simplex is now AC
-				direction = AC.CrossProduct(AO).CrossProduct(AC);
-			}
-			else if (AB.DotProduct(AO) > 0)
-			{
-				simplex.erase(simplex.begin());	// Remove C as the simplex is now AB
-				direction = AB.CrossProduct(AO).CrossProduct(AB);
-			}
-		}
-		else if (AB.CrossProduct(ABC).DotProduct(AO) > 0)
-		{
-			if (AB.DotProduct(AO) > 0)
-			{
-				simplex.erase(simplex.begin());	// Remove C as the simplex is now AB
-				direction = AB.CrossProduct(AO).CrossProduct(AB);
-			}
-			else if (ABC.DotProduct(AO) > 0)
-			{
-				// Simplex i think then remains the same [ABC]
-				direction = ABC;
-			}
-			else
-			{
-				// Swap B and C simplex is now [ACB]
-				Vector3D& temp = simplex[1]; // this is B
-				simplex[1] = simplex[0];
-				simplex[0] = temp;
-				direction = Vector3D::zero - ABC;
-			}
-		}
-		else if (AB.DotProduct(AO) > 0)
-		{
-			simplex.erase(simplex.begin());	// Remove C as the simplex is now AB
+			// C is not part of the simplex anymore
+			simplex.c = simplex.b;
+			simplex.b = a;
 			direction = AB.CrossProduct(AO).CrossProduct(AB);
 		}
+		else if (ACP.DotProduct(AO) > 0)
+		{
+			// B is no longer part of the simplex
+			simplex.b = a;
+			direction = AC.CrossProduct(AO).CrossProduct(AC);
+		}
+		else if (ABC.DotProduct(AO) > 0)
+		{
+			// The origin is above ABC
+			simplex.d = simplex.c;
+			simplex.c = simplex.b;
+			simplex.b = a;
+			direction = ABC;
+		}
 		else
 		{
-			// The simplex is just then AO
-			simplex.clear();
-			simplex.push_back(A);
-			direction = AO;
+			// The origin is below ABC
+			simplex.d = simplex.b;
+			simplex.b = a;
+			direction = -ABC;
 		}
-		*/
+
+		simplex.size = 3;	// Simplex is now of size 3
 
 		return false;
 	}
-	
+
 	// Tetrahedron simplex update
-	bool TetrahedronSimplexUpdate(std::vector<Vector3D*>& simplex , Vector3D& direction)
+	bool TetrahedronSimplexUpdate(Simplex& simplex, Vector3D& direction, Vector3D& a)
 	{
-		Vector3D& A = *simplex[0];	
-		Vector3D& B = *simplex[1];
-		Vector3D& C = *simplex[2];
-		Vector3D& D = *simplex[3];	// D is the top of the tetrahedron
-		
-		Vector3D DA = A - D;
-		Vector3D DB = B - D;
-		Vector3D DC = C - D;
+		Vector3D AO = -a;
+		Vector3D AB = simplex.b - a;
+		Vector3D AC = simplex.c - a;
+		Vector3D AD = simplex.d - a;
 
-		// We have already checked the triangle ABC so we will check the other triangles
-		Vector3D DO = -D;	// We will use that to check if we are closer to the origin
+		Vector3D ABC = AB.CrossProduct(AC);
+		Vector3D ACD = AC.CrossProduct(AD);
+		Vector3D ADB = AD.CrossProduct(AB);
 
-		Vector3D ABD, ACD, BCD;
-		
-		ABD = DA.CrossProduct(DB);		// Normal of ABD
-		ACD = DC.CrossProduct(DA);		// Normal of ACD
-		BCD = DB.CrossProduct(DC);		// Normal of BCD
+		Vector3D tmp;
 
-		if (ABD.DotProduct(DO) > 0)
+		if (ABC.DotProduct(AO) <= 0 && ACD.DotProduct(AO) <= 0 && ADB.DotProduct(AO) <= 0) return true;	// The origin is inside the tetrahedron
+
+		if (ABC.DotProduct(AO) > 0)
 		{
-			std::cout << "Origin is outside ABD" << std::endl;
-			// Origin is outside ABD remove C and make that normal ABD the new direction
-			simplex.erase(simplex.begin() + 2);	// Removing C
-			direction = ABD;
+			TetrahedronChecks(simplex, AO, AB, AC, ABC, direction, a);
+			// The origin is in front of ABC
 		}
-		else if (ACD.DotProduct(DO) > 0)
+		if (ACD.DotProduct(AO) > 0)
 		{
-			std::cout << "Origin is outside ACD" << std::endl;
-			// Origin is outside ACD remove B and make the normal of ACD the new direction
-			simplex.erase(simplex.begin() + 1);	// Remove B
-			direction = ACD;
+			// The origin is in front of ACD rotate ACD to become ABC
+			simplex.b = simplex.c;
+			simplex.c = simplex.d;
+
+			AB = AC; 
+			AD = AC;
+			ABC = ACD;
+
+			TetrahedronChecks(simplex, AO, AB, AC, ABC, direction, a);
 		}
-		else if (BCD.DotProduct(DO) > 0)
+		if (ADB.DotProduct(AO) > 0)
 		{
-			std::cout << "Origin is outside BCD" << std::endl;
-			// Origin is outside BCD remove A and make the normal of BCD the new direction
-			simplex.erase(simplex.begin());	// Remove A
-			direction = BCD;
+			// The origin is in front of ADB 
+			simplex.d = simplex.b;
+			simplex.b = simplex.c;
+
+			AB = AD;
+			AC = AB;
+			ABC = ADB;
+
+			TetrahedronChecks(simplex, AO, AB, AC, ABC, direction, a);
+		}
+		
+		std::cout << "degenerate simplex something went wrong" << std::endl;
+	}
+
+	bool TetrahedronChecks(Simplex& simplex , Vector3D& AO, Vector3D& AB, Vector3D& AC, Vector3D& ABC, Vector3D& direction , Vector3D& a)
+	{
+		// This will always return false
+		if (AB.CrossProduct(ABC).DotProduct(AO) > 0)
+		{
+			// Just like the triangle check use the cross product away from AB
+			simplex.c = simplex.b;
+			simplex.b = a;
+
+			simplex.size = 2; // We have lost d in this process so we need to rebuild the triangle
+			direction = AB.CrossProduct(AO).CrossProduct(AB);
+		}
+		else if (ABC.CrossProduct(AC).DotProduct(AO) > 0)
+		{
+			// Same as the top one
+			simplex.b = a;
+
+			simplex.size = 2;	// We also need to rebuild the triangle as well
+			direction = AC.CrossProduct(AO).CrossProduct(AC);
 		}
 		else
 		{
-			std::cout << "Origin is inside the tetrahedron" << std::endl;
-			return true; 	// It is inside the tetrahedron So we have an intersection
+			// Build a new tetrahedron 
+			simplex.d = simplex.c;
+			simplex.c = simplex.b;
+			simplex.b = a;
+
+			simplex.size = 3;
 		}
 
-		return false; // If we do not get to the final else then we do not have an intersection yet 
+		return false;
+	}
+
+	// There exists an optimization of triple cross products will do that soon here
+	Vector3D TripleCross()
+	{
+		return NULL;
 	}
 
 	// Helpful for collision response

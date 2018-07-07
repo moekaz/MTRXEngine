@@ -9,6 +9,8 @@
 #include <iostream>
 #include <vector>
 
+#include "../headers/Simplex.h"
+
 // Forward declarations
 class SphereCollider;
 class BoxCollider;
@@ -31,10 +33,11 @@ namespace CollisionUtil
 	bool MeshMeshCollision();
 	bool ConvexShapeCollision(ConvexShapeCollider& , ConvexShapeCollider&);		// Collision detection between convex shaped colliders
 	bool GJK(ConvexShapeCollider&, ConvexShapeCollider&);
-	bool UpdateSimplex(std::vector<Vector3D*>& , Vector3D&);
-	bool LineSimplexUpdate(std::vector<Vector3D*>&, Vector3D&);
-	bool TriangleSimplexUpdate(std::vector<Vector3D*>&, Vector3D&);
-	bool TetrahedronSimplexUpdate(std::vector<Vector3D*>&, Vector3D&);
+	bool UpdateSimplex(Simplex& , Vector3D& , Vector3D&);
+	bool TriangleSimplexUpdate(Simplex&, Vector3D& , Vector3D&);
+	bool TetrahedronSimplexUpdate(Simplex&, Vector3D& , Vector3D&);
+	bool TetrahedronChecks(Simplex&, Vector3D&, Vector3D&, Vector3D&, Vector3D&, Vector3D& , Vector3D&);
+
 	void EPA();
 }
 #endif // !COLLISIONUTIL_H
