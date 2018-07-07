@@ -3,6 +3,7 @@
 	Description: implementation of a 3x3 matrix 
 */
 
+#pragma once
 #ifndef MAT3_H
 #define MAT3_H
 
@@ -26,7 +27,7 @@ public:
 	/* Operator Overloading */
 	friend std::ostream& operator<<(std::ostream& , const Mat3&);						// Print out values of the matrix
 	Vector3D& operator[](int);															// Getting the rows as an array
-	const Vector3D& operator[](int) const;
+	const Vector3D& operator[](int) const;												// Used for consts
 	Mat3 operator+(const Mat3&);														// Adding 2 matrices		
 	Mat3 operator+=(const Mat3&);														// Adding 2 matrices using +=
 	Mat3 operator-(const Mat3&);														// Subtracting 2 matrices
@@ -35,8 +36,6 @@ public:
 	Mat3 operator*(float);																// Multiplying a matrix by a float
 	Mat3 operator*=(const Mat3&);														// Multiplying 2 matrices using *=
 	Mat3 operator*=(float);																// Multiplying a matrix by a float *=
-	//Mat3 operator/(const Mat3&);														// Does division exist for matrices?
-	//Mat3 operator/=(const Mat3&);														// Same using /=
 
 private:
 	/* Member Variables */

@@ -4,6 +4,7 @@
 	PS: Calls for collision detection should be done b4 calling the updating functions
 */
 
+#pragma once
 #ifndef COLLIDER_H
 #define COLLIDER_H
 

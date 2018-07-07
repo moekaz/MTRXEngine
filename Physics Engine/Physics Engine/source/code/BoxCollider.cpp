@@ -20,12 +20,13 @@ BoxCollider::~BoxCollider() {}
 /* Functions */
 
 // Update values of the collider
-void BoxCollider::Update()
+void BoxCollider::Update(Vector3D& center)
 {
+	this->center = center;
 }
 
 // Gives us whether there is a collision occurring
-bool BoxCollider::CheckCollision()
+bool BoxCollider::CheckCollision(Collider& col)
 {
 	return false;
 }

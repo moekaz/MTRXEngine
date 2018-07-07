@@ -3,6 +3,7 @@
     Description: An implementation of a 3D vector class whoch very benificial for game development
 */
 
+#pragma once
 #ifndef VECTOR3D_H
 #define VECTOR3D_H
 
@@ -35,7 +36,6 @@ public:
     Vector3D Normalize();													// Normalizes a 3DVector
     float Magnitude();														// Finds the Magnitude of a 3DVector
     float MagnitudeSquared();												// Finds the Magnitude squared of a 3DVector
-	Vector3D Difference(Vector3D&);											// Finds the difference Vector between 2 vectors
 	float DotProduct(Vector3D&);											// Dot product of 2 3d vectors
 	Vector3D CrossProduct(Vector3D&);										// Cross product of 2 3d vectors
 

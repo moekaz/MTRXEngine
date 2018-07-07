@@ -52,13 +52,6 @@ float Vector3D::MagnitudeSquared()
     return xSquared + ySquared + zSquared;
 }   
 
-// Finding the difference between my vector and another
-Vector3D Vector3D::Difference(Vector3D& v3d)
-{
-	// Implement the operator overload of addition and subtraction
-    return *this - v3d;
-}
-
 // Finding the dot product between 2 vectors
 float Vector3D::DotProduct(Vector3D& v3d)
 {

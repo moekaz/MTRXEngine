@@ -3,6 +3,7 @@
 	Description: Header file for a sphere collider
 */
 
+#pragma once
 #ifndef SPHERECOLLIDER_H
 #define SPHERECOLLIDER_H
 

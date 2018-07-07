@@ -3,6 +3,7 @@
 	Description: Util file that will include collision detection algorithms
 */
 
+#pragma once
 #ifndef COLLISIONUTIL_H
 #define COLLISIONUTIL_H
 
@@ -10,6 +11,7 @@
 #include <vector>
 
 #include "../headers/Simplex.h"
+#include "../headers/GJK.h"
 
 // Forward declarations
 class SphereCollider;
@@ -19,6 +21,7 @@ class MeshCollider;
 class ConvexShapeCollider;
 class Vector3D;
 
+// Will document this when it is at least near completion
 namespace CollisionUtil
 {
 	bool SphereSphereCollision(SphereCollider& , SphereCollider&);
@@ -32,12 +35,5 @@ namespace CollisionUtil
 	bool CapsuleMeshCollision();
 	bool MeshMeshCollision();
 	bool ConvexShapeCollision(ConvexShapeCollider& , ConvexShapeCollider&);		// Collision detection between convex shaped colliders
-	bool GJK(ConvexShapeCollider&, ConvexShapeCollider&);
-	bool UpdateSimplex(Simplex& , Vector3D& , Vector3D&);
-	bool TriangleSimplexUpdate(Simplex&, Vector3D& , Vector3D&);
-	bool TetrahedronSimplexUpdate(Simplex&, Vector3D& , Vector3D&);
-	bool TetrahedronChecks(Simplex&, Vector3D&, Vector3D&, Vector3D&, Vector3D&, Vector3D& , Vector3D&);
-	Vector3D TripleCross(Vector3D& , Vector3D& , Vector3D&);
-	void EPA();
 }
 #endif // !COLLISIONUTIL_H

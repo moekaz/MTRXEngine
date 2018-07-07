@@ -3,6 +3,7 @@
 	Description: An implementation of a box collider
 */
 
+#pragma once
 #ifndef BOXCOLLIDER_H
 #define BOXCOLLIDER_H
 
@@ -20,13 +21,13 @@ class MeshCollider;
 class BoxCollider : public Collider
 {
 public:
-	BoxCollider(const Vector3D& = Vector3D::zero);
-	~BoxCollider();
+	BoxCollider(const Vector3D& = Vector3D::zero);							// Constructor
+	~BoxCollider();															// Destrutor
 
-	void Update();
-	bool CheckCollision();
+	void Update(Vector3D&);													// Update the values of the collider
+	bool CheckCollision(Collider&);											// Check collision with box collider 
 
-	friend std::ostream& operator<<(std::ostream& os , const BoxCollider&);
+	friend std::ostream& operator<<(std::ostream& os , const BoxCollider&);	// Print out the values of th collider
 
 private:
 protected:

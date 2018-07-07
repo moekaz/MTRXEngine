@@ -18,7 +18,6 @@ Vector3D& ConvexShapeCollider::Support(ConvexShapeCollider& convexCollider , Vec
 	Vector3D& p1 = FarthestPointInDirection(direction);
 	Vector3D neg = -direction;
 	Vector3D& p2 = convexCollider.FarthestPointInDirection(neg);
-	//std::cout << "p1: " << p1 << std::endl << "p2: " <<std::endl << std::endl;
 	Vector3D p3 = p1 - p2;
 	return p3;
 }
@@ -32,25 +31,21 @@ Vector3D& ConvexShapeCollider::FarthestPointInDirection(Vector3D& direction)
 	for (int i = 0; i < vertices.size(); i++)
 	{
 		float dot = vertices[i]->DotProduct(direction);
-		//dot = direction.DotProduct(*vertices[i]);
 		if (dot > maxDot)
 		{
 			maxDot = dot;
 			farthest = vertices[i];
 		}
 	}
-
-	//std::cout << maxDot << std::endl;
-
+	
 	return *farthest;
 }
 
 bool ConvexShapeCollider::CheckCollision(Collider& col)
 {
 	ConvexShapeCollider& collider = static_cast<ConvexShapeCollider&>(col);
-	if (col.isConvexShape) return CollisionUtil::GJK(*this , collider);	// collision
+	if (col.isConvexShape) return CollisionUtil::ConvexShapeCollision(*this , collider);	// collision
 	else return false;	// Its not a convex hull
-	//return false;
 }
 
 void ConvexShapeCollider::Update(const Vector3D& center)

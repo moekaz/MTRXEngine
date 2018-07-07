@@ -120,16 +120,6 @@ Mat3 Mat3::operator*(float scalar)
 	return Mat3((*this)[0] * scalar, (*this)[1] * scalar, (*this)[2] * scalar);
 }
 
-/*
-// Matrix Division
-Mat3 Mat3::operator/(const Mat3& mat)
-{
-	//use the inverse matrix to be able to do this A x B^-1
-	Mat3 inverse = mat.InverseMatrix();
-	return *this * inverse;
-}
-*/
-
 // Matrix += addition
 Mat3 Mat3::operator+=(const Mat3& mat)
 {
@@ -158,15 +148,6 @@ Mat3 Mat3::operator*=(float scalar)
 	*this = *this * scalar;
 	return *this;
 }
-
-/*
-// Matrix /= division
-Mat3 Mat3::operator/=(const Mat3& mat)
-{
-	*this = *this / mat;
-	return  *this;
-}
-*/
 
 // Print the values of the matrix
 std::ostream& operator<<(std::ostream& os, const Mat3& mat)
