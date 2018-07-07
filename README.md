@@ -6,8 +6,11 @@ hoping it will be a nice learning experience and some nice things can be accompl
 
 GJK implementation sources:
 	https://caseymuratori.com/blog_0003
+
 	http://www.dyn4j.org/2010/04/gjk-gilbert-johnson-keerthi/#gjk-minkowski
+	
 	http://vec3.ca/gjk/implementation/
+	
 	http://in2gpu.com/2014/05/18/gjk-algorithm-3d/
 
 TO DO:
