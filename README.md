@@ -5,6 +5,7 @@ Description: This is a physics engine that i am working on on the side just for 
 hoping it will be a nice learning experience and some nice things can be accomplished.
 
 GJK implementation sources:
+
 	https://caseymuratori.com/blog_0003
 
 	http://www.dyn4j.org/2010/04/gjk-gilbert-johnson-keerthi/#gjk-minkowski
