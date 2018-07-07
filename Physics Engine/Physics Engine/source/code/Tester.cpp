@@ -5,10 +5,13 @@
 
 #include <iostream>
 #include <vector>
+
 #include "../headers/Vector3D.h"
 #include "../headers/Mat3.h"
 #include "../headers/SphereCollider.h"
 #include "../headers/ConvexShapeCollider.h"
+
+// HOW AM I CHECKING FOR MEMORY LEAKS
 
 // Testing 3d vectors
 void VectorTesting()

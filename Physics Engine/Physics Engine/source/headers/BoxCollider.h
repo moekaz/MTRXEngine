@@ -10,7 +10,7 @@
 #include <iostream>
 
 #include "Vector3D.h"
-#include "Collider.h"
+#include "ConvexShapeCollider.h"
 #include "CollisionUtil.h"
 
 // Forward declarations
@@ -18,7 +18,7 @@ class SphereCollider;
 class CapsuleCollider;
 class MeshCollider;
 
-class BoxCollider : public Collider
+class BoxCollider : public ConvexShapeCollider
 {
 public:
 	BoxCollider(const Vector3D& = Vector3D::zero);							// Constructor

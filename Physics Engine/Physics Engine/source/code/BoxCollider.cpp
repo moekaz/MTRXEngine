@@ -9,7 +9,7 @@
 //#include "../headers/MeshCollider"
 
 /* Constructor */
-BoxCollider::BoxCollider(const Vector3D& center) : Collider(center)
+BoxCollider::BoxCollider(const Vector3D& center) : ConvexShapeCollider(center)
 {
 	type = ColliderType::Box;
 }
