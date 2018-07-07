@@ -1,10 +1,13 @@
 # PhysicsEngine
 
-Author: Mohamed Kazma
-Description: This is a physics engine that i am working on on the side just for the fun of it 
+##Author: 
+Mohamed Kazma
+
+##Description:
+This is a physics engine that i am working on on the side just for the fun of it 
 hoping it will be a nice learning experience and some nice things can be accomplished.
 
-GJK implementation sources:
+##GJK implementation sources:
 
 	https://caseymuratori.com/blog_0003
 
@@ -14,7 +17,8 @@ GJK implementation sources:
 	
 	http://in2gpu.com/2014/05/18/gjk-algorithm-3d/
 
-TO DO:
+##TO DO:
+
 - Implement GJK collision detection which allows for collision detection between convex hulls
 
 - Add some collision response by calculating some collision info within GJK for example (EPA)
@@ -33,5 +37,7 @@ TO DO:
 
 - Implement joint physics
 
-PS: NAME OF ENGINE TBD 
+##PS: 
+NAME OF ENGINE TBD 
+
 - ATM thinking of the matrix engine (MTRX-ENGINE) or smthg like that 
