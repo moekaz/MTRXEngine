@@ -37,7 +37,7 @@ namespace CollisionUtil
 	bool TriangleSimplexUpdate(Simplex&, Vector3D& , Vector3D&);
 	bool TetrahedronSimplexUpdate(Simplex&, Vector3D& , Vector3D&);
 	bool TetrahedronChecks(Simplex&, Vector3D&, Vector3D&, Vector3D&, Vector3D&, Vector3D& , Vector3D&);
-
+	Vector3D TripleCross(Vector3D& , Vector3D& , Vector3D&);
 	void EPA();
 }
 #endif // !COLLISIONUTIL_H

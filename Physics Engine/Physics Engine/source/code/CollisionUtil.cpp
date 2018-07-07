@@ -96,7 +96,7 @@ namespace CollisionUtil
 		Vector3D BC = simplex.c - simplex.b;
 		Vector3D BO = -simplex.b;
 
-		searchDirection = BC.CrossProduct(BO).CrossProduct(BC);
+		searchDirection = TripleCross(BC, BO, BC);
 
 		simplex.size = 2;	// Simplex has 2 points
 
@@ -161,13 +161,13 @@ namespace CollisionUtil
 			// C is not part of the simplex anymore
 			simplex.c = simplex.b;
 			simplex.b = a;
-			direction = AB.CrossProduct(AO).CrossProduct(AB);
+			direction = TripleCross(AB, AO, AB);
 		}
 		else if (ACP.DotProduct(AO) > 0)
 		{
 			// B is no longer part of the simplex
 			simplex.b = a;
-			direction = AC.CrossProduct(AO).CrossProduct(AC);
+			direction = TripleCross(AC , AO , AC);
 		}
 		else if (ABC.DotProduct(AO) > 0)
 		{
@@ -202,14 +202,12 @@ namespace CollisionUtil
 		Vector3D ACD = AC.CrossProduct(AD);
 		Vector3D ADB = AD.CrossProduct(AB);
 
-		Vector3D tmp;
-
 		if (ABC.DotProduct(AO) <= 0 && ACD.DotProduct(AO) <= 0 && ADB.DotProduct(AO) <= 0) return true;	// The origin is inside the tetrahedron
 
 		if (ABC.DotProduct(AO) > 0)
 		{
-			TetrahedronChecks(simplex, AO, AB, AC, ABC, direction, a);
 			// The origin is in front of ABC
+			TetrahedronChecks(simplex, AO, AB, AC, ABC, direction, a);
 		}
 		if (ACD.DotProduct(AO) > 0)
 		{
@@ -249,7 +247,7 @@ namespace CollisionUtil
 			simplex.b = a;
 
 			simplex.size = 2; // We have lost d in this process so we need to rebuild the triangle
-			direction = AB.CrossProduct(AO).CrossProduct(AB);
+			direction = TripleCross(AB , AO , AB);
 		}
 		else if (ABC.CrossProduct(AC).DotProduct(AO) > 0)
 		{
@@ -257,7 +255,7 @@ namespace CollisionUtil
 			simplex.b = a;
 
 			simplex.size = 2;	// We also need to rebuild the triangle as well
-			direction = AC.CrossProduct(AO).CrossProduct(AC);
+			direction = TripleCross(AC, AO, AC);
 		}
 		else
 		{
@@ -266,19 +264,23 @@ namespace CollisionUtil
 			simplex.c = simplex.b;
 			simplex.b = a;
 
+			direction = ABC;	// ABC is what is left
+
 			simplex.size = 3;
 		}
 
 		return false;
 	}
 
-	// There exists an optimization of triple cross products will do that soon here
-	Vector3D TripleCross()
+	// Optimizes 2 cross product calls into 2 dot product ones
+	Vector3D TripleCross(Vector3D& a , Vector3D& b , Vector3D& c)
 	{
-		return NULL;
+		// (A x B) x C = B(C . A) - A(C . B)
+		return b * (c.DotProduct(a)) - a * (c.DotProduct(b));
 	}
 
 	// Helpful for collision response
+	// Expanding Polytype Algorithm
 	void EPA()
 	{
 	}
