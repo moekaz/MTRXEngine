@@ -3,6 +3,7 @@
 	Description: Some definitions that are useful
 */
 
+#pragma once
 #ifndef DEFS_H
 #define DEFS_H
 

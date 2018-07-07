@@ -3,7 +3,6 @@
     Description: Cpp for implemnenating a 3D vector's functionality
 */
 
-#include <cmath>
 #include "../headers/Vector3D.h"
 
 // Setting up the zero vector
@@ -53,13 +52,6 @@ float Vector3D::MagnitudeSquared()
     return xSquared + ySquared + zSquared;
 }   
 
-// Finding the difference between my vector and another
-Vector3D Vector3D::Difference(Vector3D& v3d)
-{
-	// Implement the operator overload of addition and subtraction
-    return *this - v3d;
-}
-
 // Finding the dot product between 2 vectors
 float Vector3D::DotProduct(Vector3D& v3d)
 {
@@ -101,6 +93,12 @@ Vector3D Vector3D::operator-(float f)
 {
 	Vector3D newVector = Vector3D(x - f , y - f , z - f);
 	return newVector;
+}
+
+// Negation of a vector
+Vector3D Vector3D::operator-()
+{
+	return Vector3D(-x , -y , -z);
 }
 
 Vector3D Vector3D::operator*(const Vector3D& v3d)
@@ -190,10 +188,16 @@ float Vector3D::operator[](int index)
 	return values[index];
 }
 
-// Fpr consts
+// For consts
 float Vector3D::operator[](int index) const
 {
 	return values[index];
+}
+
+// Checking for equality of vectors
+bool Vector3D::operator==(const Vector3D& vec)
+{
+	return x == vec.x && y == vec.y && z == vec.z;
 }
 
 std::ostream& operator<<(std::ostream& os , const Vector3D& v3d)

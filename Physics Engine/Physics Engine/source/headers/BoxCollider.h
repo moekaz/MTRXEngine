@@ -3,21 +3,31 @@
 	Description: An implementation of a box collider
 */
 
+#pragma once
 #ifndef BOXCOLLIDER_H
 #define BOXCOLLIDER_H
 
 #include <iostream>
 
-#include "Collider.h"
+#include "Vector3D.h"
+#include "ConvexShapeCollider.h"
+#include "CollisionUtil.h"
 
-class BoxCollider : public Collider
+// Forward declarations
+class SphereCollider;
+class CapsuleCollider;
+class MeshCollider;
+
+class BoxCollider : public ConvexShapeCollider
 {
 public:
-	BoxCollider(const Vector3D& = Vector3D::zero);
-	~BoxCollider();
+	BoxCollider(const Vector3D& = Vector3D::zero);							// Constructor
+	~BoxCollider();															// Destrutor
 
-	void Update();
-	bool CheckCollision();
+	void Update(Vector3D&);													// Update the values of the collider
+	bool CheckCollision(Collider&);											// Check collision with box collider 
+
+	friend std::ostream& operator<<(std::ostream& os , const BoxCollider&);	// Print out the values of th collider
 
 private:
 protected:

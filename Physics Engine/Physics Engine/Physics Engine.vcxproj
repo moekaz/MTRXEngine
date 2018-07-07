@@ -117,7 +117,12 @@
   <ItemGroup>
     <ClCompile Include="source\code\BoxCollider.cpp" />
     <ClCompile Include="source\code\Collider.cpp" />
+    <ClCompile Include="source\code\CollisionUtil.cpp" />
+    <ClCompile Include="source\code\ConvexShapeCollider.cpp" />
+    <ClCompile Include="source\code\EPA.cpp" />
+    <ClCompile Include="source\code\GJK.cpp" />
     <ClCompile Include="source\code\Mat3.cpp" />
+    <ClCompile Include="source\code\Simplex.cpp" />
     <ClCompile Include="source\code\SphereCollider.cpp" />
     <ClCompile Include="source\code\Tester.cpp" />
     <ClCompile Include="source\code\Utils.cpp" />
@@ -126,11 +131,17 @@
   <ItemGroup>
     <ClInclude Include="source\headers\BoxCollider.h" />
     <ClInclude Include="source\headers\Collider.h" />
+    <ClInclude Include="source\headers\CollisionUtil.h" />
+    <ClInclude Include="source\headers\ConvexShapeCollider.h" />
     <ClInclude Include="source\headers\Defs.h" />
+    <ClInclude Include="source\headers\EPA.h" />
+    <ClInclude Include="source\headers\GJK.h" />
     <ClInclude Include="source\headers\Mat3.h" />
     <ClInclude Include="source\headers\MTRX.h" />
     <ClInclude Include="source\headers\Rigidbody.h" />
+    <ClInclude Include="source\headers\Simplex.h" />
     <ClInclude Include="source\headers\SphereCollider.h" />
+    <ClInclude Include="source\headers\Utils.h" />
     <ClInclude Include="source\headers\Vector3D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
