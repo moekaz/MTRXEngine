@@ -1,6 +1,2 @@
-﻿  BoxCollider.cpp
-  CollisionUtil.cpp
-  SphereCollider.cpp
-  Tester.cpp
-  Generating Code...
+﻿  Tester.cpp
   Physics Engine.vcxproj -> C:\Users\mohamed\Desktop\PhysicsEngine\Physics Engine\Debug\Physics Engine.exe

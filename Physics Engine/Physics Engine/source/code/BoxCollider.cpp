@@ -28,6 +28,7 @@ void BoxCollider::Update(Vector3D& center)
 // Gives us whether there is a collision occurring
 bool BoxCollider::CheckCollision(Collider& col)
 {
+	UpdateCollisionInfo();
 	return false;
 }
 

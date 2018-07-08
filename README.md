@@ -17,13 +17,16 @@ hoping it will be a nice learning experience and some nice things can be accompl
 	
 	http://in2gpu.com/2014/05/18/gjk-algorithm-3d/
 
+## Segment-Segment minimum distance implementation: 
+
+	http://geomalgorithms.com/a07-_distance.html#dist3D_Segment_to_Segment
+
+
 ## TO DO:
 
 - Implement GJK collision detection which allows for collision detection between convex hulls
 
 - Add some collision response by calculating some collision info within GJK for example (EPA)
-
-- Add a build a convex hull function that will allow us to build convex hulls
 
 - Implement mesh collider collision detection
 

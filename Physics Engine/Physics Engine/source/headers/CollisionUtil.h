@@ -12,6 +12,7 @@
 
 #include "../headers/Simplex.h"
 #include "../headers/GJK.h"
+#include "../headers/Utils.h"
 
 // Forward declarations
 class SphereCollider;
@@ -31,7 +32,7 @@ namespace CollisionUtil
 	bool BoxBoxCollision();
 	bool BoxCapsuleCollision();
 	bool BoxMeshCollision();
-	bool CapsuleCapsuleCollision();
+	bool CapsuleCapsuleCollision(CapsuleCollider& , CapsuleCollider&);
 	bool CapsuleMeshCollision();
 	bool MeshMeshCollision();
 	bool ConvexShapeCollision(ConvexShapeCollider& , ConvexShapeCollider&);		// Collision detection between convex shaped colliders
