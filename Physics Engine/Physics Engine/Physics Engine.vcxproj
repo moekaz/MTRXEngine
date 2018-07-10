@@ -116,6 +116,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="source\code\BoxCollider.cpp" />
+    <ClCompile Include="source\code\CapsuleCollider.cpp" />
     <ClCompile Include="source\code\Collider.cpp" />
     <ClCompile Include="source\code\CollisionUtil.cpp" />
     <ClCompile Include="source\code\ConvexShapeCollider.cpp" />
@@ -125,11 +126,12 @@
     <ClCompile Include="source\code\Simplex.cpp" />
     <ClCompile Include="source\code\SphereCollider.cpp" />
     <ClCompile Include="source\code\Tester.cpp" />
-    <ClCompile Include="source\code\Utils.cpp" />
+    <ClCompile Include="source\code\PhysicsUtil.cpp" />
     <ClCompile Include="source\code\Vector3D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\headers\BoxCollider.h" />
+    <ClInclude Include="source\headers\CapsuleCollider.h" />
     <ClInclude Include="source\headers\Collider.h" />
     <ClInclude Include="source\headers\CollisionUtil.h" />
     <ClInclude Include="source\headers\ConvexShapeCollider.h" />
@@ -141,7 +143,7 @@
     <ClInclude Include="source\headers\Rigidbody.h" />
     <ClInclude Include="source\headers\Simplex.h" />
     <ClInclude Include="source\headers\SphereCollider.h" />
-    <ClInclude Include="source\headers\Utils.h" />
+    <ClInclude Include="source\headers\PhysicsUtil.h" />
     <ClInclude Include="source\headers\Vector3D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

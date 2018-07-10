@@ -12,6 +12,7 @@
 
 #include "../headers/Simplex.h"
 #include "../headers/GJK.h"
+#include "../headers/PhysicsUtil.h"
 
 // Forward declarations
 class SphereCollider;
@@ -24,14 +25,14 @@ class Vector3D;
 // Will document this when it is at least near completion
 namespace CollisionUtil
 {
-	bool SphereSphereCollision(SphereCollider& , SphereCollider&);
-	bool SphereBoxCollision(SphereCollider& , BoxCollider&);
-	bool SphereCapsuleCollision();
+	bool SphereSphereCollision(Vector3D& center1, Vector3D& center2, float radius1, float radius2);
+	bool SphereBoxCollision(Vector3D& center1, Vector3D& center2, float radius, Vector3D& min, Vector3D& max, std::vector<Vector3D>& axes, Vector3D& halfExtents);
+	bool SphereCapsuleCollision(Vector3D& center1, Vector3D& center2, float radius1, float radius2, Vector3D& A, Vector3D& B);
 	bool SphereMeshCollision();
-	bool BoxBoxCollision();
-	bool BoxCapsuleCollision();
+	bool BoxBoxCollision(BoxCollider& , BoxCollider&);
+	bool BoxCapsuleCollision(Vector3D& center1, Vector3D& center2, Vector3D& A, Vector3D& B, float radius, Vector3D& min, Vector3D& max, std::vector<Vector3D>& axes, Vector3D& halfExtents);
 	bool BoxMeshCollision();
-	bool CapsuleCapsuleCollision();
+	bool CapsuleCapsuleCollision(Vector3D& A1, Vector3D& B1, Vector3D& A2, Vector3D& B2, float radius1, float radius2);
 	bool CapsuleMeshCollision();
 	bool MeshMeshCollision();
 	bool ConvexShapeCollision(ConvexShapeCollider& , ConvexShapeCollider&);		// Collision detection between convex shaped colliders

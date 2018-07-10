@@ -16,7 +16,6 @@
 class ConvexShapeCollider : public Collider
 {
 public:
-	std::vector<Vector3D*> vertices;								// Store the vertices of the collider
 	std::vector<Vector3D*> edges;									// Store the edges of the collider
 
 	ConvexShapeCollider(const Vector3D& = Vector3D::zero);			// Constructor

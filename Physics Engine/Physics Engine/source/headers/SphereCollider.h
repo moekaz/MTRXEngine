@@ -23,7 +23,7 @@ class SphereCollider : public Collider
 public:
 	float radius;																	// Radius of a sphere collider
 
-	SphereCollider(const Vector3D& vec = Vector3D::zero, float radius = 1);			// Constructor 
+	SphereCollider(const Vector3D& vec = Vector3D::zero, float radius = 0.5);		// Constructor 
 	~SphereCollider();																// Destructor
 
 	void Update(const Vector3D&);													// Update collider values

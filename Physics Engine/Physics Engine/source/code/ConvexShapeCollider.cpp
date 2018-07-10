@@ -44,7 +44,11 @@ Vector3D& ConvexShapeCollider::FarthestPointInDirection(Vector3D& direction)
 bool ConvexShapeCollider::CheckCollision(Collider& col)
 {
 	ConvexShapeCollider& collider = static_cast<ConvexShapeCollider&>(col);
-	if (col.isConvexShape) return CollisionUtil::ConvexShapeCollision(*this , collider);	// collision
+	if (col.isConvexShape) 
+	{
+		UpdateCollisionInfo();
+		return CollisionUtil::ConvexShapeCollision(*this, collider);	// Collision
+	}
 	else return false;	// Its not a convex hull
 }
 
