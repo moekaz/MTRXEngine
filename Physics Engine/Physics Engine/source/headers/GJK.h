@@ -16,7 +16,7 @@
 
 #include "Simplex.h"
 #include "Vector3D.h"
-#include "Utils.h"
+#include "PhysicsUtil.h"
 
 // Forward declarations
 class ConvexShapeCollider;

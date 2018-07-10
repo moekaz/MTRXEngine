@@ -12,7 +12,7 @@
 #include "../headers/BoxCollider.h"
 #include "../headers/CapsuleCollider.h"
 #include "../headers/ConvexShapeCollider.h"
-#include "../headers/Utils.h"
+#include "../headers/PhysicsUtil.h"
 
 // HOW AM I CHECKING FOR MEMORY LEAKS
 
@@ -247,6 +247,13 @@ void SphereColliderTesting()
 	col1.vertices = vertices1;
 	col2.vertices = vertices2;
 
+	/*
+	for (int i = 0; i < 10000; i++)
+	{
+		col1.CheckCollision(col2);
+	}
+	*/
+
 	std::cout << "Collision of convex shapes: " << col1.CheckCollision(col2) << std::endl;
 
 	Vector3D A = Vector3D(0, 0, 0);
@@ -254,14 +261,22 @@ void SphereColliderTesting()
 	Vector3D C = Vector3D(0, 1, 0);
 	Vector3D D = Vector3D(1, 1, 0);
 
-	std::cout << Utils::MinDistanceSquaredTwoSegments(A, B, C, D) << std::endl;
+	std::cout << PhysicsUtil::MinDistanceSquaredTwoSegments(A, B, C, D) << std::endl;
+
+
+	C = Vector3D(0.5, 2, 0);
+	std::cout << "Distance between point and line segment: " << PhysicsUtil::MinDistanceSquaredPointSegment(A, B, C) << std::endl;
+
 
 	Vector3D center = Vector3D(0, 2.0f, 0);
 	CapsuleCollider cap1 = CapsuleCollider();
 	CapsuleCollider cap2 = CapsuleCollider(center);
 
-	std::cout << "Collision: " << cap1.CheckCollision(cap2) << std::endl;
+	std::cout << "Capsule capsule Collision: " << cap1.CheckCollision(cap2) << std::endl;
 
+	BoxCollider b = BoxCollider(Vector3D(0, 0 ,0));
+
+	std::cout << "Sphere box collision detection: " << collider1.CheckCollision(b) << std::endl;
 	/*
 	while (i > 0)
 	{

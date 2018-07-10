@@ -21,7 +21,7 @@ public:
 	Vector3D B;																			// Center of the second sphere
 	float height;																		// Height of the capsule
 
-	CapsuleCollider(Vector3D& = Vector3D::zero , float = 1.f , float = 1.f);			// Constructor
+	CapsuleCollider(Vector3D& = Vector3D::zero , float = 0.25f , float = 0.5f);			// Constructor
 	~CapsuleCollider();																	// Destructor
 
 	bool CheckCollision(Collider&);														// Function for checking collision

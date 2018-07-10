@@ -32,6 +32,8 @@ hoping it will be a nice learning experience and some nice things can be accompl
 
 - Implement Capsule collider collision detection
 
+- Implement raycasting 
+
 - Refactor and revisit the architecture 
 
 - Implement some actual physics behavior such as kinematics and forces etc...

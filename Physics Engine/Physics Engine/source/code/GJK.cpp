@@ -23,7 +23,7 @@ bool GJK::GJKCollision(ConvexShapeCollider& convexCollider1, ConvexShapeCollider
 	Vector3D BC = simplex.c - simplex.b;
 	Vector3D BO = -simplex.b;
 
-	searchDirection = Utils::TripleCross(BC, BO, BC);
+	searchDirection = PhysicsUtil::TripleCross(BC, BO, BC);
 
 	simplex.size = 2;	// Simplex has 2 points
 
@@ -31,17 +31,17 @@ bool GJK::GJKCollision(ConvexShapeCollider& convexCollider1, ConvexShapeCollider
 	{
 		Vector3D a = convexCollider1.Support(convexCollider2, searchDirection);
 
-		std::cout << "Iterations: " << i << std::endl;
+		//std::cout << "Iterations: " << i << std::endl;
 
 		if (a.DotProduct(searchDirection) < 0)
 		{
-			std::cout << "WE CANNOT FIND A POINT PAST THE ORIGIN" << std::endl;
+			//std::cout << "WE CANNOT FIND A POINT PAST THE ORIGIN" << std::endl;
 			return false;		// We cannot have a collision
 		}
 
 		if (UpdateSimplex(simplex, searchDirection, a))
 		{
-			std::cout << "THE ORIGIN IS INSIDE OUR TETRAHEDRON" << std::endl;
+			//std::cout << "THE ORIGIN IS INSIDE OUR TETRAHEDRON" << std::endl;
 			return true;		// Update the simplex and set a new direction vector
 		}
 	}
@@ -56,17 +56,17 @@ bool GJK::UpdateSimplex(Simplex& simplex, Vector3D& direction, Vector3D& a)
 
 	if (simplex.size == 2)	// Triangle
 	{
-		std::cout << "TRIANGLE SIMPLEX CHECK" << std::endl;
+		//std::cout << "TRIANGLE SIMPLEX CHECK" << std::endl;
 		collision = TriangleSimplexUpdate(simplex, direction, a);
 	}
 	else if (simplex.size == 3) // Tetrahedron
 	{
-		std::cout << "TETRAHEDRON SIMPLEX CHECK" << std::endl;
+		//std::cout << "TETRAHEDRON SIMPLEX CHECK" << std::endl;
 		collision = TetrahedronSimplexUpdate(simplex, direction, a);
 	}
 	else if (simplex.size > 3)
 	{
-		std::cout << "HOUSTON WE HAVE A PROBLEM" << std::endl;
+		//std::cout << "HOUSTON WE HAVE A PROBLEM" << std::endl;
 	}
 
 	return collision;
@@ -88,13 +88,13 @@ bool GJK::TriangleSimplexUpdate(Simplex& simplex, Vector3D& direction, Vector3D&
 		// C is not part of the simplex anymore
 		simplex.c = simplex.b;
 		simplex.b = a;
-		direction = Utils::TripleCross(AB, AO, AB);
+		direction = PhysicsUtil::TripleCross(AB, AO, AB);
 	}
 	else if (ACP.DotProduct(AO) > 0)
 	{
 		// B is no longer part of the simplex
 		simplex.b = a;
-		direction = Utils::TripleCross(AC, AO, AC);
+		direction = PhysicsUtil::TripleCross(AC, AO, AC);
 	}
 	else if (ABC.DotProduct(AO) > 0)
 	{
@@ -174,7 +174,7 @@ bool GJK::TetrahedronChecks(Simplex& simplex, Vector3D& AO, Vector3D& AB, Vector
 		simplex.b = a;
 
 		simplex.size = 2; // We have lost d in this process so we need to rebuild the triangle
-		direction = Utils::TripleCross(AB, AO, AB);
+		direction = PhysicsUtil::TripleCross(AB, AO, AB);
 	}
 	else if (ABC.CrossProduct(AC).DotProduct(AO) > 0)
 	{
@@ -182,7 +182,7 @@ bool GJK::TetrahedronChecks(Simplex& simplex, Vector3D& AO, Vector3D& AB, Vector
 		simplex.b = a;
 
 		simplex.size = 2;	// We also need to rebuild the triangle as well
-		direction = Utils::TripleCross(AC, AO, AC);
+		direction = PhysicsUtil::TripleCross(AC, AO, AC);
 	}
 	else
 	{

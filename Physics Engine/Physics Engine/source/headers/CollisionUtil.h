@@ -12,7 +12,7 @@
 
 #include "../headers/Simplex.h"
 #include "../headers/GJK.h"
-#include "../headers/Utils.h"
+#include "../headers/PhysicsUtil.h"
 
 // Forward declarations
 class SphereCollider;
@@ -29,7 +29,7 @@ namespace CollisionUtil
 	bool SphereBoxCollision(SphereCollider& , BoxCollider&);
 	bool SphereCapsuleCollision();
 	bool SphereMeshCollision();
-	bool BoxBoxCollision();
+	bool BoxBoxCollision(BoxCollider& , BoxCollider&);
 	bool BoxCapsuleCollision();
 	bool BoxMeshCollision();
 	bool CapsuleCapsuleCollision(CapsuleCollider& , CapsuleCollider&);

@@ -9,6 +9,7 @@
 #define COLLIDER_H
 
 #include <iostream>
+#include <vector>
 
 #include "Rigidbody.h"
 #include "Vector3D.h"
@@ -26,8 +27,11 @@ public:
 	bool isConvexShape;														// Is the collider a convex shape
 	Vector3D center;														// The center position of the collider
 	Vector3D forwardDirection;												// The forward direction of the collider
+	Vector3D upDirection;													// The Upwards direction of the collider
+	Vector3D sideDirection;													// The Side direction of the collider
 	Rigidbody* physicalValues;												// Values that might be needed are here
-	
+	std::vector<Vector3D*> vertices;										// Store the vertices of the collider
+
 	Collider(const Vector3D& vec = Vector3D::zero);							// Constructor
 	~Collider();															// Destructor
 

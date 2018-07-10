@@ -47,7 +47,7 @@ bool ConvexShapeCollider::CheckCollision(Collider& col)
 	if (col.isConvexShape) 
 	{
 		UpdateCollisionInfo();
-		return CollisionUtil::ConvexShapeCollision(*this, collider);	// collision
+		return CollisionUtil::ConvexShapeCollision(*this, collider);	// Collision
 	}
 	else return false;	// Its not a convex hull
 }
