@@ -17,7 +17,7 @@ Collider::Collider(const Vector3D& vec)
 	center = vec;															// Position of the center of the collider
 	forwardDirection = Vector3D(0, 0, -1);									// Forward direction
 	upDirection = Vector3D(0, 1, 0);										// Up vector
-	sideDirection = forwardDirection.CrossProduct(upDirection).Normalize();	// Calculate directions of the collider
+	sideDirection = -forwardDirection.CrossProduct(upDirection).Normalize();	// Calculate directions of the collider
 }
 
 /* Destructor */

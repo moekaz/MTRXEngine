@@ -5,7 +5,7 @@
 
 #include "../headers/SphereCollider.h"
 #include "../headers/BoxCollider.h"
-//#include "../headers/CapsuleCollider.h"
+#include "../headers/CapsuleCollider.h"
 //#include "../headers/MeshCollider"
 
 /* Constructor */
@@ -35,20 +35,22 @@ bool SphereCollider::CheckCollision(Collider& col)
 		{
 			std::cout << "SPHERE SPHERE COLLISON DETECTION" << std::endl;
 			SphereCollider& collider = static_cast<SphereCollider&>(col);
-			isColliding = CollisionUtil::SphereSphereCollision(*this , collider);
+			isColliding = CollisionUtil::SphereSphereCollision(center , collider.center , radius , collider.radius);
 			break;
 		}
 		case ColliderType::Box:
 		{
 			std::cout << "SPHERE BOX COLLISION DETECTION" << std::endl;
 			BoxCollider& collider = static_cast<BoxCollider&>(col);
-			isColliding = CollisionUtil::SphereBoxCollision(*this , collider);
+			std::vector<Vector3D> axes = {collider.sideDirection , collider.upDirection , collider.forwardDirection};
+			isColliding = CollisionUtil::SphereBoxCollision(center , collider.center , radius , collider.min , collider.max , axes , collider.halfExtents);
 			break;
 		}
 		case ColliderType::Capsule:
 		{
 			std::cout << "SPHERE CAPSULE COLLISION DETECTION" << std::endl;
-			isColliding = CollisionUtil::SphereCapsuleCollision();
+			CapsuleCollider& collider = static_cast<CapsuleCollider&>(col);
+			isColliding = CollisionUtil::SphereCapsuleCollision(center , collider.center , radius , collider.radii , collider.A , collider.B);
 			break;
 		}
 		case ColliderType::Mesh:

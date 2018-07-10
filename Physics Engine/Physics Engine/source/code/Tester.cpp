@@ -264,8 +264,8 @@ void SphereColliderTesting()
 	std::cout << PhysicsUtil::MinDistanceSquaredTwoSegments(A, B, C, D) << std::endl;
 
 
-	C = Vector3D(0.5, 2, 0);
-	std::cout << "Distance between point and line segment: " << PhysicsUtil::MinDistanceSquaredPointSegment(A, B, C) << std::endl;
+	//C = Vector3D(0.5, 2, 0);
+	//std::cout << "Distance between point and line segment: " << PhysicsUtil::MinDistanceSquaredPointSegment(A, B, C , D) << std::endl;
 
 
 	Vector3D center = Vector3D(0, 2.0f, 0);

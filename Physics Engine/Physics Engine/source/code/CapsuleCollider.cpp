@@ -4,6 +4,9 @@
 */
 
 #include "../headers/CapsuleCollider.h"
+#include "../headers/BoxCollider.h"
+#include "../headers/SphereCollider.h"
+//#include "../headers/MeshCollider.h"
 
 // Constructor
 CapsuleCollider::CapsuleCollider(Vector3D& center , float radii , float height) : Collider(center)
@@ -25,22 +28,39 @@ bool CapsuleCollider::CheckCollision(Collider& col)
 
 	switch (col.type)
 	{
-		case ColliderType::Capsule:
+		case ColliderType::Sphere:
 		{
+			std::cout << "Capsule sphere collision detection" << std::endl;
 			CapsuleCollider& collider = static_cast<CapsuleCollider&>(col);
-			collision = CollisionUtil::CapsuleCapsuleCollision(*this , collider);
+			collision = CollisionUtil::CapsuleCapsuleCollision(A, B, collider.A, collider.B, radii, collider.radii);
+			break;
 		}
 		case ColliderType::Box:
 		{
-			//collision=
+			std::cout << "Capsule Box collision detection" << std::endl;
+			BoxCollider& collider = static_cast<BoxCollider&>(col);
+			std::vector<Vector3D> axes = { collider.sideDirection , collider.upDirection , collider.forwardDirection };
+			collision = CollisionUtil::BoxCapsuleCollision(collider.center, center, A, B, radii, collider.min, collider.max, axes, collider.halfExtents);
+			break;
+		}
+		case ColliderType::Capsule:
+		{
+			std::cout << "Capsule capsule collision detection" << std::endl;
+			CapsuleCollider& collider = static_cast<CapsuleCollider&>(col);
+			collision = CollisionUtil::CapsuleCapsuleCollision(A , B , collider.A , collider.B , radii , collider.radii);
+			break;
 		}
 		case ColliderType::Mesh:
 		{
-			//collision=
+			std::cout << "Capsule Mesh collision detection" << std::endl;
+			//CapsuleCollider& collider = static_cast<CapsuleCollider&>(col);
+			//collision = CollisionUtil::CapsuleCapsuleCollision(A, B, collider.A, collider.B, radii, collider.radii);
+			break;
 		}
-		case ColliderType::Sphere:
+		default:
 		{
-			//collision
+			std::cout << "HOUSTON WE HAVE A PROBLEM" << std::endl;
+			collision = false;
 		}
 	}
 
