@@ -256,17 +256,17 @@ void SphereColliderTesting()
 
 	std::cout << "Collision of convex shapes: " << col1.CheckCollision(col2) << std::endl;
 
+	/*
 	Vector3D A = Vector3D(0, 0, 0);
 	Vector3D B = Vector3D(1, 0, 0);
 	Vector3D C = Vector3D(0, 1, 0);
 	Vector3D D = Vector3D(1, 1, 0);
 
 	std::cout << PhysicsUtil::MinDistanceSquaredTwoSegments(A, B, C, D) << std::endl;
-
+	*/
 
 	//C = Vector3D(0.5, 2, 0);
 	//std::cout << "Distance between point and line segment: " << PhysicsUtil::MinDistanceSquaredPointSegment(A, B, C , D) << std::endl;
-
 
 	Vector3D center = Vector3D(0, 2.0f, 0);
 	CapsuleCollider cap1 = CapsuleCollider();

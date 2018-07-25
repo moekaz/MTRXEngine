@@ -8,15 +8,15 @@
 /* Constructor */
 Collider::Collider(const Vector3D& vec)
 {	
-	enabled = true;															// Is the collider turned on 
-	trigger = false;														// Is it a trigger collider
-	isColliding = false;													// Is colliding with another collider
-	exitedCollision = false;												// Left Collision
-	enteredCollision = false;												// Just entered collision
-	stillColliding = false;													// still in collision
-	center = vec;															// Position of the center of the collider
-	forwardDirection = Vector3D(0, 0, -1);									// Forward direction
-	upDirection = Vector3D(0, 1, 0);										// Up vector
+	enabled = true;																// Is the collider turned on 
+	trigger = false;															// Is it a trigger collider
+	isColliding = false;														// Is colliding with another collider
+	exitedCollision = false;													// Left Collision
+	enteredCollision = false;													// Just entered collision
+	stillColliding = false;														// still in collision
+	center = vec;																// Position of the center of the collider
+	forwardDirection = Vector3D(0, 0, -1);										// Forward direction
+	upDirection = Vector3D(0, 1, 0);											// Up vector
 	sideDirection = -forwardDirection.CrossProduct(upDirection).Normalize();	// Calculate directions of the collider
 }
 
@@ -80,5 +80,9 @@ bool Collider::CollisionStay()
 // Print the general values of a collider
 std::ostream& operator<<(std::ostream& os , const Collider& col)
 {
+	os << "Collider:" << std::endl
+		<< "---------" << std::endl
+		<< "Center: " << col.center << std::endl;
+
 	return os;
 }

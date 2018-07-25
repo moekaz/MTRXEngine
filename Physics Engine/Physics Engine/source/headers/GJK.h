@@ -2,17 +2,17 @@
 	Author: Mohamed Kazma
 	Description: Gilbert–Johnson–Keerthi (GJK) algorithm for collision detection of convex shapes
 	Implementation of GJK is based upon:
-	https://caseymuratori.com/blog_0003
-	http://www.dyn4j.org/2010/04/gjk-gilbert-johnson-keerthi/#gjk-minkowski
-	http://vec3.ca/gjk/implementation/
-	http://in2gpu.com/2014/05/18/gjk-algorithm-3d/
+		https://caseymuratori.com/blog_0003
+		http://www.dyn4j.org/2010/04/gjk-gilbert-johnson-keerthi/#gjk-minkowski
+		http://vec3.ca/gjk/implementation/
+		http://in2gpu.com/2014/05/18/gjk-algorithm-3d/
 */
 
 #pragma once
 #ifndef GJK_H
 #define GJK_H
 
-#define MAX_NUM_ITERATIONS 64
+#define MAX_NUM_ITERATIONS 64	// Helps with better performance for more complicated convex shapes while sacrificing a little on accuracy
 
 #include "Simplex.h"
 #include "Vector3D.h"

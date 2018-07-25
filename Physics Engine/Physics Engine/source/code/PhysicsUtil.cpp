@@ -1,6 +1,6 @@
 /*
 	Author: Mohamed Kazma
-	Description: This will be a util file that will include some functions that i want to run
+	Description: This will be a util file that will include some functions that a physics engine will generally need
 	Implementation of smallest distance between 2 line segments:
 	http://geomalgorithms.com/a07-_distance.html#dist3D_Segment_to_Segment
 */
@@ -36,7 +36,7 @@ namespace PhysicsUtil
 		return abs((C - A).DotProduct(normalPlane));
 	}
 
-	// Finding the minimum distance between 2 segments
+	// Finding the minimum distance between 2 line segments
 	float MinDistanceSquaredTwoSegments(Vector3D& A, Vector3D& B, Vector3D& C, Vector3D& D)
 	{
 		Vector3D u = B - A;
@@ -114,6 +114,7 @@ namespace PhysicsUtil
 		return distanceVec.MagnitudeSquared();
 	}
 	
+	// Minimum distance between a point and a line segment
 	float MinDistanceSquaredPointSegment(Vector3D& A, Vector3D& B, Vector3D& C , Vector3D& closest)
 	{
 		Vector3D AB = B - A;

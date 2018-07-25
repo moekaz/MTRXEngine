@@ -1,6 +1,6 @@
 /*
 	Author: Mohamed Kazma
-	Description: 
+	Description: Implementation of a convex shape collider
 */
 
 #include "../headers/ConvexShapeCollider.h"
