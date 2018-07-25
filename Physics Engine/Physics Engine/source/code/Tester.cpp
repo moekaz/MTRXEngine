@@ -277,6 +277,7 @@ void SphereColliderTesting()
 	BoxCollider b = BoxCollider(Vector3D(0, 0 ,0));
 
 	std::cout << "Sphere box collision detection: " << collider1.CheckCollision(b) << std::endl;
+
 	/*
 	while (i > 0)
 	{

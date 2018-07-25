@@ -64,7 +64,7 @@ bool CapsuleCollider::CheckCollision(Collider& col)
 		}
 	}
 
-	UpdateCollisionInfo();
+	UpdateCollisionInfo();	// Update the collision information such as when the collision occurred etc etc...
 
 	return collision;
 }

@@ -58,16 +58,19 @@ namespace CollisionUtil
 		return PhysicsUtil::MinDistanceSquaredPointSegment(A , B , center1 , vec) <= (radius1 + radius2) * (radius1 * radius2);
 	}
 
+	// Sphere mesh Collsiion detection
 	bool SphereMeshCollision()
 	{
 		return false;
 	}
 
+	// Box Box collision 
 	bool BoxBoxCollision(BoxCollider& box1 , BoxCollider& box2)
 	{
 		return ConvexShapeCollision(box1 , box2);
 	}
 
+	// Box Capsule collsiion detection 
 	bool BoxCapsuleCollision(Vector3D& center1, Vector3D& center2, Vector3D& A, Vector3D& B, float radius, Vector3D& min, Vector3D& max, std::vector<Vector3D>& axes, Vector3D& halfExtents)
 	{
 		// Find the closest point on the capsule line to the center of of the box and then do a sphere box collision detection
@@ -77,6 +80,7 @@ namespace CollisionUtil
 		return SphereBoxCollision(center2, center1, radius, min, max, axes, halfExtents);
 	}
 
+	// Box Mesh collision detection
 	bool BoxMeshCollision()
 	{
 		return false;
@@ -88,12 +92,14 @@ namespace CollisionUtil
 		// Min distance between the 2 heights is greater than the sum of the radii
 		return PhysicsUtil::MinDistanceSquaredTwoSegments(A1 , B1 , A2 , B2) <= (radius1 + radius2) * (radius1 + radius2);
 	}
-
+		
+	// Capsule Mesh Collision detection
 	bool CapsuleMeshCollision()
 	{
 		return false;
 	}
 
+	// Mesh Mesh collision detection
 	bool MeshMeshCollision()
 	{
 		return false;

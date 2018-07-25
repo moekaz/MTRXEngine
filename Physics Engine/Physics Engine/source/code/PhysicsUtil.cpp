@@ -2,7 +2,7 @@
 	Author: Mohamed Kazma
 	Description: This will be a util file that will include some functions that a physics engine will generally need
 	Implementation of smallest distance between 2 line segments:
-	http://geomalgorithms.com/a07-_distance.html#dist3D_Segment_to_Segment
+		http://geomalgorithms.com/a07-_distance.html#dist3D_Segment_to_Segment
 */
 
 #include "../headers/PhysicsUtil.h"
