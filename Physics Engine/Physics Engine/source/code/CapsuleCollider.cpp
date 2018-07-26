@@ -80,7 +80,10 @@ std::ostream& operator<<(std::ostream& os , const CapsuleCollider& caps)
 {
 	os << "Capsule Collider:" << std::endl
 		<< "-----------------" << std::endl
-		<< "Center: " << caps.center << std::endl
+		<< "Center: " << std::endl
+		<< "x: " << caps.center.x << std::endl
+		<< "y: " << caps.center.y << std::endl
+		<< "z: " << caps.center.z << std::endl
 		<< "Radii: " << caps.radii << std::endl
 		<< "Height: " << caps.height;
 

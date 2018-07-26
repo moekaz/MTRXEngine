@@ -76,7 +76,10 @@ std::ostream& operator<<(std::ostream& os , const SphereCollider& sphCollider)
 {
 	os << "Sphere Collider:" << std::endl
 		<< "---------------" << std::endl
-		<< "Center: " << sphCollider.center << std::endl
+		<< "Center: " << std::endl
+		<< "x: " << sphCollider.center.x << std::endl
+		<< "y: " << sphCollider.center.y << std::endl
+		<< "z: " << sphCollider.center.z << std::endl
 		<< "Radius: " << sphCollider.radius;
 
 	return os;

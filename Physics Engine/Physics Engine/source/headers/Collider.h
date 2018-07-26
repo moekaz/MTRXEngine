@@ -45,7 +45,6 @@ public:
 	virtual bool CollisionExit();											// When the collider exits collision
 
 	friend std::ostream& operator<<(std::ostream& , const Collider&);		// Print values of the collider
-	friend std::ostream& operator<<(std::ostream&, const glm::vec3&);		// Print values of the vec3
 
 private:
 protected:

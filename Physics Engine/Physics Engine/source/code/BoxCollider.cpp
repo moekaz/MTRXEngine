@@ -121,7 +121,10 @@ std::ostream& operator<<(std::ostream& os, const BoxCollider& box)
 {
 	os << "Box Collider:" << std::endl
 		<< "-------------" << std::endl
-		<< "Center: " << box.center << std::endl
+		<< "Center: " << std::endl 
+		<< "x: " << box.center.x << std::endl
+		<< "y: " << box.center.y << std::endl
+		<< "z: " << box.center.z << std::endl
 		<< "Mins: " << box.min << std::endl
 		<< "Maxes: " << box.max << std::endl;
 
