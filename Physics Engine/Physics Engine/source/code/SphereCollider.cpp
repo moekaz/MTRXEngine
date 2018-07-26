@@ -9,7 +9,7 @@
 //#include "../headers/MeshCollider"
 
 /* Constructor */
-SphereCollider::SphereCollider(const Vector3D& center , float radius) : Collider(center)
+SphereCollider::SphereCollider(const glm::vec3& center , float radius) : Collider(center)
 {
 	type = ColliderType::Sphere;
 	this->radius = radius;
@@ -21,7 +21,7 @@ SphereCollider::~SphereCollider() {}
 /* Functions */
 
 // Update the values of the collider
-void SphereCollider::Update(const Vector3D& newCenter) 
+void SphereCollider::Update(const glm::vec3& newCenter) 
 {
 	center = newCenter;
 }
@@ -42,7 +42,7 @@ bool SphereCollider::CheckCollision(Collider& col)
 		{
 			std::cout << "SPHERE BOX COLLISION DETECTION" << std::endl;
 			BoxCollider& collider = static_cast<BoxCollider&>(col);
-			std::vector<Vector3D> axes = {collider.sideDirection , collider.upDirection , collider.forwardDirection};
+			std::vector<glm::vec3> axes = {collider.sideDirection , collider.upDirection , collider.forwardDirection};
 			isColliding = CollisionUtil::SphereBoxCollision(center , collider.center , radius , collider.min , collider.max , axes , collider.halfExtents);
 			break;
 		}

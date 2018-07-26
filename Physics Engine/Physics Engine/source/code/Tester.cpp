@@ -225,21 +225,23 @@ void SphereColliderTesting()
 {
 	int i = 300;
 	SphereCollider collider1 = SphereCollider();
-	SphereCollider collider2 = SphereCollider(Vector3D(30,0,0));
+	SphereCollider collider2 = SphereCollider(glm::vec3(30,0,0));
 
-	std::vector<Vector3D*> vertices1 = 
+	std::cout << collider1 << std::endl;
+
+	std::vector<glm::vec3*> vertices1 = 
 	{ 
-		new Vector3D(4 , 11 , 0), 
-		new Vector3D(4 , 5 , 0),
-		new Vector3D(9 , 9 , 0),
+		new glm::vec3(4 , 11 , 0), 
+		new glm::vec3(4 , 5 , 0),
+		new glm::vec3(9 , 9 , 0),
 	};
 
-	std::vector<Vector3D*> vertices2 = 
+	std::vector<glm::vec3*> vertices2 = 
 	{
-		new Vector3D(5 , 7 , 0),
-		new Vector3D(7 , 3 , 0),
-		new Vector3D(10 , 2 , 0),
-		new Vector3D(12 , 7 , 0)
+		new glm::vec3(5 , 7 , 0),
+		new glm::vec3(7 , 3 , 0),
+		new glm::vec3(10 , 2 , 0),
+		new glm::vec3(12 , 7 , 0)
 	};
 
 	ConvexShapeCollider col1 = ConvexShapeCollider();
@@ -257,24 +259,24 @@ void SphereColliderTesting()
 	std::cout << "Collision of convex shapes: " << col1.CheckCollision(col2) << std::endl;
 
 	/*
-	Vector3D A = Vector3D(0, 0, 0);
-	Vector3D B = Vector3D(1, 0, 0);
-	Vector3D C = Vector3D(0, 1, 0);
-	Vector3D D = Vector3D(1, 1, 0);
+	glm::vec3 A = glm::vec3(0, 0, 0);
+	glm::vec3 B = glm::vec3(1, 0, 0);
+	glm::vec3 C = glm::vec3(0, 1, 0);
+	glm::vec3 D = glm::vec3(1, 1, 0);
 
 	std::cout << PhysicsUtil::MinDistanceSquaredTwoSegments(A, B, C, D) << std::endl;
 	*/
 
-	//C = Vector3D(0.5, 2, 0);
+	//C = glm::vec3(0.5, 2, 0);
 	//std::cout << "Distance between point and line segment: " << PhysicsUtil::MinDistanceSquaredPointSegment(A, B, C , D) << std::endl;
 
-	Vector3D center = Vector3D(0, 2.0f, 0);
+	glm::vec3 center = glm::vec3(0, 2.0f, 0);
 	CapsuleCollider cap1 = CapsuleCollider();
 	CapsuleCollider cap2 = CapsuleCollider(center);
 
 	std::cout << "Capsule capsule Collision: " << cap1.CheckCollision(cap2) << std::endl;
 
-	BoxCollider b = BoxCollider(Vector3D(0, 0 ,0));
+	BoxCollider b = BoxCollider(glm::vec3(0, 0 ,0));
 
 	std::cout << "Sphere box collision detection: " << collider1.CheckCollision(b) << std::endl;
 
@@ -282,7 +284,7 @@ void SphereColliderTesting()
 	while (i > 0)
 	{
 		std::cout << "i: " << i << std::endl;
-		collider2.Update(collider2.center - Vector3D(1,0,0));
+		collider2.Update(collider2.center - glm::vec3(1,0,0));
 		std::cout << "Collider1: " << std::endl <<  collider1 << std::endl;
 		std::cout << "Collider2: " << std::endl << collider2 << std::endl;
 		std::cout << "COLLISION: " << collider2.CheckCollision(collider1) << std::endl;

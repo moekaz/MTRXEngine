@@ -10,43 +10,45 @@
 namespace PhysicsUtil
 {
 	// Optimizes 2 cross product calls into 2 dot product ones
-	Vector3D TripleCross(Vector3D& a, Vector3D& b, Vector3D& c)
+	glm::vec3 TripleCross(glm::vec3& a, glm::vec3& b, glm::vec3& c)
 	{
 		// (A x B) x C = B(C . A) - A(C . B)
-		return b * (c.DotProduct(a)) - a * (c.DotProduct(b));
+		return b * (glm::dot(c , a)) - a * (glm::dot(c,b));
 	}
 
 	// Finding the minimum distance between infinite lines
-	float MinDistanceTwoLines(Vector3D& A, Vector3D& B, Vector3D& C, Vector3D& D)
+	float MinDistanceTwoLines(glm::vec3& A, glm::vec3& B, glm::vec3& C, glm::vec3& D)
 	{
-		Vector3D l1 = B - A;	// First direction vector 
-		Vector3D l2 = D - C;	// Second direction vector
+		glm::vec3 l1 = B - A;	// First direction vector 
+		glm::vec3 l2 = D - C;	// Second direction vector
 
-		//Vector3D P = l1 / 2;
-		//Vector3D Q = l2 / 2;
-		Vector3D normalPlane = l1.CrossProduct(l2).Normalize();
-		if (normalPlane == Vector3D::zero)
+		//glm::vec3 P = l1 / 2;
+		//glm::vec3 Q = l2 / 2;
+		glm::vec3 normalPlane = glm::normalize(glm::cross(l1, l2));
+
+		if (normalPlane == glm::vec3())
 		{
 			// They are parallel so choose any new vector that is not parallel to one of them and do the cross product for that it should be parallel to both
-			Vector3D newVec = l2 + Vector3D(1, 1, 1);
-			normalPlane = l1.CrossProduct(newVec);	// If the normal vector is (0,0,0) choose one of the 2 
+			glm::vec3 newVec = l2 + glm::vec3(1, 1, 1);
+			normalPlane = glm::cross(l1, newVec);	// If the normal vector is (0,0,0) choose one of the 2 
 		}
-		std::cout << normalPlane << std::endl;
 
-		return abs((C - A).DotProduct(normalPlane));
+		//std::cout << normalPlane << std::endl;
+
+		return abs(glm::dot(C - A , normalPlane));
 	}
 
 	// Finding the minimum distance between 2 line segments
-	float MinDistanceSquaredTwoSegments(Vector3D& A, Vector3D& B, Vector3D& C, Vector3D& D)
+	float MinDistanceSquaredTwoSegments(glm::vec3& A, glm::vec3& B, glm::vec3& C, glm::vec3& D)
 	{
-		Vector3D u = B - A;
-		Vector3D v = D - C;
-		Vector3D w = A - C;
-		float a = u.DotProduct(u);
-		float b = u.DotProduct(v);
-		float c = v.DotProduct(v);
-		float d = u.DotProduct(w);
-		float e = v.DotProduct(w);
+		glm::vec3 u = B - A;
+		glm::vec3 v = D - C;
+		glm::vec3 w = A - C;
+		float a = glm::dot(u, u);
+		float b = glm::dot(u, v);
+		float c = glm::dot(v, v);
+		float d = glm::dot(u, w);
+		float e = glm::dot(v, w);
 		float _D = a * c - b * b;
 		float sc = 0 , sn = 0;
 		float sd = _D;
@@ -110,38 +112,38 @@ namespace PhysicsUtil
 		if (abs(tc) < std::numeric_limits<float>::epsilon()) tc = 0;
 		else tn / td;
 
-		Vector3D distanceVec =  w + (u * sc) - (v * tc);
-		return distanceVec.MagnitudeSquared();
+		glm::vec3 distanceVec =  w + (u * sc) - (v * tc);
+		return glm::dot(distanceVec, distanceVec);
 	}
 	
 	// Minimum distance between a point and a line segment
-	float MinDistanceSquaredPointSegment(Vector3D& A, Vector3D& B, Vector3D& C , Vector3D& closest)
+	float MinDistanceSquaredPointSegment(glm::vec3& A, glm::vec3& B, glm::vec3& C , glm::vec3& closest)
 	{
-		Vector3D AB = B - A;
-		Vector3D AC = C - A;
-		Vector3D BC = C - B;
+		glm::vec3 AB = B - A;
+		glm::vec3 AC = C - A;
+		glm::vec3 BC = C - B;
 
-		float dot = AC.DotProduct(AB);
+		float dot = glm::dot(AC, AB);
 		if (dot < 0.0f)
 		{
 			closest = A;
 			std::cout << "Clamped to A" << std::endl;
 			// Clamp to A being the closest point
-			return AC.MagnitudeSquared();
+			return glm::dot(AC, AC);
 		}
-		else if (BC.DotProduct(AB) > 0.0f)
+		else if (glm::dot(BC , AB) > 0.0f)
 		{
 			closest = B;
 			std::cout << "Clamped to B" << std::endl;
 			// Clamp B to being the closest point
-			return BC.MagnitudeSquared();
+			return glm::dot(BC, BC);
 		}
 		else
 		{
-			closest = AB.Normalize() * dot;
+			closest = glm::normalize(AB) * dot;
 			std::cout << "Between A and B" << std::endl;
 			// Its a point between them so use pythagoras to find it 
-			return AC.MagnitudeSquared() - (dot * dot);
+			return glm::dot(AC, AC) - (dot * dot);
 		}
 	}
 }

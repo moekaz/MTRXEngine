@@ -7,6 +7,8 @@
 #ifndef PHYSICSUTIL_H
 #define PHYSICSUTIL_H
 
+#include <iostream>
+#include <glm/glm.hpp>
 #include <glm/vec3.hpp>
 
 namespace PhysicsUtil

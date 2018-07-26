@@ -18,7 +18,7 @@ namespace CollisionUtil
 	{
 		glm::vec3 diff = center1 - center2;
 		float sumRadii = radius1 + radius2;
-		return glm::length2(diff) <= sumRadii * sumRadii;
+		return glm::dot(diff , diff) <= sumRadii * sumRadii;
 	}
 
 	// Sphere box collision detection
@@ -37,7 +37,7 @@ namespace CollisionUtil
 		// For the 3 axes 
 		for (int i = 0; i < 3; i++)
 		{
-			float distance = direction.DotProduct(axes[i]);
+			float distance = glm::dot(direction, axes[i]); //direction.DotProduct(axes[i]);
 
 			if (distance > halfExtents[i]) distance = halfExtents[i];
 			else if (distance < -halfExtents[i]) distance = -halfExtents[i];
@@ -46,7 +46,8 @@ namespace CollisionUtil
 		}
 
 		// Sphere point collision detection
-		return (center1 - closestPoint).MagnitudeSquared() <= radius * radius;
+		glm::vec3 difference = center1 - closestPoint;
+		return glm::dot(difference , difference) <= radius * radius;
 	}
 
 	// Sphere capsule collision detection

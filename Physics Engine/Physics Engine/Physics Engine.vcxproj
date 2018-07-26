@@ -76,6 +76,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)/Physics Engine/Libraries/glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -123,6 +124,7 @@
     <ClCompile Include="source\code\EPA.cpp" />
     <ClCompile Include="source\code\GJK.cpp" />
     <ClCompile Include="source\code\Mat3.cpp" />
+    <ClCompile Include="source\code\Ray.cpp" />
     <ClCompile Include="source\code\Simplex.cpp" />
     <ClCompile Include="source\code\SphereCollider.cpp" />
     <ClCompile Include="source\code\Tester.cpp" />
@@ -140,6 +142,7 @@
     <ClInclude Include="source\headers\GJK.h" />
     <ClInclude Include="source\headers\Mat3.h" />
     <ClInclude Include="source\headers\MTRX.h" />
+    <ClInclude Include="source\headers\Ray.h" />
     <ClInclude Include="source\headers\Rigidbody.h" />
     <ClInclude Include="source\headers\Simplex.h" />
     <ClInclude Include="source\headers\SphereCollider.h" />

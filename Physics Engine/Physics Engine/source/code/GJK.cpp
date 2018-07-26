@@ -10,7 +10,7 @@
 bool GJK::GJKCollision(ConvexShapeCollider& convexCollider1, ConvexShapeCollider& convexCollider2)
 {
 	Simplex simplex;
-	Vector3D searchDirection = Vector3D(-1, 0, 0);
+	glm::vec3 searchDirection = glm::vec3(-1, 0, 0);
 
 	simplex.c = convexCollider1.Support(convexCollider2, searchDirection);
 
@@ -18,10 +18,10 @@ bool GJK::GJKCollision(ConvexShapeCollider& convexCollider1, ConvexShapeCollider
 
 	simplex.b = convexCollider1.Support(convexCollider2, searchDirection);
 
-	if (simplex.b.DotProduct(searchDirection) < 0) return false;
+	if (glm::dot(simplex.b , searchDirection) < 0) return false;
 
-	Vector3D BC = simplex.c - simplex.b;
-	Vector3D BO = -simplex.b;
+	glm::vec3 BC = simplex.c - simplex.b;
+	glm::vec3 BO = -simplex.b;
 
 	searchDirection = PhysicsUtil::TripleCross(BC, BO, BC);
 
@@ -29,11 +29,11 @@ bool GJK::GJKCollision(ConvexShapeCollider& convexCollider1, ConvexShapeCollider
 
 	for (int i = 0; i < MAX_NUM_ITERATIONS; i++)
 	{
-		Vector3D a = convexCollider1.Support(convexCollider2, searchDirection);
+		glm::vec3 a = convexCollider1.Support(convexCollider2, searchDirection);
 
 		//std::cout << "Iterations: " << i << std::endl;
 
-		if (a.DotProduct(searchDirection) < 0)
+		if (glm::dot(a, searchDirection) < 0)
 		{
 			//std::cout << "WE CANNOT FIND A POINT PAST THE ORIGIN" << std::endl;
 			return false;		// We cannot have a collision
@@ -50,7 +50,7 @@ bool GJK::GJKCollision(ConvexShapeCollider& convexCollider1, ConvexShapeCollider
 }
 
 // Updates the simplex
-bool GJK::UpdateSimplex(Simplex& simplex, Vector3D& direction, Vector3D& a)
+bool GJK::UpdateSimplex(Simplex& simplex, glm::vec3& direction, glm::vec3& a)
 {
 	bool collision = false;
 
@@ -73,30 +73,30 @@ bool GJK::UpdateSimplex(Simplex& simplex, Vector3D& direction, Vector3D& a)
 }
 
 // Triangle simplex update
-bool GJK::TriangleSimplexUpdate(Simplex& simplex, Vector3D& direction, Vector3D& a)
+bool GJK::TriangleSimplexUpdate(Simplex& simplex, glm::vec3& direction, glm::vec3& a)
 {
-	Vector3D AB = simplex.b - a;
-	Vector3D AC = simplex.c - a;
-	Vector3D AO = -a;
+	glm::vec3 AB = simplex.b - a;
+	glm::vec3 AC = simplex.c - a;
+	glm::vec3 AO = -a;
 
-	Vector3D ABC = AB.CrossProduct(AC);			// The normal of the triangle
-	Vector3D ABP = AB.CrossProduct(ABC);		// Calculate a vector inside the triangle away from AB
-	Vector3D ACP = ABC.CrossProduct(AC);		// Same as the one above
+	glm::vec3 ABC = glm::cross(AB, AC); 		// The normal of the triangle
+	glm::vec3 ABP = glm::cross(AB, ABC); 		// Calculate a vector inside the triangle away from AB
+	glm::vec3 ACP = glm::cross(ABC , AC); 		// Same as the one above
 
-	if (ABP.DotProduct(AO) > 0)
+	if (glm::dot(ABP , AO) > 0)
 	{
 		// C is not part of the simplex anymore
 		simplex.c = simplex.b;
 		simplex.b = a;
 		direction = PhysicsUtil::TripleCross(AB, AO, AB);
 	}
-	else if (ACP.DotProduct(AO) > 0)
+	else if (glm::dot(ACP , AO) > 0)
 	{
 		// B is no longer part of the simplex
 		simplex.b = a;
 		direction = PhysicsUtil::TripleCross(AC, AO, AC);
 	}
-	else if (ABC.DotProduct(AO) > 0)
+	else if (glm::dot(ABC, AO) > 0)
 	{
 		// The origin is above ABC
 		simplex.d = simplex.c;
@@ -118,25 +118,29 @@ bool GJK::TriangleSimplexUpdate(Simplex& simplex, Vector3D& direction, Vector3D&
 }
 
 // Tetrahedron simplex update
-bool GJK::TetrahedronSimplexUpdate(Simplex& simplex, Vector3D& direction, Vector3D& a)
+bool GJK::TetrahedronSimplexUpdate(Simplex& simplex, glm::vec3& direction, glm::vec3& a)
 {
-	Vector3D AO = -a;
-	Vector3D AB = simplex.b - a;
-	Vector3D AC = simplex.c - a;
-	Vector3D AD = simplex.d - a;
+	glm::vec3 AO = -a;
+	glm::vec3 AB = simplex.b - a;
+	glm::vec3 AC = simplex.c - a;
+	glm::vec3 AD = simplex.d - a;
 
-	Vector3D ABC = AB.CrossProduct(AC);
-	Vector3D ACD = AC.CrossProduct(AD);
-	Vector3D ADB = AD.CrossProduct(AB);
+	glm::vec3 ABC = glm::cross(AB, AC);
+	glm::vec3 ACD = glm::cross(AC, AD);
+	glm::vec3 ADB = glm::cross(AD, AB);
 
-	if (ABC.DotProduct(AO) <= 0 && ACD.DotProduct(AO) <= 0 && ADB.DotProduct(AO) <= 0) return true;	// The origin is inside the tetrahedron
+	float ABCdotAO = glm::dot(ABC, AO);
+	float ACDdotAO = glm::dot(ACD, AO);
+	float ADBdotAO = glm::dot(ADB, AO);
 
-	if (ABC.DotProduct(AO) > 0)
+	if (ABCdotAO <= 0 && ACDdotAO <= 0 && ADBdotAO <= 0) return true;	// The origin is inside the tetrahedron
+
+	if (ABCdotAO > 0)
 	{
 		// The origin is in front of ABC
 		TetrahedronChecks(simplex, AO, AB, AC, ABC, direction, a);
 	}
-	if (ACD.DotProduct(AO) > 0)
+	if (ACDdotAO > 0)
 	{
 		// The origin is in front of ACD rotate ACD to become ABC
 		simplex.b = simplex.c;
@@ -148,7 +152,7 @@ bool GJK::TetrahedronSimplexUpdate(Simplex& simplex, Vector3D& direction, Vector
 
 		TetrahedronChecks(simplex, AO, AB, AC, ABC, direction, a);
 	}
-	if (ADB.DotProduct(AO) > 0)
+	if (ADBdotAO > 0)
 	{
 		// The origin is in front of ADB 
 		simplex.d = simplex.b;
@@ -164,10 +168,10 @@ bool GJK::TetrahedronSimplexUpdate(Simplex& simplex, Vector3D& direction, Vector
 	std::cout << "degenerate simplex something went wrong" << std::endl;
 }
 
-bool GJK::TetrahedronChecks(Simplex& simplex, Vector3D& AO, Vector3D& AB, Vector3D& AC, Vector3D& ABC, Vector3D& direction, Vector3D& a)
+bool GJK::TetrahedronChecks(Simplex& simplex, glm::vec3& AO, glm::vec3& AB, glm::vec3& AC, glm::vec3& ABC, glm::vec3& direction, glm::vec3& a)
 {
 	// This will always return false
-	if (AB.CrossProduct(ABC).DotProduct(AO) > 0)
+	if (glm::dot(glm::cross(AB, ABC) , AO) > 0)
 	{
 		// Just like the triangle check use the cross product away from AB
 		simplex.c = simplex.b;
@@ -176,7 +180,7 @@ bool GJK::TetrahedronChecks(Simplex& simplex, Vector3D& AO, Vector3D& AB, Vector
 		simplex.size = 2; // We have lost d in this process so we need to rebuild the triangle
 		direction = PhysicsUtil::TripleCross(AB, AO, AB);
 	}
-	else if (ABC.CrossProduct(AC).DotProduct(AO) > 0)
+	else if (glm::dot(glm::cross(ABC, AC), AO) > 0)
 	{
 		// Same as the top one
 		simplex.b = a;

@@ -8,7 +8,7 @@
 // Constructor
 Simplex::Simplex()
 {
-	b = c = d = Vector3D::zero;
+	b = c = d = glm::vec3();
 	size = 0;
 }
 

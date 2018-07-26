@@ -82,7 +82,17 @@ std::ostream& operator<<(std::ostream& os , const Collider& col)
 {
 	os << "Collider:" << std::endl
 		<< "---------" << std::endl
-		<< "Center: " << col.center << std::endl;
+		<< "Center: " << col.center.x << std::endl;
+	 
+	return os;
+}
+
+// Printing out a vec3 MIGHT NEED TO DO THIS SOMEWHERE ELSE 
+std::ostream& operator<<(std::ostream& os, const glm::vec3& vec)
+{
+	os << "x: " << vec.x << std::endl
+		<< "y: " << vec.y << std::endl
+		<< "z: " << vec.z;
 
 	return os;
 }
