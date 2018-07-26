@@ -7,6 +7,8 @@
 #ifndef RIGIDBODY_H
 #define RIGIDBODY_H
 
+#include <glm/vec3.hpp>
+
 // Will add documentation when i start with this actually
 class Rigidbody
 {

@@ -10,9 +10,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <glm/vec3.hpp>
 
 #include "Collider.h"
-#include "Vector3D.h"
 #include "Mat3.h"
 
 class MTRX

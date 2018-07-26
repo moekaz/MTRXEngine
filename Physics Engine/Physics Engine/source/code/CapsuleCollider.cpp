@@ -9,12 +9,12 @@
 //#include "../headers/MeshCollider.h"
 
 // Constructor
-CapsuleCollider::CapsuleCollider(Vector3D& center , float radii , float height) : Collider(center)
+CapsuleCollider::CapsuleCollider(const glm::vec3& center , float radii , float height) : Collider(center)
 {
 	type = ColliderType::Capsule;
 	this->height = height;
-	A = center - Vector3D(0, height / 2, 0);	// Center should be the midpoint of the height line segment of the capsule
-	B = center + Vector3D(0, height / 2, 0);
+	A = center - glm::vec3(0, height / 2, 0);	// Center should be the midpoint of the height line segment of the capsule
+	B = center + glm::vec3(0, height / 2, 0);
 	this->radii = radii;
 }
 
@@ -39,7 +39,7 @@ bool CapsuleCollider::CheckCollision(Collider& col)
 		{
 			std::cout << "Capsule Box collision detection" << std::endl;
 			BoxCollider& collider = static_cast<BoxCollider&>(col);
-			std::vector<Vector3D> axes = { collider.sideDirection , collider.upDirection , collider.forwardDirection };
+			std::vector<glm::vec3> axes = { collider.sideDirection , collider.upDirection , collider.forwardDirection };
 			collision = CollisionUtil::BoxCapsuleCollision(collider.center, center, A, B, radii, collider.min, collider.max, axes, collider.halfExtents);
 			break;
 		}
@@ -70,7 +70,7 @@ bool CapsuleCollider::CheckCollision(Collider& col)
 }
 
 // Update values of the collider
-void CapsuleCollider::Update(const Vector3D& newCenter)
+void CapsuleCollider::Update(const glm::vec3& newCenter)
 {
 	center = newCenter;
 }

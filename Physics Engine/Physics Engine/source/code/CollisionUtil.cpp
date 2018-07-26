@@ -10,20 +10,19 @@
 #include "../headers/CapsuleCollider.h"
 //#include "../headers/MeshCollider.h"
 #include "../headers/ConvexShapeCollider.h"
-#include "../headers/Vector3D.h"
 
 namespace CollisionUtil
 {
 	// Sphere sphere collision detection
-	bool SphereSphereCollision(Vector3D& center1, Vector3D& center2 , float radius1 , float radius2)
+	bool SphereSphereCollision(glm::vec3& center1, glm::vec3& center2 , float radius1 , float radius2)
 	{
-		Vector3D diff = center1 - center2;
+		glm::vec3 diff = center1 - center2;
 		float sumRadii = radius1 + radius2;
-		return diff.MagnitudeSquared() <= sumRadii * sumRadii;
+		return glm::length2(diff) <= sumRadii * sumRadii;
 	}
 
 	// Sphere box collision detection
-	bool SphereBoxCollision(Vector3D& center1 , Vector3D& center2 , float radius , Vector3D& min , Vector3D& max , std::vector<Vector3D>& axes , Vector3D& halfExtents)
+	bool SphereBoxCollision(glm::vec3& center1 , glm::vec3& center2 , float radius , glm::vec3& min , glm::vec3& max , std::vector<glm::vec3>& axes , glm::vec3& halfExtents)
 	{
 		// Check if the sphere's center is inside the box 
 		if (center1.x > min.x && center1.x < max.x &&
@@ -32,8 +31,8 @@ namespace CollisionUtil
 		
 		// The sphere is not contained in the box or at least the center is not inside the box
 		// Clamp the center to the closest point on the OBB (The same for AABB) then check distance to that box
-		Vector3D direction = center1 - center2;		// Starting direction
-		Vector3D closestPoint = center2;
+		glm::vec3 direction = center1 - center2;		// Starting direction
+		glm::vec3 closestPoint = center2;
 
 		// For the 3 axes 
 		for (int i = 0; i < 3; i++)
@@ -51,10 +50,10 @@ namespace CollisionUtil
 	}
 
 	// Sphere capsule collision detection
-	bool SphereCapsuleCollision(Vector3D& center1 , Vector3D& center2 ,float radius1 , float radius2 , Vector3D& A , Vector3D& B)
+	bool SphereCapsuleCollision(glm::vec3& center1 , glm::vec3& center2 ,float radius1 , float radius2 , glm::vec3& A , glm::vec3& B)
 	{	
 		// If the closest point to the sphere's center is of distance less than the radii of the 2 colliders then we have a collision
-		Vector3D vec;
+		glm::vec3 vec;
 		return PhysicsUtil::MinDistanceSquaredPointSegment(A , B , center1 , vec) <= (radius1 + radius2) * (radius1 * radius2);
 	}
 
@@ -71,10 +70,10 @@ namespace CollisionUtil
 	}
 
 	// Box Capsule collsiion detection 
-	bool BoxCapsuleCollision(Vector3D& center1, Vector3D& center2, Vector3D& A, Vector3D& B, float radius, Vector3D& min, Vector3D& max, std::vector<Vector3D>& axes, Vector3D& halfExtents)
+	bool BoxCapsuleCollision(glm::vec3& center1, glm::vec3& center2, glm::vec3& A, glm::vec3& B, float radius, glm::vec3& min, glm::vec3& max, std::vector<glm::vec3>& axes, glm::vec3& halfExtents)
 	{
 		// Find the closest point on the capsule line to the center of of the box and then do a sphere box collision detection
-		Vector3D closestPoint;
+		glm::vec3 closestPoint;
 		PhysicsUtil::MinDistanceSquaredPointSegment(A, B, center1, closestPoint);
 
 		return SphereBoxCollision(center2, center1, radius, min, max, axes, halfExtents);
@@ -87,7 +86,7 @@ namespace CollisionUtil
 	}
 
 	// Capsule Capsule collision detection
-	bool CapsuleCapsuleCollision(Vector3D& A1 , Vector3D& B1 , Vector3D& A2 , Vector3D& B2 , float radius1 , float radius2)
+	bool CapsuleCapsuleCollision(glm::vec3& A1 , glm::vec3& B1 , glm::vec3& A2 , glm::vec3& B2 , float radius1 , float radius2)
 	{
 		// Min distance between the 2 heights is greater than the sum of the radii
 		return PhysicsUtil::MinDistanceSquaredTwoSegments(A1 , B1 , A2 , B2) <= (radius1 + radius2) * (radius1 + radius2);

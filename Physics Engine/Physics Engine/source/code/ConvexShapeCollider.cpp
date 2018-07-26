@@ -41,6 +41,7 @@ Vector3D& ConvexShapeCollider::FarthestPointInDirection(Vector3D& direction)
 	return *farthest;
 }
 
+// Convex shape collision detection
 bool ConvexShapeCollider::CheckCollision(Collider& col)
 {
 	ConvexShapeCollider& collider = static_cast<ConvexShapeCollider&>(col);
@@ -52,6 +53,7 @@ bool ConvexShapeCollider::CheckCollision(Collider& col)
 	else return false;	// Its not a convex hull
 }
 
+// Updating the values of a convex shape
 void ConvexShapeCollider::Update(const Vector3D& center)
 {
 	this->center = center;

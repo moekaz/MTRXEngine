@@ -9,6 +9,7 @@
 
 #include <iostream>
 #include <vector>
+#include <glm/vec3.hpp>
 
 #include "../headers/Simplex.h"
 #include "../headers/GJK.h"
@@ -20,13 +21,13 @@ class BoxCollider;
 class CapsuleCollider;
 class MeshCollider;
 class ConvexShapeCollider;
-class Vector3D;
+//class Vector3D;
 
 // Will document this when it is at least near completion
 namespace CollisionUtil
 {
-	bool SphereSphereCollision(Vector3D& center1, Vector3D& center2, float radius1, float radius2);
-	bool SphereBoxCollision(Vector3D& center1, Vector3D& center2, float radius, Vector3D& min, Vector3D& max, std::vector<Vector3D>& axes, Vector3D& halfExtents);
+	bool SphereSphereCollision(glm::vec3& center1, glm::vec3& center2, float radius1, float radius2);
+	bool SphereBoxCollision(glm::vec3& center1, glm::vec3& center2, float radius, glm::vec3& min, glm::vec3& max, std::vector<glm::vec3>& axes, glm::vec3& halfExtents);
 	bool SphereCapsuleCollision(Vector3D& center1, Vector3D& center2, float radius1, float radius2, Vector3D& A, Vector3D& B);
 	bool SphereMeshCollision();
 	bool BoxBoxCollision(BoxCollider& , BoxCollider&);

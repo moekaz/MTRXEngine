@@ -7,12 +7,12 @@
 #ifndef SIMPLEX_H
 #define SIMPLEX_H
 
-#include "Vector3D.h"
+#include <glm/vec3.hpp>
 
 class Simplex
 {
 public:
-	Vector3D b, c, d;	// Points generally get added to the simplex in alphabetical order the point a is always the newest point which will then become b or be removed
+	glm::vec3 b, c, d;	// Points generally get added to the simplex in alphabetical order the point a is always the newest point which will then become b or be removed
 	int size;			// The size of the simplex this will be at most 4 (a, b, c, d)
 
 	Simplex();			// Constructor

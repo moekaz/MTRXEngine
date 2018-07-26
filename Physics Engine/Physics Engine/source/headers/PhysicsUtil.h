@@ -7,13 +7,13 @@
 #ifndef PHYSICSUTIL_H
 #define PHYSICSUTIL_H
 
-#include "Vector3D.h"
+#include <glm/vec3.hpp>
 
 namespace PhysicsUtil
 {
-	Vector3D TripleCross(Vector3D& a, Vector3D& b, Vector3D& c);						// Calculates the triple cross product of 3 vectors
-	float MinDistanceTwoLines(Vector3D&, Vector3D&, Vector3D&, Vector3D&);				
-	float MinDistanceSquaredTwoSegments(Vector3D&, Vector3D&, Vector3D&, Vector3D&);
-	float MinDistanceSquaredPointSegment(Vector3D& , Vector3D& , Vector3D& , Vector3D&);
+	glm::vec3 TripleCross(glm::vec3& a, glm::vec3& b, glm::vec3& c);						// Calculates the triple cross product of 3 vectors
+	float MinDistanceTwoLines(glm::vec3&, glm::vec3&, glm::vec3&, glm::vec3&);				
+	float MinDistanceSquaredTwoSegments(glm::vec3&, glm::vec3&, glm::vec3&, glm::vec3&);
+	float MinDistanceSquaredPointSegment(glm::vec3& , glm::vec3& , glm::vec3& , glm::vec3&);
 }
 #endif // !PHYSICSUTIL_H

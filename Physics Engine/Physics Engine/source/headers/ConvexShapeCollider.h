@@ -8,24 +8,24 @@
 #define CONVEXSHAPECOLLIDER_H
 
 #include <vector>
+#include <glm/vec3.hpp>
 
-#include "Vector3D.h"
 #include "Collider.h"
 #include "CollisionUtil.h"
 
 class ConvexShapeCollider : public Collider
 {
 public:
-	std::vector<Vector3D*> edges;									// Store the edges of the collider
+	std::vector<glm::vec3*> edges;									// Store the edges of the collider
 
-	ConvexShapeCollider(const Vector3D& = Vector3D::zero);			// Constructor
+	ConvexShapeCollider(const glm::vec3& = glm::vec3());			// Constructor
 	~ConvexShapeCollider();											// Destructor
 
-	Vector3D& Support(ConvexShapeCollider& , Vector3D&);			// Support is used to build a simplex as it will return a point on the minkowski sum (or difference depending on naming) 
-	Vector3D& FarthestPointInDirection(Vector3D&);					// Farthest point within a certain direction
+	glm::vec3& Support(ConvexShapeCollider& , glm::vec3&);			// Support is used to build a simplex as it will return a point on the minkowski sum (or difference depending on naming) 
+	glm::vec3& FarthestPointInDirection(glm::vec3&);					// Farthest point within a certain direction
 
 	bool CheckCollision(Collider&);								    // Does collision detection checks
-    virtual void Update(const Vector3D&);							// Updates the values of the collider
+    virtual void Update(const glm::vec3&);							// Updates the values of the collider
 
 private:
 protected:

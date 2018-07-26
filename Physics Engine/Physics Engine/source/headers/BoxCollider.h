@@ -8,6 +8,7 @@
 #define BOXCOLLIDER_H
 
 #include <iostream>
+#include <glm/vec3.hpp>
 
 #include "Vector3D.h"
 #include "ConvexShapeCollider.h"
@@ -21,14 +22,14 @@ class MeshCollider;
 class BoxCollider : public ConvexShapeCollider
 {
 public:
-	Vector3D min;															// Stores min x,y,z
-	Vector3D max;															// Stores max x,y,z
-	Vector3D halfExtents;													// Half widths along each axis
+	glm::vec3 min;															// Stores min x,y,z
+	glm::vec3 max;															// Stores max x,y,z
+	glm::vec3 halfExtents;													// Half widths along each axis
 
-	BoxCollider(const Vector3D& = Vector3D::zero);							// Constructor
+	BoxCollider(const glm::vec3& = glm::vec3());							// Constructor
 	~BoxCollider();															// Destrutor
 
-	void Update(Vector3D&);													// Update the values of the collider
+	void Update(glm::vec3&);												// Update the values of the collider
 	bool CheckCollision(Collider&);											// Check collision with box collider 
 	void RecomputeMinsMaxes();												// Recalculates the min and max values of the vertices 
 

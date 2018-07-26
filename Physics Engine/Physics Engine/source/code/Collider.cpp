@@ -6,7 +6,7 @@
 #include "../headers/Collider.h"
 
 /* Constructor */
-Collider::Collider(const Vector3D& vec)
+Collider::Collider(const glm::vec3& vec)
 {	
 	enabled = true;																// Is the collider turned on 
 	trigger = false;															// Is it a trigger collider
@@ -15,9 +15,9 @@ Collider::Collider(const Vector3D& vec)
 	enteredCollision = false;													// Just entered collision
 	stillColliding = false;														// still in collision
 	center = vec;																// Position of the center of the collider
-	forwardDirection = Vector3D(0, 0, -1);										// Forward direction
-	upDirection = Vector3D(0, 1, 0);											// Up vector
-	sideDirection = -forwardDirection.CrossProduct(upDirection).Normalize();	// Calculate directions of the collider
+	forwardDirection = glm::vec3(0, 0, -1);										// Forward direction
+	upDirection = glm::vec3(0, 1, 0);											// Up vector
+	sideDirection = glm::normalize(glm::cross(-forwardDirection, upDirection));	// Calculate directions of the collider
 }
 
 /* Destructor */

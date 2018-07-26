@@ -8,8 +8,8 @@
 #define SPHERECOLLIDER_H
 
 #include <iostream>
+#include <glm/vec3.hpp>
 
-#include "Vector3D.h"
 #include "Collider.h"
 #include "CollisionUtil.h"
 

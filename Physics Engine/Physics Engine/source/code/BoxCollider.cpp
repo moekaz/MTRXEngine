@@ -9,26 +9,26 @@
 //#include "../headers/MeshCollider"
 
 /* Constructor */
-BoxCollider::BoxCollider(const Vector3D& center) : ConvexShapeCollider(center)
+BoxCollider::BoxCollider(const glm::vec3& center) : ConvexShapeCollider(center)
 {
 	type = ColliderType::Box;
-	halfExtents = Vector3D(0.5 , 0.5 , 0.5);	// The width along each axis should be 1 
+	halfExtents = glm::vec3(0.5 , 0.5 , 0.5);	// The width along each axis should be 1 
 
 	// Setup vertices and mins and maxes
 	vertices =
 	{
-		new Vector3D(-0.5 , 0.5 , 0.5),
-		new Vector3D(0.5 , 0.5 , 0.5),
-		new Vector3D(-0.5 , -0.5 , 0.5),
-		new Vector3D(0.5 , -0.5 , 0.5),
-		new Vector3D(-0.5 , 0.5 , -0.5),
-		new Vector3D(0.5 , 0.5 , -0.5),
-		new Vector3D(-0.5 , -0.5 , -0.5),
-		new Vector3D(0.5 , -0.5 , -0.5),
+		new glm::vec3(-0.5 , 0.5 , 0.5),
+		new glm::vec3(0.5 , 0.5 , 0.5),
+		new glm::vec3(-0.5 , -0.5 , 0.5),
+		new glm::vec3(0.5 , -0.5 , 0.5),
+		new glm::vec3(-0.5 , 0.5 , -0.5),
+		new glm::vec3(0.5 , 0.5 , -0.5),
+		new glm::vec3(-0.5 , -0.5 , -0.5),
+		new glm::vec3(0.5 , -0.5 , -0.5),
 	};
 
-	min = Vector3D(-0.5, -0.5, -0.5);	// Minimum positions
-	max = Vector3D(0.5, 0.5, 0.5);		// Maximum positions
+	min = glm::vec3(-0.5, -0.5, -0.5);	// Minimum positions
+	max = glm::vec3(0.5, 0.5, 0.5);		// Maximum positions
 }
 
 /* Destructor */
@@ -37,7 +37,7 @@ BoxCollider::~BoxCollider() {}
 /* Functions */
 
 // Update values of the collider
-void BoxCollider::Update(Vector3D& center)
+void BoxCollider::Update(glm::vec3& center)
 {
 	this->center = center;
 	// RecomputeMinsMaxes();
@@ -54,7 +54,7 @@ bool BoxCollider::CheckCollision(Collider& col)
 		{
 			std::cout << "box sphere collision detection" << std::endl;
 			SphereCollider& collider = static_cast<SphereCollider&>(col);
-			std::vector<Vector3D> axes = {sideDirection , upDirection , forwardDirection};
+			std::vector<glm::vec3> axes = {sideDirection , upDirection , forwardDirection};
 			collision = CollisionUtil::SphereBoxCollision(collider.center , center , collider.radius , min , max , axes , halfExtents);
 			break;
 		}
@@ -69,7 +69,7 @@ bool BoxCollider::CheckCollision(Collider& col)
 		{
 			std::cout << "box capsule collision detection" << std::endl;
 			CapsuleCollider& collider = static_cast<CapsuleCollider&>(col);
-			std::vector<Vector3D> axes = { sideDirection , upDirection , forwardDirection };
+			std::vector<glm::vec3> axes = { sideDirection , upDirection , forwardDirection };
 			collision = CollisionUtil::BoxCapsuleCollision(center, collider.center, collider.A, collider.B, collider.radii, min, max, axes, halfExtents); 
 			break;
 		}
@@ -77,7 +77,7 @@ bool BoxCollider::CheckCollision(Collider& col)
 		{
 			std::cout << "box mesh collision detection" << std::endl;
 			//SphereCollider& collider = static_cast<SphereCollider&>(col);
-			//std::vector<Vector3D> axes = { sideDirection , upDirection , forwardDirection };
+			//std::vector<glm::vec3> axes = { sideDirection , upDirection , forwardDirection };
 			//collision = CollisionUtil::SphereBoxCollision(collider.center, center, collider.radius, min, max, axes, halfExtents);
 			break;
 		}
@@ -95,8 +95,12 @@ bool BoxCollider::CheckCollision(Collider& col)
 // Recalculate the mins and maxes again
 void BoxCollider::RecomputeMinsMaxes()
 {
-	min = std::numeric_limits<float>::infinity();
-	max = -std::numeric_limits<float>::infinity();
+	// Minimum and maximum float values
+	float maximum = std::numeric_limits<float>::infinity();
+	float minimum = -std::numeric_limits<float>::infinity();
+
+	min = glm::vec3(maximum , maximum, maximum);
+	max = glm::vec3(minimum , minimum, minimum);
 
 	for (int i = 0; i < vertices.size(); i++)
 	{
@@ -109,7 +113,7 @@ void BoxCollider::RecomputeMinsMaxes()
 		max.x = max.z < vertices[i]->z ? vertices[i]->z : max.z;
 	}
 
-	halfExtents = (max - center) / 2;	// Recalculate half extents
+	halfExtents = (max - center) * 0.5f;	// Recalculate half extents
 }
 
 // Print the values of the box collider

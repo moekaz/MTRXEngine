@@ -10,9 +10,11 @@
 
 #include <iostream>
 #include <vector>
+#include <glm/glm.hpp>
+#include <glm/vec3.hpp>
 
 #include "Rigidbody.h"
-#include "Vector3D.h"
+//#include "Vector3D.h"
 #include "Defs.h"
 
 class Collider
@@ -25,17 +27,17 @@ public:
 	bool enteredCollision;													// Entered collision
 	bool exitedCollision;													// Exited collision	
 	bool isConvexShape;														// Is the collider a convex shape
-	Vector3D center;														// The center position of the collider
-	Vector3D forwardDirection;												// The forward direction of the collider
-	Vector3D upDirection;													// The Upwards direction of the collider
-	Vector3D sideDirection;													// The Side direction of the collider
+	glm::vec3 center;														// The center position of the collider
+	glm::vec3 forwardDirection;												// The forward direction of the collider
+	glm::vec3 upDirection;													// The Upwards direction of the collider
+	glm::vec3 sideDirection;												// The Side direction of the collider
 	Rigidbody* physicalValues;												// Values that might be needed are here
-	std::vector<Vector3D*> vertices;										// Store the vertices of the collider
+	std::vector<glm::vec3*> vertices;										// Store the vertices of the collider
 
-	Collider(const Vector3D& vec = Vector3D::zero);							// Constructor
+	Collider(const glm::vec3& vec = glm::vec3());							// Constructor
 	~Collider();															// Destructor
 
-	virtual void Update(const Vector3D&) = 0;								// Update the values of the collider
+	virtual void Update(const glm::vec3&) = 0;								// Update the values of the collider
 	virtual void UpdateCollisionInfo();										// Updates info on entering exiting staying in collision etc...
 	// MIGHT NEED TO ADD A REFERENCE TO A REBOUND VECTOR THAT MIGHT HELP IN THE RESPONSE
 	virtual bool CheckCollision(Collider&) = 0;								// Checks for a collision (there will be multiple ones of these for each of the colliders)
