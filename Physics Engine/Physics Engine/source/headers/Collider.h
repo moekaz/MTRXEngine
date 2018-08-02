@@ -43,6 +43,10 @@ public:
 	virtual bool CollisionEnter();											// When the collider enters collision
 	virtual bool CollisionStay();											// When the collider stays in collision
 	virtual bool CollisionExit();											// When the collider exits collision
+	
+	void GetForward();														// Get the forward direction according to our transformation matrix
+	void GetSide();															// Get the side direction according to our transformation matrix
+	void GetUp();															// Get the up direction according to our transformation matrix
 
 	friend std::ostream& operator<<(std::ostream& , const Collider&);		// Print values of the collider
 

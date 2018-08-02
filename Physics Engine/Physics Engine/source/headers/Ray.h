@@ -11,6 +11,9 @@ public:
 	Ray();
 	~Ray();
 
+	glm::vec3 startPosition;	// The position where the ray starts at
+	glm::vec3 direction;		// The direction the ray will go in
+
 private:
 protected:
 };

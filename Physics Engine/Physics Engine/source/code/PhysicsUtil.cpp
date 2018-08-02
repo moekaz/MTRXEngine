@@ -117,7 +117,7 @@ namespace PhysicsUtil
 	}
 	
 	// Minimum distance between a point and a line segment
-	float MinDistanceSquaredPointSegment(glm::vec3& A, glm::vec3& B, glm::vec3& C , glm::vec3& closest)
+	float MinDistanceSquaredPointSegment(glm::vec3& A, glm::vec3& B, glm::vec3& C, glm::vec3& closest)
 	{
 		glm::vec3 AB = B - A;
 		glm::vec3 AC = C - A;
@@ -145,5 +145,55 @@ namespace PhysicsUtil
 			// Its a point between them so use pythagoras to find it 
 			return glm::dot(AC, AC) - (dot * dot);
 		}
+	}
+
+	// Find the minimum distance from a point to the ray
+	float MinDistanceSquaredPointRay(glm::vec3& point, glm::vec3& startPointRay, glm::vec3& rayDirection, glm::vec3& closestPoint)
+	{
+		float minDistance = 0;	// the minimum distance
+		glm::vec3 startPointRay = point - startPointRay;	// Vector from the point to the starting point of the ray
+
+		float dot = glm::dot(startPointRay , rayDirection);	// Find the dot product of the ray and the point to start point vector
+		float distanceSquaredPointRay = glm::dot(startPointRay, startPointRay);	// Squared magnitude of start point of the ray and the point
+
+		if (dot < 0)
+		{
+			// Clamp on the starting point
+			minDistance = distanceSquaredPointRay;	// Return magnitude squared since the start point of the ray is the closest point to the point
+			closestPoint = startPointRay;	// If we need it 
+		}
+		else
+		{
+			// Clamp onto the ray since it is infinite
+			minDistance = distanceSquaredPointRay - (dot * dot);
+			closestPoint = glm::normalize(rayDirection) * dot;	// If we need it 
+		}
+
+		return minDistance;
+	}
+
+	// Minimum distance between a line segment and a ray
+	float MinDistanceSquaredLineSegmentRay(glm::vec3& A, glm::vec3& B, glm::vec3& rayStartPoint, glm::vec3& rayDirection)
+	{
+		// Check if the line segment and ray intersect
+		if (CollisionUtil::LineSegmentRayCollision(A, B, rayStartPoint, rayDirection)) return 0.0f;
+
+		// Calculate the minimum distance from the 3 points that we have and take the minimum one 
+		std::vector<float> minimumDistances;
+		glm::vec3 closestPoint;
+
+		minimumDistances.push_back(MinDistanceSquaredPointRay(A , rayStartPoint , rayDirection , closestPoint));
+		minimumDistances.push_back(MinDistanceSquaredPointRay(B, rayStartPoint, rayDirection, closestPoint));
+		minimumDistances.push_back(MinDistanceSquaredPointSegment(A, B, rayStartPoint, closestPoint));
+
+		float minDistance = minimumDistances[0];
+
+		// Find the minimum of the 3 and that should be the least distance 
+		for (int i = 1; i < minimumDistances.size(); i++)
+		{
+			if (minimumDistances[i] < minDistance) minDistance = minimumDistances[i];
+		}
+
+		return minDistance;
 	}
 }

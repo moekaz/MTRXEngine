@@ -37,7 +37,7 @@ namespace CollisionUtil
 		// For the 3 axes 
 		for (int i = 0; i < 3; i++)
 		{
-			float distance = glm::dot(direction, axes[i]); //direction.DotProduct(axes[i]);
+			float distance = glm::dot(direction, axes[i]);
 
 			if (distance > halfExtents[i]) distance = halfExtents[i];
 			else if (distance < -halfExtents[i]) distance = -halfExtents[i];
@@ -110,4 +110,46 @@ namespace CollisionUtil
 	{
 		return GJK().GJKCollision(convexCollider1 , convexCollider2);
 	}
+
+	// Ray sphere collision detection
+	bool RaySphereCollision(glm::vec3& sphereCenter , float sphereRadius, glm::vec3& startPointRay , glm::vec3& rayDirection)
+	{
+		glm::vec3 closestPoint;
+		return PhysicsUtil::MinDistanceSquaredPointRay(sphereCenter , startPointRay , rayDirection , closestPoint) <= sphereRadius * sphereRadius;
+	}
+
+	// Ray box collision detection
+	bool RayBoxCollision(glm::vec3& rayStartPosition , glm::vec3& rayDirection , glm::vec3& boxCenter , glm::vec3& boxMin, glm::vec3& boxMax , std::vector<glm::vec3>& axes , glm::vec3& halfExtents)
+	{		
+		// Sphere box collision but with a sphere of radius 0
+		glm::vec3 closestPointRay;
+		PhysicsUtil::MinDistanceSquaredPointRay(boxCenter , rayStartPosition, rayDirection , closestPointRay);
+
+		return SphereBoxCollision(closestPointRay, boxCenter, 0, boxMin, boxMax, axes, halfExtents);
+	}
+
+	// Ray capsuale collision detection
+	bool RayCapsuleCollision(glm::vec3& startPositionRay, glm::vec3& direction, glm::vec3& A, glm::vec3& B, float capsRadius)
+	{
+		// We only need to find the minimum distance from the ray and line segment and check that with our capsule radius
+		return PhysicsUtil::MinDistanceSquaredLineSegmentRay(A , B , startPositionRay , direction) <= capsRadius * capsRadius;
+	}
+
+	// Ray Mesh collision detection
+	bool RayMeshCollision()
+	{
+		return false;
+	}
+	
+	// Line segment ray collision detection
+	bool LineSegmentRayCollision(glm::vec3& A , glm::vec3& B, glm::vec3& rayStartPoint, glm::vec3& rayDirection)
+	{
+		// Hacky solution but it works for the moment MIGHT CHANGE THIS LATER
+		// Check if they intersect first (make the longest line segment possible largest value for a float)
+		glm::vec3 rayEndPoint = glm::normalize(rayDirection) * std::numeric_limits<float>::infinity();
+
+		// We have an intersection 
+		if (PhysicsUtil::MinDistanceSquaredTwoSegments(A, B, rayStartPoint, rayEndPoint) == std::numeric_limits<float>::epsilon()) return 0.0f;
+	}
+
 }

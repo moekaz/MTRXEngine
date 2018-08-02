@@ -8,8 +8,11 @@
 #define PHYSICSUTIL_H
 
 #include <iostream>
+#include <vector>
 #include <glm/glm.hpp>
 #include <glm/vec3.hpp>
+
+#include "CollisionUtil.h"
 
 namespace PhysicsUtil
 {
@@ -17,5 +20,7 @@ namespace PhysicsUtil
 	float MinDistanceTwoLines(glm::vec3&, glm::vec3&, glm::vec3&, glm::vec3&);				
 	float MinDistanceSquaredTwoSegments(glm::vec3&, glm::vec3&, glm::vec3&, glm::vec3&);
 	float MinDistanceSquaredPointSegment(glm::vec3& , glm::vec3& , glm::vec3& , glm::vec3&);
+	float MinDistanceSquaredPointRay(glm::vec3&, glm::vec3&, glm::vec3&, glm::vec3&);
+	float MinDistanceSquaredLineSegmentRay(glm::vec3&, glm::vec3&, glm::vec3&, glm::vec3&);
 }
 #endif // !PHYSICSUTIL_H
