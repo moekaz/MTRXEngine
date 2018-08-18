@@ -23,12 +23,7 @@ namespace CollisionUtil
 
 	// Sphere box collision detection
 	bool SphereBoxCollision(glm::vec3& center1 , glm::vec3& center2 , float radius , glm::vec3& min , glm::vec3& max , std::vector<glm::vec3>& axes , glm::vec3& halfExtents)
-	{
-		// Check if the sphere's center is inside the box 
-		if (center1.x > min.x && center1.x < max.x &&
-			center1.y > min.y && center1.y < max.y &&
-			center1.z > min.z && center1.z < max.z) return true;
-		
+	{	
 		// The sphere is not contained in the box or at least the center is not inside the box
 		// Clamp the center to the closest point on the OBB (The same for AABB) then check distance to that box
 		glm::vec3 direction = center1 - center2;		// Starting direction
@@ -55,7 +50,7 @@ namespace CollisionUtil
 	{	
 		// If the closest point to the sphere's center is of distance less than the radii of the 2 colliders then we have a collision
 		glm::vec3 vec;
-		return PhysicsUtil::MinDistanceSquaredPointSegment(A , B , center1 , vec) <= (radius1 + radius2) * (radius1 * radius2);
+		return PhysicsUtil::MinDistanceSquaredPointSegment(A , B , center1 , vec) <= (radius1 + radius2) * (radius1 + radius2);
 	}
 
 	// Sphere mesh Collsiion detection
@@ -77,7 +72,7 @@ namespace CollisionUtil
 		glm::vec3 closestPoint;
 		PhysicsUtil::MinDistanceSquaredPointSegment(A, B, center1, closestPoint);
 
-		return SphereBoxCollision(center2, center1, radius, min, max, axes, halfExtents);
+		return SphereBoxCollision(closestPoint, center1, radius, min, max, axes, halfExtents);
 	}
 
 	// Box Mesh collision detection

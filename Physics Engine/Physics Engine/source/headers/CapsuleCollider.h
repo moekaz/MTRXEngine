@@ -17,6 +17,7 @@
 class CapsuleCollider: public Collider
 {
 public:
+	// HAVE A POINT AT THE END OF THE CAPSULE TO RECALCULATE THE RADIUS OF THE CAPSULE AFTER SCALING
 	float radii;																		// radii of the 2 spheres of the capsule
 	glm::vec3 A;																			// Center of the first sphere													
 	glm::vec3 B;																			// Center of the second sphere

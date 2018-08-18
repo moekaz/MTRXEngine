@@ -151,10 +151,10 @@ namespace PhysicsUtil
 	float MinDistanceSquaredPointRay(glm::vec3& point, glm::vec3& startPointRay, glm::vec3& rayDirection, glm::vec3& closestPoint)
 	{
 		float minDistance = 0;	// the minimum distance
-		glm::vec3 startPointRay = point - startPointRay;	// Vector from the point to the starting point of the ray
+		glm::vec3 startPointToRay = point - startPointRay;	// Vector from the point to the starting point of the ray
 
-		float dot = glm::dot(startPointRay , rayDirection);	// Find the dot product of the ray and the point to start point vector
-		float distanceSquaredPointRay = glm::dot(startPointRay, startPointRay);	// Squared magnitude of start point of the ray and the point
+		float dot = glm::dot(startPointToRay , rayDirection);	// Find the dot product of the ray and the point to start point vector
+		float distanceSquaredPointRay = glm::dot(startPointToRay, startPointToRay);	// Squared magnitude of start point of the ray and the point
 
 		if (dot < 0)
 		{
@@ -179,17 +179,17 @@ namespace PhysicsUtil
 		if (CollisionUtil::LineSegmentRayCollision(A, B, rayStartPoint, rayDirection)) return 0.0f;
 
 		// Calculate the minimum distance from the 3 points that we have and take the minimum one 
-		std::vector<float> minimumDistances;
+		float minimumDistances[3];
 		glm::vec3 closestPoint;
 
-		minimumDistances.push_back(MinDistanceSquaredPointRay(A , rayStartPoint , rayDirection , closestPoint));
-		minimumDistances.push_back(MinDistanceSquaredPointRay(B, rayStartPoint, rayDirection, closestPoint));
-		minimumDistances.push_back(MinDistanceSquaredPointSegment(A, B, rayStartPoint, closestPoint));
+		minimumDistances[0] = MinDistanceSquaredPointRay(A , rayStartPoint , rayDirection , closestPoint);
+		minimumDistances[1] = MinDistanceSquaredPointRay(B, rayStartPoint, rayDirection, closestPoint);
+		minimumDistances[2] = MinDistanceSquaredPointSegment(A, B, rayStartPoint, closestPoint);
 
 		float minDistance = minimumDistances[0];
 
 		// Find the minimum of the 3 and that should be the least distance 
-		for (int i = 1; i < minimumDistances.size(); i++)
+		for (int i = 1; i < 3; i++)
 		{
 			if (minimumDistances[i] < minDistance) minDistance = minimumDistances[i];
 		}
