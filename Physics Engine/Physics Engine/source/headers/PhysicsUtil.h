@@ -9,10 +9,13 @@
 
 #include <iostream>
 #include <vector>
+#include <map>
 #include <glm/glm.hpp>
 #include <glm/vec3.hpp>
 
+#include "Ray.h"
 #include "CollisionUtil.h"
+#include "Collider.h"
 
 namespace PhysicsUtil
 {
@@ -22,5 +25,7 @@ namespace PhysicsUtil
 	float MinDistanceSquaredPointSegment(glm::vec3& , glm::vec3& , glm::vec3& , glm::vec3&);
 	float MinDistanceSquaredPointRay(glm::vec3&, glm::vec3&, glm::vec3&, glm::vec3&);
 	float MinDistanceSquaredLineSegmentRay(glm::vec3&, glm::vec3&, glm::vec3&, glm::vec3&);
+	Collider* RaycastFiltered(std::map<int, Collider*>& colliders, std::vector<Collider*>& filterColliders, glm::vec3& rayStartPosition, glm::vec3& rayDirection);
+	Collider* RaycastUnfiltered(std::map<int, Collider*>& colliders, glm::vec3& rayStartPosition, glm::vec3& rayDirection);
 }
 #endif // !PHYSICSUTIL_H

@@ -108,9 +108,9 @@ namespace PhysicsUtil
 		}
 
 		if (abs(sc) < std::numeric_limits<float>::epsilon()) sc = 0;
-		else sn / sd;
+		else sc = sn / sd;		// Maybe this part is not checked
 		if (abs(tc) < std::numeric_limits<float>::epsilon()) tc = 0;
-		else tn / td;
+		else tc = tn / td;	// Maybe this part is not checked as well
 
 		glm::vec3 distanceVec =  w + (u * sc) - (v * tc);
 		return glm::dot(distanceVec, distanceVec);
@@ -195,5 +195,41 @@ namespace PhysicsUtil
 		}
 
 		return minDistance;
+	}
+	
+	// Do a raycast without checking for colliders 
+	Collider* RaycastUnfiltered(std::map<int , Collider*>& colliders , glm::vec3& rayStartPosition, glm::vec3& rayDirection)
+	{
+		Ray ray = Ray(rayStartPosition , rayDirection);		// Create a ray in the direction
+		std::map<int, Collider*>::iterator iter;
+		
+		for (iter = colliders.begin(); iter != colliders.end(); ++iter)
+		{
+			if (iter->second->RaycastCollision(ray)) return iter->second;		// Do the raycast and check for that 
+		}
+
+		return NULL;
+	}
+
+	// Do a raycast with some collider checks
+	Collider* RaycastFiltered(std::map<int, Collider*>& colliders, std::vector<Collider*>& filterColliders, glm::vec3& rayStartPosition, glm::vec3& rayDirection)
+	{
+		Ray ray = Ray(rayStartPosition, rayDirection);		// Create a ray in the direction
+		std::map<int, Collider*> filterCollidersMap;	// Map of the filtered colliders
+		std::map<int, Collider*>::iterator iter;	// Iterator of the collider map
+		
+		// Store the vector in a map for quick access
+		for (unsigned int i = 0; i < filterColliders.size(); i++)
+		{
+			filterCollidersMap[filterColliders[i]->colliderId] = filterColliders[i];
+		}
+
+		for (iter = colliders.begin(); iter != colliders.end(); ++iter)
+		{
+			if (filterCollidersMap.find(iter->first) != filterCollidersMap.end()) continue;	// If it is filtered then skip the collision check 
+			if (iter->second->RaycastCollision(ray)) return iter->second;		// Do the raycast and check for that
+		}
+
+		return NULL;
 	}
 }

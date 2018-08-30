@@ -9,29 +9,27 @@
 // Gilbert-Johnson-Keerthi collision detection algorithm for collision
 bool GJK::GJKCollision(ConvexShapeCollider& convexCollider1, ConvexShapeCollider& convexCollider2)
 {
-	Simplex simplex;
-	glm::vec3 searchDirection = glm::vec3(-1, 0, 0);
+	Simplex simplex;	// Simplex holds the points in minkowski space that we are attempting to check for
+	glm::vec3 searchDirection = glm::vec3(-1, 0, 0);	// Direction of the search within the convex shape
 
-	simplex.c = convexCollider1.Support(convexCollider2, searchDirection);
+	simplex.c = convexCollider1.Support(convexCollider2, searchDirection);	// Get the first point using the support function
 
 	searchDirection = -simplex.c;	// Negative direction
 
-	simplex.b = convexCollider1.Support(convexCollider2, searchDirection);
+	simplex.b = convexCollider1.Support(convexCollider2, searchDirection);	// Get the second point
 
-	if (glm::dot(simplex.b , searchDirection) < 0) return false;
+	if (glm::dot(simplex.b , searchDirection) < 0) return false;	// Do a check for non collision
 
 	glm::vec3 BC = simplex.c - simplex.b;
 	glm::vec3 BO = -simplex.b;
 
-	searchDirection = PhysicsUtil::TripleCross(BC, BO, BC);
+	searchDirection = PhysicsUtil::TripleCross(BC, BO, BC);		// Setup a new direction vector
 
 	simplex.size = 2;	// Simplex has 2 points
 
 	for (int i = 0; i < MAX_NUM_ITERATIONS; i++)
 	{
-		glm::vec3 a = convexCollider1.Support(convexCollider2, searchDirection);
-
-		//std::cout << "Iterations: " << i << std::endl;
+		glm::vec3 a = convexCollider1.Support(convexCollider2, searchDirection);	// Get the next point
 
 		if (glm::dot(a, searchDirection) < 0)
 		{
@@ -54,19 +52,24 @@ bool GJK::UpdateSimplex(Simplex& simplex, glm::vec3& direction, glm::vec3& a)
 {
 	bool collision = false;
 
-	if (simplex.size == 2)	// Triangle
+	switch (simplex.size)
 	{
-		//std::cout << "TRIANGLE SIMPLEX CHECK" << std::endl;
-		collision = TriangleSimplexUpdate(simplex, direction, a);
-	}
-	else if (simplex.size == 3) // Tetrahedron
-	{
-		//std::cout << "TETRAHEDRON SIMPLEX CHECK" << std::endl;
-		collision = TetrahedronSimplexUpdate(simplex, direction, a);
-	}
-	else if (simplex.size > 3)
-	{
-		//std::cout << "HOUSTON WE HAVE A PROBLEM" << std::endl;
+		case 2:	// Triangle
+		{
+			//std::cout << "TRIANGLE SIMPLEX CHECK" << std::endl;
+			collision = TriangleSimplexUpdate(simplex, direction, a);
+			break;
+		}
+		case 3: // Tetrahedron
+		{
+			//std::cout << "TETRAHEDRON SIMPLEX CHECK" << std::endl;
+			collision = TetrahedronSimplexUpdate(simplex, direction, a);
+			break;
+		}
+		default:	// Something went wrong
+		{
+			//std::cout << "HOUSTON WE HAVE A PROBLEM" << std::endl;
+		}
 	}
 
 	return collision;
@@ -166,6 +169,7 @@ bool GJK::TetrahedronSimplexUpdate(Simplex& simplex, glm::vec3& direction, glm::
 	}
 
 	std::cout << "degenerate simplex something went wrong" << std::endl;
+	return false;
 }
 
 bool GJK::TetrahedronChecks(Simplex& simplex, glm::vec3& AO, glm::vec3& AB, glm::vec3& AC, glm::vec3& ABC, glm::vec3& direction, glm::vec3& a)

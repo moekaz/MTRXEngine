@@ -25,12 +25,14 @@ public:
 	glm::vec3 min;															// Stores min x,y,z
 	glm::vec3 max;															// Stores max x,y,z
 	glm::vec3 halfExtents;													// Half widths along each axis
+	glm::vec3* axes[3];														// Store the axes of the box collider
 
 	BoxCollider(const glm::vec3& = glm::vec3());							// Constructor
 	~BoxCollider();															// Destrutor
 
-	void Update(glm::vec3&);												// Update the values of the collider
+	void Update(const glm::vec3&);											// Update the values of the collider
 	bool CheckCollision(Collider&);											// Check collision with box collider 
+	bool RaycastCollision(Ray&);											// Raycast collision
 	void RecomputeMinsMaxes();												// Recalculates the min and max values of the vertices 
 
 	friend std::ostream& operator<<(std::ostream& os , const BoxCollider&);	// Print out the values of th collider

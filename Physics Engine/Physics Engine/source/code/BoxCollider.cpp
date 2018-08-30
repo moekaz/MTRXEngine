@@ -29,6 +29,11 @@ BoxCollider::BoxCollider(const glm::vec3& center) : ConvexShapeCollider(center)
 
 	min = glm::vec3(-0.5, -0.5, -0.5);	// Minimum positions
 	max = glm::vec3(0.5, 0.5, 0.5);		// Maximum positions
+	
+	// Store the axes of the box
+	axes[0] = &sideDirection;
+	axes[1] = &upDirection;
+	axes[2] = &forwardDirection;
 }
 
 /* Destructor */
@@ -37,7 +42,7 @@ BoxCollider::~BoxCollider() {}
 /* Functions */
 
 // Update values of the collider
-void BoxCollider::Update(glm::vec3& center)
+void BoxCollider::Update(const glm::vec3& center)
 {
 	this->center = center;
 	// RecomputeMinsMaxes();
@@ -54,7 +59,6 @@ bool BoxCollider::CheckCollision(Collider& col)
 		{
 			std::cout << "box sphere collision detection" << std::endl;
 			SphereCollider& collider = static_cast<SphereCollider&>(col);
-			std::vector<glm::vec3> axes = {sideDirection , upDirection , forwardDirection};
 			collision = CollisionUtil::SphereBoxCollision(collider.center , center , collider.radius , min , max , axes , halfExtents);
 			break;
 		}
@@ -69,7 +73,6 @@ bool BoxCollider::CheckCollision(Collider& col)
 		{
 			std::cout << "box capsule collision detection" << std::endl;
 			CapsuleCollider& collider = static_cast<CapsuleCollider&>(col);
-			std::vector<glm::vec3> axes = { sideDirection , upDirection , forwardDirection };
 			collision = CollisionUtil::BoxCapsuleCollision(center, collider.center, collider.A, collider.B, collider.radii, min, max, axes, halfExtents); 
 			break;
 		}
@@ -77,7 +80,6 @@ bool BoxCollider::CheckCollision(Collider& col)
 		{
 			std::cout << "box mesh collision detection" << std::endl;
 			//SphereCollider& collider = static_cast<SphereCollider&>(col);
-			//std::vector<glm::vec3> axes = { sideDirection , upDirection , forwardDirection };
 			//collision = CollisionUtil::SphereBoxCollision(collider.center, center, collider.radius, min, max, axes, halfExtents);
 			break;
 		}
@@ -92,6 +94,13 @@ bool BoxCollider::CheckCollision(Collider& col)
 	return collision;
 }
 
+//Raycast with box colliders
+bool BoxCollider::RaycastCollision(Ray& ray)
+{
+	return CollisionUtil::RayBoxCollision(ray.startPosition, ray.direction, center, min, max, axes, halfExtents);
+}
+
+// I DON'T THINK THIS IS NEEDED ANYMORE
 // Recalculate the mins and maxes again
 void BoxCollider::RecomputeMinsMaxes()
 {
@@ -102,7 +111,7 @@ void BoxCollider::RecomputeMinsMaxes()
 	min = glm::vec3(maximum , maximum, maximum);
 	max = glm::vec3(minimum , minimum, minimum);
 
-	for (int i = 0; i < vertices.size(); i++)
+	for (unsigned int i = 0; i < vertices.size(); i++)
 	{
 		min.x = min.x > vertices[i]->x ? vertices[i]->x : min.x;
 		min.y = min.y > vertices[i]->y ? vertices[i]->y : min.y;
@@ -119,14 +128,10 @@ void BoxCollider::RecomputeMinsMaxes()
 // Print the values of the box collider
 std::ostream& operator<<(std::ostream& os, const BoxCollider& box)
 {
-	os << "Box Collider:" << std::endl
+	return os << "Box Collider:" << std::endl
 		<< "-------------" << std::endl
-		<< "Center: " << std::endl 
+		<< "Center: " << std::endl
 		<< "x: " << box.center.x << std::endl
 		<< "y: " << box.center.y << std::endl
-		<< "z: " << box.center.z << std::endl
-		<< "Mins: " << box.min << std::endl
-		<< "Maxes: " << box.max << std::endl;
-
-	return os;
+		<< "z: " << box.center.z;
 }

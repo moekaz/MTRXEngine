@@ -19,15 +19,16 @@ class CapsuleCollider: public Collider
 public:
 	// HAVE A POINT AT THE END OF THE CAPSULE TO RECALCULATE THE RADIUS OF THE CAPSULE AFTER SCALING
 	float radii;																		// radii of the 2 spheres of the capsule
-	glm::vec3 A;																			// Center of the first sphere													
-	glm::vec3 B;																			// Center of the second sphere
+	glm::vec3 A;																		// Center of the first sphere													
+	glm::vec3 B;																		// Center of the second sphere
 	float height;																		// Height of the capsule
 
-	CapsuleCollider(const glm::vec3& = glm::vec3() , float = 0.25f , float = 0.5f);			// Constructor
+	CapsuleCollider(const glm::vec3& = glm::vec3() , float = 0.25f , float = 0.5f);		// Constructor
 	~CapsuleCollider();																	// Destructor
 
 	bool CheckCollision(Collider&);														// Function for checking collision
-	void Update(const glm::vec3&);																// Updating the values of the collider
+	bool RaycastCollision(Ray&);														// Raycast collision
+	void Update(const glm::vec3&);														// Updating the values of the collider
 
 	friend std::ostream& operator<<(std::ostream&, const CapsuleCollider&);				// Print out the values of the collider
 

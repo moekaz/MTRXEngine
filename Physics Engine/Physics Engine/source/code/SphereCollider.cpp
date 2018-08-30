@@ -42,8 +42,7 @@ bool SphereCollider::CheckCollision(Collider& col)
 		{
 			std::cout << "SPHERE BOX COLLISION DETECTION" << std::endl;
 			BoxCollider& collider = static_cast<BoxCollider&>(col);
-			std::vector<glm::vec3> axes = {collider.sideDirection , collider.upDirection , collider.forwardDirection};
-			isColliding = CollisionUtil::SphereBoxCollision(center , collider.center , radius , collider.min , collider.max , axes , collider.halfExtents);
+			isColliding = CollisionUtil::SphereBoxCollision(center , collider.center , radius , collider.min , collider.max , collider.axes , collider.halfExtents);
 			break;
 		}
 		case ColliderType::Capsule:
@@ -71,16 +70,20 @@ bool SphereCollider::CheckCollision(Collider& col)
 	return isColliding;
 }
 
+// Raycast with spheres
+bool SphereCollider::RaycastCollision(Ray& ray)
+{
+	return CollisionUtil::RaySphereCollision(center , radius, ray.startPosition, ray.direction);
+}
+
 // Print out values of the collider
 std::ostream& operator<<(std::ostream& os , const SphereCollider& sphCollider)
 {
-	os << "Sphere Collider:" << std::endl
+	return os << "Sphere Collider:" << std::endl
 		<< "---------------" << std::endl
 		<< "Center: " << std::endl
 		<< "x: " << sphCollider.center.x << std::endl
 		<< "y: " << sphCollider.center.y << std::endl
 		<< "z: " << sphCollider.center.z << std::endl
 		<< "Radius: " << sphCollider.radius;
-
-	return os;
 }

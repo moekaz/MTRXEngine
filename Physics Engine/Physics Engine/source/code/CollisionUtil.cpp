@@ -22,9 +22,8 @@ namespace CollisionUtil
 	}
 
 	// Sphere box collision detection
-	bool SphereBoxCollision(glm::vec3& center1 , glm::vec3& center2 , float radius , glm::vec3& min , glm::vec3& max , std::vector<glm::vec3>& axes , glm::vec3& halfExtents)
+	bool SphereBoxCollision(glm::vec3& center1 , glm::vec3& center2 , float radius , glm::vec3& min , glm::vec3& max , glm::vec3* axes[] , glm::vec3& halfExtents)
 	{	
-		// The sphere is not contained in the box or at least the center is not inside the box
 		// Clamp the center to the closest point on the OBB (The same for AABB) then check distance to that box
 		glm::vec3 direction = center1 - center2;		// Starting direction
 		glm::vec3 closestPoint = center2;
@@ -32,12 +31,12 @@ namespace CollisionUtil
 		// For the 3 axes 
 		for (int i = 0; i < 3; i++)
 		{
-			float distance = glm::dot(direction, axes[i]);
+			float distance = glm::dot(direction, *axes[i]);
 
 			if (distance > halfExtents[i]) distance = halfExtents[i];
 			else if (distance < -halfExtents[i]) distance = -halfExtents[i];
 
-			closestPoint += axes[i] * distance;
+			closestPoint += *axes[i] * distance;
 		}
 
 		// Sphere point collision detection
@@ -66,7 +65,7 @@ namespace CollisionUtil
 	}
 
 	// Box Capsule collsiion detection 
-	bool BoxCapsuleCollision(glm::vec3& center1, glm::vec3& center2, glm::vec3& A, glm::vec3& B, float radius, glm::vec3& min, glm::vec3& max, std::vector<glm::vec3>& axes, glm::vec3& halfExtents)
+	bool BoxCapsuleCollision(glm::vec3& center1, glm::vec3& center2, glm::vec3& A, glm::vec3& B, float radius, glm::vec3& min, glm::vec3& max, glm::vec3* axes[], glm::vec3& halfExtents)
 	{
 		// Find the closest point on the capsule line to the center of of the box and then do a sphere box collision detection
 		glm::vec3 closestPoint;
@@ -114,7 +113,7 @@ namespace CollisionUtil
 	}
 
 	// Ray box collision detection
-	bool RayBoxCollision(glm::vec3& rayStartPosition , glm::vec3& rayDirection , glm::vec3& boxCenter , glm::vec3& boxMin, glm::vec3& boxMax , std::vector<glm::vec3>& axes , glm::vec3& halfExtents)
+	bool RayBoxCollision(glm::vec3& rayStartPosition , glm::vec3& rayDirection , glm::vec3& boxCenter , glm::vec3& boxMin, glm::vec3& boxMax , glm::vec3* axes[] , glm::vec3& halfExtents)
 	{		
 		// Sphere box collision but with a sphere of radius 0
 		glm::vec3 closestPointRay;
@@ -143,8 +142,8 @@ namespace CollisionUtil
 		// Check if they intersect first (make the longest line segment possible largest value for a float)
 		glm::vec3 rayEndPoint = glm::normalize(rayDirection) * std::numeric_limits<float>::infinity();
 
-		// We have an intersection 
-		if (PhysicsUtil::MinDistanceSquaredTwoSegments(A, B, rayStartPoint, rayEndPoint) == std::numeric_limits<float>::epsilon()) return 0.0f;
+		// Check for an intersection 
+		return PhysicsUtil::MinDistanceSquaredTwoSegments(A, B, rayStartPoint, rayEndPoint) == std::numeric_limits<float>::epsilon();
 	}
 
 }

@@ -7,6 +7,6 @@
 #ifndef DEFS_H
 #define DEFS_H
 
-enum class ColliderType { Sphere, Box, Capsule, Mesh };	// Type of what a collider is 
+enum class ColliderType { Sphere, Box, Capsule, Mesh, ConvexShape, };	// Type of what a collider is 
 
 #endif // !DEFS_H
