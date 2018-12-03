@@ -3,14 +3,14 @@
 	Description: Implementation of a simplex
 */
 
-#include "../headers/Simplex.h"
+#include <PrecompiledHeader.h>
+#include <Simplex.h>
 
-// Constructor
-Simplex::Simplex()
+namespace MTRX
 {
-	b = c = d = glm::vec3();
-	size = 0;
-}
+	// Constructor
+	Simplex::Simplex() : size(0) {}
 
-// Destructor
-Simplex::~Simplex() {}
+	// Destructor
+	Simplex::~Simplex() {}
+}

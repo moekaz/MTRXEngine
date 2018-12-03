@@ -9,30 +9,28 @@
 */
 
 #pragma once
-#ifndef GJK_H
-#define GJK_H
 
 #define MAX_NUM_ITERATIONS 64	// Helps with better performance for more complicated convex shapes while sacrificing a little on accuracy
 
-#include <glm/vec3.hpp>
+#include <Simplex.h>
+#include <PhysicsUtil.h>
 
-#include "Simplex.h"
-#include "PhysicsUtil.h"
-
-// Forward declarations
-class ConvexShapeCollider;
-
-class GJK
+namespace MTRX
 {
-public:
-	bool GJKCollision(ConvexShapeCollider&, ConvexShapeCollider&);												// General implementation of GJK
+	// Forward declarations
+	class ConvexShapeCollider;
 
-private:
-	bool UpdateSimplex(Simplex&, glm::vec3&, glm::vec3&);														// Update the values of the simplex after adding points from support
-	bool TriangleSimplexUpdate(Simplex&, glm::vec3&, glm::vec3&);												// Update the values of the simplex when we have a triangle simplex
-	bool TetrahedronSimplexUpdate(Simplex&, glm::vec3&, glm::vec3&);											// Update the values of the simplex when we have a tetraheadron simplex
-	bool TetrahedronChecks(Simplex&, glm::vec3&, glm::vec3&, glm::vec3&, glm::vec3&, glm::vec3&, glm::vec3&);	// Extra checks for tetrahedron simplexes
+	class GJK
+	{
+	public:
+		bool GJKCollision(const ConvexShapeCollider&, const ConvexShapeCollider&);												// General implementation of GJK
 
-protected:
-};
-#endif // !GJK_H
+	private:
+		bool UpdateSimplex(Simplex&, glm::vec3&, glm::vec3&);														// Update the values of the simplex after adding points from support
+		bool TriangleSimplexUpdate(Simplex&, glm::vec3&, glm::vec3&);												// Update the values of the simplex when we have a triangle simplex
+		bool TetrahedronSimplexUpdate(Simplex&, glm::vec3&, glm::vec3&);											// Update the values of the simplex when we have a tetraheadron simplex
+		bool TetrahedronChecks(Simplex&, glm::vec3&, glm::vec3&, glm::vec3&, glm::vec3&, glm::vec3&, glm::vec3&);	// Extra checks for tetrahedron simplexes
+
+	protected:
+	};
+}

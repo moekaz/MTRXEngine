@@ -4,21 +4,19 @@
 */
 
 #pragma once
-#ifndef RAY_H
-#define RAY_H
 
-#include <glm/vec3.hpp>
-
-class Ray
+namespace MTRX
 {
-public:
-	Ray(const glm::vec3& startpos = glm::vec3(), const glm::vec3& rayDirection = glm::vec3());
-	~Ray();
+	class Ray
+	{
+	public:
+		Ray(const glm::vec3& startpos = glm::vec3(), const glm::vec3& rayDirection = glm::vec3());
+		~Ray();
 
-	glm::vec3 startPosition;	// The position where the ray starts at
-	glm::vec3 direction;		// The direction the ray will go in
+		glm::vec3 startPosition;	// The position where the ray starts at
+		glm::vec3 direction;		// The direction the ray will go in
 
-private:
-protected:
-};
-#endif // !RAY_H
+	private:
+	protected:
+	};
+}

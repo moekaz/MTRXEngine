@@ -4,34 +4,28 @@
 */
 
 #pragma once
-#ifndef MTRX_H
-#define MTRX_H
 
-#include <iostream>
-#include <string>
-#include <vector>
-#include <map>
-#include <glm/vec3.hpp>
+#include <IUpdateable.h>
+#include <Collider.h>
+#include <Mat3.h>
 
-#include "Collider.h"
-#include "Mat3.h"
-
-class MTRX
+namespace MTRX
 {
-public:
-	std::map<int , Collider> collider;		// Store the colliders that we want to run through
+	class MTRX : public IUpdateable
+	{
+	public:
+		std::map<int, Collider> collider;		// Store the colliders that we want to run through
 
-	MTRX();								// Constructor
-	~MTRX();							// Destructor
+		MTRX();								// Constructor
+		~MTRX();							// Destructor
 
-	void Update();						// Update the game engine values
-	
-	void NarrowPhase();					// Narrow phase collision detection checks
-	void BroadPhase();					// Broad phase collision detection checks
+		void PhysicsUpdate();				// Update the game engine values
+		void NarrowPhase();					// Narrow phase collision detection checks
+		void BroadPhase();					// Broad phase collision detection checks
 
-	Collider* Raycast();				// Raycast without any filtering of colliders
-	Collider* RaycastFiltered();		// Raycast with filtering out some colliders
-private:
-protected:
-};
-#endif // MTRX_H
+		Collider* Raycast();				// Raycast without any filtering of colliders
+		Collider* RaycastFiltered();		// Raycast with filtering out some colliders
+	private:
+	protected:
+	};
+}

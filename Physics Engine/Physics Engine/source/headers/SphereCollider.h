@@ -4,35 +4,32 @@
 */
 
 #pragma once
-#ifndef SPHERECOLLIDER_H
-#define SPHERECOLLIDER_H
 
-#include <iostream>
-#include <glm/vec3.hpp>
+#include <Collider.h>
+#include <CollisionUtil.h>
 
-#include "Collider.h"
-#include "CollisionUtil.h"
-
-// Forward declarations
-class BoxCollider;
-class CapsulesCollider;
-class MeshCollider;
-
-class SphereCollider : public Collider
+namespace MTRX
 {
-public:
-	float radius;																	// Radius of a sphere collider
+	// Forward declarations
+	class BoxCollider;
+	class CapsulesCollider;
+	class MeshCollider;
 
-	SphereCollider(const glm::vec3& vec = glm::vec3(), float radius = 0.5);		// Constructor 
-	~SphereCollider();																// Destructor
+	class SphereCollider : public Collider
+	{
+	public:
+		float radius;																	// Radius of a sphere collider
 
-	void Update(const glm::vec3&);													// Update collider values
-	bool CheckCollision(Collider&);													// Sphere collision detection
-	bool RaycastCollision(Ray&);													// Raycast collision
+		SphereCollider(const glm::vec3& vec = glm::vec3(), float radius = 0.5);			// Constructor 
+		~SphereCollider();																// Destructor
 
-	friend std::ostream& operator<<(std::ostream&, const SphereCollider&);			// Print out values of the collider
+		void PhysicsUpdate();
+		bool CheckCollision(const Collider&);													// Sphere collision detection
+		bool RaycastCollision(const Ray&);													// Raycast collision
 
-private:
-protected:
-};
-#endif // !SPHERECOLLIDER_H
+		friend std::ostream& operator<<(std::ostream&, const SphereCollider&);			// Print out values of the collider
+
+	private:
+	protected:
+	};
+}
