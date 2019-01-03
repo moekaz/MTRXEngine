@@ -5,11 +5,11 @@
 
 #include <PrecompiledHeader.h>
 
-#include "../headers/CollisionUtil.h"
-#include "../headers/BoxCollider.h"
-#include "../headers/SphereCollider.h"
-#include "../headers/CapsuleCollider.h"
-#include "../headers/ConvexShapeCollider.h"
+#include <CollisionUtil.h>
+#include <BoxCollider.h>
+#include <SphereCollider.h>
+#include <CapsuleCollider.h>
+#include <ConvexShapeCollider.h>
 
 namespace MTRX
 {
@@ -137,6 +137,7 @@ namespace MTRX
 			return false;
 		}
 
+		// THIS IS NOT CORRECT CHANGE THISSSSSS!!!!
 		// Line segment ray collision detection
 		bool LineSegmentRayCollision(const glm::vec3& A, const glm::vec3& B, const glm::vec3& rayStartPoint, const glm::vec3& rayDirection)
 		{

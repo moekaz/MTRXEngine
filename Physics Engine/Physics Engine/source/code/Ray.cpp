@@ -4,7 +4,7 @@
 */
 
 #include <PrecompiledHeader.h>
-#include "../headers/Ray.h"
+#include <Ray.h>
 
 namespace MTRX
 {

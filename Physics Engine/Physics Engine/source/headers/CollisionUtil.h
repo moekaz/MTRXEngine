@@ -12,9 +12,7 @@
 namespace MTRX
 {
 	// Forward declarations
-	class SphereCollider;
 	class BoxCollider;
-	class CapsuleCollider;
 	class MeshCollider;
 	class ConvexShapeCollider;
 

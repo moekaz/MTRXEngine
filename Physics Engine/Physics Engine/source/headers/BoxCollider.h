@@ -5,7 +5,6 @@
 
 #pragma once
 
-#include <Vector3D.h>
 #include <ConvexShapeCollider.h>
 #include <CollisionUtil.h>
 
