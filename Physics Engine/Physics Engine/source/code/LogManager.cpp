@@ -12,7 +12,7 @@ namespace MTRX
 
 	void LogManager::init()
 	{
-		CreateLogDirectory();
+		CreateLogDirectory(); // Setup the log directory that we need
 		std::vector<spdlog::sink_ptr> loggerSinks // Create logger sinks
 		{
 			std::make_shared<spdlog::sinks::basic_file_sink_mt>(std::string(LOG_FILE_DIR) + "log"), // File logger sink
@@ -34,7 +34,7 @@ namespace MTRX
 		directory += "\\" + std::string(LOG_FILE_DIR); // Add the directory that we want to create the log files in 
 		if (!std::filesystem::is_directory(directory))
 		{
-			std::filesystem::create_directory(directory);
+			std::filesystem::create_directory(directory); // Create the log directory
 		}
 	}
 }

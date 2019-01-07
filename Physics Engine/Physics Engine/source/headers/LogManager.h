@@ -6,7 +6,7 @@
 
 #pragma once
 
-#define LOG_FILE_DIR "MTRXLogs\\"
+#define LOG_FILE_DIR "MTRXLogs\\" // Directory where log file will be created in
 
 // Macros for API calls to log information
 #define MTRX_WARN(...) MTRX::LogManager::GetMTRXLogger()->warn(__VA_ARGS__)
@@ -25,7 +25,8 @@ namespace MTRX
 
 	private:
 		static std::shared_ptr<spdlog::logger> mtrxLogger; // Store a pointer to the logger that the engine will be using		
-		static void CreateLogDirectory();
+		static void CreateLogDirectory(); // Sets up the log directory to be used by the logger to log information onto
+
 	protected:
 
 	};
