@@ -63,6 +63,9 @@
     <ClCompile Include="source\code\PrecompiledHeader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="source\code\LogManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\headers\Vector3D.h">
@@ -116,10 +119,10 @@
     <ClInclude Include="source\headers\IUpdateable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="source\headers\Logger.h">
+    <ClInclude Include="source\headers\PrecompiledHeader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="source\headers\PrecompiledHeader.h">
+    <ClInclude Include="source\headers\LogManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

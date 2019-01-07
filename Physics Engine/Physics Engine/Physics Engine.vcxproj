@@ -22,7 +22,7 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{07281FB9-A460-4266-A1F7-C112E97AB038}</ProjectGuid>
     <RootNamespace>PhysicsEngine</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -89,9 +89,10 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Physics Engine\source\headers;$(SolutionDir)/Physics Engine/source/Libraries/glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Physics Engine\source\headers;$(SolutionDir)/Physics Engine/source/Libraries/glm;$(SolutionDir)/Physics Engine/source/Libraries/spdlog/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>PrecompiledHeader.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -100,9 +101,10 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Physics Engine\source\headers;$(SolutionDir)/Physics Engine/source/Libraries/glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Physics Engine\source\headers;$(SolutionDir)/Physics Engine/source/Libraries/glm;$(SolutionDir)/Physics Engine/source/Libraries/spdlog/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>PrecompiledHeader.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -115,8 +117,9 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>PrecompiledHeader.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)Physics Engine\source\headers;$(SolutionDir)/Physics Engine/source/Libraries/glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Physics Engine\source\headers;$(SolutionDir)/Physics Engine/source/Libraries/glm;$(SolutionDir)/Physics Engine/source/Libraries/spdlog/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -133,8 +136,9 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>PrecompiledHeader.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)Physics Engine\source\headers;$(SolutionDir)/Physics Engine/source/Libraries/glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Physics Engine\source\headers;$(SolutionDir)/Physics Engine/source/Libraries/glm;$(SolutionDir)/Physics Engine/source/Libraries/spdlog/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -149,6 +153,7 @@
     <ClCompile Include="source\code\ConvexShapeCollider.cpp" />
     <ClCompile Include="source\code\GameTime.cpp" />
     <ClCompile Include="source\code\GJK.cpp" />
+    <ClCompile Include="source\code\LogManager.cpp" />
     <ClCompile Include="source\code\Mat3.cpp" />
     <ClCompile Include="source\code\PrecompiledHeader.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -178,7 +183,7 @@
     <ClInclude Include="source\headers\GameTime.h" />
     <ClInclude Include="source\headers\GJK.h" />
     <ClInclude Include="source\headers\IUpdateable.h" />
-    <ClInclude Include="source\headers\Logger.h" />
+    <ClInclude Include="source\headers\LogManager.h" />
     <ClInclude Include="source\headers\Mat3.h" />
     <ClInclude Include="source\headers\MTRX.h" />
     <ClInclude Include="source\headers\PrecompiledHeader.h" />

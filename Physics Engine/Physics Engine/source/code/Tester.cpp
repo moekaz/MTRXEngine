@@ -11,12 +11,14 @@
 #include <CapsuleCollider.h>
 #include <ConvexShapeCollider.h>
 #include <PhysicsUtil.h>
+#include <LogManager.h>
 
 // HOW AM I CHECKING FOR MEMORY LEAKS
 
 // Testing 3d vectors
 void VectorTesting()
 {
+	
 	// Testing vector3Ds
 	MTRX::Vector3D vec1 = MTRX::Vector3D(0, 0, 0);
 	MTRX::Vector3D vec2 = MTRX::Vector3D(1, 2, 3);
@@ -297,6 +299,13 @@ void SphereColliderTesting()
 
 int main()
 {
+	MTRX::LogManager::init();
+	MTRX_WARN("hello initialized logger");
+	MTRX_INFO("INFO!!!");
+	MTRX_TRACE("INFO!!!");
+	MTRX_ERROR("INFO!!!");
+	MTRX_CRITICAL("INFO!!!");
+
 	// Testing classes
 	VectorTesting();
 	MatrixTesting();
