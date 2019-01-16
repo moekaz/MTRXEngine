@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2002
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Physics Engine", "Physics Engine\Physics Engine.vcxproj", "{07281FB9-A460-4266-A1F7-C112E97AB038}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MTRXEngine", "MTRXEngine\MTRXEngine.vcxproj", "{07281FB9-A460-4266-A1F7-C112E97AB038}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
