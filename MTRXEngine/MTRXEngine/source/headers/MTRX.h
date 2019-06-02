@@ -6,17 +6,17 @@
 #pragma once
 
 #include <IUpdateable.h>
-#include <Collider.h>
+#include <colliders/Collider.h>
 
-namespace MTRX
+namespace mtrx
 {
-	class MTRX : public IUpdateable
+	class mtrx : public IUpdateable
 	{
 	public:
-		std::map<int, Collider> collider;		// Store the colliders that we want to run through
+		std::unordered_map<int, Collider> collider;		// Store the colliders that we want to run through
 
-		MTRX();								// Constructor
-		~MTRX();							// Destructor
+		mtrx();								// Constructor
+		~mtrx();							// Destructor
 
 		void PhysicsUpdate();				// Update the game engine values
 		void NarrowPhase();					// Narrow phase collision detection checks

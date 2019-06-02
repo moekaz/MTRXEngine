@@ -28,26 +28,26 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -118,7 +118,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>PrecompiledHeader.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>$(ProjectDir)/source/headers;$(ProjectDir)/source/Libraries/glm;$(ProjectDir)/source/Libraries/spdlog/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
@@ -137,7 +137,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>PrecompiledHeader.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>$(ProjectDir)/source/headers;$(ProjectDir)/source/Libraries/glm;$(ProjectDir)/source/Libraries/spdlog/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
@@ -146,16 +146,45 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Source.cpp" />
-    <ClCompile Include="source\code\BoxCollider.cpp" />
-    <ClCompile Include="source\code\CapsuleCollider.cpp" />
-    <ClCompile Include="source\code\Collider.cpp" />
-    <ClCompile Include="source\code\CollisionUtil.cpp" />
-    <ClCompile Include="source\code\ConvexShapeCollider.cpp" />
+    <ClCompile Include="source\code\colliders\BVHNode.cpp" />
+    <ClCompile Include="source\code\colliders\CollisionSystem.cpp" />
+    <ClCompile Include="source\code\RigidbodyManager.cpp" />
+    <ClCompile Include="source\code\forceGenerators\ParticleGenerators\p_AnchoredSpringForceGenerator.cpp" />
+    <ClCompile Include="source\code\forceGenerators\ParticleGenerators\p_BungeeSpringForceGenerator.cpp" />
+    <ClCompile Include="source\code\forceGenerators\ParticleGenerators\p_BuoyancyForceGenerator.cpp" />
+    <ClCompile Include="source\code\forceGenerators\ParticleGenerators\p_DefaultSpringForceGenerator.cpp" />
+    <ClCompile Include="source\code\forceGenerators\ParticleGenerators\p_DragForceGenerator.cpp" />
+    <ClCompile Include="source\code\forceGenerators\ParticleGenerators\p_ForceGenerationRegistry.cpp" />
+    <ClCompile Include="source\code\forceGenerators\ParticleGenerators\p_GravityForceGenerator.cpp" />
+    <ClCompile Include="source\code\forceGenerators\ParticleGenerators\p_StiffSpringForceGenerator.cpp" />
+    <ClCompile Include="source\code\forceGenerators\RigidbodyGenerators\rb_AnchoredSpringForceGenerator.cpp" />
+    <ClCompile Include="source\code\forceGenerators\RigidbodyGenerators\rb_BungeeSpringForceGenerator.cpp" />
+    <ClCompile Include="source\code\forceGenerators\RigidbodyGenerators\rb_BuoyancyForceGenerator.cpp" />
+    <ClCompile Include="source\code\forceGenerators\RigidbodyGenerators\rb_DefaultSpringForceGenerator.cpp" />
+    <ClCompile Include="source\code\forceGenerators\RigidbodyGenerators\rb_DragForceGenerator.cpp" />
+    <ClCompile Include="source\code\forceGenerators\RigidbodyGenerators\rb_ForceGenerationRegistry.cpp" />
+    <ClCompile Include="source\code\forceGenerators\RigidbodyGenerators\rb_GravityForceGenerator.cpp" />
+    <ClCompile Include="source\code\forceGenerators\RigidbodyGenerators\rb_StiffSpringForceGenerator.cpp" />
+    <ClCompile Include="source\code\entities\Body.cpp" />
+    <ClCompile Include="source\code\ParticleCableCoupling.cpp" />
+    <ClCompile Include="source\code\ParticleManager.cpp" />
+    <ClCompile Include="source\code\ParticleRodCoupling.cpp" />
+    <ClCompile Include="source\code\ParticleCollisionResolver.cpp" />
+    <ClCompile Include="source\code\ParticleCoupling.cpp" />
+    <ClCompile Include="source\code\colliders\BoxCollider.cpp" />
+    <ClCompile Include="source\code\colliders\CapsuleCollider.cpp" />
+    <ClCompile Include="source\code\colliders\Collider.cpp" />
+    <ClCompile Include="source\code\colliders\ConvexShapeCollider.cpp" />
+    <ClCompile Include="source\code\colliders\SphereCollider.cpp" />
+    <ClCompile Include="source\code\entities\Particle.cpp" />
+    <ClCompile Include="source\code\entities\Rigidbody.cpp" />
+    <ClCompile Include="source\code\log\LogManager.cpp" />
+    <ClCompile Include="source\code\math\Mat3.cpp" />
+    <ClCompile Include="source\code\math\Simplex.cpp" />
+    <ClCompile Include="source\code\math\Vector3D.cpp" />
+    <ClCompile Include="source\code\ParticleCollision.cpp" />
     <ClCompile Include="source\code\GameTime.cpp" />
     <ClCompile Include="source\code\GJK.cpp" />
-    <ClCompile Include="source\code\LogManager.cpp" />
-    <ClCompile Include="source\code\Mat3.cpp" />
     <ClCompile Include="source\code\PrecompiledHeader.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -167,35 +196,61 @@
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">PrecompiledHeader.h</PrecompiledHeaderFile>
     </ClCompile>
     <ClCompile Include="source\code\Ray.cpp" />
-    <ClCompile Include="source\code\Rigidbody.cpp" />
-    <ClCompile Include="source\code\Simplex.cpp" />
-    <ClCompile Include="source\code\SphereCollider.cpp" />
     <ClCompile Include="source\code\Tester.cpp" />
-    <ClCompile Include="source\code\PhysicsUtil.cpp" />
-    <ClCompile Include="source\code\Vector3D.cpp" />
+    <ClCompile Include="source\code\utils\CollisionUtil.cpp" />
+    <ClCompile Include="source\code\utils\PhysicsUtil.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Header.h" />
-    <ClInclude Include="Header1.h" />
-    <ClInclude Include="source\headers\BoxCollider.h" />
-    <ClInclude Include="source\headers\CapsuleCollider.h" />
-    <ClInclude Include="source\headers\Collider.h" />
-    <ClInclude Include="source\headers\CollisionUtil.h" />
-    <ClInclude Include="source\headers\ConvexShapeCollider.h" />
+    <ClInclude Include="source\headers\colliders\BVHNode.h" />
+    <ClInclude Include="source\headers\colliders\CollisionSystem.h" />
+    <ClInclude Include="source\headers\IBoundingVolume.h" />
+    <ClInclude Include="source\headers\RigidbodyManager.h" />
+    <ClInclude Include="source\headers\entities\Body.h" />
+    <ClInclude Include="source\headers\forceGenerators\ParticleGenerators\IParticleForceGenerator.h" />
+    <ClInclude Include="source\headers\forceGenerators\ParticleGenerators\p_AnchoredSpringForceGenerator.h" />
+    <ClInclude Include="source\headers\forceGenerators\ParticleGenerators\p_BungeeSpringForceGenerator.h" />
+    <ClInclude Include="source\headers\forceGenerators\ParticleGenerators\p_BuoyancyForceGenerator.h" />
+    <ClInclude Include="source\headers\forceGenerators\ParticleGenerators\p_DefaultSpringForceGenerator.h" />
+    <ClInclude Include="source\headers\forceGenerators\ParticleGenerators\p_DragForceGenerator.h" />
+    <ClInclude Include="source\headers\forceGenerators\ParticleGenerators\p_ForceGenerationRegistry.h" />
+    <ClInclude Include="source\headers\forceGenerators\ParticleGenerators\p_GravityForceGenerator.h" />
+    <ClInclude Include="source\headers\forceGenerators\ParticleGenerators\p_StiffSpringForceGenerator.h" />
+    <ClInclude Include="source\headers\forceGenerators\RigidbodyGenerators\rb_AnchoredSpringForceGenerator.h" />
+    <ClInclude Include="source\headers\forceGenerators\RigidbodyGenerators\rb_BungeeSpringForceGenerator.h" />
+    <ClInclude Include="source\headers\forceGenerators\RigidbodyGenerators\rb_BuoyancyForceGenerator.h" />
+    <ClInclude Include="source\headers\forceGenerators\RigidbodyGenerators\rb_DefaultSpringForceGenerator.h" />
+    <ClInclude Include="source\headers\forceGenerators\RigidbodyGenerators\rb_DragForceGenerator.h" />
+    <ClInclude Include="source\headers\forceGenerators\RigidbodyGenerators\rb_ForceGenerationRegistry.h" />
+    <ClInclude Include="source\headers\forceGenerators\RigidbodyGenerators\rb_GravityForceGenerator.h" />
+    <ClInclude Include="source\headers\forceGenerators\RigidbodyGenerators\IRigidbodyForceGenerator.h" />
+    <ClInclude Include="source\headers\forceGenerators\RigidbodyGenerators\rb_StiffSpringForceGenerator.h" />
+    <ClInclude Include="source\headers\ParticleCableCoupling.h" />
+    <ClInclude Include="source\headers\ParticleCollisionGenerator.h" />
+    <ClInclude Include="source\headers\ParticleManager.h" />
+    <ClInclude Include="source\headers\ParticleRodCoupling.h" />
+    <ClInclude Include="source\headers\ParticleCollisionResolver.h" />
+    <ClInclude Include="source\headers\ParticleCoupling.h" />
+    <ClInclude Include="source\headers\colliders\BoxCollider.h" />
+    <ClInclude Include="source\headers\colliders\CapsuleCollider.h" />
+    <ClInclude Include="source\headers\colliders\Collider.h" />
+    <ClInclude Include="source\headers\colliders\ConvexShapeCollider.h" />
+    <ClInclude Include="source\headers\colliders\SphereCollider.h" />
+    <ClInclude Include="source\headers\entities\Particle.h" />
+    <ClInclude Include="source\headers\entities\Rigidbody.h" />
+    <ClInclude Include="source\headers\log\LogManager.h" />
+    <ClInclude Include="source\headers\math\Mat3.h" />
+    <ClInclude Include="source\headers\math\Simplex.h" />
+    <ClInclude Include="source\headers\math\Vector3D.h" />
+    <ClInclude Include="source\headers\ParticleCollision.h" />
     <ClInclude Include="source\headers\Defs.h" />
     <ClInclude Include="source\headers\GameTime.h" />
     <ClInclude Include="source\headers\GJK.h" />
     <ClInclude Include="source\headers\IUpdateable.h" />
-    <ClInclude Include="source\headers\LogManager.h" />
-    <ClInclude Include="source\headers\Mat3.h" />
     <ClInclude Include="source\headers\MTRX.h" />
     <ClInclude Include="source\headers\PrecompiledHeader.h" />
     <ClInclude Include="source\headers\Ray.h" />
-    <ClInclude Include="source\headers\Rigidbody.h" />
-    <ClInclude Include="source\headers\Simplex.h" />
-    <ClInclude Include="source\headers\SphereCollider.h" />
-    <ClInclude Include="source\headers\PhysicsUtil.h" />
-    <ClInclude Include="source\headers\Vector3D.h" />
+    <ClInclude Include="source\headers\utils\CollisionUtil.h" />
+    <ClInclude Include="source\headers\utils\PhysicsUtil.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

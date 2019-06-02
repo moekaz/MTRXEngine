@@ -7,7 +7,7 @@
 
 #include <IUpdateable.h>
 
-namespace MTRX
+namespace mtrx
 {
 	class GameTime : public IUpdateable
 	{

@@ -12,10 +12,10 @@
 
 #define MAX_NUM_ITERATIONS 64	// Helps with better performance for more complicated convex shapes while sacrificing a little on accuracy
 
-#include <Simplex.h>
-#include <PhysicsUtil.h>
+#include <math/Simplex.h>
+#include <utils/PhysicsUtil.h>
 
-namespace MTRX
+namespace mtrx
 {
 	// Forward declarations
 	class ConvexShapeCollider;

@@ -1,6 +1,6 @@
 /*
 	Author: Mohamed Kazma
-	Description: Precompiled header for the MTRX project
+	Description: Precompiled header for the mtrx project
 */
 
 #pragma once
@@ -16,9 +16,8 @@
 #include <filesystem>
 #include <time.h>
 #include <stdio.h>
-
-// MTRX defs
-#include <Defs.h>
+#include <unordered_map>
+#include <stack>
 
 // GLM
 #include <glm/glm.hpp>

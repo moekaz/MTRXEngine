@@ -4,14 +4,14 @@
 */
 
 #include <PrecompiledHeader.h>
-#include <Vector3D.h>
-#include <Mat3.h>
-#include <SphereCollider.h>
-#include <BoxCollider.h>
-#include <CapsuleCollider.h>
-#include <ConvexShapeCollider.h>
-#include <PhysicsUtil.h>
-#include <LogManager.h>
+#include <math/Vector3D.h>
+#include <math/Mat3.h>
+#include <colliders/SphereCollider.h>
+#include <colliders/BoxCollider.h>
+#include <colliders/CapsuleCollider.h>
+#include <colliders/ConvexShapeCollider.h>
+#include <utils/PhysicsUtil.h>
+#include <log/LogManager.h>
 
 // HOW AM I CHECKING FOR MEMORY LEAKS
 
@@ -20,10 +20,10 @@ void VectorTesting()
 {
 	
 	// Testing vector3Ds
-	MTRX::Vector3D vec1 = MTRX::Vector3D(0, 0, 0);
-	MTRX::Vector3D vec2 = MTRX::Vector3D(1, 2, 3);
-	MTRX::Vector3D vec3 = MTRX::Vector3D(-1, 2, 0);
-	MTRX::Vector3D vec4 = MTRX::Vector3D(-3, -4, -4);
+	mtrx::Vector3D vec1 = mtrx::Vector3D(0, 0, 0);
+	mtrx::Vector3D vec2 = mtrx::Vector3D(1, 2, 3);
+	mtrx::Vector3D vec3 = mtrx::Vector3D(-1, 2, 0);
+	mtrx::Vector3D vec4 = mtrx::Vector3D(-3, -4, -4);
 
 	// Testing initial values
 	std::cout << "Testing the values of the vectors:" << std::endl;
@@ -152,8 +152,8 @@ void VectorTesting()
 void MatrixTesting()
 {
 	// Testing Mat3
-	MTRX::Mat3 mat1 = MTRX::Mat3(MTRX::Vector3D(1 , 7 , 5) , MTRX::Vector3D(-5 , 4 , 8) , MTRX::Vector3D(10 , -2 , 2));
-	MTRX::Mat3 mat2 = MTRX::Mat3(6 , 4 , 7 , -1 , -5 , 5 , 7 , 10 , 1);
+	mtrx::Mat3 mat1 = mtrx::Mat3(mtrx::Vector3D(1 , 7 , 5) , mtrx::Vector3D(-5 , 4 , 8) , mtrx::Vector3D(10 , -2 , 2));
+	mtrx::Mat3 mat2 = mtrx::Mat3(6 , 4 , 7 , -1 , -5 , 5 , 7 , 10 , 1);
 
 
 	std::cout << "Testing 3x3 matrices: " << std::endl;
@@ -224,10 +224,10 @@ void MatrixTesting()
 void SphereColliderTesting()
 {
 	int i = 300;
-	MTRX::SphereCollider collider1 = MTRX::SphereCollider();
-	MTRX::SphereCollider collider2 = MTRX::SphereCollider(glm::vec3(30,0,0));
+	mtrx::SphereCollider collider1 = mtrx::SphereCollider();
+	mtrx::SphereCollider collider2 = mtrx::SphereCollider(glm::vec3(30,0,0));
 
-	std::cout << collider1 << std::endl;
+	//std::cout << collider1 << std::endl;
 
 	std::vector<glm::vec3*> vertices1 = 
 	{ 
@@ -244,8 +244,8 @@ void SphereColliderTesting()
 		new glm::vec3(12 , 7 , 0)
 	};
 
-	MTRX::ConvexShapeCollider col1 = MTRX::ConvexShapeCollider();
-	MTRX::ConvexShapeCollider col2 = MTRX::ConvexShapeCollider();
+	mtrx::ConvexShapeCollider col1 = mtrx::ConvexShapeCollider();
+	mtrx::ConvexShapeCollider col2 = mtrx::ConvexShapeCollider();
 	col1.vertices = vertices1;
 	col2.vertices = vertices2;
 
@@ -271,12 +271,12 @@ void SphereColliderTesting()
 	//std::cout << "Distance between point and line segment: " << PhysicsUtil::MinDistanceSquaredPointSegment(A, B, C , D) << std::endl;
 
 	glm::vec3 center = glm::vec3(0, 2.0f, 0);
-	MTRX::CapsuleCollider cap1 = MTRX::CapsuleCollider();
-	MTRX::CapsuleCollider cap2 = MTRX::CapsuleCollider(center);
+	mtrx::CapsuleCollider cap1 = mtrx::CapsuleCollider();
+	mtrx::CapsuleCollider cap2 = mtrx::CapsuleCollider(center);
 
 	std::cout << "Capsule capsule Collision: " << cap1.CheckCollision(cap2) << std::endl;
 
-	MTRX::BoxCollider b = MTRX::BoxCollider(glm::vec3(0, 0 ,0));
+	mtrx::BoxCollider b = mtrx::BoxCollider(glm::vec3(0, 0 ,0));
 
 	std::cout << "Sphere box collision detection: " << collider1.CheckCollision(b) << std::endl;
 
@@ -299,7 +299,7 @@ void SphereColliderTesting()
 
 int main()
 {
-	MTRX::LogManager::init();
+	mtrx::LogManager::init();
 	MTRX_WARN("hello initialized logger");
 	MTRX_INFO("INFO!!!");
 	MTRX_TRACE("INFO!!!");
@@ -311,8 +311,9 @@ int main()
 	MatrixTesting();
 	SphereColliderTesting();
 
-	// Just to hold the console open in vs studio
-	while (true) {}
+	// Just to hold the console open in vs
+	std::string input;
+	getline(std::cin, input);
 	return 0;
 }
 

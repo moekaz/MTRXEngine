@@ -5,7 +5,7 @@
 
 #pragma once
 
-namespace MTRX
+namespace mtrx
 {
 	class IUpdateable
 	{

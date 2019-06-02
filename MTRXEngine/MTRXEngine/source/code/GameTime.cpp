@@ -6,7 +6,7 @@
 #include <PrecompiledHeader.h>
 #include <GameTime.h>
 
-namespace MTRX
+namespace mtrx
 {
 	// Setup the main values needed 
 	const float GameTime::startTime = (float)time(0);
