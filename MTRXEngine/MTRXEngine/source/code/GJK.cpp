@@ -31,7 +31,7 @@ namespace mtrx
 		simplex.size = 2;	// Simplex has 2 points
 
 		// Simplex GJK logic loop
-		for (int i = 0; i < MAX_NUM_ITERATIONS; i++)
+		for (int i = 0; i < MAX_NUM_ITERATIONS; ++i)
 		{
 			std::cout << "index" << i << std::endl;
 			glm::vec3 a = convexCollider1.Support(convexCollider2, searchDirection); // Get the next point

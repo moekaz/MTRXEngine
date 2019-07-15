@@ -20,7 +20,7 @@ namespace mtrx
 	class LogManager
 	{
 	public:
-		static void init(); // Initialize the logger
+		static void Init(); // Initialize the logger
 
 		/* API for the logger to abstract library used and make it simple if we change libraries */
 		template<typename T>

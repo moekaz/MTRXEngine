@@ -4,7 +4,6 @@
 */
 
 #include <PrecompiledHeader.h>
-
 #include <colliders/BoxCollider.h>
 #include <colliders/SphereCollider.h>
 #include <colliders/CapsuleCollider.h>
@@ -13,26 +12,18 @@ namespace mtrx
 {
 	BoxCollider::BoxCollider(const glm::vec3& center) : ConvexShapeCollider(ColliderType::Box, center), halfExtents(glm::vec3(0.5, 0.5, 0.5))
 	{
-		// Setup vertices and mins and maxes
-		//vertices =
-		//{
-		//	new glm::vec3(-0.5 , 0.5 , 0.5),
-		//	new glm::vec3(0.5 , 0.5 , 0.5),
-		//	new glm::vec3(-0.5 , -0.5 , 0.5),
-		//	new glm::vec3(0.5 , -0.5 , 0.5),
-		//	new glm::vec3(-0.5 , 0.5 , -0.5),
-		//	new glm::vec3(0.5 , 0.5 , -0.5),
-		//	new glm::vec3(-0.5 , -0.5 , -0.5),
-		//	new glm::vec3(0.5 , -0.5 , -0.5),
-		//};
-
-		//min = glm::vec3(-0.5, -0.5, -0.5);	// Minimum positions
-		//max = glm::vec3(0.5, 0.5, 0.5);		// Maximum positions
-
-		//axes.reserve(3);
-		//axes.emplace_back(&sideDirection);
-		//axes.emplace_back(&upDirection);
-		//axes.emplace_back(&forwardDirection);
+		// Vertices of a box
+		vertices =
+		{
+			new glm::vec3(-0.5, 0.5, 0.5),
+			new glm::vec3(0.5, 0.5, 0.5),
+			new glm::vec3(-0.5, -0.5, 0.5),
+			new glm::vec3(0.5, -0.5, 0.5),
+			new glm::vec3(-0.5, 0.5, -0.5),
+			new glm::vec3(0.5, 0.5, -0.5),
+			new glm::vec3(-0.5, -0.5, -0.5),
+			new glm::vec3(0.5, -0.5, -0.5),
+		};
 	}
 
 	BoxCollider::BoxCollider(const BoxCollider& collider1, const BoxCollider collider2)
@@ -40,7 +31,8 @@ namespace mtrx
 		// Create a bounding box from the 2 other bounding boxes
 	}
 
-	BoxCollider::~BoxCollider() {}
+	BoxCollider::~BoxCollider() 
+	{}
 
 	// Gives us whether there is a collision occurring
 	bool BoxCollider::CheckCollision(const Collider& col)
@@ -52,7 +44,7 @@ namespace mtrx
 			{
 				std::cout << "Box Sphere collision detection" << std::endl;
 				const mtrx::SphereCollider& collider = static_cast<const mtrx::SphereCollider&>(col);
-				collision = CollisionUtil::SphereBoxCollision(collider.GetPosition(), center, collider.radius, axes, halfExtents);
+				collision = CollisionUtil::SphereBoxCollision(collider.GetPosition(), transform.position, collider.radius, axes, halfExtents);
 				break;
 			}
 			case ColliderType::Box:
@@ -66,7 +58,7 @@ namespace mtrx
 			{
 				std::cout << "Box Capsule collision detection" << std::endl;
 				const mtrx::CapsuleCollider& collider = static_cast<const mtrx::CapsuleCollider&>(col);
-				collision = CollisionUtil::BoxCapsuleCollision(center, collider.GetPosition(), collider.A, collider.B, collider.radii, axes, halfExtents);
+				collision = CollisionUtil::BoxCapsuleCollision(transform.position, collider.GetPosition(), collider.A, collider.B, collider.radii, axes, halfExtents);
 				break;
 			}
 			case ColliderType::Mesh:
@@ -87,7 +79,7 @@ namespace mtrx
 	// Raycast with box colliders
 	bool BoxCollider::RaycastCollision(const Ray& ray)
 	{
-		return CollisionUtil::RayBoxCollision(ray.startPosition, ray.direction, center, axes, halfExtents);
+		return CollisionUtil::RayBoxCollision(ray.startPosition, ray.direction, transform.position, axes, halfExtents);
 	}
 
 	float BoxCollider::GetSize()

@@ -33,6 +33,7 @@ namespace mtrx
 		unsigned int maxContacts; // The maximum number of contacts that we will handle at a current frame
 		unsigned int numIterations; // The number of iterations of resolutions that we want
 		
+		ParticleManager();
 		ParticleManager(unsigned int maxContacts, unsigned int numIterations);
 		~ParticleManager();
 

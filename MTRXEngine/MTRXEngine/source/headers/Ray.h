@@ -7,6 +7,8 @@
 
 namespace mtrx
 {
+	#define MAX_RAY_SIZE 10000.f
+
 	class Ray
 	{
 	public:

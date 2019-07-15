@@ -20,6 +20,7 @@ namespace mtrx
 		{
 			glm::vec3 diff = center1 - center2;
 			float sumRadii = radius1 + radius2;
+			std::cout << glm::dot(diff, diff) << " " << sumRadii * sumRadii << std::endl;
 			return glm::dot(diff, diff) <= sumRadii * sumRadii;
 		}
 

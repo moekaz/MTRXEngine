@@ -269,7 +269,7 @@ namespace mtrx
 		{
 			if (!t)
 				return NULL;
-			return (float)(sin(t * pi - pi / 2.0f) + 1.0f) / 2.0f;
+			return (float)(sin(t * PI - PI / 2.0f) + 1.0f) / 2.0f;
 		}
 	}
 }

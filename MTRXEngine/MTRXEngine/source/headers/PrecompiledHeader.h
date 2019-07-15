@@ -17,15 +17,26 @@
 #include <time.h>
 #include <stdio.h>
 #include <unordered_map>
+#include <unordered_set>
 #include <stack>
-
-// GLM
-#include <glm/glm.hpp>
-#include <glm/gtx/quaternion.hpp>
+#include <fstream>
 
 // SpdLog
 #include <spdlog/spdlog.h>
 #include <spdlog/logger.h>
 #include <spdlog/sinks/basic_file_sink.h>
+
+// GLM
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+#include <glm/common.hpp>
+#include <glm/glm.hpp>
+#include <glm/gtx/quaternion.hpp>
+
+// GLAD
+#include <glad/glad.h>
+
+// GLFW
+#include <GLFW/glfw3.h>
 
 // Premake

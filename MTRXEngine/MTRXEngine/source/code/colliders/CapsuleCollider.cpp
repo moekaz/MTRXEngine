@@ -11,22 +11,22 @@
 
 namespace mtrx
 {
-	// Constructor
 	CapsuleCollider::CapsuleCollider(const glm::vec3& center, float radii, float height) : Collider(ColliderType::Capsule, center),
 		height(height), A(center - glm::vec3(0, height / 2, 0)), B(center - glm::vec3(0, height / 2, 0)), radii(radii)
-	{}
-
-	CapsuleCollider::CapsuleCollider(const CapsuleCollider& collider1, const CapsuleCollider& collider2) : Collider(ColliderType::Capsule)
 	{
-		// Create a bounding capsule
-		// Dunno if i want to do that 
 	}
 
-	// Destructor
-	CapsuleCollider::~CapsuleCollider() 
+	// TODO: Implement this
+	CapsuleCollider::CapsuleCollider(const CapsuleCollider& collider1, const CapsuleCollider& collider2) : Collider(ColliderType::Capsule),
+		height(0), radii(1.f)
+	{
+		// Create a bounding capsule
+		// Dunno if i want to do that
+	}
+
+	CapsuleCollider::~CapsuleCollider()
 	{}
 
-	// Checks for collisions
 	bool CapsuleCollider::CheckCollision(const Collider& col)
 	{
 		bool collision = false;
@@ -35,15 +35,15 @@ namespace mtrx
 			case ColliderType::Sphere:
 			{
 				std::cout << "Capsule sphere collision detection" << std::endl;
-				const CapsuleCollider& collider = static_cast<const CapsuleCollider&>(col);
-				collision = CollisionUtil::CapsuleCapsuleCollision(A, B, collider.A, collider.B, radii, collider.radii);
+				const SphereCollider& collider = static_cast<const SphereCollider&>(col);
+				collision = CollisionUtil::SphereCapsuleCollision(collider.GetPosition(), transform.position, collider.radius, radii, A, B);
 				break;
 			}
 			case ColliderType::Box:
 			{
 				std::cout << "Capsule Box collision detection" << std::endl;
 				const BoxCollider& collider = static_cast<const BoxCollider&>(col);
-				collision = CollisionUtil::BoxCapsuleCollision(collider.GetPosition(), center, A, B, radii, collider.GetAxes(), collider.halfExtents);
+				collision = CollisionUtil::BoxCapsuleCollision(collider.GetPosition(), transform.position, A, B, radii, collider.GetAxes(), collider.halfExtents);
 				break;
 			}
 			case ColliderType::Capsule:
@@ -68,7 +68,6 @@ namespace mtrx
 		return collision;
 	}
 
-	// Raycast collision with capsule
 	bool CapsuleCollider::RaycastCollision(const Ray& ray)
 	{
 		return CollisionUtil::RayCapsuleCollision(ray.startPosition, ray.direction, A, B, radii);

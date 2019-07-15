@@ -3,6 +3,9 @@
 
 namespace mtrx
 {
+	ParticleManager::ParticleManager() : collisionResolver(1)
+	{}
+
 	ParticleManager::ParticleManager(unsigned int maxContacts, unsigned int numIterations) : maxContacts(maxContacts), numIterations(numIterations),
 		collisionResolver(numIterations)
 	{}

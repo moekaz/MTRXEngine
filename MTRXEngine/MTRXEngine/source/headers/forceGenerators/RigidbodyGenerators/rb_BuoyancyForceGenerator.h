@@ -14,14 +14,16 @@ namespace mtrx
 	class rb_BuoyancyForceGenerator : public IRigidbodyForceGenerator
 	{	
 	public:
-		LiquidProperties liquidProperties;
-		float liquidHeight; // The y coordinate of the liquid's plane (assuming that plane is parallel to XZ plane)
-		float maxParticleDepth; // The max depth after which the object is said to be completely submerged (position is from the center to this will affect depth calculation)
+		float liquidDensity;
+		float volumeDisplaced;
+		float liquidLevel;
+		float maxParticleDepth;
+		glm::vec3 centerOfBuoyancy;	
+
+		rb_BuoyancyForceGenerator(float volume, float maxPaticleDepth, float liquidHeight = 0.f, float density = 1000.f);
+		~rb_BuoyancyForceGenerator();
 
 		virtual void UpdateForces(Rigidbody* rb) override;
-		
-		rb_BuoyancyForceGenerator(float density, float volume, float maxPaticleDepth);
-		~rb_BuoyancyForceGenerator();
 	};
 }
 

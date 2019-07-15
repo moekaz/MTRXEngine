@@ -8,11 +8,16 @@
 
 namespace mtrx
 {
-	// Constructor
-	ConvexShapeCollider::ConvexShapeCollider(const ColliderType& colliderType, const glm::vec3& center) : Collider(colliderType, center, true) {}
+	ConvexShapeCollider::ConvexShapeCollider(const ColliderType& colliderType, const glm::vec3& center) : Collider(colliderType, center, true) 
+	{}
 
-	//Destructor
-	ConvexShapeCollider::~ConvexShapeCollider() {}
+	ConvexShapeCollider::~ConvexShapeCollider() 
+	{
+		for (int i = 0; i < vertices.size(); ++i)
+		{
+			delete vertices[i];
+		}
+	}
 
 	// Used for GJK collision
 	glm::vec3 ConvexShapeCollider::Support(const ConvexShapeCollider& convexCollider, const glm::vec3& direction) const
@@ -27,9 +32,9 @@ namespace mtrx
 	glm::vec3& ConvexShapeCollider::FarthestPointInDirection(const glm::vec3& direction) const
 	{
 		float maxDot = -std::numeric_limits<float>::infinity();	// Max dot vector
-		glm::vec3* farthest = NULL;	// Farthest vector
+		glm::vec3* farthest = nullptr;	// Farthest vector
 
-		for (unsigned int i = 0; i < vertices.size(); i++)
+		for (unsigned int i = 0; i < vertices.size(); ++i)
 		{
 			float dot = glm::dot(*vertices[i], direction);
 			if (dot > maxDot)
@@ -39,8 +44,17 @@ namespace mtrx
 			}
 		}
 
-		assert(farthest);	// Check that we have a vertex to use
+		// Check that we have a vertex to use
+		assert(farthest);
 		return *farthest;
+	}
+
+	std::vector<glm::vec3*> ConvexShapeCollider::GetVertices()
+	{
+		// TODO: implement this
+		// Get the vertices of the convex shape with change in position and orientation
+		std::vector<glm::vec3*> vertex;
+		return vertex;
 	}
 
 	// Convex shape collision detection
@@ -58,7 +72,7 @@ namespace mtrx
 	bool ConvexShapeCollider::RaycastCollision(const Ray& ray)
 	{
 		// A ray is a convex shape if we use it as a line
-		glm::vec3 rayEndPoint = glm::normalize(ray.direction) * std::numeric_limits<float>::infinity();	// Get the end point of the ray
+		glm::vec3 rayEndPoint = glm::normalize(ray.direction) * MAX_RAY_SIZE;	// Get the end point of the ray
 		ConvexShapeCollider convexLine = ConvexShapeCollider(ColliderType::ConvexShape, rayEndPoint - ray.startPosition);	// Setup the convex shape
 		glm::vec3 start = ray.startPosition;
 

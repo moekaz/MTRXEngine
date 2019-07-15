@@ -10,7 +10,7 @@ namespace mtrx
 {
 	std::shared_ptr<spdlog::logger> LogManager::mtrxLogger;
 
-	void LogManager::init()
+	void LogManager::Init()
 	{
 		CreateLogDirectory(); // Setup the log directory that we need
 		std::vector<spdlog::sink_ptr> loggerSinks // Create logger sinks

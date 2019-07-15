@@ -2,6 +2,7 @@
 #pragma once
 
 #include <IUpdateable.h>
+#include <Defs.h>
 
 namespace mtrx
 {
@@ -10,7 +11,7 @@ namespace mtrx
 	class Body : IUpdateable
 	{
 	public:
-		Body(const glm::vec3& position, const float inverseMass);
+		Body(const glm::vec3& position = glm::vec3(), const glm::quat& orientation = glm::quat(), const glm::vec3& scale = glm::vec3(), const float mass = MAX_MASS);
 		~Body();
 
 		// Add forces
@@ -22,24 +23,26 @@ namespace mtrx
 
 		// Setters 
 		inline void SetInverseMass(const float inverseMass) { this->inverseMass = inverseMass; }
-		inline void SetPosition(const glm::vec3& position) { this->position = position; }
+		inline void SetPosition(const glm::vec3& position) { this->transform.position = position; }
 		inline void SetVelocity(const glm::vec3& velocity) { this->velocity = velocity; }
 		inline void SetAcceleration(const glm::vec3& acceleration) { this->acceleration = acceleration; }
-		inline void SetDamping(const float damping) { this->linearDamping = damping; }
+		inline void SetLinearDamping(const float damping) { this->linearDamping = damping; }
 		void SetMass(const float mass);
 
 		// Getters
+		inline glm::quat& GetOrientation() { return transform.orientation; }
 		inline bool GetIsInfiniteMass() { return inverseMass == 0.f; }
 		inline float GetInverseMass() const { return inverseMass; }
 		inline float GetDamping() const { return linearDamping; }
-		inline glm::vec3& GetPosition() { return position; }
+		inline glm::vec3& GetPosition() { return transform.position; }
 		inline glm::vec3& GetVelocity() { return velocity; }
 		inline glm::vec3& GetAcceleration() { return acceleration; }
 		inline glm::vec3& GetAccumForces() { return accumForces; }
+		inline Transform* GetTransform() { return &transform; }
 		float GetMass() const;
 
 	protected:
-		glm::vec3 position; // Position of the particle in space 
+		Transform transform; // Transform information
 		glm::vec3 velocity; // Velocity of this particle 
 		glm::vec3 acceleration; // Acceleration of this particle
 		glm::vec3 accumForces; // Accumulated forces 

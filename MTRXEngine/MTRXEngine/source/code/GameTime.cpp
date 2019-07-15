@@ -9,10 +9,17 @@
 namespace mtrx
 {
 	// Setup the main values needed 
-	const float GameTime::startTime = (float)time(0);
+	const float GameTime::startTime = GetTime();
 	float GameTime::currentTime = startTime;
-	float GameTime::prevCurrentTime = NULL;
-	float GameTime::deltaTime = 0;
+	float GameTime::prevCurrentTime = 0.f;
+	float GameTime::deltaTime = 0.f;
+
+	void GameTime::Init()
+	{
+		currentTime = GetTime();
+		prevCurrentTime = 0.f;
+		deltaTime = 0.f;
+	}
 
 	// Update 
 	void GameTime::PhysicsUpdate()
@@ -40,7 +47,7 @@ namespace mtrx
 	// Gets what time it is right now
 	float GameTime::GetTime()
 	{
-		return (float)time(0);
+		return glfwGetTime();
 	}
 
 	// Calculate delta time

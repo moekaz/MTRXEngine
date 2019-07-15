@@ -16,6 +16,6 @@ namespace mtrx
 			return;
 		
 		// Add gravitational force to the particle according to f = ma
-		particle->AddForce(gravitationalAcceleration * particle->GetMass()); 
+		particle->AddForce(gravitationalAcceleration * particle->GetMass());
 	}
 }

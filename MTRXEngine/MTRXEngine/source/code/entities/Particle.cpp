@@ -3,7 +3,7 @@
 
 namespace mtrx
 {
-	Particle::Particle(const glm::vec3& position, const float inverseMass) : Body(position, inverseMass) 
+	Particle::Particle(const glm::vec3& position, const float inverseMass) : Body(position, glm::quat(), glm::vec3(1, 1, 1), inverseMass) 
 	{}
 
 	Particle::~Particle()
@@ -25,7 +25,7 @@ namespace mtrx
 
 		// Update the position of the particle using its velocity and acceleration (acceleration is not necessary)
 		//position += velocity * GameTime::deltaTime + acceleration * GameTime::deltaTime * GameTime::deltaTime * 0.5f;
-		position += velocity * GameTime::deltaTime;
+		transform.position += velocity * GameTime::deltaTime;
 		
 		// Clear the accumulators
 		ClearAccumulators();

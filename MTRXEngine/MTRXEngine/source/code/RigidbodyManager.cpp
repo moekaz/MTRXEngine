@@ -23,7 +23,7 @@ namespace mtrx
 	{
 		for (auto iter = rigidbodies.begin(); iter != rigidbodies.end(); ++iter)
 		{
-			iter->PhysicsUpdate();
+			(*iter)->PhysicsUpdate();
 		}
 	}
 
@@ -31,12 +31,10 @@ namespace mtrx
 	{
 		for (auto iter = forceGenerators.begin(); iter != forceGenerators.end(); ++iter)
 		{
-			iter->registry->UpdateForceGenerators(iter->rb);
+			iter->second.UpdateForceGenerators(iter->first);
 		}
 	}
 
 	void RigidbodyManager::GenerateCollisions()
-	{
-
-	}
+	{}
 }

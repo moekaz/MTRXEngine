@@ -16,7 +16,7 @@ namespace mtrx
 	SphereCollider::SphereCollider(const SphereCollider& collider1, const SphereCollider& collider2) : Collider(ColliderType::Sphere)
 	{
 		// Create a sphere encapsulating the 2 sphere colliders
-		glm::vec3 difference = collider2.center - collider1.center;
+		glm::vec3 difference = collider2.transform.position - collider1.transform.position;
 		float distanceSqr = glm::length2(difference);
 		float diffRadius = collider1.radius - collider2.radius;
 
@@ -25,12 +25,12 @@ namespace mtrx
 			// One sphere is inside another one
 			if (collider1.radius > collider2.radius)
 			{
-				center = collider1.center;
+				transform.position = collider1.transform.position;
 				radius = collider1.radius;
 			}
 			else
 			{
-				center = collider2.center;
+				transform.position = collider2.transform.position;
 				radius = collider2.radius;
 			}
 		}
@@ -40,16 +40,15 @@ namespace mtrx
 			distanceSqr = sqrt(distanceSqr);
 			radius = (distanceSqr + collider1.radius + collider2.radius) * 0.5f;
 
-			center = collider1.center;
+			transform.position = collider1.transform.position;
 			if (distanceSqr > 0)
-				center += difference * (radius - collider1.radius) / distanceSqr;
+				transform.position += difference * (radius - collider1.radius) / distanceSqr;
 		}
 	}
 
 	SphereCollider::~SphereCollider()
 	{}
 
-	// Checking for collision since this is going to be polymorphic it would make sense to use a general collider and work from there
 	bool SphereCollider::CheckCollision(const Collider& col)
 	{
 		bool isColliding; 
@@ -59,21 +58,21 @@ namespace mtrx
 			{
 				std::cout << "SPHERE SPHERE COLLISON DETECTION" << std::endl;
 				const SphereCollider& collider = static_cast<const SphereCollider&>(col);
-				isColliding = CollisionUtil::SphereSphereCollision(center, collider.GetPosition(), radius, collider.radius);
+				isColliding = CollisionUtil::SphereSphereCollision(transform.position, collider.GetPosition(), radius, collider.radius);
 				break;
 			}
 			case ColliderType::Box:
 			{
 				std::cout << "SPHERE BOX COLLISION DETECTION" << std::endl;
 				const BoxCollider& collider = static_cast<const BoxCollider&>(col);
-				isColliding = CollisionUtil::SphereBoxCollision(center, collider.GetPosition(), radius, collider.GetAxes(), collider.halfExtents);
+				isColliding = CollisionUtil::SphereBoxCollision(transform.position, collider.GetPosition(), radius, collider.GetAxes(), collider.halfExtents);
 				break;
 			}
 			case ColliderType::Capsule:
 			{
 				std::cout << "SPHERE CAPSULE COLLISION DETECTION" << std::endl;
 				const CapsuleCollider& collider = static_cast<const CapsuleCollider&>(col);
-				isColliding = CollisionUtil::SphereCapsuleCollision(center, collider.GetPosition(), radius, collider.radii, collider.A, collider.B);
+				isColliding = CollisionUtil::SphereCapsuleCollision(transform.position, collider.GetPosition(), radius, collider.radii, collider.A, collider.B);
 				break;
 			}
 			case ColliderType::Mesh:
@@ -91,15 +90,14 @@ namespace mtrx
 		return isColliding;
 	}
 
-	// Raycast with spheres
 	bool SphereCollider::RaycastCollision(const Ray& ray)
 	{
-		return CollisionUtil::RaySphereCollision(center, radius, ray.startPosition, ray.direction);
+		return CollisionUtil::RaySphereCollision(transform.position, radius, ray.startPosition, ray.direction);
 	}
 
 	float SphereCollider::GetSize()
 	{
-		return 1.333333f * pi * radius * radius * radius;
+		return 1.333333f * PI * radius * radius * radius;
 	}
 
 	float SphereCollider::GetGrowth(const SphereCollider& sphereCollider)
