@@ -1,0 +1,7 @@
+Description:
+
+A collision demo that shows collision detection with box colliders and applying some force in accordance to said collision by creating a semi first person shooter like
+tech-demo with some randomly generated boxes with some bullets that when shot will generate a force that is applied to the rigidbody and can create some forces as well
+torques that are resolved by said rigidbodies.
+
+PS: space-bar to shoot a bullet and said bullet will shoot in accordance to the camera position (there is no reticle for that position unfortunately)

@@ -1,0 +1,8 @@
+Description: 
+A projectile demo used to show some simple types of projectiles that can be created 
+there are 4 types of projectiles you can create regular box projectile that shows it move in an arc with gravity, a loss mass bullet which is affected a little by gravity
+a fireball-like object that move a little slowly however does hover a little upwards as it loses steam and a laser that has an almost negligible mass and 
+is unaffected by gravity.All of which can be accessed using (1, 2, 3, 4) buttons respectively.
+
+
+PS: The same projectile is being recycled so creating a new projectile removes the older one
