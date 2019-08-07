@@ -5,7 +5,6 @@
 
 #pragma once
 
-#include <math/Simplex.h>
 #include <GJK.h>
 #include <utils/PhysicsUtil.h>
 
@@ -22,13 +21,13 @@ namespace mtrx
 		bool SphereBoxCollision(const glm::vec3& center1, const glm::vec3& center2, float radius, const glm::vec3* axes, const glm::vec3& halfExtents);
 		bool SphereCapsuleCollision(const glm::vec3& center1, const glm::vec3& center2, float radius1, float radius2, const glm::vec3& A, const glm::vec3& B);
 		bool SphereMeshCollision();
-		bool BoxBoxCollision(const mtrx::BoxCollider&, const mtrx::BoxCollider&);
+		bool BoxBoxCollision(mtrx::BoxCollider&, mtrx::BoxCollider&);
 		bool BoxCapsuleCollision(const glm::vec3& center1, const glm::vec3& center2, const glm::vec3& A, const glm::vec3& B, float radius, const glm::vec3* axes, const glm::vec3& halfExtents);
 		bool BoxMeshCollision();
 		bool CapsuleCapsuleCollision(const glm::vec3& A1, const glm::vec3& B1, const glm::vec3& A2, const glm::vec3& B2, float radius1, float radius2);
 		bool CapsuleMeshCollision();
 		bool MeshMeshCollision();
-		bool ConvexShapeCollision(const mtrx::ConvexShapeCollider&, const mtrx::ConvexShapeCollider&);		// Collision detection between convex shaped colliders
+		bool ConvexShapeCollision(mtrx::ConvexShapeCollider&, mtrx::ConvexShapeCollider&);		// Collision detection between convex shaped colliders
 		bool RaySphereCollision(const glm::vec3& sphereCenter, float sphereRadius, const glm::vec3& startPointRay, const glm::vec3& rayDirection);
 		bool RayBoxCollision(const glm::vec3& rayStartPosition, const glm::vec3& rayDirection, const glm::vec3& boxCenter, const glm::vec3* axes, const glm::vec3& halfExtents);
 		bool RayCapsuleCollision(const glm::vec3& startPositionRay, const glm::vec3& direction, const glm::vec3& A, const glm::vec3& B, float capsRadius);

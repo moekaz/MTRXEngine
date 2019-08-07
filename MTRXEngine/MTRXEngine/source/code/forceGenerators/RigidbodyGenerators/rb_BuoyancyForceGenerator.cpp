@@ -18,7 +18,7 @@ namespace mtrx
 
 		// Apply some buoyancy force
 		glm::vec3 force = glm::vec3(0.f, liquidDensity * gravity, 0.f);
-		glm::vec3 dimensions = rb->GetTransform()->scale;
+		glm::vec3 dimensions = rb->GetTransform().GetScale();
 		float volumeDisplaced = 1.f;
 		centerOfBuoyancy = rb->GetPosition();
 		if (currentDepth + maxParticleDepth <= liquidLevel)

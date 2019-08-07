@@ -18,14 +18,9 @@ namespace mtrx
 		~Rigidbody();
 		
 		// Setters
+		void SetInverseInertiaTensor(const glm::mat3& inertiaTensor);
 		inline void SetAngularDamping(float angularDamping) { this->angularDamping = angularDamping; }
-		inline void SetInverseInertiaTensor(const glm::mat3& inertiaTensor)
-		{
-			inverseInertiaTensor[0][0] = 1.f / inertiaTensor[0][0];
-			inverseInertiaTensor[1][1] = 1.f / inertiaTensor[1][1];
-			inverseInertiaTensor[2][2] = 1.f / inertiaTensor[2][2];
-		}
-		inline void SetOrientation(glm::quat& orientation) { transform.orientation = orientation; }
+		inline void SetOrientation(glm::quat& orientation) { transform.SetOrientation(orientation); }
 		inline void SetRotation(glm::vec3& rotation) { this->rotation = rotation; }
 		inline void SetIsKinematic(bool kinematic) { this->isKinematic = kinematic; }
 
@@ -40,7 +35,8 @@ namespace mtrx
 		inline glm::mat3 CalculateIITWorld() { return objToWorldMat * inverseInertiaTensor; }
 		
 		// Clear accumulators
-		inline void ClearAccumulators();
+		void ClearAccumulators() override;
+
 		// Add Torque force
 		inline void AddTorque(const glm::vec3& torque) { accumTorque += torque; }
 
@@ -66,11 +62,8 @@ namespace mtrx
 		glm::vec3 accumTorque; // Accumulated torque
 		float angularDamping; // Between 0-1
 		bool isKinematic;
-		glm::vec3 prevAcceleration;
 
 		// Space vectors 
-		glm::vec3 forward;
-		glm::vec3 side;
-		glm::vec3 up;
+		ObjectAxes axes;
 	};
 }

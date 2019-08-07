@@ -9,6 +9,7 @@ namespace mtrx
 {	
 	#define LOGGER_FILE_SIZE 5242880 // Maximum size of logger file 
 	#define PI 3.14159265358f // Approximation of pi
+	#define WORLD_DIMENSIONS 3 // World dimensions
 
 	static float gravity = 9.81f; // Constant value for gravity (not realistic value but games don't have realistic gravity
 	static std::string projectDir = std::filesystem::current_path().string(); // Gives us the project dir
@@ -42,24 +43,43 @@ namespace mtrx
 		{}
 	};
 
-	// Transform struct that holds position orientation and scale
-	struct Transform
+	// The axes that define an objects world 
+	struct ObjectAxes
 	{
-		glm::vec3 position;
-		glm::quat orientation;
-		glm::vec3 scale;
+		union
+		{
+			struct
+			{
+				glm::vec3 forward;
+				glm::vec3 up;
+				glm::vec3 side;
+			};
 
-		Transform(const glm::vec3& position = glm::vec3(), const glm::quat& quaternion = glm::angleAxis(0.f, worldUp), const glm::vec3& scale = glm::vec3(1, 1, 1)) : 
-			position(position), orientation(quaternion), scale(scale)
+			glm::vec3 axes[WORLD_DIMENSIONS];
+		};
+
+
+		inline glm::vec3& operator[](int index) { return axes[index]; }
+		ObjectAxes(const glm::vec3& forward = glm::vec3(0, 0, -1), const glm::vec3& up = glm::vec3(0, 1, 0), const glm::vec3& side = glm::vec3(1, 0, 0)) : 
+			forward(forward), side(side), up(up)
 		{}
+	};
+	
+	// Simplest shape that can encapsulate a point in 3d space
+	struct Simplex
+	{
+		glm::vec3* b;
+		glm::vec3* c;
+		glm::vec3* d;
+		unsigned char size;
 	};
 
 	static glm::mat3 GenerateCuboidIT(float mass, float* extents)
 	{
 		// 1/12 = 0.083333... 
-		return glm::mat3(glm::vec3(0.0833333333f * mass * (extents[1] * extents[1] + extents[2] * extents[2])),
-			glm::vec3(0.0833333333f * mass * (extents[0] * extents[0] + extents[2] * extents[2])),
-			glm::vec3(0.0833333333f * mass * (extents[0] * extents[0] + extents[1] * extents[1])));
+		return glm::mat3(0.0833333333f * mass * (extents[1] * extents[1] + extents[2] * extents[2]), 0, 0,
+			0, 0.0833333333f * mass * (extents[0] * extents[0] + extents[2] * extents[2]), 0,
+			0, 0, 0.0833333333f * mass * (extents[0] * extents[0] + extents[1] * extents[1]));
 	}
 
 	// More inertia tensors TBA 

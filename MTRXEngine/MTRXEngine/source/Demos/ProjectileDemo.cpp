@@ -18,16 +18,19 @@ void ProjectileDemo::Update()
 	};
 	transformsToRender.insert(&center);
 	
-	Demo::Update();
+	while (!application.window.ShouldClose())
+	{
+		Demo::Update();
+	}
 }
 
 void ProjectileDemo::InputCheck()
 {
-	if (mtrx::InputSystem::GetKeyDown(GLFW_KEY_SPACE))
+	if (application.inputSystem->GetKeyDown(GLFW_KEY_SPACE))
 	{
 		// Removing the rigidbody also removes the force generators that are linked with this force generator
 		rbManager.RemoveRigidbody(&projectile);
-		transformsToRender.erase(projectile.GetTransform());
+		transformsToRender.erase(&projectile.GetTransform());
 
 		// Setup projectile
 		switch (projectileType)
@@ -75,25 +78,25 @@ void ProjectileDemo::InputCheck()
 		
 		// Add the created rigidbody to all the managers that we need to use
 		rbManager.AddRigidbody(&projectile);
-		transformsToRender.insert(projectile.GetTransform());
+		transformsToRender.insert(&projectile.GetTransform());
 	}
 
-	if (mtrx::InputSystem::GetKeyDown(GLFW_KEY_1))
+	if (application.inputSystem->GetKeyDown(GLFW_KEY_1))
 	{
 		projectileType = 1;
 	}
 
-	if (mtrx::InputSystem::GetKeyDown(GLFW_KEY_2))
+	if (application.inputSystem->GetKeyDown(GLFW_KEY_2))
 	{
 		projectileType = 2;
 	}	
 	
-	if (mtrx::InputSystem::GetKeyDown(GLFW_KEY_3))
+	if (application.inputSystem->GetKeyDown(GLFW_KEY_3))
 	{
 		projectileType = 3;
 	}
 
-	if (mtrx::InputSystem::GetKeyDown(GLFW_KEY_4))
+	if (application.inputSystem->GetKeyDown(GLFW_KEY_4))
 	{
 		projectileType = 4;
 	}

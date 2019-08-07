@@ -8,39 +8,46 @@
 
 namespace mtrx
 {
-	ConvexShapeCollider::ConvexShapeCollider(const ColliderType& colliderType, const glm::vec3& center) : Collider(colliderType, center, true) 
+	ConvexShapeCollider::ConvexShapeCollider(const ColliderType& colliderType, const glm::vec3& center, const glm::quat& orientation, const glm::vec3& scale) : 
+		Collider(colliderType, center, orientation, scale, true), transformModified(true)
 	{}
 
-	ConvexShapeCollider::~ConvexShapeCollider() 
+	ConvexShapeCollider::ConvexShapeCollider(const ColliderType& colliderType, const Transform& transform) : 
+		Collider(colliderType, transform, true), transformModified(true)
+	{}
+
+	ConvexShapeCollider::~ConvexShapeCollider()
 	{
 		for (int i = 0; i < vertices.size(); ++i)
 		{
 			delete vertices[i];
+			delete transformedVertices[i];
 		}
 	}
 
 	// Used for GJK collision
-	glm::vec3 ConvexShapeCollider::Support(const ConvexShapeCollider& convexCollider, const glm::vec3& direction) const
+	glm::vec3 ConvexShapeCollider::Support(ConvexShapeCollider& convexCollider, const glm::vec3& direction)
 	{
-		glm::vec3& p1 = FarthestPointInDirection(direction);
-		glm::vec3& p2 = convexCollider.FarthestPointInDirection(-direction);
+		const glm::vec3& p1 = FarthestPointInDirection(direction);
+		const glm::vec3& p2 = convexCollider.FarthestPointInDirection(-direction);
 		glm::vec3 p3 = p1 - p2;
 		return p3;
 	}
 
 	// Return farthest point with respect to a certain direction
-	glm::vec3& ConvexShapeCollider::FarthestPointInDirection(const glm::vec3& direction) const
+	glm::vec3& ConvexShapeCollider::FarthestPointInDirection(const glm::vec3& direction)
 	{
 		float maxDot = -std::numeric_limits<float>::infinity();	// Max dot vector
 		glm::vec3* farthest = nullptr;	// Farthest vector
 
-		for (unsigned int i = 0; i < vertices.size(); ++i)
+		std::vector<glm::vec3*>* verts = GetVertices();
+		for (unsigned int i = 0; i < (*verts).size(); ++i)
 		{
-			float dot = glm::dot(*vertices[i], direction);
+			float dot = glm::dot(*(*verts)[i], direction);
 			if (dot > maxDot)
 			{
 				maxDot = dot;
-				farthest = vertices[i];
+				farthest = (*verts)[i];
 			}
 		}
 
@@ -49,20 +56,13 @@ namespace mtrx
 		return *farthest;
 	}
 
-	std::vector<glm::vec3*> ConvexShapeCollider::GetVertices()
-	{
-		// TODO: implement this
-		// Get the vertices of the convex shape with change in position and orientation
-		std::vector<glm::vec3*> vertex;
-		return vertex;
-	}
-
 	// Convex shape collision detection
 	bool ConvexShapeCollider::CheckCollision(const Collider& col)
 	{
+		// TBD: Collision detection architecture is ugly and needs to be redone
 		if (col.IsConvex())
 		{
-			const ConvexShapeCollider& collider = static_cast<const ConvexShapeCollider&>(col);
+			ConvexShapeCollider& collider = static_cast<ConvexShapeCollider&>(const_cast<Collider&>(col));
 			return CollisionUtil::ConvexShapeCollision(*this, collider);	// Collision
 		}
 		else 
@@ -72,7 +72,7 @@ namespace mtrx
 	bool ConvexShapeCollider::RaycastCollision(const Ray& ray)
 	{
 		// A ray is a convex shape if we use it as a line
-		glm::vec3 rayEndPoint = glm::normalize(ray.direction) * MAX_RAY_SIZE;	// Get the end point of the ray
+		glm::vec3 rayEndPoint = glm::fastNormalize(ray.direction) * MAX_RAY_SIZE;	// Get the end point of the ray
 		ConvexShapeCollider convexLine = ConvexShapeCollider(ColliderType::ConvexShape, rayEndPoint - ray.startPosition);	// Setup the convex shape
 		glm::vec3 start = ray.startPosition;
 
@@ -81,5 +81,35 @@ namespace mtrx
 		//convexLine.vertices.emplace_back(&rayEndPoint);
 
 		return CollisionUtil::ConvexShapeCollision(*this, convexLine);	// Check with GJK 
+	}
+
+	glm::mat4 ConvexShapeCollider::GetModelMatrix()
+	{
+		glm::mat4 translateMatrix = glm::translate(glm::mat4(1.0f), GetPosition());
+		glm::mat4 rotateMatrix = glm::toMat4(GetOrientation());
+		glm::mat4 scaleMatrix = glm::scale(glm::mat4(1.0f), GetScale());
+
+		// ISROT
+		return translateMatrix * rotateMatrix * scaleMatrix;
+	}
+
+	std::vector<glm::vec3*>* ConvexShapeCollider::GetVertices()
+	{
+		// If the collider was not modified no need to redo transform operation
+		if (!transformModified)
+			return &transformedVertices;
+
+		glm::mat4 modelMatrix = GetModelMatrix();
+		for (int i = 0; i < vertices.size(); ++i)
+		{
+			// TBD: WE CAN MAKE THIS A GLM::VEC4 ARRAY INSTEAD 
+			glm::vec4 vec = modelMatrix * glm::vec4(*vertices[i], 1.f);
+			transformedVertices[i]->x = vec.x;
+			transformedVertices[i]->y = vec.y;
+			transformedVertices[i]->z = vec.z;
+		}
+		transformModified = false;
+
+		return &transformedVertices;
 	}
 }

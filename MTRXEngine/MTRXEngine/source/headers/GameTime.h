@@ -18,6 +18,8 @@ namespace mtrx
 		static float GetStartTime();	// Get the start time
 		static float GetCurrentTime();	// Get the current time
 		static void Init();
+		static float GetTime();	// Get the current time
+
 
 	private:
 		static const float startTime;	// The starting time of the application
@@ -25,7 +27,6 @@ namespace mtrx
 		static float prevCurrentTime;	// The previous current time to calculate delta time
 
 		static void CalculateDeltaTime();	// Find delta time based on start and current time for the time spent on a frame
-		static float GetTime();	// Get the current time
 
 	protected:
 	};

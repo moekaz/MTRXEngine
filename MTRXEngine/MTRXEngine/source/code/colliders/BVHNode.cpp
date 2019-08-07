@@ -14,7 +14,7 @@ namespace mtrx
 	template<class BoundingVolume>
 	BVHNode<BoundingVolume>::~BVHNode()
 	{
-		// CREATE A KILL FUNCTION AS WE DO NOT WANT TO RECURSE!!
+		// TBD: CREATE A KILL FUNCTION AS WE DO NOT WANT TO RECURSE!!
 		if (parent)
 		{
 			BVHNode<BoundingVolume>* sibling;

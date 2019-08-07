@@ -5,7 +5,6 @@
 #define DEFAULT_FPS 60
 
 #include <log/LogManager.h>
-#include <Input/InputSystem.h>
 
 class Window
 {
@@ -21,20 +20,17 @@ public:
 	inline bool ShouldClose() { return glfwWindowShouldClose(window); }
 	
 	inline void Clear() { glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); }
-	inline void ToggleCursor(bool cursor) 
-	{
-		if(cursor)
-			glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
-		else
-			glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
-	}
 
-	void UpdateBuffers();
+	inline void UpdateBuffers()
+	{
+		glfwPollEvents();
+		glfwSwapBuffers(window);
+	}
 
 protected:
 	GLFWwindow* window;
 	int width;
 	int height;
-	float fps;
+	int fps;
 };
 

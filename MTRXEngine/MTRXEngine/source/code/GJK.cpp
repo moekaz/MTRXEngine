@@ -7,13 +7,13 @@
 #include <GJK.h>
 #include <colliders/ConvexShapeCollider.h>
 
-// WE CAN OPTIMIZE THIS SOME MORE MAYBE
 namespace mtrx
 {
-	// Gilbert-Johnson-Keerthi collision detection algorithm
-	bool GJK::GJKCollision(const ConvexShapeCollider& convexCollider1, const ConvexShapeCollider& convexCollider2)
+	Simplex GJK::simplex;
+
+	bool GJK::Collision(ConvexShapeCollider& convexCollider1, ConvexShapeCollider& convexCollider2)
 	{
-		Simplex simplex; // Simplex holds the points in minkowski space that we are attempting to check for
+		simplex.b = simplex.c = simplex.d = nullptr; // Reset simplex
 		glm::vec3 searchDirection = glm::vec3(-1, 0, 0); // Direction of the search within the convex shape
 
 		simplex.c = &convexCollider1.Support(convexCollider2, searchDirection); // Get the first point using the support function
@@ -21,7 +21,8 @@ namespace mtrx
 		simplex.b = &convexCollider1.Support(convexCollider2, searchDirection);	// Get the second point
 		
 		// if the farthest support point is not in the direction of the search direction then we cannot have a collision
-		if (glm::dot(*simplex.b, searchDirection) < 0) return false;
+		if (glm::dot(*simplex.b, searchDirection) < 0) 
+			return false;
 		
 		// Setup a new direction vector
 		glm::vec3 BC = *simplex.c - *simplex.b;
@@ -33,45 +34,38 @@ namespace mtrx
 		// Simplex GJK logic loop
 		for (int i = 0; i < MAX_NUM_ITERATIONS; ++i)
 		{
-			std::cout << "index" << i << std::endl;
-			glm::vec3 a = convexCollider1.Support(convexCollider2, searchDirection); // Get the next point
-			if (glm::dot(a, searchDirection) < 0) return false;	// We cannot have a collision
-			else if (UpdateSimplex(simplex, searchDirection, a)) return true; // Update the simplex and set a new direction vector
+			glm::vec3* a = &convexCollider1.Support(convexCollider2, searchDirection); // Get the next point
+			if (glm::dot(*a, searchDirection) < 0)	// We cannot have a collision
+				return false;
+			else if (UpdateSimplex(simplex, searchDirection, *a))	// Update the simplex and set a new direction vector
+				return true;
 		}
-
-		// WE HAVE A DEGENERATE SIMPLEX WE ARE PROBABLY COLLIDING BUT WITHIN A REALLY SMALL MARHIN OF ERROR SO WE ACCEPT THE COLLISION
-		// LOG HERE!!!
+		
+		// Degenerate simplex
+		MTRX_WARN("GJK algo has generated a degenerate simplex");
 		return true;
 	}
 
-	// Updates the simplex
 	bool GJK::UpdateSimplex(Simplex& simplex, glm::vec3& direction, glm::vec3& a)
 	{
-		bool collision = false;
-
 		switch (simplex.size) // The simplex will never have a size less than 2 or greater than 3 
 		{
 			case 2:	// Triangle
 			{
-				collision = TriangleSimplexUpdate(simplex, direction, a);
-				break;
+				return TriangleSimplexUpdate(simplex, direction, a);
 			}
 			case 3: // Tetrahedron
 			{
-				collision = TetrahedronSimplexUpdate(simplex, direction, a);
-				break;
+				return TetrahedronSimplexUpdate(simplex, direction, a);
 			}
 			default:	// Something went wrong
 			{
-				// Log error here or assert false
-				assert(0);
+				MTRX_ERROR("Simplex has wrong size");
+				return false;
 			}
 		}
-
-		return collision;
 	}
 
-	// Triangle simplex update
 	bool GJK::TriangleSimplexUpdate(Simplex& simplex, glm::vec3& direction, glm::vec3& a)
 	{
 		glm::vec3 AB = *simplex.b - a;
@@ -113,7 +107,6 @@ namespace mtrx
 		return false;
 	}
 
-	// Tetrahedron simplex update
 	bool GJK::TetrahedronSimplexUpdate(Simplex& simplex, glm::vec3& direction, glm::vec3& a)
 	{
 		glm::vec3 AO = -a;
@@ -159,7 +152,7 @@ namespace mtrx
 		return false;
 	}
 
-	bool GJK::TetrahedronChecks(Simplex& simplex, glm::vec3& AO, glm::vec3& AB, glm::vec3& AC, glm::vec3& ABC, glm::vec3& direction, glm::vec3& a)
+	void GJK::TetrahedronChecks(Simplex& simplex, glm::vec3& AO, glm::vec3& AB, glm::vec3& AC, glm::vec3& ABC, glm::vec3& direction, glm::vec3& a)
 	{
 		if (glm::dot(glm::cross(AB, ABC), AO) > 0) // Just like the triangle check use the cross product away from AB
 		{
@@ -186,7 +179,5 @@ namespace mtrx
 			simplex.size = 3;
 			direction = ABC;	// ABC is what is left
 		}
-
-		return false;
 	}
 }

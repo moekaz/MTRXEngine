@@ -47,7 +47,7 @@ namespace mtrx
 	// Gets what time it is right now
 	float GameTime::GetTime()
 	{
-		return glfwGetTime();
+		return (float)glfwGetTime();
 	}
 
 	// Calculate delta time

@@ -32,6 +32,7 @@
 #include <glm/common.hpp>
 #include <glm/glm.hpp>
 #include <glm/gtx/quaternion.hpp>
+#include <glm/gtx/fast_square_root.hpp>
 
 // GLAD
 #include <glad/glad.h>

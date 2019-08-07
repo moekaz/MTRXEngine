@@ -62,7 +62,7 @@ namespace mtrx
 		}
 
 		// Box Box collision 
-		bool BoxBoxCollision(const mtrx::BoxCollider& box1, const mtrx::BoxCollider& box2)
+		bool BoxBoxCollision(mtrx::BoxCollider& box1, mtrx::BoxCollider& box2)
 		{
 			return ConvexShapeCollision(box1, box2);
 		}
@@ -103,9 +103,9 @@ namespace mtrx
 		}
 
 		// Convex Shape convex shape collision detection 
-		bool ConvexShapeCollision(const mtrx::ConvexShapeCollider& convexCollider1, const mtrx::ConvexShapeCollider& convexCollider2)
+		bool ConvexShapeCollision(mtrx::ConvexShapeCollider& convexCollider1, mtrx::ConvexShapeCollider& convexCollider2)
 		{
-			return mtrx::GJK().GJKCollision(convexCollider1, convexCollider2);
+			return mtrx::GJK::Collision(convexCollider1, convexCollider2);
 		}
 
 		// Ray sphere collision detection

@@ -3,6 +3,7 @@
 
 #include <IUpdateable.h>
 #include <Defs.h>
+#include <math/Transform.h>
 
 namespace mtrx
 {
@@ -23,22 +24,22 @@ namespace mtrx
 
 		// Setters 
 		inline void SetInverseMass(const float inverseMass) { this->inverseMass = inverseMass; }
-		inline void SetPosition(const glm::vec3& position) { this->transform.position = position; }
+		inline void SetPosition(const glm::vec3& position) { transform.SetPosition(position); }
 		inline void SetVelocity(const glm::vec3& velocity) { this->velocity = velocity; }
 		inline void SetAcceleration(const glm::vec3& acceleration) { this->acceleration = acceleration; }
 		inline void SetLinearDamping(const float damping) { this->linearDamping = damping; }
 		void SetMass(const float mass);
 
 		// Getters
-		inline glm::quat& GetOrientation() { return transform.orientation; }
+		inline glm::quat& GetOrientation() { return transform.GetOrientation(); }
 		inline bool GetIsInfiniteMass() { return inverseMass == 0.f; }
 		inline float GetInverseMass() const { return inverseMass; }
 		inline float GetDamping() const { return linearDamping; }
-		inline glm::vec3& GetPosition() { return transform.position; }
+		inline glm::vec3& GetPosition() { return transform.GetPosition(); }
 		inline glm::vec3& GetVelocity() { return velocity; }
 		inline glm::vec3& GetAcceleration() { return acceleration; }
 		inline glm::vec3& GetAccumForces() { return accumForces; }
-		inline Transform* GetTransform() { return &transform; }
+		inline Transform& GetTransform() { return transform; }
 		float GetMass() const;
 
 	protected:

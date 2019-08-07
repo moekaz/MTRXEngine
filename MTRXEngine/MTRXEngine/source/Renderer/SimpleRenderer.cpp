@@ -105,9 +105,9 @@ void SimpleRenderer::BindCube()
 
 glm::mat4 SimpleRenderer::ConstructModelMatrix(const mtrx::Transform& transform)
 {
-	glm::mat4 translateMatrix = glm::translate(glm::mat4(1.0f), transform.position);
-	glm::mat4 rotateMatrix = glm::toMat4(transform.orientation);
-	glm::mat4 scaleMatrix = glm::scale(glm::mat4(1.0f), transform.scale);
+	glm::mat4 translateMatrix = glm::translate(glm::mat4(1.0f), transform.GetPosition());
+	glm::mat4 rotateMatrix = glm::toMat4(transform.GetOrientation());
+	glm::mat4 scaleMatrix = glm::scale(glm::mat4(1.0f), transform.GetScale());
 
 	// ISROT
 	glm::mat4 result = translateMatrix * rotateMatrix * scaleMatrix;

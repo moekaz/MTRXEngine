@@ -28,22 +28,10 @@ Window::Window(const char* windowName, int width, int height, int fps) : width(w
 		glfwTerminate();
 		assert(false);
 	}
-
-	// Get cursor position
-	glfwGetCursorPos(window, &mtrx::InputSystem::mouseX, &mtrx::InputSystem::mouseY);
-
-	// Get rid of the cursor
-	ToggleCursor(false);
 }
 
 Window::~Window()
 {
 	// Terminate window
 	glfwDestroyWindow(window);
-}
-
-void Window::UpdateBuffers()
-{
-	glfwPollEvents();
-	glfwSwapBuffers(window);
 }

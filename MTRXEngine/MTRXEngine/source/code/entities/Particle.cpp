@@ -25,7 +25,7 @@ namespace mtrx
 
 		// Update the position of the particle using its velocity and acceleration (acceleration is not necessary)
 		//position += velocity * GameTime::deltaTime + acceleration * GameTime::deltaTime * GameTime::deltaTime * 0.5f;
-		transform.position += velocity * GameTime::deltaTime;
+		transform.Translate(velocity * GameTime::deltaTime);
 		
 		// Clear the accumulators
 		ClearAccumulators();

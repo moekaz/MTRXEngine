@@ -8,9 +8,6 @@
 
 namespace mtrx
 {
-	// // Forward declarations
-	//class Rigidbody;
-
 	class IRigidbodyForceGenerator
 	{
 	public:

@@ -13,8 +13,10 @@ namespace mtrx
 	{
 		// Update the values of the rigidbodies
 		UpdateRigidbodies();
+
 		// Update the forces of the rigidbodies
 		UpdateForces();
+		
 		// Check for collisions
 		GenerateCollisions();
 	}
