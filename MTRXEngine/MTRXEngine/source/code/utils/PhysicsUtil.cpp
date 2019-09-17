@@ -134,21 +134,18 @@ namespace mtrx
 			if (dot < 0.0f)
 			{
 				closest = A;
-				//std::cout << "Clamped to A" << std::endl;
 				// Clamp to A being the closest point
 				return glm::dot(AC, AC);
 			}
 			else if (glm::dot(BC, AB) > 0.0f)
 			{
 				closest = B;
-				//std::cout << "Clamped to B" << std::endl;
 				// Clamp B to being the closest point
 				return glm::dot(BC, BC);
 			}
 			else
 			{
-				closest = glm::normalize(AB) * dot;
-				//std::cout << "Between A and B" << std::endl;
+				closest = glm::fastNormalize(AB) * dot;
 				// Its a point between them so use pythagoras to find it
 				return glm::dot(AC, AC) - (dot * dot);
 			}
@@ -197,7 +194,7 @@ namespace mtrx
 			float minDistance = minimumDistances[0];
 
 			// Find the minimum of the 3 and that should be the least distance
-			for (int i = 1; i < 3; i++)
+			for (int i = 1; i < 3; ++i)
 			{
 				if (minimumDistances[i] < minDistance)
 					minDistance = minimumDistances[i];
@@ -206,6 +203,7 @@ namespace mtrx
 			return minDistance;
 		}
 
+		// TBD: This shouldn't be here
 		// Do a raycast without checking for filtered colliders
 		Collider* RaycastUnfiltered(const std::map<int, Collider*>& colliders, const glm::vec3& rayStartPosition, const glm::vec3& rayDirection)
 		{
@@ -221,6 +219,7 @@ namespace mtrx
 			return NULL;
 		}
 
+		// TBD: This shouldn't be here
 		// Do a raycast with some filtering of certain user defined filtered colliders
 		Collider* RaycastFiltered(const std::map<int, Collider*>& colliders, const std::vector<Collider*>& filterColliders, const glm::vec3& rayStartPosition, const glm::vec3& rayDirection)
 		{

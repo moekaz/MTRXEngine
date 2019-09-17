@@ -3,7 +3,7 @@
 
 CollisionDemo::CollisionDemo() : Demo("COLLISION DEMO")
 {
-	srand(time(0)); // Seed for random
+	srand((unsigned int)time(0)); // Seed for random
 
 	// Create game obstacles  
 	int numObstacles = 20;
@@ -13,9 +13,9 @@ CollisionDemo::CollisionDemo() : Demo("COLLISION DEMO")
 		float mass = 2.f;
 		glm::quat orientation1 = glm::angleAxis(0.f, mtrx::worldUp);
 		
-		float x = rand() % 50;
-		float y = rand() % 50;
-		float z = rand() % 50;
+		float x = (float) (rand() % 50);
+		float y = (float) (rand() % 50);
+		float z = (float) (rand() % 50);
 
 		mtrx::Rigidbody* body = new mtrx::Rigidbody(mass, false, glm::vec3(x, y, z), orientation1, glm::vec3(extents[0], extents[1], extents[2]), mtrx::GenerateCuboidIT(mass, extents));
 		mtrx::Collider* collider = new mtrx::BoxCollider(body->GetPosition());
@@ -103,8 +103,6 @@ void CollisionDemo::InputCheck()
 	if (application.inputSystem->GetKeyDown(GLFW_KEY_SPACE))
 	{
 		Shoot();
-		//body1.AddForce(glm::vec3(-10, 0, 0));
-		//body2.AddForce(glm::vec3(10, 0, 0));
 	}
 }
 

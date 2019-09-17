@@ -20,7 +20,6 @@ namespace mtrx
 		{
 			glm::vec3 diff = center1 - center2;
 			float sumRadii = radius1 + radius2;
-			std::cout << glm::dot(diff, diff) << " " << sumRadii * sumRadii << std::endl;
 			return glm::dot(diff, diff) <= sumRadii * sumRadii;
 		}
 
@@ -62,7 +61,7 @@ namespace mtrx
 		}
 
 		// Box Box collision 
-		bool BoxBoxCollision(mtrx::BoxCollider& box1, mtrx::BoxCollider& box2)
+		bool BoxBoxCollision(const mtrx::BoxCollider& box1, const mtrx::BoxCollider& box2)
 		{
 			return ConvexShapeCollision(box1, box2);
 		}
@@ -103,7 +102,7 @@ namespace mtrx
 		}
 
 		// Convex Shape convex shape collision detection 
-		bool ConvexShapeCollision(mtrx::ConvexShapeCollider& convexCollider1, mtrx::ConvexShapeCollider& convexCollider2)
+		bool ConvexShapeCollision(const mtrx::ConvexShapeCollider& convexCollider1, const mtrx::ConvexShapeCollider& convexCollider2)
 		{
 			return mtrx::GJK::Collision(convexCollider1, convexCollider2);
 		}

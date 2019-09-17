@@ -64,7 +64,7 @@ namespace mtrx
 			case ColliderType::Box:
 			{
 				//std::cout << "Box Box collision detection" << std::endl;
-				BoxCollider& collider = static_cast<BoxCollider&>(const_cast<Collider&>(col));
+				const BoxCollider& collider = static_cast<const BoxCollider&>(col);
 				collision = CollisionUtil::BoxBoxCollision(*this, collider);
 				break;
 			}

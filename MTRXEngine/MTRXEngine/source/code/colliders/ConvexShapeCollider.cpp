@@ -26,7 +26,7 @@ namespace mtrx
 	}
 
 	// Used for GJK collision
-	glm::vec3 ConvexShapeCollider::Support(ConvexShapeCollider& convexCollider, const glm::vec3& direction)
+	glm::vec3 ConvexShapeCollider::Support(const ConvexShapeCollider& convexCollider, const glm::vec3& direction) const 
 	{
 		const glm::vec3& p1 = FarthestPointInDirection(direction);
 		const glm::vec3& p2 = convexCollider.FarthestPointInDirection(-direction);
@@ -35,7 +35,7 @@ namespace mtrx
 	}
 
 	// Return farthest point with respect to a certain direction
-	glm::vec3& ConvexShapeCollider::FarthestPointInDirection(const glm::vec3& direction)
+	glm::vec3& ConvexShapeCollider::FarthestPointInDirection(const glm::vec3& direction) const
 	{
 		float maxDot = -std::numeric_limits<float>::infinity();	// Max dot vector
 		glm::vec3* farthest = nullptr;	// Farthest vector
@@ -83,7 +83,7 @@ namespace mtrx
 		return CollisionUtil::ConvexShapeCollision(*this, convexLine);	// Check with GJK 
 	}
 
-	glm::mat4 ConvexShapeCollider::GetModelMatrix()
+	glm::mat4 ConvexShapeCollider::GetModelMatrix() const
 	{
 		glm::mat4 translateMatrix = glm::translate(glm::mat4(1.0f), GetPosition());
 		glm::mat4 rotateMatrix = glm::toMat4(GetOrientation());
@@ -93,7 +93,7 @@ namespace mtrx
 		return translateMatrix * rotateMatrix * scaleMatrix;
 	}
 
-	std::vector<glm::vec3*>* ConvexShapeCollider::GetVertices()
+	std::vector<glm::vec3*>* ConvexShapeCollider::GetVertices() const
 	{
 		// If the collider was not modified no need to redo transform operation
 		if (!transformModified)

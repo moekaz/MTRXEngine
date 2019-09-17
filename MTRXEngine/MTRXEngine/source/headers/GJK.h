@@ -25,7 +25,7 @@ namespace mtrx
 	{
 	public:
 		// Gilbert-Johnson-Keerthi collision detection algorithm
-		static bool Collision(ConvexShapeCollider&, ConvexShapeCollider&);
+		static bool Collision(const ConvexShapeCollider&, const ConvexShapeCollider&);
 
 	private:
 		// Update the values of the simplex after adding points from support

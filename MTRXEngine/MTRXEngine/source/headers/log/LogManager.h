@@ -44,7 +44,7 @@ namespace mtrx
 
 		LogManager();
 
-		// We do not want to the logger to be modifiable
+		// We do not want the logger to be modifiable
 		LogManager(const LogManager&) = delete; 
 		void operator=(const LogManager&) = delete;
 	};

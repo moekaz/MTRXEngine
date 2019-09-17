@@ -11,7 +11,7 @@ namespace mtrx
 {
 	Simplex GJK::simplex;
 
-	bool GJK::Collision(ConvexShapeCollider& convexCollider1, ConvexShapeCollider& convexCollider2)
+	bool GJK::Collision(const ConvexShapeCollider& convexCollider1, const ConvexShapeCollider& convexCollider2)
 	{
 		simplex.b = simplex.c = simplex.d = nullptr; // Reset simplex
 		glm::vec3 searchDirection = glm::vec3(-1, 0, 0); // Direction of the search within the convex shape
