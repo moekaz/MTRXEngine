@@ -43,7 +43,7 @@ namespace mtrx
 	{
 		for (auto iter = particles.begin(); iter != particles.end(); ++iter)
 		{
-			iter->PhysicsUpdate();
+			//iter->PhysicsUpdate();
 		}
 	}
 

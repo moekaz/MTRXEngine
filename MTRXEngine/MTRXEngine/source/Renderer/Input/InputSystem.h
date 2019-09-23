@@ -21,6 +21,7 @@ public:
 	inline const glm::vec2& GetMousePosition() { return mousePosition; }
 	inline const glm::vec2& GetMouseOffset() { return mouseOffset; }
 	inline const glm::vec2& GetMouseScrollOffset() { return mouseScrollOffset; }
+	inline const bool isCursorEnabled() { return cursor; }
 
 	inline bool GetKey(char keyCode)
 	{
@@ -38,8 +39,20 @@ public:
 		return keys[keyCode] == GLFW_PRESS;
 	}
 
-	inline void ToggleCursor(bool cursor)
+	inline void ToggleCursor()
 	{
+		cursor = !cursor;
+
+		if (cursor)
+			glfwSetInputMode(window->GetWindow(), GLFW_CURSOR, GLFW_CURSOR_NORMAL);
+		else
+			glfwSetInputMode(window->GetWindow(), GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+	}
+
+	inline void SetCursor(bool cursor)
+	{
+		this->cursor = cursor;
+
 		if (cursor)
 			glfwSetInputMode(window->GetWindow(), GLFW_CURSOR, GLFW_CURSOR_NORMAL);
 		else
@@ -54,6 +67,7 @@ private:
 	glm::vec2 mousePosition;
 	glm::vec2 mouseOffset;
 	glm::vec2 mouseScrollOffset;
+	bool cursor;
 
 	InputSystem(Window* window);
 	~InputSystem();

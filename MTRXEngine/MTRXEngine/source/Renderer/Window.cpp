@@ -1,5 +1,6 @@
 #include "PrecompiledHeader.h"
 #include "Window.h"
+#include <UILayer.h>
 
 Window::Window(const char* windowName, int width, int height, int fps) : width(width), height(height), fps(fps)
 {
@@ -28,10 +29,17 @@ Window::Window(const char* windowName, int width, int height, int fps) : width(w
 		glfwTerminate();
 		assert(false);
 	}
+
+	// Initialize UILayer of the window
+	UILayer::Init(this);
+	
+	glfwSwapInterval(1);
 }
 
 Window::~Window()
 {
+	UILayer::Shutdown();
+
 	// Terminate window
 	glfwDestroyWindow(window);
 }

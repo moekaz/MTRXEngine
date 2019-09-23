@@ -8,20 +8,23 @@ InputSystem::InputSystem(Window* window) :
 	memset(keys, 0, sizeof(char) * MAX_KEYS);
 	memset(mouseButtons, 0, sizeof(char) * MAX_MOUSE_BUTTONS);
 
+	// Setup imgui callbacks
+	GLFWwindow* glfwWindow = window->GetWindow();
+	
 	// Setup key callback
-	glfwSetKeyCallback(window->GetWindow(), KeyPressedCallback);
+	glfwSetKeyCallback(glfwWindow, KeyPressedCallback);
 
 	// Cursor position callback
-	glfwSetCursorPosCallback(window->GetWindow(), CursorPositionCallback);
+	glfwSetCursorPosCallback(glfwWindow, CursorPositionCallback);
 
 	// Mouse button callback
-	glfwSetMouseButtonCallback(window->GetWindow(), MouseButtonPressedCallback);
+	glfwSetMouseButtonCallback(glfwWindow, MouseButtonPressedCallback);
 
 	// Scroll callback
-	glfwSetScrollCallback(window->GetWindow(), ScrollCallback);
+	glfwSetScrollCallback(glfwWindow, ScrollCallback);
 
 	// Cursor enter callback
-	glfwSetCursorEnterCallback(window->GetWindow(), CursorEnterCallback);
+	glfwSetCursorEnterCallback(glfwWindow, CursorEnterCallback);
 
 	// Get cursor position
 	double x, y;
@@ -29,8 +32,8 @@ InputSystem::InputSystem(Window* window) :
 	mousePosition.x = (float)x;
 	mousePosition.y = (float)y;
 
-	// Get rid of the cursor
-	ToggleCursor(false);
+	// Disable the cursor
+	SetCursor(false);
 
 	// Reserve space for the vector so that it doesn't try to resize 
 	keysPressed.reserve(MAX_KEYS);
@@ -61,6 +64,8 @@ void InputSystem::KeyPressedCallback(GLFWwindow* window, int key, int scancode, 
 		input->keysPressed.push_back(key);
 	
 	input->keys[key] = action;
+
+	ImGui_ImplGlfw_KeyCallback(window, key, scancode, action, mods);
 }
 
 void InputSystem::CursorPositionCallback(GLFWwindow* window, double xpos, double ypos)
@@ -90,22 +95,20 @@ void InputSystem::MouseButtonPressedCallback(GLFWwindow* window, int button, int
 		}
 	}
 	else
-	{
-		// Mouse button was released
-	}
+	{}
+
+	ImGui_ImplGlfw_MouseButtonCallback(window, button, action, mods);
 }
 
 void InputSystem::ScrollCallback(GLFWwindow* window, double xOffset, double yOffset)
-{}
+{
+	ImGui_ImplGlfw_ScrollCallback(window, xOffset, yOffset);
+}
 
 void InputSystem::CursorEnterCallback(GLFWwindow* window, int entered)
 {
 	if (entered == 1)
-	{
-		// Cursor entered window area
-	}
+	{}
 	else
-	{
-		// Cursor left the window area
-	}
+	{}
 }

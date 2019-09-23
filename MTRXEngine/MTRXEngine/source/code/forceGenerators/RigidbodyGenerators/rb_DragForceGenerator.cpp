@@ -9,7 +9,7 @@ namespace mtrx
 	rb_DragForceGenerator::~rb_DragForceGenerator()
 	{}
 
-	void rb_DragForceGenerator::UpdateForces(Rigidbody* rb)
+	void rb_DragForceGenerator::UpdateForces(Rigidbody* rb, float deltaTime)
 	{
 		// REDO DIS
 

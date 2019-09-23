@@ -2,6 +2,7 @@
 
 #include <RigidbodyManager.h>
 #include <ParticleManager.h>
+#include <colliders/CollisionSystem.h>
 
 namespace mtrx
 {
@@ -15,6 +16,7 @@ namespace mtrx
 
 	private:
 		RigidbodyManager m_rbManager;
-		ParticleManager m_pManager;
+		CollisionSystem m_CollisionSystem;
+
 	};
 }

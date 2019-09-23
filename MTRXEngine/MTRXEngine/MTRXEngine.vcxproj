@@ -89,7 +89,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)/source/headers;$(ProjectDir)/source/Libraries/glm;$(ProjectDir)/source/Libraries/spdlog/include/;$(ProjectDir)/source/Libraries/glfw/include/;$(ProjectDir)/source/Libraries/glad/include/;$(ProjectDir)/source/renderer</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)/source/headers;$(ProjectDir)/source/Libraries/glm;$(ProjectDir)/source/Libraries/spdlog/include/;$(ProjectDir)/source/Libraries/glfw/include/;$(ProjectDir)/source/Libraries/glad/include/;$(ProjectDir)/source/renderer;$(ProjectDir)/source/Libraries/imgui</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>PrecompiledHeader.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp17</LanguageStandard>
@@ -105,7 +105,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)/source/headers;$(ProjectDir)/source/Libraries/glm;$(ProjectDir)/source/Libraries/spdlog/include/;$(ProjectDir)/source/Libraries/glfw/include/;$(ProjectDir)/source/Libraries/glad/include/;$(ProjectDir)/source/renderer</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)/source/headers;$(ProjectDir)/source/Libraries/glm;$(ProjectDir)/source/Libraries/spdlog/include/;$(ProjectDir)/source/Libraries/glfw/include/;$(ProjectDir)/source/Libraries/glad/include/;$(ProjectDir)/source/renderer;$(ProjectDir)/source/Libraries/imgui</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>PrecompiledHeader.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp17</LanguageStandard>
@@ -125,7 +125,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>PrecompiledHeader.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir)/source/headers;$(ProjectDir)/source/Libraries/glm;$(ProjectDir)/source/Libraries/spdlog/include/;$(ProjectDir)/source/Libraries/glfw/include/;$(ProjectDir)/source/Libraries/glad/include/;$(ProjectDir)/source/renderer</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)/source/headers;$(ProjectDir)/source/Libraries/glm;$(ProjectDir)/source/Libraries/spdlog/include/;$(ProjectDir)/source/Libraries/glfw/include/;$(ProjectDir)/source/Libraries/glad/include/;$(ProjectDir)/source/renderer;$(ProjectDir)/source/Libraries/imgui</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
@@ -146,7 +146,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>PrecompiledHeader.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir)/source/headers;$(ProjectDir)/source/Libraries/glm;$(ProjectDir)/source/Libraries/spdlog/include/;$(ProjectDir)/source/Libraries/glfw/include/;$(ProjectDir)/source/Libraries/glad/include/;$(ProjectDir)/source/renderer</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)/source/headers;$(ProjectDir)/source/Libraries/glm;$(ProjectDir)/source/Libraries/spdlog/include/;$(ProjectDir)/source/Libraries/glfw/include/;$(ProjectDir)/source/Libraries/glad/include/;$(ProjectDir)/source/renderer;$(ProjectDir)/source/Libraries/imgui</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
@@ -158,13 +158,51 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\Renderer\ProjectileDemoUI.cpp" />
     <ClCompile Include="source\code\mtrxDynamicWorld.cpp" />
     <ClCompile Include="source\Libraries\glad\src\glad.c">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="source\Libraries\imgui\imgui.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\Libraries\imgui\imgui_demo.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\Libraries\imgui\imgui_draw.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\Libraries\imgui\imgui_impl_glfw.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\Libraries\imgui\imgui_impl_opengl3.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\Libraries\imgui\imgui_widgets.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="source\Renderer\Application.cpp" />
+    <ClCompile Include="source\Renderer\UILayer.cpp" />
     <ClCompile Include="source\Renderer\Input\InputSystem.cpp" />
     <ClCompile Include="source\Demos\Demo.cpp" />
     <ClCompile Include="source\code\colliders\BVHNode.cpp" />
@@ -228,8 +266,10 @@
     <ClCompile Include="source\Renderer\Shader.cpp" />
     <ClCompile Include="source\Renderer\SimpleRenderer.cpp" />
     <ClCompile Include="source\Renderer\Window.cpp" />
+    <ClCompile Include="source\Renderer\UIPanel.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="source\Renderer\ProjectileDemoUI.h" />
     <ClInclude Include="source\headers\mtrxDynamicWorld.h" />
     <ClInclude Include="source\Libraries\glad\include\glad\glad.h" />
     <ClInclude Include="source\Libraries\glad\include\KHR\khrplatform.h" />
@@ -380,6 +420,14 @@
     <ClInclude Include="source\Libraries\glm\glm\vec3.hpp" />
     <ClInclude Include="source\Libraries\glm\glm\vec4.hpp" />
     <ClInclude Include="source\Libraries\glm\glm\vector_relational.hpp" />
+    <ClInclude Include="source\Libraries\imgui\imconfig.h" />
+    <ClInclude Include="source\Libraries\imgui\imgui.h" />
+    <ClInclude Include="source\Libraries\imgui\imgui_impl_glfw.h" />
+    <ClInclude Include="source\Libraries\imgui\imgui_impl_opengl3.h" />
+    <ClInclude Include="source\Libraries\imgui\imgui_internal.h" />
+    <ClInclude Include="source\Libraries\imgui\imstb_rectpack.h" />
+    <ClInclude Include="source\Libraries\imgui\imstb_textedit.h" />
+    <ClInclude Include="source\Libraries\imgui\imstb_truetype.h" />
     <ClInclude Include="source\Libraries\spdlog\include\spdlog\async.h" />
     <ClInclude Include="source\Libraries\spdlog\include\spdlog\async_logger.h" />
     <ClInclude Include="source\Libraries\spdlog\include\spdlog\common.h" />
@@ -430,6 +478,7 @@
     <ClInclude Include="source\Libraries\spdlog\include\spdlog\tweakme.h" />
     <ClInclude Include="source\Libraries\spdlog\include\spdlog\version.h" />
     <ClInclude Include="source\Renderer\Application.h" />
+    <ClInclude Include="source\Renderer\UILayer.h" />
     <ClInclude Include="source\Renderer\Input\InputSystem.h" />
     <ClInclude Include="source\Demos\Demo.h" />
     <ClInclude Include="source\Demos\CollisionDemo.h" />
@@ -477,7 +526,7 @@
     <ClInclude Include="source\headers\Defs.h" />
     <ClInclude Include="source\headers\GameTime.h" />
     <ClInclude Include="source\headers\GJK.h" />
-    <ClInclude Include="source\headers\IUpdateable.h" />
+    <ClInclude Include="source\headers\IIntegratable.h" />
     <ClInclude Include="source\headers\MTRX.h" />
     <ClInclude Include="source\headers\PrecompiledHeader.h" />
     <ClInclude Include="source\headers\Ray.h" />
@@ -488,6 +537,7 @@
     <ClInclude Include="source\Renderer\Shader.h" />
     <ClInclude Include="source\Renderer\SimpleRenderer.h" />
     <ClInclude Include="source\headers\math\Transform.h" />
+    <ClInclude Include="source\Renderer\UIPanel.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="source\Libraries\glm\glm\detail\func_common.inl" />

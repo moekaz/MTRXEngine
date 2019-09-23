@@ -18,7 +18,7 @@ namespace mtrx
 
 	Rigidbody::~Rigidbody() {}
 
-	void Rigidbody::PhysicsUpdate()
+	void Rigidbody::Integrate(float deltaTime)
 	{
 		// Do not perform physics calculations
 		if (isKinematic || GetIsInfiniteMass())
@@ -31,18 +31,18 @@ namespace mtrx
 		glm::vec3 angularAcceleration = accumTorque * CalculateIITWorld();
 
 		// Integrate the acceleration to get the velocity
-		velocity += acceleration * GameTime::deltaTime;
+		velocity += acceleration * deltaTime;
 
 		// Integrate the angular acceleration to get the rotation
-		rotation += angularAcceleration * GameTime::deltaTime;
+		rotation += angularAcceleration * deltaTime;
 
 		// Add damping
 		velocity *= linearDamping;
 		rotation *= angularDamping;
 
 		// Modify position and orientation
-		transform.Translate(velocity * GameTime::deltaTime);
-		transform.GetOrientation() += 0.5f * transform.GetOrientation() * glm::quat(0.f, rotation * GameTime::deltaTime);
+		transform.Translate(velocity * deltaTime);
+		transform.GetOrientation() += 0.5f * transform.GetOrientation() * glm::quat(0.f, rotation * deltaTime);
 
 		// Calculate the body data from the updated positions
 		CalculateBodyData();

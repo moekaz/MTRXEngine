@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include <IUpdateable.h>
+#include <IIntegratable.h>
 #include <GameTime.h>
 #include <entities/Body.h>
 
@@ -41,7 +41,7 @@ namespace mtrx
 		inline void AddTorque(const glm::vec3& torque) { accumTorque += torque; }
 
 		// Update the values of the rigidbody
-		void PhysicsUpdate();
+		void Integrate(float deltaTime) override;
 		// IntegrateRotation
 		void IntegrateRotation();
 		// Calculate the transformation matrix

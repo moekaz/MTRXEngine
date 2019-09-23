@@ -11,6 +11,6 @@ namespace mtrx
 		rb_BungeeSpringForceGenerator(glm::vec3* anchorPoint, float stiffness, float restLength);
 		~rb_BungeeSpringForceGenerator();
 
-		virtual void UpdateForces(Rigidbody* rb) override;
+		virtual void UpdateForces(Rigidbody* rb, float deltaTime) override;
 	};
 }

@@ -5,6 +5,7 @@
 #define DEFAULT_FPS 60
 
 #include <log/LogManager.h>
+#include <UILayer.h>
 
 class Window
 {
@@ -13,7 +14,7 @@ public:
 	~Window();
 
 	// Getters
-	inline GLFWwindow* GetWindow() { return window; }
+	inline GLFWwindow* GetWindow() const { return window; }
 	inline int GetWidth() { return width; }
 	inline int GetHeight() { return height; }
 	inline float GetAspectRatio() { return (float)width / (float)height; }

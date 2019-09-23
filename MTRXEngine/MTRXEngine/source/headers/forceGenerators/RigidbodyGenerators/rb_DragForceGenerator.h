@@ -17,7 +17,7 @@ namespace mtrx
 		float k2; // Velocity squared drag coefficient
 
 		// Implementation of drag forces on a particle
-		virtual void UpdateForces(Rigidbody* rb) override;
+		virtual void UpdateForces(Rigidbody* rb, float deltaTime) override;
 		
 		rb_DragForceGenerator(float k1, float k2);
 		~rb_DragForceGenerator();

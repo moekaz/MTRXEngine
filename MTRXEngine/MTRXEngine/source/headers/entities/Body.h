@@ -1,7 +1,7 @@
 
 #pragma once
 
-#include <IUpdateable.h>
+#include <IIntegratable.h>
 #include <Defs.h>
 #include <math/Transform.h>
 
@@ -9,7 +9,7 @@ namespace mtrx
 {
 	#define MAX_MASS 10000000.f // Some large number 
 
-	class Body : IUpdateable
+	class Body : IIntegratable
 	{
 	public:
 		Body(const glm::vec3& position = glm::vec3(), const glm::quat& orientation = glm::quat(), const glm::vec3& scale = glm::vec3(), const float mass = MAX_MASS);
@@ -18,7 +18,7 @@ namespace mtrx
 		// Add forces
 		inline void AddForce(const glm::vec3& force) { accumForces += force; }
 		// Implementation of the physics engine update
-		virtual void PhysicsUpdate() = 0;
+		virtual void Integrate(float deltaTime) = 0;
 		// Clear all the accumulators
 		virtual void ClearAccumulators() = 0;
 

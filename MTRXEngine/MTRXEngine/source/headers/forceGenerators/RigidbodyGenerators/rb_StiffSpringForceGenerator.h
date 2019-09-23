@@ -20,7 +20,7 @@ namespace mtrx
 		glm::vec3* anchorPoint; // Anchor point that the spring is hung from
 		float springDamping; // Damping caused by by the spring forces
 
-		virtual void UpdateForces(Rigidbody* rb);
+		virtual void UpdateForces(Rigidbody* rb, float deltaTime);
 
 		rb_StiffSpringForceGenerator(glm::vec3* anchorPoint, float springStiffness, float springDamping);
 		~rb_StiffSpringForceGenerator();

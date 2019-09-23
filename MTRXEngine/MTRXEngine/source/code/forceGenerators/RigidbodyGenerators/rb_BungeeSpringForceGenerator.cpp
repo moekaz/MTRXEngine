@@ -11,7 +11,7 @@ namespace mtrx
 	rb_BungeeSpringForceGenerator::~rb_BungeeSpringForceGenerator()
 	{}
 
-	void rb_BungeeSpringForceGenerator::UpdateForces(Rigidbody* rb)
+	void rb_BungeeSpringForceGenerator::UpdateForces(Rigidbody* rb, float deltaTime)
 	{
 		// CHANGE THIS 
 

@@ -10,7 +10,7 @@ namespace mtrx
 	rb_BuoyancyForceGenerator::~rb_BuoyancyForceGenerator()
 	{}
 
-	void rb_BuoyancyForceGenerator::UpdateForces(Rigidbody* rb)
+	void rb_BuoyancyForceGenerator::UpdateForces(Rigidbody* rb, float deltaTime)
 	{
 		float currentDepth = rb->GetPosition().y;
 		if (currentDepth - maxParticleDepth >= liquidLevel)

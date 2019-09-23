@@ -10,19 +10,19 @@ namespace mtrx
 	rb_StiffSpringForceGenerator::~rb_StiffSpringForceGenerator()
 	{}
 
-	void rb_StiffSpringForceGenerator::UpdateForces(Rigidbody* particle)
+	void rb_StiffSpringForceGenerator::UpdateForces(Rigidbody* rb, float deltaTime)
 	{
 
 		// REDO DIS
 
 
 		// Check for infinite mass
-		if (particle->GetIsInfiniteMass())
+		if (rb->GetIsInfiniteMass())
 			return;
 
 		// Get the vector from the anchor to the particle connected to this string
-		glm::vec3 pos = particle->GetPosition();
-		glm::vec3& velocity = particle->GetVelocity();
+		glm::vec3 pos = rb->GetPosition();
+		glm::vec3& velocity = rb->GetVelocity();
 		pos -= *anchorPoint;
 
 		// Calculate Gamma used to calculate c (Must not be zero)
@@ -34,14 +34,15 @@ namespace mtrx
 		glm::vec3 c = springDamping / (2.f * gamma) * pos + velocity * 1.f / gamma;
 	
 		// Apply the differential equation to calculate the position
-		glm::vec3 finalPosition = (pos * cos(gamma * GameTime::deltaTime) + c * sin(gamma * GameTime::deltaTime)) * exp(-0.5f * springDamping * GameTime::deltaTime);
+		glm::vec3 finalPosition = (pos * cos(gamma * deltaTime) + c * sin(gamma * deltaTime)) * exp(-0.5f * springDamping * deltaTime);
 
+		// TBD: CHECK FOR 0s in division
 		// Try and get the acceleration knowing the position that it reaches 
 		// IS THIS CORRECT??
 		//glm::vec3 acceleration = (finalPosition - pos) * 1.f / GameTime::deltaTime * GameTime::deltaTime - velocity;
-		glm::vec3 acceleration = (finalPosition - pos) * 1.f / GameTime::deltaTime * GameTime::deltaTime - velocity * GameTime::deltaTime;
+		glm::vec3 acceleration = (finalPosition - pos) * 1.f / deltaTime * deltaTime - velocity * deltaTime;
 
 		// Add the new force to the particle
-		particle->AddForce(acceleration * particle->GetMass());
+		rb->AddForce(acceleration * rb->GetMass());
 	}
 }

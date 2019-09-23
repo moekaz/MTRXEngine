@@ -7,6 +7,8 @@
 
 namespace mtrx
 {	
+	#define SQR(x) x * x // Easy way of squaring
+	
 	#define LOGGER_FILE_SIZE 5242880 // Maximum size of logger file 
 	#define PI 3.14159265358f // Approximation of pi
 	#define WORLD_DIMENSIONS 3 // World dimensions
@@ -77,10 +79,10 @@ namespace mtrx
 	static glm::mat3 GenerateCuboidIT(float mass, float* extents)
 	{
 		// 1/12 = 0.083333... 
-		return glm::mat3(0.0833333333f * mass * (extents[1] * extents[1] + extents[2] * extents[2]), 0, 0,
-			0, 0.0833333333f * mass * (extents[0] * extents[0] + extents[2] * extents[2]), 0,
-			0, 0, 0.0833333333f * mass * (extents[0] * extents[0] + extents[1] * extents[1]));
+		return glm::mat3(0.0833333333f * mass * (extents[1] * extents[1] + extents[2] * extents[2]), 0.f, 0.f,
+			0.f, 0.0833333333f * mass * (extents[0] * extents[0] + extents[2] * extents[2]), 0.f,
+			0.f, 0.f, 0.0833333333f * mass * (extents[0] * extents[0] + extents[1] * extents[1]));
 	}
 
-	// More inertia tensors TBA 
+	// TBD: Add more inertia tensors TBA 
 }

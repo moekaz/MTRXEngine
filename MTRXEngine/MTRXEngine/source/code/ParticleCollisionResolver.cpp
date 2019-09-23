@@ -1,3 +1,6 @@
+/*
+	DEPRECATED
+*/
 #include "PrecompiledHeader.h"
 #include "ParticleCollisionResolver.h"
 

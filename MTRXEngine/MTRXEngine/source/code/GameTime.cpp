@@ -22,7 +22,7 @@ namespace mtrx
 	}
 
 	// Update 
-	void GameTime::PhysicsUpdate()
+	void GameTime::Update()
 	{
 		// Set the previous to the current
 		prevCurrentTime = currentTime;

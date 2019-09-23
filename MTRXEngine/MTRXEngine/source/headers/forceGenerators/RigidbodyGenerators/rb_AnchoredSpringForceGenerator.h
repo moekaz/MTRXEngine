@@ -21,7 +21,7 @@ namespace mtrx
 		rb_AnchoredSpringForceGenerator(glm::vec3* anchorPoint, float stiffness, float restLength);
 		~rb_AnchoredSpringForceGenerator();
 
-		virtual void UpdateForces(Rigidbody* rb) override;
+		virtual void UpdateForces(Rigidbody* rb, float deltaTime) override;
 
 		inline void SetAnchorPoint(glm::vec3* point) { anchorPoint = point; }
 	};

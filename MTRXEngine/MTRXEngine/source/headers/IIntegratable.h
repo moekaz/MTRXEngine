@@ -7,10 +7,10 @@
 
 namespace mtrx
 {
-	class IUpdateable
+	class IIntegratable
 	{
 	public:
-		virtual void PhysicsUpdate() = 0;	// Call a physics update
+		virtual void Integrate(float deltaTime) = 0;	// Call a physics update
 
 	private:
 	protected:

@@ -9,13 +9,13 @@ namespace mtrx
 	rb_GravityForceGenerator::~rb_GravityForceGenerator()
 	{}
 
-	void rb_GravityForceGenerator::UpdateForces(Rigidbody* particle)
+	void rb_GravityForceGenerator::UpdateForces(Rigidbody* rb, float deltaTime)
 	{
 		// Check for infinite mass
-		if (particle->GetIsInfiniteMass())
+		if (rb->GetIsInfiniteMass())
 			return;
 		
 		// Add gravitational force to the particle according to f = ma
-		particle->AddForce(gravitationalAcceleration * particle->GetMass());
+		rb->AddForce(gravitationalAcceleration * rb->GetMass());
 	}
 }

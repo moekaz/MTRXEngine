@@ -38,10 +38,15 @@ void Application::Update(float deltaTime)
 		camera->GetTransform().Translate(camera->GetSide() * deltaTime * 2.f);
 
 	// Camera rotation
-	const glm::vec2& offset = inputSystem->GetMouseOffset();
+	if (!inputSystem->isCursorEnabled())
+	{
+		const glm::vec2& offset = inputSystem->GetMouseOffset();
+		if (offset.y != 0.000001)
+			camera->Pitch(offset.y * deltaTime);
+		if (offset.x != 0.000001)
+			camera->Yaw(-offset.x * deltaTime);
+	}
 
-	if (offset.y != 0.000001)
-		camera->Pitch(offset.y * deltaTime);
-	if (offset.x != 0.000001)
-		camera->Yaw(-offset.x * deltaTime);
+	// Normalize the orientation TBD: Optimize this
+	camera->GetTransform().SetOrientation(glm::normalize(camera->GetTransform().GetOrientation()));
 }

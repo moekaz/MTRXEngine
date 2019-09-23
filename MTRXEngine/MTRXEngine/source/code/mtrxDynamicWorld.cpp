@@ -11,7 +11,10 @@ namespace mtrx
 
 	void mtrxDynamicWorld::Update()
 	{
-		m_rbManager.PhysicsUpdate();
-		m_pManager.PhysicsUpdate();
+		// Update deltaTime
+		GameTime::Update();
+
+		// Update the rigidbody manager
+		m_rbManager.Integrate(GameTime::deltaTime);
 	}
 }

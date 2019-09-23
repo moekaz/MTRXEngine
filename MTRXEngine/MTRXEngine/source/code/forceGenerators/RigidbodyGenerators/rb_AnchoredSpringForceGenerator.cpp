@@ -10,7 +10,7 @@ namespace mtrx
 	rb_AnchoredSpringForceGenerator::~rb_AnchoredSpringForceGenerator()
 	{}
 
-	void rb_AnchoredSpringForceGenerator::UpdateForces(Rigidbody* rb)
+	void rb_AnchoredSpringForceGenerator::UpdateForces(Rigidbody* rb, float deltaTime)
 	{
 		// CHANGE THIS 
 

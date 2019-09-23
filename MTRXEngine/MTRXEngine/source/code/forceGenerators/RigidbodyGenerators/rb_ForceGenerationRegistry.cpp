@@ -21,11 +21,11 @@ namespace mtrx
 		}
 	}
 
-	void rb_ForceGenerationRegistry::UpdateForceGenerators(Rigidbody* rb)
+	void rb_ForceGenerationRegistry::UpdateForceGenerators(Rigidbody* rb, float deltaTime)
 	{
 		for (auto iter = forceGenerators.begin(); iter != forceGenerators.end(); ++iter)
 		{
-			(*iter)->UpdateForces(rb);
+			(*iter)->UpdateForces(rb, deltaTime);
 		}
 	}
 }

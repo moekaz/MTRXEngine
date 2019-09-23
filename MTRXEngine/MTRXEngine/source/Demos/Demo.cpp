@@ -10,7 +10,7 @@ Demo::~Demo()
 void Demo::Update()
 {
 	// Update delta time
-	mtrx::GameTime::PhysicsUpdate();
+	mtrx::GameTime::Update();
 
 	// Check for opengl errors
 	application.PollOpenGlErrors();
@@ -18,7 +18,7 @@ void Demo::Update()
 	// Basic input checks that will shared by all applications
 	BaseInputCheck();
 	InputCheck();
-	
+
 	// Update application (includes input checks)
 	application.Update(mtrx::GameTime::deltaTime);
 
@@ -26,9 +26,9 @@ void Demo::Update()
 	application.window.Clear();
 
 	// Update the rigidbody and the particle system
-
 	// TBD: fix timestep
-	rbManager.PhysicsUpdate();
+	// TBH: The api should be changed here
+	rbManager.Integrate(mtrx::GameTime::deltaTime);
 	pManager.PhysicsUpdate();
 
 	// Update renderer
@@ -36,6 +36,9 @@ void Demo::Update()
 
 	// Update input system
 	application.inputSystem->Update();
+
+	// Update the UI layer's frame
+	UILayer::UpdateFrame();
 
 	// PS: You want to have all logic and that stuff before this call 
 	// Clear buffers and poll
@@ -46,8 +49,7 @@ void Demo::BaseInputCheck()
 {
 	if (application.inputSystem->GetKeyDown(GLFW_KEY_G))
 	{
-		cursor = !cursor;
-		application.inputSystem->ToggleCursor(cursor);
+		application.inputSystem->ToggleCursor();
 	}
 }
 

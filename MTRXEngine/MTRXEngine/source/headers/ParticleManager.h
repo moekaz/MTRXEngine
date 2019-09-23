@@ -3,6 +3,8 @@
 	Description: A manager that will hold all particles in the game world and do what is necessary to
 	update said particles and communicate with the collision detection and resolution system
 	to resolve collisions contacts and other physics simulations
+	
+	DEPRECATED
 */
 
 #pragma once
@@ -22,7 +24,7 @@ namespace mtrx
 		p_ForceGenerationRegistry* registry;
 	};
 
-	class ParticleManager : public IUpdateable
+	class ParticleManager
 	{
 	public:
 		std::list<Particle> particles; // All the particles of the game world since we will have a dynamic amount of them we might need a dynamic structure
@@ -40,7 +42,7 @@ namespace mtrx
 		// Generator contact collisions
 		unsigned int GenerateCollisions();
 		// Update call for each frame
-		virtual void PhysicsUpdate();
+		void PhysicsUpdate();
 		// Updates all particles
 		void UpdateParticles();
 		// Updates all forces with all particles

@@ -1,11 +1,9 @@
-/*
-*/
 
 #pragma once
 
 #include <entities/Rigidbody.h>
 #include <forceGenerators/RigidbodyGenerators/rb_ForceGenerationRegistry.h>
-#include <IUpdateable.h>
+#include <IIntegratable.h>
 #include <forceGenerators/RigidbodyGenerators/IRigidbodyForceGenerator.h>
 
 namespace mtrx
@@ -20,11 +18,12 @@ namespace mtrx
 		{}
 	};
 
-	class RigidbodyManager : public IUpdateable
+	class RigidbodyManager : public IIntegratable
 	{
 	public:
 		std::unordered_map<Rigidbody*, rb_ForceGenerationRegistry> forceGenerators;
 		std::list<Rigidbody*> rigidbodies;
+		float accumulator;
 
 		RigidbodyManager();
 		~RigidbodyManager();
@@ -32,16 +31,15 @@ namespace mtrx
 		inline void AddRigidbody(Rigidbody* rb) { rigidbodies.push_back(rb); }
 		inline void AddForceGenerator(Rigidbody* rb, IRigidbodyForceGenerator* forceGenerator) { forceGenerators[rb].AddForceGenerator(forceGenerator); }
 		inline void RemoveForceGenerator(Rigidbody* rb, IRigidbodyForceGenerator* generator) { forceGenerators[rb].RemoveForceGenerator(generator); }
-
 		inline void RemoveRigidbody(Rigidbody* rb) 
 		{
 			rigidbodies.remove(rb); 
 			forceGenerators.erase(rb);
 		}
 
-		virtual void PhysicsUpdate() override;
-		void UpdateRigidbodies();
-		void UpdateForces();
-		void GenerateCollisions();
+		virtual void Integrate(float deltaTime) override;
+		void IntegrateRigidbodies(float deltaTime);
+		void UpdateForces(float deltaTime);
+		void GenerateCollisions(); // TBD: Might want to keep this at the level of the collision detection system instead of here
 	};
 }

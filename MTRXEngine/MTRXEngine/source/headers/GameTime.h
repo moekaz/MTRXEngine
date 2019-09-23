@@ -5,16 +5,14 @@
 
 #pragma once
 
-#include <IUpdateable.h>
-
 namespace mtrx
 {
-	class GameTime : public IUpdateable
+	class GameTime
 	{
 	public:
 		static float deltaTime;	// The delta time between frames in seconds
 
-		static void PhysicsUpdate();	// Update the time values
+		static void Update();	// Update the time values
 		static float GetStartTime();	// Get the start time
 		static float GetCurrentTime();	// Get the current time
 		static void Init();

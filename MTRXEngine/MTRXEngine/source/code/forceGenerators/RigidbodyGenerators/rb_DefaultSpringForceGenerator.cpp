@@ -10,7 +10,7 @@ namespace mtrx
 	rb_DefaultSpringForceGenerator::~rb_DefaultSpringForceGenerator()
 	{}
 
-	void rb_DefaultSpringForceGenerator::UpdateForces(Rigidbody* rb)
+	void rb_DefaultSpringForceGenerator::UpdateForces(Rigidbody* rb, float deltaTime)
 	{
 		// REDO DIS 
 

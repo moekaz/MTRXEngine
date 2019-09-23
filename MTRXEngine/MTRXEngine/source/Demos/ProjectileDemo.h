@@ -4,6 +4,7 @@
 #include <entities/Rigidbody.h>
 #include <forceGenerators/RigidbodyGenerators/rb_GravityForceGenerator.h>
 #include <Defs.h>
+#include <ProjectileDemoUI.h>
 
 class ProjectileDemo : public Demo
 {

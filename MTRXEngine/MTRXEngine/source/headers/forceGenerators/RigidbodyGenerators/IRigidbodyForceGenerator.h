@@ -11,6 +11,6 @@ namespace mtrx
 	class IRigidbodyForceGenerator
 	{
 	public:
-		virtual void UpdateForces(Rigidbody* rb) = 0;
+		virtual void UpdateForces(Rigidbody* rb, float deltaTime) = 0;
 	};
 }

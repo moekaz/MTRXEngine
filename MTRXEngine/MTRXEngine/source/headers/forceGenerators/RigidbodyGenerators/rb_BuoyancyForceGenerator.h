@@ -23,7 +23,7 @@ namespace mtrx
 		rb_BuoyancyForceGenerator(float volume, float maxPaticleDepth, float liquidHeight = 0.f, float density = 1000.f);
 		~rb_BuoyancyForceGenerator();
 
-		virtual void UpdateForces(Rigidbody* rb) override;
+		virtual void UpdateForces(Rigidbody* rb, float deltaTime) override;
 	};
 }
 

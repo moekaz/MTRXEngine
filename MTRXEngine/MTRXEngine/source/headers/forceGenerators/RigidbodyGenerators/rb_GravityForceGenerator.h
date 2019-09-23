@@ -15,7 +15,7 @@ namespace mtrx
 		glm::vec3 gravitationalAcceleration; // Gravitational acceleration
 
 		// Implementation of an update forces for a force generator will apply a gravitational force on the particle
-		virtual void UpdateForces(Rigidbody* rb); 
+		virtual void UpdateForces(Rigidbody* rb, float deltaTime); 
 
 		rb_GravityForceGenerator(const glm::vec3& gravity);
 		~rb_GravityForceGenerator();
