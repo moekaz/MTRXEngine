@@ -20,6 +20,8 @@ Application::Application(const char* appName, int width, int height, int fps) : 
 	{
 		glViewport(0, 0, width, height);
 	});
+
+	inputSystem->SetCursor(true);
 }
 
 Application::~Application()

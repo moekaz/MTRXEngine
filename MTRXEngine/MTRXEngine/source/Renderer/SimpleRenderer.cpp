@@ -31,7 +31,7 @@ void SimpleRenderer::Render(std::unordered_set<mtrx::Transform*>& transforms)
 		shader.setUniformMat4("modelMatrix", ConstructModelMatrix(*(*iter)));
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 	}
-	
+
 	// Render UI Layer
 	UILayer::Render();
 }

@@ -4,7 +4,7 @@
 ProjectileDemo::ProjectileDemo() : Demo("PROJECTILE DEMO", 1366, 768), gravityGenerator(glm::vec3(0, -mtrx::gravity, 0)), projectileType(1)
 {
 	UILayer::AddUIPanel(new ProjectileDemoUI("Projectile Demo", glm::vec2(300, 200), &projectileType));
-	application.camera->GetTransform().SetPosition(glm::vec3(0, 0, 10.f));
+	application.camera->GetTransform().SetPosition(glm::vec3(0, 0, 20.f));
 }
 
 ProjectileDemo::~ProjectileDemo()
@@ -43,8 +43,8 @@ void ProjectileDemo::InputCheck()
 				// Regular projectile
 				float mass = 50.f;
 				float extents[] = { 1.f, 1.f, 1.f };
-				projectile = mtrx::Rigidbody(mass, false, glm::vec3(-1.f, 1.f, 0.f), glm::angleAxis(0.f, mtrx::worldUp), glm::vec3(1.f, 1.f, 1.f), mtrx::GenerateCuboidIT(mass, extents));
-				projectile.AddForce(glm::vec3(300000.f, 150000.f, 0));
+				projectile = mtrx::Rigidbody(mass, false, glm::vec3(-40.f, 1.f, 0.f), glm::angleAxis(0.f, mtrx::worldUp), glm::vec3(1.f, 1.f, 1.f), mtrx::GenerateCuboidIT(mass, extents));
+				projectile.AddForce(glm::vec3(60000.f, 50000.f, 0));
 				rbManager.AddForceGenerator(&projectile, &gravityGenerator);
 				break;
 			}
@@ -53,7 +53,7 @@ void ProjectileDemo::InputCheck()
 				// Light Projectile
 				float mass = 0.0001f;;
 				float extents[] = { 0.2f, 0.2f, 0.2f };
-				projectile = mtrx::Rigidbody(mass, false, glm::vec3(-1.f, 1.f, 0.f), glm::angleAxis(0.f, mtrx::worldUp), glm::vec3(0.2f, 0.2f, 0.2f), mtrx::GenerateCuboidIT(mass, extents));
+				projectile = mtrx::Rigidbody(mass, false, glm::vec3(-40.f, 1.f, 0.f), glm::angleAxis(0.f, mtrx::worldUp), glm::vec3(0.2f, 0.2f, 0.2f), mtrx::GenerateCuboidIT(mass, extents));
 				projectile.AddForce(glm::vec3(1.f, 0.1f, 0));
 				rbManager.AddForceGenerator(&projectile, &gravityGenerator);
 				break;
@@ -63,9 +63,10 @@ void ProjectileDemo::InputCheck()
 				// Fireball
 				float mass = 4.f;
 				float extents[] = { 0.5f, 0.5f, 0.5f };
-				projectile = mtrx::Rigidbody(mass, false, glm::vec3(-1.f, 1.f, 0.f), glm::angleAxis(0.f, mtrx::worldUp), glm::vec3(0.5f, 0.5f, 0.5f), mtrx::GenerateCuboidIT(mass, extents));
-				projectile.AddForce(glm::vec3(3000.f, 0.5f, 0));
-				projectile.SetAcceleration(glm::vec3(0, 1000.f, 0));
+
+				projectile = mtrx::Rigidbody(mass, false, glm::vec3(-40.f, 1.f, 0.f), glm::angleAxis(0.f, mtrx::worldUp), glm::vec3(0.5f, 0.5f, 0.5f), mtrx::GenerateCuboidIT(mass, extents));
+				projectile.AddForce(glm::vec3(3000.f, 200.f, 0));
+				//projectile.SetAcceleration(glm::vec3(0, 100.f, 0));
 				break;
 			}
 			case 4:
@@ -73,7 +74,7 @@ void ProjectileDemo::InputCheck()
 				// Laser
 				float mass = 0.01f;
 				float extents[] = { 0.1f, 0.1f, 0.1f };
-				projectile = mtrx::Rigidbody(mass, false, glm::vec3(-1.f, 1.f, 0.f), glm::angleAxis(0.f, mtrx::worldUp), glm::vec3(0.1f, 0.1f, 0.1f), mtrx::GenerateCuboidIT(mass, extents));
+				projectile = mtrx::Rigidbody(mass, false, glm::vec3(-40.f, 1.f, 0.f), glm::angleAxis(0.f, mtrx::worldUp), glm::vec3(0.1f, 0.1f, 0.1f), mtrx::GenerateCuboidIT(mass, extents));
 				projectile.AddForce(glm::vec3(100.f, 0.f, 0));
 				break;
 			}
