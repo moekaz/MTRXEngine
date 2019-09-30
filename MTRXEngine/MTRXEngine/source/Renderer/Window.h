@@ -10,7 +10,7 @@
 class Window
 {
 public:
-	Window(const char* windowName = "", int width = DEFAULT_WINDOW_WIDTH, int height = DEFAULT_WINDOW_HEIGHT, int fps = DEFAULT_FPS);
+	Window(const char* windowName = "", int width = DEFAULT_WINDOW_WIDTH, int height = DEFAULT_WINDOW_HEIGHT, int fps = DEFAULT_FPS, bool vsync = false);
 	~Window();
 
 	// Getters
@@ -19,7 +19,7 @@ public:
 	inline int GetHeight() { return height; }
 	inline float GetAspectRatio() { return (float)width / (float)height; }
 	inline bool ShouldClose() { return glfwWindowShouldClose(window); }
-	
+	inline bool isVysnc() { return vsync; }
 	inline void Clear() { glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); }
 
 	inline void UpdateBuffers()
@@ -28,10 +28,17 @@ public:
 		glfwSwapBuffers(window);
 	}
 
+	inline void SetVsync(bool vsync) 
+	{
+		this->vsync = vsync;
+		glfwSwapInterval(vsync);
+	}
+
 protected:
 	GLFWwindow* window;
 	int width;
 	int height;
 	int fps;
+	bool vsync;
 };
 

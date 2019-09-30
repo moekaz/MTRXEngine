@@ -2,7 +2,7 @@
 #include "Window.h"
 #include <UILayer.h>
 
-Window::Window(const char* windowName, int width, int height, int fps) : width(width), height(height), fps(fps)
+Window::Window(const char* windowName, int width, int height, int fps, bool vsync) : width(width), height(height), fps(fps), vsync(vsync)
 {
 	// Initialize GLFW
 	if (!glfwInit())
@@ -33,7 +33,8 @@ Window::Window(const char* windowName, int width, int height, int fps) : width(w
 	// Initialize UILayer of the window
 	UILayer::Init(this);
 
-	glfwSwapInterval(1);
+	// Vsync 
+	glfwSwapInterval(vsync);
 }
 
 Window::~Window()
