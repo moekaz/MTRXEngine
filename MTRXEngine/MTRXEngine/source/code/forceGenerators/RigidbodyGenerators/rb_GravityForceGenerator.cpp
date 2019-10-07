@@ -15,7 +15,7 @@ namespace mtrx
 		if (rb->GetIsInfiniteMass())
 			return;
 		
-		// Add gravitational force to the particle according to f = ma
+		// Add gravitational force to the body
 		rb->AddForce(gravitationalAcceleration * rb->GetMass());
 	}
 }

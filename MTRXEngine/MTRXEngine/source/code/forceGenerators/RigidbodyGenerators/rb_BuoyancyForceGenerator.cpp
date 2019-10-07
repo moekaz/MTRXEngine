@@ -3,8 +3,9 @@
 
 namespace mtrx
 {
-	rb_BuoyancyForceGenerator::rb_BuoyancyForceGenerator(float volumeDisplaced, float maxParticleDepth, float liquidHeight, float density) : 
-		volumeDisplaced(volumeDisplaced), maxParticleDepth(maxParticleDepth), liquidLevel(liquidHeight), liquidDensity(density)
+	rb_BuoyancyForceGenerator::rb_BuoyancyForceGenerator(const glm::vec3& gravity, float volumeBody, float bodyHalfExtent, float liquidHeight, float density) :
+		gravitationalAcceleration(gravity), volumeBody(volumeBody), bodyHalfExtent(bodyHalfExtent), liquidLevel(liquidHeight),
+		liquidDensity(density)
 	{}
 
 	rb_BuoyancyForceGenerator::~rb_BuoyancyForceGenerator()
@@ -12,35 +13,32 @@ namespace mtrx
 
 	void rb_BuoyancyForceGenerator::UpdateForces(Rigidbody* rb, float deltaTime)
 	{
+		// Check if the object is not submerged
 		float currentDepth = rb->GetPosition().y;
-		if (currentDepth - maxParticleDepth >= liquidLevel)
-			return;
+		float distLiquid = currentDepth - liquidLevel;
 
-		// Apply some buoyancy force
-		glm::vec3 force = glm::vec3(0.f, liquidDensity * gravity, 0.f);
-		glm::vec3 dimensions = rb->GetTransform().GetScale();
-		float volumeDisplaced = 1.f;
-		centerOfBuoyancy = rb->GetPosition();
-		if (currentDepth + maxParticleDepth <= liquidLevel)
+		// TBD: If we want it to be more robust we need to find the closest point 
+		// to the water level and calculate the closest level from there
+		if (distLiquid >= bodyHalfExtent)
 		{
-			// Calculate the complete volume of the rigidbody
-			// Assuming a box atm 
-			volumeDisplaced = dimensions.x * dimensions.y * dimensions.z * 2.f;
-			std::cout << "completely submerged" << std::endl;
+			return;
 		}
-		else
+
+		distLiquid = -distLiquid; // Get the distance from the depth of the obj to the liquid plane
+		glm::vec3 force = this->liquidDensity * -this->gravitationalAcceleration; // Density and gravitional acceleration
+		float volumeDisplaced = this->volumeBody;
+		// centerOfBuoyancy = rb->GetPosition(); // TBD: Use center of buoyancy will require more collision information
+
+		if (distLiquid < bodyHalfExtent) // partially submerged
 		{
-			float submergedDepth = (dimensions.y / 2.f) + (liquidLevel - currentDepth);
-			centerOfBuoyancy.y = liquidLevel + submergedDepth / 2;
-			// Calculate the volume of the partially submerged object
-			volumeDisplaced = dimensions.x * dimensions.z * submergedDepth;
-			std::cout << "partially submerged : " << submergedDepth << std::endl;
+			// TBD: This should be replaced with some collision detection information (might be replaced with polygon calculation)
+			glm::vec3 bottomPt = rb->GetPosition() - glm::vec3(0, bodyHalfExtent, 0);
+			float ratioDisplaced = (liquidLevel - bottomPt.y) / (2.f * bodyHalfExtent);
+			volumeDisplaced = this->volumeBody * ratioDisplaced;
 		}
 		
-		// Add the volume displacement to the buoyant force
-		force.y *= volumeDisplaced;
-
-		// Add the resulting force on the rigidbody
-		rb->AddForceAtPoint(force, centerOfBuoyancy);
+		// Add the volume displacement to the buoyancy force
+		force *= volumeDisplaced;
+		rb->AddForceAtPoint(force, rb->GetPosition() - glm::vec3(0, bodyHalfExtent, 0));
 	}
 }

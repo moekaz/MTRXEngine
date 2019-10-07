@@ -64,6 +64,7 @@
     <ClCompile Include="source\Renderer\SimpleRenderer.cpp" />
     <ClCompile Include="source\Renderer\Window.cpp" />
     <ClCompile Include="source\Renderer\UIPanel.cpp" />
+    <ClCompile Include="source\Demos\BuoyancyDemo.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\Renderer\ProjectileDemoUI.h" />
@@ -335,6 +336,7 @@
     <ClInclude Include="source\Renderer\SimpleRenderer.h" />
     <ClInclude Include="source\headers\math\Transform.h" />
     <ClInclude Include="source\Renderer\UIPanel.h" />
+    <ClInclude Include="source\Demos\BuoyancyDemo.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="source\Libraries\glm\glm\detail\func_common.inl" />

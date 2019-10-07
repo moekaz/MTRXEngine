@@ -26,7 +26,7 @@ namespace mtrx
 		float accumulator;
 
 		RigidbodyManager();
-		~RigidbodyManager();
+		~RigidbodyManager(); // TBD: Deallocation responsibility is it ours?
 
 		inline void AddRigidbody(Rigidbody* rb) { rigidbodies.push_back(rb); }
 		inline void AddForceGenerator(Rigidbody* rb, IRigidbodyForceGenerator* forceGenerator) { forceGenerators[rb].AddForceGenerator(forceGenerator); }

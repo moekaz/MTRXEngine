@@ -15,12 +15,14 @@ namespace mtrx
 	{	
 	public:
 		float liquidDensity;
-		float volumeDisplaced;
 		float liquidLevel;
-		float maxParticleDepth;
-		glm::vec3 centerOfBuoyancy;	
+		float bodyHalfExtent;
+		float volumeBody; // Displacement of liquid can be calculated from the body as volume submerged is volume displaced
+		glm::vec3 gravitationalAcceleration; // Gravity
+		// TBD: This is useful for the future
+		glm::vec3 centerOfBuoyancy; // Center of the submerged polygon (we would need to dynamically calculate this)
 
-		rb_BuoyancyForceGenerator(float volume, float maxPaticleDepth, float liquidHeight = 0.f, float density = 1000.f);
+		rb_BuoyancyForceGenerator(const glm::vec3& gravity, float volumeBody, float bodyHalfExtent, float liquidHeight = 0.f, float density = 1000.f);
 		~rb_BuoyancyForceGenerator();
 
 		virtual void UpdateForces(Rigidbody* rb, float deltaTime) override;

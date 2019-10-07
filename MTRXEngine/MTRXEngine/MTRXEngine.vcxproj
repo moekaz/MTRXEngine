@@ -158,6 +158,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\Demos\BuoyancyDemo.cpp" />
     <ClCompile Include="source\Renderer\ProjectileDemoUI.cpp" />
     <ClCompile Include="source\code\mtrxDynamicWorld.cpp" />
     <ClCompile Include="source\Libraries\glad\src\glad.c">
@@ -269,6 +270,7 @@
     <ClCompile Include="source\Renderer\UIPanel.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="source\Demos\BuoyancyDemo.h" />
     <ClInclude Include="source\Renderer\ProjectileDemoUI.h" />
     <ClInclude Include="source\headers\mtrxDynamicWorld.h" />
     <ClInclude Include="source\Libraries\glad\include\glad\glad.h" />
