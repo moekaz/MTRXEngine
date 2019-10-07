@@ -26,7 +26,7 @@ void BuoyancyDemo::Update()
 	body = mtrx::Rigidbody(mass, false, glm::vec3(-2.f, 6.f, 0), glm::angleAxis(0.f, mtrx::worldUp), glm::vec3(1, 1, 1), mtrx::GenerateCuboidIT(mass, extents));
 	mtrx::rb_BuoyancyForceGenerator buoyancyGenerator = mtrx::rb_BuoyancyForceGenerator(gravity, 1.f, 3.f);
 	mtrx::rb_GravityForceGenerator gravityGenerator = mtrx::rb_GravityForceGenerator(gravity);
-	body.SetLinearDamping(0.97f);
+	body.SetLinearDamping(0.98f);
 
 	// Add the relevant info
 	rbManager.AddRigidbody(&body);
