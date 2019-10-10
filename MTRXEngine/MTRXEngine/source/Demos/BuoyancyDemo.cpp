@@ -46,6 +46,7 @@ void BuoyancyDemo::Update()
 		body.SetLinearDamping(linearDamping);
 		gravityGenerator.gravitationalAcceleration.y = gravitationAcceleration;
 		buoyancyGenerator.gravitationalAcceleration.y = gravitationAcceleration;
+		center.GetPosition().y = buoyancyGenerator.liquidLevel;
 		Demo::Update();
 	}
 }
