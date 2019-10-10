@@ -158,6 +158,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\Renderer\BuoyancyDemoUI.cpp" />
+    <ClCompile Include="source\Demos\FluidSimulationDemo.cpp" />
     <ClCompile Include="source\Demos\BuoyancyDemo.cpp" />
     <ClCompile Include="source\Renderer\ProjectileDemoUI.cpp" />
     <ClCompile Include="source\code\mtrxDynamicWorld.cpp" />
@@ -270,6 +272,8 @@
     <ClCompile Include="source\Renderer\UIPanel.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="source\Renderer\BuoyancyDemoUI.h" />
+    <ClInclude Include="source\Demos\FluidSimulationDemo.h" />
     <ClInclude Include="source\Demos\BuoyancyDemo.h" />
     <ClInclude Include="source\Renderer\ProjectileDemoUI.h" />
     <ClInclude Include="source\headers\mtrxDynamicWorld.h" />

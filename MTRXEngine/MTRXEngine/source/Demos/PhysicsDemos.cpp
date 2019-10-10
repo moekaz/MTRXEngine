@@ -8,6 +8,8 @@
 	#include <../Demos/CollisionDemo.h>
 #elif DEMO == 3
 	#include <../Demos/BuoyancyDemo.h>
+#elif DEMO == 4
+	#include <../Demos/FluidSimulationDemo.h>
 #endif
 
 #include <log/LogManager.h>
@@ -24,6 +26,8 @@ int main()
 	app = std::make_unique<CollisionDemo>();
 #elif DEMO == 3
 	app = std::make_unique<BuoyancyDemo>();
+#elif DEMO == 4
+	app = std::make_unique<FluidSimulationDemo>();
 #endif
 
 	// Run application
