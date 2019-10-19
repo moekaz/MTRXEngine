@@ -1,7 +1,8 @@
 #include <PrecompiledHeader.h>
 #include <Application.h>
 
-Application::Application(const char* appName, int width, int height, int fps) : window(appName, width, height, fps), renderer(&window)
+Application::Application(const char* appName, int width, int height, int fps) : window(appName, width, height, fps), renderer(&window), 
+	cameraSensitivity (2.f)
 {	
 	inputSystem = InputSystem::GetInstance(&window);
 	camera = renderer.GetCamera();
@@ -44,9 +45,9 @@ void Application::Update(float deltaTime)
 	{
 		const glm::vec2& offset = inputSystem->GetMouseOffset();
 		if (offset.y != 0.000001)
-			camera->Pitch(offset.y * deltaTime);
+			camera->Pitch(offset.y * deltaTime * cameraSensitivity);
 		if (offset.x != 0.000001)
-			camera->Yaw(-offset.x * deltaTime);
+			camera->Yaw(-offset.x * deltaTime * cameraSensitivity);
 	}
 
 	// Normalize the orientation TBD: Optimize this

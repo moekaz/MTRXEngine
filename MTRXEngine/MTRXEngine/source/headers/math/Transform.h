@@ -12,7 +12,7 @@ namespace mtrx
 			position(position), orientation(orientation), scale(scale)
 		{}
 
-		~Transform() {}
+		~Transform() = default;
 
 		inline void Translate(const glm::vec3& translationVec) { position += translationVec; }
 		inline void Rotate(const glm::quat& rotation) { orientation = rotation * orientation; }

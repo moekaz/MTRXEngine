@@ -22,8 +22,10 @@ public:
 	Demo(const char* appName = "DEMO APPLICATION", int width = DEFAULT_WINDOW_WIDTH, int height = DEFAULT_WINDOW_HEIGHT);
 	~Demo();
 
+	
 	void BaseInputCheck();
 	virtual void InputCheck() = 0;
+
 	virtual void Update();
 	void Run();
 };

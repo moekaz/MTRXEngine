@@ -1,8 +1,3 @@
-/*
-	Author: Mohamed Kazma
-	Description: Precompiled header for the mtrx project
-*/
-
 #pragma once
 
 #define GLM_ENABLE_EXPERIMENTAL

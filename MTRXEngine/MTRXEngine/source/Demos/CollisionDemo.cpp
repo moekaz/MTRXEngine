@@ -1,8 +1,10 @@
 #include <PrecompiledHeader.h>
 #include <../Demos/CollisionDemo.h> 
 
-CollisionDemo::CollisionDemo() : Demo("COLLISION DEMO")
+CollisionDemo::CollisionDemo() : Demo("COLLISION DEMO", 1366, 768)
 {
+	application.inputSystem->ToggleCursor();
+
 	srand((unsigned int)time(0)); // Seed for random
 
 	// Create game obstacles  
@@ -13,9 +15,9 @@ CollisionDemo::CollisionDemo() : Demo("COLLISION DEMO")
 		float mass = 2.f;
 		glm::quat orientation1 = glm::angleAxis(0.f, mtrx::worldUp);
 		
-		float x = (float) (rand() % 50);
-		float y = (float) (rand() % 50);
-		float z = (float) (rand() % 50);
+		float x = (float) mtrx::RandomInt(-30, 30);
+		float y = (float) mtrx::RandomInt(-30, 30);
+		float z = (float) mtrx::RandomInt(-30, 30);
 
 		mtrx::Rigidbody* body = new mtrx::Rigidbody(mass, false, glm::vec3(x, y, z), orientation1, glm::vec3(extents[0], extents[1], extents[2]), mtrx::GenerateCuboidIT(mass, extents));
 		mtrx::Collider* collider = new mtrx::BoxCollider(body->GetPosition());
@@ -35,22 +37,12 @@ CollisionDemo::CollisionDemo() : Demo("COLLISION DEMO")
 	}
 }
 
-CollisionDemo::~CollisionDemo()
-{}
-
 void CollisionDemo::Update()
 {
-	// Thinking about creating a fps shooting demo with collision detection and force generation
-		// This is just a reference point in world space
-	mtrx::Transform center =
-	{
-		glm::vec3(),
-		glm::angleAxis(0.f, mtrx::worldUp),
-		glm::vec3(0.1f, 0.1f, 0.1f),
-	};
-	transformsToRender.insert(&center);
+	// Create the UI 
+	CollisionDemoUI ui = CollisionDemoUI("Collision Demo", glm::vec2(300, 300));
+	UILayer::AddUIPanel(&ui);
 
-	// Update loop
 	while (!application.window.ShouldClose())
 	{
 		// Update colliders
@@ -79,7 +71,7 @@ void CollisionDemo::Update()
 				mtrx::Rigidbody* bullet = bulletRbs[i];
 				mtrx::Collider* collider = bulletColliders[i];
 
-				worldRbs[j]->AddForceAtPoint(glm::fastNormalize(bullet->GetVelocity()) * 1500.f, bullet->GetPosition());
+				worldRbs[j]->AddForceAtPoint(glm::fastNormalize(bullet->GetVelocity()) * 100.f, bullet->GetPosition());
 
 				rbManager.RemoveRigidbody(bullet);
 				transformsToRender.erase(&bullet->GetTransform());
@@ -101,9 +93,7 @@ void CollisionDemo::Update()
 void CollisionDemo::InputCheck()
 {
 	if (application.inputSystem->GetKeyDown(GLFW_KEY_SPACE))
-	{
 		Shoot();
-	}
 }
 
 void CollisionDemo::Shoot()
@@ -116,7 +106,7 @@ void CollisionDemo::Shoot()
 	mtrx::Collider* collider = new mtrx::BoxCollider(bullet->GetTransform());
 
 	// Add a force going in the forward direction from the camera with some scalar for magnitude
-	bullet->AddForce(forward * 2000.f);
+	bullet->AddForce(forward * 1000.f);
 
 	bulletRbs.push_back(bullet);
 	bulletColliders.push_back(collider);

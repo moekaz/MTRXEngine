@@ -76,6 +76,12 @@ namespace mtrx
 		unsigned char size;
 	};
 
+	// Random int that is inclusive on min and exclusive on max
+	static int RandomInt(int min, int max)
+	{
+		return rand() % (max - min) + min;
+	}
+
 	static glm::mat3 GenerateCuboidIT(float mass, float* extents)
 	{
 		// 1/12 = 0.083333... 
