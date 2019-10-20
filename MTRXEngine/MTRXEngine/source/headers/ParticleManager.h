@@ -1,12 +1,6 @@
-/*
-	Author: Mohamed Kazma
-	Description: A manager that will hold all particles in the game world and do what is necessary to
-	update said particles and communicate with the collision detection and resolution system
-	to resolve collisions contacts and other physics simulations
-	
-	DEPRECATED
-*/
-
+/**
+ * DEPRECATED DO NOT USE THIS
+ */
 #pragma once
 
 #include <entities/Particle.h>

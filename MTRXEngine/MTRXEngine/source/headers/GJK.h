@@ -28,6 +28,8 @@ namespace mtrx
 		static bool Collision(const ConvexShapeCollider&, const ConvexShapeCollider&);
 
 	private:
+		static Simplex simplex; // Simplex that stores vertices
+		
 		// Update the values of the simplex after adding points from support
 		static bool UpdateSimplex(Simplex&, glm::vec3&, glm::vec3&);
 		// Update the values of the simplex when we have a triangle simplex
@@ -36,7 +38,5 @@ namespace mtrx
 		static bool TetrahedronSimplexUpdate(Simplex&, glm::vec3&, glm::vec3&);
 		// Extra checks for tetrahedron simplexes
 		static void TetrahedronChecks(Simplex&, glm::vec3&, glm::vec3&, glm::vec3&, glm::vec3&, glm::vec3&, glm::vec3&);
-
-		static Simplex simplex; // Simplex that stores vertices
 	};
 }

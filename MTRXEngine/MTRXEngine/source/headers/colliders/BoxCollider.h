@@ -22,7 +22,7 @@ namespace mtrx
 		BoxCollider(const BoxCollider& collider1, const BoxCollider& collider2); // Used for BVH construction
 		virtual ~BoxCollider() = default;
 
-		virtual bool CheckCollision(const mtrx::Collider& collider) override { Collider::CheckCollision(collider); };
+		virtual bool CheckCollision(const mtrx::Collider& collider) override { return Collider::CheckCollision(collider); };
 		
 		// Raycast with box colliders
 		virtual inline bool RaycastCollision(const Ray& ray) override { return CollisionUtil::RayBoxCollision(ray.startPosition, ray.direction, GetPosition(), axes.axes, halfExtents); }

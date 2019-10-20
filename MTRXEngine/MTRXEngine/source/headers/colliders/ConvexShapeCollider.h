@@ -27,6 +27,7 @@ namespace mtrx
 		std::vector<glm::vec3*>* GetVertices() const;
 		glm::mat4 GetModelMatrix() const;
 
+		// TBD: This should not be here Remove most of these
 		// Used for GJK minkowski sum calculations
 		glm::vec3 Support(const ConvexShapeCollider&, const glm::vec3&) const;
 		glm::vec3& FarthestPointInDirection(const glm::vec3&) const;

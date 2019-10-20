@@ -1,8 +1,3 @@
-/*
-	Author: Mohamed Kazma
-	Description: A ray that will be used for raycasting
-*/
-
 #pragma once
 
 namespace mtrx
