@@ -1,8 +1,3 @@
-/*
-	Author: mohamed kazma
-	Description: Header file for a sphere collider
-*/
-
 #pragma once
 
 #include <colliders/Collider.h>
@@ -24,14 +19,12 @@ namespace mtrx
 
 		SphereCollider(const glm::vec3& center = glm::vec3(), const glm::quat& orientation = glm::angleAxis(0.f, worldUp), const glm::vec3& scale = glm::vec3(1, 1, 1), float radius = 0.5);
 		SphereCollider(const Transform& transform = Transform(), float radius = 0.5);
-		SphereCollider(const SphereCollider& collider1, const SphereCollider& collider2);
-		~SphereCollider();
+		SphereCollider(const SphereCollider& collider1, const SphereCollider& collider2); // Used for BVH construction
+		virtual ~SphereCollider() = default;
 
-		float GetGrowth(const SphereCollider&);
-
-		virtual bool CheckCollision(const Collider&) override;
-		virtual bool RaycastCollision(const Ray&) override;
-		virtual float GetSize() override;
+		virtual inline bool RaycastCollision(const Ray& ray) override { return CollisionUtil::RaySphereCollision(GetPosition(), radius, ray.startPosition, ray.direction); }
+		virtual inline float GetSize() override { return 1.333333f * PI * radius * radius * radius; }
+		virtual inline float GetGrowth(const SphereCollider& sphereCollider) { return SQR(SphereCollider(*this, sphereCollider).radius) - SQR(radius); }
 
 		virtual inline void SetScale(const glm::vec3& scale) override
 		{

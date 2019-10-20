@@ -1,9 +1,3 @@
-/*
-	Author: Mohamed Kazma
-	Description: A particle coupling that uses a rod which is far more stiff than a cable so there is no bounciness 
-	or leeway when it comes to the length of the coupling
-*/
-
 #pragma once
 
 #include <ParticleCoupling.h>

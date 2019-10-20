@@ -5,7 +5,6 @@
 class FluidSimulationDemo : public Demo
 {
 public:
-	
 	FluidSimulationDemo();
 	~FluidSimulationDemo() = default;
 

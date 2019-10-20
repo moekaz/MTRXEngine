@@ -1,8 +1,3 @@
-/*
-	Author: Mohamed Kazma
-	Description: An implementation of a box collider
-*/
-
 #pragma once
 
 #include <colliders/ConvexShapeCollider.h>
@@ -13,9 +8,9 @@
 namespace mtrx
 {
 	// Forward declarations
-	class SphereCollider;
-	class CapsuleCollider;
-	class MeshCollider;
+	//class SphereCollider;
+	//class CapsuleCollider;
+	//class MeshCollider;
 
 	class BoxCollider : public ConvexShapeCollider, public IBoundingVolume
 	{
@@ -24,16 +19,20 @@ namespace mtrx
 
 		BoxCollider(const glm::vec3& center = glm::vec3(), const glm::quat& orientation = glm::angleAxis(0.f, worldUp), const glm::vec3& scale = glm::vec3(1, 1, 1));
 		BoxCollider(const Transform& transform = Transform());
-		BoxCollider(const BoxCollider& collider1, const BoxCollider& collider2);
-		~BoxCollider();
+		BoxCollider(const BoxCollider& collider1, const BoxCollider& collider2); // Used for BVH construction
+		virtual ~BoxCollider() = default;
 
-		virtual bool CheckCollision(const mtrx::Collider&) override;
-		virtual bool RaycastCollision(const Ray&) override;
-		virtual float GetSize() override;
-
-		float GetGrowth(const BoxCollider& boxCollider);
+		virtual bool CheckCollision(const mtrx::Collider& collider) override { return Collider::CheckCollision(collider); };
+		
+		// Raycast with box colliders
+		virtual inline bool RaycastCollision(const Ray& ray) override { return CollisionUtil::RayBoxCollision(ray.startPosition, ray.direction, GetPosition(), axes.axes, halfExtents); }
+		// length * breadth * height
+		virtual inline float GetSize() override { return halfExtents[0] * halfExtents[1] * halfExtents[2] * 8; }
+		virtual inline float GetGrowth(const BoxCollider& boxCollider) { return 0.f; }
 
 		inline const glm::vec3* GetAxes() const { return axes.axes; }
+		inline const glm::vec3& GetHalfExtents() const { return halfExtents; }
+		inline glm::vec3& GetHalfExtents() { return halfExtents; }
 
 	private:
 		ObjectAxes axes;

@@ -7,8 +7,6 @@
 
 #include <utils/CollisionUtil.h>
 #include <colliders/BoxCollider.h>
-#include <colliders/SphereCollider.h>
-#include <colliders/CapsuleCollider.h>
 #include <colliders/ConvexShapeCollider.h>
 
 namespace mtrx

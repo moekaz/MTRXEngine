@@ -18,7 +18,7 @@ namespace mtrx
 
 		ConvexShapeCollider(const ColliderType& colliderType = ColliderType::ConvexShape, const glm::vec3& center = glm::vec3(), const glm::quat& orientation = glm::angleAxis(0.f, worldUp), const glm::vec3& scale = glm::vec3(1, 1, 1));
 		ConvexShapeCollider(const ColliderType& colliderType = ColliderType::ConvexShape, const Transform& transform = Transform());
-		~ConvexShapeCollider();
+		virtual ~ConvexShapeCollider();
 
 		virtual bool CheckCollision(const Collider&) override;
 		virtual bool RaycastCollision(const Ray&) override;
@@ -27,6 +27,7 @@ namespace mtrx
 		std::vector<glm::vec3*>* GetVertices() const;
 		glm::mat4 GetModelMatrix() const;
 
+		// TBD: This should not be here Remove most of these
 		// Used for GJK minkowski sum calculations
 		glm::vec3 Support(const ConvexShapeCollider&, const glm::vec3&) const;
 		glm::vec3& FarthestPointInDirection(const glm::vec3&) const;

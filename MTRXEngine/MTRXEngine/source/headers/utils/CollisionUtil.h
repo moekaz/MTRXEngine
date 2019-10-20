@@ -12,7 +12,6 @@ namespace mtrx
 {
 	// Forward declarations
 	class BoxCollider;
-	class MeshCollider;
 	class ConvexShapeCollider;
 
 	namespace CollisionUtil
