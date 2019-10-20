@@ -20,7 +20,7 @@ CollisionDemo::CollisionDemo() : Demo("COLLISION DEMO", 1366, 768)
 		float z = (float) mtrx::RandomInt(-30, 30);
 
 		mtrx::Rigidbody* body = new mtrx::Rigidbody(mass, false, glm::vec3(x, y, z), orientation1, glm::vec3(extents[0], extents[1], extents[2]), mtrx::GenerateCuboidIT(mass, extents));
-		mtrx::Collider* collider = new mtrx::BoxCollider(body->GetPosition());
+		mtrx::Collider* collider = new mtrx::SphereCollider(body->GetPosition());
 		body->SetAngularDamping(0.8f);
 		body->SetLinearDamping(0.99f);
 

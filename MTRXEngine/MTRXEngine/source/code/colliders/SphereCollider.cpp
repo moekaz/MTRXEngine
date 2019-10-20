@@ -5,8 +5,8 @@
 
 #include <PrecompiledHeader.h>
 #include <colliders/SphereCollider.h>
-#include <colliders/BoxCollider.h>
-#include <colliders/CapsuleCollider.h>
+//#include <colliders/BoxCollider.h>
+//#include <colliders/CapsuleCollider.h>
 
 namespace mtrx
 {
@@ -53,66 +53,5 @@ namespace mtrx
 		}
 
 		SetScale(glm::vec3(radius * 2, 0.f, 0.f));
-	}
-
-	SphereCollider::~SphereCollider()
-	{}
-
-	bool SphereCollider::CheckCollision(const Collider& col)
-	{
-		// TBD: Collision detection architecture is ugly and needs to be redone
-		bool isColliding; 
-		switch (col.GetColliderType())
-		{
-			case ColliderType::Sphere:
-			{
-				//std::cout << "SPHERE SPHERE COLLISON DETECTION" << std::endl;
-				const SphereCollider& collider = static_cast<const SphereCollider&>(col);
-				isColliding = CollisionUtil::SphereSphereCollision(GetPosition(), collider.GetPosition(), radius, collider.radius);
-				break;
-			}
-			case ColliderType::Box:
-			{
-				//std::cout << "SPHERE BOX COLLISION DETECTION" << std::endl;
-				const BoxCollider& collider = static_cast<const BoxCollider&>(col);
-				isColliding = CollisionUtil::SphereBoxCollision(GetPosition(), collider.GetPosition(), radius, collider.GetAxes(), collider.halfExtents);
-				break;
-			}
-			case ColliderType::Capsule:
-			{
-				//std::cout << "SPHERE CAPSULE COLLISION DETECTION" << std::endl;
-				const CapsuleCollider& collider = static_cast<const CapsuleCollider&>(col);
-				isColliding = CollisionUtil::SphereCapsuleCollision(GetPosition(), collider.GetPosition(), radius, collider.radii, collider.A, collider.B);
-				break;
-			}
-			case ColliderType::Mesh:
-			{
-				//std::cout << "SPHERE MESH COLLISION DETECTION" << std::endl;
-				break;
-			}
-			default:
-			{
-				std::cout << "SHIT HIT THE FAN" << std::endl;
-				isColliding = false;
-			}
-		}
-
-		return isColliding;
-	}
-
-	bool SphereCollider::RaycastCollision(const Ray& ray)
-	{
-		return CollisionUtil::RaySphereCollision(GetPosition(), radius, ray.startPosition, ray.direction);
-	}
-
-	float SphereCollider::GetSize()
-	{
-		return 1.333333f * PI * radius * radius * radius;
-	}
-
-	float SphereCollider::GetGrowth(const SphereCollider& sphereCollider)
-	{
-		SphereCollider collider = SphereCollider(*this, sphereCollider);
-		return collider.radius * collider.radius - radius * radius;
 	}
 }

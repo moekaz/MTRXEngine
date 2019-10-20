@@ -1,8 +1,3 @@
-/*
-	Author: Mohamed Kazma
-	Description: Capsule colliders
-*/
-
 #pragma once
 
 #include <Defs.h>
@@ -12,7 +7,7 @@
 
 namespace mtrx
 {
-	class CapsuleCollider : public Collider, IBoundingVolume
+	class CapsuleCollider : public Collider
 	{
 	public:
 		float radii;
@@ -20,16 +15,12 @@ namespace mtrx
 		glm::vec3 B;
 		float height;
 
+		// TBD: THIS IS PRETTY BROKEN NEEDS TO BE WORKED ON
 		CapsuleCollider(const glm::vec3& center = glm::vec3(), const glm::quat& orientation = glm::angleAxis(0.f, worldUp), const glm::vec3& scale = glm::vec3(1, 1, 1), float radii = 0.5f, float height = 1.f);
 		CapsuleCollider(const Transform& transform = Transform(), float radii = 0.5f, float height = 1.f);
-		CapsuleCollider(const CapsuleCollider& collider1, const CapsuleCollider& collider2);
-		~CapsuleCollider();
+		virtual ~CapsuleCollider() = default;
 
-		float GetGrowth(const CapsuleCollider& capsuleCollider);
-
-		virtual bool CheckCollision(const Collider&) override;
-		virtual bool RaycastCollision(const Ray&) override;
-		virtual float GetSize() override;
+		virtual bool RaycastCollision(const Ray& ray) override { return CollisionUtil::RayCapsuleCollision(ray.startPosition, ray.direction, A, B, radii); }
 
 		virtual inline void SetScale(const glm::vec3& scale) override
 		{
@@ -49,7 +40,7 @@ namespace mtrx
 			B += difference;
 		}
 
-		virtual inline void SetRotation(const glm::quat& orientation)
+		virtual inline void SetOrientation(const glm::quat& orientation) override
 		{
 			Collider::SetOrientation(orientation);
 			A = GetPosition() - GetUp() * (height / 2);

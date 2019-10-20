@@ -23,7 +23,4 @@ namespace mtrx
 	{
 		++id;
 	}
-
-	Collider::~Collider()
-	{}
 }

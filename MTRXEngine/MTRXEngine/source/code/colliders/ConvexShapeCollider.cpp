@@ -69,6 +69,7 @@ namespace mtrx
 			return false;
 	}
 
+	// TBD: Add an implementation of this
 	bool ConvexShapeCollider::RaycastCollision(const Ray& ray)
 	{
 		// A ray is a convex shape if we use it as a line
@@ -108,8 +109,8 @@ namespace mtrx
 			transformedVertices[i]->y = vec.y;
 			transformedVertices[i]->z = vec.z;
 		}
-		transformModified = false;
 
+		transformModified = false;
 		return &transformedVertices;
 	}
 }
