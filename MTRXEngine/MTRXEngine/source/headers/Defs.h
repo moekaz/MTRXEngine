@@ -11,7 +11,6 @@ namespace mtrx
 
 	static float gravity = 9.81f; // Constant value for gravity (not realistic value but games don't have realistic gravity
 	static std::string projectDir = std::filesystem::current_path().string(); // Gives us the project dir
-	static std::string shaderDir = projectDir + "/source/Renderer/shaders/"; // TBD: Might need to add this to renderer defs instead of mtrx defs
 
 	// World space vectors That we can use (Maybe we don't want to use this)
 	static glm::vec3 worldUp = glm::vec3(0.f, 1.f, 0.f);

@@ -12,16 +12,12 @@ namespace mtrx
 
 	void rb_StiffSpringForceGenerator::UpdateForces(Rigidbody* rb, float deltaTime)
 	{
-
-		// REDO DIS
-
-
 		// Check for infinite mass
 		if (rb->GetIsInfiniteMass())
 			return;
 
 		// Get the vector from the anchor to the particle connected to this string
-		glm::vec3 pos = rb->GetPosition();
+		glm::vec3& pos = rb->GetPosition();
 		glm::vec3& velocity = rb->GetVelocity();
 		pos -= *anchorPoint;
 
@@ -36,11 +32,10 @@ namespace mtrx
 		// Apply the differential equation to calculate the position
 		glm::vec3 finalPosition = (pos * cos(gamma * deltaTime) + c * sin(gamma * deltaTime)) * exp(-0.5f * springDamping * deltaTime);
 
-		// TBD: CHECK FOR 0s in division
 		// Try and get the acceleration knowing the position that it reaches 
-		// IS THIS CORRECT??
-		//glm::vec3 acceleration = (finalPosition - pos) * 1.f / GameTime::deltaTime * GameTime::deltaTime - velocity;
-		glm::vec3 acceleration = (finalPosition - pos) * 1.f / deltaTime * deltaTime - velocity * deltaTime;
+		glm::vec3 acceleration;
+		if(deltaTime != 0.f)
+			acceleration = (finalPosition - pos) * 1.f / deltaTime * deltaTime - velocity * deltaTime;
 
 		// Add the new force to the particle
 		rb->AddForce(acceleration * rb->GetMass());

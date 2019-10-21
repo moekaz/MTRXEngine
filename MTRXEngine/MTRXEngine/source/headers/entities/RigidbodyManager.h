@@ -39,6 +39,5 @@ namespace mtrx
 		virtual void Integrate(float deltaTime) override;
 		void IntegrateRigidbodies(float deltaTime);
 		void UpdateForces(float deltaTime);
-		void GenerateCollisions();
 	};
 }

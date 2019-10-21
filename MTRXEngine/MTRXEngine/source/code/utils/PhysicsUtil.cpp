@@ -180,7 +180,7 @@ namespace mtrx
 		float MinDistanceSquaredLineSegmentRay(const glm::vec3& A, const glm::vec3& B, const glm::vec3& rayStartPoint, const glm::vec3& rayDirection)
 		{
 			// Check if the line segment and ray intersect
-			if (CollisionUtil::LineSegmentRayCollision(A, B, rayStartPoint, rayDirection))
+			if (RaycastUtil::LineSegmentRayCollision(A, B, rayStartPoint, rayDirection))
 				return 0.0f;
 
 			// Calculate the minimum distance from the 3 points that we have and take the minimum one

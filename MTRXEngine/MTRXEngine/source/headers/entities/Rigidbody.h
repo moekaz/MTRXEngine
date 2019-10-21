@@ -5,8 +5,8 @@
 
 #pragma once
 
-#include <IIntegratable.h>
-#include <GameTime.h>
+#include <entities/IIntegratable.h>
+#include <math/GameTime.h>
 #include <entities/Body.h>
 
 namespace mtrx
@@ -34,14 +34,15 @@ namespace mtrx
 		// Calculate inverse inertia tensor in world space instead of object space  
 		inline glm::mat3 CalculateIITWorld() { return objToWorldMat * inverseInertiaTensor; }
 		
-		// Clear accumulators
-		void ClearAccumulators() override;
-
 		// Add Torque force
 		inline void AddTorque(const glm::vec3& torque) { accumTorque += torque; }
 
+		// Clear accumulators
+		void ClearAccumulators() override;
+	
 		// Update the values of the rigidbody
 		void Integrate(float deltaTime) override;
+
 		// IntegrateRotation
 		void IntegrateRotation();
 		// Calculate the transformation matrix

@@ -9,8 +9,11 @@
 #include "Camera.h"
 #include "Window.h"
 
-class SimpleRenderer {
+class SimpleRenderer 
+{
 public:
+	static std::string shaderDir;
+
 	SimpleRenderer(Window* window);
 	~SimpleRenderer();
 

@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <IIntegratable.h>
+#include <entities/IIntegratable.h>
 #include <GameTime.h>
 #include <entities/Body.h>
 

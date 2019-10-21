@@ -1,7 +1,6 @@
 #pragma once
 
-#include <RigidbodyManager.h>
-#include <ParticleManager.h>
+#include <entities/RigidbodyManager.h>
 #include <colliders/CollisionSystem.h>
 
 namespace mtrx

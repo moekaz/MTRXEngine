@@ -6,9 +6,11 @@
 #include <PrecompiledHeader.h>
 #include "SimpleRenderer.h"
 
+std::string SimpleRenderer::shaderDir = mtrx::projectDir + "/source/Renderer/shaders/";
+
 SimpleRenderer::SimpleRenderer(Window* window)
 	: renderWindow(window), camera(window, glm::vec3(0.f, 0.f, 2.f)), 
-	shader(std::string(mtrx::shaderDir + "BlinnPhong.vert").c_str(), std::string(mtrx::shaderDir + "BlinnPhong.frag").c_str())
+	shader(std::string(shaderDir + "BlinnPhong.vert").c_str(), std::string(shaderDir + "BlinnPhong.frag").c_str())
 {
 	Init();
 }

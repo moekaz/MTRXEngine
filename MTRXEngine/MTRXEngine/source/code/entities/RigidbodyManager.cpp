@@ -1,7 +1,8 @@
-#include "PrecompiledHeader.h"
-#include "RigidbodyManager.h"
+#include <PrecompiledHeader.h>
+#include <entities/RigidbodyManager.h>
 
 #define PHYSICS_TIMESTEP 0.01666666666f // 60fps timestep
+
 namespace mtrx
 {
 	RigidbodyManager::RigidbodyManager() : accumulator(0)
@@ -19,9 +20,6 @@ namespace mtrx
 			IntegrateRigidbodies(PHYSICS_TIMESTEP);
 			accumulator -= PHYSICS_TIMESTEP;
 		}
-
-		// Check for collisions
-		GenerateCollisions();
 	}
 
 	void RigidbodyManager::IntegrateRigidbodies(float deltaTime)
@@ -39,7 +37,4 @@ namespace mtrx
 			iter->second.UpdateForceGenerators(iter->first, deltaTime);
 		}
 	}
-
-	void RigidbodyManager::GenerateCollisions()
-	{}
 }

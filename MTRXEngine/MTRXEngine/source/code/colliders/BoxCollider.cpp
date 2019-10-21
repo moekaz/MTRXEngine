@@ -1,7 +1,5 @@
 #include <PrecompiledHeader.h>
 #include <colliders/BoxCollider.h>
-#include <colliders/SphereCollider.h>
-#include <colliders/CapsuleCollider.h>
 
 namespace mtrx
 {

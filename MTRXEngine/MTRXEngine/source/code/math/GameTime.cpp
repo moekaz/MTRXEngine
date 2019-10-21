@@ -4,7 +4,7 @@
 */
 
 #include <PrecompiledHeader.h>
-#include <GameTime.h>
+#include <math/GameTime.h>
 
 namespace mtrx
 {

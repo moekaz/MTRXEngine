@@ -2,8 +2,8 @@
 
 #include <Defs.h>
 #include <colliders/Collider.h>
-#include <utils/CollisionUtil.h>
-#include <IBoundingVolume.h>
+#include <utils/RaycastUtil.h>
+#include <colliders/IBoundingVolume.h>
 
 namespace mtrx
 {
@@ -20,7 +20,7 @@ namespace mtrx
 		CapsuleCollider(const Transform& transform = Transform(), float radii = 0.5f, float height = 1.f);
 		virtual ~CapsuleCollider() = default;
 
-		virtual bool RaycastCollision(const Ray& ray) override { return CollisionUtil::RayCapsuleCollision(ray.startPosition, ray.direction, A, B, radii); }
+		virtual bool RaycastCollision(const Ray& ray) override { return RaycastUtil::RayCapsuleCollision(ray.startPosition, ray.direction, A, B, radii); }
 
 		virtual inline void SetScale(const glm::vec3& scale) override
 		{

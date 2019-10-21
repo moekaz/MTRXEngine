@@ -4,9 +4,6 @@
 Demo::Demo(const char* appName, int width, int height) : application(appName, width, height), cursor(false)
 {}
 
-Demo::~Demo()
-{}
-
 void Demo::Update()
 {
 	// Update delta time
@@ -27,7 +24,6 @@ void Demo::Update()
 
 	// Update the rigidbody and the particle system
 	rbManager.Integrate(mtrx::GameTime::deltaTime);
-	pManager.PhysicsUpdate();
 
 	// Update renderer
 	application.renderer.Render(transformsToRender);

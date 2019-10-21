@@ -7,9 +7,6 @@ ProjectileDemo::ProjectileDemo() : Demo("PROJECTILE DEMO", 1366, 768), gravityGe
 	application.camera->GetTransform().SetPosition(glm::vec3(0, 0, 20.f));
 }
 
-ProjectileDemo::~ProjectileDemo()
-{}
-
 void ProjectileDemo::Update()
 {
 	// This is just a reference point in world space

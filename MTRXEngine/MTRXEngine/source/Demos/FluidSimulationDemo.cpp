@@ -5,7 +5,10 @@ FluidSimulationDemo::FluidSimulationDemo()
 {}
 
 void FluidSimulationDemo::Update()
-{}
+{
+
+	Demo::Update();
+}
 
 void FluidSimulationDemo::InputCheck()
 {}

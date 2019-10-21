@@ -1,8 +1,8 @@
 #pragma once
 
 #include <colliders/ConvexShapeCollider.h>
-#include <utils/CollisionUtil.h>
-#include <IBoundingVolume.h>
+#include <utils/RaycastUtil.h>
+#include <colliders/IBoundingVolume.h>
 #include <math/Transform.h>
 
 namespace mtrx
@@ -20,7 +20,7 @@ namespace mtrx
 		virtual bool CheckCollision(const mtrx::Collider& collider) override { return Collider::CheckCollision(collider); };
 		
 		// Raycast with box colliders
-		virtual inline bool RaycastCollision(const Ray& ray) override { return CollisionUtil::RayBoxCollision(ray.startPosition, ray.direction, GetPosition(), axes.axes, halfExtents); }
+		virtual inline bool RaycastCollision(const Ray& ray) override { return RaycastUtil::RayBoxCollision(ray.startPosition, ray.direction, GetPosition(), axes.axes, halfExtents); }
 		// length * breadth * height
 		virtual inline float GetSize() override { return halfExtents[0] * halfExtents[1] * halfExtents[2] * 8; }
 		virtual inline float GetGrowth(const BoxCollider& boxCollider) { return 0.f; }

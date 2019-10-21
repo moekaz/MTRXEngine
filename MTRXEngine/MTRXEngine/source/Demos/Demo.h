@@ -5,7 +5,6 @@
 #include <SimpleRenderer.h>
 #include <Window.h>
 #include <entities/RigidbodyManager.h>
-#include <ParticleManager.h>
 #include <Application.h>
 #include <math/GameTime.h>
 
@@ -17,11 +16,10 @@ public:
 
 	// Physics entity managers
 	mtrx::RigidbodyManager rbManager;
-	mtrx::ParticleManager pManager;
 	bool cursor;
 
 	Demo(const char* appName = "DEMO APPLICATION", int width = DEFAULT_WINDOW_WIDTH, int height = DEFAULT_WINDOW_HEIGHT);
-	~Demo();
+	~Demo() = default;
 
 	
 	void BaseInputCheck();

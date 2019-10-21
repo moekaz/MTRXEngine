@@ -14,7 +14,7 @@ public:
 	int projectileType;
 
 	ProjectileDemo();
-	~ProjectileDemo();
+	~ProjectileDemo() = default;
 
 	virtual void Update() override;
 	virtual void InputCheck() override;
