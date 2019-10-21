@@ -18,10 +18,8 @@ public:
 	
 	void Update(float deltaTime);
 
-	// TBD: Might need to do this a little better 
 	inline void SetCameraSensitivity(float sensitivity) { cameraSensitivity = sensitivity; }
 
-	// Getters
 	inline void PollOpenGlErrors()
 	{
 		// Poll for opengl errors

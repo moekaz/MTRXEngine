@@ -247,7 +247,7 @@
     <ClCompile Include="source\code\math\Vector3D.cpp" />
     <ClCompile Include="source\code\ParticleCollision.cpp" />
     <ClCompile Include="source\code\GameTime.cpp" />
-    <ClCompile Include="source\code\GJK.cpp" />
+    <ClCompile Include="source\code\utils\GJKUtil.cpp" />
     <ClCompile Include="source\code\PrecompiledHeader.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -275,6 +275,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\headers\utils\CollisionDetectionUtil.h" />
+    <ClInclude Include="source\headers\utils\GJKUtil.h" />
     <ClInclude Include="source\Renderer\CollisionDemoUI.h" />
     <ClInclude Include="source\Renderer\BuoyancyDemoUI.h" />
     <ClInclude Include="source\Demos\FluidSimulationDemo.h" />
@@ -535,7 +536,6 @@
     <ClInclude Include="source\headers\ParticleCollision.h" />
     <ClInclude Include="source\headers\Defs.h" />
     <ClInclude Include="source\headers\GameTime.h" />
-    <ClInclude Include="source\headers\GJK.h" />
     <ClInclude Include="source\headers\IIntegratable.h" />
     <ClInclude Include="source\headers\MTRX.h" />
     <ClInclude Include="source\headers\PrecompiledHeader.h" />

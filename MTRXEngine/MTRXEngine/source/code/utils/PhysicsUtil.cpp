@@ -203,48 +203,6 @@ namespace mtrx
 			return minDistance;
 		}
 
-		// TBD: This shouldn't be here
-		// Do a raycast without checking for filtered colliders
-		Collider* RaycastUnfiltered(const std::map<int, Collider*>& colliders, const glm::vec3& rayStartPosition, const glm::vec3& rayDirection)
-		{
-			Ray ray = Ray(rayStartPosition, rayDirection); // Create a ray in the direction
-			std::map<int, Collider*>::const_iterator iter;
-
-			for (iter = colliders.begin(); iter != colliders.end(); ++iter)
-			{
-				if (iter->second->RaycastCollision(ray))
-					return iter->second; // Do the raycast and check for that
-			}
-
-			return NULL;
-		}
-
-		// TBD: This shouldn't be here
-		// Do a raycast with some filtering of certain user defined filtered colliders
-		Collider* RaycastFiltered(const std::map<int, Collider*>& colliders, const std::vector<Collider*>& filterColliders, const glm::vec3& rayStartPosition, const glm::vec3& rayDirection)
-		{
-			Ray ray = Ray(rayStartPosition, rayDirection);  // Create a ray in the direction
-			std::map<int, Collider*> filterCollidersMap;   // Map of the filtered colliders
-			std::map<int, Collider*>::const_iterator iter; // Iterator of the collider map
-
-			// Store the vector in a map for quick access (makes filtering much more efficient)
-			for (unsigned int i = 0; i < filterColliders.size(); i++)
-			{
-				filterCollidersMap[filterColliders[i]->GetColliderId()] = filterColliders[i];
-			}
-
-			// Go through the colliders checking for raycast collisions after filtering out the ones we don't want
-			for (iter = colliders.begin(); iter != colliders.end(); ++iter)
-			{
-				if (filterCollidersMap.find(iter->first) != filterCollidersMap.end())
-					continue; // If it is filtered then skip the collision check
-				if (iter->second->RaycastCollision(ray))
-					return iter->second; // Do the raycast and check for that
-			}
-
-			return NULL;
-		}
-
 		// Slerp implementation which allows for linear interpolation of rotations
 		glm::quat Slerp(const glm::quat & firstRotation, const glm::quat & secondRotation, float t)
 		{

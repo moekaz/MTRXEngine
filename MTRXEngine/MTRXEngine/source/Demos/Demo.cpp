@@ -26,8 +26,6 @@ void Demo::Update()
 	application.window.Clear();
 
 	// Update the rigidbody and the particle system
-	// TBD: fix timestep
-	// TBH: The api should be changed here
 	rbManager.Integrate(mtrx::GameTime::deltaTime);
 	pManager.PhysicsUpdate();
 

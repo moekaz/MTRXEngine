@@ -7,11 +7,6 @@
 
 namespace mtrx
 {
-	// Forward declarations
-	//class SphereCollider;
-	//class CapsuleCollider;
-	//class MeshCollider;
-
 	class BoxCollider : public ConvexShapeCollider, public IBoundingVolume
 	{
 	public:

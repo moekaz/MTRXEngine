@@ -8,7 +8,7 @@ namespace mtrx
 	class BoxCollider;
 	class CapsuleCollider;
 
-	namespace CollisionDetectionUtil
+	namespace ColliderDetectionUtil
 	{
 		bool Collide(const Collider& collider1, const Collider& collider2);
 		bool SphereCollisionOptions(const SphereCollider& sphCollider, const Collider& collider);

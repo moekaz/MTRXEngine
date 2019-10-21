@@ -51,7 +51,6 @@
     <ClCompile Include="source\code\math\Vector3D.cpp" />
     <ClCompile Include="source\code\ParticleCollision.cpp" />
     <ClCompile Include="source\code\GameTime.cpp" />
-    <ClCompile Include="source\code\GJK.cpp" />
     <ClCompile Include="source\code\PrecompiledHeader.cpp" />
     <ClCompile Include="source\code\Ray.cpp" />
     <ClCompile Include="source\code\utils\CollisionUtil.cpp" />
@@ -69,6 +68,7 @@
     <ClCompile Include="source\Renderer\BuoyancyDemoUI.cpp" />
     <ClCompile Include="source\Renderer\CollisionDemoUI.cpp" />
     <ClCompile Include="source\code\utils\ColliderDetectionUtil.cpp" />
+    <ClCompile Include="source\code\utils\GJKUtil.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\Renderer\ProjectileDemoUI.h" />
@@ -327,7 +327,6 @@
     <ClInclude Include="source\headers\ParticleCollision.h" />
     <ClInclude Include="source\headers\Defs.h" />
     <ClInclude Include="source\headers\GameTime.h" />
-    <ClInclude Include="source\headers\GJK.h" />
     <ClInclude Include="source\headers\IIntegratable.h" />
     <ClInclude Include="source\headers\MTRX.h" />
     <ClInclude Include="source\headers\PrecompiledHeader.h" />
@@ -345,6 +344,7 @@
     <ClInclude Include="source\Renderer\BuoyancyDemoUI.h" />
     <ClInclude Include="source\Renderer\CollisionDemoUI.h" />
     <ClInclude Include="source\headers\utils\CollisionDetectionUtil.h" />
+    <ClInclude Include="source\headers\utils\GJKUtil.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="source\Libraries\glm\glm\detail\func_common.inl" />

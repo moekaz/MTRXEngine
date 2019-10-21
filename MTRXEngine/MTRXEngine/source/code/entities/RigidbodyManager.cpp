@@ -1,13 +1,10 @@
 #include "PrecompiledHeader.h"
 #include "RigidbodyManager.h"
 
-#define PHYSICS_TIMESTEP 0.01666666666f
+#define PHYSICS_TIMESTEP 0.01666666666f // 60fps timestep
 namespace mtrx
 {
 	RigidbodyManager::RigidbodyManager() : accumulator(0)
-	{}
-
-	RigidbodyManager::~RigidbodyManager()
 	{}
 
 	void RigidbodyManager::Integrate(float deltaTime)

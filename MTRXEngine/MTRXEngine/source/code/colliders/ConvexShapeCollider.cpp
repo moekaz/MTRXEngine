@@ -25,45 +25,15 @@ namespace mtrx
 		}
 	}
 
-	// Used for GJK collision
-	glm::vec3 ConvexShapeCollider::Support(const ConvexShapeCollider& convexCollider, const glm::vec3& direction) const 
-	{
-		const glm::vec3& p1 = FarthestPointInDirection(direction);
-		const glm::vec3& p2 = convexCollider.FarthestPointInDirection(-direction);
-		glm::vec3 p3 = p1 - p2;
-		return p3;
-	}
-
-	// Return farthest point with respect to a certain direction
-	glm::vec3& ConvexShapeCollider::FarthestPointInDirection(const glm::vec3& direction) const
-	{
-		float maxDot = -std::numeric_limits<float>::infinity();	// Max dot vector
-		glm::vec3* farthest = nullptr;	// Farthest vector
-
-		std::vector<glm::vec3*>* verts = GetVertices();
-		for (unsigned int i = 0; i < (*verts).size(); ++i)
-		{
-			float dot = glm::dot(*(*verts)[i], direction);
-			if (dot > maxDot)
-			{
-				maxDot = dot;
-				farthest = (*verts)[i];
-			}
-		}
-
-		// Check that we have a vertex to use
-		assert(farthest);
-		return *farthest;
-	}
-
 	// Convex shape collision detection
 	bool ConvexShapeCollider::CheckCollision(const Collider& col)
 	{
-		// TBD: Collision detection architecture is ugly and needs to be redone
 		if (col.IsConvex())
 		{
 			ConvexShapeCollider& collider = static_cast<ConvexShapeCollider&>(const_cast<Collider&>(col));
-			return CollisionUtil::ConvexShapeCollision(*this, collider);	// Collision
+			std::vector<glm::vec3*>* vertices1 = GetVertices();
+			std::vector<glm::vec3*>* vertices2 = collider.GetVertices();
+			return CollisionUtil::ConvexShapeCollision(vertices1->begin(), vertices1->end(), vertices2->begin(), vertices2->end());
 		}
 		else 
 			return false;
@@ -80,8 +50,8 @@ namespace mtrx
 		//convexLine.vertices.reserve(2);
 		//convexLine.vertices.emplace_back(&start);
 		//convexLine.vertices.emplace_back(&rayEndPoint);
-
-		return CollisionUtil::ConvexShapeCollision(*this, convexLine);	// Check with GJK 
+		return false;
+		//return CollisionUtil::ConvexShapeCollision(*this, convexLine);	// Check with GJK 
 	}
 
 	glm::mat4 ConvexShapeCollider::GetModelMatrix() const

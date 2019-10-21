@@ -1,9 +1,8 @@
-
 #pragma once
 
 #include <entities/Rigidbody.h>
 #include <forceGenerators/RigidbodyGenerators/rb_ForceGenerationRegistry.h>
-#include <IIntegratable.h>
+#include <entities/IIntegratable.h>
 #include <forceGenerators/RigidbodyGenerators/IRigidbodyForceGenerator.h>
 
 namespace mtrx
@@ -26,7 +25,7 @@ namespace mtrx
 		float accumulator;
 
 		RigidbodyManager();
-		~RigidbodyManager(); // TBD: Deallocation responsibility is it ours?
+		~RigidbodyManager() = default; // TBD: Deallocation responsibility is it ours?
 
 		inline void AddRigidbody(Rigidbody* rb) { rigidbodies.push_back(rb); }
 		inline void AddForceGenerator(Rigidbody* rb, IRigidbodyForceGenerator* forceGenerator) { forceGenerators[rb].AddForceGenerator(forceGenerator); }
@@ -40,6 +39,6 @@ namespace mtrx
 		virtual void Integrate(float deltaTime) override;
 		void IntegrateRigidbodies(float deltaTime);
 		void UpdateForces(float deltaTime);
-		void GenerateCollisions(); // TBD: Might want to keep this at the level of the collision detection system instead of here
+		void GenerateCollisions();
 	};
 }

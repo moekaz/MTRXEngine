@@ -1,5 +1,5 @@
 #include <PrecompiledHeader.h>
-#include <utils/CollisionDetectionUtil.h>
+#include <utils/ColliderDetectionUtil.h>
 #include <colliders/Collider.h>
 #include <colliders/SphereCollider.h>
 #include <colliders/BoxCollider.h>
@@ -7,7 +7,7 @@
 
 namespace mtrx
 {
-	namespace CollisionDetectionUtil
+	namespace ColliderDetectionUtil
 	{
 		bool Collide(const Collider& collider1, const Collider& collider2)
 		{
@@ -63,7 +63,10 @@ namespace mtrx
 				case ColliderType::Box:
 				{
 					std::cout << "box box" << std::endl;
-					return CollisionUtil::BoxBoxCollision(boxCollider, static_cast<const BoxCollider&>(collider));
+					const BoxCollider& bxCollider = static_cast<const BoxCollider&>(collider);
+					std::vector<glm::vec3*>* vertices1 = boxCollider.GetVertices();
+					std::vector<glm::vec3*>* vertices2 = bxCollider.GetVertices();
+					return CollisionUtil::BoxBoxCollision(vertices1->begin(), vertices1->end(), vertices2->begin(), vertices2->end());
 				}
 				case ColliderType::Capsule:
 				{
@@ -80,7 +83,7 @@ namespace mtrx
 		{
 			switch (collider.GetColliderType())
 			{
-				case ColliderType::Sphere: // Extra switch to avoid duplication TBD: maybe might need to do smthg a little better
+				case ColliderType::Sphere: // Extra switch to avoid duplication TBD: maybe might need to do something a little better
 				{
 					std::cout << "capsule sphere" << std::endl;
 					return SphereCollisionOptions(static_cast<const SphereCollider&>(collider), capCollider);

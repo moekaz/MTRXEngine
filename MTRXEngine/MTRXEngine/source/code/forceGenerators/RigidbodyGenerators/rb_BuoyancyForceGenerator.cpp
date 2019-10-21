@@ -31,7 +31,6 @@ namespace mtrx
 
 		if (distLiquid < bodyHalfExtent) // partially submerged
 		{
-			// TBD: This should be replaced with some collision detection information (might be replaced with polygon calculation)
 			glm::vec3 bottomPt = rb->GetPosition() - glm::vec3(0, bodyHalfExtent, 0);
 			float ratioDisplaced = (liquidLevel - bottomPt.y) / (2.f * bodyHalfExtent);
 			volumeDisplaced = this->volumeBody * ratioDisplaced;
