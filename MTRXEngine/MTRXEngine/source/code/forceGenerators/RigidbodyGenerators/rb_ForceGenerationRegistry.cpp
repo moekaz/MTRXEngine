@@ -3,11 +3,13 @@
 
 namespace mtrx
 {
-	rb_ForceGenerationRegistry::rb_ForceGenerationRegistry()
-	{}
-
 	rb_ForceGenerationRegistry::~rb_ForceGenerationRegistry()
-	{}
+	{
+		//for (auto iter = forceGenerators.begin(); iter != forceGenerators.end(); ++iter)
+		//{
+		//	delete *iter;
+		//}
+	}
 
 	void rb_ForceGenerationRegistry::RemoveForceGenerator(const IRigidbodyForceGenerator* forceGenerator)
 	{

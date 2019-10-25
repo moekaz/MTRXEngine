@@ -13,7 +13,7 @@ void main()
 
 	float diffuse = max(dot(-lightDir, WorldNormal), 0.0);
 	vec3 albedo = vec3(1.0, 0.0, 0.0);
-	vec3 ambient = albedo * 0.2f;
+	vec3 ambient = albedo * 0.3f;
 
 	FragColour = vec4((albedo * diffuse) + ambient, 1.0);
 }

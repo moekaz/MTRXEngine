@@ -31,16 +31,16 @@ namespace mtrx
 			return false;
 		}
 
-		// TBD: THIS IS NOT CORRECT CHANGE THISSSSSS!!!!
 		// Line segment ray collision detection
 		bool LineSegmentRayCollision(const glm::vec3& A, const glm::vec3& B, const glm::vec3& rayStartPoint, const glm::vec3& rayDirection)
 		{
-			// Hacky solution but it works for the moment MIGHT CHANGE THIS LATER
+			// TBD: Find a better solution for actual ray segement collision detection 
+			//Hacky solution but it works for the moment MIGHT CHANGE THIS LATER
 			// Check if they intersect first (make the longest line segment possible largest value for a float)
-			glm::vec3 rayEndPoint = glm::normalize(rayDirection) * std::numeric_limits<float>::infinity();
+			glm::vec3 rayEndPoint = glm::fastNormalize(rayDirection) * MAX_RAY_SIZE;
 
 			// Check for an intersection 
-			return PhysicsUtil::MinDistanceSquaredTwoSegments(A, B, rayStartPoint, rayEndPoint) == std::numeric_limits<float>::epsilon();
+			return PhysicsUtil::MinDistanceSquaredTwoSegments(A, B, rayStartPoint, rayEndPoint) <= std::numeric_limits<float>::epsilon();
 		}
 
 		Collider* RaycastUnfiltered(const std::map<int, Collider*>& colliders, const glm::vec3& rayStartPosition, const glm::vec3& rayDirection)
@@ -54,7 +54,7 @@ namespace mtrx
 					return iter->second; // Do the raycast and check for that
 			}
 
-			return NULL;
+			return nullptr;
 		}
 
 		Collider* RaycastFiltered(const std::map<int, Collider*>& colliders, const std::vector<Collider*>& filterColliders, const glm::vec3& rayStartPosition, const glm::vec3& rayDirection)
@@ -78,7 +78,7 @@ namespace mtrx
 					return iter->second; // Do the raycast and check for that
 			}
 
-			return NULL;
+			return nullptr;
 		}
 	}
 }

@@ -15,9 +15,6 @@ SimpleRenderer::SimpleRenderer(Window* window)
 	Init();
 }
 
-SimpleRenderer::~SimpleRenderer()
-{}
-
 void SimpleRenderer::Render(std::unordered_set<mtrx::Transform*>& transforms)
 {
 	// Shader setup
@@ -115,6 +112,5 @@ glm::mat4 SimpleRenderer::ConstructModelMatrix(const mtrx::Transform& transform)
 	glm::mat4 scaleMatrix = glm::scale(glm::mat4(1.0f), transform.GetScale());
 
 	// ISROT
-	glm::mat4 result = translateMatrix * rotateMatrix * scaleMatrix;
-	return result;
+	return translateMatrix * rotateMatrix * scaleMatrix;
 }

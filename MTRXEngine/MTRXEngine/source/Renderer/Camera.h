@@ -22,7 +22,7 @@ public:
 
 	// Camera matrix calculations
 	inline glm::mat4 GetProjectionMatrix() { return glm::perspective(fov, renderWindow->GetAspectRatio(), nearPlane, farPlane); }
-	inline glm::mat4 GetViewMatrix() { return glm::lookAt(transform.GetPosition(), transform.GetPosition() + GetForward(), GetUp()); }
+	inline glm::mat4 GetViewMatrix() { return glm::lookAt(transform.GetPosition(), transform.GetPosition() + GetForward() * 4.f, GetUp()); }
 
 	void Pitch(float angle);
 	void Yaw(float angle);

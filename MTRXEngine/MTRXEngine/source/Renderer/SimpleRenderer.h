@@ -15,7 +15,7 @@ public:
 	static std::string shaderDir;
 
 	SimpleRenderer(Window* window);
-	~SimpleRenderer();
+	~SimpleRenderer() = default;
 
 	void Render(std::unordered_set<mtrx::Transform*>& transforms);
 	glm::mat4 ConstructModelMatrix(const mtrx::Transform& transform);

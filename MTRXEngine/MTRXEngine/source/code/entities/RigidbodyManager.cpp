@@ -8,6 +8,14 @@ namespace mtrx
 	RigidbodyManager::RigidbodyManager() : accumulator(0)
 	{}
 
+	RigidbodyManager::~RigidbodyManager()
+	{
+		//for (auto iter = rigidbodies.begin(); iter != rigidbodies.end(); ++iter)
+		//{
+		//	delete *iter;
+		//}
+	}
+
 	void RigidbodyManager::Integrate(float deltaTime)
 	{
 		// Update the forces of the rigidbodies

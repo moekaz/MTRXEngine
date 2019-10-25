@@ -15,6 +15,7 @@
 #include <unordered_set>
 #include <stack>
 #include <fstream>
+#include <array>
 
 // SpdLog
 #include <spdlog/spdlog.h>

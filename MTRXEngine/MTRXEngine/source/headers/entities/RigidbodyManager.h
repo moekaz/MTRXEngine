@@ -25,8 +25,9 @@ namespace mtrx
 		float accumulator;
 
 		RigidbodyManager();
-		~RigidbodyManager() = default; // TBD: Deallocation responsibility is it ours?
+		~RigidbodyManager(); // TBD: Deallocation responsibility is it ours?
 
+		// TBD: Figure out allocation and deallocation of memory responsibilities
 		inline void AddRigidbody(Rigidbody* rb) { rigidbodies.push_back(rb); }
 		inline void AddForceGenerator(Rigidbody* rb, IRigidbodyForceGenerator* forceGenerator) { forceGenerators[rb].AddForceGenerator(forceGenerator); }
 		inline void RemoveForceGenerator(Rigidbody* rb, IRigidbodyForceGenerator* generator) { forceGenerators[rb].RemoveForceGenerator(generator); }
@@ -34,6 +35,9 @@ namespace mtrx
 		{
 			rigidbodies.remove(rb); 
 			forceGenerators.erase(rb);
+			
+			// Not sure i should be doing this
+			//delete rb;
 		}
 
 		virtual void Integrate(float deltaTime) override;

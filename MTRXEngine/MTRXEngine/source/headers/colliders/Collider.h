@@ -24,9 +24,9 @@ namespace mtrx
 		inline const ColliderType& GetColliderType() const { return type; }
 		inline const int GetColliderId() const { return colliderId; }
 		inline const bool IsConvex() const { return isConvexShape; }
-		inline glm::vec3 GetForward() { return glm::fastNormalize(transform.GetOrientation() * axes[0]); }
-		inline glm::vec3 GetSide() { return glm::fastNormalize(transform.GetOrientation() * axes[1]); }
-		inline glm::vec3 GetUp() { return glm::fastNormalize(transform.GetOrientation() * axes[2]); }
+		inline glm::vec3 GetForward() const { return glm::fastNormalize(transform.GetOrientation() * axes[0]); }
+		inline glm::vec3 GetSide() const { return glm::fastNormalize(transform.GetOrientation() * axes[1]); }
+		inline glm::vec3 GetUp() const { return glm::fastNormalize(transform.GetOrientation() * axes[2]); }
 
 		// Setters
 		virtual inline void SetPosition(const glm::vec3& center) { transform.SetPosition(center); }

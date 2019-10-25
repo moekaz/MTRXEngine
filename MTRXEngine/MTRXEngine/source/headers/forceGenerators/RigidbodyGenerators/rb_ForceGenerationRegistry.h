@@ -1,8 +1,3 @@
-/*
-	Author: Mohamed Kazma
-	Description: Allows us to have an API for force generators
-*/
-
 #pragma once
 
 #include <forceGenerators/RigidbodyGenerators/IRigidbodyForceGenerator.h>
@@ -12,8 +7,8 @@ namespace mtrx
 	class rb_ForceGenerationRegistry
 	{
 	public:
-		rb_ForceGenerationRegistry();
-		~rb_ForceGenerationRegistry();
+		rb_ForceGenerationRegistry() = default;
+		~rb_ForceGenerationRegistry(); // TBD: Should I handle deallocating force generators??
 
 		inline void AddForceGenerator(IRigidbodyForceGenerator* forceGenerator) { forceGenerators.push_back(forceGenerator); }
 		inline void RemoveForceGenerator(const int index) { forceGenerators.erase(forceGenerators.begin() + index); }
