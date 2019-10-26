@@ -18,14 +18,40 @@ namespace mtrx
 			return b * (glm::dot(c, a)) - a * (glm::dot(c, b));
 		}
 
+		bool LineIntersect(const glm::vec3& a, const glm::vec3& b, const glm::vec3& c, const glm::vec3& d, glm::vec3& intersection)
+		{
+
+			return false;
+		}
+
+		bool LineSegmentIntersect(const glm::vec3& a, const glm::vec3& b, const glm::vec3& c, const glm::vec3& d, glm::vec3& intersection)
+		{
+
+
+			return false;
+		}
+
+		bool LineRayIntersect(const glm::vec3& a, const glm::vec3& b, const glm::vec3& rayStart, const glm::vec3& rayDirection, glm::vec3& intersection)
+		{
+
+
+			return false;
+		}
+
+		bool LineSegmentRayIntersect(const glm::vec3& a, const glm::vec3& b, const glm::vec3& c, const glm::vec3& d, glm::vec3& intersection)
+		{
+
+
+			return false;
+		}
+
 		// Finding the minimum distance between infinite lines
-		float MinDistanceTwoLines(const glm::vec3& A, const glm::vec3& B, const glm::vec3& C, const glm::vec3& D)
+		float MinDistanceTwoLines(const glm::vec3& A, const glm::vec3& B, const glm::vec3& C, const glm::vec3& D, glm::vec3* intersection)
 		{
 			glm::vec3 l1 = B - A; // First direction vector
 			glm::vec3 l2 = D - C; // Second direction vector
 
 			glm::vec3 normalPlane = glm::normalize(glm::cross(l1, l2));
-
 			if (normalPlane == glm::vec3())
 			{
 				// They are parallel so choose any new vector that is not parallel to one of them and do the cross product for that it should be parallel to both
@@ -172,30 +198,46 @@ namespace mtrx
 			return minDistance;
 		}
 
-		float MinDistanceSquaredLineSegmentRay(const glm::vec3& A, const glm::vec3& B, const glm::vec3& rayStartPoint, const glm::vec3& rayDirection)
+		float MinDistanceSquaredLineRay(const glm::vec3& A, const glm::vec3& B, const glm::vec3& rayStart, const glm::vec3& rayDirection, glm::vec3* closestPoint)
 		{
-			// Check if the line segment and ray intersect
-			if (RaycastCollisionUtil::LineSegmentRayCollision(A, B, rayStartPoint, rayDirection))
-				return 0.0f;
+			glm::vec3 rayPoint = rayStart + rayDirection;
+			MinDistanceTwoLines(A, B, rayStart, rayPoint, closestPoint);
 
-			// Calculate the minimum distance from the 3 points that we have and take the minimum one
-			float minimumDistances[3];
-			glm::vec3 closestPoint;
-
-			minimumDistances[0] = MinDistanceSquaredPointRay(A, rayStartPoint, rayDirection, closestPoint);
-			minimumDistances[1] = MinDistanceSquaredPointRay(B, rayStartPoint, rayDirection, closestPoint);
-			minimumDistances[2] = MinDistanceSquaredPointSegment(A, B, rayStartPoint, closestPoint);
-
-			float minDistance = minimumDistances[0];
-
-			// Find the minimum of the 3 and that should be the least distance
-			for (int i = 1; i < 3; ++i)
+			// The point will either be in front of the start of behind which makes this check more than enough
+			if (closestPoint == nullptr || glm::dot((*closestPoint - rayStart), rayDirection) <= 0)
 			{
-				if (minimumDistances[i] < minDistance)
-					minDistance = minimumDistances[i];
+				closestPoint = (glm::vec3*)&rayStart;
 			}
 
-			return minDistance;
+			return 0.f;
+		}
+
+		float MinDistanceSquaredLineSegmentRay(const glm::vec3& A, const glm::vec3& B, const glm::vec3& rayStartPoint, const glm::vec3& rayDirection)
+		{
+			// 
+
+			//// Check if the line segment and ray intersect
+			//if (RaycastCollisionUtil::LineSegmentRayCollision(A, B, rayStartPoint, rayDirection))
+			//	return 0.0f;
+
+			//// Calculate the minimum distance from the 3 points that we have and take the minimum one
+			//float minimumDistances[3];
+			//glm::vec3 closestPoint;
+
+			//minimumDistances[0] = MinDistanceSquaredPointRay(A, rayStartPoint, rayDirection, closestPoint);
+			//minimumDistances[1] = MinDistanceSquaredPointRay(B, rayStartPoint, rayDirection, closestPoint);
+			//minimumDistances[2] = MinDistanceSquaredPointSegment(A, B, rayStartPoint, closestPoint);
+
+			//float minDistance = minimumDistances[0];
+
+			//// Find the minimum of the 3 and that should be the least distance
+			//for (int i = 1; i < 3; ++i)
+			//{
+			//	if (minimumDistances[i] < minDistance)
+			//		minDistance = minimumDistances[i];
+			//}
+
+			//return minDistance;
 		}
 
 		glm::quat Slerp(const glm::quat& firstRotation, const glm::quat& secondRotation, float t)

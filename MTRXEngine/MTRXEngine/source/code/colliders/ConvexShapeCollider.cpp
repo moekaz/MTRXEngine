@@ -28,11 +28,12 @@ namespace mtrx
 	// Convex shape collision detection
 	bool ConvexShapeCollider::CheckCollision(const Collider& col)
 	{
+		// TBD: THIS IS NOT GOOD AT ALL (AS IN WILL BREAK COLLISION)
 		if (col.IsConvex())
 		{
 			ConvexShapeCollider& collider = static_cast<ConvexShapeCollider&>(const_cast<Collider&>(col));
-			std::vector<glm::vec3*>* vertices1 = GetVertices();
-			std::vector<glm::vec3*>* vertices2 = collider.GetVertices();
+			auto vertices1 = GetVertices();
+			auto vertices2 = collider.GetVertices();
 			return CollisionUtil::ConvexShapeCollision(vertices1->begin(), vertices1->end(), vertices2->begin(), vertices2->end());
 		}
 		else 
@@ -47,9 +48,9 @@ namespace mtrx
 		ConvexShapeCollider convexLine = ConvexShapeCollider(ColliderType::ConvexShape, (rayEndPoint - ray.startPosition) * 0.5f);	// Setup the convex shape
 
 		std::array<glm::vec3*, 2> verts1 = { const_cast<glm::vec3*>(&ray.startPosition), &rayEndPoint };
-		std::vector<glm::vec3*>* verts2 = GetVertices();
+		auto verts2 = GetVertices();
 
-		return CollisionUtil::ConvexShapeCollision(verts1.begin(), verts1.begin(), verts2->begin(), verts2->end());	// Check with GJK 
+		return CollisionUtil::ConvexShapeCollision(verts1.begin(), verts1.begin(), verts2->begin(), verts2->end());
 	}
 
 	glm::mat4 ConvexShapeCollider::GetModelMatrix() const

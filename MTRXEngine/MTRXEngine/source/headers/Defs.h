@@ -76,5 +76,13 @@ namespace mtrx
 			0.f, 0.f, 0.0833333333f * mass * (extents[0] * extents[0] + extents[1] * extents[1]));
 	}
 
+	static glm::mat3 GenerateSphereIT(float mass, float radius)
+	{
+		float diagonal = 0.4f * mass * radius;
+		return glm::mat3(diagonal, 0.f, 0.f,
+			0.f, diagonal, 0.f,
+			0.f, 0.f, diagonal);
+	}
+
 	// TBD: Add more inertia tensors TBA 
 }

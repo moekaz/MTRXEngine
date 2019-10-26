@@ -34,20 +34,22 @@ namespace mtrx
 		bool LineSegmentRayCollision(const glm::vec3& A, const glm::vec3& B, const glm::vec3& rayStartPoint, const glm::vec3& rayDirection)
 		{
 			// TBD: Find a better solution for actual ray segment collision detection
-			glm::vec3 diff = A - rayStartPoint;
-			glm::vec3 ba = A - B;
+			// Do ray line collision check and then find if the point of intersection exists in the line
+			//glm::vec3 diff = A - rayStartPoint;
+			//glm::vec3 ba = A - B;
 
-			float val = ba.y * rayDirection.x - ba.x * rayDirection.y;
-			if (val <= std::numeric_limits<float>::epsilon())
-				return false;
+			//float val = ba.y * rayDirection.x - ba.x * rayDirection.y;
+			//if (val <= std::numeric_limits<float>::epsilon())
+			//	return false;
 
-			float t2 = (diff.y * rayDirection.x - diff.x * rayDirection.y) / val;
-			if (t2 < 0 || t2 > 1)
-				return false;
+			//float t2 = (diff.y * rayDirection.x - diff.x * rayDirection.y) / val;
+			//if (t2 < 0 || t2 > 1)
+			//	return false;
 
-			float t1 = 0;
-			if (t1 < 0)
-				return false;
+			//// NOT DONE
+			//float t1 = 0;
+			//if (t1 < 0)
+			//	return false;
 
 			return true;
 		}

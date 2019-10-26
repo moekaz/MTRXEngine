@@ -64,8 +64,8 @@ namespace mtrx
 				{
 					std::cout << "box box" << std::endl;
 					const BoxCollider& bxCollider = static_cast<const BoxCollider&>(collider);
-					std::vector<glm::vec3*>* vertices1 = boxCollider.GetVertices();
-					std::vector<glm::vec3*>* vertices2 = bxCollider.GetVertices();
+					auto vertices1 = boxCollider.GetVertices();
+					auto vertices2 = bxCollider.GetVertices();
 					return CollisionUtil::BoxBoxCollision(vertices1->begin(), vertices1->end(), vertices2->begin(), vertices2->end());
 				}
 				case ColliderType::Capsule:
