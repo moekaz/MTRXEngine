@@ -9,7 +9,7 @@ namespace mtrx
 
 	BoxCollider::BoxCollider(const Transform& transform) :
 		ConvexShapeCollider(ColliderType::Box, transform), 
-		halfExtents(glm::vec3(0.5f * transform.GetScale().x, 0.5f * transform.GetScale().y, 0.5f * transform.GetScale().z))
+		halfExtents { 0.5f * transform.GetScale().x, 0.5f * transform.GetScale().y, 0.5f * transform.GetScale().z }
 	{
 		// Vertices of a box
 		vertices =

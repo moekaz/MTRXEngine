@@ -38,7 +38,8 @@ void SimpleRenderer::Render(std::unordered_set<mtrx::Transform*>& transforms)
 void SimpleRenderer::Init()
 {
 	// Generate Cube VAO, and VBO
-	float vertices[] = {
+	float vertices[] = 
+	{
 		// positions          // normals
 		-0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
 		 0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,

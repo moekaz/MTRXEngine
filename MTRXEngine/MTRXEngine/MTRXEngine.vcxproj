@@ -159,7 +159,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="source\code\utils\ColliderDetectionUtil.cpp" />
-    <ClCompile Include="source\code\utils\RaycastUtil.cpp" />
+    <ClCompile Include="source\code\utils\RaycastCollisionUtil.cpp" />
     <ClCompile Include="source\Renderer\CollisionDemoUI.cpp" />
     <ClCompile Include="source\Renderer\BuoyancyDemoUI.cpp" />
     <ClCompile Include="source\Demos\FluidSimulationDemo.cpp" />
@@ -262,7 +262,7 @@
   <ItemGroup>
     <ClInclude Include="source\headers\utils\ColliderDetectionUtil.h" />
     <ClInclude Include="source\headers\utils\GJKUtil.h" />
-    <ClInclude Include="source\headers\utils\RaycastUtil.h" />
+    <ClInclude Include="source\headers\utils\RaycastCollisionUtil.h" />
     <ClInclude Include="source\Renderer\CollisionDemoUI.h" />
     <ClInclude Include="source\Renderer\BuoyancyDemoUI.h" />
     <ClInclude Include="source\Demos\FluidSimulationDemo.h" />

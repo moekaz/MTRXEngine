@@ -54,7 +54,7 @@
     <ClCompile Include="source\code\math\GameTime.cpp" />
     <ClCompile Include="source\code\math\Ray.cpp" />
     <ClCompile Include="source\code\entities\RigidbodyManager.cpp" />
-    <ClCompile Include="source\code\utils\RaycastUtil.cpp" />
+    <ClCompile Include="source\code\utils\RaycastCollisionUtil.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\Renderer\ProjectileDemoUI.h" />
@@ -323,7 +323,7 @@
     <ClInclude Include="source\headers\colliders\IBoundingVolume.h" />
     <ClInclude Include="source\headers\entities\IIntegratable.h" />
     <ClInclude Include="source\headers\utils\ColliderDetectionUtil.h" />
-    <ClInclude Include="source\headers\utils\RaycastUtil.h" />
+    <ClInclude Include="source\headers\utils\RaycastCollisionUtil.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="source\Libraries\glm\glm\detail\func_common.inl" />

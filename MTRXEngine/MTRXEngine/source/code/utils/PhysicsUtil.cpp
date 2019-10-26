@@ -12,7 +12,6 @@ namespace mtrx
 {
 	namespace PhysicsUtil
 	{
-		// Optimizes 2 cross product calls into 2 dot product ones
 		glm::vec3 TripleCross(const glm::vec3& a, const glm::vec3& b, const glm::vec3& c)
 		{
 			// (A x B) x C = B(C . A) - A(C . B)
@@ -37,7 +36,6 @@ namespace mtrx
 			return abs(glm::dot(C - A, normalPlane));
 		}
 
-		// Finding the minimum distance between 2 line segments
 		float MinDistanceSquaredTwoSegments(const glm::vec3& A, const glm::vec3& B, const glm::vec3& C, const glm::vec3& D)
 		{
 			glm::vec3 u = B - A;
@@ -123,7 +121,6 @@ namespace mtrx
 			return glm::dot(distanceVec, distanceVec);
 		}
 
-		// Minimum distance between a point and a line segment
 		float MinDistanceSquaredPointSegment(const glm::vec3& A, const glm::vec3& B, const glm::vec3& C, glm::vec3& closest)
 		{
 			glm::vec3 AB = B - A;
@@ -151,7 +148,6 @@ namespace mtrx
 			}
 		}
 
-		// Find the minimum distance from a point to the ray
 		float MinDistanceSquaredPointRay(const glm::vec3& point, const glm::vec3& startPointRay, const glm::vec3& rayDirection, glm::vec3& closestPoint)
 		{
 			float minDistance = 0;							   // the minimum distance
@@ -170,17 +166,16 @@ namespace mtrx
 			{
 				// Clamp onto the ray since it is infinite
 				minDistance = distanceSquaredPointRay - (dot * dot);
-				closestPoint = glm::normalize(rayDirection) * dot; // If we need it
+				closestPoint = glm::fastNormalize(rayDirection) * dot; // If we need it
 			}
 
 			return minDistance;
 		}
 
-		// Minimum distance between a line segment and a ray
 		float MinDistanceSquaredLineSegmentRay(const glm::vec3& A, const glm::vec3& B, const glm::vec3& rayStartPoint, const glm::vec3& rayDirection)
 		{
 			// Check if the line segment and ray intersect
-			if (RaycastUtil::LineSegmentRayCollision(A, B, rayStartPoint, rayDirection))
+			if (RaycastCollisionUtil::LineSegmentRayCollision(A, B, rayStartPoint, rayDirection))
 				return 0.0f;
 
 			// Calculate the minimum distance from the 3 points that we have and take the minimum one
@@ -203,29 +198,28 @@ namespace mtrx
 			return minDistance;
 		}
 
-		// Slerp implementation which allows for linear interpolation of rotations
-		glm::quat Slerp(const glm::quat & firstRotation, const glm::quat & secondRotation, float t)
+		glm::quat Slerp(const glm::quat& firstRotation, const glm::quat& secondRotation, float t)
 		{
-			// if the factor is bad then return an identity quaternion
-			if (t < 0 || t > 1)
-				return glm::quat();
-			return glm::mix(firstRotation, secondRotation, t);
+			if (t < 0 || t > 1) // If the value of t is off return the destination rotation
+				return secondRotation;
+
+			return glm::slerp(firstRotation, secondRotation, t);
 		}
 
-		// Lerping which is linear interpolation between 2 points
-		glm::vec3 Lerp(const glm::vec3 & startingPosition, const glm::vec3 & destination, float t)
+		glm::vec3 Lerp(const glm::vec3& startingPosition, const glm::vec3& destination, float t)
 		{
-			// If the factor is wrong return the destination
-			if (t < 0 || t > 1)
+			if (t < 0 || t > 1) // If the factor is wrong return the destination
 				return destination;
-			return (1 - t) * startingPosition + t * destination;
+
+			//return (1 - t) * startingPosition + t * destination;
+			return startingPosition + (destination - startingPosition) * t;
 		}
 
-		// Easing a value according to a sin curve (in this case at least)
 		float Ease(float t)
 		{
 			if (!t)
-				return NULL;
+				return 1;
+
 			return (float)(sin(t * PI - PI / 2.0f) + 1.0f) / 2.0f;
 		}
 	}

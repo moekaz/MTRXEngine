@@ -41,16 +41,15 @@ namespace mtrx
 
 	bool ConvexShapeCollider::RaycastCollision(const Ray& ray)
 	{
-		// TBD: ConvexShapeCollision template is broken so can't implement this
-		// A ray is a convex shape if we use it as a line
+		// TBD: LOOK INTO WHETHER WE CAN DO A PROPER RAYCAST ON ANY CONVEX SHAPE
+		// A ray is a convex shape if we use it as a line segment
 		glm::vec3 rayEndPoint = glm::fastNormalize(ray.direction) * MAX_RAY_SIZE;	// Get the end point of the ray
 		ConvexShapeCollider convexLine = ConvexShapeCollider(ColliderType::ConvexShape, (rayEndPoint - ray.startPosition) * 0.5f);	// Setup the convex shape
 
 		std::array<glm::vec3*, 2> verts1 = { const_cast<glm::vec3*>(&ray.startPosition), &rayEndPoint };
-	
 		std::vector<glm::vec3*>* verts2 = GetVertices();
-		return false;
-		//return CollisionUtil::ConvexShapeCollision(begin(verts1), end(verts1), verts2->begin(), verts2->end());	// Check with GJK 
+
+		return CollisionUtil::ConvexShapeCollision(verts1.begin(), verts1.begin(), verts2->begin(), verts2->end());	// Check with GJK 
 	}
 
 	glm::mat4 ConvexShapeCollider::GetModelMatrix() const
@@ -72,7 +71,6 @@ namespace mtrx
 		glm::mat4 modelMatrix = GetModelMatrix();
 		for (int i = 0; i < vertices.size(); ++i)
 		{
-			// TBD: WE CAN MAKE THIS A GLM::VEC4 ARRAY INSTEAD 
 			glm::vec4 vec = modelMatrix * glm::vec4(*vertices[i], 1.f);
 			transformedVertices[i]->x = vec.x;
 			transformedVertices[i]->y = vec.y;

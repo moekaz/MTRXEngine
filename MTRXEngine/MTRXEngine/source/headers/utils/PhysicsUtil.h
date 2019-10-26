@@ -7,7 +7,7 @@
 
 #include <math/Ray.h>
 #include <utils/CollisionUtil.h>
-#include <utils/RaycastUtil.h>
+#include <utils/RaycastCollisionUtil.h>
 #include <colliders/Collider.h>
 
 namespace mtrx

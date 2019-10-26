@@ -21,9 +21,9 @@ namespace mtrx
 	class GJKUtil
 	{
 	public:
-		template<typename Iterator,
-			typename = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator>::value_type>::value, Iterator>>
-		static bool Collision(const Iterator& startVertices1, const Iterator& endVertices1, const Iterator& startVertices2, const Iterator& endVertices2) 
+		template<typename Iterator, typename = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator>::value_type>::value>,
+			typename Iterator1, typename = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator1>::value_type>::value>>
+		static bool Collision(const Iterator& startVertices1, const Iterator& endVertices1, const Iterator1& startVertices2, const Iterator1& endVertices2) 
 		{
 			simplex.b = simplex.c = simplex.d = nullptr; // Reset simplex
 			glm::vec3 searchDirection = glm::vec3(-1, 0, 0); // Direction of the search within the convex shape
@@ -71,9 +71,9 @@ namespace mtrx
 		static void TetrahedronChecks(Simplex&, glm::vec3&, glm::vec3&, glm::vec3&, glm::vec3&, glm::vec3&, glm::vec3&);
 		
 		// Support functionality for convex shape collider vertices
-		template<typename Iterator,
-			typename = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator>::value_type>::value, Iterator>>
-		static glm::vec3 Support(const Iterator& startVertices1, const Iterator& endVertices1, const Iterator& startVertices2, const Iterator& endVertices2, const glm::vec3& direction)
+		template<typename Iterator, typename = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator>::value_type>::value>,
+			typename Iterator1, typename = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator1>::value_type>::value>>
+		static glm::vec3 Support(const Iterator& startVertices1, const Iterator& endVertices1, const Iterator1& startVertices2, const Iterator1& endVertices2, const glm::vec3& direction)
 		{
 			const glm::vec3* p1 = FarthestPointInDirection(startVertices1, endVertices1, direction);
 			const glm::vec3* p2 = FarthestPointInDirection(startVertices2, endVertices2, -direction);
@@ -81,8 +81,7 @@ namespace mtrx
 		}
 
 		// Return farthest point with respect to a certain direction
-		template<typename Iterator,
-			typename = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator>::value_type>::value, Iterator>>
+		template<typename Iterator, typename = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator>::value_type>::value>>
 		static glm::vec3* FarthestPointInDirection(const Iterator& startVertices, const Iterator& endVertices, const glm::vec3& direction)
 		{
 			float maxDot = -std::numeric_limits<float>::infinity();	// Max dot vector

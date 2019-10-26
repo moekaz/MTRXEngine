@@ -1,7 +1,7 @@
 #pragma once
 
 #include <colliders/ConvexShapeCollider.h>
-#include <utils/RaycastUtil.h>
+#include <utils/RaycastCollisionUtil.h>
 #include <colliders/IBoundingVolume.h>
 #include <math/Transform.h>
 
@@ -18,15 +18,15 @@ namespace mtrx
 		virtual bool CheckCollision(const mtrx::Collider& collider) override { return Collider::CheckCollision(collider); };
 		
 		// Raycast with box colliders
-		virtual inline bool RaycastCollision(const Ray& ray) override { return RaycastUtil::RayBoxCollision(ray.startPosition, ray.direction, GetPosition(), axes.axes, halfExtents); }
+		virtual inline bool RaycastCollision(const Ray& ray) override { return RaycastCollisionUtil::RayBoxCollision(ray.startPosition, ray.direction, GetPosition(), axes.axes, halfExtents); }
 		
 		// length * breadth * height
 		virtual inline float GetSize() override { return halfExtents[0] * halfExtents[1] * halfExtents[2] * 8.f; }
 		virtual inline float GetGrowth(const BoxCollider& boxCollider) { return 0.f; }
 
 		inline const glm::vec3* GetAxes() const { return axes.axes; }
-		inline const glm::vec3& GetHalfExtents() const { return halfExtents; }
-		inline glm::vec3& GetHalfExtents() { return halfExtents; }
+		inline const float* GetHalfExtents() const { return halfExtents; }
+		inline float* GetHalfExtents() { return halfExtents; }
 
 		virtual inline void SetScale(const glm::vec3& scale) override 
 		{
@@ -39,6 +39,6 @@ namespace mtrx
 
 	private:
 		ObjectAxes axes;
-		glm::vec3 halfExtents; // TBD: Make this an array
+		float halfExtents[3];
 	};
 }

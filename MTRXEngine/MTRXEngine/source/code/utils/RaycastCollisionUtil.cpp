@@ -1,9 +1,9 @@
 #include <PrecompiledHeader.h>
-#include <utils/RaycastUtil.h>
+#include <utils/RaycastCollisionUtil.h>
 
 namespace mtrx
 {
-	namespace RaycastUtil
+	namespace RaycastCollisionUtil
 	{
 		bool RaySphereCollision(const glm::vec3& sphereCenter, float sphereRadius, const glm::vec3& startPointRay, const glm::vec3& rayDirection)
 		{
@@ -11,13 +11,13 @@ namespace mtrx
 			return PhysicsUtil::MinDistanceSquaredPointRay(sphereCenter, startPointRay, rayDirection, closestPoint) <= sphereRadius * sphereRadius;
 		}
 
-		bool RayBoxCollision(const glm::vec3& rayStartPosition, const glm::vec3& rayDirection, const glm::vec3& boxCenter, const glm::vec3* axes, const glm::vec3& halfExtents)
+		bool RayBoxCollision(const glm::vec3& rayStartPosition, const glm::vec3& rayDirection, const glm::vec3& boxCenter, const glm::vec3* axes, const float* halfExtents)
 		{
 			// Sphere box collision but with a sphere of radius 0
 			glm::vec3 closestPointRay;
 			PhysicsUtil::MinDistanceSquaredPointRay(boxCenter, rayStartPosition, rayDirection, closestPointRay);
 
-			return CollisionUtil::SphereBoxCollision(closestPointRay, boxCenter, 0, axes, halfExtents);
+			return CollisionUtil::SphereBoxCollision(closestPointRay, boxCenter, 0.f, axes, halfExtents);
 		}
 
 		bool RayCapsuleCollision(const glm::vec3& startPositionRay, const glm::vec3& direction, const glm::vec3& A, const glm::vec3& B, float capsRadius)
@@ -31,16 +31,25 @@ namespace mtrx
 			return false;
 		}
 
-		// Line segment ray collision detection
 		bool LineSegmentRayCollision(const glm::vec3& A, const glm::vec3& B, const glm::vec3& rayStartPoint, const glm::vec3& rayDirection)
 		{
-			// TBD: Find a better solution for actual ray segement collision detection 
-			//Hacky solution but it works for the moment MIGHT CHANGE THIS LATER
-			// Check if they intersect first (make the longest line segment possible largest value for a float)
-			glm::vec3 rayEndPoint = glm::fastNormalize(rayDirection) * MAX_RAY_SIZE;
+			// TBD: Find a better solution for actual ray segment collision detection
+			glm::vec3 diff = A - rayStartPoint;
+			glm::vec3 ba = A - B;
 
-			// Check for an intersection 
-			return PhysicsUtil::MinDistanceSquaredTwoSegments(A, B, rayStartPoint, rayEndPoint) <= std::numeric_limits<float>::epsilon();
+			float val = ba.y * rayDirection.x - ba.x * rayDirection.y;
+			if (val <= std::numeric_limits<float>::epsilon())
+				return false;
+
+			float t2 = (diff.y * rayDirection.x - diff.x * rayDirection.y) / val;
+			if (t2 < 0 || t2 > 1)
+				return false;
+
+			float t1 = 0;
+			if (t1 < 0)
+				return false;
+
+			return true;
 		}
 
 		Collider* RaycastUnfiltered(const std::map<int, Collider*>& colliders, const glm::vec3& rayStartPosition, const glm::vec3& rayDirection)
