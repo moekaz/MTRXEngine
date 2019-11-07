@@ -13,6 +13,7 @@ class Demo
 public:
 	Application application;
 	std::unordered_set<mtrx::Transform*> transformsToRender;
+	int mesh;
 
 	// Physics entity managers
 	mtrx::RigidbodyManager rbManager;
@@ -20,7 +21,6 @@ public:
 
 	Demo(const char* appName = "DEMO APPLICATION", int width = DEFAULT_WINDOW_WIDTH, int height = DEFAULT_WINDOW_HEIGHT);
 	~Demo() = default;
-
 	
 	void BaseInputCheck();
 	virtual void InputCheck() = 0;

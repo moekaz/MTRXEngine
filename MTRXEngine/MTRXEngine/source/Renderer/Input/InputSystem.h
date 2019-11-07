@@ -70,7 +70,7 @@ private:
 	bool cursor;
 
 	InputSystem(Window* window);
-	~InputSystem();
+	~InputSystem() = default;
 
 	// We should not be able to modify this input system 
 	InputSystem(const InputSystem&) = delete;
@@ -78,13 +78,7 @@ private:
 
 	static inline bool isKey(char keyCode)
 	{
-		if (keyCode < 0 || keyCode >= MAX_KEYS)
-		{
-			MTRX_ERROR("Key does not exist");
-			return false;
-		}
-
-		return true;
+		return keyCode >= 0 && keyCode < MAX_KEYS;
 	}
 
 	// GLFW Callbacks

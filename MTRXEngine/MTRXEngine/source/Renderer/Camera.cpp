@@ -8,7 +8,7 @@
 
 // TBD: Camera rotation is sometimes broken need to debug the values generated
 Camera::Camera(Window* window, const glm::vec3& position, const glm::vec3& forward, const glm::vec3& up)
-	: renderWindow(window), fov(90), nearPlane(0.01f), farPlane(1000.0f), transform(position, glm::angleAxis(0.f, up)),
+	: renderWindow(window), fov(70), nearPlane(0.01f), farPlane(1000.0f), transform(position, glm::angleAxis(0.f, up)),
 	axes(forward, up, glm::fastNormalize(glm::cross(forward, up)))
 {}
 

@@ -214,6 +214,7 @@ namespace mtrx
 
 		float MinDistanceSquaredLineSegmentRay(const glm::vec3& A, const glm::vec3& B, const glm::vec3& rayStartPoint, const glm::vec3& rayDirection)
 		{
+			return false;
 			// 
 
 			//// Check if the line segment and ray intersect

@@ -1,7 +1,7 @@
 #include <PrecompiledHeader.h>
 #include <../Demos/Demo.h>
 
-Demo::Demo(const char* appName, int width, int height) : application(appName, width, height), cursor(false)
+Demo::Demo(const char* appName, int width, int height) : application(appName, width, height), cursor(false), mesh(1)
 {}
 
 void Demo::Update()
@@ -26,7 +26,7 @@ void Demo::Update()
 	rbManager.Integrate(mtrx::GameTime::deltaTime);
 
 	// Update renderer
-	application.renderer.Render(transformsToRender);
+	application.renderer.Render(transformsToRender, mesh);
 
 	// Update input system
 	application.inputSystem->Update();
