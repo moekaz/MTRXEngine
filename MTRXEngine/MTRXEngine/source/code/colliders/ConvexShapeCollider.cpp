@@ -28,7 +28,7 @@ namespace mtrx
 	// Convex shape collision detection
 	bool ConvexShapeCollider::CheckCollision(const Collider& col)
 	{
-		// TBD: THIS IS NOT GOOD AT ALL (AS IN WILL BREAK COLLISION)
+		// TBD: THIS IS NOT GOOD AT ALL (AS IT WILL BREAK COLLISION)
 		if (col.IsConvex())
 		{
 			ConvexShapeCollider& collider = static_cast<ConvexShapeCollider&>(const_cast<Collider&>(col));

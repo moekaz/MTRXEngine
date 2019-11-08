@@ -2,7 +2,7 @@
 #include "FluidSimulationDemo.h"
 
 // Particle Parameters
-float radius = 0.2f;
+float radius = 0.1f;
 float mass = 1.f;
 float restDensity = 20.f;
 float K = 20.f; // Pressure constant
@@ -15,8 +15,8 @@ float maximumAcceleration = 75.0f;
 
 // Force parameters
 float motionDampingCoefficent = 0.0f;
-float spikeyGradCoefficient = -45.0 / (PI * pow(smoothingRadius, 6.0));
-float viscosityLaplacianCoefficient = 45.0 / (PI * pow(smoothingRadius, 6.0f));
+float spikeyGradCoefficient = -45.f / (PI * pow(smoothingRadius, 6.f));
+float viscosityLaplacianCoefficient = 45.f / (PI * pow(smoothingRadius, 6.f));
 float poly6Coefficient = (315.f / (64.f * PI * pow(smoothingRadius, 9.f)));
 float smoothingRadiusSqr = SQR(smoothingRadius);
 
@@ -26,21 +26,28 @@ float boundaryDampingCoefficient = 0.6f;
 double boundaryForceRadius = 0.1f;
 double minBoundaryForce = 0.0;
 double maxBoundaryForce = 0.0;
-float xMin = 0.f;
-float yMin = 0.f;
-float zMin = 0.f;
+
+
+float xMin = -10.f;
+float yMin = -2.5f;
+float zMin = -2.5f;
 float xMax = 10.f;
-float yMax = 10.f;
-float zMax = 10.f;
+float yMax = 6.f;
+float zMax = 5.f;
+
+float courantSafetyFactor = 1.0f;
+float minTimeStep = 1.0 / 240.0;
 
 // 
-glm::vec3 gravity = glm::vec3(0, -2.f, 0);
+glm::vec3 gravity = glm::vec3(0, -5.f, 0);
 bool started = false;
 
 FluidSimulationDemo::FluidSimulationDemo() : Demo("Fluid Simulation Demo", 1280, 720), numParticles(500), startSim(false)
 {
 	mesh = 2;
-	application.camera->GetTransform().SetPosition(glm::vec3(0, 2.f, 40.f));
+	application.camera->GetTransform().SetPosition(glm::vec3(10.f, 2.f, 30.f));
+	//application.camera->GetTransform().Rotate(glm::angleAxis(-180.f, glm::vec3(0, 1, 0)));
+	application.window.SetVsync(true);
 }
 
 void FluidSimulationDemo::Update()
@@ -94,8 +101,8 @@ void FluidSimulationDemo::InputCheck()
 {
 	if (!started && application.inputSystem->GetKeyDown(GLFW_KEY_SPACE))
 	{
-		glm::vec3 startPos(1.f, 4.f, 0);
-		float offset = radius * 4.f; // TBD: This should be affected by scale
+		glm::vec3 startPos(1.f, 2.f, 0);
+		float offset = radius * 2.f;
 		float numParticlesDimension = std::ceil(cbrt(numParticles));
 		int particlesCreated = 0;
 
@@ -139,47 +146,43 @@ void FluidSimulationDemo::InputCheck()
 
 void FluidSimulationDemo::UpdateParticles()
 {	
-	// Check if we need to remove some stuck particles (check for stuck particles)
-	//RemoveStuckParticles();
-
-	// Update grid
-	//UpdateGrid();
-	//UpdateNeighbors();
+	//PrintPositions();
 
 	// Update fluid density and forces
-	//ApplyDensity();
+	ApplyDensity();
 	ApplyForces();
 
 	// Update positions
 	UpdatePositions();
-
-	// Update obstacle velocity
-	//UpdateObstacleVelocity();
 }
 
 void FluidSimulationDemo::ApplyDensity()
 {
+	particle* pi;
+	particle* pj;
 	for (int i = 0; i < particles.size(); ++i)
 	{
+		pi = particles[i];
+		float density = 0.f;
 		for (int j = 0; j < particles.size(); ++j)
 		{
 			if (i == j)
 				continue;
 
-			glm::vec3 diff = particles[j]->rb->GetPosition() - particles[i]->rb->GetPosition();
+			pj = particles[j];
+			glm::vec3 diff = pi->rb->GetPosition() - pj->rb->GetPosition();
 			float distanceSqr = glm::length2(diff);
 
 			if (distanceSqr >= smoothingRadiusSqr) // Particle is too far away
 				continue;
 
 			// p = m * kernel
-			float smoothingKernel = poly6Coefficient * CUBE(smoothingRadiusSqr - distanceSqr);
-			float density = mass * smoothingKernel;
-			particles[i]->density = std::max(density, restDensity); // To avoid negative densities
-
-			// Calculate pressure value
-			particles[i]->pressure = K * (particles[i]->density - restDensity);
+			float difference = smoothingRadiusSqr - distanceSqr;
+			density += pj->rb->GetMass() * poly6Coefficient * CUBE(difference);
 		}
+
+		pi->density = std::max(density, restDensity); // To avoid negative densities
+		pi->pressure = K * (pi->density - restDensity); // Calculate pressure value
 	}
 }
 
@@ -187,48 +190,55 @@ void FluidSimulationDemo::ApplyForces()
 {
 	particle* p;
 	particle* p1;
+	glm::vec3 acceleration;
+	glm::vec3 vdiff;
+	glm::vec3 r;
 	for (int i = 0; i < particles.size(); ++i)
 	{
 		p = particles[i];
-		glm::vec3 acceleration = glm::vec3();
-		glm::vec3 vdiff = glm::vec3();
-		glm::vec3 pressureForce = glm::vec3();
-		glm::vec3 viscosityForce = glm::vec3();
-
+		acceleration = glm::vec3();
+		
 		for (int j = 0; j < particles.size(); ++j)
 		{
 			if (i == j)
 				continue;
 			
 			p1 = particles[j];
+			r = p->rb->GetPosition() - p1->rb->GetPosition();
+			float dist = glm::length(r);
 
-			glm::vec3 diff = p->rb->GetPosition() - p1->rb->GetPosition();
-			float distance = glm::length(diff);
-			float difference = smoothingRadius - distance;
-
-			if (distance == 0 || difference > 0) // If we are too far away or distance is 0  
+			if (dist == 0 || dist >= smoothingRadius)
 				continue;
 			
-			diff = (1 / distance) * diff; // Normalize the vector since we already have the distance
-			float spikeyCoefficient = spikeyGradCoefficient * SQR(difference);
+			float inv = 1 / dist;
+			r = inv * r;
+
+			float diff = smoothingRadius - dist;
+			float spikeyCoefficient = spikeyGradCoefficient * SQR(diff);
 			float massRatio = p1->rb->GetMass() / p->rb->GetMass();
 			float pTerm = (p->pressure + p1->pressure) / (2 * p->density * p1->density);
-			acceleration -= massRatio * pTerm * spikeyCoefficient * diff;
+			acceleration -= massRatio * pTerm * spikeyCoefficient * r;
 
 			// Viscosity
-			float laplacian = viscosityLaplacianCoefficient * difference;
+			float laplacian = viscosityLaplacianCoefficient * diff;
 			vdiff = p1->rb->GetVelocity() - p->rb->GetVelocity();
-			acceleration += viscosityCoefficient * massRatio * ((1.f / p1->density) * laplacian) * vdiff; // Is this vdiff
+			acceleration += viscosityCoefficient * massRatio * ((1.f / p1->density) * laplacian) * vdiff;
 		}
 
 		acceleration += gravity;
 		//acceleration += BarrierCollisionCorrection(p); // Some collision correction due to the barriers of the simulation
 
-		// MIGHT NEED TO DO THAT FIRST 
-		// Motion damping (we can do this later on)
-		float magSqr = glm::length2(acceleration);
-		if (magSqr > 50)
-			acceleration = 50.f * glm::normalize(acceleration);
+		// Motion damping
+		float mag = glm::length(acceleration);
+		glm::vec3 damp = p->rb->GetVelocity() * motionDampingCoefficent;
+		if (glm::length(damp) > mag)
+			acceleration = glm::vec3();
+		else
+			acceleration -= damp;
+
+
+		if (mag > 75.f)
+			acceleration = 75.f * (acceleration / mag);
 
 		p->rb->SetAcceleration(acceleration);
 	}
@@ -240,12 +250,17 @@ void FluidSimulationDemo::UpdatePositions()
 	{
 		particle* p = particles[i];
 
-		p->rb->GetVelocity() += mtrx::GameTime::deltaTime * p->rb->GetAcceleration();
+		glm::vec3& vel = p->rb->GetVelocity();
+
+		float timeStep = calculateTimeStep();
+		p->rb->GetVelocity() += timeStep * p->rb->GetAcceleration();
+
+
 		float magSqr = glm::length2(p->rb->GetVelocity());
 		if (magSqr > 50.f)
-			p->rb->SetVelocity(50.f * p->rb->GetVelocity());
+			p->rb->SetVelocity(7.f * glm::fastNormalize(p->rb->GetVelocity()));
 
-		p->rb->GetPosition() += mtrx::GameTime::deltaTime * p->rb->GetVelocity();
+		p->rb->GetPosition() += timeStep * 0.2f * p->rb->GetVelocity();
 
 		CollisionPositionCorrection(p);
 	}
@@ -304,7 +319,7 @@ glm::vec3 FluidSimulationDemo::BarrierCollisionCorrection(particle* part)
 
 void FluidSimulationDemo::CollisionPositionCorrection(particle* part)
 {
-	double eps = 0.001;
+	double eps = 0.0001;
 	float d = boundaryDampingCoefficient;
 	glm::vec3& p = part->rb->GetPosition();
 	glm::vec3& vel = part->rb->GetVelocity();
@@ -352,6 +367,36 @@ void FluidSimulationDemo::PrintPositions()
 	}
 }
 
+double FluidSimulationDemo::calculateTimeStep() {
+	double maxvsq = 0.0;         // max velocity squared
+	double maxcsq = 0.0;         // max speed of sound squared
+	double maxasq = 0.0;         // max accelleration squared
+	particle* p;
+
+	for (int i = 0; i < particles.size(); ++i) {
+		p = particles[i];
+		double vsq = glm::dot(p->rb->GetVelocity(), p->rb->GetVelocity());
+		double asq = glm::dot(p->rb->GetAcceleration(), p->rb->GetAcceleration());
+		double csq = evaluateSpeedOfSoundSquared(p);
+		if (vsq > maxvsq) { maxvsq = vsq; }
+		if (csq > maxcsq) { maxcsq = csq; }
+		if (asq > maxasq) { maxasq = asq; }
+	}
+
+	double maxv = sqrt(maxvsq);
+	double maxc = sqrt(maxcsq);
+	double maxa = sqrt(maxasq);
+
+	double vStep = courantSafetyFactor * smoothingRadius / fmax(1.0, maxv);
+	double cStep = courantSafetyFactor * smoothingRadius / maxc;
+	double aStep = sqrt(smoothingRadius / maxa);
+	double tempMin = fmin(vStep, cStep);
+
+	//qDebug() << maxv << maxa << maxc;
+
+	return fmax(minTimeStep, fmin(tempMin, aStep));
+}
+
 /*bool FluidSimulationDemo::isFluidParticleStuckToBoundary(particle* part) {
 	double r = stuckToBoundaryRadius;
 	bool isStuck = false;
@@ -366,23 +411,3 @@ void FluidSimulationDemo::PrintPositions()
 
 	return isStuck;
 }*/
-
-void FluidSimulationDemo::RemoveStuckParticles()
-{
-
-}
-
-void FluidSimulationDemo::UpdateGrid()
-{
-
-}
-
-void FluidSimulationDemo::UpdateNeighbors()
-{
-
-}
-
-void FluidSimulationDemo::UpdateObstacleVelocity()
-{
-
-}

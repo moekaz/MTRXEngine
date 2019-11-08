@@ -14,7 +14,7 @@ public:
 	float cameraSensitivity;
 
 	Application(const char* appName = "MTRX", int width = DEFAULT_WINDOW_WIDTH, int height = DEFAULT_WINDOW_HEIGHT, int fps = DEFAULT_FPS);
-	~Application();
+	~Application() = default;
 	
 	void Update(float deltaTime);
 

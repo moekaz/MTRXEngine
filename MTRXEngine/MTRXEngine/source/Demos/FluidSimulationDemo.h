@@ -38,8 +38,20 @@ public:
 	void CollisionPositionCorrection(particle* p); 
 	
 	void PrintPositions();
+	
+	double calculateTimeStep();
 
 	glm::vec3 BarrierCollisionCorrection(particle* p);
+
+
+	inline double evaluateSpeedOfSoundSquared(particle* sp) 
+	{
+		if (sp->density < 0.00001) 
+			return 0.0;
+		
+		float ratioOfSpecificHeats = 1.0f;
+		return ratioOfSpecificHeats * (sp->pressure) / sp->density;
+	}
 
 	// linear interpolation with t in [0,1]
 	inline float lerp(float x1, float x2, float t) 

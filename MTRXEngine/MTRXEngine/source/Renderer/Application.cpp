@@ -25,9 +25,6 @@ Application::Application(const char* appName, int width, int height, int fps) : 
 	inputSystem->SetCursor(true);
 }
 
-Application::~Application()
-{}
-
 void Application::Update(float deltaTime)
 {
 	// Camera movement

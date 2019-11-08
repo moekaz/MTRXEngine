@@ -2,8 +2,8 @@
 
 namespace mtrx
 {
-	#define SQR(x) x * x // Easy way of squaring
-	#define CUBE(x) x * x * x // Easy macro for cubing
+	#define SQR(x) ((x) * (x)) // Easy way of squaring
+	#define CUBE(x) ((x) * (x) * (x)) // Easy macro for cubing
 
 	#define LOGGER_FILE_SIZE 5242880 // Maximum size of logger file 
 	#define PI 3.14159265358f // Approximation of pi
