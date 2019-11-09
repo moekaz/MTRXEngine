@@ -5,16 +5,17 @@
 float radius = 0.02f;
 float smoothingRadius = 0.2f;
 float smoothingRadiusSqr = SQR(smoothingRadius);
-
 int numParticles = 1500;
+
 float mass = 1.f;
 float restDensity = 20.f;
 float K = 20.f; // Pressure constant
 float viscosityCoefficient = 0.018f;
-float drag = 0.1f;
-float damping = -0.5f;
+
 float maximumVelocity = 75.0f;
 float maximumAcceleration = 75.0f;
+float maximumAccelerationSqr = SQR(75.0f);
+float maximumVelocitySqr = SQR(75.0f);
 
 // Force parameters
 float spikeyGradCoefficient = -45.f / (PI * pow(smoothingRadius, 6.f));
@@ -32,7 +33,7 @@ float yMin = -2.5f;
 float zMin = -2.5f;
 float xMax = 2.5f;
 float yMax = 6.f;
-float zMax = 0.f;
+float zMax = -1.f;
 
 float courantSafetyFactor = 1.0f;
 float minTimeStep = 1.0 / 240.0;
@@ -41,24 +42,28 @@ float minTimeStep = 1.0 / 240.0;
 glm::vec3 gravity = glm::vec3(0, -9.8f, 0);
 bool started = false;
 
-FluidSimulationDemo::FluidSimulationDemo() : Demo("Fluid Simulation Demo", 1280, 720), startSim(false)
+float InvSqrt(float x) 
+{
+	float xhalf = 0.5f * x;
+	int i = *(int*)&x;            // store floating-point bits in integer
+	i = 0x5f3759df - (i >> 1);    // initial guess for Newton's method
+	x = *(float*)&i;              // convert new bits into float
+	x = x * (1.5f - xhalf * x * x);     // One round of Newton's method
+	return x;
+}
+
+FluidSimulationDemo::FluidSimulationDemo() : Demo("Fluid Simulation Demo", 1280, 720)
 {
 	mesh = 2;
 	application.camera->GetTransform().SetPosition(glm::vec3(0.f, 2.f, 10.f));
 	//application.camera->GetTransform().Rotate(glm::angleAxis(-180.f, glm::vec3(0, 1, 0)));
-	application.window.SetVsync(true);
+	//application.window.SetVsync(true);
 }
 
 void FluidSimulationDemo::Update()
 {
 	while (!application.window.ShouldClose())
 	{
-		// Update Positions
-		//for (int i = 0; i < particles.size(); ++i)
-		//{
-		//	colliders[i]->SetPosition(particles[i]->rb->GetPosition());
-		//}
-
 		// Update the particles
 		UpdateParticles();
 
@@ -77,9 +82,6 @@ void FluidSimulationDemo::Update()
 
 		// Clear the window
 		application.window.Clear();
-
-		// Update the rigidbody and the particle system
-		//rbManager.Integrate(mtrx::GameTime::deltaTime);
 
 		// Update renderer
 		application.renderer.Render(transformsToRender, mesh);
@@ -100,6 +102,8 @@ void FluidSimulationDemo::InputCheck()
 {
 	if (!started && application.inputSystem->GetKeyDown(GLFW_KEY_SPACE))
 	{
+		started = true;
+
 		// TBD: FIX STUCK particles at the beginning of the simulation
 		// Create the particles in a rectangle
 		float rx = 0.3;
@@ -108,27 +112,21 @@ void FluidSimulationDemo::InputCheck()
 
 		for (int i = 0; i < numParticles; ++i)
 		{
-			float x = xMin + rx * ((float)rand() / RAND_MAX) * ((xMax - 1.f) - (xMin - 2.f));
-			float y = yMin + ry * ((float)rand() / RAND_MAX) * ((yMax - 1.f) - (yMin - 2.f));
-			float z = zMin + rz * ((float)rand() / RAND_MAX) * ((zMax - 0.4f) - (zMin + 0.4f));
+			float x = xMin + rx * ((float)rand() / RAND_MAX) * (xMax - xMin);
+			float y = yMin + ry * ((float)rand() / RAND_MAX) * (yMax - yMin);
+			float z = zMin + rz * ((float)rand() / RAND_MAX) * (zMax - zMin);
+
 			glm::vec3 position(x, y, z);
 			glm::quat orientation = glm::angleAxis(0.f, glm::vec3(0, 1, 0));
 			glm::vec3 scale(radius, radius, radius);
 			glm::mat3 tensor = mtrx::GenerateSphereIT(mass, radius);
 			mtrx::Rigidbody* body = new mtrx::Rigidbody(mass, false, position, orientation, scale, tensor);
 			
-			mtrx::Collider* collider = new mtrx::SphereCollider(position, orientation, scale, radius);
-
-			body->SetLinearDamping(0.99999f);
-
 			rbManager.AddRigidbody(body);
 
 			transformsToRender.insert(&body->GetTransform());
 			particles.push_back(new particle(restDensity, 0, body));
-			colliders.push_back(collider);
 		}
-
-		started = true;
 	}
 }
 
@@ -136,7 +134,6 @@ void FluidSimulationDemo::UpdateParticles()
 {	
 	//PrintPositions();
 
-	// TBD: OPTIMIZE THIS AND MAKE IT RUN FASTER
 	// Update fluid density and forces
 	ApplyDensity();
 	ApplyForces();
@@ -194,11 +191,12 @@ void FluidSimulationDemo::ApplyForces()
 			
 			p1 = particles[j];
 			r = p->rb->GetPosition() - p1->rb->GetPosition();
-			float dist = glm::length(r);
+			float distSqr = glm::length2(r);
 
-			if (dist == 0 || dist >= smoothingRadius)
+			if (distSqr == 0 || distSqr >= smoothingRadiusSqr)
 				continue;
 			
+			float dist = 1 / InvSqrt(distSqr);
 			float inv = 1 / dist;
 			r = inv * r;
 
@@ -217,16 +215,9 @@ void FluidSimulationDemo::ApplyForces()
 		acceleration += gravity;
 		//acceleration += BarrierCollisionCorrection(p); // Some collision correction due to the barriers of the simulation
 
-		// Motion damping
-		float mag = glm::length(acceleration);
-		//glm::vec3 damp = p->rb->GetVelocity() * motionDampingCoefficent;
-		//if (glm::length(damp) > mag)
-		//	acceleration = glm::vec3();
-		//else
-		//	acceleration -= damp;
-		 
-		if (mag > maximumAcceleration)
-			acceleration = maximumAcceleration * (acceleration / mag);
+		float magSqr = glm::length2(acceleration);
+		if (magSqr > maximumAccelerationSqr)
+			acceleration = maximumAcceleration * glm::fastNormalize(acceleration);
 
 		p->rb->SetAcceleration(acceleration);
 	}
@@ -234,26 +225,27 @@ void FluidSimulationDemo::ApplyForces()
 
 void FluidSimulationDemo::UpdatePositions(float dt)
 {
-	for (int i = 0; i < particles.size(); ++i) {
+	for (int i = 0; i < particles.size(); ++i) 
+	{
 		particle* p = particles[i];
 
 		// calculate velocity at half timestep interval for leapfrog integration
-		if (p->isHalfTimeStepVelocityInitialized) {
+		if (p->isHalfTimeStepVelocityInitialized) 
+		{
 			p->velocityAtHalfTimeStep += (float)dt * p->rb->GetAcceleration();
 		}
-		else {
+		else
+		{
 			p->velocityAtHalfTimeStep = p->rb->GetVelocity() + (float)(0.5 * dt) * p->rb->GetAcceleration();
 			p->isHalfTimeStepVelocityInitialized = true;
 		}
 
-		// new position calculated with half time step for leap frog integration
 		p->rb->GetPosition() += (float)dt * p->velocityAtHalfTimeStep;
-
-		// update sph velocity by advancing half time step velocty by 1/2 interval
 		p->rb->GetVelocity() = p->velocityAtHalfTimeStep + (float)(0.5 * dt) * p->rb->GetAcceleration();
-		if (glm::length(p->rb->GetVelocity()) > maximumVelocity) {
-			glm::vec3 unit = glm::normalize(p->rb->GetVelocity());
-			p->rb->GetVelocity() = (float)maximumVelocity * unit;
+
+		if (glm::length2(p->rb->GetVelocity()) > maximumVelocitySqr) 
+		{
+			p->rb->SetVelocity((float)maximumVelocity * glm::fastNormalize(p->rb->GetVelocity()));
 		}
 
 		CollisionPositionCorrection(p);
@@ -351,11 +343,11 @@ void FluidSimulationDemo::CollisionPositionCorrection(particle* part)
 		part->rb->SetPosition(glm::vec3(p.x, yMin + eps, p.z));
 		part->rb->SetVelocity(glm::vec3(vel.x, -d * vel.y, vel.z));
 	}
-	else if (p.y > yMax) 
-	{
-		part->rb->SetPosition(glm::vec3(p.x, yMax - eps, p.z));
-		part->rb->SetVelocity(glm::vec3(vel.x, -d * vel.y, vel.z));
-	}
+	//else if (p.y > yMax) 
+	//{
+	//	part->rb->SetPosition(glm::vec3(p.x, yMax - eps, p.z));
+	//	part->rb->SetVelocity(glm::vec3(vel.x, -d * vel.y, vel.z));
+	//}
 
 	if (p.z < zMin) 
 	{
@@ -408,17 +400,3 @@ double FluidSimulationDemo::calculateTimeStep()
 	return fmax(minTimeStep, fmin(tempMin, aStep));
 }
 
-/*bool FluidSimulationDemo::isFluidParticleStuckToBoundary(particle* part) {
-	double r = stuckToBoundaryRadius;
-	bool isStuck = false;
-	glm::vec3& p = part->position;
-
-	// Needs to be redone
-	if (p.x < xmin + r || p.x > xmax - r ||
-		p.y < ymin + r || p.y > ymax - r ||
-		p.z < zmin + r || p.z > zmax - r) {
-		isStuck = true;
-	}
-
-	return isStuck;
-}*/

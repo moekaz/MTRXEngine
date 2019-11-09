@@ -21,7 +21,6 @@ struct particle
 class FluidSimulationDemo : public Demo
 {
 public:
-	bool startSim;
 	std::vector<particle*> particles;
 	std::vector<mtrx::Collider*> colliders;
 
