@@ -11,6 +11,8 @@ struct particle
 	float density;
 	float pressure;
 	mtrx::Rigidbody* rb;
+	bool isHalfTimeStepVelocityInitialized;
+	glm::vec3 velocityAtHalfTimeStep;
 
 	particle(float density, float pressure, mtrx::Rigidbody* body) : density(density), pressure(pressure), rb(body) 
 	{}
@@ -22,7 +24,6 @@ public:
 	bool startSim;
 	std::vector<particle*> particles;
 	std::vector<mtrx::Collider*> colliders;
-	int numParticles;
 
 	FluidSimulationDemo();
 	~FluidSimulationDemo() = default;
@@ -30,11 +31,7 @@ public:
 	void UpdateParticles();
 	void ApplyDensity();
 	void ApplyForces();
-	void UpdatePositions();
-	void RemoveStuckParticles();
-	void UpdateGrid();
-	void UpdateNeighbors(); // Currently do not use that
-	void UpdateObstacleVelocity(); // Not sure about this
+	void UpdatePositions(float dt);
 	void CollisionPositionCorrection(particle* p); 
 	
 	void PrintPositions();
