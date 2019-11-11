@@ -162,6 +162,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\code\PrecompiledHeader.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="source\code\utils\ColliderDetectionUtil.cpp" />
     <ClCompile Include="source\code\utils\RaycastCollisionUtil.cpp" />
     <ClCompile Include="source\Renderer\CollisionDemoUI.cpp" />
@@ -218,14 +224,9 @@
     <ClCompile Include="source\code\colliders\BVHNode.cpp" />
     <ClCompile Include="source\code\colliders\CollisionSystem.cpp" />
     <ClCompile Include="source\code\entities\RigidbodyManager.cpp" />
-    <ClCompile Include="source\code\forceGenerators\RigidbodyGenerators\rb_AnchoredSpringForceGenerator.cpp" />
-    <ClCompile Include="source\code\forceGenerators\RigidbodyGenerators\rb_BungeeSpringForceGenerator.cpp" />
     <ClCompile Include="source\code\forceGenerators\RigidbodyGenerators\rb_BuoyancyForceGenerator.cpp" />
-    <ClCompile Include="source\code\forceGenerators\RigidbodyGenerators\rb_DefaultSpringForceGenerator.cpp" />
     <ClCompile Include="source\code\forceGenerators\RigidbodyGenerators\rb_DragForceGenerator.cpp" />
-    <ClCompile Include="source\code\forceGenerators\RigidbodyGenerators\rb_ForceGenerationRegistry.cpp" />
     <ClCompile Include="source\code\forceGenerators\RigidbodyGenerators\rb_GravityForceGenerator.cpp" />
-    <ClCompile Include="source\code\forceGenerators\RigidbodyGenerators\rb_StiffSpringForceGenerator.cpp" />
     <ClCompile Include="source\code\entities\Body.cpp" />
     <ClCompile Include="source\code\colliders\BoxCollider.cpp" />
     <ClCompile Include="source\code\colliders\CapsuleCollider.cpp" />
@@ -238,17 +239,6 @@
     <ClCompile Include="source\code\math\Vector3D.cpp" />
     <ClCompile Include="source\code\math\GameTime.cpp" />
     <ClCompile Include="source\code\utils\GJKUtil.cpp" />
-    <ClCompile Include="source\code\PrecompiledHeader.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PrecompiledHeader.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">PrecompiledHeader.h</PrecompiledHeaderFile>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PrecompiledHeader.h</PrecompiledHeaderFile>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">PrecompiledHeader.h</PrecompiledHeaderFile>
-    </ClCompile>
-    <ClCompile Include="source\code\math\Ray.cpp" />
     <ClCompile Include="source\code\utils\CollisionUtil.cpp" />
     <ClCompile Include="source\code\utils\PhysicsUtil.cpp" />
     <ClCompile Include="source\Demos\CollisionDemo.cpp">
@@ -499,15 +489,11 @@
     <ClInclude Include="source\headers\forceGenerators\ParticleGenerators\p_ForceGenerationRegistry.h" />
     <ClInclude Include="source\headers\forceGenerators\ParticleGenerators\p_GravityForceGenerator.h" />
     <ClInclude Include="source\headers\forceGenerators\ParticleGenerators\p_StiffSpringForceGenerator.h" />
-    <ClInclude Include="source\headers\forceGenerators\RigidbodyGenerators\rb_AnchoredSpringForceGenerator.h" />
-    <ClInclude Include="source\headers\forceGenerators\RigidbodyGenerators\rb_BungeeSpringForceGenerator.h" />
     <ClInclude Include="source\headers\forceGenerators\RigidbodyGenerators\rb_BuoyancyForceGenerator.h" />
-    <ClInclude Include="source\headers\forceGenerators\RigidbodyGenerators\rb_DefaultSpringForceGenerator.h" />
     <ClInclude Include="source\headers\forceGenerators\RigidbodyGenerators\rb_DragForceGenerator.h" />
     <ClInclude Include="source\headers\forceGenerators\RigidbodyGenerators\rb_ForceGenerationRegistry.h" />
     <ClInclude Include="source\headers\forceGenerators\RigidbodyGenerators\rb_GravityForceGenerator.h" />
     <ClInclude Include="source\headers\forceGenerators\RigidbodyGenerators\IRigidbodyForceGenerator.h" />
-    <ClInclude Include="source\headers\forceGenerators\RigidbodyGenerators\rb_StiffSpringForceGenerator.h" />
     <ClInclude Include="source\headers\colliders\BoxCollider.h" />
     <ClInclude Include="source\headers\colliders\CapsuleCollider.h" />
     <ClInclude Include="source\headers\colliders\Collider.h" />

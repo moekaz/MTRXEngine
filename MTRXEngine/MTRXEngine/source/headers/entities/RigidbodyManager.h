@@ -2,7 +2,6 @@
 
 #include <entities/Rigidbody.h>
 #include <forceGenerators/RigidbodyGenerators/rb_ForceGenerationRegistry.h>
-#include <entities/IIntegratable.h>
 #include <forceGenerators/RigidbodyGenerators/IRigidbodyForceGenerator.h>
 
 namespace mtrx
@@ -15,9 +14,9 @@ namespace mtrx
 		float accumulator;
 
 		RigidbodyManager();
-		~RigidbodyManager(); // TBD: Deallocation responsibility is it ours
+		~RigidbodyManager() = default; // TBD: Deallocation responsibility is it ours
 
-		virtual void Integrate(float deltaTime) override;
+		void Integrate(float deltaTime);
 		void IntegrateRigidbodies(float deltaTime);
 		void UpdateForces(float deltaTime);
 	};

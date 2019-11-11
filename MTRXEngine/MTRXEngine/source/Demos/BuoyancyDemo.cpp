@@ -22,16 +22,16 @@ void BuoyancyDemo::Update()
 	float linearDamping = 0.98f;
 	float gravitationAcceleration = -0.5f;
 	glm::vec3 gravity = glm::vec3(0, gravitationAcceleration, 0);
-	body = mtrx::Rigidbody(mass, false, glm::vec3(-2.f, 6.f, 0), glm::angleAxis(0.f, mtrx::worldUp), glm::vec3(1, 1, 1), mtrx::GenerateCuboidIT(mass, extents));
+	body = new mtrx::Rigidbody(mass, false, glm::vec3(-2.f, 6.f, 0), glm::angleAxis(0.f, mtrx::worldUp), glm::vec3(1, 1, 1), mtrx::GenerateCuboidIT(mass, extents));
 	mtrx::rb_BuoyancyForceGenerator buoyancyGenerator = mtrx::rb_BuoyancyForceGenerator(gravity, 1.f, 3.f);
 	mtrx::rb_GravityForceGenerator gravityGenerator = mtrx::rb_GravityForceGenerator(gravity);
-	body.SetLinearDamping(linearDamping);
+	body->SetLinearDamping(linearDamping);
 
 	// Add the relevant info
-	world.AddRigidbody(&body);
-	world.AddForceGenerator(&body, &buoyancyGenerator);
-	world.AddForceGenerator(&body, &gravityGenerator);
-	transformsToRender.insert(&body.GetTransform());
+	world.AddRigidbody(body);
+	world.AddForceGenerator(body, &buoyancyGenerator);
+	world.AddForceGenerator(body, &gravityGenerator);
+	transformsToRender.insert(&body->GetTransform());
 
 	// Create UI
 	BuoyancyDemoUI ui = BuoyancyDemoUI("Buoyancy Demo", glm::vec2(400, 300), &linearDamping, &gravitationAcceleration, &buoyancyGenerator.liquidLevel, &buoyancyGenerator.liquidDensity);
@@ -40,7 +40,7 @@ void BuoyancyDemo::Update()
 	while (!application.window.ShouldClose())
 	{
 		// Workaround i guess
-		body.SetLinearDamping(linearDamping);
+		body->SetLinearDamping(linearDamping);
 		gravityGenerator.gravitationalAcceleration.y = gravitationAcceleration;
 		buoyancyGenerator.gravitationalAcceleration.y = gravitationAcceleration;
 		center.GetPosition().y = buoyancyGenerator.liquidLevel;
@@ -54,8 +54,8 @@ void BuoyancyDemo::InputCheck()
 	{
 		float mass = 500.f;
 		float extents[] = { 1.f, 1.f, 1.f };
-		body.SetPosition(glm::vec3(-2.f, 6.f, 0));
-		body.ClearAccumulators();
+		body->SetPosition(glm::vec3(-2.f, 6.f, 0));
+		body->ClearAccumulators();
 	}
 }
 

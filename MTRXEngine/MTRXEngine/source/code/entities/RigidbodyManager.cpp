@@ -8,7 +8,6 @@ namespace mtrx
 
 	void RigidbodyManager::Integrate(float deltaTime)
 	{	
-		// Update the forces of the rigidbodies
 		UpdateForces(deltaTime);
 		IntegrateRigidbodies(deltaTime);
 	}

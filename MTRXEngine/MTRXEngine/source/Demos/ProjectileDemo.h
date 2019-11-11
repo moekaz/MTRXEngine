@@ -9,7 +9,7 @@
 class ProjectileDemo : public Demo
 {
 public:
-	mtrx::Rigidbody projectile;
+	mtrx::Rigidbody* projectile;
 	mtrx::rb_GravityForceGenerator gravityGenerator;
 	int projectileType;
 

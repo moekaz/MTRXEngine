@@ -1,8 +1,3 @@
-/*
-	Author: Brady Jessup
-	Description: Abstracts the info for camera controls in 3D space
-*/
-
 #include <PrecompiledHeader.h>
 #include "Camera.h"
 

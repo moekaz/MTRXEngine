@@ -9,6 +9,7 @@ namespace mtrx
 	#define PI 3.14159265358f // Approximation of pi
 	#define WORLD_DIMENSIONS 3 // World dimensions
 	#define PHYSICS_TIMESTEP 0.01666666666f // 60fps timestep
+	#define MAX_RAY_SIZE 10000.f
 
 	static float gravity = 9.81f; // Constant value for gravity (not realistic value but games don't have realistic gravity
 	static std::string projectDir = std::filesystem::current_path().string(); // Gives us the project dir
@@ -20,16 +21,6 @@ namespace mtrx
 
 	// Supported collider types
 	enum class ColliderType : char { Sphere, Box, Capsule, Mesh, ConvexShape, };
-	
-	// Struct that holds some information about a spring
-	struct SpringData
-	{
-		float stiffness;
-		float restLength;
-
-		SpringData(float stiffness, float restLength) : stiffness(stiffness), restLength(restLength) 
-		{}
-	};
 
 	// The axes that define an objects world 
 	struct ObjectAxes
@@ -45,7 +36,6 @@ namespace mtrx
 
 			glm::vec3 axes[WORLD_DIMENSIONS];
 		};
-
 
 		inline glm::vec3& operator[](int index) { return axes[index]; }
 		inline const glm::vec3& operator[](int index) const { return axes[index]; }

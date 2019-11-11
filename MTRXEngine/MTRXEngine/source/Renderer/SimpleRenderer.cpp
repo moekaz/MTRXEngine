@@ -1,8 +1,3 @@
-/*
-	Author: Brady Jessup
-	Description: Contains the definition for a simple renderer for physics testing
-*/
-
 #include <PrecompiledHeader.h>
 #include "SimpleRenderer.h"
 

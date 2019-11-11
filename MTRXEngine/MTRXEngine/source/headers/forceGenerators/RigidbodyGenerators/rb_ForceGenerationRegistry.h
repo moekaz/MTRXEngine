@@ -1,5 +1,6 @@
 #pragma once
 
+#include <PrecompiledHeader.h>
 #include <forceGenerators/RigidbodyGenerators/IRigidbodyForceGenerator.h>
 
 namespace mtrx
@@ -8,16 +9,30 @@ namespace mtrx
 	{
 	public:
 		rb_ForceGenerationRegistry() = default;
-		~rb_ForceGenerationRegistry(); // TBD: Should I handle deallocating force generators??
+		~rb_ForceGenerationRegistry() {}; // TBD: Should I handle deallocating force generators??
 
 		inline void AddForceGenerator(IRigidbodyForceGenerator* forceGenerator) { forceGenerators.push_back(forceGenerator); }
 		inline void RemoveForceGenerator(const int index) { forceGenerators.erase(forceGenerators.begin() + index); }
-		void RemoveForceGenerator(const IRigidbodyForceGenerator* forceGenerator); // Remove a specific force generator
 		inline void ClearForceGenerators() { forceGenerators.clear(); }
-		void UpdateForceGenerators(Rigidbody* rb, float deltaTime); // Update the force generators using a rigidbody
+
+		inline void RemoveForceGenerator(const IRigidbodyForceGenerator* forceGenerator)
+		{
+			for (auto iter = forceGenerators.begin(); iter != forceGenerators.end(); ++iter)
+			{
+				if (*iter == forceGenerator) { forceGenerators.erase(iter); break; }
+			}
+		}
+
+		inline void UpdateForceGenerators(Rigidbody* rb, float deltaTime)
+		{
+			for (auto iter = forceGenerators.begin(); iter != forceGenerators.end(); ++iter)
+			{
+				(*iter)->UpdateForces(rb, deltaTime);
+			}
+		}
 
 	private:
-		std::vector<IRigidbodyForceGenerator*> forceGenerators; // The force generators that we going to be using
+		std::vector<IRigidbodyForceGenerator*> forceGenerators;
 	};
 }
 
