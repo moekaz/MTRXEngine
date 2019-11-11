@@ -6,8 +6,8 @@ Demo::Demo(const char* appName, int width, int height) : application(appName, wi
 
 void Demo::Update()
 {
-	// Update delta time
-	mtrx::GameTime::Update();
+	// Update the rigidbody and the particle system
+	world.Update(mtrx::GameTime::deltaTime);
 
 	// Check for opengl errors
 	application.PollOpenGlErrors();
@@ -21,9 +21,6 @@ void Demo::Update()
 
 	// Clear the window
 	application.window.Clear();
-
-	// Update the rigidbody and the particle system
-	rbManager.Integrate(mtrx::GameTime::deltaTime);
 
 	// Update renderer
 	application.renderer.Render(transformsToRender, mesh);
@@ -42,9 +39,7 @@ void Demo::Update()
 void Demo::BaseInputCheck()
 {
 	if (application.inputSystem->GetKeyDown(GLFW_KEY_G))
-	{
 		application.inputSystem->ToggleCursor();
-	}
 }
 
 void Demo::Run()

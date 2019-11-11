@@ -36,7 +36,7 @@ float yMax = 6.f;
 float zMax = -1.f;
 
 float courantSafetyFactor = 1.0f;
-float minTimeStep = 1.0 / 240.0;
+float minTimeStep = (float)(1.0 / 240.0);
 
 // 
 glm::vec3 gravity = glm::vec3(0, -9.8f, 0);
@@ -103,12 +103,9 @@ void FluidSimulationDemo::InputCheck()
 	if (!started && application.inputSystem->GetKeyDown(GLFW_KEY_SPACE))
 	{
 		started = true;
-
-		// TBD: FIX STUCK particles at the beginning of the simulation
-		// Create the particles in a rectangle
-		float rx = 0.3;
-		float ry = 0.6;
-		float rz = 1.0;
+		float rx = 0.3f;
+		float ry = 0.6f;
+		float rz = 1.0f;
 
 		for (int i = 0; i < numParticles; ++i)
 		{
@@ -122,7 +119,7 @@ void FluidSimulationDemo::InputCheck()
 			glm::mat3 tensor = mtrx::GenerateSphereIT(mass, radius);
 			mtrx::Rigidbody* body = new mtrx::Rigidbody(mass, false, position, orientation, scale, tensor);
 			
-			rbManager.AddRigidbody(body);
+			world.AddRigidbody(body);
 
 			transformsToRender.insert(&body->GetTransform());
 			particles.push_back(new particle(restDensity, 0, body));
@@ -139,7 +136,7 @@ void FluidSimulationDemo::UpdateParticles()
 	ApplyForces();
 
 	// Update positions
-	UpdatePositions(calculateTimeStep());
+	UpdatePositions((float)calculateTimeStep());
 }
 
 void FluidSimulationDemo::ApplyDensity()
@@ -271,9 +268,9 @@ void FluidSimulationDemo::UpdatePositions(float dt)
 
 glm::vec3 FluidSimulationDemo::BarrierCollisionCorrection(particle* part)
 {
-	double r = boundaryForceRadius;
-	double minf = minBoundaryForce;
-	double maxf = maxBoundaryForce;
+	float r = boundaryForceRadius;
+	float minf = minBoundaryForce;
+	float maxf = maxBoundaryForce;
 
 	glm::vec3& p = part->rb->GetPosition();
 	glm::vec3 acceleration = glm::vec3(0.0, 0.0, 0.0);
@@ -282,38 +279,40 @@ glm::vec3 FluidSimulationDemo::BarrierCollisionCorrection(particle* part)
 	// Are these maxes and mins fine??
 	if (p.x < xMin + r)
 	{
-		double dist = fmax(0.0, p.x - xMin);
-		double force = lerp(maxf, minf, dist / r);
+		float dist = std::max(0.0f, p.x - xMin);
+		float force = lerp(maxf, minf, dist / r);
 		acceleration += glm::vec3(force / mass, 0.0, 0.0);
 	}
 	else if (p.x > xMax - r)
 	{
-		double dist = fmax(0.0, xMax - p.x);
-		double force = lerp(maxf, minf, dist / r);
+		float dist = std::max(0.0f, xMax - p.x);
+		float force = lerp(maxf, minf, dist / r);
 		acceleration += glm::vec3(-force / mass, 0.0, 0.0);
 	}
 
 	if (p.y < yMin + r)
 	{
-		double dist = fmax(0.0, p.y - yMin);
-		double force = lerp(maxf, minf, dist / r);
+		float dist = std::max(0.0f, p.y - yMin);
+		float force = lerp(maxf, minf, dist / r);
 		acceleration += glm::vec3(0.0, force / mass, 0.0);
 	}
-	else if (p.y > yMax - r) {
-		double dist = fmax(0.0, yMax - p.y);
-		double force = lerp(maxf, minf, dist / r);
+	else if (p.y > yMax - r) 
+	{
+		float dist = std::max(0.0f, yMax - p.y);
+		float force = lerp(maxf, minf, dist / r);
 		acceleration += glm::vec3(0.0, -force / mass, 0.0);
 	}
 
 	if (p.z < zMin + r)
 	{
-		double dist = fmax(0.0, p.z - zMin);
-		double force = lerp(maxf, minf, dist / r);
+		float dist = std::max(0.0f, p.z - zMin);
+		float force = lerp(maxf, minf, dist / r);
 		acceleration += glm::vec3(0.0, 0.0, force / mass);
 	}
-	else if (p.z > zMax - r) {
-		double dist = fmax(0.0, zMax - p.z);
-		double force = lerp(maxf, minf, dist / r);
+	else if (p.z > zMax - r) 
+	{
+		float dist = std::max(0.0f, zMax - p.z);
+		float force = lerp(maxf, minf, dist / r);
 		acceleration += glm::vec3(0.0, 0.0, -force / mass);
 	}
 
@@ -322,7 +321,7 @@ glm::vec3 FluidSimulationDemo::BarrierCollisionCorrection(particle* part)
 
 void FluidSimulationDemo::CollisionPositionCorrection(particle* part)
 {
-	double eps = 0.001;
+	float eps = 0.001f;
 	float d = boundaryDampingCoefficient;
 	glm::vec3& p = part->rb->GetPosition();
 	glm::vec3& vel = part->rb->GetVelocity();
@@ -372,31 +371,31 @@ void FluidSimulationDemo::PrintPositions()
 
 double FluidSimulationDemo::calculateTimeStep() 
 {
-	double maxvsq = 0.0;         // max velocity squared
-	double maxcsq = 0.0;         // max speed of sound squared
-	double maxasq = 0.0;         // max accelleration squared
+	float maxvsq = 0.0;         // max velocity squared
+	float maxcsq = 0.0;         // max speed of sound squared
+	float maxasq = 0.0;         // max accelleration squared
 	particle* p;
 
 	for (int i = 0; i < particles.size(); ++i) 
 	{
 		p = particles[i];
-		double vsq = glm::dot(p->rb->GetVelocity(), p->rb->GetVelocity());
-		double asq = glm::dot(p->rb->GetAcceleration(), p->rb->GetAcceleration());
-		double csq = evaluateSpeedOfSoundSquared(p);
+		float vsq = glm::dot(p->rb->GetVelocity(), p->rb->GetVelocity());
+		float asq = glm::dot(p->rb->GetAcceleration(), p->rb->GetAcceleration());
+		float csq = evaluateSpeedOfSoundSquared(p);
 		if (vsq > maxvsq) { maxvsq = vsq; }
 		if (csq > maxcsq) { maxcsq = csq; }
 		if (asq > maxasq) { maxasq = asq; }
 	}
 
-	double maxv = sqrt(maxvsq);
-	double maxc = sqrt(maxcsq);
-	double maxa = sqrt(maxasq);
+	float maxv = sqrt(maxvsq);
+	float maxc = sqrt(maxcsq);
+	float maxa = sqrt(maxasq);
 
-	double vStep = courantSafetyFactor * smoothingRadius / fmax(1.0, maxv);
-	double cStep = courantSafetyFactor * smoothingRadius / maxc;
-	double aStep = sqrt(smoothingRadius / maxa);
-	double tempMin = fmin(vStep, cStep);
+	float vStep = courantSafetyFactor * smoothingRadius / std::min(1.0f, maxv);
+	float cStep = courantSafetyFactor * smoothingRadius / maxc;
+	float aStep = sqrt(smoothingRadius / maxa);
+	float tempMin = std::min(vStep, cStep);
 
-	return fmax(minTimeStep, fmin(tempMin, aStep));
+	return std::min(minTimeStep, fmin(tempMin, aStep));
 }
 

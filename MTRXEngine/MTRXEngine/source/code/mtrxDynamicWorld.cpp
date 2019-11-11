@@ -3,18 +3,22 @@
 
 namespace mtrx
 {
-	mtrxDynamicWorld::mtrxDynamicWorld()
+	mtrxDynamicWorld::mtrxDynamicWorld() : accumulator(0.f)
 	{}
 
 	mtrxDynamicWorld::~mtrxDynamicWorld()
 	{}
 
-	void mtrxDynamicWorld::Update()
+	void mtrxDynamicWorld::Update(float dt)
 	{
-		// Update deltaTime
-		GameTime::Update();
+		GameTime::Update();	// Update deltaTime
 
-		// Update the rigidbody manager
-		m_rbManager.Integrate(GameTime::deltaTime);
+		accumulator += dt; 
+		while (accumulator >= PHYSICS_TIMESTEP)
+		{
+			// Update the rigidbody manager
+			m_rbManager.Integrate(dt);
+			accumulator -= PHYSICS_TIMESTEP;
+		}
 	}
 }

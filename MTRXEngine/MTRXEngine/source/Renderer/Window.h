@@ -6,6 +6,9 @@
 
 #include <log/LogManager.h>
 #include <UILayer.h>
+#include <glad/glad.h>
+#include <GLFW/glfw3.h> 
+
 
 class Window
 {

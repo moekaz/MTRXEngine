@@ -7,17 +7,18 @@
 #include <entities/RigidbodyManager.h>
 #include <Application.h>
 #include <math/GameTime.h>
+#include <mtrxDynamicWorld.h>
 
 class Demo
 {
 public:
 	Application application;
+	bool cursor;
 	std::unordered_set<mtrx::Transform*> transformsToRender;
 	int mesh;
 
 	// Physics entity managers
-	mtrx::RigidbodyManager rbManager;
-	bool cursor;
+	mtrx::mtrxDynamicWorld world;
 
 	Demo(const char* appName = "DEMO APPLICATION", int width = DEFAULT_WINDOW_WIDTH, int height = DEFAULT_WINDOW_HEIGHT);
 	~Demo() = default;

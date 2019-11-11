@@ -8,6 +8,7 @@
 #include "Shader.h"
 #include "Camera.h"
 #include "Window.h"
+#include <glad/glad.h>
 
 class SimpleRenderer 
 {

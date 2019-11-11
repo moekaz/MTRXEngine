@@ -178,7 +178,7 @@ void SimpleRenderer::CreateSphereMesh()
 		}
 	}
 
-	sphereIBOSize = indices.size();
+	sphereIBOSize = (unsigned int)indices.size();
 
 	glGenVertexArrays(1, &sphereVAO);
 	glGenBuffers(1, &sphereVBO);

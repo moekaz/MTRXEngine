@@ -1,9 +1,8 @@
 
 #pragma once
 
-/*
-	PS: Panel names should probably be unique
-*/
+#include <imgui/imgui.h>
+
 class UIPanel
 {
 public:

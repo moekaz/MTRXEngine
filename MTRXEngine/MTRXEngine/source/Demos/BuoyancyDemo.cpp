@@ -4,9 +4,6 @@
 BuoyancyDemo::BuoyancyDemo() : Demo("Buoyancy Demo", 1280, 720)
 {}
 
-BuoyancyDemo::~BuoyancyDemo()
-{}
-
 void BuoyancyDemo::Update()
 {
 	mtrx::Transform center =
@@ -31,9 +28,9 @@ void BuoyancyDemo::Update()
 	body.SetLinearDamping(linearDamping);
 
 	// Add the relevant info
-	rbManager.AddRigidbody(&body);
-	rbManager.AddForceGenerator(&body, &buoyancyGenerator);
-	rbManager.AddForceGenerator(&body, &gravityGenerator);
+	world.AddRigidbody(&body);
+	world.AddForceGenerator(&body, &buoyancyGenerator);
+	world.AddForceGenerator(&body, &gravityGenerator);
 	transformsToRender.insert(&body.GetTransform());
 
 	// Create UI

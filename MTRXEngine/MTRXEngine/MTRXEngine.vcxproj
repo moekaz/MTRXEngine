@@ -72,16 +72,16 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)</OutDir>
     <IntDir>$(SolutionDir)\bin\intermediate\$(Platform)\$(Configuration)</IntDir>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir)/source/headers;$(ProjectDir)/source/Libraries/glm;$(ProjectDir)/source/Libraries/spdlog/include/;$(ProjectDir)/source/Libraries/glfw/include/;$(ProjectDir)/source/Libraries/glad/include/;$(ProjectDir)/source/renderer;$(ProjectDir)/source/Libraries/</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir)/source/headers;$(ProjectDir)/source/Libraries/glm;$(ProjectDir)/source/Libraries/spdlog/include/;$(ProjectDir)/source/Libraries/glfw/include/;$(ProjectDir)/source/Libraries/glad/include/;$(ProjectDir)/source/renderer;$(ProjectDir)/source/Libraries/</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir)/source/headers;$(ProjectDir)/source/Libraries/glm;$(ProjectDir)/source/Libraries/spdlog/include/;$(ProjectDir)/source/Libraries/glfw/include/;$(ProjectDir)/source/Libraries/glad/include/;$(ProjectDir)/source/renderer;$(ProjectDir)/source/Libraries/</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir)/source/headers;$(ProjectDir)/source/Libraries/glm;$(ProjectDir)/source/Libraries/spdlog/include/;$(ProjectDir)/source/Libraries/glfw/include/;$(ProjectDir)/source/Libraries/glad/include/;$(ProjectDir)/source/renderer;$(ProjectDir)/source/Libraries/</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -89,7 +89,8 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)/source/headers;$(ProjectDir)/source/Libraries/glm;$(ProjectDir)/source/Libraries/spdlog/include/;$(ProjectDir)/source/Libraries/glfw/include/;$(ProjectDir)/source/Libraries/glad/include/;$(ProjectDir)/source/renderer;$(ProjectDir)/source/Libraries/imgui</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>PrecompiledHeader.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpplatest</LanguageStandard>
@@ -105,7 +106,8 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)/source/headers;$(ProjectDir)/source/Libraries/glm;$(ProjectDir)/source/Libraries/spdlog/include/;$(ProjectDir)/source/Libraries/glfw/include/;$(ProjectDir)/source/Libraries/glad/include/;$(ProjectDir)/source/renderer;$(ProjectDir)/source/Libraries/imgui</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>PrecompiledHeader.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpplatest</LanguageStandard>
@@ -125,7 +127,8 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>PrecompiledHeader.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir)/source/headers;$(ProjectDir)/source/Libraries/glm;$(ProjectDir)/source/Libraries/spdlog/include/;$(ProjectDir)/source/Libraries/glfw/include/;$(ProjectDir)/source/Libraries/glad/include/;$(ProjectDir)/source/renderer;$(ProjectDir)/source/Libraries/imgui</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
@@ -146,7 +149,8 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>PrecompiledHeader.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir)/source/headers;$(ProjectDir)/source/Libraries/glm;$(ProjectDir)/source/Libraries/spdlog/include/;$(ProjectDir)/source/Libraries/glfw/include/;$(ProjectDir)/source/Libraries/glad/include/;$(ProjectDir)/source/renderer;$(ProjectDir)/source/Libraries/imgui</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>

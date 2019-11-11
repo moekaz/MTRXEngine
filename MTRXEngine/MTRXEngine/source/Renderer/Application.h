@@ -3,6 +3,9 @@
 #include <Window.h>
 #include <SimpleRenderer.h>
 #include <Input/InputSystem.h>
+#include <glad/glad.h>
+#include <glfw/glfw3.h>
+#include <imgui/imgui.h>
 
 class Application
 {

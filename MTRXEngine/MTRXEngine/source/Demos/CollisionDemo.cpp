@@ -29,7 +29,7 @@ CollisionDemo::CollisionDemo() : Demo("COLLISION DEMO", 1366, 768)
 
 		worldRbs.push_back(body);
 		worldColliders.push_back(collider);
-		rbManager.AddRigidbody(body);
+		world.AddRigidbody(body);
 		transformsToRender.insert(&body->GetTransform());
 	}
 }
@@ -70,7 +70,7 @@ void CollisionDemo::Update()
 
 				worldRbs[j]->AddForceAtPoint(glm::fastNormalize(bullet->GetVelocity()) * 100.f, bullet->GetPosition());
 
-				rbManager.RemoveRigidbody(bullet);
+				world.RemoveRigidbody(bullet);
 				transformsToRender.erase(&bullet->GetTransform());
 				bulletRbs.erase(bulletRbs.begin() + i);
 				bulletColliders.erase(bulletColliders.begin() + i);
@@ -108,5 +108,5 @@ void CollisionDemo::Shoot()
 	bulletRbs.push_back(bullet);
 	bulletColliders.push_back(collider);
 	transformsToRender.insert(&bullet->GetTransform());
-	rbManager.AddRigidbody(bullet);
+	world.AddRigidbody(bullet);
 }

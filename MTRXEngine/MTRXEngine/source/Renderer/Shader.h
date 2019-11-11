@@ -7,6 +7,7 @@
 
 #include <log/LogManager.h>
 #include <Defs.h>
+#include <glad/glad.h>
 
 class Shader
 {

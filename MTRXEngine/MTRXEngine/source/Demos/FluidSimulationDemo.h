@@ -40,10 +40,10 @@ public:
 	glm::vec3 BarrierCollisionCorrection(particle* p);
 
 
-	inline double evaluateSpeedOfSoundSquared(particle* sp) 
+	inline float evaluateSpeedOfSoundSquared(particle* sp) 
 	{
-		if (sp->density < 0.00001) 
-			return 0.0;
+		if (sp->density < 0.00001f) 
+			return 0.0f;
 		
 		float ratioOfSpecificHeats = 1.0f;
 		return ratioOfSpecificHeats * (sp->pressure) / sp->density;

@@ -11,7 +11,7 @@ public:
 	mtrx::Rigidbody body;
 	
 	BuoyancyDemo();
-	~BuoyancyDemo();
+	~BuoyancyDemo() = default;
 
 	void Update() override;
 	void InputCheck() override;

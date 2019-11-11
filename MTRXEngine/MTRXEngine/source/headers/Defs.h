@@ -8,6 +8,7 @@ namespace mtrx
 	#define LOGGER_FILE_SIZE 5242880 // Maximum size of logger file 
 	#define PI 3.14159265358f // Approximation of pi
 	#define WORLD_DIMENSIONS 3 // World dimensions
+	#define PHYSICS_TIMESTEP 0.01666666666f // 60fps timestep
 
 	static float gravity = 9.81f; // Constant value for gravity (not realistic value but games don't have realistic gravity
 	static std::string projectDir = std::filesystem::current_path().string(); // Gives us the project dir

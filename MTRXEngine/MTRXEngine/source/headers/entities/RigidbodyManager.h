@@ -7,16 +7,6 @@
 
 namespace mtrx
 {
-	// Each rigidbody will hold a force registry that will update this rigidbody
-	struct rbForceGenerators
-	{
-		Rigidbody* rb;
-		rb_ForceGenerationRegistry* registry;
-
-		rbForceGenerators(Rigidbody* rb, rb_ForceGenerationRegistry* registry) : rb(rb), registry(registry) 
-		{}
-	};
-
 	class RigidbodyManager : public IIntegratable
 	{
 	public:
@@ -25,20 +15,7 @@ namespace mtrx
 		float accumulator;
 
 		RigidbodyManager();
-		~RigidbodyManager(); // TBD: Deallocation responsibility is it ours?
-
-		// TBD: Figure out allocation and deallocation of memory responsibilities
-		inline void AddRigidbody(Rigidbody* rb) { rigidbodies.push_back(rb); }
-		inline void AddForceGenerator(Rigidbody* rb, IRigidbodyForceGenerator* forceGenerator) { forceGenerators[rb].AddForceGenerator(forceGenerator); }
-		inline void RemoveForceGenerator(Rigidbody* rb, IRigidbodyForceGenerator* generator) { forceGenerators[rb].RemoveForceGenerator(generator); }
-		inline void RemoveRigidbody(Rigidbody* rb) 
-		{
-			rigidbodies.remove(rb); 
-			forceGenerators.erase(rb);
-			
-			// Not sure i should be doing this
-			//delete rb;
-		}
+		~RigidbodyManager(); // TBD: Deallocation responsibility is it ours
 
 		virtual void Integrate(float deltaTime) override;
 		void IntegrateRigidbodies(float deltaTime);
