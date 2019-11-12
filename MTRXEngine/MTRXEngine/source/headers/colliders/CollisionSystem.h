@@ -13,10 +13,14 @@ namespace mtrx
 	class CollisionSystem
 	{
 	public:
+		std::unordered_set<Collider*> colliders;
+
 		CollisionSystem();
-		~CollisionSystem();
+		~CollisionSystem() = default;
 
 		// Using sphere colliders atm
-		BVHNode<SphereCollider>* root;
+		//BVHNode<SphereCollider>* root;
+		
+		//void Collision();
 	};
 }

@@ -7,7 +7,4 @@ namespace mtrx
 	{
 		//root = new BVHNode<SphereCollider>();
 	}
-
-	CollisionSystem::~CollisionSystem()
-	{}
 }

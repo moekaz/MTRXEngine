@@ -19,7 +19,7 @@ public:
 	std::vector<mtrx::Collider*> bulletColliders;
 
 	CollisionDemo();
-	~CollisionDemo();
+	~CollisionDemo() = default;
 
 	virtual void Update() override;
 	virtual void InputCheck() override;

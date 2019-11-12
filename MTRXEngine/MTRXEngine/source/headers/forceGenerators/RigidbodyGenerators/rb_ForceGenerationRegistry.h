@@ -10,7 +10,7 @@ namespace mtrx
 	public:
 		std::vector<std::shared_ptr<IRigidbodyForceGenerator>> forceGenerators;
 
-		~rb_ForceGenerationRegistry() {}; // TBD: Should I handle deallocating force generators??
+		~rb_ForceGenerationRegistry() = default;
 
 		inline void AddForceGenerator(const std::shared_ptr<IRigidbodyForceGenerator>& forceGenerator) { forceGenerators.push_back(forceGenerator); }
 		inline void RemoveForceGenerator(const int index) { forceGenerators.erase(forceGenerators.begin() + index); }

@@ -30,21 +30,8 @@ CollisionDemo::CollisionDemo() : Demo("COLLISION DEMO", 1366, 768)
 		worldRbs.push_back(body);
 		worldColliders.push_back(collider);
 		world.AddRigidbody(body);
+		world.AddCollider(collider);
 		transformsToRender.insert(&body->GetTransform());
-	}
-}
-
-CollisionDemo::~CollisionDemo()
-{
-	// TBD: DO THIS IN A COLLISION SYSTEM INSTEAD OF HERE
-	for (int i = 0; i < bulletColliders.size(); ++i)
-	{
-		delete bulletColliders[i];
-	}
-
-	for (int i = 0; i < worldColliders.size(); ++i)
-	{
-		delete worldColliders[i];
 	}
 }
 
@@ -122,4 +109,5 @@ void CollisionDemo::Shoot()
 	bulletColliders.push_back(collider);
 	transformsToRender.insert(&bullet->GetTransform());
 	world.AddRigidbody(bullet);
+	world.AddCollider(collider);
 }

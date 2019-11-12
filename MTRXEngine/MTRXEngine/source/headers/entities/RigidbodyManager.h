@@ -12,7 +12,7 @@ namespace mtrx
 		std::unordered_map<Rigidbody*, rb_ForceGenerationRegistry> rigidbodyRegistry;
 
 		RigidbodyManager() = default;
-		~RigidbodyManager() = default; // TBD: Deallocation responsibility is it ours
+		~RigidbodyManager() = default;
 
 		void Integrate(float deltaTime);
 		void IntegrateRigidbodies(float deltaTime);

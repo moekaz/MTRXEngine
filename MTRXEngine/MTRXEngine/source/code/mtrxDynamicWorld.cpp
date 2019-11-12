@@ -8,6 +8,8 @@ namespace mtrx
 
 	mtrxDynamicWorld::~mtrxDynamicWorld()
 	{
+		// TBD: DECIDE WHETHER WE WANT TO HANDLE DEALLOCATION IN HERE OR IN THE MANAGERS THEMSELVES
+		// Delete rigidbodies
 		for (auto iter = m_rbManager.rigidbodyRegistry.begin(); iter != m_rbManager.rigidbodyRegistry.end(); ++iter)
 		{
 			Rigidbody* rb = iter->first;
@@ -15,6 +17,16 @@ namespace mtrx
 				continue;
 
 			delete rb;
+		}
+
+		// Delete colliders
+		for (auto iter = m_CollisionSystem.colliders.begin(); iter != m_CollisionSystem.colliders.end(); ++iter)
+		{
+			Collider* col = *iter;
+			if (!col)
+				continue;
+
+			delete col;
 		}
 	}
 
