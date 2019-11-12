@@ -12,7 +12,7 @@ namespace mtrx
 	public:	
 		Collider(const ColliderType& colliderType, const glm::vec3& center = glm::vec3(), const glm::quat& orientation = glm::angleAxis(0.f, glm::vec3(0, 1, 0)), const glm::vec3& scale = glm::vec3(1, 1, 1), bool isConvex = false);
 		Collider(const ColliderType& colliderType, const Transform& transform, bool isConvex = false);
-		virtual ~Collider() = default;										
+		virtual ~Collider() = default;
 		
 		virtual inline bool CheckCollision(const Collider& collider) { return ColliderDetectionUtil::Collide(*this, collider); }
 		virtual bool RaycastCollision(const Ray& ray) = 0;

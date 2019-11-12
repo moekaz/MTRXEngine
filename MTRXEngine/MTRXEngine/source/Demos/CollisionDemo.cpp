@@ -34,11 +34,25 @@ CollisionDemo::CollisionDemo() : Demo("COLLISION DEMO", 1366, 768)
 	}
 }
 
+CollisionDemo::~CollisionDemo()
+{
+	// TBD: DO THIS IN A COLLISION SYSTEM INSTEAD OF HERE
+	for (int i = 0; i < bulletColliders.size(); ++i)
+	{
+		delete bulletColliders[i];
+	}
+
+	for (int i = 0; i < worldColliders.size(); ++i)
+	{
+		delete worldColliders[i];
+	}
+}
+
 void CollisionDemo::Update()
 {
 	// Create the UI 
-	CollisionDemoUI ui = CollisionDemoUI("Collision Demo", glm::vec2(300, 300));
-	UILayer::AddUIPanel(&ui);
+	//CollisionDemoUI ui = CollisionDemoUI("Collision Demo", glm::vec2(300, 300));
+	//UILayer::AddUIPanel(&ui);
 
 	while (!application.window.ShouldClose())
 	{
@@ -75,7 +89,6 @@ void CollisionDemo::Update()
 				bulletRbs.erase(bulletRbs.begin() + i);
 				bulletColliders.erase(bulletColliders.begin() + i);
 
-				delete bullet;
 				delete collider;
 				--i;
 				break;

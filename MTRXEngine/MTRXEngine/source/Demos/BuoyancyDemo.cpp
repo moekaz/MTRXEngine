@@ -23,27 +23,27 @@ void BuoyancyDemo::Update()
 	float gravitationAcceleration = -0.5f;
 	glm::vec3 gravity = glm::vec3(0, gravitationAcceleration, 0);
 	body = new mtrx::Rigidbody(mass, false, glm::vec3(-2.f, 6.f, 0), glm::angleAxis(0.f, mtrx::worldUp), glm::vec3(1, 1, 1), mtrx::GenerateCuboidIT(mass, extents));
-	mtrx::rb_BuoyancyForceGenerator buoyancyGenerator = mtrx::rb_BuoyancyForceGenerator(gravity, 1.f, 3.f);
-	mtrx::rb_GravityForceGenerator gravityGenerator = mtrx::rb_GravityForceGenerator(gravity);
+	std::shared_ptr<mtrx::rb_BuoyancyForceGenerator> buoyancyGenerator = std::make_shared<mtrx::rb_BuoyancyForceGenerator>(gravity, 1.f, 3.f);
+	std::shared_ptr<mtrx::rb_GravityForceGenerator> gravityGenerator = std::make_shared<mtrx::rb_GravityForceGenerator>(gravity);
 	body->SetLinearDamping(linearDamping);
 
 	// Add the relevant info
 	world.AddRigidbody(body);
-	world.AddForceGenerator(body, &buoyancyGenerator);
-	world.AddForceGenerator(body, &gravityGenerator);
+	world.AddForceGenerator(body, buoyancyGenerator);
+	world.AddForceGenerator(body, gravityGenerator);
 	transformsToRender.insert(&body->GetTransform());
 
 	// Create UI
-	BuoyancyDemoUI ui = BuoyancyDemoUI("Buoyancy Demo", glm::vec2(400, 300), &linearDamping, &gravitationAcceleration, &buoyancyGenerator.liquidLevel, &buoyancyGenerator.liquidDensity);
-	UILayer::AddUIPanel(&ui);
+	//BuoyancyDemoUI ui = BuoyancyDemoUI("Buoyancy Demo", glm::vec2(400, 300), &linearDamping, &gravitationAcceleration, &buoyancyGenerator->liquidLevel, &buoyancyGenerator->liquidDensity);
+	//UILayer::AddUIPanel(&ui);
 
 	while (!application.window.ShouldClose())
 	{
 		// Workaround i guess
 		body->SetLinearDamping(linearDamping);
-		gravityGenerator.gravitationalAcceleration.y = gravitationAcceleration;
-		buoyancyGenerator.gravitationalAcceleration.y = gravitationAcceleration;
-		center.GetPosition().y = buoyancyGenerator.liquidLevel;
+		gravityGenerator->gravitationalAcceleration.y = gravitationAcceleration;
+		buoyancyGenerator->gravitationalAcceleration.y = gravitationAcceleration;
+		center.GetPosition().y = buoyancyGenerator->liquidLevel;
 		Demo::Update();
 	}
 }

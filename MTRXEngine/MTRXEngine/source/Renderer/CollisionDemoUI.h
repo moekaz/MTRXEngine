@@ -1,7 +1,6 @@
 #pragma once
 
 #include <UIPanel.h>
-#include <imgui/imgui.h>
 
 class CollisionDemoUI : public UIPanel
 {

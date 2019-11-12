@@ -8,9 +8,13 @@ namespace mtrx
 
 	mtrxDynamicWorld::~mtrxDynamicWorld()
 	{
-		for (auto iter = m_rbManager.rigidbodies.begin(); iter != m_rbManager.rigidbodies.end(); ++iter)
+		for (auto iter = m_rbManager.rigidbodyRegistry.begin(); iter != m_rbManager.rigidbodyRegistry.end(); ++iter)
 		{
-			delete *iter;
+			Rigidbody* rb = iter->first;
+			if (!rb)
+				continue;
+
+			delete rb;
 		}
 	}
 

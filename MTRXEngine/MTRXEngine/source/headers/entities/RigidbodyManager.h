@@ -6,14 +6,12 @@
 
 namespace mtrx
 {
-	class RigidbodyManager : public IIntegratable
+	class RigidbodyManager
 	{
 	public:
-		std::unordered_map<Rigidbody*, rb_ForceGenerationRegistry> forceGenerators;
-		std::list<Rigidbody*> rigidbodies;
-		float accumulator;
+		std::unordered_map<Rigidbody*, rb_ForceGenerationRegistry> rigidbodyRegistry;
 
-		RigidbodyManager();
+		RigidbodyManager() = default;
 		~RigidbodyManager() = default; // TBD: Deallocation responsibility is it ours
 
 		void Integrate(float deltaTime);

@@ -1,6 +1,6 @@
 #include <PrecompiledHeader.h>
 
-#define DEMO 4
+#define DEMO 2
 
 #if DEMO == 1
 	#include <../Demos/ProjectileDemo.h>
@@ -12,12 +12,15 @@
 	#include <../Demos/FluidSimulationDemo.h>
 #endif
 
-#include <log/LogManager.h>
 #include <../Renderer/Input/InputSystem.h>
 #include <../Demos/Demo.h>
 
 int main()
 {
+#if _DEBUG
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+#endif
+
 	// Demo application that we want to run
 	std::unique_ptr<Demo> app;
 #if DEMO == 1

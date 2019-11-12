@@ -1,4 +1,5 @@
 #include <PrecompiledHeader.h>
+
 #include <utils/ColliderDetectionUtil.h>
 #include <colliders/Collider.h>
 #include <colliders/SphereCollider.h>
@@ -30,19 +31,16 @@ namespace mtrx
 			{
 				case ColliderType::Sphere:
 				{
-					std::cout << "sphere sphere" << std::endl;
 					const SphereCollider& sphereCollider = static_cast<const SphereCollider&>(collider);
 					return CollisionUtil::SphereSphereCollision(sphCollider.GetPosition(), sphereCollider.GetPosition(), sphCollider.GetRadius(), sphereCollider.GetRadius());
 				}
 				case ColliderType::Box:
 				{
-					std::cout << "Sphere Box" << std::endl;
 					const BoxCollider& boxCollider = static_cast<const BoxCollider&>(collider);
 					return CollisionUtil::SphereBoxCollision(sphCollider.GetPosition(), boxCollider.GetPosition(), sphCollider.GetRadius(), boxCollider.GetAxes(), boxCollider.GetHalfExtents());
 				}
 				case ColliderType::Capsule:
 				{
-					std::cout << "sphere capsule" << std::endl;
 					const CapsuleCollider& capsuleCollider = static_cast<const CapsuleCollider&>(collider);
 					return CollisionUtil::SphereCapsuleCollision(sphCollider.GetPosition(), capsuleCollider.GetPosition(), sphCollider.GetRadius(), capsuleCollider.GetRadii(), capsuleCollider.A, capsuleCollider.B);
 				}
@@ -57,12 +55,10 @@ namespace mtrx
 			{
 				case ColliderType::Sphere: // Extra switch to avoid duplication TBD: maybe might need to do something a little better
 				{
-					std::cout << "box sphere" << std::endl;
 					return SphereCollisionOptions(static_cast<const SphereCollider&>(collider), boxCollider);
 				}
 				case ColliderType::Box:
 				{
-					std::cout << "box box" << std::endl;
 					const BoxCollider& bxCollider = static_cast<const BoxCollider&>(collider);
 					auto vertices1 = boxCollider.GetVertices();
 					auto vertices2 = bxCollider.GetVertices();
@@ -70,7 +66,6 @@ namespace mtrx
 				}
 				case ColliderType::Capsule:
 				{
-					std::cout << "box capsule" << std::endl;
 					const CapsuleCollider& capsuleCollider = static_cast<const CapsuleCollider&>(collider);
 					return CollisionUtil::BoxCapsuleCollision(boxCollider.GetPosition(), capsuleCollider.GetPosition(), capsuleCollider.A, capsuleCollider.B, capsuleCollider.GetRadii(), boxCollider.GetAxes(), boxCollider.GetHalfExtents());
 				}
@@ -85,17 +80,14 @@ namespace mtrx
 			{
 				case ColliderType::Sphere: // Extra switch to avoid duplication TBD: maybe might need to do something a little better
 				{
-					std::cout << "capsule sphere" << std::endl;
 					return SphereCollisionOptions(static_cast<const SphereCollider&>(collider), capCollider);
 				}
 				case ColliderType::Box:
 				{
-					std::cout << "capsule box" << std::endl;
 					return BoxCollisionOptions(static_cast<const BoxCollider&>(collider), capCollider);
 				}
 				case ColliderType::Capsule:
 				{
-					std::cout << "capsule capsule" << std::endl;
 					const CapsuleCollider& capsuleCollider = static_cast<const CapsuleCollider&>(collider);
 					return CollisionUtil::CapsuleCapsuleCollision(capCollider.A, capCollider.B, capsuleCollider.A, capsuleCollider.B, capCollider.GetRadii(), capsuleCollider.GetRadii());
 				}

@@ -5,7 +5,6 @@
 #include <Input/InputSystem.h>
 #include <glad/glad.h>
 #include <glfw/glfw3.h>
-#include <imgui/imgui.h>
 
 class Application
 {
@@ -28,7 +27,7 @@ public:
 		// Poll for opengl errors
 		while (GLenum error = glGetError() != GL_NO_ERROR)
 		{
-			MTRX_ERROR("OpenGL error: " + error);
+			MTRX_CRITICAL("OpenGL error: " + error);
 		}
 	}
 };

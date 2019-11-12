@@ -8,14 +8,14 @@ namespace mtrx
 	class rb_ForceGenerationRegistry
 	{
 	public:
-		rb_ForceGenerationRegistry() = default;
+		std::vector<std::shared_ptr<IRigidbodyForceGenerator>> forceGenerators;
+
 		~rb_ForceGenerationRegistry() {}; // TBD: Should I handle deallocating force generators??
 
-		inline void AddForceGenerator(IRigidbodyForceGenerator* forceGenerator) { forceGenerators.push_back(forceGenerator); }
+		inline void AddForceGenerator(const std::shared_ptr<IRigidbodyForceGenerator>& forceGenerator) { forceGenerators.push_back(forceGenerator); }
 		inline void RemoveForceGenerator(const int index) { forceGenerators.erase(forceGenerators.begin() + index); }
-		inline void ClearForceGenerators() { forceGenerators.clear(); }
 
-		inline void RemoveForceGenerator(const IRigidbodyForceGenerator* forceGenerator)
+		inline void RemoveForceGenerator(const std::shared_ptr<IRigidbodyForceGenerator>& forceGenerator)
 		{
 			for (auto iter = forceGenerators.begin(); iter != forceGenerators.end(); ++iter)
 			{
@@ -30,9 +30,6 @@ namespace mtrx
 				(*iter)->UpdateForces(rb, deltaTime);
 			}
 		}
-
-	private:
-		std::vector<IRigidbodyForceGenerator*> forceGenerators;
 	};
 }
 

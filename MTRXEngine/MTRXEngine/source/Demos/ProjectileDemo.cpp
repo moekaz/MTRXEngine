@@ -1,9 +1,10 @@
 #include <PrecompiledHeader.h>
 #include <../Demos/ProjectileDemo.h>
 
-ProjectileDemo::ProjectileDemo() : Demo("PROJECTILE DEMO", 1366, 768), gravityGenerator(glm::vec3(0, -mtrx::gravity, 0)), projectileType(1)
+ProjectileDemo::ProjectileDemo() : Demo("PROJECTILE DEMO", 1366, 768), projectileType(1),
+	gravityGenerator(std::make_shared<mtrx::rb_GravityForceGenerator>(glm::vec3(0, -mtrx::gravity, 0)))
 {
-	UILayer::AddUIPanel(new ProjectileDemoUI("Projectile Demo", glm::vec2(300, 200), &projectileType));
+	//UILayer::AddUIPanel(new ProjectileDemoUI("Projectile Demo", glm::vec2(300, 200), &projectileType));
 	application.camera->GetTransform().SetPosition(glm::vec3(0, 0, 20.f));
 	//application.window.SetVsync(true);
 }
@@ -43,7 +44,7 @@ void ProjectileDemo::InputCheck()
 				float extents[] = { 1.f, 1.f, 1.f };
 				projectile = new mtrx::Rigidbody(mass, false, glm::vec3(-40.f, 1.f, 0.f), glm::angleAxis(0.f, mtrx::worldUp), glm::vec3(1.f, 1.f, 1.f), mtrx::GenerateCuboidIT(mass, extents));
 				projectile->AddForce(glm::vec3(60000.f, 50000.f, 0));
-				world.AddForceGenerator(projectile, &gravityGenerator);
+				world.AddForceGenerator(projectile, gravityGenerator);
 				break;
 			}
 			case 2:
@@ -53,7 +54,7 @@ void ProjectileDemo::InputCheck()
 				float extents[] = { 0.2f, 0.2f, 0.2f };
 				projectile = new mtrx::Rigidbody(mass, false, glm::vec3(-40.f, 1.f, 0.f), glm::angleAxis(0.f, mtrx::worldUp), glm::vec3(0.2f, 0.2f, 0.2f), mtrx::GenerateCuboidIT(mass, extents));
 				projectile->AddForce(glm::vec3(1.f, 0.1f, 0));
-				world.AddForceGenerator(projectile, &gravityGenerator);
+				world.AddForceGenerator(projectile, gravityGenerator);
 				break;
 			}
 			case 3:

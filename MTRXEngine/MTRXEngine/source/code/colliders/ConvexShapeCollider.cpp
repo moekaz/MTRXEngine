@@ -25,7 +25,6 @@ namespace mtrx
 		}
 	}
 
-	// Convex shape collision detection
 	bool ConvexShapeCollider::CheckCollision(const Collider& col)
 	{
 		// TBD: THIS IS NOT GOOD AT ALL (AS IT WILL BREAK COLLISION)

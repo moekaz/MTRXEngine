@@ -1,6 +1,6 @@
 #pragma once
 
-#include <log/LogManager.h>
+
 #include <Input/InputSystem.h>
 #include <SimpleRenderer.h>
 #include <Window.h>
@@ -21,7 +21,7 @@ public:
 	mtrx::mtrxDynamicWorld world;
 
 	Demo(const char* appName = "DEMO APPLICATION", int width = DEFAULT_WINDOW_WIDTH, int height = DEFAULT_WINDOW_HEIGHT);
-	~Demo() = default;
+	virtual ~Demo() = default;
 	
 	void BaseInputCheck();
 	virtual void InputCheck() = 0;

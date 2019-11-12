@@ -10,7 +10,7 @@ class ProjectileDemo : public Demo
 {
 public:
 	mtrx::Rigidbody* projectile;
-	mtrx::rb_GravityForceGenerator gravityGenerator;
+	std::shared_ptr<mtrx::rb_GravityForceGenerator> gravityGenerator;
 	int projectileType;
 
 	ProjectileDemo();

@@ -1,4 +1,5 @@
 #include <PrecompiledHeader.h>
+
 #include "SimpleRenderer.h"
 
 std::string SimpleRenderer::shaderDir = mtrx::projectDir + "/source/Renderer/shaders/";

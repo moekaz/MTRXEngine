@@ -4,7 +4,6 @@
 #define DEFAULT_WINDOW_HEIGHT 600
 #define DEFAULT_FPS 60
 
-#include <log/LogManager.h>
 #include <UILayer.h>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h> 

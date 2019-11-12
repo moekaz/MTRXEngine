@@ -90,7 +90,7 @@ void FluidSimulationDemo::Update()
 		application.inputSystem->Update();
 
 		// Update the UI layer's frame
-		UILayer::UpdateFrame();
+		//UILayer::UpdateFrame();
 
 		// PS: You want to have all logic and that stuff before this call 
 		// Clear buffers and poll

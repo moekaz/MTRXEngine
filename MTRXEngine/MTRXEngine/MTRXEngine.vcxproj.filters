@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="source\Renderer\ProjectileDemoUI.cpp" />
     <ClCompile Include="source\code\mtrxDynamicWorld.cpp" />
     <ClCompile Include="source\Libraries\glad\src\glad.c" />
     <ClCompile Include="source\Libraries\imgui\imgui.cpp" />
@@ -11,7 +10,6 @@
     <ClCompile Include="source\Libraries\imgui\imgui_impl_opengl3.cpp" />
     <ClCompile Include="source\Libraries\imgui\imgui_widgets.cpp" />
     <ClCompile Include="source\Renderer\Application.cpp" />
-    <ClCompile Include="source\Renderer\UILayer.cpp" />
     <ClCompile Include="source\Renderer\Input\InputSystem.cpp" />
     <ClCompile Include="source\Demos\Demo.cpp" />
     <ClCompile Include="source\code\colliders\BVHNode.cpp" />
@@ -26,7 +24,6 @@
     <ClCompile Include="source\code\colliders\ConvexShapeCollider.cpp" />
     <ClCompile Include="source\code\colliders\SphereCollider.cpp" />
     <ClCompile Include="source\code\entities\Rigidbody.cpp" />
-    <ClCompile Include="source\code\log\LogManager.cpp" />
     <ClCompile Include="source\code\math\Mat3.cpp" />
     <ClCompile Include="source\code\math\Vector3D.cpp" />
     <ClCompile Include="source\code\utils\CollisionUtil.cpp" />
@@ -38,20 +35,22 @@
     <ClCompile Include="source\Renderer\Shader.cpp" />
     <ClCompile Include="source\Renderer\SimpleRenderer.cpp" />
     <ClCompile Include="source\Renderer\Window.cpp" />
-    <ClCompile Include="source\Renderer\UIPanel.cpp" />
     <ClCompile Include="source\Demos\BuoyancyDemo.cpp" />
     <ClCompile Include="source\Demos\FluidSimulationDemo.cpp" />
-    <ClCompile Include="source\Renderer\BuoyancyDemoUI.cpp" />
-    <ClCompile Include="source\Renderer\CollisionDemoUI.cpp" />
     <ClCompile Include="source\code\utils\ColliderDetectionUtil.cpp" />
     <ClCompile Include="source\code\utils\GJKUtil.cpp" />
     <ClCompile Include="source\code\math\GameTime.cpp" />
     <ClCompile Include="source\code\entities\RigidbodyManager.cpp" />
     <ClCompile Include="source\code\utils\RaycastCollisionUtil.cpp" />
     <ClCompile Include="source\code\PrecompiledHeader.cpp" />
+    <ClCompile Include="source\Renderer\BuoyancyDemoUI.cpp" />
+    <ClCompile Include="source\Renderer\CollisionDemoUI.cpp" />
+    <ClCompile Include="source\Renderer\ProjectileDemoUI.cpp" />
+    <ClCompile Include="source\Renderer\UILayer.cpp" />
+    <ClCompile Include="source\Renderer\UIPanel.cpp" />
+    <ClCompile Include="source\code\log\LogManager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="source\Renderer\ProjectileDemoUI.h" />
     <ClInclude Include="source\headers\mtrxDynamicWorld.h" />
     <ClInclude Include="source\Libraries\glad\include\glad\glad.h" />
     <ClInclude Include="source\Libraries\glad\include\KHR\khrplatform.h" />
@@ -260,7 +259,6 @@
     <ClInclude Include="source\Libraries\spdlog\include\spdlog\tweakme.h" />
     <ClInclude Include="source\Libraries\spdlog\include\spdlog\version.h" />
     <ClInclude Include="source\Renderer\Application.h" />
-    <ClInclude Include="source\Renderer\UILayer.h" />
     <ClInclude Include="source\Renderer\Input\InputSystem.h" />
     <ClInclude Include="source\Demos\Demo.h" />
     <ClInclude Include="source\Demos\CollisionDemo.h" />
@@ -288,7 +286,6 @@
     <ClInclude Include="source\headers\colliders\ConvexShapeCollider.h" />
     <ClInclude Include="source\headers\colliders\SphereCollider.h" />
     <ClInclude Include="source\headers\entities\Rigidbody.h" />
-    <ClInclude Include="source\headers\log\LogManager.h" />
     <ClInclude Include="source\headers\math\Mat3.h" />
     <ClInclude Include="source\headers\math\Vector3D.h" />
     <ClInclude Include="source\headers\Defs.h" />
@@ -301,11 +298,8 @@
     <ClInclude Include="source\Renderer\Shader.h" />
     <ClInclude Include="source\Renderer\SimpleRenderer.h" />
     <ClInclude Include="source\headers\math\Transform.h" />
-    <ClInclude Include="source\Renderer\UIPanel.h" />
     <ClInclude Include="source\Demos\BuoyancyDemo.h" />
     <ClInclude Include="source\Demos\FluidSimulationDemo.h" />
-    <ClInclude Include="source\Renderer\BuoyancyDemoUI.h" />
-    <ClInclude Include="source\Renderer\CollisionDemoUI.h" />
     <ClInclude Include="source\headers\utils\GJKUtil.h" />
     <ClInclude Include="source\headers\math\GameTime.h" />
     <ClInclude Include="source\headers\math\Ray.h" />
@@ -314,6 +308,12 @@
     <ClInclude Include="source\headers\entities\IIntegratable.h" />
     <ClInclude Include="source\headers\utils\ColliderDetectionUtil.h" />
     <ClInclude Include="source\headers\utils\RaycastCollisionUtil.h" />
+    <ClInclude Include="source\Renderer\BuoyancyDemoUI.h" />
+    <ClInclude Include="source\Renderer\CollisionDemoUI.h" />
+    <ClInclude Include="source\Renderer\ProjectileDemoUI.h" />
+    <ClInclude Include="source\Renderer\UILayer.h" />
+    <ClInclude Include="source\Renderer\UIPanel.h" />
+    <ClInclude Include="source\headers\log\LogManager.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="source\Libraries\glm\glm\detail\func_common.inl" />

@@ -3,9 +3,6 @@
 
 namespace mtrx
 {
-	RigidbodyManager::RigidbodyManager() : accumulator(0.f)
-	{}
-
 	void RigidbodyManager::Integrate(float deltaTime)
 	{	
 		UpdateForces(deltaTime);
@@ -14,15 +11,15 @@ namespace mtrx
 
 	void RigidbodyManager::IntegrateRigidbodies(float deltaTime)
 	{
-		for (auto iter = rigidbodies.begin(); iter != rigidbodies.end(); ++iter)
+		for (auto iter = rigidbodyRegistry.begin(); iter != rigidbodyRegistry.end(); ++iter)
 		{
-			(*iter)->Integrate(deltaTime);
+			iter->first->Integrate(deltaTime);
 		}
 	}
 
 	void RigidbodyManager::UpdateForces(float deltaTime)
 	{
-		for (auto iter = forceGenerators.begin(); iter != forceGenerators.end(); ++iter)
+		for (auto iter = rigidbodyRegistry.begin(); iter != rigidbodyRegistry.end(); ++iter)
 		{
 			iter->second.UpdateForceGenerators(iter->first, deltaTime);
 		}

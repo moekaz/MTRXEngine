@@ -12,7 +12,6 @@
 
 #define MAX_NUM_ITERATIONS 128	// Helps with better performance for more complicated convex shapes while sacrificing a little on accuracy
 
-#include <log/LogManager.h>
 #include <Defs.h>
 #include <utils/PhysicsUtil.h>
 

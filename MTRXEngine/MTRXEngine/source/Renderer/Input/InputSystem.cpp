@@ -1,4 +1,5 @@
 #include <PrecompiledHeader.h>
+
 #include <../Renderer/Input/InputSystem.h>
 
 InputSystem::InputSystem(Window* window) :
