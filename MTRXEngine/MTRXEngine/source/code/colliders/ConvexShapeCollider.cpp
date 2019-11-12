@@ -1,8 +1,3 @@
-/*
-	Author: Mohamed Kazma
-	Description: Implementation of a convex shape collider
-*/
-
 #include <PrecompiledHeader.h>
 #include <colliders/ConvexShapeCollider.h>
 

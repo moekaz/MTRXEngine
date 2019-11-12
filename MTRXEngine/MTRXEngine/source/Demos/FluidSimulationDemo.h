@@ -25,7 +25,7 @@ public:
 	std::vector<mtrx::Collider*> colliders;
 
 	FluidSimulationDemo();
-	~FluidSimulationDemo() = default;
+	~FluidSimulationDemo();
 
 	void UpdateParticles();
 	void ApplyDensity();

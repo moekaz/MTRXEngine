@@ -1,8 +1,3 @@
-/*
-    Author: Mohamed Kazma
-    Description: Cpp for implemnenating a 3D vector's functionality
-*/
-
 #include <PrecompiledHeader.h>
 #include <math/Vector3D.h>
 

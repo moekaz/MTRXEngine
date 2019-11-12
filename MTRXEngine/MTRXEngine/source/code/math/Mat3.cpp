@@ -1,8 +1,3 @@
-/*
-	Author: Mohamed Kazma
-	Description: Cpp implementation of a 3x3 matrix
-*/
-
 #include <PrecompiledHeader.h>
 #include <math/Mat3.h>
 

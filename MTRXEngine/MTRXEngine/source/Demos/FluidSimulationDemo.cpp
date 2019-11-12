@@ -127,6 +127,14 @@ void FluidSimulationDemo::InputCheck()
 	}
 }
 
+FluidSimulationDemo::~FluidSimulationDemo()
+{
+	for (auto iter = particles.begin(); iter != particles.end(); ++iter)
+	{
+		delete *iter;
+	}
+}
+
 void FluidSimulationDemo::UpdateParticles()
 {	
 	//PrintPositions();
