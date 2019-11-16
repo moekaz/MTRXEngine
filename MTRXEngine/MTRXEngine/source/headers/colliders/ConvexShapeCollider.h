@@ -17,8 +17,8 @@ namespace mtrx
 
 		virtual ~ConvexShapeCollider();
 
-		virtual bool CheckCollision(const Collider&) override;
-		virtual bool RaycastCollision(const Ray&) override;
+		virtual bool CheckCollision(const Collider& collider) override;
+		virtual bool RaycastCollision(const Ray& collider) override;
 
 		// Vertices and model matrices
 		std::vector<glm::vec3*>* GetVertices() const;

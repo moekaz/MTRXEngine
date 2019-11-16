@@ -38,8 +38,8 @@ CollisionDemo::CollisionDemo() : Demo("COLLISION DEMO", 1366, 768)
 void CollisionDemo::Update()
 {
 	// Create the UI 
-	//CollisionDemoUI ui = CollisionDemoUI("Collision Demo", glm::vec2(300, 300));
-	//UILayer::AddUIPanel(&ui);
+	CollisionDemoUI ui = CollisionDemoUI("Collision Demo", glm::vec2(300, 300));
+	UILayer::AddUIPanel(&ui);
 
 	while (!application.window.ShouldClose())
 	{
@@ -65,18 +65,18 @@ void CollisionDemo::Update()
 					continue;
 
 				// Collision
-				std::cout << "collision" << std::endl;
+				//std::cout << "collision" << std::endl;
 				mtrx::Rigidbody* bullet = bulletRbs[i];
 				mtrx::Collider* collider = bulletColliders[i];
 
 				worldRbs[j]->AddForceAtPoint(glm::fastNormalize(bullet->GetVelocity()) * 100.f, bullet->GetPosition());
 
-				world.RemoveRigidbody(bullet);
 				transformsToRender.erase(&bullet->GetTransform());
 				bulletRbs.erase(bulletRbs.begin() + i);
 				bulletColliders.erase(bulletColliders.begin() + i);
-
-				delete collider;
+				world.RemoveRigidbody(bullet);
+				world.RemoveCollider(collider);
+				
 				--i;
 				break;
 			}

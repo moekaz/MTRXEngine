@@ -144,7 +144,8 @@ void FluidSimulationDemo::UpdateParticles()
 	ApplyForces();
 
 	// Update positions
-	UpdatePositions((float)calculateTimeStep());
+	//(float)calculateTimeStep()
+	UpdatePositions(mtrx::GameTime::deltaTime * 0.2f);
 }
 
 void FluidSimulationDemo::ApplyDensity()

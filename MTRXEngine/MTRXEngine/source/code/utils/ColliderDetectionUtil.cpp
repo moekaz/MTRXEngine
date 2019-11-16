@@ -58,8 +58,7 @@ namespace mtrx
 					return SphereCollisionOptions(static_cast<const SphereCollider&>(collider), boxCollider);
 				}
 				case ColliderType::Box:
-				{
-					const BoxCollider& bxCollider = static_cast<const BoxCollider&>(collider);
+				{					const BoxCollider& bxCollider = static_cast<const BoxCollider&>(collider);
 					auto vertices1 = boxCollider.GetVertices();
 					auto vertices2 = bxCollider.GetVertices();
 					return CollisionUtil::BoxBoxCollision(vertices1->begin(), vertices1->end(), vertices2->begin(), vertices2->end());

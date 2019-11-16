@@ -13,6 +13,7 @@ namespace mtrx
 		glm::vec3 A;
 		glm::vec3 B;
 
+		// TBD: THIS IS PRETTY BROKEN NEEDS TO BE WORKED ON
 		CapsuleCollider(const glm::vec3& center = glm::vec3(), const glm::quat& orientation = glm::angleAxis(0.f, worldUp), const glm::vec3& scale = glm::vec3(1, 1, 1), float radii = 0.5f, float height = 1.f);
 		CapsuleCollider(const Transform& transform = Transform(), float radii = 0.5f, float height = 1.f);
 		virtual ~CapsuleCollider() = default;

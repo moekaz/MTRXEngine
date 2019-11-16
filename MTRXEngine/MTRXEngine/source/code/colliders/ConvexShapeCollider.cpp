@@ -4,7 +4,7 @@
 namespace mtrx
 {
 	ConvexShapeCollider::ConvexShapeCollider(const ColliderType& colliderType, const glm::vec3& center, const glm::quat& orientation, const glm::vec3& scale) : 
-		ConvexShapeCollider(colliderType, Transform(center, orientation, scale), true)
+		ConvexShapeCollider(colliderType, Transform(center, orientation, scale))
 	{}
 
 	ConvexShapeCollider::ConvexShapeCollider(const ColliderType& colliderType, const Transform& transform) : 
@@ -48,6 +48,7 @@ namespace mtrx
 			return false;
 	}
 
+	// TBD: Add an implementation of this
 	bool ConvexShapeCollider::RaycastCollision(const Ray& ray)
 	{
 		// TBD: LOOK INTO WHETHER WE CAN DO A PROPER RAYCAST ON ANY CONVEX SHAPE

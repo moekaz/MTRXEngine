@@ -4,7 +4,7 @@
 ProjectileDemo::ProjectileDemo() : Demo("PROJECTILE DEMO", 1366, 768), projectileType(1),
 	gravityGenerator(std::make_shared<mtrx::rb_GravityForceGenerator>(glm::vec3(0, -mtrx::gravity, 0)))
 {
-	//UILayer::AddUIPanel(new ProjectileDemoUI("Projectile Demo", glm::vec2(300, 200), &projectileType));
+	UILayer::AddUIPanel(new ProjectileDemoUI("Projectile Demo", glm::vec2(300, 200), &projectileType));
 	application.camera->GetTransform().SetPosition(glm::vec3(0, 0, 20.f));
 	//application.window.SetVsync(true);
 }
