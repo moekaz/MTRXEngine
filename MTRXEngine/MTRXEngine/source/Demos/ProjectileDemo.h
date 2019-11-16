@@ -9,12 +9,12 @@
 class ProjectileDemo : public Demo
 {
 public:
-	mtrx::Rigidbody projectile;
-	mtrx::rb_GravityForceGenerator gravityGenerator;
+	mtrx::Rigidbody* projectile;
+	std::shared_ptr<mtrx::rb_GravityForceGenerator> gravityGenerator;
 	int projectileType;
 
 	ProjectileDemo();
-	~ProjectileDemo();
+	~ProjectileDemo() = default;
 
 	virtual void Update() override;
 	virtual void InputCheck() override;

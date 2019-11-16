@@ -1,4 +1,5 @@
 #include <PrecompiledHeader.h>
+
 #include <../Renderer/Input/InputSystem.h>
 
 InputSystem::InputSystem(Window* window) :
@@ -8,7 +9,6 @@ InputSystem::InputSystem(Window* window) :
 	memset(keys, 0, sizeof(char) * MAX_KEYS);
 	memset(mouseButtons, 0, sizeof(char) * MAX_MOUSE_BUTTONS);
 
-	// Setup imgui callbacks
 	GLFWwindow* glfwWindow = window->GetWindow();
 	
 	// Setup key callback
@@ -39,9 +39,6 @@ InputSystem::InputSystem(Window* window) :
 	keysPressed.reserve(MAX_KEYS);
 }
 
-InputSystem::~InputSystem()
-{}
-
 void InputSystem::Update()
 {
 	mouseOffset.x = mouseOffset.y = 0;
@@ -53,6 +50,7 @@ void InputSystem::Update()
 
 		keys[keysPressed[i]] = GLFW_REPEAT;
 	}
+
 	keysPressed.clear();
 }
 
@@ -106,9 +104,4 @@ void InputSystem::ScrollCallback(GLFWwindow* window, double xOffset, double yOff
 }
 
 void InputSystem::CursorEnterCallback(GLFWwindow* window, int entered)
-{
-	if (entered == 1)
-	{}
-	else
-	{}
-}
+{}

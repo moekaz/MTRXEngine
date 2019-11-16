@@ -1,12 +1,7 @@
-/*
-	Author: Mohamed Kazma
-	Description: Rigidbody physics implementation
-*/
-
 #pragma once
 
-#include <IIntegratable.h>
-#include <GameTime.h>
+#include <entities/IIntegratable.h>
+#include <math/GameTime.h>
 #include <entities/Body.h>
 
 namespace mtrx
@@ -15,7 +10,7 @@ namespace mtrx
 	{
 	public:
 		Rigidbody(float mass = MAX_MASS, bool iskinematic = false, const glm::vec3& position = glm::vec3(), const glm::quat& orientation = glm::angleAxis(0.f, glm::vec3(0, 1, 0)), const glm::vec3& scale = glm::vec3(1, 1, 1), const glm::mat3& inertiaTensor = glm::mat3(1.0f));
-		~Rigidbody();
+		~Rigidbody() = default;
 		
 		// Setters
 		void SetInverseInertiaTensor(const glm::mat3& inertiaTensor);
@@ -34,16 +29,15 @@ namespace mtrx
 		// Calculate inverse inertia tensor in world space instead of object space  
 		inline glm::mat3 CalculateIITWorld() { return objToWorldMat * inverseInertiaTensor; }
 		
-		// Clear accumulators
-		void ClearAccumulators() override;
-
 		// Add Torque force
 		inline void AddTorque(const glm::vec3& torque) { accumTorque += torque; }
 
+		// Clear accumulators
+		void ClearAccumulators() override;
+	
 		// Update the values of the rigidbody
 		void Integrate(float deltaTime) override;
-		// IntegrateRotation
-		void IntegrateRotation();
+
 		// Calculate the transformation matrix
 		void CalculateObjToWorldMat();
 		// Add a force at a certain point of the rigidbody (helps in calculating torque forces) PS: point is assumed in world space
@@ -52,7 +46,6 @@ namespace mtrx
 		void CalculateBodyData();
 
 	private:
-		//glm::quat orientation;	// The orientation of a rigidbody
 		glm::vec3 rotation; // Not sure
 		// The inverse inertia tensor is used since it is more useful to calculating the torque generated
 		// Based in object's space and not in world space

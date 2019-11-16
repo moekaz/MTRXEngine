@@ -4,6 +4,7 @@
 */
 
 #include <PrecompiledHeader.h>
+
 #include <log/LogManager.h>
 
 namespace mtrx

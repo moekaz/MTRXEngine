@@ -1,6 +1,5 @@
 #include "PrecompiledHeader.h"
 #include "UILayer.h"
-#include <Window.h>
 
 std::vector<UIPanel*> UILayer::panels;
 

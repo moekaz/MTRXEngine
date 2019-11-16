@@ -12,21 +12,46 @@ namespace mtrx
 {
 	namespace PhysicsUtil
 	{
-		// Optimizes 2 cross product calls into 2 dot product ones
 		glm::vec3 TripleCross(const glm::vec3& a, const glm::vec3& b, const glm::vec3& c)
 		{
 			// (A x B) x C = B(C . A) - A(C . B)
 			return b * (glm::dot(c, a)) - a * (glm::dot(c, b));
 		}
 
+		bool LineIntersect(const glm::vec3& a, const glm::vec3& b, const glm::vec3& c, const glm::vec3& d, glm::vec3& intersection)
+		{
+
+			return false;
+		}
+
+		bool LineSegmentIntersect(const glm::vec3& a, const glm::vec3& b, const glm::vec3& c, const glm::vec3& d, glm::vec3& intersection)
+		{
+
+
+			return false;
+		}
+
+		bool LineRayIntersect(const glm::vec3& a, const glm::vec3& b, const glm::vec3& rayStart, const glm::vec3& rayDirection, glm::vec3& intersection)
+		{
+
+
+			return false;
+		}
+
+		bool LineSegmentRayIntersect(const glm::vec3& a, const glm::vec3& b, const glm::vec3& c, const glm::vec3& d, glm::vec3& intersection)
+		{
+
+
+			return false;
+		}
+
 		// Finding the minimum distance between infinite lines
-		float MinDistanceTwoLines(const glm::vec3& A, const glm::vec3& B, const glm::vec3& C, const glm::vec3& D)
+		float MinDistanceTwoLines(const glm::vec3& A, const glm::vec3& B, const glm::vec3& C, const glm::vec3& D, glm::vec3* intersection)
 		{
 			glm::vec3 l1 = B - A; // First direction vector
 			glm::vec3 l2 = D - C; // Second direction vector
 
 			glm::vec3 normalPlane = glm::normalize(glm::cross(l1, l2));
-
 			if (normalPlane == glm::vec3())
 			{
 				// They are parallel so choose any new vector that is not parallel to one of them and do the cross product for that it should be parallel to both
@@ -37,7 +62,6 @@ namespace mtrx
 			return abs(glm::dot(C - A, normalPlane));
 		}
 
-		// Finding the minimum distance between 2 line segments
 		float MinDistanceSquaredTwoSegments(const glm::vec3& A, const glm::vec3& B, const glm::vec3& C, const glm::vec3& D)
 		{
 			glm::vec3 u = B - A;
@@ -123,7 +147,6 @@ namespace mtrx
 			return glm::dot(distanceVec, distanceVec);
 		}
 
-		// Minimum distance between a point and a line segment
 		float MinDistanceSquaredPointSegment(const glm::vec3& A, const glm::vec3& B, const glm::vec3& C, glm::vec3& closest)
 		{
 			glm::vec3 AB = B - A;
@@ -151,7 +174,6 @@ namespace mtrx
 			}
 		}
 
-		// Find the minimum distance from a point to the ray
 		float MinDistanceSquaredPointRay(const glm::vec3& point, const glm::vec3& startPointRay, const glm::vec3& rayDirection, glm::vec3& closestPoint)
 		{
 			float minDistance = 0;							   // the minimum distance
@@ -170,104 +192,77 @@ namespace mtrx
 			{
 				// Clamp onto the ray since it is infinite
 				minDistance = distanceSquaredPointRay - (dot * dot);
-				closestPoint = glm::normalize(rayDirection) * dot; // If we need it
+				closestPoint = glm::fastNormalize(rayDirection) * dot; // If we need it
 			}
 
 			return minDistance;
 		}
 
-		// Minimum distance between a line segment and a ray
+		float MinDistanceSquaredLineRay(const glm::vec3& A, const glm::vec3& B, const glm::vec3& rayStart, const glm::vec3& rayDirection, glm::vec3* closestPoint)
+		{
+			glm::vec3 rayPoint = rayStart + rayDirection;
+			MinDistanceTwoLines(A, B, rayStart, rayPoint, closestPoint);
+
+			// The point will either be in front of the start of behind which makes this check more than enough
+			if (closestPoint == nullptr || glm::dot((*closestPoint - rayStart), rayDirection) <= 0)
+			{
+				closestPoint = (glm::vec3*)&rayStart;
+			}
+
+			return 0.f;
+		}
+
 		float MinDistanceSquaredLineSegmentRay(const glm::vec3& A, const glm::vec3& B, const glm::vec3& rayStartPoint, const glm::vec3& rayDirection)
 		{
-			// Check if the line segment and ray intersect
-			if (CollisionUtil::LineSegmentRayCollision(A, B, rayStartPoint, rayDirection))
-				return 0.0f;
+			return false;
+			// 
 
-			// Calculate the minimum distance from the 3 points that we have and take the minimum one
-			float minimumDistances[3];
-			glm::vec3 closestPoint;
+			//// Check if the line segment and ray intersect
+			//if (RaycastCollisionUtil::LineSegmentRayCollision(A, B, rayStartPoint, rayDirection))
+			//	return 0.0f;
 
-			minimumDistances[0] = MinDistanceSquaredPointRay(A, rayStartPoint, rayDirection, closestPoint);
-			minimumDistances[1] = MinDistanceSquaredPointRay(B, rayStartPoint, rayDirection, closestPoint);
-			minimumDistances[2] = MinDistanceSquaredPointSegment(A, B, rayStartPoint, closestPoint);
+			//// Calculate the minimum distance from the 3 points that we have and take the minimum one
+			//float minimumDistances[3];
+			//glm::vec3 closestPoint;
 
-			float minDistance = minimumDistances[0];
+			//minimumDistances[0] = MinDistanceSquaredPointRay(A, rayStartPoint, rayDirection, closestPoint);
+			//minimumDistances[1] = MinDistanceSquaredPointRay(B, rayStartPoint, rayDirection, closestPoint);
+			//minimumDistances[2] = MinDistanceSquaredPointSegment(A, B, rayStartPoint, closestPoint);
 
-			// Find the minimum of the 3 and that should be the least distance
-			for (int i = 1; i < 3; ++i)
-			{
-				if (minimumDistances[i] < minDistance)
-					minDistance = minimumDistances[i];
-			}
+			//float minDistance = minimumDistances[0];
 
-			return minDistance;
+			//// Find the minimum of the 3 and that should be the least distance
+			//for (int i = 1; i < 3; ++i)
+			//{
+			//	if (minimumDistances[i] < minDistance)
+			//		minDistance = minimumDistances[i];
+			//}
+
+			//return minDistance;
 		}
 
-		// TBD: This shouldn't be here
-		// Do a raycast without checking for filtered colliders
-		Collider* RaycastUnfiltered(const std::map<int, Collider*>& colliders, const glm::vec3& rayStartPosition, const glm::vec3& rayDirection)
+		glm::quat Slerp(const glm::quat& firstRotation, const glm::quat& secondRotation, float t)
 		{
-			Ray ray = Ray(rayStartPosition, rayDirection); // Create a ray in the direction
-			std::map<int, Collider*>::const_iterator iter;
+			if (t < 0 || t > 1) // If the value of t is off return the destination rotation
+				return secondRotation;
 
-			for (iter = colliders.begin(); iter != colliders.end(); ++iter)
-			{
-				if (iter->second->RaycastCollision(ray))
-					return iter->second; // Do the raycast and check for that
-			}
-
-			return NULL;
+			return glm::slerp(firstRotation, secondRotation, t);
 		}
 
-		// TBD: This shouldn't be here
-		// Do a raycast with some filtering of certain user defined filtered colliders
-		Collider* RaycastFiltered(const std::map<int, Collider*>& colliders, const std::vector<Collider*>& filterColliders, const glm::vec3& rayStartPosition, const glm::vec3& rayDirection)
+		glm::vec3 Lerp(const glm::vec3& startingPosition, const glm::vec3& destination, float t)
 		{
-			Ray ray = Ray(rayStartPosition, rayDirection);  // Create a ray in the direction
-			std::map<int, Collider*> filterCollidersMap;   // Map of the filtered colliders
-			std::map<int, Collider*>::const_iterator iter; // Iterator of the collider map
-
-			// Store the vector in a map for quick access (makes filtering much more efficient)
-			for (unsigned int i = 0; i < filterColliders.size(); i++)
-			{
-				filterCollidersMap[filterColliders[i]->GetColliderId()] = filterColliders[i];
-			}
-
-			// Go through the colliders checking for raycast collisions after filtering out the ones we don't want
-			for (iter = colliders.begin(); iter != colliders.end(); ++iter)
-			{
-				if (filterCollidersMap.find(iter->first) != filterCollidersMap.end())
-					continue; // If it is filtered then skip the collision check
-				if (iter->second->RaycastCollision(ray))
-					return iter->second; // Do the raycast and check for that
-			}
-
-			return NULL;
-		}
-
-		// Slerp implementation which allows for linear interpolation of rotations
-		glm::quat Slerp(const glm::quat & firstRotation, const glm::quat & secondRotation, float t)
-		{
-			// if the factor is bad then return an identity quaternion
-			if (t < 0 || t > 1)
-				return glm::quat();
-			return glm::mix(firstRotation, secondRotation, t);
-		}
-
-		// Lerping which is linear interpolation between 2 points
-		glm::vec3 Lerp(const glm::vec3 & startingPosition, const glm::vec3 & destination, float t)
-		{
-			// If the factor is wrong return the destination
-			if (t < 0 || t > 1)
+			if (t < 0 || t > 1) // If the factor is wrong return the destination
 				return destination;
-			return (1 - t) * startingPosition + t * destination;
+
+			//return (1 - t) * startingPosition + t * destination;
+			return startingPosition + (destination - startingPosition) * t;
 		}
 
-		// Easing a value according to a sin curve (in this case at least)
 		float Ease(float t)
 		{
 			if (!t)
-				return NULL;
+				return 1;
+
 			return (float)(sin(t * PI - PI / 2.0f) + 1.0f) / 2.0f;
 		}
 	}

@@ -1,7 +1,7 @@
 
 #pragma once
 
-#include <IIntegratable.h>
+#include <entities/IIntegratable.h>
 #include <Defs.h>
 #include <math/Transform.h>
 

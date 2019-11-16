@@ -2,6 +2,7 @@
 #pragma once
 
 #include <UIPanel.h>
+#include <Window.h>
 
 class Window;
 

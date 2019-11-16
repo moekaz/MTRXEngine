@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" 
+  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -72,16 +73,20 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)</OutDir>
     <IntDir>$(SolutionDir)\bin\intermediate\$(Platform)\$(Configuration)</IntDir>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir)/source/headers;$(ProjectDir)/source/Libraries/glm;$(ProjectDir)/source/Libraries/spdlog/include/;$(ProjectDir)/source/Libraries/glfw/include/;$(ProjectDir)/source/Libraries/glad/include/;$(ProjectDir)/source/renderer;$(ProjectDir)/source/Libraries/</IncludePath>
+    <LibraryPath>$(LibraryPath);</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir)/source/headers;$(ProjectDir)/source/Libraries/glm;$(ProjectDir)/source/Libraries/spdlog/include/;$(ProjectDir)/source/Libraries/glfw/include/;$(ProjectDir)/source/Libraries/glad/include/;$(ProjectDir)/source/renderer;$(ProjectDir)/source/Libraries/</IncludePath>
+    <LibraryPath>$(LibraryPath);</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir)/source/headers;$(ProjectDir)/source/Libraries/glm;$(ProjectDir)/source/Libraries/spdlog/include/;$(ProjectDir)/source/Libraries/glfw/include/;$(ProjectDir)/source/Libraries/glad/include/;$(ProjectDir)/source/renderer;$(ProjectDir)/source/Libraries/</IncludePath>
+    <LibraryPath>$(LibraryPath);</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir)/source/headers;$(ProjectDir)/source/Libraries/glm;$(ProjectDir)/source/Libraries/spdlog/include/;$(ProjectDir)/source/Libraries/glfw/include/;$(ProjectDir)/source/Libraries/glad/include/;$(ProjectDir)/source/renderer;$(ProjectDir)/source/Libraries/</IncludePath>
+    <LibraryPath>$(LibraryPath);</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -89,14 +94,15 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)/source/headers;$(ProjectDir)/source/Libraries/glm;$(ProjectDir)/source/Libraries/spdlog/include/;$(ProjectDir)/source/Libraries/glfw/include/;$(ProjectDir)/source/Libraries/glad/include/;$(ProjectDir)/source/renderer;$(ProjectDir)/source/Libraries/imgui</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>PrecompiledHeader.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(ProjectDir)/source/Libraries/glfw/lib-vc2019;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;opengl32.lib</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;opengl32.lib;</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -105,14 +111,15 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)/source/headers;$(ProjectDir)/source/Libraries/glm;$(ProjectDir)/source/Libraries/spdlog/include/;$(ProjectDir)/source/Libraries/glfw/include/;$(ProjectDir)/source/Libraries/glad/include/;$(ProjectDir)/source/renderer;$(ProjectDir)/source/Libraries/imgui</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>PrecompiledHeader.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(ProjectDir)/source/Libraries/glfw/lib-vc2019;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;opengl32.lib</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;opengl32.lib;</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -125,7 +132,8 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>PrecompiledHeader.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir)/source/headers;$(ProjectDir)/source/Libraries/glm;$(ProjectDir)/source/Libraries/spdlog/include/;$(ProjectDir)/source/Libraries/glfw/include/;$(ProjectDir)/source/Libraries/glad/include/;$(ProjectDir)/source/renderer;$(ProjectDir)/source/Libraries/imgui</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
@@ -133,7 +141,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>$(ProjectDir)/source/Libraries/glfw/lib-vc2019;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;opengl32.lib</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;opengl32.lib;</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -146,7 +154,8 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>PrecompiledHeader.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir)/source/headers;$(ProjectDir)/source/Libraries/glm;$(ProjectDir)/source/Libraries/spdlog/include/;$(ProjectDir)/source/Libraries/glfw/include/;$(ProjectDir)/source/Libraries/glad/include/;$(ProjectDir)/source/renderer;$(ProjectDir)/source/Libraries/imgui</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
@@ -154,16 +163,21 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>$(ProjectDir)/source/Libraries/glfw/lib-vc2019;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;opengl32.lib</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;opengl32.lib;</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\code\log\LogManager.cpp" />
+    <ClCompile Include="source\code\PrecompiledHeader.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="source\code\utils\ColliderDetectionUtil.cpp" />
-    <ClCompile Include="source\Renderer\CollisionDemoUI.cpp" />
-    <ClCompile Include="source\Renderer\BuoyancyDemoUI.cpp" />
+    <ClCompile Include="source\code\utils\RaycastCollisionUtil.cpp" />
     <ClCompile Include="source\Demos\FluidSimulationDemo.cpp" />
     <ClCompile Include="source\Demos\BuoyancyDemo.cpp" />
-    <ClCompile Include="source\Renderer\ProjectileDemoUI.cpp" />
     <ClCompile Include="source\code\mtrxDynamicWorld.cpp" />
     <ClCompile Include="source\Libraries\glad\src\glad.c">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
@@ -207,58 +221,27 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="source\Renderer\Application.cpp" />
-    <ClCompile Include="source\Renderer\UILayer.cpp" />
+    <ClCompile Include="source\Renderer\BuoyancyDemoUI.cpp" />
+    <ClCompile Include="source\Renderer\CollisionDemoUI.cpp" />
     <ClCompile Include="source\Renderer\Input\InputSystem.cpp" />
     <ClCompile Include="source\Demos\Demo.cpp" />
     <ClCompile Include="source\code\colliders\BVHNode.cpp" />
     <ClCompile Include="source\code\colliders\CollisionSystem.cpp" />
-    <ClCompile Include="source\code\RigidbodyManager.cpp" />
-    <ClCompile Include="source\code\forceGenerators\ParticleGenerators\p_AnchoredSpringForceGenerator.cpp" />
-    <ClCompile Include="source\code\forceGenerators\ParticleGenerators\p_BungeeSpringForceGenerator.cpp" />
-    <ClCompile Include="source\code\forceGenerators\ParticleGenerators\p_BuoyancyForceGenerator.cpp" />
-    <ClCompile Include="source\code\forceGenerators\ParticleGenerators\p_DefaultSpringForceGenerator.cpp" />
-    <ClCompile Include="source\code\forceGenerators\ParticleGenerators\p_DragForceGenerator.cpp" />
-    <ClCompile Include="source\code\forceGenerators\ParticleGenerators\p_ForceGenerationRegistry.cpp" />
-    <ClCompile Include="source\code\forceGenerators\ParticleGenerators\p_GravityForceGenerator.cpp" />
-    <ClCompile Include="source\code\forceGenerators\ParticleGenerators\p_StiffSpringForceGenerator.cpp" />
-    <ClCompile Include="source\code\forceGenerators\RigidbodyGenerators\rb_AnchoredSpringForceGenerator.cpp" />
-    <ClCompile Include="source\code\forceGenerators\RigidbodyGenerators\rb_BungeeSpringForceGenerator.cpp" />
+    <ClCompile Include="source\code\entities\RigidbodyManager.cpp" />
     <ClCompile Include="source\code\forceGenerators\RigidbodyGenerators\rb_BuoyancyForceGenerator.cpp" />
-    <ClCompile Include="source\code\forceGenerators\RigidbodyGenerators\rb_DefaultSpringForceGenerator.cpp" />
     <ClCompile Include="source\code\forceGenerators\RigidbodyGenerators\rb_DragForceGenerator.cpp" />
-    <ClCompile Include="source\code\forceGenerators\RigidbodyGenerators\rb_ForceGenerationRegistry.cpp" />
     <ClCompile Include="source\code\forceGenerators\RigidbodyGenerators\rb_GravityForceGenerator.cpp" />
-    <ClCompile Include="source\code\forceGenerators\RigidbodyGenerators\rb_StiffSpringForceGenerator.cpp" />
     <ClCompile Include="source\code\entities\Body.cpp" />
-    <ClCompile Include="source\code\ParticleCableCoupling.cpp" />
-    <ClCompile Include="source\code\ParticleManager.cpp" />
-    <ClCompile Include="source\code\ParticleRodCoupling.cpp" />
-    <ClCompile Include="source\code\ParticleCollisionResolver.cpp" />
-    <ClCompile Include="source\code\ParticleCoupling.cpp" />
     <ClCompile Include="source\code\colliders\BoxCollider.cpp" />
     <ClCompile Include="source\code\colliders\CapsuleCollider.cpp" />
     <ClCompile Include="source\code\colliders\Collider.cpp" />
     <ClCompile Include="source\code\colliders\ConvexShapeCollider.cpp" />
     <ClCompile Include="source\code\colliders\SphereCollider.cpp" />
-    <ClCompile Include="source\code\entities\Particle.cpp" />
     <ClCompile Include="source\code\entities\Rigidbody.cpp" />
-    <ClCompile Include="source\code\log\LogManager.cpp" />
     <ClCompile Include="source\code\math\Mat3.cpp" />
     <ClCompile Include="source\code\math\Vector3D.cpp" />
-    <ClCompile Include="source\code\ParticleCollision.cpp" />
-    <ClCompile Include="source\code\GameTime.cpp" />
-    <ClCompile Include="source\code\GJK.cpp" />
-    <ClCompile Include="source\code\PrecompiledHeader.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PrecompiledHeader.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">PrecompiledHeader.h</PrecompiledHeaderFile>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PrecompiledHeader.h</PrecompiledHeaderFile>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">PrecompiledHeader.h</PrecompiledHeaderFile>
-    </ClCompile>
-    <ClCompile Include="source\code\Ray.cpp" />
+    <ClCompile Include="source\code\math\GameTime.cpp" />
+    <ClCompile Include="source\code\utils\GJKUtil.cpp" />
     <ClCompile Include="source\code\utils\CollisionUtil.cpp" />
     <ClCompile Include="source\code\utils\PhysicsUtil.cpp" />
     <ClCompile Include="source\Demos\CollisionDemo.cpp">
@@ -268,18 +251,20 @@
     <ClCompile Include="source\Demos\PhysicsDemos.cpp" />
     <ClCompile Include="source\Demos\ProjectileDemo.cpp" />
     <ClCompile Include="source\Renderer\Camera.cpp" />
+    <ClCompile Include="source\Renderer\ProjectileDemoUI.cpp" />
     <ClCompile Include="source\Renderer\Shader.cpp" />
     <ClCompile Include="source\Renderer\SimpleRenderer.cpp" />
-    <ClCompile Include="source\Renderer\Window.cpp" />
+    <ClCompile Include="source\Renderer\UILayer.cpp" />
     <ClCompile Include="source\Renderer\UIPanel.cpp" />
+    <ClCompile Include="source\Renderer\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="source\headers\utils\CollisionDetectionUtil.h" />
-    <ClInclude Include="source\Renderer\CollisionDemoUI.h" />
-    <ClInclude Include="source\Renderer\BuoyancyDemoUI.h" />
+    <ClInclude Include="source\headers\log\LogManager.h" />
+    <ClInclude Include="source\headers\utils\ColliderDetectionUtil.h" />
+    <ClInclude Include="source\headers\utils\GJKUtil.h" />
+    <ClInclude Include="source\headers\utils\RaycastCollisionUtil.h" />
     <ClInclude Include="source\Demos\FluidSimulationDemo.h" />
     <ClInclude Include="source\Demos\BuoyancyDemo.h" />
-    <ClInclude Include="source\Renderer\ProjectileDemoUI.h" />
     <ClInclude Include="source\headers\mtrxDynamicWorld.h" />
     <ClInclude Include="source\Libraries\glad\include\glad\glad.h" />
     <ClInclude Include="source\Libraries\glad\include\KHR\khrplatform.h" />
@@ -488,15 +473,16 @@
     <ClInclude Include="source\Libraries\spdlog\include\spdlog\tweakme.h" />
     <ClInclude Include="source\Libraries\spdlog\include\spdlog\version.h" />
     <ClInclude Include="source\Renderer\Application.h" />
-    <ClInclude Include="source\Renderer\UILayer.h" />
+    <ClInclude Include="source\Renderer\BuoyancyDemoUI.h" />
+    <ClInclude Include="source\Renderer\CollisionDemoUI.h" />
     <ClInclude Include="source\Renderer\Input\InputSystem.h" />
     <ClInclude Include="source\Demos\Demo.h" />
     <ClInclude Include="source\Demos\CollisionDemo.h" />
     <ClInclude Include="source\Demos\ProjectileDemo.h" />
     <ClInclude Include="source\headers\colliders\BVHNode.h" />
     <ClInclude Include="source\headers\colliders\CollisionSystem.h" />
-    <ClInclude Include="source\headers\IBoundingVolume.h" />
-    <ClInclude Include="source\headers\RigidbodyManager.h" />
+    <ClInclude Include="source\headers\colliders\IBoundingVolume.h" />
+    <ClInclude Include="source\headers\entities\RigidbodyManager.h" />
     <ClInclude Include="source\headers\entities\Body.h" />
     <ClInclude Include="source\headers\forceGenerators\ParticleGenerators\IParticleForceGenerator.h" />
     <ClInclude Include="source\headers\forceGenerators\ParticleGenerators\p_AnchoredSpringForceGenerator.h" />
@@ -507,47 +493,35 @@
     <ClInclude Include="source\headers\forceGenerators\ParticleGenerators\p_ForceGenerationRegistry.h" />
     <ClInclude Include="source\headers\forceGenerators\ParticleGenerators\p_GravityForceGenerator.h" />
     <ClInclude Include="source\headers\forceGenerators\ParticleGenerators\p_StiffSpringForceGenerator.h" />
-    <ClInclude Include="source\headers\forceGenerators\RigidbodyGenerators\rb_AnchoredSpringForceGenerator.h" />
-    <ClInclude Include="source\headers\forceGenerators\RigidbodyGenerators\rb_BungeeSpringForceGenerator.h" />
     <ClInclude Include="source\headers\forceGenerators\RigidbodyGenerators\rb_BuoyancyForceGenerator.h" />
-    <ClInclude Include="source\headers\forceGenerators\RigidbodyGenerators\rb_DefaultSpringForceGenerator.h" />
     <ClInclude Include="source\headers\forceGenerators\RigidbodyGenerators\rb_DragForceGenerator.h" />
     <ClInclude Include="source\headers\forceGenerators\RigidbodyGenerators\rb_ForceGenerationRegistry.h" />
     <ClInclude Include="source\headers\forceGenerators\RigidbodyGenerators\rb_GravityForceGenerator.h" />
     <ClInclude Include="source\headers\forceGenerators\RigidbodyGenerators\IRigidbodyForceGenerator.h" />
-    <ClInclude Include="source\headers\forceGenerators\RigidbodyGenerators\rb_StiffSpringForceGenerator.h" />
-    <ClInclude Include="source\headers\ParticleCableCoupling.h" />
-    <ClInclude Include="source\headers\ParticleCollisionGenerator.h" />
-    <ClInclude Include="source\headers\ParticleManager.h" />
-    <ClInclude Include="source\headers\ParticleRodCoupling.h" />
-    <ClInclude Include="source\headers\ParticleCollisionResolver.h" />
-    <ClInclude Include="source\headers\ParticleCoupling.h" />
     <ClInclude Include="source\headers\colliders\BoxCollider.h" />
     <ClInclude Include="source\headers\colliders\CapsuleCollider.h" />
     <ClInclude Include="source\headers\colliders\Collider.h" />
     <ClInclude Include="source\headers\colliders\ConvexShapeCollider.h" />
     <ClInclude Include="source\headers\colliders\SphereCollider.h" />
-    <ClInclude Include="source\headers\entities\Particle.h" />
     <ClInclude Include="source\headers\entities\Rigidbody.h" />
-    <ClInclude Include="source\headers\log\LogManager.h" />
     <ClInclude Include="source\headers\math\Mat3.h" />
     <ClInclude Include="source\headers\math\Vector3D.h" />
-    <ClInclude Include="source\headers\ParticleCollision.h" />
     <ClInclude Include="source\headers\Defs.h" />
-    <ClInclude Include="source\headers\GameTime.h" />
-    <ClInclude Include="source\headers\GJK.h" />
-    <ClInclude Include="source\headers\IIntegratable.h" />
+    <ClInclude Include="source\headers\math\GameTime.h" />
+    <ClInclude Include="source\headers\entities\IIntegratable.h" />
     <ClInclude Include="source\headers\MTRX.h" />
     <ClInclude Include="source\headers\PrecompiledHeader.h" />
-    <ClInclude Include="source\headers\Ray.h" />
+    <ClInclude Include="source\headers\math\Ray.h" />
     <ClInclude Include="source\headers\utils\CollisionUtil.h" />
     <ClInclude Include="source\headers\utils\PhysicsUtil.h" />
+    <ClInclude Include="source\Renderer\ProjectileDemoUI.h" />
+    <ClInclude Include="source\Renderer\UILayer.h" />
+    <ClInclude Include="source\Renderer\UIPanel.h" />
     <ClInclude Include="source\Renderer\Window.h" />
     <ClInclude Include="source\Renderer\Camera.h" />
     <ClInclude Include="source\Renderer\Shader.h" />
     <ClInclude Include="source\Renderer\SimpleRenderer.h" />
     <ClInclude Include="source\headers\math\Transform.h" />
-    <ClInclude Include="source\Renderer\UIPanel.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="source\Libraries\glm\glm\detail\func_common.inl" />

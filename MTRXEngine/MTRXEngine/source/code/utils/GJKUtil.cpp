@@ -1,52 +1,11 @@
-/*
-	Author: Mohamed Kazma
-	Description: Implementation of GJK
-*/
-
 #include <PrecompiledHeader.h>
-#include <GJK.h>
-#include <colliders/ConvexShapeCollider.h>
+#include <utils/GJKUtil.h>
 
 namespace mtrx
 {
-	Simplex GJK::simplex;
+	Simplex GJKUtil::simplex;
 
-	bool GJK::Collision(const ConvexShapeCollider& convexCollider1, const ConvexShapeCollider& convexCollider2)
-	{
-		simplex.b = simplex.c = simplex.d = nullptr; // Reset simplex
-		glm::vec3 searchDirection = glm::vec3(-1, 0, 0); // Direction of the search within the convex shape
-
-		simplex.c = &convexCollider1.Support(convexCollider2, searchDirection); // Get the first point using the support function
-		searchDirection = -*simplex.c;	// Negative direction
-		simplex.b = &convexCollider1.Support(convexCollider2, searchDirection);	// Get the second point
-		
-		// if the farthest support point is not in the direction of the search direction then we cannot have a collision
-		if (glm::dot(*simplex.b, searchDirection) < 0) 
-			return false;
-		
-		// Setup a new direction vector
-		glm::vec3 BC = *simplex.c - *simplex.b;
-		glm::vec3 BO = -*simplex.b;
-		searchDirection = PhysicsUtil::TripleCross(BC, BO, BC);
-
-		simplex.size = 2;	// Simplex has 2 points
-
-		// Simplex GJK logic loop
-		for (int i = 0; i < MAX_NUM_ITERATIONS; ++i)
-		{
-			glm::vec3* a = &convexCollider1.Support(convexCollider2, searchDirection); // Get the next point
-			if (glm::dot(*a, searchDirection) < 0)	// We cannot have a collision
-				return false;
-			else if (UpdateSimplex(simplex, searchDirection, *a))	// Update the simplex and set a new direction vector
-				return true;
-		}
-		
-		// Degenerate simplex
-		MTRX_WARN("GJK algo has generated a degenerate simplex");
-		return true;
-	}
-
-	bool GJK::UpdateSimplex(Simplex& simplex, glm::vec3& direction, glm::vec3& a)
+	bool GJKUtil::UpdateSimplex(Simplex& simplex, glm::vec3& direction, glm::vec3& a)
 	{
 		switch (simplex.size) // The simplex will never have a size less than 2 or greater than 3 
 		{
@@ -66,7 +25,7 @@ namespace mtrx
 		}
 	}
 
-	bool GJK::TriangleSimplexUpdate(Simplex& simplex, glm::vec3& direction, glm::vec3& a)
+	bool GJKUtil::TriangleSimplexUpdate(Simplex& simplex, glm::vec3& direction, glm::vec3& a)
 	{
 		glm::vec3 AB = *simplex.b - a;
 		glm::vec3 AC = *simplex.c - a;
@@ -107,7 +66,7 @@ namespace mtrx
 		return false;
 	}
 
-	bool GJK::TetrahedronSimplexUpdate(Simplex& simplex, glm::vec3& direction, glm::vec3& a)
+	bool GJKUtil::TetrahedronSimplexUpdate(Simplex& simplex, glm::vec3& direction, glm::vec3& a)
 	{
 		glm::vec3 AO = -a;
 		glm::vec3 AB = *simplex.b - a;
@@ -152,7 +111,7 @@ namespace mtrx
 		return false;
 	}
 
-	void GJK::TetrahedronChecks(Simplex& simplex, glm::vec3& AO, glm::vec3& AB, glm::vec3& AC, glm::vec3& ABC, glm::vec3& direction, glm::vec3& a)
+	void GJKUtil::TetrahedronChecks(Simplex& simplex, glm::vec3& AO, glm::vec3& AB, glm::vec3& AC, glm::vec3& ABC, glm::vec3& direction, glm::vec3& a)
 	{
 		if (glm::dot(glm::cross(AB, ABC), AO) > 0) // Just like the triangle check use the cross product away from AB
 		{

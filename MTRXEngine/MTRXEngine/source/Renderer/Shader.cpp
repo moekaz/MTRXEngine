@@ -1,8 +1,3 @@
-/*
-	Author: Brady Jessup
-	Description: Class the handles an OpenGL program and passing data to the program on the GPU
-*/
-
 #include <PrecompiledHeader.h>
 #include "Shader.h"
 

@@ -29,7 +29,8 @@ CollisionDemo::CollisionDemo() : Demo("COLLISION DEMO", 1366, 768)
 
 		worldRbs.push_back(body);
 		worldColliders.push_back(collider);
-		rbManager.AddRigidbody(body);
+		world.AddRigidbody(body);
+		world.AddCollider(collider);
 		transformsToRender.insert(&body->GetTransform());
 	}
 }
@@ -64,19 +65,18 @@ void CollisionDemo::Update()
 					continue;
 
 				// Collision
-				std::cout << "collision" << std::endl;
+				//std::cout << "collision" << std::endl;
 				mtrx::Rigidbody* bullet = bulletRbs[i];
 				mtrx::Collider* collider = bulletColliders[i];
 
 				worldRbs[j]->AddForceAtPoint(glm::fastNormalize(bullet->GetVelocity()) * 100.f, bullet->GetPosition());
 
-				rbManager.RemoveRigidbody(bullet);
 				transformsToRender.erase(&bullet->GetTransform());
 				bulletRbs.erase(bulletRbs.begin() + i);
 				bulletColliders.erase(bulletColliders.begin() + i);
-
-				delete bullet;
-				delete collider;
+				world.RemoveRigidbody(bullet);
+				world.RemoveCollider(collider);
+				
 				--i;
 				break;
 			}
@@ -108,5 +108,6 @@ void CollisionDemo::Shoot()
 	bulletRbs.push_back(bullet);
 	bulletColliders.push_back(collider);
 	transformsToRender.insert(&bullet->GetTransform());
-	rbManager.AddRigidbody(bullet);
+	world.AddRigidbody(bullet);
+	world.AddCollider(collider);
 }

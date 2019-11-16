@@ -1,9 +1,6 @@
 
 #pragma once
 
-/*
-	PS: Panel names should probably be unique
-*/
 class UIPanel
 {
 public:

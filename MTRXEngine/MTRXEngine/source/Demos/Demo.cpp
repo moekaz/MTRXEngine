@@ -1,16 +1,13 @@
 #include <PrecompiledHeader.h>
 #include <../Demos/Demo.h>
 
-Demo::Demo(const char* appName, int width, int height) : application(appName, width, height), cursor(false)
-{}
-
-Demo::~Demo()
+Demo::Demo(const char* appName, int width, int height) : application(appName, width, height), cursor(false), mesh(1)
 {}
 
 void Demo::Update()
 {
-	// Update delta time
-	mtrx::GameTime::Update();
+	// Update the rigidbody and the particle system
+	world.Update(mtrx::GameTime::deltaTime);
 
 	// Check for opengl errors
 	application.PollOpenGlErrors();
@@ -25,14 +22,8 @@ void Demo::Update()
 	// Clear the window
 	application.window.Clear();
 
-	// Update the rigidbody and the particle system
-	// TBD: fix timestep
-	// TBH: The api should be changed here
-	rbManager.Integrate(mtrx::GameTime::deltaTime);
-	pManager.PhysicsUpdate();
-
 	// Update renderer
-	application.renderer.Render(transformsToRender);
+	application.renderer.Render(transformsToRender, mesh);
 
 	// Update input system
 	application.inputSystem->Update();
@@ -48,9 +39,7 @@ void Demo::Update()
 void Demo::BaseInputCheck()
 {
 	if (application.inputSystem->GetKeyDown(GLFW_KEY_G))
-	{
 		application.inputSystem->ToggleCursor();
-	}
 }
 
 void Demo::Run()

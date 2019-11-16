@@ -1,9 +1,10 @@
 #pragma once
 
 #include <Defs.h>
-#include <Ray.h>
+#include <math/Ray.h>
 #include <math/Transform.h>
-#include <utils/CollisionDetectionUtil.h>
+#include <utils/ColliderDetectionUtil.h>
+
 
 namespace mtrx
 {
@@ -12,9 +13,9 @@ namespace mtrx
 	public:	
 		Collider(const ColliderType& colliderType, const glm::vec3& center = glm::vec3(), const glm::quat& orientation = glm::angleAxis(0.f, glm::vec3(0, 1, 0)), const glm::vec3& scale = glm::vec3(1, 1, 1), bool isConvex = false);
 		Collider(const ColliderType& colliderType, const Transform& transform, bool isConvex = false);
-		virtual ~Collider() = default;										
+		virtual ~Collider() = default;
 		
-		virtual inline bool CheckCollision(const Collider& collider) { return CollisionDetectionUtil::Collide(*this, collider); }
+		virtual inline bool CheckCollision(const Collider& collider) { return ColliderDetectionUtil::Collide(*this, collider); }
 		virtual bool RaycastCollision(const Ray& ray) = 0;
 
 		// Getters

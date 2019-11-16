@@ -8,10 +8,10 @@
 class BuoyancyDemo : public Demo
 {
 public:
-	mtrx::Rigidbody body;
+	mtrx::Rigidbody* body;
 	
 	BuoyancyDemo();
-	~BuoyancyDemo();
+	~BuoyancyDemo() = default;
 
 	void Update() override;
 	void InputCheck() override;

@@ -1,10 +1,6 @@
-/*
-	Author: Mohamed Kazma
-	Description: Allows us to have an API for force generators
-*/
-
 #pragma once
 
+#include <PrecompiledHeader.h>
 #include <forceGenerators/RigidbodyGenerators/IRigidbodyForceGenerator.h>
 
 namespace mtrx
@@ -12,17 +8,28 @@ namespace mtrx
 	class rb_ForceGenerationRegistry
 	{
 	public:
-		rb_ForceGenerationRegistry();
-		~rb_ForceGenerationRegistry();
+		std::vector<std::shared_ptr<IRigidbodyForceGenerator>> forceGenerators;
 
-		inline void AddForceGenerator(IRigidbodyForceGenerator* forceGenerator) { forceGenerators.push_back(forceGenerator); }
+		~rb_ForceGenerationRegistry() = default;
+
+		inline void AddForceGenerator(const std::shared_ptr<IRigidbodyForceGenerator>& forceGenerator) { forceGenerators.push_back(forceGenerator); }
 		inline void RemoveForceGenerator(const int index) { forceGenerators.erase(forceGenerators.begin() + index); }
-		void RemoveForceGenerator(const IRigidbodyForceGenerator* forceGenerator); // Remove a specific force generator
-		inline void ClearForceGenerators() { forceGenerators.clear(); }
-		void UpdateForceGenerators(Rigidbody* rb, float deltaTime); // Update the force generators using a rigidbody
 
-	private:
-		std::vector<IRigidbodyForceGenerator*> forceGenerators; // The force generators that we going to be using
+		inline void RemoveForceGenerator(const std::shared_ptr<IRigidbodyForceGenerator>& forceGenerator)
+		{
+			for (auto iter = forceGenerators.begin(); iter != forceGenerators.end(); ++iter)
+			{
+				if (*iter == forceGenerator) { forceGenerators.erase(iter); break; }
+			}
+		}
+
+		inline void UpdateForceGenerators(Rigidbody* rb, float deltaTime)
+		{
+			for (auto iter = forceGenerators.begin(); iter != forceGenerators.end(); ++iter)
+			{
+				(*iter)->UpdateForces(rb, deltaTime);
+			}
+		}
 	};
 }
 

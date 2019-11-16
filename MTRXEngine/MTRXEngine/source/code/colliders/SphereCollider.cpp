@@ -1,12 +1,5 @@
-/*
-	Author: Mohamed Kazma
-	Description: implementation of a sphere collider
-*/
-
 #include <PrecompiledHeader.h>
 #include <colliders/SphereCollider.h>
-//#include <colliders/BoxCollider.h>
-//#include <colliders/CapsuleCollider.h>
 
 namespace mtrx
 {

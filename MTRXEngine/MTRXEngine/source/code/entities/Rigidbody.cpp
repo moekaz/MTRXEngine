@@ -1,8 +1,3 @@
-/*
-	Author: Mohamed Kazma
-	Description: Implementation of rigidbodies
-*/
-
 #include <PrecompiledHeader.h>
 #include <entities/Rigidbody.h>
 
@@ -10,13 +5,11 @@ namespace mtrx
 {
 	Rigidbody::Rigidbody(float mass, bool isKinematic, const glm::vec3& position, const glm::quat& orientation, const glm::vec3& scale, const glm::mat3& inertiaTensor) : 
 		Body(position, orientation, scale, mass), isKinematic(isKinematic), axes(glm::vec3(0, 0, -1), glm::vec3(0, 1, 0), glm::vec3(1, 0, 0)),
-		angularDamping(1.f), accumTorque(glm::vec3()), rotation(glm::vec3())
+		angularDamping(0.9999f), accumTorque(glm::vec3()), rotation(glm::vec3())
 	{
 		SetInverseInertiaTensor(inertiaTensor);
 		CalculateObjToWorldMat();
 	}
-
-	Rigidbody::~Rigidbody() {}
 
 	void Rigidbody::Integrate(float deltaTime)
 	{
@@ -60,9 +53,6 @@ namespace mtrx
 		accumForces.y = 0;
 		accumForces.z = 0;
 	}
-
-	void Rigidbody::IntegrateRotation()
-	{}
 
 	void Rigidbody::SetInverseInertiaTensor(const glm::mat3& inertiaTensor)
 	{

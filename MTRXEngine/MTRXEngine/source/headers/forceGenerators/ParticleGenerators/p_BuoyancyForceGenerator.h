@@ -14,7 +14,7 @@ namespace mtrx
 	class p_BuoyancyForceGenerator : public IParticleForceGenerator
 	{	
 	public:
-		LiquidProperties liquidProperties;
+		//LiquidProperties liquidProperties;
 		float liquidHeight; // The y coordinate of the liquid's plane (assuming that plane is parallel to XZ plane)
 		float maxParticleDepth; // The max depth after which the object is said to be completely submerged (position is from the center to this will affect depth calculation)
 
