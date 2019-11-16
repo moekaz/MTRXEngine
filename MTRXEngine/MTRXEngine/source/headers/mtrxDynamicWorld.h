@@ -13,7 +13,7 @@ namespace mtrx
 		float accumulator;
 
 		mtrxDynamicWorld();
-		~mtrxDynamicWorld();
+		~mtrxDynamicWorld() = default;
 
 		void Update(float dt);
 		

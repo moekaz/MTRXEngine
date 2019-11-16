@@ -16,7 +16,7 @@ namespace mtrx
 		std::unordered_set<Collider*> colliders;
 
 		CollisionSystem();
-		~CollisionSystem() = default;
+		~CollisionSystem();
 
 		// Using sphere colliders atm
 		//BVHNode<SphereCollider>* root;
