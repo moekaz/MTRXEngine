@@ -1,8 +1,3 @@
-/*
-	Author: Mohamed Kazma
-	Description: Colliders with a convex shape (GJK is what is being used for collision detection)
-*/
-
 #pragma once
 
 #include <colliders/Collider.h>
@@ -17,6 +12,9 @@ namespace mtrx
 	public:
 		ConvexShapeCollider(const ColliderType& colliderType = ColliderType::ConvexShape, const glm::vec3& center = glm::vec3(), const glm::quat& orientation = glm::angleAxis(0.f, worldUp), const glm::vec3& scale = glm::vec3(1, 1, 1));
 		ConvexShapeCollider(const ColliderType& colliderType = ColliderType::ConvexShape, const Transform& transform = Transform());
+		ConvexShapeCollider(const ColliderType& colliderType = ColliderType::ConvexShape, const std::vector<glm::vec3*>& vertices = std::vector<glm::vec3*>(), const glm::vec3& center = glm::vec3(), const glm::quat& orientation = glm::angleAxis(0.f, glm::vec3(0, 1, 0)), const glm::vec3& scale = glm::vec3(1, 1, 1));
+		ConvexShapeCollider(const ColliderType& colliderType = ColliderType::ConvexShape, const std::vector<glm::vec3*>& vertices = std::vector<glm::vec3*>(), const Transform& transform = Transform());
+
 		virtual ~ConvexShapeCollider();
 
 		virtual bool CheckCollision(const Collider&) override;

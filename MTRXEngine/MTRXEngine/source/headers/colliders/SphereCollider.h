@@ -10,7 +10,6 @@ namespace mtrx
 	class SphereCollider : public Collider, public IBoundingVolume
 	{
 	public:
-		// TBD: Phase out using Transforms in basic colliders
 		SphereCollider(const glm::vec3& center = glm::vec3(), const glm::quat& orientation = glm::angleAxis(0.f, worldUp), const glm::vec3& scale = glm::vec3(1, 1, 1), float radius = 0.5);
 		SphereCollider(const Transform& transform = Transform(), float radius = 0.5);
 		SphereCollider(const SphereCollider& collider1, const SphereCollider& collider2); // Used for BVH construction

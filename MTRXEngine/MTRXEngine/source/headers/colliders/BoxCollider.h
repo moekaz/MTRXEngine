@@ -7,7 +7,6 @@
 
 namespace mtrx
 {
-	// TBD: MAYBE ONE INSTANCE OF VERTICES IS JUST FINE AS IT DOESN'T CHANGE
 	class BoxCollider : public ConvexShapeCollider, public IBoundingVolume
 	{
 	public:

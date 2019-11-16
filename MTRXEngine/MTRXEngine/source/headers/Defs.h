@@ -74,6 +74,4 @@ namespace mtrx
 			0.f, diagonal, 0.f,
 			0.f, 0.f, diagonal);
 	}
-
-	// TBD: Add more inertia tensors TBA 
 }

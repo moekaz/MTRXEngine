@@ -4,12 +4,26 @@
 namespace mtrx
 {
 	ConvexShapeCollider::ConvexShapeCollider(const ColliderType& colliderType, const glm::vec3& center, const glm::quat& orientation, const glm::vec3& scale) : 
-		Collider(colliderType, center, orientation, scale, true), transformModified(true)
+		ConvexShapeCollider(colliderType, Transform(center, orientation, scale), true)
 	{}
 
 	ConvexShapeCollider::ConvexShapeCollider(const ColliderType& colliderType, const Transform& transform) : 
 		Collider(colliderType, transform, true), transformModified(true)
 	{}
+
+	ConvexShapeCollider::ConvexShapeCollider(const ColliderType& colliderType, const std::vector<glm::vec3*>& vertices, const glm::vec3& center, const glm::quat& orientation, const glm::vec3& scale) :
+		ConvexShapeCollider(colliderType, vertices, Transform(center, orientation,scale))
+	{}
+
+	ConvexShapeCollider::ConvexShapeCollider(const ColliderType& colliderType, const std::vector<glm::vec3*>& vertices, const Transform& transform) :
+		Collider(colliderType, transform, true), transformModified(true), vertices(vertices)
+	{
+		transformedVertices.resize(vertices.size());
+		for (int i = 0; i < vertices.size(); ++i)
+		{
+			transformedVertices[i] = new glm::vec3();
+		}
+	}
 
 	ConvexShapeCollider::~ConvexShapeCollider()
 	{
