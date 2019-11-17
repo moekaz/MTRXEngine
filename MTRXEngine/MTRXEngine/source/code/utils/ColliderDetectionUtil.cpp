@@ -5,6 +5,7 @@
 #include <colliders/SphereCollider.h>
 #include <colliders/BoxCollider.h>
 #include <colliders/CapsuleCollider.h>
+#include <colliders/ConvexShapeCollider.h>
 
 namespace mtrx
 {
@@ -12,6 +13,7 @@ namespace mtrx
 	{
 		bool Collide(const Collider& collider1, const Collider& collider2)
 		{
+			// TBD: ADD THESE OPTIONS AFTER WE ADD AABBs and OOBBs
 			switch (collider1.GetColliderType())
 			{
 				case ColliderType::Sphere:
@@ -20,6 +22,8 @@ namespace mtrx
 					return BoxCollisionOptions(static_cast<const BoxCollider&>(collider1), collider2);
 				case ColliderType::Capsule:
 					return CapsuleCollisionOptions(static_cast<const CapsuleCollider&>(collider1), collider2);
+				case ColliderType::ConvexShape:
+					return ConvexShapeCollisionOptions(static_cast<const ConvexShapeCollider&>(collider1), collider2);
 				default: // Not a collider that we support
 					return false;
 			}
@@ -53,7 +57,7 @@ namespace mtrx
 		{
 			switch (collider.GetColliderType())
 			{
-				case ColliderType::Sphere: // Extra switch to avoid duplication TBD: maybe might need to do something a little better
+				case ColliderType::Sphere:
 				{
 					return SphereCollisionOptions(static_cast<const SphereCollider&>(collider), boxCollider);
 				}
@@ -77,7 +81,7 @@ namespace mtrx
 		{
 			switch (collider.GetColliderType())
 			{
-				case ColliderType::Sphere: // Extra switch to avoid duplication TBD: maybe might need to do something a little better
+				case ColliderType::Sphere:
 				{
 					return SphereCollisionOptions(static_cast<const SphereCollider&>(collider), capCollider);
 				}
@@ -89,6 +93,31 @@ namespace mtrx
 				{
 					const CapsuleCollider& capsuleCollider = static_cast<const CapsuleCollider&>(collider);
 					return CollisionUtil::CapsuleCapsuleCollision(capCollider.A, capCollider.B, capsuleCollider.A, capsuleCollider.B, capCollider.GetRadii(), capsuleCollider.GetRadii());
+				}
+				default: // Not a collider that we support
+					return false;
+			}
+		}
+
+		bool ConvexShapeCollisionOptions(const ConvexShapeCollider& convexCollider, const Collider& collider)
+		{
+			switch (collider.GetColliderType())
+			{
+				case ColliderType::Sphere: 
+				{
+					return false;
+				}
+				case ColliderType::Box:
+				{
+					return false;
+				}
+				case ColliderType::Capsule:
+				{
+					return false;
+				}
+				case ColliderType::ConvexShape
+				{
+					return false;
 				}
 				default: // Not a collider that we support
 					return false;

@@ -144,25 +144,29 @@ namespace mtrx
 
 		std::pair<float, glm::vec3> MinDistanceSquaredPointRay(const glm::vec3& point, const glm::vec3& startPointRay, const glm::vec3& rayDirection)
 		{
-			float minDistance = 0;
-			glm::vec3 startPointToRay = point - startPointRay;
+			// To keep the logic consistent
+			glm::vec3 rayEndPt = startPointRay + (rayDirection * MAX_RAY_SIZE);
+			return MinDistanceSquaredPointSegment(point, startPointRay, rayDirection);
 
-			float dot = glm::dot(startPointToRay, rayDirection);
-			float distanceSquaredPointRay = glm::dot(startPointToRay, startPointToRay);
-			glm::vec3 closest;
+			//float minDistance = 0;
+			//glm::vec3 startPointToRay = point - startPointRay;
 
-			if (dot < 0)
-			{
-				minDistance = distanceSquaredPointRay;
-				closest = startPointRay;	// Clamp on the starting point
-			}
-			else
-			{
-				minDistance = distanceSquaredPointRay - (dot * dot);
-				closest = glm::fastNormalize(rayDirection) * dot;	// Clamp onto the ray since it is infinite
-			}
+			//float dot = glm::dot(startPointToRay, rayDirection);
+			//float distanceSquaredPointRay = glm::dot(startPointToRay, startPointToRay);
+			//glm::vec3 closest;
 
-			return { minDistance, std::move(closest) };
+			//if (dot < 0)
+			//{
+			//	minDistance = distanceSquaredPointRay;
+			//	closest = startPointRay;	// Clamp on the starting point
+			//}
+			//else
+			//{
+			//	minDistance = distanceSquaredPointRay - (dot * dot);
+			//	closest = glm::fastNormalize(rayDirection) * dot;	// Clamp onto the ray since it is infinite
+			//}
+
+			//return { minDistance, std::move(closest) };
 		}
 
 		float MinDistanceSquaredLineSegmentRay(const glm::vec3& a, const glm::vec3& b, const glm::vec3& rayStart, const glm::vec3& rayDirection)

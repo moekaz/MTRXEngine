@@ -36,7 +36,7 @@ namespace mtrx
 
 	bool ConvexShapeCollider::CheckCollision(const Collider& col)
 	{
-		// TBD: THIS IS NOT GOOD AT ALL (AS IT WILL BREAK COLLISION)
+		// TBD: NEED A GOOD WAY TO CHECK FOR COLLISION BETWEEN BASIC BOUNDING SHAPES AND MORE COMPLEX ONES
 		if (col.IsConvex())
 		{
 			ConvexShapeCollider& collider = static_cast<ConvexShapeCollider&>(const_cast<Collider&>(col));
