@@ -48,10 +48,8 @@ namespace mtrx
 			return false;
 	}
 
-	// TBD: Add an implementation of this
 	bool ConvexShapeCollider::RaycastCollision(const Ray& ray)
 	{
-		// TBD: LOOK INTO WHETHER WE CAN DO A PROPER RAYCAST ON ANY CONVEX SHAPE
 		// A ray is a convex shape if we use it as a line segment
 		glm::vec3 rayEndPoint = glm::fastNormalize(ray.direction) * MAX_RAY_SIZE;	// Get the end point of the ray
 		ConvexShapeCollider convexLine = ConvexShapeCollider(ColliderType::ConvexShape, (rayEndPoint - ray.startPosition) * 0.5f);	// Setup the convex shape
@@ -59,7 +57,7 @@ namespace mtrx
 		std::array<glm::vec3*, 2> verts1 = { const_cast<glm::vec3*>(&ray.startPosition), &rayEndPoint };
 		auto verts2 = GetVertices();
 
-		return CollisionUtil::ConvexShapeCollision(verts1.begin(), verts1.begin(), verts2->begin(), verts2->end());
+		return CollisionUtil::ConvexShapeCollision(verts1.begin(), verts1.end(), verts2->begin(), verts2->end());
 	}
 
 	glm::mat4 ConvexShapeCollider::GetModelMatrix() const

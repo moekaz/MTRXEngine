@@ -7,51 +7,21 @@ namespace mtrx
 	{
 		bool RaySphereCollision(const glm::vec3& sphereCenter, float sphereRadius, const glm::vec3& startPointRay, const glm::vec3& rayDirection)
 		{
-			glm::vec3 closestPoint;
-			return PhysicsUtil::MinDistanceSquaredPointRay(sphereCenter, startPointRay, rayDirection, closestPoint) <= sphereRadius * sphereRadius;
+			return PhysicsUtil::MinDistanceSquaredPointRay(sphereCenter, startPointRay, rayDirection).first <= sphereRadius * sphereRadius;
 		}
 
 		bool RayBoxCollision(const glm::vec3& rayStartPosition, const glm::vec3& rayDirection, const glm::vec3& boxCenter, const glm::vec3* axes, const float* halfExtents)
 		{
 			// Sphere box collision but with a sphere of radius 0
-			glm::vec3 closestPointRay;
-			PhysicsUtil::MinDistanceSquaredPointRay(boxCenter, rayStartPosition, rayDirection, closestPointRay);
+			std::pair<float, glm::vec3> pair = PhysicsUtil::MinDistanceSquaredPointRay(boxCenter, rayStartPosition, rayDirection);
 
-			return CollisionUtil::SphereBoxCollision(closestPointRay, boxCenter, 0.f, axes, halfExtents);
+			return CollisionUtil::SphereBoxCollision(pair.second, boxCenter, 0.f, axes, halfExtents);
 		}
 
 		bool RayCapsuleCollision(const glm::vec3& startPositionRay, const glm::vec3& direction, const glm::vec3& A, const glm::vec3& B, float capsRadius)
 		{
 			// We only need to find the minimum distance from the ray and line segment and check that with our capsule radius
-			return PhysicsUtil::MinDistanceSquaredLineSegmentRay(A, B, startPositionRay, direction) <= capsRadius * capsRadius;
-		}
-
-		bool RayMeshCollision()
-		{
-			return false;
-		}
-
-		bool LineSegmentRayCollision(const glm::vec3& A, const glm::vec3& B, const glm::vec3& rayStartPoint, const glm::vec3& rayDirection)
-		{
-			// TBD: Find a better solution for actual ray segment collision detection
-			// Do ray line collision check and then find if the point of intersection exists in the line
-			//glm::vec3 diff = A - rayStartPoint;
-			//glm::vec3 ba = A - B;
-
-			//float val = ba.y * rayDirection.x - ba.x * rayDirection.y;
-			//if (val <= std::numeric_limits<float>::epsilon())
-			//	return false;
-
-			//float t2 = (diff.y * rayDirection.x - diff.x * rayDirection.y) / val;
-			//if (t2 < 0 || t2 > 1)
-			//	return false;
-
-			//// NOT DONE
-			//float t1 = 0;
-			//if (t1 < 0)
-			//	return false;
-
-			return true;
+			return PhysicsUtil::MinDistanceSquaredLineSegmentRay(A, B, startPositionRay, direction) <= SQR(capsRadius);
 		}
 
 		Collider* RaycastUnfiltered(const std::map<int, Collider*>& colliders, const glm::vec3& rayStartPosition, const glm::vec3& rayDirection)

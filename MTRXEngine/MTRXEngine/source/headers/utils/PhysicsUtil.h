@@ -9,23 +9,16 @@ namespace mtrx
 {
 	namespace PhysicsUtil
 	{
-		glm::vec3 TripleCross(const glm::vec3& a, const glm::vec3& b, const glm::vec3& c);	// Calculates the triple cross product of 3 vectors
+		glm::vec3 TripleCross(const glm::vec3& a, const glm::vec3& b, const glm::vec3& c);
 		
-		// TBD: NEED TO REFACTOR ALL OF THIS CODE 
-		bool LineIntersect(const glm::vec3& a, const glm::vec3& b, const glm::vec3& c, const glm::vec3& d, glm::vec3& intersection);
-		bool LineSegmentIntersect(const glm::vec3& a, const glm::vec3& b, const glm::vec3& c, const glm::vec3& d, glm::vec3& intersection);
-		bool LineRayIntersect(const glm::vec3& a, const glm::vec3& b, const glm::vec3& rayStart, const glm::vec3& rayDirection, glm::vec3& intersection);
-		bool LineSegmentRayIntersect(const glm::vec3& a, const glm::vec3& b, const glm::vec3& c, const glm::vec3& d, glm::vec3& intersection);
+		float MinDistanceTwoLines(const glm::vec3& A, const glm::vec3& B, const glm::vec3& C, const glm::vec3& D);
+		float MinDistanceSquaredTwoSegments(const glm::vec3& A, const glm::vec3& B, const glm::vec3& C, const glm::vec3& D);
+		std::pair<float, glm::vec3> MinDistanceSquaredPointRay(const glm::vec3& point, const glm::vec3& startPointRay, const glm::vec3& rayDirection);
+		std::pair<float, glm::vec3> MinDistanceSquaredPointSegment(const glm::vec3& A, const glm::vec3& B, const glm::vec3& C);
+		float MinDistanceSquaredLineSegmentRay(const glm::vec3& a, const glm::vec3& b, const glm::vec3& rayStart, const glm::vec3& rayDirection);
 		
-		float MinDistanceTwoLines(const glm::vec3&, const glm::vec3&, const glm::vec3&, const glm::vec3&, glm::vec3* intersection);	// Minimum distance between 2 lines squared
-		float MinDistanceSquaredTwoSegments(const glm::vec3&, const glm::vec3&, const glm::vec3&, const glm::vec3&);	// Minimum distance between 2 line segments squared
-		float MinDistanceSquaredPointSegment(const glm::vec3&, const glm::vec3&, const glm::vec3&, glm::vec3&);	// Minimum ditance between a point and a line segment squared
-		float MinDistanceSquaredPointRay(const glm::vec3&, const glm::vec3&, const glm::vec3&, glm::vec3&);	// Minimum distance between a point and a ray squared
-		float MinDistanceSquaredLineRay(const glm::vec3& A, const glm::vec3& B, const glm::vec3& rayStart, const glm::vec3& rayDirection, glm::vec3* intersection);
-		float MinDistanceSquaredLineSegmentRay(const glm::vec3&, const glm::vec3&, const glm::vec3&, const glm::vec3&);	// Minimum distance between a line segment and a ray squared
-		
-		glm::quat Slerp(const glm::quat& firstRotation, const glm::quat& secondRotation, float t);	// Linear interpolation of a rotation (Quaternions)
-		glm::vec3 Lerp(const glm::vec3& startingPosition, const glm::vec3& destination, float t);	// Linear interpolation along a line segment
-		float Ease(float t);	// Easing a float along a half sin curve to simulate acceleration
+		glm::quat Slerp(const glm::quat& firstRotation, const glm::quat& secondRotation, float t);
+		glm::vec3 Lerp(const glm::vec3& startingPosition, const glm::vec3& destination, float t);
+		float Ease(float t);
 	}
 }

@@ -7,12 +7,12 @@
 
 namespace mtrx
 {
+	// TBD: Create an AABB and OOBB implementation
 	class BoxCollider : public ConvexShapeCollider, public IBoundingVolume
 	{
 	public:
 		BoxCollider(const glm::vec3 &center = glm::vec3(), const glm::quat &orientation = glm::angleAxis(0.f, worldUp), const glm::vec3 &scale = glm::vec3(1, 1, 1));
 		BoxCollider(const Transform &transform = Transform());
-		BoxCollider(const BoxCollider &collider1, const BoxCollider &collider2); // Used for BVH construction
 		virtual ~BoxCollider() = default;
 
 		virtual bool CheckCollision(const mtrx::Collider &collider) override { return Collider::CheckCollision(collider); };

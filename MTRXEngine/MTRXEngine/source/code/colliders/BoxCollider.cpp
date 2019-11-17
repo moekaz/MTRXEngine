@@ -22,10 +22,4 @@ namespace mtrx
 			transform),
 		halfExtents { 0.5f * transform.GetScale().x, 0.5f * transform.GetScale().y, 0.5f * transform.GetScale().z }
 	{}
-
-	BoxCollider::BoxCollider(const BoxCollider& collider1, const BoxCollider& collider2) : ConvexShapeCollider(ColliderType::Box, Transform())
-	{
-		// TBD: Constructor for box collider of box colliders needs to be implemented
-		// Create a bounding box from the 2 other bounding boxes
-	}
 }
