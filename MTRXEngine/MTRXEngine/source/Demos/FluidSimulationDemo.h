@@ -11,7 +11,7 @@ struct particle
 	float density;
 	float pressure;
 	mtrx::Rigidbody* rb;
-	bool isHalfTimeStepVelocityInitialized;
+	bool isHalfTimeStepVelocityInitialized = false;
 	glm::vec3 velocityAtHalfTimeStep;
 
 	particle(float density, float pressure, mtrx::Rigidbody* body) : density(density), pressure(pressure), rb(body) 

@@ -34,20 +34,6 @@ namespace mtrx
 		}
 	}
 
-	bool ConvexShapeCollider::CheckCollision(const Collider& col)
-	{
-		// TBD: NEED A GOOD WAY TO CHECK FOR COLLISION BETWEEN BASIC BOUNDING SHAPES AND MORE COMPLEX ONES
-		if (col.IsConvex())
-		{
-			ConvexShapeCollider& collider = static_cast<ConvexShapeCollider&>(const_cast<Collider&>(col));
-			auto vertices1 = GetVertices();
-			auto vertices2 = collider.GetVertices();
-			return CollisionUtil::ConvexShapeCollision(vertices1->begin(), vertices1->end(), vertices2->begin(), vertices2->end());
-		}
-		else 
-			return false;
-	}
-
 	bool ConvexShapeCollider::RaycastCollision(const Ray& ray)
 	{
 		// A ray is a convex shape if we use it as a line segment

@@ -5,11 +5,11 @@
 #include <forceGenerators/RigidbodyGenerators/rb_GravityForceGenerator.h>
 #include <Defs.h>
 #include <colliders/Collider.h>
-#include <colliders/BoxCollider.h>
 #include <colliders/SphereCollider.h>
 #include <colliders/CapsuleCollider.h>
 #include <../Renderer/CollisionDemoUI.h>
 
+// TBD: FIX THIS DEMO
 class CollisionDemo : public Demo
 {
 public:	

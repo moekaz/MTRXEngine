@@ -10,12 +10,24 @@ namespace mtrx
 			return PhysicsUtil::MinDistanceSquaredPointRay(sphereCenter, startPointRay, rayDirection).first <= sphereRadius * sphereRadius;
 		}
 
-		bool RayBoxCollision(const glm::vec3& rayStartPosition, const glm::vec3& rayDirection, const glm::vec3& boxCenter, const glm::vec3* axes, const float* halfExtents)
+		bool RayBoxCollision(const glm::vec3& rayStart, const glm::vec3& rayDirection, const glm::vec3& center, const glm::vec3* axes, const float* halfExtents)
 		{
-			// Sphere box collision but with a sphere of radius 0
-			std::pair<float, glm::vec3> pair = PhysicsUtil::MinDistanceSquaredPointRay(boxCenter, rayStartPosition, rayDirection);
+			glm::vec3 min = glm::vec3(center[0] - (axes[0] * halfExtents[0]), center[1] - (axes[1] * halfExtents[1]), center[2] - (axes[2] * halfExtents[2]));
+			glm::vec3 max = glm::vec3(center[0] + (axes[0] * halfExtents[0]), center[1] + (axes[1] * halfExtents[1]), center[2] + (axes[2] * halfExtents[2]));
 
-			return CollisionUtil::SphereBoxCollision(pair.second, boxCenter, 0.f, axes, halfExtents);
+			float t[8];
+			t[0] = (min.x - rayStart.x) / rayDirection.x;
+			t[1] = (max.x - rayStart.x) / rayDirection.x;
+			t[2] = (min.y - rayStart.y) / rayDirection.y;
+			t[3] = (max.y - rayStart.y) / rayDirection.y;
+			t[4] = (min.z - rayStart.z) / rayDirection.z;
+			t[5] = (max.z - rayStart.z) / rayDirection.z;
+			t[6] = std::max(std::max(std::min(t[0], t[1]), std::min(t[2], t[3])), std::min(t[4], t[5]));
+			t[7] = std::min(std::min(std::max(t[0], t[1]), std::max(t[2], t[3])), std::max(t[4], t[5]));
+			
+			return !(t[7] < 0 || t[6] > t[7]);
+
+			//return t[8];
 		}
 
 		bool RayCapsuleCollision(const glm::vec3& startPositionRay, const glm::vec3& direction, const glm::vec3& A, const glm::vec3& B, float capsRadius)

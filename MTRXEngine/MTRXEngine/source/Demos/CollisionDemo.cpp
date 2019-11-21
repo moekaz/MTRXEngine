@@ -22,15 +22,15 @@ CollisionDemo::CollisionDemo() : Demo("COLLISION DEMO", 1366, 768)
 		mtrx::Rigidbody* body = new mtrx::Rigidbody(mass, false, glm::vec3(x, y, z), orientation1, glm::vec3(extents[0], extents[1], extents[2]), mtrx::GenerateCuboidIT(mass, extents));
 		
 		// Check every type of collider
-		mtrx::Collider* collider = new mtrx::BoxCollider(body->GetPosition());
+		//mtrx::Collider* collider = new mtrx::BoxCollider(body->GetPosition());
 		
 		body->SetAngularDamping(0.8f);
 		body->SetLinearDamping(0.99f);
 
 		worldRbs.push_back(body);
-		worldColliders.push_back(collider);
+		//worldColliders.push_back(collider);
 		world.AddRigidbody(body);
-		world.AddCollider(collider);
+		//world.AddCollider(collider);
 		transformsToRender.insert(&body->GetTransform());
 	}
 }
@@ -100,7 +100,7 @@ void CollisionDemo::Shoot()
 	float mass = 1.f;
 	glm::vec3 forward = application.camera->GetForward();
 	mtrx::Rigidbody* bullet = new mtrx::Rigidbody(mass, false, application.camera->GetTransform().GetPosition() + forward * 0.5f, glm::angleAxis(0.f, mtrx::worldUp), glm::vec3(0.1, 0.1, 0.1), mtrx::GenerateCuboidIT(mass, extents));
-	mtrx::Collider* collider = new mtrx::BoxCollider(bullet->GetTransform());
+	//mtrx::Collider* collider = new mtrx::BoxCollider(bullet->GetTransform());
 
 	// Add a force going in the forward direction from the camera with some scalar for magnitude
 	bullet->AddForce(forward * 1000.f);

@@ -174,6 +174,34 @@ namespace mtrx
 			return MinDistanceSquaredTwoSegments(a, b, rayStart, rayStart + (rayDirection * MAX_RAY_SIZE));
 		}
 
+
+		float MinDistanceSquaredPointTriangle(const glm::vec3& pt, const glm::vec3& a, const glm::vec3& b, const glm::vec3& c)
+		{
+			glm::vec3 ab = b - a;
+			glm::vec3 ac = c - a;
+
+			glm::vec3 normal = glm::fastNormalize(glm::cross(ab, ac)); // Get the normal of the plane of the triangle
+			glm::vec3 diff = pt - a; // Difference vector
+
+			float dot = glm::dot(diff, normal);
+
+			return glm::length2(diff - (dot * normal));
+		}
+
+		float MinDistanceSquaredLineSegmentTriangle(const glm::vec3& a, const glm::vec3& b, const glm::vec3& c, const glm::vec3& d, const glm::vec3& e)
+		{
+			std::array<const glm::vec3*, 3> tri = { &c, &d, &e };
+
+			float minDistancSqr = -1.f;
+			for (int i = 0; i < tri.size(); ++i)
+			{
+				int nextIndex = i + 1 < tri.size() ? i + 1 : 0; // So that we don't use the modulo operation
+				minDistancSqr = std::min(minDistancSqr, MinDistanceSquaredTwoSegments(a, b, *tri[i], *tri[nextIndex]));
+			}
+
+			return minDistancSqr;
+		}
+
 		glm::quat Slerp(const glm::quat& firstRotation, const glm::quat& secondRotation, float t)
 		{
 			if (t < 0 || t > 1) // If the value of t is off return the destination rotation

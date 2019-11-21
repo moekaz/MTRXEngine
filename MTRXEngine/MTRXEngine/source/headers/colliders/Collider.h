@@ -5,7 +5,6 @@
 #include <math/Transform.h>
 #include <utils/ColliderDetectionUtil.h>
 
-
 namespace mtrx
 {
 	class Collider
@@ -15,7 +14,7 @@ namespace mtrx
 		Collider(const ColliderType& colliderType, const Transform& transform, bool isConvex = false);
 		virtual ~Collider() = default;
 		
-		virtual inline bool CheckCollision(const Collider& collider) { return ColliderDetectionUtil::Collide(*this, collider); }
+		inline bool CheckCollision(const Collider& collider) { return ColliderDetectionUtil::Collide(*this, collider); }
 		virtual bool RaycastCollision(const Ray& ray) = 0;
 
 		// Getters
@@ -25,9 +24,9 @@ namespace mtrx
 		inline const ColliderType& GetColliderType() const { return type; }
 		inline const int GetColliderId() const { return colliderId; }
 		inline const bool IsConvex() const { return isConvexShape; }
-		inline glm::vec3 GetForward() { return glm::fastNormalize(transform.GetOrientation() * axes[0]); }
-		inline glm::vec3 GetSide() { return glm::fastNormalize(transform.GetOrientation() * axes[1]); }
-		inline glm::vec3 GetUp() { return glm::fastNormalize(transform.GetOrientation() * axes[2]); }
+		inline const glm::vec3 GetForward() const { return glm::fastNormalize(transform.GetOrientation() * worldForward); }
+		inline const glm::vec3 GetSide() const { return glm::fastNormalize(transform.GetOrientation() * worldSide); }
+		inline const glm::vec3 GetUp() const { return glm::fastNormalize(transform.GetOrientation() * worldUp); }
 
 		// Setters
 		virtual inline void SetPosition(const glm::vec3& center) { transform.SetPosition(center); }
@@ -41,7 +40,7 @@ namespace mtrx
 		int colliderId; // The id of collider
 		ColliderType type; // The collider type
 		bool isConvexShape; // Whether it is a convex shape collider or not
-		ObjectAxes axes; // The axes that define this collider's world
+		mutable ObjectAxes axes; // The axes that define this collider's world
 		Transform transform; // position orientation and scale of the collider
 	};
 }

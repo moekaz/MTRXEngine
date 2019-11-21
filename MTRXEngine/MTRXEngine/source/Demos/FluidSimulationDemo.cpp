@@ -220,8 +220,7 @@ void FluidSimulationDemo::ApplyForces()
 
 		acceleration += gravity;
 		//acceleration += BarrierCollisionCorrection(p); // Some collision correction due to the barriers of the simulation
-
-		float magSqr = glm::length2(acceleration);
+		float magSqr = glm::dot(acceleration, acceleration);
 		if (magSqr > maximumAccelerationSqr)
 			acceleration = maximumAcceleration * glm::fastNormalize(acceleration);
 
@@ -249,30 +248,15 @@ void FluidSimulationDemo::UpdatePositions(float dt)
 		p->rb->GetPosition() += (float)dt * p->velocityAtHalfTimeStep;
 		p->rb->GetVelocity() = p->velocityAtHalfTimeStep + (float)(0.5 * dt) * p->rb->GetAcceleration();
 
-		if (glm::length2(p->rb->GetVelocity()) > maximumVelocitySqr) 
+		glm::vec3& vel = p->rb->GetVelocity();
+
+		if (glm::dot(vel, vel) > maximumVelocitySqr)
 		{
-			p->rb->SetVelocity((float)maximumVelocity * glm::fastNormalize(p->rb->GetVelocity()));
+			p->rb->SetVelocity((float)maximumVelocity * glm::fastNormalize(vel));
 		}
 
 		CollisionPositionCorrection(p);
 	}
-	//for (int i = 0; i < particles.size(); ++i)
-	//{
-	//	particle* p = particles[i];
-	//	glm::vec3& vel = p->rb->GetVelocity();
-
-	//	float timeStep = calculateTimeStep();
-
-	//	p->rb->GetVelocity() += timeStep * p->rb->GetAcceleration();
-	//	//p->rb->GetVelocity() *= 0.9999f;
-	//	float magSqr = glm::length2(p->rb->GetVelocity());
-	//	if (magSqr > SQR(maximumVelocity))
-	//		p->rb->SetVelocity(maximumVelocity * glm::fastNormalize(p->rb->GetVelocity()));
-
-	//	p->rb->GetPosition() += timeStep * p->rb->GetVelocity();
-
-	//	CollisionPositionCorrection(p);
-	//}
 }
 
 glm::vec3 FluidSimulationDemo::BarrierCollisionCorrection(particle* part)
@@ -371,9 +355,12 @@ void FluidSimulationDemo::CollisionPositionCorrection(particle* part)
 
 void FluidSimulationDemo::PrintPositions()
 {
-	for (auto iter = particles.begin(); iter != particles.end(); ++iter)
+	if (!started)
+		return;
+
+	for (int i = 0; i < 100; ++i)
 	{
-		glm::vec3& pos = (*iter)->rb->GetPosition();
+		glm::vec3& pos = particles[i]->rb->GetPosition();
 		std::cout << pos.x << " " << pos.y << " " << pos.z << std::endl;
 	}
 }

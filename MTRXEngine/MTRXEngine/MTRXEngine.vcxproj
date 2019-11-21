@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="15.0" 
-  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -167,6 +166,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\code\colliders\OOBBCollider.cpp" />
+    <ClCompile Include="source\code\colliders\AABBCollider.cpp" />
     <ClCompile Include="source\code\log\LogManager.cpp" />
     <ClCompile Include="source\code\PrecompiledHeader.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -232,7 +233,6 @@
     <ClCompile Include="source\code\forceGenerators\RigidbodyGenerators\rb_DragForceGenerator.cpp" />
     <ClCompile Include="source\code\forceGenerators\RigidbodyGenerators\rb_GravityForceGenerator.cpp" />
     <ClCompile Include="source\code\entities\Body.cpp" />
-    <ClCompile Include="source\code\colliders\BoxCollider.cpp" />
     <ClCompile Include="source\code\colliders\CapsuleCollider.cpp" />
     <ClCompile Include="source\code\colliders\Collider.cpp" />
     <ClCompile Include="source\code\colliders\ConvexShapeCollider.cpp" />
@@ -244,10 +244,6 @@
     <ClCompile Include="source\code\utils\GJKUtil.cpp" />
     <ClCompile Include="source\code\utils\CollisionUtil.cpp" />
     <ClCompile Include="source\code\utils\PhysicsUtil.cpp" />
-    <ClCompile Include="source\Demos\CollisionDemo.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
-    </ClCompile>
     <ClCompile Include="source\Demos\PhysicsDemos.cpp" />
     <ClCompile Include="source\Demos\ProjectileDemo.cpp" />
     <ClCompile Include="source\Renderer\Camera.cpp" />
@@ -259,6 +255,8 @@
     <ClCompile Include="source\Renderer\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="source\headers\colliders\OOBBCollider.h" />
+    <ClInclude Include="source\headers\colliders\AABBCollider.h" />
     <ClInclude Include="source\headers\log\LogManager.h" />
     <ClInclude Include="source\headers\utils\ColliderDetectionUtil.h" />
     <ClInclude Include="source\headers\utils\GJKUtil.h" />
@@ -477,7 +475,6 @@
     <ClInclude Include="source\Renderer\CollisionDemoUI.h" />
     <ClInclude Include="source\Renderer\Input\InputSystem.h" />
     <ClInclude Include="source\Demos\Demo.h" />
-    <ClInclude Include="source\Demos\CollisionDemo.h" />
     <ClInclude Include="source\Demos\ProjectileDemo.h" />
     <ClInclude Include="source\headers\colliders\BVHNode.h" />
     <ClInclude Include="source\headers\colliders\CollisionSystem.h" />
@@ -498,7 +495,6 @@
     <ClInclude Include="source\headers\forceGenerators\RigidbodyGenerators\rb_ForceGenerationRegistry.h" />
     <ClInclude Include="source\headers\forceGenerators\RigidbodyGenerators\rb_GravityForceGenerator.h" />
     <ClInclude Include="source\headers\forceGenerators\RigidbodyGenerators\IRigidbodyForceGenerator.h" />
-    <ClInclude Include="source\headers\colliders\BoxCollider.h" />
     <ClInclude Include="source\headers\colliders\CapsuleCollider.h" />
     <ClInclude Include="source\headers\colliders\Collider.h" />
     <ClInclude Include="source\headers\colliders\ConvexShapeCollider.h" />

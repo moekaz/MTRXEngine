@@ -7,7 +7,6 @@ namespace mtrx
 
 	#define LOGGER_FILE_SIZE 5242880 // Maximum size of logger file 
 	#define PI 3.14159265358f // Approximation of pi
-	#define WORLD_DIMENSIONS 3 // World dimensions
 	#define PHYSICS_TIMESTEP 0.01666666666f // 60fps timestep
 	#define MAX_RAY_SIZE 10000.f
 
@@ -20,7 +19,7 @@ namespace mtrx
 	static glm::vec3 worldForward = glm::vec3(0.f, 0.f, -1.f);
 
 	// Supported collider types
-	enum class ColliderType : char { Sphere, Box, Capsule, Mesh, ConvexShape, };
+	enum class ColliderType : char { Sphere, AABB, OOBB, Capsule, ConvexShape, };
 
 	// The axes that define an objects world 
 	struct ObjectAxes
@@ -29,12 +28,12 @@ namespace mtrx
 		{
 			struct
 			{
-				glm::vec3 forward;
-				glm::vec3 up;
 				glm::vec3 side;
+				glm::vec3 up;
+				glm::vec3 forward;
 			};
 
-			glm::vec3 axes[WORLD_DIMENSIONS];
+			glm::vec3 axes[3];
 		};
 
 		inline glm::vec3& operator[](int index) { return axes[index]; }
@@ -51,6 +50,22 @@ namespace mtrx
 		glm::vec3* c;
 		glm::vec3* d;
 		unsigned int size;
+	};
+
+	// Store a triangle
+	struct Triangle
+	{
+		union
+		{
+			struct
+			{
+				glm::vec3* a;
+				glm::vec3* b;
+				glm::vec3* c;
+			};
+
+			glm::vec3* pts[3];
+		};
 	};
 
 	// Random int that is inclusive on min and exclusive on max
