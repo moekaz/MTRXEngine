@@ -9,9 +9,9 @@ namespace mtrx
 	{
 	public:
 		AABBCollider(const glm::vec3& center = glm::vec3(), const glm::vec3& scale = glm::vec3(1, 1, 1));
+		AABBCollider(const AABBCollider& aabb, const AABBCollider& aabb1);
 		virtual ~AABBCollider() = default;
 
-		// TBD: Look at the raycast with AABBs colliders
 		virtual inline bool RaycastCollision(const Ray& ray) override
 		{
 			return RaycastCollisionUtil::RayBoxCollision(ray.startPosition, ray.direction, GetPosition(), axes.axes, halfExtents);

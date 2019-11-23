@@ -202,6 +202,24 @@ namespace mtrx
 			return minDistancSqr;
 		}
 
+		std::pair<float, glm::vec3> MinDistanceSquaredPointAABB(const glm::vec3& pt, const glm::vec3& center, const float* halfExtents)
+		{
+			glm::vec3 closestPt = center;
+			for (int i = 0; i < 3; ++i)
+			{
+				float min = center[i] - halfExtents[i];
+				float max = center[i] + halfExtents[i];
+
+				if (closestPt[i] < min)
+					closestPt[i] = min;
+				else if (closestPt[i] > max)
+					closestPt[i] = max;
+			}
+
+			glm::vec3 diff = closestPt - center;
+			return { glm::dot(diff, diff), closestPt };
+		}
+
 		glm::quat Slerp(const glm::quat& firstRotation, const glm::quat& secondRotation, float t)
 		{
 			if (t < 0 || t > 1) // If the value of t is off return the destination rotation

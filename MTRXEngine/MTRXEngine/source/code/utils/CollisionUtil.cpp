@@ -14,23 +14,8 @@ namespace mtrx
 
 		bool SphereAABBCollision(const glm::vec3& center, const float radius, const glm::vec3& center1, const float* halfExtents)
 		{
-			// TBD: Add this to the util file
-			// Find the closest pt on the AABB from the sphere center
-			glm::vec3 closestPt = center;
-
-			for (int i = 0; i < 3; ++i)
-			{
-				float min = center1[i] - halfExtents[i];
-				float max = center1[i] + halfExtents[i];
-
-				if (closestPt[i] < min)
-					closestPt[i] = min;
-				else if (closestPt[i] < max)
-					closestPt[i] = max;
-			}
-
-			glm::vec3 diff = closestPt - center;
-			return glm::dot(diff, diff) >= SQR(radius);
+			// Find the minimum distance between sphere and AABB	
+			return PhysicsUtil::MinDistanceSquaredPointAABB(center, center1, halfExtents).first >= SQR(radius);
 		}
 
 		bool SphereOOBBCollision(const glm::vec3& center, const float radius, const glm::vec3& center1, const glm::vec3* axes, const float* halfExtents)
@@ -88,9 +73,9 @@ namespace mtrx
 
 		bool AABBCollision(const glm::vec3& center, const float* halfExtents, const glm::vec3& center1, const float* halfExtents1)
 		{
-			return !abs(center.x - center1.x) > (halfExtents[0] + halfExtents1[0]) &&
-				!abs(center.y - center1.y) > (halfExtents[1] + halfExtents1[1]) &&
-				!abs(center.z - center1.z) > (halfExtents[2] + halfExtents1[2]);
+			return !(std::abs(center.x - center1.x) > (halfExtents[0] + halfExtents1[0])) &&
+				!(std::abs(center.y - center1.y) > (halfExtents[1] + halfExtents1[1])) &&
+				!(std::abs(center.z - center1.z) > (halfExtents[2] + halfExtents1[2]));
 		}
 	}
 }

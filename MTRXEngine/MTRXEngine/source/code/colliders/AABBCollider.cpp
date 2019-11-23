@@ -19,4 +19,9 @@ namespace mtrx
 			center, glm::angleAxis(0.f, glm::vec3(0, 1, 0)), scale),
 			halfExtents { 0.5f * scale.x, 0.5f * scale.y, 0.5f * scale.z }
 	{}
+
+	AABBCollider::AABBCollider(const AABBCollider& aabb, const AABBCollider& aabb1)
+	{
+		// TBD: Implement This constructor for BVH implementation
+	}
 }

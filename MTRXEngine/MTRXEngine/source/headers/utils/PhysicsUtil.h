@@ -25,6 +25,8 @@ namespace mtrx
 		
 		//TBD: Look at Christer Ericson's book for more information on this
 		float MinDistanceSquaredLineSegmentTriangle(const glm::vec3& a, const glm::vec3& b, const glm::vec3& c, const glm::vec3& d, const glm::vec3& e);
+		
+		std::pair<float, glm::vec3> MinDistanceSquaredPointAABB(const glm::vec3& pt, const glm::vec3& center, const float* halfExtents);
 
 		glm::quat Slerp(const glm::quat& firstRotation, const glm::quat& secondRotation, float t);
 		glm::vec3 Lerp(const glm::vec3& startingPosition, const glm::vec3& destination, float t);
