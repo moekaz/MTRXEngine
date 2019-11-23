@@ -66,6 +66,9 @@ namespace mtrx
 
 			glm::vec3* pts[3];
 		};
+
+		Triangle() {}
+		Triangle(glm::vec3* a, glm::vec3* b, glm::vec3* c) : a(a), b(b), c(c) {}
 	};
 
 	// Random int that is inclusive on min and exclusive on max

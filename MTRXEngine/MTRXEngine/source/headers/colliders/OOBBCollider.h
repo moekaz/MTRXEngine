@@ -8,7 +8,7 @@ namespace mtrx
 	class OOBBCollider : public ConvexShapeCollider
 	{
 	public:
-		OOBBCollider(const glm::vec3& center = glm::vec3(), const glm::quat& orientation = glm::angleAxis(0.f, glm::vec3()), const glm::vec3& scale = glm::vec3(1, 1, 1));
+		OOBBCollider(const glm::vec3& center = glm::vec3(), const glm::quat& orientation = glm::angleAxis(0.f, glm::vec3(0, 1, 0)), const glm::vec3& scale = glm::vec3(1, 1, 1));
 		OOBBCollider(const Transform& transform = Transform());
 		virtual ~OOBBCollider() = default;
 

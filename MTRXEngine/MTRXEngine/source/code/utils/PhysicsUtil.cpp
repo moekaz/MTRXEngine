@@ -195,7 +195,7 @@ namespace mtrx
 			float minDistancSqr = -1.f;
 			for (int i = 0; i < tri.size(); ++i)
 			{
-				int nextIndex = i + 1 < tri.size() ? i + 1 : 0; // So that we don't use the modulo operation
+				int nextIndex = (i + 1) < tri.size() ? i + 1 : 0; // So that we don't use the modulo operation
 				minDistancSqr = std::min(minDistancSqr, MinDistanceSquaredTwoSegments(a, b, *tri[i], *tri[nextIndex]));
 			}
 
