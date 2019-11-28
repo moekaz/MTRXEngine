@@ -10,12 +10,13 @@ namespace mtrx
 	class Collider
 	{
 	public:	
-		Collider(const ColliderType& colliderType, const glm::vec3& center = glm::vec3(), const glm::quat& orientation = glm::angleAxis(0.f, glm::vec3(0, 1, 0)), const glm::vec3& scale = glm::vec3(1, 1, 1), bool isConvex = false);
+		Collider(const ColliderType& colliderType, const glm::vec3& center = glm::vec3(), const glm::quat& orientation = glm::angleAxis(0.f, worldUp), const glm::vec3& scale = glm::vec3(1.f, 1.f, 1.f), bool isConvex = false);
 		Collider(const ColliderType& colliderType, const Transform& transform, bool isConvex = false);
 		virtual ~Collider() = default;
 		
-		inline bool CheckCollision(const Collider& collider) { return ColliderDetectionUtil::Collide(*this, collider); }
 		virtual bool RaycastCollision(const Ray& ray) = 0;
+
+		inline bool CheckCollision(const Collider& collider) { return ColliderDetectionUtil::Collide(*this, collider); }
 
 		// Getters
 		inline const glm::vec3& GetPosition() const { return transform.GetPosition(); }
@@ -24,9 +25,24 @@ namespace mtrx
 		inline const ColliderType& GetColliderType() const { return type; }
 		inline const int GetColliderId() const { return colliderId; }
 		inline const bool IsConvex() const { return isConvexShape; }
-		inline const glm::vec3 GetForward() const { return glm::fastNormalize(transform.GetOrientation() * worldForward); }
-		inline const glm::vec3 GetSide() const { return glm::fastNormalize(transform.GetOrientation() * worldSide); }
-		inline const glm::vec3 GetUp() const { return glm::fastNormalize(transform.GetOrientation() * worldUp); }
+		
+		inline const glm::vec3 GetForward() const 
+		{
+			axes[0] = glm::fastNormalize(transform.GetOrientation() * worldForward); 
+			return axes[0];
+		}
+
+		inline const glm::vec3 GetSide() const 
+		{
+			axes[1] = glm::fastNormalize(transform.GetOrientation() * worldSide); 
+			return axes[1];
+		}
+		
+		inline const glm::vec3 GetUp() const 
+		{
+			axes[2] = glm::fastNormalize(transform.GetOrientation() * worldUp); 
+			return axes[2];
+		}
 
 		// Setters
 		virtual inline void SetPosition(const glm::vec3& center) { transform.SetPosition(center); }
@@ -37,10 +53,10 @@ namespace mtrx
 		static int id;
 
 	protected:
-		int colliderId; // The id of collider
-		ColliderType type; // The collider type
-		bool isConvexShape; // Whether it is a convex shape collider or not
-		mutable ObjectAxes axes; // The axes that define this collider's world
-		Transform transform; // position orientation and scale of the collider
+		int colliderId;
+		ColliderType type;
+		bool isConvexShape;
+		mutable ObjectAxes axes;
+		Transform transform;
 	};
 }

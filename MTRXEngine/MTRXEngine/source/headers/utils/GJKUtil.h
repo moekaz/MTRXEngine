@@ -83,8 +83,8 @@ namespace mtrx
 		template<typename Iterator, typename = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator>::value_type>::value>>
 		static glm::vec3* FarthestPointInDirection(const Iterator& startVertices, const Iterator& endVertices, const glm::vec3& direction)
 		{
-			float maxDot = -std::numeric_limits<float>::infinity();	// Max dot vector
-			glm::vec3* farthest = nullptr;	// Farthest vector
+			float maxDot = -std::numeric_limits<float>::infinity();
+			glm::vec3* farthest = nullptr;
 			
 			for (auto iter = startVertices; iter != endVertices; ++iter)
 			{

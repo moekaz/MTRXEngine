@@ -1,5 +1,5 @@
 #include <PrecompiledHeader.h>
-#include <../Demos/Demo.h>
+#include "Demo.h"
 
 Demo::Demo(const char* appName, int width, int height) : application(appName, width, height), cursor(false), mesh(1)
 {}

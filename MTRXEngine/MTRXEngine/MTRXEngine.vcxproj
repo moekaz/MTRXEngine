@@ -177,6 +177,7 @@
     </ClCompile>
     <ClCompile Include="source\code\utils\ColliderDetectionUtil.cpp" />
     <ClCompile Include="source\code\utils\RaycastCollisionUtil.cpp" />
+    <ClCompile Include="source\Demos\CollisionDemo.cpp" />
     <ClCompile Include="source\Demos\FluidSimulationDemo.cpp" />
     <ClCompile Include="source\Demos\BuoyancyDemo.cpp" />
     <ClCompile Include="source\code\mtrxDynamicWorld.cpp" />
@@ -255,6 +256,7 @@
     <ClCompile Include="source\Renderer\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="source\Demos\CollisionDemo.h" />
     <ClInclude Include="source\headers\colliders\OOBBCollider.h" />
     <ClInclude Include="source\headers\colliders\AABBCollider.h" />
     <ClInclude Include="source\headers\log\LogManager.h" />

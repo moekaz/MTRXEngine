@@ -49,6 +49,7 @@
     <ClCompile Include="source\code\log\LogManager.cpp" />
     <ClCompile Include="source\code\colliders\AABBCollider.cpp" />
     <ClCompile Include="source\code\colliders\OOBBCollider.cpp" />
+    <ClCompile Include="source\Demos\CollisionDemo.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\headers\mtrxDynamicWorld.h" />
@@ -314,6 +315,7 @@
     <ClInclude Include="source\headers\log\LogManager.h" />
     <ClInclude Include="source\headers\colliders\AABBCollider.h" />
     <ClInclude Include="source\headers\colliders\OOBBCollider.h" />
+    <ClInclude Include="source\Demos\CollisionDemo.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="source\Libraries\glm\glm\detail\func_common.inl" />

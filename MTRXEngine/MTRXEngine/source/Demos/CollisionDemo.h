@@ -8,6 +8,7 @@
 #include <colliders/SphereCollider.h>
 #include <colliders/CapsuleCollider.h>
 #include <../Renderer/CollisionDemoUI.h>
+#include <colliders/OOBBCollider.h>
 
 // TBD: FIX THIS DEMO
 class CollisionDemo : public Demo

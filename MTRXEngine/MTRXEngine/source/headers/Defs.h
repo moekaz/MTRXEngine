@@ -13,10 +13,9 @@ namespace mtrx
 	static float gravity = 9.81f; // Constant value for gravity (not realistic value but games don't have realistic gravity
 	static std::string projectDir = std::filesystem::current_path().string(); // Gives us the project dir
 
-	// World space vectors That we can use (Maybe we don't want to use this)
-	static glm::vec3 worldUp = glm::vec3(0.f, 1.f, 0.f);
-	static glm::vec3 worldSide = glm::vec3(1.f, 0.f, 0.f);
-	static glm::vec3 worldForward = glm::vec3(0.f, 0.f, -1.f);
+	static const glm::vec3 worldUp = glm::vec3(0.f, 1.f, 0.f);
+	static const glm::vec3 worldSide = glm::vec3(1.f, 0.f, 0.f);
+	static const glm::vec3 worldForward = glm::vec3(0.f, 0.f, -1.f);
 
 	// Supported collider types
 	enum class ColliderType : char { Sphere, AABB, OOBB, Capsule, ConvexShape, };

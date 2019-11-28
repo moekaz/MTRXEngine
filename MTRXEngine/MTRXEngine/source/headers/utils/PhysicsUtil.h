@@ -13,19 +13,12 @@ namespace mtrx
 		
 		float MinDistanceTwoLines(const glm::vec3& A, const glm::vec3& B, const glm::vec3& C, const glm::vec3& D);
 		
-		// TBD: LOOK AT IMPLEMENTATION IN CHRISTER ERICSON'S BOOK
 		float MinDistanceSquaredTwoSegments(const glm::vec3& A, const glm::vec3& B, const glm::vec3& C, const glm::vec3& D);
-
-
 		std::pair<float, glm::vec3> MinDistanceSquaredPointRay(const glm::vec3& point, const glm::vec3& startPointRay, const glm::vec3& rayDirection);
 		std::pair<float, glm::vec3> MinDistanceSquaredPointSegment(const glm::vec3& A, const glm::vec3& B, const glm::vec3& C);
 		float MinDistanceSquaredLineSegmentRay(const glm::vec3& a, const glm::vec3& b, const glm::vec3& rayStart, const glm::vec3& rayDirection);
 		float MinDistanceSquaredPointTriangle(const glm::vec3& pt, const glm::vec3& a, const glm::vec3& b, const glm::vec3& c);
-		
-		
-		//TBD: Look at Christer Ericson's book for more information on this
 		float MinDistanceSquaredLineSegmentTriangle(const glm::vec3& a, const glm::vec3& b, const glm::vec3& c, const glm::vec3& d, const glm::vec3& e);
-		
 		std::pair<float, glm::vec3> MinDistanceSquaredPointAABB(const glm::vec3& pt, const glm::vec3& center, const float* halfExtents);
 
 		glm::quat Slerp(const glm::quat& firstRotation, const glm::quat& secondRotation, float t);

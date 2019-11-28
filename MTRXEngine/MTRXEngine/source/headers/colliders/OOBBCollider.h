@@ -22,9 +22,9 @@ namespace mtrx
 			if (!transformModified)
 				return axes.axes;
 
-			axes[0] = GetSide();
-			axes[1] = GetUp();
-			axes[2] = GetForward();
+			GetSide();
+			GetUp();
+			GetForward();
 
 			return axes.axes;
 		}
