@@ -150,7 +150,7 @@ namespace mtrx
 				}
 				case ColliderType::OOBB:
 				{
-					//std::cout << "OOBB OOBB Collision detection" << std::endl;
+					// std::cout << "OOBB OOBB Collision detection" << std::endl;
 					auto vertices = oobb.GetVertices();
 					auto vertices1 = static_cast<const OOBBCollider&>(collider).GetVertices();
 					return CollisionUtil::OOBBCollision(vertices->begin(), vertices->end(), vertices1->begin(), vertices1->end());

@@ -17,7 +17,6 @@ namespace mtrx
 
 		virtual ~ConvexShapeCollider();
 
-		//virtual bool CheckCollision(const Collider& collider) override;
 		virtual bool RaycastCollision(const Ray& collider) override;
 
 		// Vertices and model matrices

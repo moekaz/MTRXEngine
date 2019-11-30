@@ -41,6 +41,7 @@ Window::~Window()
 {
 	UILayer::Shutdown();
 
-	// Terminate window
+	// Terminate window and GLFW
 	glfwDestroyWindow(window);
+	glfwTerminate();
 }

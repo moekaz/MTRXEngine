@@ -3,7 +3,7 @@
 
 CollisionDemo::CollisionDemo() : Demo("COLLISION DEMO", 1366, 768)
 {
-	application.inputSystem->ToggleCursor();
+	//application.inputSystem->ToggleCursor();
 
 	srand((unsigned int)time(0)); // Seed for random
 
@@ -97,7 +97,7 @@ void CollisionDemo::Shoot()
 	float extents[3] = {0.1f, 0.1f, 0.1f};
 	float mass = 1.f;
 	glm::vec3 forward = application.camera->GetForward();
-	mtrx::Rigidbody* bullet = new mtrx::Rigidbody(mass, false, application.camera->GetTransform().GetPosition() + forward * 0.5f, glm::angleAxis(0.f, glm::vec3(0, 1, 0)), glm::vec3(0.1, 0.1, 0.1), mtrx::GenerateCuboidIT(mass, extents));
+	mtrx::Rigidbody* bullet = new mtrx::Rigidbody(mass, false, application.camera->GetTransform().GetPosition() + forward * 0.5f, glm::angleAxis(0.f, glm::vec3(0.f, 1.f, 0.f)), glm::vec3(0.1f, 0.1f, 0.1f), mtrx::GenerateCuboidIT(mass, extents));
 	mtrx::Collider* collider = new mtrx::OOBBCollider(bullet->GetTransform());
 
 	// Add a force going in the forward direction from the camera with some scalar for magnitude

@@ -19,7 +19,7 @@ namespace mtrx
 		Collider(colliderType, transform, true), transformModified(true), vertices(vertices)
 	{
 		transformedVertices.resize(vertices.size());
-		for (int i = 0; i < vertices.size(); ++i)
+  		for (int i = 0; i < vertices.size(); ++i)
 		{
 			transformedVertices[i] = new glm::vec3();
 		}
@@ -38,7 +38,6 @@ namespace mtrx
 	{
 		// A ray is a convex shape if we use it as a line segment
 		glm::vec3 rayEndPoint = glm::fastNormalize(ray.direction) * MAX_RAY_SIZE;	// Get the end point of the ray
-		ConvexShapeCollider convexLine = ConvexShapeCollider(ColliderType::ConvexShape, (rayEndPoint - ray.startPosition) * 0.5f);	// Setup the convex shape
 
 		std::array<glm::vec3*, 2> verts1 = { const_cast<glm::vec3*>(&ray.startPosition), &rayEndPoint };
 		auto verts2 = GetVertices();

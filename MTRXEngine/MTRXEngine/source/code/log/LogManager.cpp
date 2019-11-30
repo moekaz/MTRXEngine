@@ -6,6 +6,7 @@
 #include <PrecompiledHeader.h>
 
 #include <log/LogManager.h>
+#include <Defs.h>
 
 namespace mtrx
 {
@@ -27,8 +28,7 @@ namespace mtrx
 	// Create/Update the directory that we want to create our log file in 
 	void LogManager::CreateLogDirectory()
 	{
-		std::string directory = std::filesystem::current_path().string(); // Get the current directory that the project is in 
-		directory += "\\" + std::string(LOG_FILE_DIR); // Add the directory that we want to create the log files in 
+		std::string directory = projectDir + "\\" + std::string(LOG_FILE_DIR);
 		if (!std::filesystem::is_directory(directory))
 		{
 			std::filesystem::create_directory(directory); // Create the log directory

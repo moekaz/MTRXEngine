@@ -26,23 +26,9 @@ namespace mtrx
 		inline const int GetColliderId() const { return colliderId; }
 		inline const bool IsConvex() const { return isConvexShape; }
 		
-		inline const glm::vec3 GetForward() const 
-		{
-			axes[0] = glm::fastNormalize(transform.GetOrientation() * worldForward); 
-			return axes[0];
-		}
-
-		inline const glm::vec3 GetSide() const 
-		{
-			axes[1] = glm::fastNormalize(transform.GetOrientation() * worldSide); 
-			return axes[1];
-		}
-		
-		inline const glm::vec3 GetUp() const 
-		{
-			axes[2] = glm::fastNormalize(transform.GetOrientation() * worldUp); 
-			return axes[2];
-		}
+		inline const glm::vec3 GetForward() const { return glm::fastNormalize(transform.GetOrientation() * worldForward); }
+		inline const glm::vec3 GetSide() const { return glm::fastNormalize(transform.GetOrientation() * worldSide); }
+		inline const glm::vec3 GetUp() const { return glm::fastNormalize(transform.GetOrientation() * worldUp); }
 
 		// Setters
 		virtual inline void SetPosition(const glm::vec3& center) { transform.SetPosition(center); }
@@ -56,7 +42,6 @@ namespace mtrx
 		int colliderId;
 		ColliderType type;
 		bool isConvexShape;
-		mutable ObjectAxes axes;
 		Transform transform;
 	};
 }

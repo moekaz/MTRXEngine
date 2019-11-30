@@ -14,9 +14,9 @@ namespace mtrx
 		Collider(colliderType, Transform(center, orientation, scale), isConvex)
 	{}
 
+	// TBD: Axes need to be recalculated
 	Collider::Collider(const ColliderType& colliderType, const Transform& transform, bool isConvex) : 
-		colliderId(id), type(colliderType), transform(transform), isConvexShape(isConvex), 
-		axes(glm::vec3(0, 0, -1), glm::vec3(0, 1, 0), glm::vec3(1, 0, 0))
+		colliderId(id), type(colliderType), transform(transform), isConvexShape(isConvex)
 	{
 		++id;
 	}

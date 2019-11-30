@@ -22,9 +22,9 @@ namespace mtrx
 			if (!transformModified)
 				return axes.axes;
 
-			GetSide();
-			GetUp();
-			GetForward();
+			axes[0] = GetForward();
+			axes[1] = GetUp();
+			axes[2] = GetSide();
 
 			return axes.axes;
 		}
@@ -43,5 +43,6 @@ namespace mtrx
 
 	private:
 		float halfExtents[3];
+		mutable ObjectAxes axes;
 	};
 }

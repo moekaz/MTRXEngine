@@ -76,10 +76,7 @@ private:
 	InputSystem(const InputSystem&) = delete;
 	void operator=(const InputSystem&) = delete;
 
-	static inline bool isKey(char keyCode)
-	{
-		return keyCode >= 0 && keyCode < MAX_KEYS;
-	}
+	static inline bool isKey(char keyCode) { return keyCode >= 0 && keyCode < MAX_KEYS; }
 
 	// GLFW Callbacks
 	static void KeyPressedCallback(GLFWwindow* window, int key, int scancode, int action, int mods);

@@ -1,9 +1,3 @@
-/*
-	Author: Mohamed Kazma
-	Description: A logger class that allows us to log information to a log file
-	Uses the library spdlog with a wrapper to be used within our API 
-*/
-
 #pragma once
 
 #define LOG_FILE_DIR "MTRXLogs\\" // Directory where log file will be created in
@@ -14,6 +8,7 @@
 #define MTRX_TRACE(...) mtrx::LogManager::GetInstance().trace(__VA_ARGS__)
 #define MTRX_ERROR(...) mtrx::LogManager::GetInstance().error(__VA_ARGS__)
 #define MTRX_CRITICAL(...) mtrx::LogManager::GetInstance().critical(__VA_ARGS__)
+
 
 namespace mtrx
 {
@@ -49,6 +44,6 @@ namespace mtrx
 		LogManager(const LogManager&&) = delete;
 
 		LogManager& operator=(const LogManager&) = delete;
-		//LogManager& operator=(const LogManager&&) = delete;
+		LogManager& operator=(const LogManager&&) = delete;
 	};
 }

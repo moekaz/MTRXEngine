@@ -69,6 +69,8 @@ namespace mtrx
 			}
 			else
 				return SphereAABBCollision(A, radii, center, halfExtents) || SphereAABBCollision(B, radii, center, halfExtents);
+
+			return false;
 		}
 
 		bool AABBCollision(const glm::vec3& center, const float* halfExtents, const glm::vec3& center1, const float* halfExtents1)

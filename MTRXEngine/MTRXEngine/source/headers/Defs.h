@@ -66,7 +66,7 @@ namespace mtrx
 			glm::vec3* pts[3];
 		};
 
-		Triangle() {}
+		Triangle() : a(nullptr), b(nullptr), c(nullptr) {}
 		Triangle(glm::vec3* a, glm::vec3* b, glm::vec3* c) : a(a), b(b), c(c) {}
 	};
 

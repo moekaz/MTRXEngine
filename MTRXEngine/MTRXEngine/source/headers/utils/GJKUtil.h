@@ -85,7 +85,7 @@ namespace mtrx
 		{
 			float maxDot = -std::numeric_limits<float>::infinity();
 			glm::vec3* farthest = nullptr;
-			
+
 			for (auto iter = startVertices; iter != endVertices; ++iter)
 			{
 				glm::vec3* currentVertex = *iter;
@@ -99,7 +99,7 @@ namespace mtrx
 
 			// Check that we have a vertex to use
 			assert(farthest);
-			return farthest;
+ 			return farthest;
 		}
 	};
 }

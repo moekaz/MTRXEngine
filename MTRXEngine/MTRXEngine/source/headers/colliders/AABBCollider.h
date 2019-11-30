@@ -40,5 +40,6 @@ namespace mtrx
 
 	private:
 		float halfExtents[3];
+		ObjectAxes axes;
 	};
 }
