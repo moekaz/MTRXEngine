@@ -40,13 +40,12 @@
 
 // TBD: ADD Premake support
 
-// TBD: LOOK INTO THE WEIRD MEMORY LEAK COMING FROM NOWHERE
 // PS: THIS HAS TO BE AT THE VERY END OF THE PCH SINCE IT REDEFINES "new" WHICH MIGHT BREAK SOME LIB CODE
 // Debugging tools
 #ifdef _DEBUG
 #define _CRTDBG_MAP_ALLOC
 #include <stdlib.h>
 #include <crtdbg.h>
-#define DBG_NEW new ( _NORMAL_BLOCK , __FILE__ , __LINE__ )
+#define DBG_NEW new (_NORMAL_BLOCK , __FILE__ , __LINE__)
 #define new DBG_NEW
 #endif

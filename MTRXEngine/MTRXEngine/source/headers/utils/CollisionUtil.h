@@ -18,14 +18,14 @@ namespace mtrx
 		// Allows us to use any templatable container as long as it has an iterator
 		template<typename Iterator, typename = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator>::value_type>::value>,
 			typename Iterator1, typename = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator1>::value_type>::value>>
-		inline bool ConvexShapeCollision(const Iterator& startVertices1, const Iterator& endVertices1, const Iterator1& startVertices2, const Iterator1& endVertices2)
+		bool ConvexShapeCollision(const Iterator& startVertices1, const Iterator& endVertices1, const Iterator1& startVertices2, const Iterator1& endVertices2)
 		{
 			return GJKUtil::Collision(startVertices1, endVertices1, startVertices2, endVertices2);
 		}
 
 		// Allows us to use any templatable container as long as it has an iterator
 		template<typename Iterator, typename = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator>::value_type>::value>>
-		inline bool ConvexShapeCapsuleCollision(const Iterator& startVertices, const Iterator& endVertices, const int size, const glm::vec3& A, const glm::vec3& B, const float radii)
+		bool ConvexShapeCapsuleCollision(const Iterator& startVertices, const Iterator& endVertices, const int size, const glm::vec3& A, const glm::vec3& B, const float radii)
 		{
 			std::vector<Triangle> triangles = PhysicsUtil::TriangulateConvexShape(startVertices, endVertices, size);
 			float radiusSqr = SQR(radii);
@@ -40,7 +40,7 @@ namespace mtrx
 		}
 
 		template<typename Iterator, typename = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator>::value_type>::value>>
-		inline bool CapsuleOOBBCollision(const glm::vec3& A, const glm::vec3& B, float radii, const Iterator& startVertices, const Iterator& endVertices, const int size)
+		bool CapsuleOOBBCollision(const glm::vec3& A, const glm::vec3& B, float radii, const Iterator& startVertices, const Iterator& endVertices, const int size)
 		{
 			return ConvexShapeCapsuleCollision(startVertices, endVertices, size, A, B, radii);
 		}
@@ -48,7 +48,7 @@ namespace mtrx
 		// Allows us to use any templatable container as long as it has an iterator
 		template<typename Iterator, typename = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator>::value_type>::value>,
 			typename Iterator1, typename = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator1>::value_type>::value>>
-		inline bool AABBOOBBCollision(const Iterator& startVertices1, const Iterator& endVertices1, const Iterator1& startVertices2, const Iterator1& endVertices2)
+		bool AABBOOBBCollision(const Iterator& startVertices1, const Iterator& endVertices1, const Iterator1& startVertices2, const Iterator1& endVertices2)
 		{
 			return ConvexShapeCollision(startVertices1, endVertices1, startVertices2, endVertices2);
 		}
@@ -56,14 +56,14 @@ namespace mtrx
 		// Allows us to use any templatable container as long as it has an iterator
 		template<typename Iterator, typename = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator>::value_type>::value>,
 			typename Iterator1, typename = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator1>::value_type>::value>>
-		inline bool OOBBCollision(const Iterator& startVertices1, const Iterator& endVertices1, const Iterator1& startVertices2, const Iterator1& endVertices2)
+		bool OOBBCollision(const Iterator& startVertices1, const Iterator& endVertices1, const Iterator1& startVertices2, const Iterator1& endVertices2)
 		{
 			return ConvexShapeCollision(startVertices1, endVertices1, startVertices2, endVertices2);
 		}
 
 		// Allows us to use any templatable container as long as it has an iterator
 		template<typename Iterator, typename = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator>::value_type>::value>>
-		inline bool ConvexShapeSphereCollision(const Iterator& startVertices, const Iterator& endVertices, const int size, const glm::vec3& center, const float radius)
+		bool ConvexShapeSphereCollision(const Iterator& startVertices, const Iterator& endVertices, const int size, const glm::vec3& center, const float radius)
 		{
 			std::vector<Triangle> triangles = PhysicsUtil::TriangulateConvexShape(startVertices, endVertices, size);
 			float radiusSqr = SQR(radius);

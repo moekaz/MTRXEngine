@@ -24,12 +24,12 @@ namespace mtrx
 			typename Iterator1, typename = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator1>::value_type>::value>>
 		static bool Collision(const Iterator& startVertices1, const Iterator& endVertices1, const Iterator1& startVertices2, const Iterator1& endVertices2) 
 		{
-			simplex.b = simplex.c = simplex.d = nullptr; // Reset simplex
-			glm::vec3 searchDirection = glm::vec3(-1, 0, 0); // Direction of the search within the convex shape
+			simplex.b = simplex.c = simplex.d = nullptr;
+			glm::vec3 searchDirection = glm::vec3(-1, 0, 0);
 
-			simplex.c = &Support(startVertices1, endVertices1, startVertices2, endVertices2, searchDirection); // Get the first point using the support function
-			searchDirection = -*simplex.c;	// Negative direction
-			simplex.b = &Support(startVertices1, endVertices1, startVertices2, endVertices2, searchDirection);	// Get the second point
+			simplex.c = &Support(startVertices1, endVertices1, startVertices2, endVertices2, searchDirection);
+			searchDirection = -*simplex.c;
+			simplex.b = &Support(startVertices1, endVertices1, startVertices2, endVertices2, searchDirection);
 
 			// if the farthest support point is not in the direction of the search direction then we cannot have a collision
 			if (glm::dot(*simplex.b, searchDirection) < 0)
@@ -40,7 +40,7 @@ namespace mtrx
 			glm::vec3 BO = -*simplex.b;
 			searchDirection = PhysicsUtil::TripleCross(BC, BO, BC);
 
-			simplex.size = 2;	// Simplex has 2 points
+			simplex.size = 2;
 
 			// Simplex GJK logic loop
 			for (int i = 0; i < MAX_NUM_ITERATIONS; ++i)

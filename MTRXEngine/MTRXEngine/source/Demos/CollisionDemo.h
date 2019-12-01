@@ -1,6 +1,6 @@
 #pragma once
 
-#include <../Demos/Demo.h>
+#include "Demo.h"
 #include <entities/Rigidbody.h>
 #include <forceGenerators/RigidbodyGenerators/rb_GravityForceGenerator.h>
 #include <Defs.h>
