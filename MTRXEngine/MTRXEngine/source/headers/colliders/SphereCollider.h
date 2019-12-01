@@ -16,6 +16,7 @@ namespace mtrx
 		virtual ~SphereCollider() = default;
 
 		virtual inline bool RaycastCollision(const Ray& ray) override { return RaycastCollisionUtil::RaySphereCollision(GetPosition(), radius, ray.startPosition, ray.direction); }
+		
 		virtual inline float GetSize() override { return 1.333333f * PI * radius * radius * radius; }
 		virtual inline float GetGrowth(const SphereCollider& sphereCollider) { return SQR(SphereCollider(*this, sphereCollider).radius) - SQR(radius); }
 

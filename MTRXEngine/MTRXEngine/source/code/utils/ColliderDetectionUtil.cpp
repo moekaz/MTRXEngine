@@ -17,15 +17,25 @@ namespace mtrx
 			switch (collider1.GetColliderType())
 			{
 				case ColliderType::Sphere:
+				{
 					return SphereCollisionOptions(static_cast<const SphereCollider&>(collider1), collider2);
+				}
 				case ColliderType::Capsule:
+				{
 					return CapsuleCollisionOptions(static_cast<const CapsuleCollider&>(collider1), collider2);
+				}
 				case ColliderType::AABB:
+				{
 					return AABBCollisionOptions(static_cast<const AABBCollider&>(collider1), collider2);
+				}
 				case ColliderType::OOBB:
+				{
 					return OOBBCollisionOptions(static_cast<const OOBBCollider&>(collider1), collider2);
+				}
 				case ColliderType::ConvexShape:
+				{
 					return ConvexShapeCollisionOptions(static_cast<const ConvexShapeCollider&>(collider1), collider2);
+				}
 				default: // Not a collider that we support
 					return false;
 			}
