@@ -3,8 +3,6 @@
 
 namespace mtrx
 {
-	Simplex GJKUtil::simplex;
-
 	bool GJKUtil::UpdateSimplex(Simplex& simplex, glm::vec3& direction, glm::vec3& a)
 	{
 		switch (simplex.size) // The simplex will never have a size less than 2 or greater than 3 
@@ -27,8 +25,8 @@ namespace mtrx
 
 	bool GJKUtil::TriangleSimplexUpdate(Simplex& simplex, glm::vec3& direction, glm::vec3& a)
 	{
-		glm::vec3 AB = *simplex.b - a;
-		glm::vec3 AC = *simplex.c - a;
+		glm::vec3 AB = simplex.b - a;
+		glm::vec3 AC = simplex.c - a;
 		glm::vec3 AO = -a;
 		glm::vec3 ABC = glm::cross(AB, AC); // The normal of the triangle
 		glm::vec3 ABP = glm::cross(AB, ABC); // Calculate a vector inside the triangle away from AB
@@ -37,13 +35,13 @@ namespace mtrx
 		if (glm::dot(ABP, AO) > 0) // C is not part of the simplex anymore
 		{
 			simplex.c = simplex.b;
-			simplex.b = &a;
+			simplex.b = std::move(a);
 			direction = PhysicsUtil::TripleCross(AB, AO, AB);
 			simplex.size = 2;
 		}
 		else if (glm::dot(ACP, AO) > 0) // B is no longer part of the simplex
 		{
-			simplex.b = &a;
+			simplex.b = a;
 			direction = PhysicsUtil::TripleCross(AC, AO, AC);
 			simplex.size = 2;
 		}
@@ -51,14 +49,14 @@ namespace mtrx
 		{
 			simplex.d = simplex.c;
 			simplex.c = simplex.b;
-			simplex.b = &a;
+			simplex.b = std::move(a);
 			direction = ABC;
 			simplex.size = 3;
 		}
 		else // The origin is below ABC
 		{
 			simplex.d = simplex.b;
-			simplex.b = &a;
+			simplex.b = std::move(a);
 			direction = -ABC;
 			simplex.size = 3;
 		}
@@ -69,9 +67,9 @@ namespace mtrx
 	bool GJKUtil::TetrahedronSimplexUpdate(Simplex& simplex, glm::vec3& direction, glm::vec3& a)
 	{
 		glm::vec3 AO = -a;
-		glm::vec3 AB = *simplex.b - a;
-		glm::vec3 AC = *simplex.c - a;
-		glm::vec3 AD = *simplex.d - a;
+		glm::vec3 AB = simplex.b - a;
+		glm::vec3 AC = simplex.c - a;
+		glm::vec3 AD = simplex.d - a;
 		glm::vec3 ABC = glm::cross(AB, AC);
 		glm::vec3 ACD = glm::cross(AC, AD);
 		glm::vec3 ADB = glm::cross(AD, AB);
@@ -116,7 +114,7 @@ namespace mtrx
 		if (glm::dot(glm::cross(AB, ABC), AO) > 0) // Just like the triangle check use the cross product away from AB
 		{
 			simplex.c = simplex.b;
-			simplex.b = &a;
+			simplex.b = std::move(a);
 
 			// We have lost d in this process so we need to rebuild the triangle
 			simplex.size = 2;
@@ -124,7 +122,7 @@ namespace mtrx
 		}
 		else if (glm::dot(glm::cross(ABC, AC), AO) > 0) // Same as the top one
 		{
-			simplex.b = &a;
+			simplex.b = std::move(a);
 
 			simplex.size = 2;	// We also need to rebuild the triangle as well
 			direction = PhysicsUtil::TripleCross(AC, AO, AC);
@@ -133,7 +131,7 @@ namespace mtrx
 		{
 			simplex.d = simplex.c;
 			simplex.c = simplex.b;
-			simplex.b = &a;
+			simplex.b = std::move(a);
 
 			simplex.size = 3;
 			direction = ABC;	// ABC is what is left
