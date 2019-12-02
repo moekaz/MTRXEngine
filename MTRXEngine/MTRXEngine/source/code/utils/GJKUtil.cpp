@@ -34,28 +34,28 @@ namespace mtrx
 
 		if (glm::dot(ABP, AO) > 0) // C is not part of the simplex anymore
 		{
-			simplex.c = simplex.b;
+			simplex.c = std::move(simplex.b);
 			simplex.b = std::move(a);
 			direction = PhysicsUtil::TripleCross(AB, AO, AB);
 			simplex.size = 2;
 		}
 		else if (glm::dot(ACP, AO) > 0) // B is no longer part of the simplex
 		{
-			simplex.b = a;
+			simplex.b = std::move(a);
 			direction = PhysicsUtil::TripleCross(AC, AO, AC);
 			simplex.size = 2;
 		}
 		else if (glm::dot(ABC, AO) > 0) // The origin is above ABC
 		{
-			simplex.d = simplex.c;
-			simplex.c = simplex.b;
+			simplex.d = std::move(simplex.c);
+			simplex.c = std::move(simplex.b);
 			simplex.b = std::move(a);
-			direction = ABC;
+			direction = std::move(ABC);
 			simplex.size = 3;
 		}
 		else // The origin is below ABC
 		{
-			simplex.d = simplex.b;
+			simplex.d = std::move(simplex.b);
 			simplex.b = std::move(a);
 			direction = -ABC;
 			simplex.size = 3;
@@ -77,7 +77,8 @@ namespace mtrx
 		float ACDdotAO = glm::dot(ACD, AO);
 		float ADBdotAO = glm::dot(ADB, AO);
 
-		if (ABCdotAO <= 0 && ACDdotAO <= 0 && ADBdotAO <= 0) return true;	// The origin is inside the tetrahedron
+		if (ABCdotAO <= 0 && ACDdotAO <= 0 && ADBdotAO <= 0) // The origin is inside the tetrahedron
+			return true;
 
 		if (ABCdotAO > 0) // The origin is in front of ABC
 		{
@@ -85,8 +86,8 @@ namespace mtrx
 		}
 		if (ACDdotAO > 0) // The origin is in front of ACD rotate ACD to become ABC
 		{
-			simplex.b = simplex.c;
-			simplex.c = simplex.d;
+			simplex.b = std::move(simplex.c);
+			simplex.c = std::move(simplex.d);
 
 			AB = AC;
 			AD = AC;
@@ -96,14 +97,16 @@ namespace mtrx
 		}
 		if (ADBdotAO > 0) // The origin is in front of ADB 
 		{
-			simplex.d = simplex.b;
-			simplex.b = simplex.c;
-
-			AB = AD;
-			AC = AB;
-			ABC = ADB;
-
-			TetrahedronChecks(simplex, AO, AB, AC, ABC, direction, a);
+			simplex.d = std::move(simplex.b);
+			simplex.b = std::move(simplex.c);
+			
+			// These are not necessary
+			//AB = AD;
+			//AC = AB;
+			//ABC = ADB;
+			// TetrahedronChecks(simplex, AO, AB, AC, ABC, direction, a);
+			
+			TetrahedronChecks(simplex, AO, AD, AB, ADB, direction, a);
 		}
 
 		return false;
@@ -113,7 +116,7 @@ namespace mtrx
 	{
 		if (glm::dot(glm::cross(AB, ABC), AO) > 0) // Just like the triangle check use the cross product away from AB
 		{
-			simplex.c = simplex.b;
+			simplex.c = std::move(simplex.b);
 			simplex.b = std::move(a);
 
 			// We have lost d in this process so we need to rebuild the triangle
@@ -129,12 +132,12 @@ namespace mtrx
 		}
 		else // Build a new tetrahedron 
 		{
-			simplex.d = simplex.c;
-			simplex.c = simplex.b;
+			simplex.d = std::move(simplex.c);
+			simplex.c = std::move(simplex.b);
 			simplex.b = std::move(a);
 
 			simplex.size = 3;
-			direction = ABC;	// ABC is what is left
+			direction = std::move(ABC);	// ABC is what is left
 		}
 	}
 }

@@ -52,7 +52,7 @@ namespace mtrx
 					return true;
 			}
 
-			// Degenerate simplex
+			// Degenerate simplex we are probably colliding
 			MTRX_WARN("GJK algo has generated a degenerate simplex");
 			return true;
 		}

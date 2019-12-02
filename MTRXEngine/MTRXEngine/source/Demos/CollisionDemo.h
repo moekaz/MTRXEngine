@@ -10,7 +10,6 @@
 #include <../Renderer/CollisionDemoUI.h>
 #include <colliders/OOBBCollider.h>
 
-// TBD: FIX THIS DEMO
 class CollisionDemo : public Demo
 {
 public:	
