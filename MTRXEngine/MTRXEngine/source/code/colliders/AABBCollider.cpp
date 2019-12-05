@@ -21,8 +21,8 @@ namespace mtrx
 			halfExtents { 0.5f * scale.x, 0.5f * scale.y, 0.5f * scale.z }
 	{}
 
-	AABBCollider::AABBCollider(const AABBCollider& aabb, const AABBCollider& aabb1) : ConvexShapeCollider(ColliderType::AABB, Transform())
-	{
-		// TBD: Implement This constructor for BVH implementation
-	}
+	//AABBCollider::AABBCollider(const AABBCollider& aabb, const AABBCollider& aabb1) : ConvexShapeCollider(ColliderType::AABB, Transform())
+	//{
+	//	for()
+	//}
 }
