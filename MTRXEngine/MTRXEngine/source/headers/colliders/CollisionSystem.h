@@ -9,17 +9,20 @@
 
 namespace mtrx
 {
+	/**
+	 * The collision detection system of the engine
+	 * 
+	 */
 	class CollisionSystem
 	{
 	public:
 		std::unordered_set<Collider*> colliders;
 
+		/**
+		 * @brief Construct a new Collision System object
+		 * 
+		 */
 		CollisionSystem();
 		~CollisionSystem();
-
-		// Using sphere colliders atm
-		//BVHNode<SphereCollider>* root;
-		
-		//void Collision();
 	};
 }
