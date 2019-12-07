@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="classmtrx_1_1p___stiff_spring_force_generator" kind="class" language="C++" prot="public">
+    <compoundname>mtrx::p_StiffSpringForceGenerator</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">mtrx::IParticleForceGenerator</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classmtrx_1_1p___stiff_spring_force_generator_1a2f3834198483168996f0ecb507ee3c35" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float mtrx::p_StiffSpringForceGenerator::springStiffness</definition>
+        <argsstring></argsstring>
+        <name>springStiffness</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/ParticleGenerators/p_StiffSpringForceGenerator.h" line="18" column="7" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/ParticleGenerators/p_StiffSpringForceGenerator.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmtrx_1_1p___stiff_spring_force_generator_1a1c5126785c22e074b8672f0c2f80c179" prot="public" static="no" mutable="no">
+        <type>glm::vec3 *</type>
+        <definition>glm::vec3* mtrx::p_StiffSpringForceGenerator::anchorPoint</definition>
+        <argsstring></argsstring>
+        <name>anchorPoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/ParticleGenerators/p_StiffSpringForceGenerator.h" line="19" column="11" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/ParticleGenerators/p_StiffSpringForceGenerator.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmtrx_1_1p___stiff_spring_force_generator_1a306174a4579f116cf253b7cca643c612" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float mtrx::p_StiffSpringForceGenerator::springDamping</definition>
+        <argsstring></argsstring>
+        <name>springDamping</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/ParticleGenerators/p_StiffSpringForceGenerator.h" line="20" column="7" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/ParticleGenerators/p_StiffSpringForceGenerator.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmtrx_1_1p___stiff_spring_force_generator_1a0549b5ee835e7531b142a40bb0d3b78d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void mtrx::p_StiffSpringForceGenerator::UpdateForces</definition>
+        <argsstring>(Particle *particle) override</argsstring>
+        <name>UpdateForces</name>
+        <param>
+          <type>Particle *</type>
+          <declname>particle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/ParticleGenerators/p_StiffSpringForceGenerator.h" line="22" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1p___stiff_spring_force_generator_1afe64420c6ff697a05c8f16fcdbbbeb15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mtrx::p_StiffSpringForceGenerator::p_StiffSpringForceGenerator</definition>
+        <argsstring>(glm::vec3 *anchorPoint, float springStiffness, float springDamping)</argsstring>
+        <name>p_StiffSpringForceGenerator</name>
+        <param>
+          <type>glm::vec3 *</type>
+          <declname>anchorPoint</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>springStiffness</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>springDamping</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/ParticleGenerators/p_StiffSpringForceGenerator.h" line="24" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1p___stiff_spring_force_generator_1a2d5171a4241e5e6ba0af1921ae12c5c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mtrx::p_StiffSpringForceGenerator::~p_StiffSpringForceGenerator</definition>
+        <argsstring>()</argsstring>
+        <name>~p_StiffSpringForceGenerator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/ParticleGenerators/p_StiffSpringForceGenerator.h" line="25" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1p___stiff_spring_force_generator_1a9210ccada99015eea4522a47489cc909" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mtrx::p_StiffSpringForceGenerator::SetAnchorPoint</definition>
+        <argsstring>(glm::vec3 *point)</argsstring>
+        <name>SetAnchorPoint</name>
+        <param>
+          <type>glm::vec3 *</type>
+          <declname>point</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/ParticleGenerators/p_StiffSpringForceGenerator.h" line="27" column="13" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/ParticleGenerators/p_StiffSpringForceGenerator.h" bodystart="27" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/ParticleGenerators/p_StiffSpringForceGenerator.h" line="16" column="1" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/ParticleGenerators/p_StiffSpringForceGenerator.h" bodystart="15" bodyend="28"/>
+    <listofallmembers>
+      <member refid="classmtrx_1_1p___stiff_spring_force_generator_1a1c5126785c22e074b8672f0c2f80c179" prot="public" virt="non-virtual"><scope>mtrx::p_StiffSpringForceGenerator</scope><name>anchorPoint</name></member>
+      <member refid="classmtrx_1_1p___stiff_spring_force_generator_1afe64420c6ff697a05c8f16fcdbbbeb15" prot="public" virt="non-virtual"><scope>mtrx::p_StiffSpringForceGenerator</scope><name>p_StiffSpringForceGenerator</name></member>
+      <member refid="classmtrx_1_1p___stiff_spring_force_generator_1a9210ccada99015eea4522a47489cc909" prot="public" virt="non-virtual"><scope>mtrx::p_StiffSpringForceGenerator</scope><name>SetAnchorPoint</name></member>
+      <member refid="classmtrx_1_1p___stiff_spring_force_generator_1a306174a4579f116cf253b7cca643c612" prot="public" virt="non-virtual"><scope>mtrx::p_StiffSpringForceGenerator</scope><name>springDamping</name></member>
+      <member refid="classmtrx_1_1p___stiff_spring_force_generator_1a2f3834198483168996f0ecb507ee3c35" prot="public" virt="non-virtual"><scope>mtrx::p_StiffSpringForceGenerator</scope><name>springStiffness</name></member>
+      <member refid="classmtrx_1_1p___stiff_spring_force_generator_1a0549b5ee835e7531b142a40bb0d3b78d" prot="public" virt="virtual"><scope>mtrx::p_StiffSpringForceGenerator</scope><name>UpdateForces</name></member>
+      <member refid="classmtrx_1_1p___stiff_spring_force_generator_1a2d5171a4241e5e6ba0af1921ae12c5c6" prot="public" virt="non-virtual"><scope>mtrx::p_StiffSpringForceGenerator</scope><name>~p_StiffSpringForceGenerator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,744 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.16">
+  <compound refid="classmtrx_1_1_a_a_b_b_collider" kind="class"><name>mtrx::AABBCollider</name>
+    <member refid="classmtrx_1_1_a_a_b_b_collider_1a4c16d0fe60e8d12c5b47439d2d69ac19" kind="variable"><name>halfExtents</name></member>
+    <member refid="classmtrx_1_1_a_a_b_b_collider_1a76310ed329d8f1968938a6f158a2ee6a" kind="variable"><name>axes</name></member>
+    <member refid="classmtrx_1_1_a_a_b_b_collider_1a81573e91c21af002a33f7ae896c1fb58" kind="function"><name>AABBCollider</name></member>
+    <member refid="classmtrx_1_1_a_a_b_b_collider_1ab2a1acb8bbc4419fc2df64bdfca516e8" kind="function"><name>~AABBCollider</name></member>
+    <member refid="classmtrx_1_1_a_a_b_b_collider_1ac618c2f04d88d448668dcc7efbf513e3" kind="function"><name>RaycastCollision</name></member>
+    <member refid="classmtrx_1_1_a_a_b_b_collider_1a50a3eed64eb69d3568386978181026da" kind="function"><name>SetOrientation</name></member>
+    <member refid="classmtrx_1_1_a_a_b_b_collider_1a7a228dca65e647d58c1e9d3b3dce4f4e" kind="function"><name>GetSize</name></member>
+    <member refid="classmtrx_1_1_a_a_b_b_collider_1a9120ec0049b6c970fd89483e38893348" kind="function"><name>GetAxes</name></member>
+    <member refid="classmtrx_1_1_a_a_b_b_collider_1aa55065fc50bb1929982a434b18db157c" kind="function"><name>GetHalfExtents</name></member>
+    <member refid="classmtrx_1_1_a_a_b_b_collider_1a80f7842f57506dd4010e854b5f53870e" kind="function"><name>GetHalfExtents</name></member>
+    <member refid="classmtrx_1_1_a_a_b_b_collider_1ac0cc88fabe8819ec1578d8999e248eaf" kind="function"><name>SetScale</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1_body" kind="class"><name>mtrx::Body</name>
+    <member refid="classmtrx_1_1_body_1a04a7b478f36e5275994c161ba50c674f" kind="variable"><name>transform</name></member>
+    <member refid="classmtrx_1_1_body_1aab973a149d64c114165b4617dcfe7013" kind="variable"><name>velocity</name></member>
+    <member refid="classmtrx_1_1_body_1a84062092bf0153dac01e6f53b1f38ff3" kind="variable"><name>acceleration</name></member>
+    <member refid="classmtrx_1_1_body_1ac8352a27c8057002cf19f5179863f0b4" kind="variable"><name>accumForces</name></member>
+    <member refid="classmtrx_1_1_body_1a73b28247b7bc3c9e00067b32ed6122ec" kind="variable"><name>linearDamping</name></member>
+    <member refid="classmtrx_1_1_body_1ab19356a752ad6f8e254834174f1aec14" kind="variable"><name>inverseMass</name></member>
+    <member refid="classmtrx_1_1_body_1a7a4c5e198af72feb53858862c931061c" kind="function"><name>Body</name></member>
+    <member refid="classmtrx_1_1_body_1a2785fca109e166b5c5d45db1b38c38dc" kind="function"><name>~Body</name></member>
+    <member refid="classmtrx_1_1_body_1a53b1287b73ec47ee2dd12ac707ab1cd5" kind="function"><name>AddForce</name></member>
+    <member refid="classmtrx_1_1_body_1a84c78a39b0133cc83279ef3184923487" kind="function"><name>Integrate</name></member>
+    <member refid="classmtrx_1_1_body_1a0080c70c519850e2644233aba78b34e8" kind="function"><name>ClearAccumulators</name></member>
+    <member refid="classmtrx_1_1_body_1a0031fc617536db45b761c4a06d6d1c2d" kind="function"><name>SetInverseMass</name></member>
+    <member refid="classmtrx_1_1_body_1a64aca7d223825ced434d82dac4d07894" kind="function"><name>SetPosition</name></member>
+    <member refid="classmtrx_1_1_body_1ac0be253dd711b412b890cb93fc463916" kind="function"><name>SetVelocity</name></member>
+    <member refid="classmtrx_1_1_body_1ae414507343efd9db5b8d25c0cc756833" kind="function"><name>SetAcceleration</name></member>
+    <member refid="classmtrx_1_1_body_1a34174bf1b830d4612fe81ad57881c6b8" kind="function"><name>SetLinearDamping</name></member>
+    <member refid="classmtrx_1_1_body_1afbcd2ba726afc0b7f0fe7be714700bce" kind="function"><name>SetMass</name></member>
+    <member refid="classmtrx_1_1_body_1a48cca0e976f3366b89895f8914d5cbf9" kind="function"><name>GetOrientation</name></member>
+    <member refid="classmtrx_1_1_body_1a9663bf0a999b7cb11c5e0811aa55d1e5" kind="function"><name>GetIsInfiniteMass</name></member>
+    <member refid="classmtrx_1_1_body_1ae43c88a3dddee1538fdb03d7df2ea386" kind="function"><name>GetInverseMass</name></member>
+    <member refid="classmtrx_1_1_body_1a40a8628a4f4afab000cd4403bca2d881" kind="function"><name>GetDamping</name></member>
+    <member refid="classmtrx_1_1_body_1a1c5804b393a71296a4bbd75376ee9f65" kind="function"><name>GetPosition</name></member>
+    <member refid="classmtrx_1_1_body_1a7b479086ce0da500829d1450a2c463e9" kind="function"><name>GetVelocity</name></member>
+    <member refid="classmtrx_1_1_body_1a698b85966ec6c5d62c4e48341bd54e53" kind="function"><name>GetAcceleration</name></member>
+    <member refid="classmtrx_1_1_body_1ae5a0abd0bf98dff559d7908b14c28f18" kind="function"><name>GetAccumForces</name></member>
+    <member refid="classmtrx_1_1_body_1aa3c81e1dea71472177a2f155742380e5" kind="function"><name>GetTransform</name></member>
+    <member refid="classmtrx_1_1_body_1af8522fa93cdcd293a4158f6706d6a1aa" kind="function"><name>GetMass</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1_b_v_h_node" kind="class"><name>mtrx::BVHNode</name>
+    <member refid="classmtrx_1_1_b_v_h_node_1a1e5da85a3c68456536ba0d1bbdd03240" kind="variable"><name>parent</name></member>
+    <member refid="classmtrx_1_1_b_v_h_node_1aae66056fac0a6e9fc1117fb9dcf13a37" kind="variable"><name>children</name></member>
+    <member refid="classmtrx_1_1_b_v_h_node_1a48d13adcc887b9d6cf9b53e71a5ac17c" kind="variable"><name>volume</name></member>
+    <member refid="classmtrx_1_1_b_v_h_node_1a103f6e89fadbd2fff814b72d7b9f6186" kind="variable"><name>body</name></member>
+    <member refid="classmtrx_1_1_b_v_h_node_1ad3e9ed341472167207c019d44f9f52b4" kind="function"><name>BVHNode</name></member>
+    <member refid="classmtrx_1_1_b_v_h_node_1a78280fc6963d765bea61c8168aefcef3" kind="function"><name>BVHNode</name></member>
+    <member refid="classmtrx_1_1_b_v_h_node_1a0e13a063022682d02e158c14237cd005" kind="function"><name>~BVHNode</name></member>
+    <member refid="classmtrx_1_1_b_v_h_node_1a7cfbe8e7e5a37e42322fd6e88dd94af7" kind="function"><name>IsLeaf</name></member>
+    <member refid="classmtrx_1_1_b_v_h_node_1a378321dfc68909846c42554f6136bd99" kind="function"><name>IsCollision</name></member>
+    <member refid="classmtrx_1_1_b_v_h_node_1af7a9afc9700be22acaf4ebb633ed3be5" kind="function"><name>DescendA</name></member>
+    <member refid="classmtrx_1_1_b_v_h_node_1aa0a6d380d24568116bde3b573bdc5a66" kind="function"><name>GetPotentialContacts</name></member>
+    <member refid="classmtrx_1_1_b_v_h_node_1a32e8ee4ec9e39976e3b53a25da45e629" kind="function"><name>Insert</name></member>
+    <member refid="classmtrx_1_1_b_v_h_node_1ac052b562541a10478199340659459036" kind="function"><name>RecalculateBoundingVolume</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1_capsule_collider" kind="class"><name>mtrx::CapsuleCollider</name>
+    <member refid="classmtrx_1_1_capsule_collider_1af92fb8f542f9ec4241bda096c59f3bae" kind="variable"><name>A</name></member>
+    <member refid="classmtrx_1_1_capsule_collider_1ae4ded291442f1c3b578a00b3e55bab39" kind="variable"><name>B</name></member>
+    <member refid="classmtrx_1_1_capsule_collider_1a665fc7c17aea3fd6f0ec648411b8deb7" kind="variable"><name>radii</name></member>
+    <member refid="classmtrx_1_1_capsule_collider_1aba4278877bb5969cd382bfb641bdc120" kind="variable"><name>height</name></member>
+    <member refid="classmtrx_1_1_capsule_collider_1a42d9edb44be1a7eeade2abbf3458880f" kind="function"><name>CapsuleCollider</name></member>
+    <member refid="classmtrx_1_1_capsule_collider_1ad3c23d2999f7455d5c996ce23936be70" kind="function"><name>CapsuleCollider</name></member>
+    <member refid="classmtrx_1_1_capsule_collider_1a02743857bd1509db5bf941f6fb65d4fd" kind="function"><name>~CapsuleCollider</name></member>
+    <member refid="classmtrx_1_1_capsule_collider_1a17f41f46bd503f7c7906c6246cbfcb26" kind="function"><name>RaycastCollision</name></member>
+    <member refid="classmtrx_1_1_capsule_collider_1a6c07f06cdae55cf18f0492a9177583b0" kind="function"><name>GetRadii</name></member>
+    <member refid="classmtrx_1_1_capsule_collider_1a25f17c3041b19b174c94c40dd248dc9e" kind="function"><name>GetHeight</name></member>
+    <member refid="classmtrx_1_1_capsule_collider_1ab0ac72254b0d912a5e772ee703526616" kind="function"><name>SetRadii</name></member>
+    <member refid="classmtrx_1_1_capsule_collider_1a74a6c21ad7fdf6dee9bceab58628abb5" kind="function"><name>SetHeight</name></member>
+    <member refid="classmtrx_1_1_capsule_collider_1ae1c97f035b4a0d26c7f680780ecc6996" kind="function"><name>SetScale</name></member>
+    <member refid="classmtrx_1_1_capsule_collider_1ad8b6a634528473222da22557d2d25764" kind="function"><name>SetPosition</name></member>
+    <member refid="classmtrx_1_1_capsule_collider_1a03a6476613b7f81a5250eee613c7ed2f" kind="function"><name>SetOrientation</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1_collider" kind="class"><name>mtrx::Collider</name>
+    <member refid="classmtrx_1_1_collider_1a3c8cc45f3a2b276157ea474620f5dcb7" kind="variable"><name>id</name></member>
+    <member refid="classmtrx_1_1_collider_1a8abb09a0eee536698d5a7b5d270ed584" kind="variable"><name>colliderId</name></member>
+    <member refid="classmtrx_1_1_collider_1adf1662048ee02d5d96d430a8a3875433" kind="variable"><name>type</name></member>
+    <member refid="classmtrx_1_1_collider_1ad0f9075538c6a8c50ab2137f9172a201" kind="variable"><name>isConvexShape</name></member>
+    <member refid="classmtrx_1_1_collider_1a812b71180496a530dc1a3a1750e4efb1" kind="variable"><name>transform</name></member>
+    <member refid="classmtrx_1_1_collider_1a897ee0f8baa05f825be5f96a2abc3bd1" kind="function"><name>Collider</name></member>
+    <member refid="classmtrx_1_1_collider_1a1af6daddbfaa7ba34f33845de3b05457" kind="function"><name>Collider</name></member>
+    <member refid="classmtrx_1_1_collider_1a3d27ae263e0cc1f15b14ec09a715ab7d" kind="function"><name>~Collider</name></member>
+    <member refid="classmtrx_1_1_collider_1a361c341b949adf2508c46389f8b4509d" kind="function"><name>RaycastCollision</name></member>
+    <member refid="classmtrx_1_1_collider_1af8b907eaf8cb13316dce419f595371df" kind="function"><name>CheckCollision</name></member>
+    <member refid="classmtrx_1_1_collider_1a6dca0e6b7f19c5582a312af54c34d8e1" kind="function"><name>GetPosition</name></member>
+    <member refid="classmtrx_1_1_collider_1a0e7750440d8bf791c85b87d2e6a6f33a" kind="function"><name>GetScale</name></member>
+    <member refid="classmtrx_1_1_collider_1ad22caa3bdd6a81cc511a0f9141d8e5ee" kind="function"><name>GetOrientation</name></member>
+    <member refid="classmtrx_1_1_collider_1aa0eb9dee1d98fd45df1ef8cbfa0e43be" kind="function"><name>GetColliderType</name></member>
+    <member refid="classmtrx_1_1_collider_1ac43e5d476507344a3340bae5451ad616" kind="function"><name>GetColliderId</name></member>
+    <member refid="classmtrx_1_1_collider_1a056bd024840f5c426fdb9157fd81cf37" kind="function"><name>IsConvex</name></member>
+    <member refid="classmtrx_1_1_collider_1afccd3a798fc870d4acbb3c7a3f783c05" kind="function"><name>GetForward</name></member>
+    <member refid="classmtrx_1_1_collider_1a59a39aa74953a4a6d228fec5bf3028e8" kind="function"><name>GetSide</name></member>
+    <member refid="classmtrx_1_1_collider_1ac946675c7e0ae86dc77459742511b9ae" kind="function"><name>GetUp</name></member>
+    <member refid="classmtrx_1_1_collider_1a0bbed70b7af99a1469b3da9eac7df531" kind="function"><name>SetPosition</name></member>
+    <member refid="classmtrx_1_1_collider_1a81b9373f9d09221753255046b9279a5d" kind="function"><name>SetScale</name></member>
+    <member refid="classmtrx_1_1_collider_1ac69efe7d26d9e600154f601cbcc30849" kind="function"><name>SetOrientation</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1_collision_system" kind="class"><name>mtrx::CollisionSystem</name>
+    <member refid="classmtrx_1_1_collision_system_1ab037eda910b3705cab692b33187fa37a" kind="variable"><name>colliders</name></member>
+    <member refid="classmtrx_1_1_collision_system_1a804db0ff221125514b3a3fb6f1c776a7" kind="function"><name>CollisionSystem</name></member>
+    <member refid="classmtrx_1_1_collision_system_1a85a33c2f85241d34838e235e39db4121" kind="function"><name>~CollisionSystem</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1_convex_shape_collider" kind="class"><name>mtrx::ConvexShapeCollider</name>
+    <member refid="classmtrx_1_1_convex_shape_collider_1ade75a49d458581c1a5f52fae1c511a6e" kind="variable"><name>vertices</name></member>
+    <member refid="classmtrx_1_1_convex_shape_collider_1ab221d490ddcf43f3726fd68cb57e254c" kind="variable"><name>transformedVertices</name></member>
+    <member refid="classmtrx_1_1_convex_shape_collider_1a936c2679fccd46d85a33d2abfdca4d31" kind="variable"><name>transformModified</name></member>
+    <member refid="classmtrx_1_1_convex_shape_collider_1a0f07c2d77aa82d29e5a3dd8d925f1d72" kind="function"><name>ConvexShapeCollider</name></member>
+    <member refid="classmtrx_1_1_convex_shape_collider_1af75db8ad0803ab9654f9cd7809a9531d" kind="function"><name>ConvexShapeCollider</name></member>
+    <member refid="classmtrx_1_1_convex_shape_collider_1aedd243fcc1e07eacab102dace67a3ce3" kind="function"><name>ConvexShapeCollider</name></member>
+    <member refid="classmtrx_1_1_convex_shape_collider_1ad74b9852fb1dbc2eb916d1fc6193a349" kind="function"><name>ConvexShapeCollider</name></member>
+    <member refid="classmtrx_1_1_convex_shape_collider_1a3e5b9ef9fc9e22f83abcc20186f2afd2" kind="function"><name>~ConvexShapeCollider</name></member>
+    <member refid="classmtrx_1_1_convex_shape_collider_1a44fba7247c98212c60e0eec4e16e74ec" kind="function"><name>RaycastCollision</name></member>
+    <member refid="classmtrx_1_1_convex_shape_collider_1a73739e13e64f22f948e306e1794ea418" kind="function"><name>GetVertices</name></member>
+    <member refid="classmtrx_1_1_convex_shape_collider_1a1034fa2d6f51a20b12b060a6264d9cc2" kind="function"><name>GetModelMatrix</name></member>
+    <member refid="classmtrx_1_1_convex_shape_collider_1ab6be6d11c7ef35fa0efa1743ffd82db7" kind="function"><name>SetPosition</name></member>
+    <member refid="classmtrx_1_1_convex_shape_collider_1a1de37ecfb1bd42e43201c09c6e5a980f" kind="function"><name>SetScale</name></member>
+    <member refid="classmtrx_1_1_convex_shape_collider_1af86aa5dae629acb4076d15dcad004c7c" kind="function"><name>SetOrientation</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1_game_time" kind="class"><name>mtrx::GameTime</name>
+    <member refid="classmtrx_1_1_game_time_1a7ef234e3f67d1b8148c6bc83979a6c48" kind="variable"><name>deltaTime</name></member>
+    <member refid="classmtrx_1_1_game_time_1a383b723460d50e4de8c45d3d1afde4ac" kind="variable"><name>startTime</name></member>
+    <member refid="classmtrx_1_1_game_time_1ac0446adf1fd22f6e345e8d4e199d0438" kind="variable"><name>currentTime</name></member>
+    <member refid="classmtrx_1_1_game_time_1a48eb3cf7c0de1965e6610525d6715c0a" kind="variable"><name>prevCurrentTime</name></member>
+    <member refid="classmtrx_1_1_game_time_1a5c09ad3946e0304b5b70b80899f27db1" kind="function"><name>FindTimeDiffSeconds</name></member>
+    <member refid="classmtrx_1_1_game_time_1ae78a0555f4beae4be6b20512ff072edc" kind="function"><name>Init</name></member>
+    <member refid="classmtrx_1_1_game_time_1a3784ef14533d719b2136baa6778684dc" kind="function"><name>Update</name></member>
+    <member refid="classmtrx_1_1_game_time_1a67174402a4c857539c43d0a3c97df4dc" kind="function"><name>GetTimeSeconds</name></member>
+    <member refid="classmtrx_1_1_game_time_1af222f2504c46b7d9bbd1080a512f8d2d" kind="function"><name>GetTime</name></member>
+    <member refid="classmtrx_1_1_game_time_1a7dee5b099466a0ba3bbf981a526daf08" kind="function"><name>CalculateDeltaTime</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1_g_j_k_util" kind="class"><name>mtrx::GJKUtil</name>
+    <member refid="classmtrx_1_1_g_j_k_util_1a0676f37bb47ba75595fda8cab87d1a25" kind="function"><name>Collision</name></member>
+    <member refid="classmtrx_1_1_g_j_k_util_1a9e68403818421587aac7e036d5aeb201" kind="function"><name>UpdateSimplex</name></member>
+    <member refid="classmtrx_1_1_g_j_k_util_1ae4b560a0ef48d5bb02a4468db89ab2d3" kind="function"><name>TriangleSimplexUpdate</name></member>
+    <member refid="classmtrx_1_1_g_j_k_util_1a38687a641072632e6f767cf92f44f5be" kind="function"><name>TetrahedronSimplexUpdate</name></member>
+    <member refid="classmtrx_1_1_g_j_k_util_1a14612192183700ab5461b35bf37bcf01" kind="function"><name>TetrahedronChecks</name></member>
+    <member refid="classmtrx_1_1_g_j_k_util_1a2f7779fb20f5aed2ed712c490fc1434d" kind="function"><name>Support</name></member>
+    <member refid="classmtrx_1_1_g_j_k_util_1a97c239cfe54183c4424054070a63b8d2" kind="function"><name>FarthestPointInDirection</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1_i_bounding_volume" kind="class"><name>mtrx::IBoundingVolume</name>
+    <member refid="classmtrx_1_1_i_bounding_volume_1a5b206a8c077a67afa20e5ca9249228d6" kind="function"><name>GetSize</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1_i_integratable" kind="class"><name>mtrx::IIntegratable</name>
+    <member refid="classmtrx_1_1_i_integratable_1a072fe34891d78e09486d082583988c7d" kind="function"><name>Integrate</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1_i_particle_force_generator" kind="class"><name>mtrx::IParticleForceGenerator</name>
+    <member refid="classmtrx_1_1_i_particle_force_generator_1a1b718accd99091626b3f27fc9f46e6cd" kind="function"><name>UpdateForces</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1_i_rigidbody_force_generator" kind="class"><name>mtrx::IRigidbodyForceGenerator</name>
+    <member refid="classmtrx_1_1_i_rigidbody_force_generator_1aa429c1a254391fa5bc36c77dbe3105bc" kind="function"><name>UpdateForces</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1_log_manager" kind="class"><name>mtrx::LogManager</name>
+    <member refid="classmtrx_1_1_log_manager_1a0daed2a89828a3c673a018f97fb77664" kind="variable"><name>mtrxLogger</name></member>
+    <member refid="classmtrx_1_1_log_manager_1a6622c1c97e9ee654ba180d6c635956f6" kind="function"><name>GetInstance</name></member>
+    <member refid="classmtrx_1_1_log_manager_1acb9d322b8284e46ec429b6f0d445427a" kind="function"><name>warn</name></member>
+    <member refid="classmtrx_1_1_log_manager_1af067ca8af09f2dceca45ff436cfa22ef" kind="function"><name>info</name></member>
+    <member refid="classmtrx_1_1_log_manager_1a645d3ea96b2145dfcd55f108ab818b8f" kind="function"><name>trace</name></member>
+    <member refid="classmtrx_1_1_log_manager_1a842f15a9f58197cb5e8a6380c0047049" kind="function"><name>error</name></member>
+    <member refid="classmtrx_1_1_log_manager_1ab5b51ab0722d8554d8c2d39ecea53ec2" kind="function"><name>critical</name></member>
+    <member refid="classmtrx_1_1_log_manager_1ae3522f53c6a43c365ff9fb0310b7f5de" kind="function"><name>CreateLogDirectory</name></member>
+    <member refid="classmtrx_1_1_log_manager_1af6b40b40ca4df77a9cf5a79deb037008" kind="function"><name>LogManager</name></member>
+    <member refid="classmtrx_1_1_log_manager_1a11032b98eebde361cdfcc8903200f7c8" kind="function"><name>LogManager</name></member>
+    <member refid="classmtrx_1_1_log_manager_1a075894c972fcc7d6e1d387ca1b3a2819" kind="function"><name>LogManager</name></member>
+    <member refid="classmtrx_1_1_log_manager_1a0ace6f79ebb0e6d649a9a4fd7f6468e3" kind="function"><name>operator=</name></member>
+    <member refid="classmtrx_1_1_log_manager_1a320f696cfb34d3957a5e5669269c8dce" kind="function"><name>operator=</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1_mat3" kind="class"><name>mtrx::Mat3</name>
+    <member refid="classmtrx_1_1_mat3_1aa1a6d4655a981667eae5fde4062a572c" kind="variable"><name>matrix</name></member>
+    <member refid="classmtrx_1_1_mat3_1a18a84e34447f74e596c565eef64be677" kind="function"><name>Mat3</name></member>
+    <member refid="classmtrx_1_1_mat3_1a778b444d82f0f8724c2f660ad3d2ce24" kind="function"><name>Mat3</name></member>
+    <member refid="classmtrx_1_1_mat3_1a5dd49c5e1f1fcaa5571b919c85d65db2" kind="function"><name>~Mat3</name></member>
+    <member refid="classmtrx_1_1_mat3_1a4a856d1c82cf02ac4f8862f9c895da4f" kind="function"><name>InverseMatrix</name></member>
+    <member refid="classmtrx_1_1_mat3_1af459f07ab980525f8ffa1329dfc89465" kind="function"><name>Transpose</name></member>
+    <member refid="classmtrx_1_1_mat3_1a8363ccada0bab495f27a37fba3c17a1d" kind="function"><name>AdjugateMatrix</name></member>
+    <member refid="classmtrx_1_1_mat3_1a7ef8cf20f068fa50cdc7e011fdc0bae3" kind="function"><name>Determinant</name></member>
+    <member refid="classmtrx_1_1_mat3_1a1961d857154da2fd41d97e44e702c0ac" kind="function"><name>operator[]</name></member>
+    <member refid="classmtrx_1_1_mat3_1a2f9ef7c8705768c5ba6f9c335fcbb586" kind="function"><name>operator[]</name></member>
+    <member refid="classmtrx_1_1_mat3_1a14eb2b50639d01a8d1ddeef5c4787245" kind="function"><name>operator+</name></member>
+    <member refid="classmtrx_1_1_mat3_1a223542c7fd4260353377c276fefa0d9b" kind="function"><name>operator+=</name></member>
+    <member refid="classmtrx_1_1_mat3_1aee0c0029cabceae8fec012bbb145cdfc" kind="function"><name>operator-</name></member>
+    <member refid="classmtrx_1_1_mat3_1a0f170fcf4b8b8209dfddd5079333a48b" kind="function"><name>operator-=</name></member>
+    <member refid="classmtrx_1_1_mat3_1ae2ab10e83b98f21908ed4126a6c4f399" kind="function"><name>operator*</name></member>
+    <member refid="classmtrx_1_1_mat3_1a43aacae76f5afa8205a5fff8844ac802" kind="function"><name>operator*</name></member>
+    <member refid="classmtrx_1_1_mat3_1a7f9baf8889d637740260e83c7b25a888" kind="function"><name>operator*=</name></member>
+    <member refid="classmtrx_1_1_mat3_1a983ae5099ef281f9e94dae526a5ea01e" kind="function"><name>operator*=</name></member>
+    <member refid="classmtrx_1_1_mat3_1ab170ac5002572f2603fd1f9328187775" kind="friend"><name>operator&lt;&lt;</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1mtrx_dynamic_world" kind="class"><name>mtrx::mtrxDynamicWorld</name>
+    <member refid="classmtrx_1_1mtrx_dynamic_world_1a74aa1d8098135c81d3daedac512d2b7c" kind="variable"><name>accumulator</name></member>
+    <member refid="classmtrx_1_1mtrx_dynamic_world_1a4094bc6b09bfcbb175d389d83f26c017" kind="variable"><name>m_rbManager</name></member>
+    <member refid="classmtrx_1_1mtrx_dynamic_world_1a2cde36f5db12630ebc48c877640482b1" kind="variable"><name>m_CollisionSystem</name></member>
+    <member refid="classmtrx_1_1mtrx_dynamic_world_1ae5a8f4039816f4cba7e0139025573171" kind="function"><name>mtrxDynamicWorld</name></member>
+    <member refid="classmtrx_1_1mtrx_dynamic_world_1a95ed219a5d1a739de770967591bc5b02" kind="function"><name>~mtrxDynamicWorld</name></member>
+    <member refid="classmtrx_1_1mtrx_dynamic_world_1ad0f051b32fd667f1580e00ac1f71b803" kind="function"><name>Update</name></member>
+    <member refid="classmtrx_1_1mtrx_dynamic_world_1a2324f42e0ec5ac3c57913f740e121f32" kind="function"><name>AddRigidbody</name></member>
+    <member refid="classmtrx_1_1mtrx_dynamic_world_1ab176745dd01bccdd52e11719be9719aa" kind="function"><name>RemoveRigidbody</name></member>
+    <member refid="classmtrx_1_1mtrx_dynamic_world_1a640d482c593bf5a6d57afaa0f445bc2c" kind="function"><name>AddForceGenerator</name></member>
+    <member refid="classmtrx_1_1mtrx_dynamic_world_1a46156a86ef4722f0c324b943277d53fa" kind="function"><name>RemoveForceGenerator</name></member>
+    <member refid="classmtrx_1_1mtrx_dynamic_world_1a77d829c67eb514fdadb9310613e3bb20" kind="function"><name>AddCollider</name></member>
+    <member refid="classmtrx_1_1mtrx_dynamic_world_1a6b32bb87f20b9f21237be8d5e3241d49" kind="function"><name>RemoveCollider</name></member>
+  </compound>
+  <compound refid="structmtrx_1_1_object_axes" kind="struct"><name>mtrx::ObjectAxes</name>
+    <member refid="structmtrx_1_1_object_axes_1a5cd38c4da24df5a9dfe2c7fc9e1737f5" kind="variable"><name>side</name></member>
+    <member refid="structmtrx_1_1_object_axes_1ae01bce24787161dc30fbf757d2ed0393" kind="variable"><name>up</name></member>
+    <member refid="structmtrx_1_1_object_axes_1a5850d24307741acdc75e40055ac32f8b" kind="variable"><name>forward</name></member>
+    <member refid="structmtrx_1_1_object_axes_1a1a6949b28e141ada8f778aab48beb428" kind="variable"><name>axes</name></member>
+    <member refid="structmtrx_1_1_object_axes_1aa4ddf9c70541dbb5596d2f226a7c073c" kind="variable"><name>@1</name></member>
+    <member refid="structmtrx_1_1_object_axes_1a9535236c0e1176194671be6ed3d808d7" kind="function"><name>operator[]</name></member>
+    <member refid="structmtrx_1_1_object_axes_1a08ef2d38b89e2133af1f3becfe22a4b1" kind="function"><name>operator[]</name></member>
+    <member refid="structmtrx_1_1_object_axes_1a41bf635d79b9baae006b905f3c35cd81" kind="function"><name>ObjectAxes</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1_o_o_b_b_collider" kind="class"><name>mtrx::OOBBCollider</name>
+    <member refid="classmtrx_1_1_o_o_b_b_collider_1a68b31d56da9a4bdb2a5c27984be40118" kind="variable"><name>halfExtents</name></member>
+    <member refid="classmtrx_1_1_o_o_b_b_collider_1a3f2a7b598c4de9158c575c081e96862b" kind="variable"><name>axes</name></member>
+    <member refid="classmtrx_1_1_o_o_b_b_collider_1aa935b9c99cb1457ed328783fb9a4baed" kind="function"><name>OOBBCollider</name></member>
+    <member refid="classmtrx_1_1_o_o_b_b_collider_1aa07bada37be7dcff9152dafc3f79e0b8" kind="function"><name>OOBBCollider</name></member>
+    <member refid="classmtrx_1_1_o_o_b_b_collider_1acefb2d3f5f2a316b772d5f5b1aab5967" kind="function"><name>~OOBBCollider</name></member>
+    <member refid="classmtrx_1_1_o_o_b_b_collider_1afa990f428f3044ceb1639816f5d98278" kind="function"><name>RaycastCollision</name></member>
+    <member refid="classmtrx_1_1_o_o_b_b_collider_1a08ab41dae178a7f064c7992c9c2c07b1" kind="function"><name>GetAxes</name></member>
+    <member refid="classmtrx_1_1_o_o_b_b_collider_1a8c524feaabb957a4ed3f4cd212e1c365" kind="function"><name>GetHalfExtents</name></member>
+    <member refid="classmtrx_1_1_o_o_b_b_collider_1a102dd48abba7ddeb8919f757a6485cb8" kind="function"><name>GetHalfExtents</name></member>
+    <member refid="classmtrx_1_1_o_o_b_b_collider_1a7fe953f72faabf2998e9856d68b119f6" kind="function"><name>SetScale</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1p___anchored_spring_force_generator" kind="class"><name>mtrx::p_AnchoredSpringForceGenerator</name>
+    <member refid="classmtrx_1_1p___anchored_spring_force_generator_1a590a0e91ad8721bd5a60726a5b49cf7a" kind="variable"><name>anchorPoint</name></member>
+    <member refid="classmtrx_1_1p___anchored_spring_force_generator_1a223e9967e2b23a9d5fd421edd02f426e" kind="variable"><name>spring</name></member>
+    <member refid="classmtrx_1_1p___anchored_spring_force_generator_1a8375169493e3ced5fa7d6c59d2aa277f" kind="function"><name>UpdateForces</name></member>
+    <member refid="classmtrx_1_1p___anchored_spring_force_generator_1ae83a0e4d26ae4d36e62a07eba3551d9d" kind="function"><name>p_AnchoredSpringForceGenerator</name></member>
+    <member refid="classmtrx_1_1p___anchored_spring_force_generator_1a39623441708e26f02e7112fe1a6ce390" kind="function"><name>~p_AnchoredSpringForceGenerator</name></member>
+    <member refid="classmtrx_1_1p___anchored_spring_force_generator_1ab145d831062a200972c0c3dab8792480" kind="function"><name>SetAnchorPoint</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1p___bungee_spring_force_generator" kind="class"><name>mtrx::p_BungeeSpringForceGenerator</name>
+    <member refid="classmtrx_1_1p___bungee_spring_force_generator_1a449285dcd08d2d905ec045816a7a058b" kind="function"><name>UpdateForces</name></member>
+    <member refid="classmtrx_1_1p___bungee_spring_force_generator_1a01731aa47725da4a7e570c200705a6f1" kind="function"><name>p_BungeeSpringForceGenerator</name></member>
+    <member refid="classmtrx_1_1p___bungee_spring_force_generator_1a2732df5dbca7dbeb2d4bc73726faec0f" kind="function"><name>~p_BungeeSpringForceGenerator</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1p___buoyancy_force_generator" kind="class"><name>mtrx::p_BuoyancyForceGenerator</name>
+    <member refid="classmtrx_1_1p___buoyancy_force_generator_1ab83c861e1d4e41143bb780ec0e0e70fd" kind="variable"><name>liquidHeight</name></member>
+    <member refid="classmtrx_1_1p___buoyancy_force_generator_1a8fa05b6a586249701c28893a22df1401" kind="variable"><name>maxParticleDepth</name></member>
+    <member refid="classmtrx_1_1p___buoyancy_force_generator_1ac17aaf5289dc435fc12c563b2fda59d6" kind="function"><name>UpdateForces</name></member>
+    <member refid="classmtrx_1_1p___buoyancy_force_generator_1a0bb270ca93a377407c088ff2343350a5" kind="function"><name>p_BuoyancyForceGenerator</name></member>
+    <member refid="classmtrx_1_1p___buoyancy_force_generator_1aba5f7e2f158e629c1a9fe32b1c30d588" kind="function"><name>~p_BuoyancyForceGenerator</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1p___default_spring_force_generator" kind="class"><name>mtrx::p_DefaultSpringForceGenerator</name>
+    <member refid="classmtrx_1_1p___default_spring_force_generator_1af7962ba33130f4e35fd3e935c2e274c0" kind="variable"><name>secondParticle</name></member>
+    <member refid="classmtrx_1_1p___default_spring_force_generator_1a088ad64ebdb871d9f6b88a1219240f5c" kind="variable"><name>spring</name></member>
+    <member refid="classmtrx_1_1p___default_spring_force_generator_1a468a1bd0db77a56186bd45b0867e1f1d" kind="function"><name>UpdateForces</name></member>
+    <member refid="classmtrx_1_1p___default_spring_force_generator_1a7e797e05d29dda4aa86f33b02c637554" kind="function"><name>p_DefaultSpringForceGenerator</name></member>
+    <member refid="classmtrx_1_1p___default_spring_force_generator_1a4b8be3d3001d97f8e5fba858d477eb06" kind="function"><name>~p_DefaultSpringForceGenerator</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1p___drag_force_generator" kind="class"><name>mtrx::p_DragForceGenerator</name>
+    <member refid="classmtrx_1_1p___drag_force_generator_1a657a79cd2bf131bf045114cb52d0a8f2" kind="variable"><name>k1</name></member>
+    <member refid="classmtrx_1_1p___drag_force_generator_1aa66c3b4c3c87fbc3e2edf50e281c04f4" kind="variable"><name>k2</name></member>
+    <member refid="classmtrx_1_1p___drag_force_generator_1a495a2a869cc75b1f88ca67919994c082" kind="function"><name>UpdateForces</name></member>
+    <member refid="classmtrx_1_1p___drag_force_generator_1ad89c9c86dcea2681424fc438ea697854" kind="function"><name>p_DragForceGenerator</name></member>
+    <member refid="classmtrx_1_1p___drag_force_generator_1ae79bf44cdd5bd81b66f9a4fd1be431ca" kind="function"><name>~p_DragForceGenerator</name></member>
+    <member refid="classmtrx_1_1p___drag_force_generator_1aca9b028d829314c0e5faeb193f15aac0" kind="function"><name>setK1</name></member>
+    <member refid="classmtrx_1_1p___drag_force_generator_1a52d3cd9423234d0a13d4ade1f25718f1" kind="function"><name>setK2</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1p___force_generation_registry" kind="class"><name>mtrx::p_ForceGenerationRegistry</name>
+    <member refid="classmtrx_1_1p___force_generation_registry_1aec2df0d0303629ce864b8b6bb39a422c" kind="variable"><name>forceGenerators</name></member>
+    <member refid="classmtrx_1_1p___force_generation_registry_1a4efa8c7028d2a8b6c3fb5cd51c89aac5" kind="function"><name>p_ForceGenerationRegistry</name></member>
+    <member refid="classmtrx_1_1p___force_generation_registry_1afae2a64ad961d2cb2498e700536f2f5f" kind="function"><name>~p_ForceGenerationRegistry</name></member>
+    <member refid="classmtrx_1_1p___force_generation_registry_1a8090b208919b03d66d8fe00424817f71" kind="function"><name>AddForceGenerator</name></member>
+    <member refid="classmtrx_1_1p___force_generation_registry_1adea2960c84a0ed0f5a72da9bb4e75b06" kind="function"><name>RemoveForceGenerator</name></member>
+    <member refid="classmtrx_1_1p___force_generation_registry_1ad7da3b72c852be6393436767dcb30c9d" kind="function"><name>RemoveForceGenerator</name></member>
+    <member refid="classmtrx_1_1p___force_generation_registry_1a06222c8fda4be5d21fdbc3c3d6c8b2a4" kind="function"><name>clearForceGenerators</name></member>
+    <member refid="classmtrx_1_1p___force_generation_registry_1a737bee50643a0ae8a450e99aad4570b7" kind="function"><name>UpdateForceGenerators</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1p___gravity_force_generator" kind="class"><name>mtrx::p_GravityForceGenerator</name>
+    <member refid="classmtrx_1_1p___gravity_force_generator_1a535167be75e7fdb9b2f165e63217d02a" kind="variable"><name>gravitationalAcceleration</name></member>
+    <member refid="classmtrx_1_1p___gravity_force_generator_1aa4a295ad84497804351952b8623fc9b0" kind="function"><name>UpdateForces</name></member>
+    <member refid="classmtrx_1_1p___gravity_force_generator_1a7b814e29da761a5ac6425b661e629969" kind="function"><name>p_GravityForceGenerator</name></member>
+    <member refid="classmtrx_1_1p___gravity_force_generator_1a35876efe7926d0bad57892844f676d26" kind="function"><name>~p_GravityForceGenerator</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1p___stiff_spring_force_generator" kind="class"><name>mtrx::p_StiffSpringForceGenerator</name>
+    <member refid="classmtrx_1_1p___stiff_spring_force_generator_1a2f3834198483168996f0ecb507ee3c35" kind="variable"><name>springStiffness</name></member>
+    <member refid="classmtrx_1_1p___stiff_spring_force_generator_1a1c5126785c22e074b8672f0c2f80c179" kind="variable"><name>anchorPoint</name></member>
+    <member refid="classmtrx_1_1p___stiff_spring_force_generator_1a306174a4579f116cf253b7cca643c612" kind="variable"><name>springDamping</name></member>
+    <member refid="classmtrx_1_1p___stiff_spring_force_generator_1a0549b5ee835e7531b142a40bb0d3b78d" kind="function"><name>UpdateForces</name></member>
+    <member refid="classmtrx_1_1p___stiff_spring_force_generator_1afe64420c6ff697a05c8f16fcdbbbeb15" kind="function"><name>p_StiffSpringForceGenerator</name></member>
+    <member refid="classmtrx_1_1p___stiff_spring_force_generator_1a2d5171a4241e5e6ba0af1921ae12c5c6" kind="function"><name>~p_StiffSpringForceGenerator</name></member>
+    <member refid="classmtrx_1_1p___stiff_spring_force_generator_1a9210ccada99015eea4522a47489cc909" kind="function"><name>SetAnchorPoint</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1_particle" kind="class"><name>mtrx::Particle</name>
+    <member refid="classmtrx_1_1_particle_1af8a070afa908775c3addde1a8fc2ac92" kind="function"><name>Particle</name></member>
+    <member refid="classmtrx_1_1_particle_1a8bccd43eee527392c4962919b42536d1" kind="function"><name>~Particle</name></member>
+    <member refid="classmtrx_1_1_particle_1a4d63d9d83f47d73626b351d6bc3a2ac5" kind="function"><name>Integrate</name></member>
+    <member refid="classmtrx_1_1_particle_1ab345c26141f33495bb7055a2b96bd743" kind="function"><name>ClearAccumulators</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1_particle_cable_coupling" kind="class"><name>mtrx::ParticleCableCoupling</name>
+    <member refid="classmtrx_1_1_particle_cable_coupling_1afb3c05833ecdbe577a40df811122aa18" kind="variable"><name>maxLengthSqr</name></member>
+    <member refid="classmtrx_1_1_particle_cable_coupling_1a45afc9980c7bd68f211391598b581b4e" kind="variable"><name>restitution</name></member>
+    <member refid="classmtrx_1_1_particle_cable_coupling_1ac2fc69f872c47b94e6684e9e30bcc692" kind="function"><name>ParticleCableCoupling</name></member>
+    <member refid="classmtrx_1_1_particle_cable_coupling_1a0e52625cc712ae1406fa86683c36ddf8" kind="function"><name>~ParticleCableCoupling</name></member>
+    <member refid="classmtrx_1_1_particle_cable_coupling_1a4dbc5adfe3374a49c1b5916af1ac8ec4" kind="function"><name>GenerateContact</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1_particle_collision" kind="class"><name>mtrx::ParticleCollision</name>
+    <member refid="classmtrx_1_1_particle_collision_1a283fe80fbf502bd3981480591b9d51f0" kind="variable"><name>particles</name></member>
+    <member refid="classmtrx_1_1_particle_collision_1a5ae91b7c98fb188adf2e98ecb0270bf2" kind="variable"><name>restitution</name></member>
+    <member refid="classmtrx_1_1_particle_collision_1a785b04fa8a19bc1882a9b016045b1ab3" kind="variable"><name>penetration</name></member>
+    <member refid="classmtrx_1_1_particle_collision_1a2b7cd0f78569447cb914f896e6193057" kind="variable"><name>collisionNormal</name></member>
+    <member refid="classmtrx_1_1_particle_collision_1a056b7579441a81ca10e0c4838f89dbff" kind="function"><name>ParticleCollision</name></member>
+    <member refid="classmtrx_1_1_particle_collision_1ae43c3ce067fb6a37ec895e0a15e4957d" kind="function"><name>~ParticleCollision</name></member>
+    <member refid="classmtrx_1_1_particle_collision_1a5223565350b72a5aceec1f181a08025f" kind="function"><name>Resolve</name></member>
+    <member refid="classmtrx_1_1_particle_collision_1a23ef317a0c5fe3439035432687ccaa44" kind="function"><name>CalculateSeparatingVelocity</name></member>
+    <member refid="classmtrx_1_1_particle_collision_1a9ff44e9a4832764b7f5a9d9b7c42cbae" kind="function"><name>SetCollisionNormal</name></member>
+    <member refid="classmtrx_1_1_particle_collision_1a2046ed04b02d9e1b80dd7d14e4024017" kind="function"><name>ResolveVelocity</name></member>
+    <member refid="classmtrx_1_1_particle_collision_1a14059f80bc8ad11c6490945ff35b9054" kind="function"><name>ResolveInterpenetration</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1_particle_collision_generator" kind="class"><name>mtrx::ParticleCollisionGenerator</name>
+    <member refid="classmtrx_1_1_particle_collision_generator_1a2264f9492f4abc9941dff51b096162f5" kind="function"><name>GenerateContact</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1_particle_collision_resolver" kind="class"><name>mtrx::ParticleCollisionResolver</name>
+    <member refid="classmtrx_1_1_particle_collision_resolver_1a328fa508106113159d038be8780d5dc1" kind="variable"><name>numIterations</name></member>
+    <member refid="classmtrx_1_1_particle_collision_resolver_1a11b64f1c8f056a836f8357d186dffed3" kind="variable"><name>currentIterations</name></member>
+    <member refid="classmtrx_1_1_particle_collision_resolver_1a9dc87fd89cb12763abb97df32f06c723" kind="function"><name>ParticleCollisionResolver</name></member>
+    <member refid="classmtrx_1_1_particle_collision_resolver_1a2171638f40c06fe272ffe89cf4527df5" kind="function"><name>~ParticleCollisionResolver</name></member>
+    <member refid="classmtrx_1_1_particle_collision_resolver_1afdd730a5b4b3f2b8771065b5e93f6574" kind="function"><name>SetIterations</name></member>
+    <member refid="classmtrx_1_1_particle_collision_resolver_1abfcd6e0f2e8029fb85a09709a68d34ef" kind="function"><name>ResolveContacts</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1_particle_coupling" kind="class"><name>mtrx::ParticleCoupling</name>
+    <member refid="classmtrx_1_1_particle_coupling_1aacb85d6fa4de60e539581d394d150aaa" kind="variable"><name>particles</name></member>
+    <member refid="classmtrx_1_1_particle_coupling_1a1404c90a6dcb0d60597a73ae8dd05dab" kind="function"><name>ParticleCoupling</name></member>
+    <member refid="classmtrx_1_1_particle_coupling_1a0d230af1e21cc10cbd694dbb473bd2a6" kind="function"><name>~ParticleCoupling</name></member>
+    <member refid="classmtrx_1_1_particle_coupling_1abeb4b0e35e85cd48eb4620b7cb631368" kind="function"><name>GetCurrentLengthSqr</name></member>
+    <member refid="classmtrx_1_1_particle_coupling_1a8bd40a5c9a18caada06264d8dab45485" kind="function"><name>GenerateContact</name></member>
+  </compound>
+  <compound refid="structmtrx_1_1_particle_force_generators" kind="struct"><name>mtrx::ParticleForceGenerators</name>
+    <member refid="structmtrx_1_1_particle_force_generators_1a38fbb3e9dbba84bd5feb38a8dbb7510b" kind="variable"><name>particle</name></member>
+    <member refid="structmtrx_1_1_particle_force_generators_1acaf465028728b11ac4ec14cacd24275c" kind="variable"><name>registry</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1_particle_manager" kind="class"><name>mtrx::ParticleManager</name>
+    <member refid="classmtrx_1_1_particle_manager_1a9a8b44de9fab939a109af08d1edbde0c" kind="variable"><name>particles</name></member>
+    <member refid="classmtrx_1_1_particle_manager_1a15e82d012c84db40be187ca3a76ec016" kind="variable"><name>particleCollisions</name></member>
+    <member refid="classmtrx_1_1_particle_manager_1ac59e67bdae3078d3c8f25c52eb77e501" kind="variable"><name>forceGenerationRegistry</name></member>
+    <member refid="classmtrx_1_1_particle_manager_1a4d14cbf0bd110ed29165b11ebc8430e0" kind="variable"><name>particleCollisionGenerators</name></member>
+    <member refid="classmtrx_1_1_particle_manager_1adac739bc69a59c9df64ac8b1e26a2430" kind="variable"><name>collisionResolver</name></member>
+    <member refid="classmtrx_1_1_particle_manager_1a67306e2ee9b42a7d2927a81c50943597" kind="variable"><name>maxContacts</name></member>
+    <member refid="classmtrx_1_1_particle_manager_1a55b70c112b1bf156f8325132eb911851" kind="variable"><name>numIterations</name></member>
+    <member refid="classmtrx_1_1_particle_manager_1a4a6daf7119ec178d6c92da7eea7b2325" kind="function"><name>ParticleManager</name></member>
+    <member refid="classmtrx_1_1_particle_manager_1a65c37e5c61a840b4d5ccb8b23725843b" kind="function"><name>ParticleManager</name></member>
+    <member refid="classmtrx_1_1_particle_manager_1a7257bfcf80e13e8daa089ff3bd16d5eb" kind="function"><name>~ParticleManager</name></member>
+    <member refid="classmtrx_1_1_particle_manager_1a0e24c58a5e16e0297549db06925c919b" kind="function"><name>GenerateCollisions</name></member>
+    <member refid="classmtrx_1_1_particle_manager_1a08aa51c9f02b2a1f69d813697d6f744d" kind="function"><name>PhysicsUpdate</name></member>
+    <member refid="classmtrx_1_1_particle_manager_1a24e131415a816e055ffffd03aa570580" kind="function"><name>UpdateParticles</name></member>
+    <member refid="classmtrx_1_1_particle_manager_1ab5302841dad91a272e7ec937032c4f1f" kind="function"><name>UpdateForces</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1_particle_rod_coupling" kind="class"><name>mtrx::ParticleRodCoupling</name>
+    <member refid="classmtrx_1_1_particle_rod_coupling_1a1471f11454eb951512854f882e08f144" kind="variable"><name>lengthSqr</name></member>
+    <member refid="classmtrx_1_1_particle_rod_coupling_1a21fb4976df8dab215f62632d5bdbf1fb" kind="function"><name>ParticleRodCoupling</name></member>
+    <member refid="classmtrx_1_1_particle_rod_coupling_1acc2f0940946c0d45b3fbd5e1f578140b" kind="function"><name>~ParticleRodCoupling</name></member>
+    <member refid="classmtrx_1_1_particle_rod_coupling_1a2c23e87c4d0193766f6407c7037bf881" kind="function"><name>GenerateContact</name></member>
+  </compound>
+  <compound refid="structmtrx_1_1_potential_collision" kind="struct"><name>mtrx::PotentialCollision</name>
+    <member refid="structmtrx_1_1_potential_collision_1a300c3e11f0781255b1b08b817f17f747" kind="variable"><name>bodies</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1_ray" kind="class"><name>mtrx::Ray</name>
+    <member refid="classmtrx_1_1_ray_1ad585127f276c4217d50fa5ad4b9e6583" kind="variable"><name>startPosition</name></member>
+    <member refid="classmtrx_1_1_ray_1a0e4220ef65b2f084d517d426fd848fc1" kind="variable"><name>direction</name></member>
+    <member refid="classmtrx_1_1_ray_1a076f85a706ee8c4e302093dab4b05a04" kind="function"><name>Ray</name></member>
+    <member refid="classmtrx_1_1_ray_1ae0e2784fd2b54c26a145890e08223905" kind="function"><name>~Ray</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1rb___anchored_spring_force_generator" kind="class"><name>mtrx::rb_AnchoredSpringForceGenerator</name>
+    <member refid="classmtrx_1_1rb___anchored_spring_force_generator_1a3ddb432caae052fcbc5197af6a404280" kind="variable"><name>anchorPoint</name></member>
+    <member refid="classmtrx_1_1rb___anchored_spring_force_generator_1a1f2b8878a0c7b974574cbebec1719f63" kind="variable"><name>spring</name></member>
+    <member refid="classmtrx_1_1rb___anchored_spring_force_generator_1a1b1c0398d02b7195340168134af43655" kind="function"><name>rb_AnchoredSpringForceGenerator</name></member>
+    <member refid="classmtrx_1_1rb___anchored_spring_force_generator_1aa6e3c9930a02d662b86eaa2cd0ed9754" kind="function"><name>~rb_AnchoredSpringForceGenerator</name></member>
+    <member refid="classmtrx_1_1rb___anchored_spring_force_generator_1a69dc926cf4e8f8e6a2f14d7a5ec3a01b" kind="function"><name>UpdateForces</name></member>
+    <member refid="classmtrx_1_1rb___anchored_spring_force_generator_1a0ffc1323a785189d9325f05ce5c3571f" kind="function"><name>SetAnchorPoint</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1rb___bungee_spring_force_generator" kind="class"><name>mtrx::rb_BungeeSpringForceGenerator</name>
+    <member refid="classmtrx_1_1rb___bungee_spring_force_generator_1a6df7bed551b9eec36ff9ff5d74b2d667" kind="function"><name>rb_BungeeSpringForceGenerator</name></member>
+    <member refid="classmtrx_1_1rb___bungee_spring_force_generator_1a723f3547b7b3cbf152b61f93aca1c53b" kind="function"><name>~rb_BungeeSpringForceGenerator</name></member>
+    <member refid="classmtrx_1_1rb___bungee_spring_force_generator_1aef4e1e3535288d05eaf495c688de8cde" kind="function"><name>UpdateForces</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1rb___buoyancy_force_generator" kind="class"><name>mtrx::rb_BuoyancyForceGenerator</name>
+    <member refid="classmtrx_1_1rb___buoyancy_force_generator_1a1efedba97c95abeb31992970b7d0ee42" kind="variable"><name>liquidDensity</name></member>
+    <member refid="classmtrx_1_1rb___buoyancy_force_generator_1a1a546d68550e78b3bc5b6e56c3c18f7d" kind="variable"><name>liquidLevel</name></member>
+    <member refid="classmtrx_1_1rb___buoyancy_force_generator_1abb6922fa3f90c12d247dcfa98fe8d3a8" kind="variable"><name>bodyHalfExtent</name></member>
+    <member refid="classmtrx_1_1rb___buoyancy_force_generator_1a9143b9fa951ed2c4dfc6c9e8ef1d9003" kind="variable"><name>volumeBody</name></member>
+    <member refid="classmtrx_1_1rb___buoyancy_force_generator_1ac52ccff59d368e38ec4af535ee177b03" kind="variable"><name>gravitationalAcceleration</name></member>
+    <member refid="classmtrx_1_1rb___buoyancy_force_generator_1ad3d63f6f2781fa02aa16da43befc413d" kind="variable"><name>centerOfBuoyancy</name></member>
+    <member refid="classmtrx_1_1rb___buoyancy_force_generator_1ac864ddb60ee859773232d6aa03510dd6" kind="function"><name>rb_BuoyancyForceGenerator</name></member>
+    <member refid="classmtrx_1_1rb___buoyancy_force_generator_1aba306d9176ce0e7601a5d3a0c8b6813c" kind="function"><name>~rb_BuoyancyForceGenerator</name></member>
+    <member refid="classmtrx_1_1rb___buoyancy_force_generator_1a8b9cfb2fc7a59337a698aed194574148" kind="function"><name>UpdateForces</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1rb___default_spring_force_generator" kind="class"><name>mtrx::rb_DefaultSpringForceGenerator</name>
+    <member refid="classmtrx_1_1rb___default_spring_force_generator_1acb2b5e2233db37b7d5a86620de17b9b6" kind="variable"><name>secondParticle</name></member>
+    <member refid="classmtrx_1_1rb___default_spring_force_generator_1a96d351aadc08a8926bf6d07e0a683e53" kind="variable"><name>spring</name></member>
+    <member refid="classmtrx_1_1rb___default_spring_force_generator_1a3a7614dedd985b8b8f4075945d0a9b63" kind="function"><name>UpdateForces</name></member>
+    <member refid="classmtrx_1_1rb___default_spring_force_generator_1af4dad3ae23f2609a62ee423000cab280" kind="function"><name>rb_DefaultSpringForceGenerator</name></member>
+    <member refid="classmtrx_1_1rb___default_spring_force_generator_1a3b7ad753e25e6e1e9efc9844c8a30959" kind="function"><name>~rb_DefaultSpringForceGenerator</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1rb___drag_force_generator" kind="class"><name>mtrx::rb_DragForceGenerator</name>
+    <member refid="classmtrx_1_1rb___drag_force_generator_1a6ee77c1b1eeb9ebf1f2796ed11101d54" kind="variable"><name>k1</name></member>
+    <member refid="classmtrx_1_1rb___drag_force_generator_1a3423e91d0b50e3f4229a5dd8d436a4ea" kind="variable"><name>k2</name></member>
+    <member refid="classmtrx_1_1rb___drag_force_generator_1a1b9cbd4856570ec17348543b29ad9821" kind="function"><name>UpdateForces</name></member>
+    <member refid="classmtrx_1_1rb___drag_force_generator_1a383c6d074944b82c248ece75cc444bef" kind="function"><name>rb_DragForceGenerator</name></member>
+    <member refid="classmtrx_1_1rb___drag_force_generator_1a6890d178fab4322d1e432fd4787f9069" kind="function"><name>~rb_DragForceGenerator</name></member>
+    <member refid="classmtrx_1_1rb___drag_force_generator_1a32f631897a3b5a470e3bbc8c70f4d36e" kind="function"><name>setK1</name></member>
+    <member refid="classmtrx_1_1rb___drag_force_generator_1a7d01f579ef4eda26a4b60a03ab295a0c" kind="function"><name>setK2</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1rb___force_generation_registry" kind="class"><name>mtrx::rb_ForceGenerationRegistry</name>
+    <member refid="classmtrx_1_1rb___force_generation_registry_1aa9e9c149a7659c3ba13be0c553fae29e" kind="variable"><name>forceGenerators</name></member>
+    <member refid="classmtrx_1_1rb___force_generation_registry_1a140bdc715dd2a19f0a40c11734b94fbe" kind="function"><name>rb_ForceGenerationRegistry</name></member>
+    <member refid="classmtrx_1_1rb___force_generation_registry_1a6bafa507f64f33a433bbf1d14f013372" kind="function"><name>~rb_ForceGenerationRegistry</name></member>
+    <member refid="classmtrx_1_1rb___force_generation_registry_1a28d04550b1d052bc07bb8a1fe144c59a" kind="function"><name>AddForceGenerator</name></member>
+    <member refid="classmtrx_1_1rb___force_generation_registry_1a073b4ebafc75121ebe5012e3e3925b7f" kind="function"><name>RemoveForceGenerator</name></member>
+    <member refid="classmtrx_1_1rb___force_generation_registry_1a0970f5e29c6ff0e05d537c3e2a62808e" kind="function"><name>RemoveForceGenerator</name></member>
+    <member refid="classmtrx_1_1rb___force_generation_registry_1a2317b527b35f8b249b827958f063a3f5" kind="function"><name>UpdateForceGenerators</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1rb___gravity_force_generator" kind="class"><name>mtrx::rb_GravityForceGenerator</name>
+    <member refid="classmtrx_1_1rb___gravity_force_generator_1a1b1bcd905fdfd6eb2d363874d31604e9" kind="variable"><name>gravitationalAcceleration</name></member>
+    <member refid="classmtrx_1_1rb___gravity_force_generator_1a979205b2435decf38d4b495fbce01a48" kind="function"><name>UpdateForces</name></member>
+    <member refid="classmtrx_1_1rb___gravity_force_generator_1ae94711b8f689601b88f33800983c203d" kind="function"><name>rb_GravityForceGenerator</name></member>
+    <member refid="classmtrx_1_1rb___gravity_force_generator_1ab9f8f184c76933a436e7c15ca0db6b6d" kind="function"><name>~rb_GravityForceGenerator</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1rb___stiff_spring_force_generator" kind="class"><name>mtrx::rb_StiffSpringForceGenerator</name>
+    <member refid="classmtrx_1_1rb___stiff_spring_force_generator_1a64f714fb61d0bc44fafc923fb8ca3f73" kind="variable"><name>springStiffness</name></member>
+    <member refid="classmtrx_1_1rb___stiff_spring_force_generator_1abc798bd38b020983f477361c3db083cb" kind="variable"><name>anchorPoint</name></member>
+    <member refid="classmtrx_1_1rb___stiff_spring_force_generator_1a20bfcd8be4fce0fa51927946047ff4e6" kind="variable"><name>springDamping</name></member>
+    <member refid="classmtrx_1_1rb___stiff_spring_force_generator_1aef3461f31d50b07740af552f5eb67f2f" kind="function"><name>UpdateForces</name></member>
+    <member refid="classmtrx_1_1rb___stiff_spring_force_generator_1a84df2b338b6bcc89f6d25c62cf26cdd8" kind="function"><name>rb_StiffSpringForceGenerator</name></member>
+    <member refid="classmtrx_1_1rb___stiff_spring_force_generator_1a8d8ed6824f2554d43f665c774e0889ce" kind="function"><name>~rb_StiffSpringForceGenerator</name></member>
+    <member refid="classmtrx_1_1rb___stiff_spring_force_generator_1ad2cee1208be974c26589274aefc9abd7" kind="function"><name>SetAnchorPoint</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1_rigidbody" kind="class"><name>mtrx::Rigidbody</name>
+    <member refid="classmtrx_1_1_rigidbody_1a68e6ecc68099682e0699c1f9a9618983" kind="variable"><name>rotation</name></member>
+    <member refid="classmtrx_1_1_rigidbody_1aff6814447b805cd56289c5013391cc54" kind="variable"><name>inverseInertiaTensor</name></member>
+    <member refid="classmtrx_1_1_rigidbody_1a880ad32d920e1bc9b97d02e449cf40a8" kind="variable"><name>objToWorldMat</name></member>
+    <member refid="classmtrx_1_1_rigidbody_1acffffd7e2acf4cf3e034a34ff31db23f" kind="variable"><name>accumTorque</name></member>
+    <member refid="classmtrx_1_1_rigidbody_1a998a8563a43b3ec9c77bf32d5241b759" kind="variable"><name>angularDamping</name></member>
+    <member refid="classmtrx_1_1_rigidbody_1af6828890817ddc621c1af663b1ecd8f7" kind="variable"><name>isKinematic</name></member>
+    <member refid="classmtrx_1_1_rigidbody_1a9f8a76a828601bb64b16672524c4aed3" kind="variable"><name>axes</name></member>
+    <member refid="classmtrx_1_1_rigidbody_1a42a8ea123c8c05769e646b1e320d649a" kind="function"><name>Rigidbody</name></member>
+    <member refid="classmtrx_1_1_rigidbody_1af14290171239ff48768a813b4be18973" kind="function"><name>~Rigidbody</name></member>
+    <member refid="classmtrx_1_1_rigidbody_1af211b5d887926f56819be103acb87601" kind="function"><name>SetInverseInertiaTensor</name></member>
+    <member refid="classmtrx_1_1_rigidbody_1a6d405e86674e7b972b6dac8399b67c4c" kind="function"><name>SetAngularDamping</name></member>
+    <member refid="classmtrx_1_1_rigidbody_1a1e065382d9fb4792b5c0b3c44d2fa2d9" kind="function"><name>SetOrientation</name></member>
+    <member refid="classmtrx_1_1_rigidbody_1a2ea618bfa2582351fe678732ddaaac21" kind="function"><name>SetRotation</name></member>
+    <member refid="classmtrx_1_1_rigidbody_1a8924fc836d641645545967a8f9d597a0" kind="function"><name>SetIsKinematic</name></member>
+    <member refid="classmtrx_1_1_rigidbody_1a97a357735b238b89617c239f02b5f0f7" kind="function"><name>GetInverseInertiaTensor</name></member>
+    <member refid="classmtrx_1_1_rigidbody_1afbf0cbe150482320dd67725188af59ab" kind="function"><name>GetAngularDamping</name></member>
+    <member refid="classmtrx_1_1_rigidbody_1aa260080a5e415c0ecc059254fbbabb07" kind="function"><name>GetObjToWorldMat</name></member>
+    <member refid="classmtrx_1_1_rigidbody_1a6690f4c3a02bbcddb74fb0e056480ac3" kind="function"><name>GetRotation</name></member>
+    <member refid="classmtrx_1_1_rigidbody_1a853ef16a2e765e40255b3e62cb50b6d3" kind="function"><name>GetIsKinematic</name></member>
+    <member refid="classmtrx_1_1_rigidbody_1af093fef269dac835d233d3d43eef02b6" kind="function"><name>CalculateIITWorld</name></member>
+    <member refid="classmtrx_1_1_rigidbody_1a23904a24080b161312bfc0734a64de3b" kind="function"><name>AddTorque</name></member>
+    <member refid="classmtrx_1_1_rigidbody_1acf418f9a9cf3daa8401f40d607d4594f" kind="function"><name>ClearAccumulators</name></member>
+    <member refid="classmtrx_1_1_rigidbody_1a7002d5a155bc0a1dbdfa5a0aeb5a46bf" kind="function"><name>Integrate</name></member>
+    <member refid="classmtrx_1_1_rigidbody_1ae86166e8ce2f6eab660da644d0697995" kind="function"><name>CalculateObjToWorldMat</name></member>
+    <member refid="classmtrx_1_1_rigidbody_1a68188cc7105320d5a7cb39cac9002fba" kind="function"><name>AddForceAtPoint</name></member>
+    <member refid="classmtrx_1_1_rigidbody_1a41635ac1ae40c4057cbc438751428cc9" kind="function"><name>CalculateBodyData</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1_rigidbody_manager" kind="class"><name>mtrx::RigidbodyManager</name>
+    <member refid="classmtrx_1_1_rigidbody_manager_1a0c2383c2960f530355f7460155e73c37" kind="variable"><name>rigidbodyRegistry</name></member>
+    <member refid="classmtrx_1_1_rigidbody_manager_1ab52ca00665fd9d16f573fa88bc8afdba" kind="function"><name>RigidbodyManager</name></member>
+    <member refid="classmtrx_1_1_rigidbody_manager_1ade8662fe917c2ac0f9f3f2ad476c6784" kind="function"><name>~RigidbodyManager</name></member>
+    <member refid="classmtrx_1_1_rigidbody_manager_1a002b709cb161b8fbcdc268c8e46b03b9" kind="function"><name>Integrate</name></member>
+    <member refid="classmtrx_1_1_rigidbody_manager_1aee4db6da13a963c3300ea0865d70be24" kind="function"><name>IntegrateRigidbodies</name></member>
+    <member refid="classmtrx_1_1_rigidbody_manager_1a41d0d06e1f2043c84870565ab36b5e9c" kind="function"><name>UpdateForces</name></member>
+  </compound>
+  <compound refid="structmtrx_1_1_simplex" kind="struct"><name>mtrx::Simplex</name>
+    <member refid="structmtrx_1_1_simplex_1aea5bc87ddeace07c5a4fa1cae3931a48" kind="variable"><name>b</name></member>
+    <member refid="structmtrx_1_1_simplex_1a36d533af524bfad47062581092ba1d25" kind="variable"><name>c</name></member>
+    <member refid="structmtrx_1_1_simplex_1a47818c4d6ab5904325bafd414b9abbef" kind="variable"><name>d</name></member>
+    <member refid="structmtrx_1_1_simplex_1ad70d466bd3407d778d73341fe576f5b5" kind="variable"><name>size</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1_sphere_collider" kind="class"><name>mtrx::SphereCollider</name>
+    <member refid="classmtrx_1_1_sphere_collider_1acfd2efbf284311c23d79e3e765197691" kind="variable"><name>radius</name></member>
+    <member refid="classmtrx_1_1_sphere_collider_1abc022d7d5ff0186f00ef4974b00e793d" kind="function"><name>SphereCollider</name></member>
+    <member refid="classmtrx_1_1_sphere_collider_1aa557e71fcb3ab1c2ce742f95a08f26ed" kind="function"><name>SphereCollider</name></member>
+    <member refid="classmtrx_1_1_sphere_collider_1a743fd3eb6a3a62c8603c741a6a97c9ff" kind="function"><name>SphereCollider</name></member>
+    <member refid="classmtrx_1_1_sphere_collider_1ab7aa2376558cd6cb30e2ec452dd34578" kind="function"><name>~SphereCollider</name></member>
+    <member refid="classmtrx_1_1_sphere_collider_1adf3567008a057fe1332d922b7f82c29e" kind="function"><name>RaycastCollision</name></member>
+    <member refid="classmtrx_1_1_sphere_collider_1a5d28c296930c245dc4c28a132fe7d494" kind="function"><name>GetSize</name></member>
+    <member refid="classmtrx_1_1_sphere_collider_1abd5794eb14eb42d024c40ba2897692e2" kind="function"><name>GetGrowth</name></member>
+    <member refid="classmtrx_1_1_sphere_collider_1a5b754ba68a455a0fba788d9e17fff3b7" kind="function"><name>GetRadius</name></member>
+    <member refid="classmtrx_1_1_sphere_collider_1aef2bf511296aa0b5c7c9e460596c1168" kind="function"><name>SetRadius</name></member>
+    <member refid="classmtrx_1_1_sphere_collider_1ad238eaded51ef815efaf350a632d4ed0" kind="function"><name>SetScale</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1_transform" kind="class"><name>mtrx::Transform</name>
+    <member refid="classmtrx_1_1_transform_1a43726b26b35b73735f16c69dde6f2b51" kind="variable"><name>position</name></member>
+    <member refid="classmtrx_1_1_transform_1ad48f2797e6cb5f2115bf4faa97ab153d" kind="variable"><name>orientation</name></member>
+    <member refid="classmtrx_1_1_transform_1afda64668c25c4a4aeda88c1a0da28fca" kind="variable"><name>scale</name></member>
+    <member refid="classmtrx_1_1_transform_1aad6a8f3e87607d86939d0ebe3427c2c7" kind="function"><name>Transform</name></member>
+    <member refid="classmtrx_1_1_transform_1a4ac51d84ec5cd2267a2046c17772868c" kind="function"><name>~Transform</name></member>
+    <member refid="classmtrx_1_1_transform_1a22d3a1dc822cf410de92966c10f0cccd" kind="function"><name>Translate</name></member>
+    <member refid="classmtrx_1_1_transform_1ab54ebee6fa9775358903ad0631c1df42" kind="function"><name>Rotate</name></member>
+    <member refid="classmtrx_1_1_transform_1a8331eb2b5ad4a290f9cb1484534dcf27" kind="function"><name>SetPosition</name></member>
+    <member refid="classmtrx_1_1_transform_1a33f418bc15f821e731162fb8fe745aef" kind="function"><name>SetOrientation</name></member>
+    <member refid="classmtrx_1_1_transform_1a429a326ae889a31f433cf5f68d70af1e" kind="function"><name>SetScale</name></member>
+    <member refid="classmtrx_1_1_transform_1ab81c0229523bf29ea35a7a24fcff597e" kind="function"><name>GetPosition</name></member>
+    <member refid="classmtrx_1_1_transform_1a58b3e889aa1c031c3857ba7525e352b0" kind="function"><name>GetOrientation</name></member>
+    <member refid="classmtrx_1_1_transform_1ad127e9a69dcf84bb098dfa8a6c2af22d" kind="function"><name>GetScale</name></member>
+    <member refid="classmtrx_1_1_transform_1a5d0c4605858e295f2d32eee8fb9bb571" kind="function"><name>GetPosition</name></member>
+    <member refid="classmtrx_1_1_transform_1a402a968097c9b71087899fb08bdb5059" kind="function"><name>GetOrientation</name></member>
+    <member refid="classmtrx_1_1_transform_1ab58b1746ddeb685e4cc05687f66d802d" kind="function"><name>GetScale</name></member>
+  </compound>
+  <compound refid="structmtrx_1_1_triangle" kind="struct"><name>mtrx::Triangle</name>
+    <member refid="structmtrx_1_1_triangle_1aec6d48acc0a27e90fcbf2ebb31bdb7ea" kind="variable"><name>a</name></member>
+    <member refid="structmtrx_1_1_triangle_1a3f6dae4d7a4494eeb46eeef2b1121066" kind="variable"><name>b</name></member>
+    <member refid="structmtrx_1_1_triangle_1a88f60e57e36d2bb60f0bbebfadd980a1" kind="variable"><name>c</name></member>
+    <member refid="structmtrx_1_1_triangle_1ae1fc761598a5bf556d7afb7cfc0175f2" kind="variable"><name>pts</name></member>
+    <member refid="structmtrx_1_1_triangle_1aa2620164f6fe3ea6c1e3ace2cbb60b57" kind="variable"><name>@5</name></member>
+    <member refid="structmtrx_1_1_triangle_1a77386818983bcec610783134e288b8ef" kind="function"><name>Triangle</name></member>
+    <member refid="structmtrx_1_1_triangle_1a3a2ea407c366b4a7af9ad32f83085ff3" kind="function"><name>Triangle</name></member>
+  </compound>
+  <compound refid="classmtrx_1_1_vector3_d" kind="class"><name>mtrx::Vector3D</name>
+    <member refid="classmtrx_1_1_vector3_d_1a3619f2a376ebde604374e654b7a424d0" kind="variable"><name>x</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1a4e3ce011745a9a42e5cbf8fa58ea67f6" kind="variable"><name>y</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1a81f4fe7cb30f746857d1929824155d1c" kind="variable"><name>z</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1a99d2f76e6e07890584936f484bf5fe9e" kind="variable"><name>values</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1a7d8ae5bc84d0287f07e1fc3488e13f89" kind="variable"><name>@9</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1aefa763d1bfc9c496ac709c7e7d76fbb9" kind="variable"><name>zero</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1a8d467ca50fc0fbf165c7af1136cf6b60" kind="function"><name>Vector3D</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1af1e1e28d5470bd73c7bada088c6fbbfb" kind="function"><name>~Vector3D</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1ab98b56540ae800ebf70067082107a320" kind="function"><name>Normalize</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1ad48ba9023bf75544b18eb91cb78425d4" kind="function"><name>Magnitude</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1a99eba62eee56355df1be39d604856f78" kind="function"><name>MagnitudeSquared</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1acf4f8b8290d41d34eb8a080c3bcabaa7" kind="function"><name>DotProduct</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1a66780f5f9b6154f45911ec2864dfb96c" kind="function"><name>CrossProduct</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1ad2f59f476b3bb66175f4c0f40d900349" kind="function"><name>operator+</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1a3f44f0e73dbf0e19a630417ecb1413ea" kind="function"><name>operator+</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1a118e59398b57124d868fae776790ea89" kind="function"><name>operator+=</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1accbaf202ff402c26c13d4cab2abe1fc7" kind="function"><name>operator+=</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1a7ed110d2bb9a9e7305ff5fa3e1fad1cb" kind="function"><name>operator-</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1a0096a2f71469fc27332a38b4879de1a1" kind="function"><name>operator-</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1a37aab7eb5ca47029b232955c3c9e1655" kind="function"><name>operator-=</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1a043facfcae5b92b81e78c266334b3d67" kind="function"><name>operator-=</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1a01d93b92cc604cc89a7454d54810dd68" kind="function"><name>operator*</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1a9876cdbb6fe0e1c03d671c78982828b2" kind="function"><name>operator*</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1a7a4312d8f9406e09285af328385738e6" kind="function"><name>operator*=</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1a5c50e24f67cf06e6d0c3e8434064c9b5" kind="function"><name>operator*=</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1a936bbc2b7411039f58a2060bf44f5310" kind="function"><name>operator/</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1a6852ee8f4090150297ac79b83d9e2486" kind="function"><name>operator/</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1a8093f6ba02321cb13cdd8c5dc5cd85d6" kind="function"><name>operator/=</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1a2825b18a9b1e5a7b98911ab213b12d9e" kind="function"><name>operator/=</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1aaf20f0a686f1f26ca5489b03ea78016a" kind="function"><name>operator[]</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1a6e64b2feb7c839410335861b6da93423" kind="function"><name>operator[]</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1a84a2cdd114a471736b816b9dee1f6e13" kind="function"><name>operator==</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1a154305f4789d5de056a1d147b8d41713" kind="function"><name>operator-</name></member>
+    <member refid="classmtrx_1_1_vector3_d_1a4fb01b6d8216225cc3f2e80ab44c337d" kind="friend"><name>operator&lt;&lt;</name></member>
+  </compound>
+  <compound refid="namespacemtrx" kind="namespace"><name>mtrx</name>
+    <member refid="namespacemtrx_1aba70c7f807f8a862fb9a10445ec82e7c" kind="enum"><name>ColliderType</name></member>
+    <member refid="namespacemtrx_1aba70c7f807f8a862fb9a10445ec82e7cab7095f057db3fefa7325ad93a04e14fd" kind="enumvalue"><name>Sphere</name></member>
+    <member refid="namespacemtrx_1aba70c7f807f8a862fb9a10445ec82e7ca4276d50f05d2cac4c98c17337ac30c99" kind="enumvalue"><name>AABB</name></member>
+    <member refid="namespacemtrx_1aba70c7f807f8a862fb9a10445ec82e7ca9a116143e06d67d96f938b3e7044c825" kind="enumvalue"><name>OOBB</name></member>
+    <member refid="namespacemtrx_1aba70c7f807f8a862fb9a10445ec82e7ca4880c0f12c06dd6d142e7a40b041bf1a" kind="enumvalue"><name>Capsule</name></member>
+    <member refid="namespacemtrx_1aba70c7f807f8a862fb9a10445ec82e7ca6490fc8a26c90029651983d30c22a6f1" kind="enumvalue"><name>ConvexShape</name></member>
+    <member refid="namespacemtrx_1a2492d55175808feed4dcaa38bae48651" kind="variable"><name>gravity</name></member>
+    <member refid="namespacemtrx_1a5ba5786649aeb3e55f1dfd5fe0febf95" kind="variable"><name>projectDir</name></member>
+    <member refid="namespacemtrx_1a6518a09e680aa36af9aa1eef505320b4" kind="variable"><name>worldUp</name></member>
+    <member refid="namespacemtrx_1a8f8b4c57d50a1c29728c441607ed292e" kind="variable"><name>worldSide</name></member>
+    <member refid="namespacemtrx_1ae50391e17dccf073a71c1023816d2c1a" kind="variable"><name>worldForward</name></member>
+    <member refid="namespacemtrx_1aac6a3ea8645f1cb159cdddc3caeba396" kind="function"><name>RandomInt</name></member>
+    <member refid="namespacemtrx_1a4fc86cfdfb565ca902cd35ed86f661ec" kind="function"><name>GenerateCuboidIT</name></member>
+    <member refid="namespacemtrx_1a57efb3cde02e53c7041ef3d59313f29e" kind="function"><name>GenerateSphereIT</name></member>
+  </compound>
+  <compound refid="namespacemtrx_1_1_collider_detection_util" kind="namespace"><name>mtrx::ColliderDetectionUtil</name>
+    <member refid="namespacemtrx_1_1_collider_detection_util_1ac77fc578372668ca2d94530f7e5f14a9" kind="function"><name>Collide</name></member>
+    <member refid="namespacemtrx_1_1_collider_detection_util_1a83f4a41260f33cb092a25f754cc3f978" kind="function"><name>SphereCollisionOptions</name></member>
+    <member refid="namespacemtrx_1_1_collider_detection_util_1a0d03f406930dcf4a27c960a313e18443" kind="function"><name>AABBCollisionOptions</name></member>
+    <member refid="namespacemtrx_1_1_collider_detection_util_1afe2bd5be5b56798365e58ce26b61ac19" kind="function"><name>OOBBCollisionOptions</name></member>
+    <member refid="namespacemtrx_1_1_collider_detection_util_1a767bbb02f31fba82dc433def365c33b2" kind="function"><name>CapsuleCollisionOptions</name></member>
+    <member refid="namespacemtrx_1_1_collider_detection_util_1a08d951ddbcee8094a314edface8d4881" kind="function"><name>ConvexShapeCollisionOptions</name></member>
+  </compound>
+  <compound refid="namespacemtrx_1_1_collision_util" kind="namespace"><name>mtrx::CollisionUtil</name>
+    <member refid="namespacemtrx_1_1_collision_util_1a25655a61b608ba45dbd96e1bbdcbcb37" kind="function"><name>SphereSphereCollision</name></member>
+    <member refid="namespacemtrx_1_1_collision_util_1a058033b88ee093be57383c8e83cd11af" kind="function"><name>SphereCapsuleCollision</name></member>
+    <member refid="namespacemtrx_1_1_collision_util_1afb7d2a9972902c2bb02ea8bd304c78e7" kind="function"><name>SphereAABBCollision</name></member>
+    <member refid="namespacemtrx_1_1_collision_util_1a5bad6fd1b06278cf9d1dda3b2e39de83" kind="function"><name>SphereOOBBCollision</name></member>
+    <member refid="namespacemtrx_1_1_collision_util_1a7d3bc9990e9c0e816aeae56126aaaa25" kind="function"><name>CapsuleCapsuleCollision</name></member>
+    <member refid="namespacemtrx_1_1_collision_util_1ac0847bd3390425b25ff591aa74f1f412" kind="function"><name>CapsuleAABBCollision</name></member>
+    <member refid="namespacemtrx_1_1_collision_util_1a5f6358f639b903628ca5addc5ff1a451" kind="function"><name>AABBCollision</name></member>
+    <member refid="namespacemtrx_1_1_collision_util_1a3a98a1e19066de38a68db34e6c183a7c" kind="function"><name>ConvexShapeCollision</name></member>
+    <member refid="namespacemtrx_1_1_collision_util_1a8efc8de6ee21149f34b5e7cd77fe1a2c" kind="function"><name>ConvexShapeCapsuleCollision</name></member>
+    <member refid="namespacemtrx_1_1_collision_util_1a871e293d9a5b8a3a07f5d98fa927743a" kind="function"><name>CapsuleOOBBCollision</name></member>
+    <member refid="namespacemtrx_1_1_collision_util_1a63e108082c43adf2c015f65f7b75830f" kind="function"><name>AABBOOBBCollision</name></member>
+    <member refid="namespacemtrx_1_1_collision_util_1a389b40f189ad059f0366228ec61d5cb4" kind="function"><name>OOBBCollision</name></member>
+    <member refid="namespacemtrx_1_1_collision_util_1a4244615348b7ba8a7733587cdd3a2ca7" kind="function"><name>ConvexShapeSphereCollision</name></member>
+  </compound>
+  <compound refid="namespacemtrx_1_1_physics_util" kind="namespace"><name>mtrx::PhysicsUtil</name>
+    <member refid="namespacemtrx_1_1_physics_util_1a82b7dc1049d74ce11316522e047e28b5" kind="function"><name>TripleCross</name></member>
+    <member refid="namespacemtrx_1_1_physics_util_1a10b9e39ab7b8486226c4084a33c2e32c" kind="function"><name>MinDistanceTwoLines</name></member>
+    <member refid="namespacemtrx_1_1_physics_util_1aa710864e0ad3e7a7b0c66841e73d0053" kind="function"><name>MinDistanceSquaredTwoSegments</name></member>
+    <member refid="namespacemtrx_1_1_physics_util_1af5b0f0fd3ad66a518d3f8ed549ac53ec" kind="function"><name>MinDistanceSquaredPointRay</name></member>
+    <member refid="namespacemtrx_1_1_physics_util_1a8bfc1b573238623026f3d7d9b507b3ca" kind="function"><name>MinDistanceSquaredPointSegment</name></member>
+    <member refid="namespacemtrx_1_1_physics_util_1a7361309066fc8dac4e23734f96111d0a" kind="function"><name>MinDistanceSquaredLineSegmentRay</name></member>
+    <member refid="namespacemtrx_1_1_physics_util_1a8adf3f94936a17666f63e28d96335559" kind="function"><name>MinDistanceSquaredPointTriangle</name></member>
+    <member refid="namespacemtrx_1_1_physics_util_1a26f7db1dab57d281e712b87f058beda4" kind="function"><name>MinDistanceSquaredLineSegmentTriangle</name></member>
+    <member refid="namespacemtrx_1_1_physics_util_1a94232e4bae6379d6135956109640f232" kind="function"><name>MinDistanceSquaredPointAABB</name></member>
+    <member refid="namespacemtrx_1_1_physics_util_1a8c85bfef95fee864c6160aaede5cbc5a" kind="function"><name>Slerp</name></member>
+    <member refid="namespacemtrx_1_1_physics_util_1a9c08bc8c83923700f188ed3910aacdf7" kind="function"><name>Lerp</name></member>
+    <member refid="namespacemtrx_1_1_physics_util_1af55a0fd74660eb03d28d61f2d2b67eef" kind="function"><name>Ease</name></member>
+    <member refid="namespacemtrx_1_1_physics_util_1a0e6250e1e574e74da2a60d898246dba7" kind="function"><name>TriangulateConvexShape</name></member>
+  </compound>
+  <compound refid="namespacemtrx_1_1_raycast_collision_util" kind="namespace"><name>mtrx::RaycastCollisionUtil</name>
+    <member refid="namespacemtrx_1_1_raycast_collision_util_1a9ade4a9f4a42e0942669f7e1e1532bd4" kind="function"><name>RaySphereCollision</name></member>
+    <member refid="namespacemtrx_1_1_raycast_collision_util_1ab4d2464cead181062893def44dba015e" kind="function"><name>RayCapsuleCollision</name></member>
+    <member refid="namespacemtrx_1_1_raycast_collision_util_1a51b04fb66e7ff65a36760ae7719f53a9" kind="function"><name>RayBoxCollision</name></member>
+    <member refid="namespacemtrx_1_1_raycast_collision_util_1aaf0e7f72e77797fed30e2468c8e34eeb" kind="function"><name>RaycastFiltered</name></member>
+    <member refid="namespacemtrx_1_1_raycast_collision_util_1a58671bfdaddc9adb4510553f29a1c4e9" kind="function"><name>RaycastUnfiltered</name></member>
+  </compound>
+  <compound refid="_a_a_b_b_collider_8h" kind="file"><name>AABBCollider.h</name>
+  </compound>
+  <compound refid="_b_v_h_node_8h" kind="file"><name>BVHNode.h</name>
+  </compound>
+  <compound refid="_capsule_collider_8h" kind="file"><name>CapsuleCollider.h</name>
+  </compound>
+  <compound refid="_collider_8h" kind="file"><name>Collider.h</name>
+  </compound>
+  <compound refid="_collision_system_8h" kind="file"><name>CollisionSystem.h</name>
+  </compound>
+  <compound refid="_convex_shape_collider_8h" kind="file"><name>ConvexShapeCollider.h</name>
+  </compound>
+  <compound refid="_i_bounding_volume_8h" kind="file"><name>IBoundingVolume.h</name>
+  </compound>
+  <compound refid="_o_o_b_b_collider_8h" kind="file"><name>OOBBCollider.h</name>
+  </compound>
+  <compound refid="_sphere_collider_8h" kind="file"><name>SphereCollider.h</name>
+  </compound>
+  <compound refid="_defs_8h" kind="file"><name>Defs.h</name>
+  </compound>
+  <compound refid="_body_8h" kind="file"><name>Body.h</name>
+  </compound>
+  <compound refid="_i_integratable_8h" kind="file"><name>IIntegratable.h</name>
+  </compound>
+  <compound refid="_particle_8h" kind="file"><name>Particle.h</name>
+  </compound>
+  <compound refid="_particle_manager_8h" kind="file"><name>ParticleManager.h</name>
+  </compound>
+  <compound refid="_rigidbody_8h" kind="file"><name>Rigidbody.h</name>
+  </compound>
+  <compound refid="_rigidbody_manager_8h" kind="file"><name>RigidbodyManager.h</name>
+  </compound>
+  <compound refid="_i_particle_force_generator_8h" kind="file"><name>IParticleForceGenerator.h</name>
+  </compound>
+  <compound refid="p___anchored_spring_force_generator_8h" kind="file"><name>p_AnchoredSpringForceGenerator.h</name>
+  </compound>
+  <compound refid="p___bungee_spring_force_generator_8h" kind="file"><name>p_BungeeSpringForceGenerator.h</name>
+  </compound>
+  <compound refid="p___buoyancy_force_generator_8h" kind="file"><name>p_BuoyancyForceGenerator.h</name>
+  </compound>
+  <compound refid="p___default_spring_force_generator_8h" kind="file"><name>p_DefaultSpringForceGenerator.h</name>
+  </compound>
+  <compound refid="p___drag_force_generator_8h" kind="file"><name>p_DragForceGenerator.h</name>
+  </compound>
+  <compound refid="p___force_generation_registry_8h" kind="file"><name>p_ForceGenerationRegistry.h</name>
+  </compound>
+  <compound refid="p___gravity_force_generator_8h" kind="file"><name>p_GravityForceGenerator.h</name>
+  </compound>
+  <compound refid="p___stiff_spring_force_generator_8h" kind="file"><name>p_StiffSpringForceGenerator.h</name>
+  </compound>
+  <compound refid="_i_rigidbody_force_generator_8h" kind="file"><name>IRigidbodyForceGenerator.h</name>
+  </compound>
+  <compound refid="rb___anchored_spring_force_generator_8h" kind="file"><name>rb_AnchoredSpringForceGenerator.h</name>
+  </compound>
+  <compound refid="rb___bungee_spring_force_generator_8h" kind="file"><name>rb_BungeeSpringForceGenerator.h</name>
+  </compound>
+  <compound refid="rb___buoyancy_force_generator_8h" kind="file"><name>rb_BuoyancyForceGenerator.h</name>
+  </compound>
+  <compound refid="rb___default_spring_force_generator_8h" kind="file"><name>rb_DefaultSpringForceGenerator.h</name>
+  </compound>
+  <compound refid="rb___drag_force_generator_8h" kind="file"><name>rb_DragForceGenerator.h</name>
+  </compound>
+  <compound refid="rb___force_generation_registry_8h" kind="file"><name>rb_ForceGenerationRegistry.h</name>
+  </compound>
+  <compound refid="rb___gravity_force_generator_8h" kind="file"><name>rb_GravityForceGenerator.h</name>
+  </compound>
+  <compound refid="rb___stiff_spring_force_generator_8h" kind="file"><name>rb_StiffSpringForceGenerator.h</name>
+  </compound>
+  <compound refid="_log_manager_8h" kind="file"><name>LogManager.h</name>
+  </compound>
+  <compound refid="_game_time_8h" kind="file"><name>GameTime.h</name>
+  </compound>
+  <compound refid="_mat3_8h" kind="file"><name>Mat3.h</name>
+  </compound>
+  <compound refid="_ray_8h" kind="file"><name>Ray.h</name>
+  </compound>
+  <compound refid="_transform_8h" kind="file"><name>Transform.h</name>
+  </compound>
+  <compound refid="_vector3_d_8h" kind="file"><name>Vector3D.h</name>
+  </compound>
+  <compound refid="mtrx_dynamic_world_8h" kind="file"><name>mtrxDynamicWorld.h</name>
+  </compound>
+  <compound refid="_particle_cable_coupling_8h" kind="file"><name>ParticleCableCoupling.h</name>
+  </compound>
+  <compound refid="_particle_collision_8h" kind="file"><name>ParticleCollision.h</name>
+  </compound>
+  <compound refid="_particle_collision_generator_8h" kind="file"><name>ParticleCollisionGenerator.h</name>
+  </compound>
+  <compound refid="_particle_collision_resolver_8h" kind="file"><name>ParticleCollisionResolver.h</name>
+  </compound>
+  <compound refid="_particle_coupling_8h" kind="file"><name>ParticleCoupling.h</name>
+  </compound>
+  <compound refid="_particle_rod_coupling_8h" kind="file"><name>ParticleRodCoupling.h</name>
+  </compound>
+  <compound refid="_precompiled_header_8h" kind="file"><name>PrecompiledHeader.h</name>
+  </compound>
+  <compound refid="_collider_detection_util_8h" kind="file"><name>ColliderDetectionUtil.h</name>
+  </compound>
+  <compound refid="_collision_util_8h" kind="file"><name>CollisionUtil.h</name>
+  </compound>
+  <compound refid="_g_j_k_util_8h" kind="file"><name>GJKUtil.h</name>
+  </compound>
+  <compound refid="_physics_util_8h" kind="file"><name>PhysicsUtil.h</name>
+  </compound>
+  <compound refid="_raycast_collision_util_8h" kind="file"><name>RaycastCollisionUtil.h</name>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="md__c_1__users_mohamed__desktop__m_t_r_x_engine__r_e_a_d_m_e" kind="page"><name>md_C:_Users_mohamed_Desktop_MTRXEngine_README</name>
+  </compound>
+  <compound refid="dir_9f9a41b3c21dc3f26dc26fb65c0828b3" kind="dir"><name>C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders</name>
+  </compound>
+  <compound refid="dir_63305fab0db907be762bc6579124e034" kind="dir"><name>C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/entities</name>
+  </compound>
+  <compound refid="dir_ffbadaee7cf52f3ed5f5b0e676c83adb" kind="dir"><name>C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators</name>
+  </compound>
+  <compound refid="dir_cab12f65e8dc04280660a3bb9abb9c33" kind="dir"><name>C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers</name>
+  </compound>
+  <compound refid="dir_29259fdef0e42ff0d9ee4351c851be8a" kind="dir"><name>C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/log</name>
+  </compound>
+  <compound refid="dir_e69e1485f6b1af872ba5f9a0ef1a029f" kind="dir"><name>C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math</name>
+  </compound>
+  <compound refid="dir_77772a241662164d3c37cb9fa301f353" kind="dir"><name>C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine</name>
+  </compound>
+  <compound refid="dir_2544766ceef90c0abf1c5635faf57c03" kind="dir"><name>C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine</name>
+  </compound>
+  <compound refid="dir_7357b0537c39116b195b6d8d98ce1935" kind="dir"><name>C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/ParticleGenerators</name>
+  </compound>
+  <compound refid="dir_94b8722e9c954e4a68821c8c4cdd9ff0" kind="dir"><name>C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/RigidbodyGenerators</name>
+  </compound>
+  <compound refid="dir_8cf3603bb5618e1ff05b1880e8c14424" kind="dir"><name>C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source</name>
+  </compound>
+  <compound refid="dir_e16e1e8a5c8b8f4e86022af71cb060c6" kind="dir"><name>C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils</name>
+  </compound>
+</doxygenindex>

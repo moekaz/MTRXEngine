@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="classmtrx_1_1_particle_cable_coupling" kind="class" language="C++" prot="public">
+    <compoundname>mtrx::ParticleCableCoupling</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">mtrx::ParticleCoupling</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classmtrx_1_1_particle_cable_coupling_1afb3c05833ecdbe577a40df811122aa18" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float mtrx::ParticleCableCoupling::maxLengthSqr</definition>
+        <argsstring></argsstring>
+        <name>maxLengthSqr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCableCoupling.h" line="15" column="7" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCableCoupling.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmtrx_1_1_particle_cable_coupling_1a45afc9980c7bd68f211391598b581b4e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float mtrx::ParticleCableCoupling::restitution</definition>
+        <argsstring></argsstring>
+        <name>restitution</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCableCoupling.h" line="16" column="7" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCableCoupling.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmtrx_1_1_particle_cable_coupling_1ac2fc69f872c47b94e6684e9e30bcc692" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mtrx::ParticleCableCoupling::ParticleCableCoupling</definition>
+        <argsstring>(float maxLengthSqr, float restitution)</argsstring>
+        <name>ParticleCableCoupling</name>
+        <param>
+          <type>float</type>
+          <declname>maxLengthSqr</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>restitution</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCableCoupling.h" line="18" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_particle_cable_coupling_1a0e52625cc712ae1406fa86683c36ddf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mtrx::ParticleCableCoupling::~ParticleCableCoupling</definition>
+        <argsstring>()</argsstring>
+        <name>~ParticleCableCoupling</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCableCoupling.h" line="19" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_particle_cable_coupling_1a4dbc5adfe3374a49c1b5916af1ac8ec4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void mtrx::ParticleCableCoupling::GenerateContact</definition>
+        <argsstring>(std::list&lt; ParticleCollision &gt; &amp;collisions, unsigned int limit)</argsstring>
+        <name>GenerateContact</name>
+        <param>
+          <type>std::list&lt; ParticleCollision &gt; &amp;</type>
+          <declname>collisions</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>limit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCableCoupling.h" line="21" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCableCoupling.h" line="13" column="1" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCableCoupling.h" bodystart="12" bodyend="22"/>
+    <listofallmembers>
+      <member refid="classmtrx_1_1_particle_cable_coupling_1a4dbc5adfe3374a49c1b5916af1ac8ec4" prot="public" virt="virtual"><scope>mtrx::ParticleCableCoupling</scope><name>GenerateContact</name></member>
+      <member refid="classmtrx_1_1_particle_coupling_1abeb4b0e35e85cd48eb4620b7cb631368" prot="public" virt="non-virtual"><scope>mtrx::ParticleCableCoupling</scope><name>GetCurrentLengthSqr</name></member>
+      <member refid="classmtrx_1_1_particle_cable_coupling_1afb3c05833ecdbe577a40df811122aa18" prot="public" virt="non-virtual"><scope>mtrx::ParticleCableCoupling</scope><name>maxLengthSqr</name></member>
+      <member refid="classmtrx_1_1_particle_cable_coupling_1ac2fc69f872c47b94e6684e9e30bcc692" prot="public" virt="non-virtual"><scope>mtrx::ParticleCableCoupling</scope><name>ParticleCableCoupling</name></member>
+      <member refid="classmtrx_1_1_particle_coupling_1a1404c90a6dcb0d60597a73ae8dd05dab" prot="public" virt="non-virtual"><scope>mtrx::ParticleCableCoupling</scope><name>ParticleCoupling</name></member>
+      <member refid="classmtrx_1_1_particle_coupling_1aacb85d6fa4de60e539581d394d150aaa" prot="public" virt="non-virtual"><scope>mtrx::ParticleCableCoupling</scope><name>particles</name></member>
+      <member refid="classmtrx_1_1_particle_cable_coupling_1a45afc9980c7bd68f211391598b581b4e" prot="public" virt="non-virtual"><scope>mtrx::ParticleCableCoupling</scope><name>restitution</name></member>
+      <member refid="classmtrx_1_1_particle_cable_coupling_1a0e52625cc712ae1406fa86683c36ddf8" prot="public" virt="non-virtual"><scope>mtrx::ParticleCableCoupling</scope><name>~ParticleCableCoupling</name></member>
+      <member refid="classmtrx_1_1_particle_coupling_1a0d230af1e21cc10cbd694dbb473bd2a6" prot="public" virt="non-virtual"><scope>mtrx::ParticleCableCoupling</scope><name>~ParticleCoupling</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

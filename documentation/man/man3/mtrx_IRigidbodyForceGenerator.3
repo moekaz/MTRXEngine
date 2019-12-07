@@ -1,0 +1,47 @@
+.TH "mtrx::IRigidbodyForceGenerator" 3 "Sat Dec 7 2019" "MTRX Engine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mtrx::IRigidbodyForceGenerator \- Force generation interface used to apply forces on rigidbodies\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <IRigidbodyForceGenerator\&.h>\fP
+.PP
+Inherited by mtrx::rb_AnchoredSpringForceGenerator, \fBmtrx::rb_BuoyancyForceGenerator\fP, mtrx::rb_DefaultSpringForceGenerator, mtrx::rb_DragForceGenerator, \fBmtrx::rb_GravityForceGenerator\fP, and mtrx::rb_StiffSpringForceGenerator\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBUpdateForces\fP (\fBRigidbody\fP *rb, float deltaTime)=0"
+.br
+.RI "Apply a certain force onto the given rigidbodies\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Force generation interface used to apply forces on rigidbodies\&. 
+
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void mtrx::IRigidbodyForceGenerator::UpdateForces (\fBRigidbody\fP * rb, float deltaTime)\fC [pure virtual]\fP"
+
+.PP
+Apply a certain force onto the given rigidbodies\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrb\fP The rigidbody we want to apply the force onto 
+.br
+\fIdeltaTime\fP The time elapsed since the previous frame 
+.RE
+.PP
+
+.PP
+Implemented in \fBmtrx::rb_BuoyancyForceGenerator\fP, and \fBmtrx::rb_GravityForceGenerator\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MTRX Engine from the source code\&.

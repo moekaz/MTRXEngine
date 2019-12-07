@@ -1,0 +1,203 @@
+.TH "mtrx::BVHNode< BoundingVolume >" 3 "Sat Dec 7 2019" "MTRX Engine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mtrx::BVHNode< BoundingVolume > \- An implementation of a BVH node used for Bounding Volume Hierarchies\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <BVHNode\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBVHNode\fP ()"
+.br
+.RI "Construct a new \fBBVHNode\fP object\&. "
+.ti -1c
+.RI "\fBBVHNode\fP (\fBBVHNode\fP< BoundingVolume > *parent, BoundingVolume &volume, \fBBody\fP *body=nullptr)"
+.br
+.RI "Construct a new \fBBVHNode\fP object\&. "
+.ti -1c
+.RI "\fB~BVHNode\fP ()"
+.br
+.RI "Destroy the \fBBVHNode\fP object\&. "
+.ti -1c
+.RI "bool \fBIsLeaf\fP ()"
+.br
+.RI "Check whether this node is a leaf\&. "
+.ti -1c
+.RI "bool \fBIsCollision\fP (\fBBVHNode\fP< BoundingVolume > &other)"
+.br
+.RI "Check whether 2 nodes collide by checking that the bounding volumes collide\&. "
+.ti -1c
+.RI "bool \fBDescendA\fP (\fBBVHNode\fP< BoundingVolume > &a, \fBBVHNode\fP< BoundingVolume > &b)"
+.br
+.RI "Utility function that allows that helps with figuring out which direction in the structure we want to go down when trying to find potential contacts\&. "
+.ti -1c
+.RI "void \fBGetPotentialContacts\fP (std::list< \fBPotentialCollision\fP > &potentialCollisions)"
+.br
+.RI "Get the Potential Contacts that could occur from the hierarchy\&. "
+.ti -1c
+.RI "void \fBInsert\fP (\fBBody\fP *body, \fBCollider\fP &collider)"
+.br
+.RI "Insert collider as a leaf of the stucture\&. We attempt to add it in a position in the tree where we would get the least amount of growth\&. "
+.ti -1c
+.RI "void \fBRecalculateBoundingVolume\fP ()"
+.br
+.RI "Recalculate the bounding volumes after the structure has been modified\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBBVHNode\fP< BoundingVolume > * \fBparent\fP"
+.br
+.ti -1c
+.RI "\fBBVHNode\fP< BoundingVolume > * \fBchildren\fP [2]"
+.br
+.ti -1c
+.RI "BoundingVolume \fBvolume\fP"
+.br
+.ti -1c
+.RI "\fBBody\fP * \fBbody\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class BoundingVolume>
+.br
+class mtrx::BVHNode< BoundingVolume >"
+An implementation of a BVH node used for Bounding Volume Hierarchies\&. 
+
+
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIBoundingVolume\fP The type of bounding volume that will be used within the hierarchy 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<class BoundingVolume> \fBmtrx::BVHNode\fP< BoundingVolume >::\fBBVHNode\fP ()"
+
+.PP
+Construct a new \fBBVHNode\fP object\&. 
+.SS "template<class BoundingVolume> \fBmtrx::BVHNode\fP< BoundingVolume >::\fBBVHNode\fP (\fBBVHNode\fP< BoundingVolume > * parent, BoundingVolume & volume, \fBBody\fP * body = \fCnullptr\fP)"
+
+.PP
+Construct a new \fBBVHNode\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP Parent of this node 
+.br
+\fIvolume\fP The bounding volume/collider used 
+.br
+\fIbody\fP The body that the \fBBVHNode\fP represents 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBmtrx::Body\fP 
+.RE
+.PP
+
+.SS "template<class BoundingVolume> \fBmtrx::BVHNode\fP< BoundingVolume >::~\fBBVHNode\fP ()"
+
+.PP
+Destroy the \fBBVHNode\fP object\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<class BoundingVolume> bool \fBmtrx::BVHNode\fP< BoundingVolume >::DescendA (\fBBVHNode\fP< BoundingVolume > & a, \fBBVHNode\fP< BoundingVolume > & b)\fC [inline]\fP"
+
+.PP
+Utility function that allows that helps with figuring out which direction in the structure we want to go down when trying to find potential contacts\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa\fP 
+.br
+\fIb\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true 
+.PP
+false 
+.RE
+.PP
+
+.SS "template<class BoundingVolume> void \fBmtrx::BVHNode\fP< BoundingVolume >::GetPotentialContacts (std::list< \fBPotentialCollision\fP > & potentialCollisions)"
+
+.PP
+Get the Potential Contacts that could occur from the hierarchy\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpotentialCollisions\fP Structure to store the potential collsions 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBmtrx::PotentialCollision\fP 
+.RE
+.PP
+
+.SS "template<class BoundingVolume> void \fBmtrx::BVHNode\fP< BoundingVolume >::Insert (\fBBody\fP * body, \fBCollider\fP & collider)"
+
+.PP
+Insert collider as a leaf of the stucture\&. We attempt to add it in a position in the tree where we would get the least amount of growth\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbody\fP The body that we want to add 
+.br
+\fIcollider\fP The bounding volume that we want to add 
+.RE
+.PP
+
+.SS "template<class BoundingVolume> bool \fBmtrx::BVHNode\fP< BoundingVolume >::IsCollision (\fBBVHNode\fP< BoundingVolume > & other)\fC [inline]\fP"
+
+.PP
+Check whether 2 nodes collide by checking that the bounding volumes collide\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIother\fP The \fBBVHNode\fP that we want to check collision with 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true The 2 nodes collide 
+.PP
+false The 2 nodes do not collide 
+.RE
+.PP
+
+.SS "template<class BoundingVolume> bool \fBmtrx::BVHNode\fP< BoundingVolume >::IsLeaf ()\fC [inline]\fP"
+
+.PP
+Check whether this node is a leaf\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true This node is a leaf 
+.PP
+false This node is not a leaf and has at least one child 
+.RE
+.PP
+
+.SS "template<class BoundingVolume> void \fBmtrx::BVHNode\fP< BoundingVolume >::RecalculateBoundingVolume ()"
+
+.PP
+Recalculate the bounding volumes after the structure has been modified\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MTRX Engine from the source code\&.

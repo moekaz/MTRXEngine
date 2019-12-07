@@ -1,0 +1,294 @@
+.TH "mtrx::ConvexShapeCollider" 3 "Sat Dec 7 2019" "MTRX Engine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mtrx::ConvexShapeCollider \- Implementation of a Convex Shape collider\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ConvexShapeCollider\&.h>\fP
+.PP
+Inherits \fBmtrx::Collider\fP\&.
+.PP
+Inherited by \fBmtrx::AABBCollider\fP, and \fBmtrx::OOBBCollider\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConvexShapeCollider\fP (const \fBColliderType\fP &colliderType=ColliderType::ConvexShape, const glm::vec3 &center=glm::vec3(), const glm::quat &orientation=glm::angleAxis(0\&.f, worldUp), const glm::vec3 &scale=glm::vec3(1, 1, 1))"
+.br
+.RI "Construct a new Convex Shape \fBCollider\fP object\&. "
+.ti -1c
+.RI "\fBConvexShapeCollider\fP (const \fBColliderType\fP &colliderType=ColliderType::ConvexShape, const \fBTransform\fP &transform=\fBTransform\fP())"
+.br
+.RI "Construct a new Convex Shape \fBCollider\fP object\&. "
+.ti -1c
+.RI "\fBConvexShapeCollider\fP (const \fBColliderType\fP &colliderType=ColliderType::ConvexShape, const std::vector< glm::vec3 * > &vertices=std::vector< glm::vec3 * >(), const glm::vec3 &center=glm::vec3(), const glm::quat &orientation=glm::angleAxis(0\&.f, glm::vec3(0, 1, 0)), const glm::vec3 &scale=glm::vec3(1, 1, 1))"
+.br
+.RI "Construct a new Convex Shape \fBCollider\fP object\&. "
+.ti -1c
+.RI "\fBConvexShapeCollider\fP (const \fBColliderType\fP &colliderType=ColliderType::ConvexShape, const std::vector< glm::vec3 * > &vertices=std::vector< glm::vec3 * >(), const \fBTransform\fP &transform=\fBTransform\fP())"
+.br
+.RI "Construct a new Convex Shape \fBCollider\fP object\&. "
+.ti -1c
+.RI "virtual \fB~ConvexShapeCollider\fP ()"
+.br
+.RI "Destroy the Convex Shape \fBCollider\fP object\&. "
+.ti -1c
+.RI "virtual bool \fBRaycastCollision\fP (const \fBRay\fP &ray) override"
+.br
+.RI "Raycast collision check with convex shape colliders\&. "
+.ti -1c
+.RI "std::vector< glm::vec3 * > * \fBGetVertices\fP () const"
+.br
+.RI "Get the Vertices of the convex shape collider\&. "
+.ti -1c
+.RI "glm::mat4 \fBGetModelMatrix\fP () const"
+.br
+.RI "Get the Model Matrix of the convex shape collider\&. "
+.ti -1c
+.RI "virtual void \fBSetPosition\fP (const glm::vec3 &pos) override"
+.br
+.RI "Set the Position of the convex shape collider\&. "
+.ti -1c
+.RI "virtual void \fBSetScale\fP (const glm::vec3 &scale) override"
+.br
+.RI "Set the Scale of the collider\&. "
+.ti -1c
+.RI "virtual void \fBSetOrientation\fP (const glm::quat &quat) override"
+.br
+.RI "Set the Orientation of the collider\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::vector< glm::vec3 * > \fBvertices\fP"
+.br
+.ti -1c
+.RI "std::vector< glm::vec3 * > \fBtransformedVertices\fP"
+.br
+.ti -1c
+.RI "bool \fBtransformModified\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Implementation of a Convex Shape collider\&. 
+
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "mtrx::ConvexShapeCollider::ConvexShapeCollider (const \fBColliderType\fP & colliderType = \fCColliderType::ConvexShape\fP, const glm::vec3 & center = \fCglm::vec3()\fP, const glm::quat & orientation = \fCglm::angleAxis(0\&.f, worldUp)\fP, const glm::vec3 & scale = \fCglm::vec3(1, 1, 1)\fP)"
+
+.PP
+Construct a new Convex Shape \fBCollider\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcolliderType\fP The type of collider we are creating\&. The default is a convex shape however we can have other type 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBmtrx::AABBCollider\fP 
+.PP
+\fBmtrx::OOBBCollider\fP 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIcenter\fP The center of the collider 
+.br
+\fIorientation\fP The orientation of the collider 
+.br
+\fIscale\fP The scale of the collider 
+.RE
+.PP
+
+.SS "mtrx::ConvexShapeCollider::ConvexShapeCollider (const \fBColliderType\fP & colliderType = \fCColliderType::ConvexShape\fP, const \fBTransform\fP & transform = \fC\fBTransform\fP()\fP)"
+
+.PP
+Construct a new Convex Shape \fBCollider\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcolliderType\fP The type of collider we are creating\&. The default is a convex shape however we can have other type 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBmtrx::AABBCollider\fP 
+.PP
+\fBmtrx::OOBBCollider\fP 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fItransform\fP The transform of the collider 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBmtrx::Transform\fP 
+.RE
+.PP
+
+.SS "mtrx::ConvexShapeCollider::ConvexShapeCollider (const \fBColliderType\fP & colliderType = \fCColliderType::ConvexShape\fP, const std::vector< glm::vec3 * > & vertices = \fCstd::vector< glm::vec3 * >()\fP, const glm::vec3 & center = \fCglm::vec3()\fP, const glm::quat & orientation = \fCglm::angleAxis(0\&.f, glm::vec3(0, 1, 0))\fP, const glm::vec3 & scale = \fCglm::vec3(1, 1, 1)\fP)"
+
+.PP
+Construct a new Convex Shape \fBCollider\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcolliderType\fP The type of collider we are creating\&. The default is a convex shape however we can have other type 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBmtrx::AABBCollider\fP 
+.PP
+\fBmtrx::OOBBCollider\fP 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIvertices\fP The vertices of the convex shape collider 
+.br
+\fIcenter\fP The center of the collider 
+.br
+\fIorientation\fP The orientation of the collider 
+.br
+\fIscale\fP The scale of the collider 
+.RE
+.PP
+
+.SS "mtrx::ConvexShapeCollider::ConvexShapeCollider (const \fBColliderType\fP & colliderType = \fCColliderType::ConvexShape\fP, const std::vector< glm::vec3 * > & vertices = \fCstd::vector< glm::vec3 * >()\fP, const \fBTransform\fP & transform = \fC\fBTransform\fP()\fP)"
+
+.PP
+Construct a new Convex Shape \fBCollider\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcolliderType\fP The type of collider we are creating\&. The default is a convex shape however we can have other type 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBmtrx::AABBCollider\fP 
+.PP
+\fBmtrx::OOBBCollider\fP 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIvertices\fP The vertices of the convex shape collider 
+.br
+\fItransform\fP The transform of the collider 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+mtrx::Trnasform 
+.RE
+.PP
+
+.SS "virtual mtrx::ConvexShapeCollider::~ConvexShapeCollider ()\fC [virtual]\fP"
+
+.PP
+Destroy the Convex Shape \fBCollider\fP object\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "glm::mat4 mtrx::ConvexShapeCollider::GetModelMatrix () const"
+
+.PP
+Get the Model Matrix of the convex shape collider\&. 
+.PP
+\fBReturns\fP
+.RS 4
+glm::mat4 The model matrix of the convex shape collider 
+.RE
+.PP
+
+.SS "std::vector<glm::vec3*>* mtrx::ConvexShapeCollider::GetVertices () const"
+
+.PP
+Get the Vertices of the convex shape collider\&. 
+.PP
+\fBReturns\fP
+.RS 4
+std::vector<glm::vec3*>* A pointer to the transformed vertices of the collider 
+.RE
+.PP
+
+.SS "virtual bool mtrx::ConvexShapeCollider::RaycastCollision (const \fBRay\fP & ray)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Raycast collision check with convex shape colliders\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIray\fP The ray that we want to cast 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true The ray and the colliders collide 
+.PP
+false The ray and colliders do not collide 
+.RE
+.PP
+
+.PP
+Implements \fBmtrx::Collider\fP\&.
+.PP
+Reimplemented in \fBmtrx::OOBBCollider\fP, and \fBmtrx::AABBCollider\fP\&.
+.SS "virtual void mtrx::ConvexShapeCollider::SetOrientation (const glm::quat & quat)\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Set the Orientation of the collider\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIquat\fP The new orientation of the collider 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBmtrx::Collider\fP\&.
+.PP
+Reimplemented in \fBmtrx::AABBCollider\fP\&.
+.SS "virtual void mtrx::ConvexShapeCollider::SetPosition (const glm::vec3 & pos)\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Set the Position of the convex shape collider\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP The new position of the collider 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBmtrx::Collider\fP\&.
+.SS "virtual void mtrx::ConvexShapeCollider::SetScale (const glm::vec3 & scale)\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Set the Scale of the collider\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIscale\fP The new scale of the collider 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBmtrx::Collider\fP\&.
+.PP
+Reimplemented in \fBmtrx::AABBCollider\fP, and \fBmtrx::OOBBCollider\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MTRX Engine from the source code\&.

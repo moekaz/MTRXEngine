@@ -1,0 +1,205 @@
+\hypertarget{classmtrx_1_1_a_a_b_b_collider}{}\doxysection{mtrx\+::A\+A\+B\+B\+Collider Class Reference}
+\label{classmtrx_1_1_a_a_b_b_collider}\index{mtrx::AABBCollider@{mtrx::AABBCollider}}
+
+
+Implmentation of an Axis Aligned Bounding Box used for collision systems.  
+
+
+
+
+{\ttfamily \#include $<$A\+A\+B\+B\+Collider.\+h$>$}
+
+Inheritance diagram for mtrx\+::A\+A\+B\+B\+Collider\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classmtrx_1_1_a_a_b_b_collider}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmtrx_1_1_a_a_b_b_collider_a81573e91c21af002a33f7ae896c1fb58}{A\+A\+B\+B\+Collider}} (const glm\+::vec3 \&center=glm\+::vec3(), const glm\+::vec3 \&scale=glm\+::vec3(1, 1, 1))
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classmtrx_1_1_a_a_b_b_collider}{A\+A\+B\+B\+Collider}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classmtrx_1_1_a_a_b_b_collider_ab2a1acb8bbc4419fc2df64bdfca516e8}{$\sim$\+A\+A\+B\+B\+Collider}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classmtrx_1_1_a_a_b_b_collider}{A\+A\+B\+B\+Collider}} object. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classmtrx_1_1_a_a_b_b_collider_ac618c2f04d88d448668dcc7efbf513e3}{Raycast\+Collision}} (const \mbox{\hyperlink{classmtrx_1_1_ray}{Ray}} \&ray) override
+\begin{DoxyCompactList}\small\item\em Collision function between a ray and an A\+A\+BB. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmtrx_1_1_a_a_b_b_collider_a50a3eed64eb69d3568386978181026da}{Set\+Orientation}} (const glm\+::quat \&orientation) override
+\begin{DoxyCompactList}\small\item\em This function should not be used and is empty as A\+A\+B\+Bs should not change orientations. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{classmtrx_1_1_a_a_b_b_collider_a7a228dca65e647d58c1e9d3b3dce4f4e}{Get\+Size}} () override
+\begin{DoxyCompactList}\small\item\em Calculate the size of an A\+A\+BB defined as length $\ast$ width $\ast$ height. \end{DoxyCompactList}\item 
+const glm\+::vec3 $\ast$ \mbox{\hyperlink{classmtrx_1_1_a_a_b_b_collider_a9120ec0049b6c970fd89483e38893348}{Get\+Axes}} () const
+\begin{DoxyCompactList}\small\item\em Get the Axes that define the A\+A\+BB\textquotesingle{}s world They would constant in this case since the orientation never changes. \end{DoxyCompactList}\item 
+const float $\ast$ \mbox{\hyperlink{classmtrx_1_1_a_a_b_b_collider_aa55065fc50bb1929982a434b18db157c}{Get\+Half\+Extents}} () const
+\begin{DoxyCompactList}\small\item\em Get the Half Extents of the A\+A\+BB (This is the const version) \end{DoxyCompactList}\item 
+float $\ast$ \mbox{\hyperlink{classmtrx_1_1_a_a_b_b_collider_a80f7842f57506dd4010e854b5f53870e}{Get\+Half\+Extents}} ()
+\item 
+virtual void \mbox{\hyperlink{classmtrx_1_1_a_a_b_b_collider_ac0cc88fabe8819ec1578d8999e248eaf}{Set\+Scale}} (const glm\+::vec3 \&scale) override
+\begin{DoxyCompactList}\small\item\em Set the Scale object overriden to modify the half\+Extents to represent scale change. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_a_a_b_b_collider_a4c16d0fe60e8d12c5b47439d2d69ac19}\label{classmtrx_1_1_a_a_b_b_collider_a4c16d0fe60e8d12c5b47439d2d69ac19}} 
+float {\bfseries half\+Extents} \mbox{[}3\mbox{]}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_a_a_b_b_collider_a76310ed329d8f1968938a6f158a2ee6a}\label{classmtrx_1_1_a_a_b_b_collider_a76310ed329d8f1968938a6f158a2ee6a}} 
+\mbox{\hyperlink{structmtrx_1_1_object_axes}{Object\+Axes}} {\bfseries axes}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Implmentation of an Axis Aligned Bounding Box used for collision systems. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmtrx_1_1_a_a_b_b_collider_a81573e91c21af002a33f7ae896c1fb58}\label{classmtrx_1_1_a_a_b_b_collider_a81573e91c21af002a33f7ae896c1fb58}} 
+\index{mtrx::AABBCollider@{mtrx::AABBCollider}!AABBCollider@{AABBCollider}}
+\index{AABBCollider@{AABBCollider}!mtrx::AABBCollider@{mtrx::AABBCollider}}
+\doxysubsubsection{\texorpdfstring{AABBCollider()}{AABBCollider()}}
+{\footnotesize\ttfamily mtrx\+::\+A\+A\+B\+B\+Collider\+::\+A\+A\+B\+B\+Collider (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{center = {\ttfamily glm\+:\+:vec3()},  }\item[{const glm\+::vec3 \&}]{scale = {\ttfamily glm\+:\+:vec3(1,~1,~1)} }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classmtrx_1_1_a_a_b_b_collider}{A\+A\+B\+B\+Collider}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em center} & Center point of the A\+A\+BB \\
+\hline
+{\em scale} & Scale vector of the A\+A\+BB \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classmtrx_1_1_transform}{mtrx\+::\+Transform}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classmtrx_1_1_a_a_b_b_collider_ab2a1acb8bbc4419fc2df64bdfca516e8}\label{classmtrx_1_1_a_a_b_b_collider_ab2a1acb8bbc4419fc2df64bdfca516e8}} 
+\index{mtrx::AABBCollider@{mtrx::AABBCollider}!````~AABBCollider@{$\sim$AABBCollider}}
+\index{````~AABBCollider@{$\sim$AABBCollider}!mtrx::AABBCollider@{mtrx::AABBCollider}}
+\doxysubsubsection{\texorpdfstring{$\sim$AABBCollider()}{~AABBCollider()}}
+{\footnotesize\ttfamily virtual mtrx\+::\+A\+A\+B\+B\+Collider\+::$\sim$\+A\+A\+B\+B\+Collider (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destroy the \mbox{\hyperlink{classmtrx_1_1_a_a_b_b_collider}{A\+A\+B\+B\+Collider}} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmtrx_1_1_a_a_b_b_collider_a9120ec0049b6c970fd89483e38893348}\label{classmtrx_1_1_a_a_b_b_collider_a9120ec0049b6c970fd89483e38893348}} 
+\index{mtrx::AABBCollider@{mtrx::AABBCollider}!GetAxes@{GetAxes}}
+\index{GetAxes@{GetAxes}!mtrx::AABBCollider@{mtrx::AABBCollider}}
+\doxysubsubsection{\texorpdfstring{GetAxes()}{GetAxes()}}
+{\footnotesize\ttfamily const glm\+::vec3$\ast$ mtrx\+::\+A\+A\+B\+B\+Collider\+::\+Get\+Axes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Axes that define the A\+A\+BB\textquotesingle{}s world They would constant in this case since the orientation never changes. 
+
+\begin{DoxyReturn}{Returns}
+const glm\+::vec3$\ast$ pointer to the array of 3 axes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_a_a_b_b_collider_a80f7842f57506dd4010e854b5f53870e}\label{classmtrx_1_1_a_a_b_b_collider_a80f7842f57506dd4010e854b5f53870e}} 
+\index{mtrx::AABBCollider@{mtrx::AABBCollider}!GetHalfExtents@{GetHalfExtents}}
+\index{GetHalfExtents@{GetHalfExtents}!mtrx::AABBCollider@{mtrx::AABBCollider}}
+\doxysubsubsection{\texorpdfstring{GetHalfExtents()}{GetHalfExtents()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily float$\ast$ mtrx\+::\+A\+A\+B\+B\+Collider\+::\+Get\+Half\+Extents (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Non const version of \mbox{\hyperlink{classmtrx_1_1_a_a_b_b_collider_a80f7842f57506dd4010e854b5f53870e}{Get\+Half\+Extents()}}
+
+\begin{DoxyReturn}{Returns}
+float$\ast$ pointer to the array of half\+Extents 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_a_a_b_b_collider_aa55065fc50bb1929982a434b18db157c}\label{classmtrx_1_1_a_a_b_b_collider_aa55065fc50bb1929982a434b18db157c}} 
+\index{mtrx::AABBCollider@{mtrx::AABBCollider}!GetHalfExtents@{GetHalfExtents}}
+\index{GetHalfExtents@{GetHalfExtents}!mtrx::AABBCollider@{mtrx::AABBCollider}}
+\doxysubsubsection{\texorpdfstring{GetHalfExtents()}{GetHalfExtents()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const float$\ast$ mtrx\+::\+A\+A\+B\+B\+Collider\+::\+Get\+Half\+Extents (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Half Extents of the A\+A\+BB (This is the const version) 
+
+\begin{DoxyReturn}{Returns}
+const float$\ast$ pointer to the array of half extents values in each dimension 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_a_a_b_b_collider_a7a228dca65e647d58c1e9d3b3dce4f4e}\label{classmtrx_1_1_a_a_b_b_collider_a7a228dca65e647d58c1e9d3b3dce4f4e}} 
+\index{mtrx::AABBCollider@{mtrx::AABBCollider}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!mtrx::AABBCollider@{mtrx::AABBCollider}}
+\doxysubsubsection{\texorpdfstring{GetSize()}{GetSize()}}
+{\footnotesize\ttfamily virtual float mtrx\+::\+A\+A\+B\+B\+Collider\+::\+Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Calculate the size of an A\+A\+BB defined as length $\ast$ width $\ast$ height. 
+
+
+
+Implements \mbox{\hyperlink{classmtrx_1_1_i_bounding_volume}{mtrx\+::\+I\+Bounding\+Volume}}.
+
+\mbox{\Hypertarget{classmtrx_1_1_a_a_b_b_collider_ac618c2f04d88d448668dcc7efbf513e3}\label{classmtrx_1_1_a_a_b_b_collider_ac618c2f04d88d448668dcc7efbf513e3}} 
+\index{mtrx::AABBCollider@{mtrx::AABBCollider}!RaycastCollision@{RaycastCollision}}
+\index{RaycastCollision@{RaycastCollision}!mtrx::AABBCollider@{mtrx::AABBCollider}}
+\doxysubsubsection{\texorpdfstring{RaycastCollision()}{RaycastCollision()}}
+{\footnotesize\ttfamily virtual bool mtrx\+::\+A\+A\+B\+B\+Collider\+::\+Raycast\+Collision (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmtrx_1_1_ray}{Ray}} \&}]{ray }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Collision function between a ray and an A\+A\+BB. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray that we will be checking collision on \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+mtrx\+::ray
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+true If there is a collision 
+
+false If there is no collision 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classmtrx_1_1_convex_shape_collider_a44fba7247c98212c60e0eec4e16e74ec}{mtrx\+::\+Convex\+Shape\+Collider}}.
+
+\mbox{\Hypertarget{classmtrx_1_1_a_a_b_b_collider_a50a3eed64eb69d3568386978181026da}\label{classmtrx_1_1_a_a_b_b_collider_a50a3eed64eb69d3568386978181026da}} 
+\index{mtrx::AABBCollider@{mtrx::AABBCollider}!SetOrientation@{SetOrientation}}
+\index{SetOrientation@{SetOrientation}!mtrx::AABBCollider@{mtrx::AABBCollider}}
+\doxysubsubsection{\texorpdfstring{SetOrientation()}{SetOrientation()}}
+{\footnotesize\ttfamily virtual void mtrx\+::\+A\+A\+B\+B\+Collider\+::\+Set\+Orientation (\begin{DoxyParamCaption}\item[{const glm\+::quat \&}]{orientation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This function should not be used and is empty as A\+A\+B\+Bs should not change orientations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em orientation} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classmtrx_1_1_convex_shape_collider_af86aa5dae629acb4076d15dcad004c7c}{mtrx\+::\+Convex\+Shape\+Collider}}.
+
+\mbox{\Hypertarget{classmtrx_1_1_a_a_b_b_collider_ac0cc88fabe8819ec1578d8999e248eaf}\label{classmtrx_1_1_a_a_b_b_collider_ac0cc88fabe8819ec1578d8999e248eaf}} 
+\index{mtrx::AABBCollider@{mtrx::AABBCollider}!SetScale@{SetScale}}
+\index{SetScale@{SetScale}!mtrx::AABBCollider@{mtrx::AABBCollider}}
+\doxysubsubsection{\texorpdfstring{SetScale()}{SetScale()}}
+{\footnotesize\ttfamily virtual void mtrx\+::\+A\+A\+B\+B\+Collider\+::\+Set\+Scale (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the Scale object overriden to modify the half\+Extents to represent scale change. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scale} & The new scale vector of the A\+A\+BB \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classmtrx_1_1_convex_shape_collider_a1de37ecfb1bd42e43201c09c6e5a980f}{mtrx\+::\+Convex\+Shape\+Collider}}.
+

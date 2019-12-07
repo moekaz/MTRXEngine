@@ -1,0 +1,238 @@
+\hypertarget{classmtrx_1_1_sphere_collider}{}\doxysection{mtrx\+::Sphere\+Collider Class Reference}
+\label{classmtrx_1_1_sphere_collider}\index{mtrx::SphereCollider@{mtrx::SphereCollider}}
+
+
+Implmentation of a Sphere collider used in collision systems.  
+
+
+
+
+{\ttfamily \#include $<$Sphere\+Collider.\+h$>$}
+
+Inheritance diagram for mtrx\+::Sphere\+Collider\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmtrx_1_1_sphere_collider}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmtrx_1_1_sphere_collider_abc022d7d5ff0186f00ef4974b00e793d}{Sphere\+Collider}} (const glm\+::vec3 \&center=glm\+::vec3(), const glm\+::quat \&orientation=glm\+::angle\+Axis(0.f, world\+Up), const glm\+::vec3 \&scale=glm\+::vec3(1, 1, 1), float radius=0.\+5)
+\begin{DoxyCompactList}\small\item\em Construct a new Sphere \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmtrx_1_1_sphere_collider_aa557e71fcb3ab1c2ce742f95a08f26ed}{Sphere\+Collider}} (const \mbox{\hyperlink{classmtrx_1_1_transform}{Transform}} \&transform=\mbox{\hyperlink{classmtrx_1_1_transform}{Transform}}(), float radius=0.\+5)
+\begin{DoxyCompactList}\small\item\em Construct a new Sphere \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmtrx_1_1_sphere_collider_a743fd3eb6a3a62c8603c741a6a97c9ff}{Sphere\+Collider}} (const \mbox{\hyperlink{classmtrx_1_1_sphere_collider}{Sphere\+Collider}} \&collider1, const \mbox{\hyperlink{classmtrx_1_1_sphere_collider}{Sphere\+Collider}} \&collider2)
+\begin{DoxyCompactList}\small\item\em Construct a new Sphere \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} object that encompass 2 sphere colliders (used within the context of B\+VH construction mainly) \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classmtrx_1_1_sphere_collider_ab7aa2376558cd6cb30e2ec452dd34578}{$\sim$\+Sphere\+Collider}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the Sphere \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} object. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classmtrx_1_1_sphere_collider_adf3567008a057fe1332d922b7f82c29e}{Raycast\+Collision}} (const \mbox{\hyperlink{classmtrx_1_1_ray}{Ray}} \&ray) override
+\begin{DoxyCompactList}\small\item\em Raycast collision check for sphere colliders. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{classmtrx_1_1_sphere_collider_a5d28c296930c245dc4c28a132fe7d494}{Get\+Size}} () override
+\begin{DoxyCompactList}\small\item\em Get the Size of the sphere (4/3 $\ast$ PI $\ast$ radius$^\wedge$3) \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{classmtrx_1_1_sphere_collider_abd5794eb14eb42d024c40ba2897692e2}{Get\+Growth}} (const \mbox{\hyperlink{classmtrx_1_1_sphere_collider}{Sphere\+Collider}} \&sphere\+Collider)
+\begin{DoxyCompactList}\small\item\em Get the Growth when creating a sphere collider between this collider and another sphere collider (for B\+VH construction) \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classmtrx_1_1_sphere_collider_a5b754ba68a455a0fba788d9e17fff3b7}{Get\+Radius}} () const
+\begin{DoxyCompactList}\small\item\em Get the Radius of the collider. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_sphere_collider_aef2bf511296aa0b5c7c9e460596c1168}{Set\+Radius}} (float radius)
+\begin{DoxyCompactList}\small\item\em Set the Radius of the collider. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmtrx_1_1_sphere_collider_ad238eaded51ef815efaf350a632d4ed0}{Set\+Scale}} (const glm\+::vec3 \&scale) override
+\begin{DoxyCompactList}\small\item\em Set the Scale of the sphere collider. Only the X coordinate of the scale affects the collider, other coordinates are ignored. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_sphere_collider_acfd2efbf284311c23d79e3e765197691}\label{classmtrx_1_1_sphere_collider_acfd2efbf284311c23d79e3e765197691}} 
+float {\bfseries radius}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Implmentation of a Sphere collider used in collision systems. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmtrx_1_1_sphere_collider_abc022d7d5ff0186f00ef4974b00e793d}\label{classmtrx_1_1_sphere_collider_abc022d7d5ff0186f00ef4974b00e793d}} 
+\index{mtrx::SphereCollider@{mtrx::SphereCollider}!SphereCollider@{SphereCollider}}
+\index{SphereCollider@{SphereCollider}!mtrx::SphereCollider@{mtrx::SphereCollider}}
+\doxysubsubsection{\texorpdfstring{SphereCollider()}{SphereCollider()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily mtrx\+::\+Sphere\+Collider\+::\+Sphere\+Collider (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{center = {\ttfamily glm\+:\+:vec3()},  }\item[{const glm\+::quat \&}]{orientation = {\ttfamily glm\+:\+:angleAxis(0.f,~worldUp)},  }\item[{const glm\+::vec3 \&}]{scale = {\ttfamily glm\+:\+:vec3(1,~1,~1)},  }\item[{float}]{radius = {\ttfamily 0.5} }\end{DoxyParamCaption})}
+
+
+
+Construct a new Sphere \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em center} & Center position of the sphere \\
+\hline
+{\em orientation} & The orientation of the sphere \\
+\hline
+{\em scale} & The scale of the sphere (influences the radius of the collider) \\
+\hline
+{\em radius} & The default radius of the sphere \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_sphere_collider_aa557e71fcb3ab1c2ce742f95a08f26ed}\label{classmtrx_1_1_sphere_collider_aa557e71fcb3ab1c2ce742f95a08f26ed}} 
+\index{mtrx::SphereCollider@{mtrx::SphereCollider}!SphereCollider@{SphereCollider}}
+\index{SphereCollider@{SphereCollider}!mtrx::SphereCollider@{mtrx::SphereCollider}}
+\doxysubsubsection{\texorpdfstring{SphereCollider()}{SphereCollider()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily mtrx\+::\+Sphere\+Collider\+::\+Sphere\+Collider (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmtrx_1_1_transform}{Transform}} \&}]{transform = {\ttfamily \mbox{\hyperlink{classmtrx_1_1_transform}{Transform}}()},  }\item[{float}]{radius = {\ttfamily 0.5} }\end{DoxyParamCaption})}
+
+
+
+Construct a new Sphere \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transform} & The transform of the sphere (position, orientation, scale) \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classmtrx_1_1_transform}{mtrx\+::\+Transform}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & the default radius of the sphere \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_sphere_collider_a743fd3eb6a3a62c8603c741a6a97c9ff}\label{classmtrx_1_1_sphere_collider_a743fd3eb6a3a62c8603c741a6a97c9ff}} 
+\index{mtrx::SphereCollider@{mtrx::SphereCollider}!SphereCollider@{SphereCollider}}
+\index{SphereCollider@{SphereCollider}!mtrx::SphereCollider@{mtrx::SphereCollider}}
+\doxysubsubsection{\texorpdfstring{SphereCollider()}{SphereCollider()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily mtrx\+::\+Sphere\+Collider\+::\+Sphere\+Collider (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmtrx_1_1_sphere_collider}{Sphere\+Collider}} \&}]{collider1,  }\item[{const \mbox{\hyperlink{classmtrx_1_1_sphere_collider}{Sphere\+Collider}} \&}]{collider2 }\end{DoxyParamCaption})}
+
+
+
+Construct a new Sphere \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} object that encompass 2 sphere colliders (used within the context of B\+VH construction mainly) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collider1} & First sphere collider \\
+\hline
+{\em collider2} & Second sphere collider \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_sphere_collider_ab7aa2376558cd6cb30e2ec452dd34578}\label{classmtrx_1_1_sphere_collider_ab7aa2376558cd6cb30e2ec452dd34578}} 
+\index{mtrx::SphereCollider@{mtrx::SphereCollider}!````~SphereCollider@{$\sim$SphereCollider}}
+\index{````~SphereCollider@{$\sim$SphereCollider}!mtrx::SphereCollider@{mtrx::SphereCollider}}
+\doxysubsubsection{\texorpdfstring{$\sim$SphereCollider()}{~SphereCollider()}}
+{\footnotesize\ttfamily virtual mtrx\+::\+Sphere\+Collider\+::$\sim$\+Sphere\+Collider (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destroy the Sphere \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmtrx_1_1_sphere_collider_abd5794eb14eb42d024c40ba2897692e2}\label{classmtrx_1_1_sphere_collider_abd5794eb14eb42d024c40ba2897692e2}} 
+\index{mtrx::SphereCollider@{mtrx::SphereCollider}!GetGrowth@{GetGrowth}}
+\index{GetGrowth@{GetGrowth}!mtrx::SphereCollider@{mtrx::SphereCollider}}
+\doxysubsubsection{\texorpdfstring{GetGrowth()}{GetGrowth()}}
+{\footnotesize\ttfamily virtual float mtrx\+::\+Sphere\+Collider\+::\+Get\+Growth (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmtrx_1_1_sphere_collider}{Sphere\+Collider}} \&}]{sphere\+Collider }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the Growth when creating a sphere collider between this collider and another sphere collider (for B\+VH construction) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sphere\+Collider} & the sphere collider that we want to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float The growth value of the resulting sphere collider 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_sphere_collider_a5b754ba68a455a0fba788d9e17fff3b7}\label{classmtrx_1_1_sphere_collider_a5b754ba68a455a0fba788d9e17fff3b7}} 
+\index{mtrx::SphereCollider@{mtrx::SphereCollider}!GetRadius@{GetRadius}}
+\index{GetRadius@{GetRadius}!mtrx::SphereCollider@{mtrx::SphereCollider}}
+\doxysubsubsection{\texorpdfstring{GetRadius()}{GetRadius()}}
+{\footnotesize\ttfamily float mtrx\+::\+Sphere\+Collider\+::\+Get\+Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Radius of the collider. 
+
+\begin{DoxyReturn}{Returns}
+float Radius of collider 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_sphere_collider_a5d28c296930c245dc4c28a132fe7d494}\label{classmtrx_1_1_sphere_collider_a5d28c296930c245dc4c28a132fe7d494}} 
+\index{mtrx::SphereCollider@{mtrx::SphereCollider}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!mtrx::SphereCollider@{mtrx::SphereCollider}}
+\doxysubsubsection{\texorpdfstring{GetSize()}{GetSize()}}
+{\footnotesize\ttfamily virtual float mtrx\+::\+Sphere\+Collider\+::\+Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the Size of the sphere (4/3 $\ast$ PI $\ast$ radius$^\wedge$3) 
+
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classmtrx_1_1_i_bounding_volume}{mtrx\+::\+I\+Bounding\+Volume}}.
+
+\mbox{\Hypertarget{classmtrx_1_1_sphere_collider_adf3567008a057fe1332d922b7f82c29e}\label{classmtrx_1_1_sphere_collider_adf3567008a057fe1332d922b7f82c29e}} 
+\index{mtrx::SphereCollider@{mtrx::SphereCollider}!RaycastCollision@{RaycastCollision}}
+\index{RaycastCollision@{RaycastCollision}!mtrx::SphereCollider@{mtrx::SphereCollider}}
+\doxysubsubsection{\texorpdfstring{RaycastCollision()}{RaycastCollision()}}
+{\footnotesize\ttfamily virtual bool mtrx\+::\+Sphere\+Collider\+::\+Raycast\+Collision (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmtrx_1_1_ray}{Ray}} \&}]{ray }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Raycast collision check for sphere colliders. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray that we are check for collision on \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classmtrx_1_1_ray}{mtrx\+::\+Ray}} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+true The ray and the sphere collide 
+
+false The ray and the sphere do not collide 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classmtrx_1_1_collider_a361c341b949adf2508c46389f8b4509d}{mtrx\+::\+Collider}}.
+
+\mbox{\Hypertarget{classmtrx_1_1_sphere_collider_aef2bf511296aa0b5c7c9e460596c1168}\label{classmtrx_1_1_sphere_collider_aef2bf511296aa0b5c7c9e460596c1168}} 
+\index{mtrx::SphereCollider@{mtrx::SphereCollider}!SetRadius@{SetRadius}}
+\index{SetRadius@{SetRadius}!mtrx::SphereCollider@{mtrx::SphereCollider}}
+\doxysubsubsection{\texorpdfstring{SetRadius()}{SetRadius()}}
+{\footnotesize\ttfamily void mtrx\+::\+Sphere\+Collider\+::\+Set\+Radius (\begin{DoxyParamCaption}\item[{float}]{radius }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the Radius of the collider. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & The value we want to set the radius to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_sphere_collider_ad238eaded51ef815efaf350a632d4ed0}\label{classmtrx_1_1_sphere_collider_ad238eaded51ef815efaf350a632d4ed0}} 
+\index{mtrx::SphereCollider@{mtrx::SphereCollider}!SetScale@{SetScale}}
+\index{SetScale@{SetScale}!mtrx::SphereCollider@{mtrx::SphereCollider}}
+\doxysubsubsection{\texorpdfstring{SetScale()}{SetScale()}}
+{\footnotesize\ttfamily virtual void mtrx\+::\+Sphere\+Collider\+::\+Set\+Scale (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the Scale of the sphere collider. Only the X coordinate of the scale affects the collider, other coordinates are ignored. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scale} & The value of the scale that we want to set the collider to \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classmtrx_1_1_collider_a81b9373f9d09221753255046b9279a5d}{mtrx\+::\+Collider}}.
+

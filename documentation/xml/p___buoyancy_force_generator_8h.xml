@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="p___buoyancy_force_generator_8h" kind="file" language="C++">
+    <compoundname>p_BuoyancyForceGenerator.h</compoundname>
+    <innerclass refid="classmtrx_1_1p___buoyancy_force_generator" prot="public">mtrx::p_BuoyancyForceGenerator</innerclass>
+    <innernamespace refid="namespacemtrx">mtrx</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/><sp/><sp/>Author:<sp/>Mohamed<sp/>Kazma</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/>Description:<sp/>A<sp/>force<sp/>generator<sp/>that<sp/>allows<sp/>us<sp/>to<sp/>apply<sp/>buoyancy<sp/>forces<sp/>(forces<sp/>applied<sp/>by<sp/>water<sp/>to<sp/>keep<sp/>something<sp/>afloat<sp/>also<sp/>known<sp/>as<sp/>the<sp/>archimedes<sp/>force)</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;forceGenerators/ParticleGenerators/IParticleForceGenerator.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;entities/Particle.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Defs.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemtrx" kindref="compound">mtrx</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">p_BuoyancyForceGenerator<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>IParticleForceGenerator</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//LiquidProperties<sp/>liquidProperties;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>liquidHeight;<sp/></highlight><highlight class="comment">//<sp/>The<sp/>y<sp/>coordinate<sp/>of<sp/>the<sp/>liquid&apos;s<sp/>plane<sp/>(assuming<sp/>that<sp/>plane<sp/>is<sp/>parallel<sp/>to<sp/>XZ<sp/>plane)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maxParticleDepth;<sp/></highlight><highlight class="comment">//<sp/>The<sp/>max<sp/>depth<sp/>after<sp/>which<sp/>the<sp/>object<sp/>is<sp/>said<sp/>to<sp/>be<sp/>completely<sp/>submerged<sp/>(position<sp/>is<sp/>from<sp/>the<sp/>center<sp/>to<sp/>this<sp/>will<sp/>affect<sp/>depth<sp/>calculation)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>UpdateForces(Particle*<sp/>particle)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p_BuoyancyForceGenerator(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>density,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>volume,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maxPaticleDepth);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>~p_BuoyancyForceGenerator();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/ParticleGenerators/p_BuoyancyForceGenerator.h"/>
+  </compounddef>
+</doxygen>

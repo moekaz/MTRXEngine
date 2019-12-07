@@ -1,0 +1,317 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="namespacemtrx" kind="namespace" language="C++">
+    <compoundname>mtrx</compoundname>
+    <innerclass refid="classmtrx_1_1_a_a_b_b_collider" prot="public">mtrx::AABBCollider</innerclass>
+    <innerclass refid="classmtrx_1_1_body" prot="public">mtrx::Body</innerclass>
+    <innerclass refid="classmtrx_1_1_b_v_h_node" prot="public">mtrx::BVHNode</innerclass>
+    <innerclass refid="classmtrx_1_1_capsule_collider" prot="public">mtrx::CapsuleCollider</innerclass>
+    <innerclass refid="classmtrx_1_1_collider" prot="public">mtrx::Collider</innerclass>
+    <innerclass refid="classmtrx_1_1_collision_system" prot="public">mtrx::CollisionSystem</innerclass>
+    <innerclass refid="classmtrx_1_1_convex_shape_collider" prot="public">mtrx::ConvexShapeCollider</innerclass>
+    <innerclass refid="classmtrx_1_1_game_time" prot="public">mtrx::GameTime</innerclass>
+    <innerclass refid="classmtrx_1_1_g_j_k_util" prot="public">mtrx::GJKUtil</innerclass>
+    <innerclass refid="classmtrx_1_1_i_bounding_volume" prot="public">mtrx::IBoundingVolume</innerclass>
+    <innerclass refid="classmtrx_1_1_i_integratable" prot="public">mtrx::IIntegratable</innerclass>
+    <innerclass refid="classmtrx_1_1_i_particle_force_generator" prot="public">mtrx::IParticleForceGenerator</innerclass>
+    <innerclass refid="classmtrx_1_1_i_rigidbody_force_generator" prot="public">mtrx::IRigidbodyForceGenerator</innerclass>
+    <innerclass refid="classmtrx_1_1_log_manager" prot="public">mtrx::LogManager</innerclass>
+    <innerclass refid="classmtrx_1_1_mat3" prot="public">mtrx::Mat3</innerclass>
+    <innerclass refid="classmtrx_1_1mtrx_dynamic_world" prot="public">mtrx::mtrxDynamicWorld</innerclass>
+    <innerclass refid="structmtrx_1_1_object_axes" prot="public">mtrx::ObjectAxes</innerclass>
+    <innerclass refid="classmtrx_1_1_o_o_b_b_collider" prot="public">mtrx::OOBBCollider</innerclass>
+    <innerclass refid="classmtrx_1_1p___anchored_spring_force_generator" prot="public">mtrx::p_AnchoredSpringForceGenerator</innerclass>
+    <innerclass refid="classmtrx_1_1p___bungee_spring_force_generator" prot="public">mtrx::p_BungeeSpringForceGenerator</innerclass>
+    <innerclass refid="classmtrx_1_1p___buoyancy_force_generator" prot="public">mtrx::p_BuoyancyForceGenerator</innerclass>
+    <innerclass refid="classmtrx_1_1p___default_spring_force_generator" prot="public">mtrx::p_DefaultSpringForceGenerator</innerclass>
+    <innerclass refid="classmtrx_1_1p___drag_force_generator" prot="public">mtrx::p_DragForceGenerator</innerclass>
+    <innerclass refid="classmtrx_1_1p___force_generation_registry" prot="public">mtrx::p_ForceGenerationRegistry</innerclass>
+    <innerclass refid="classmtrx_1_1p___gravity_force_generator" prot="public">mtrx::p_GravityForceGenerator</innerclass>
+    <innerclass refid="classmtrx_1_1p___stiff_spring_force_generator" prot="public">mtrx::p_StiffSpringForceGenerator</innerclass>
+    <innerclass refid="classmtrx_1_1_particle" prot="public">mtrx::Particle</innerclass>
+    <innerclass refid="classmtrx_1_1_particle_cable_coupling" prot="public">mtrx::ParticleCableCoupling</innerclass>
+    <innerclass refid="classmtrx_1_1_particle_collision" prot="public">mtrx::ParticleCollision</innerclass>
+    <innerclass refid="classmtrx_1_1_particle_collision_generator" prot="public">mtrx::ParticleCollisionGenerator</innerclass>
+    <innerclass refid="classmtrx_1_1_particle_collision_resolver" prot="public">mtrx::ParticleCollisionResolver</innerclass>
+    <innerclass refid="classmtrx_1_1_particle_coupling" prot="public">mtrx::ParticleCoupling</innerclass>
+    <innerclass refid="structmtrx_1_1_particle_force_generators" prot="public">mtrx::ParticleForceGenerators</innerclass>
+    <innerclass refid="classmtrx_1_1_particle_manager" prot="public">mtrx::ParticleManager</innerclass>
+    <innerclass refid="classmtrx_1_1_particle_rod_coupling" prot="public">mtrx::ParticleRodCoupling</innerclass>
+    <innerclass refid="structmtrx_1_1_potential_collision" prot="public">mtrx::PotentialCollision</innerclass>
+    <innerclass refid="classmtrx_1_1_ray" prot="public">mtrx::Ray</innerclass>
+    <innerclass refid="classmtrx_1_1rb___anchored_spring_force_generator" prot="public">mtrx::rb_AnchoredSpringForceGenerator</innerclass>
+    <innerclass refid="classmtrx_1_1rb___bungee_spring_force_generator" prot="public">mtrx::rb_BungeeSpringForceGenerator</innerclass>
+    <innerclass refid="classmtrx_1_1rb___buoyancy_force_generator" prot="public">mtrx::rb_BuoyancyForceGenerator</innerclass>
+    <innerclass refid="classmtrx_1_1rb___default_spring_force_generator" prot="public">mtrx::rb_DefaultSpringForceGenerator</innerclass>
+    <innerclass refid="classmtrx_1_1rb___drag_force_generator" prot="public">mtrx::rb_DragForceGenerator</innerclass>
+    <innerclass refid="classmtrx_1_1rb___force_generation_registry" prot="public">mtrx::rb_ForceGenerationRegistry</innerclass>
+    <innerclass refid="classmtrx_1_1rb___gravity_force_generator" prot="public">mtrx::rb_GravityForceGenerator</innerclass>
+    <innerclass refid="classmtrx_1_1rb___stiff_spring_force_generator" prot="public">mtrx::rb_StiffSpringForceGenerator</innerclass>
+    <innerclass refid="classmtrx_1_1_rigidbody" prot="public">mtrx::Rigidbody</innerclass>
+    <innerclass refid="classmtrx_1_1_rigidbody_manager" prot="public">mtrx::RigidbodyManager</innerclass>
+    <innerclass refid="structmtrx_1_1_simplex" prot="public">mtrx::Simplex</innerclass>
+    <innerclass refid="classmtrx_1_1_sphere_collider" prot="public">mtrx::SphereCollider</innerclass>
+    <innerclass refid="classmtrx_1_1_transform" prot="public">mtrx::Transform</innerclass>
+    <innerclass refid="structmtrx_1_1_triangle" prot="public">mtrx::Triangle</innerclass>
+    <innerclass refid="classmtrx_1_1_vector3_d" prot="public">mtrx::Vector3D</innerclass>
+    <innernamespace refid="namespacemtrx_1_1_collider_detection_util">mtrx::ColliderDetectionUtil</innernamespace>
+    <innernamespace refid="namespacemtrx_1_1_collision_util">mtrx::CollisionUtil</innernamespace>
+    <innernamespace refid="namespacemtrx_1_1_physics_util">mtrx::PhysicsUtil</innernamespace>
+    <innernamespace refid="namespacemtrx_1_1_raycast_collision_util">mtrx::RaycastCollisionUtil</innernamespace>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacemtrx_1aba70c7f807f8a862fb9a10445ec82e7c" prot="public" static="no" strong="yes">
+        <type>char</type>
+        <name>ColliderType</name>
+        <enumvalue id="namespacemtrx_1aba70c7f807f8a862fb9a10445ec82e7cab7095f057db3fefa7325ad93a04e14fd" prot="public">
+          <name>Sphere</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemtrx_1aba70c7f807f8a862fb9a10445ec82e7ca4276d50f05d2cac4c98c17337ac30c99" prot="public">
+          <name>AABB</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemtrx_1aba70c7f807f8a862fb9a10445ec82e7ca9a116143e06d67d96f938b3e7044c825" prot="public">
+          <name>OOBB</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemtrx_1aba70c7f807f8a862fb9a10445ec82e7ca4880c0f12c06dd6d142e7a40b041bf1a" prot="public">
+          <name>Capsule</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemtrx_1aba70c7f807f8a862fb9a10445ec82e7ca6490fc8a26c90029651983d30c22a6f1" prot="public">
+          <name>ConvexShape</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Type of colliders that are supported in the engine. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" line="26" column="24" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" bodystart="26" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacemtrx_1a2492d55175808feed4dcaa38bae48651" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float mtrx::gravity</definition>
+        <argsstring></argsstring>
+        <name>gravity</name>
+        <initializer>= 9.81f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" line="13" column="14" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemtrx_1a5ba5786649aeb3e55f1dfd5fe0febf95" prot="public" static="yes" mutable="no">
+        <type>std::string</type>
+        <definition>std::string mtrx::projectDir</definition>
+        <argsstring></argsstring>
+        <name>projectDir</name>
+        <initializer>= std::filesystem::current_path().string()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" line="14" column="20" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemtrx_1a6518a09e680aa36af9aa1eef505320b4" prot="public" static="yes" mutable="no">
+        <type>const glm::vec3</type>
+        <definition>const glm::vec3 mtrx::worldUp</definition>
+        <argsstring></argsstring>
+        <name>worldUp</name>
+        <initializer>= glm::vec3(0.f, 1.f, 0.f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" line="16" column="24" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemtrx_1a8f8b4c57d50a1c29728c441607ed292e" prot="public" static="yes" mutable="no">
+        <type>const glm::vec3</type>
+        <definition>const glm::vec3 mtrx::worldSide</definition>
+        <argsstring></argsstring>
+        <name>worldSide</name>
+        <initializer>= glm::vec3(1.f, 0.f, 0.f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" line="17" column="24" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemtrx_1ae50391e17dccf073a71c1023816d2c1a" prot="public" static="yes" mutable="no">
+        <type>const glm::vec3</type>
+        <definition>const glm::vec3 mtrx::worldForward</definition>
+        <argsstring></argsstring>
+        <name>worldForward</name>
+        <initializer>= glm::vec3(0.f, 0.f, -1.f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" line="18" column="24" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacemtrx_1aac6a3ea8645f1cb159cdddc3caeba396" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int mtrx::RandomInt</definition>
+        <argsstring>(int min, int max)</argsstring>
+        <name>RandomInt</name>
+        <param>
+          <type>int</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max</declname>
+        </param>
+        <briefdescription>
+<para>Generating a random integer between 2 integer values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum integer value (inclusive) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum integer value (exclusive) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int A random integer within the range of min and max </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" line="96" column="12" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" bodystart="96" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemtrx_1a4fc86cfdfb565ca902cd35ed86f661ec" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>glm::mat3</type>
+        <definition>static glm::mat3 mtrx::GenerateCuboidIT</definition>
+        <argsstring>(float mass, float *extents)</argsstring>
+        <name>GenerateCuboidIT</name>
+        <param>
+          <type>float</type>
+          <declname>mass</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>extents</declname>
+        </param>
+        <briefdescription>
+<para>Generate a cuboid inertia tensor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mass of the cuboid </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>extents</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The extents of the cuboid </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>glm::mat3 The inertia tensor generated </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" line="108" column="18" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" bodystart="108" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemtrx_1a57efb3cde02e53c7041ef3d59313f29e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>glm::mat3</type>
+        <definition>static glm::mat3 mtrx::GenerateSphereIT</definition>
+        <argsstring>(float mass, float radius)</argsstring>
+        <name>GenerateSphereIT</name>
+        <param>
+          <type>float</type>
+          <declname>mass</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>radius</declname>
+        </param>
+        <briefdescription>
+<para>Generate a sphere inertia tensor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mass of the sphere </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The radius of the sphere </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>glm::mat3 The generated inertia tensor </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" line="123" column="18" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" bodystart="123" bodyend="129"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>DEPRECATED DO NOT USE THIS </para>
+    </detaileddescription>
+    <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/AABBCollider.h" line="7" column="1"/>
+  </compounddef>
+</doxygen>

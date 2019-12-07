@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="classmtrx_1_1_particle_coupling" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>mtrx::ParticleCoupling</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">mtrx::ParticleCollisionGenerator</basecompoundref>
+    <derivedcompoundref refid="classmtrx_1_1_particle_cable_coupling" prot="public" virt="non-virtual">mtrx::ParticleCableCoupling</derivedcompoundref>
+    <derivedcompoundref refid="classmtrx_1_1_particle_rod_coupling" prot="public" virt="non-virtual">mtrx::ParticleRodCoupling</derivedcompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classmtrx_1_1_particle_coupling_1aacb85d6fa4de60e539581d394d150aaa" prot="public" static="no" mutable="no">
+        <type>Particle *</type>
+        <definition>Particle* mtrx::ParticleCoupling::particles[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>particles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCoupling.h" line="19" column="10" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCoupling.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmtrx_1_1_particle_coupling_1a1404c90a6dcb0d60597a73ae8dd05dab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mtrx::ParticleCoupling::ParticleCoupling</definition>
+        <argsstring>()</argsstring>
+        <name>ParticleCoupling</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCoupling.h" line="21" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_particle_coupling_1a0d230af1e21cc10cbd694dbb473bd2a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mtrx::ParticleCoupling::~ParticleCoupling</definition>
+        <argsstring>()</argsstring>
+        <name>~ParticleCoupling</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCoupling.h" line="22" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_particle_coupling_1abeb4b0e35e85cd48eb4620b7cb631368" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float mtrx::ParticleCoupling::GetCurrentLengthSqr</definition>
+        <argsstring>() const</argsstring>
+        <name>GetCurrentLengthSqr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCoupling.h" line="25" column="14" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCoupling.h" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_particle_coupling_1a8bd40a5c9a18caada06264d8dab45485" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void mtrx::ParticleCoupling::GenerateContact</definition>
+        <argsstring>(std::list&lt; ParticleCollision &gt; &amp;collisions, unsigned int limit)=0</argsstring>
+        <name>GenerateContact</name>
+        <param>
+          <type>std::list&lt; ParticleCollision &gt; &amp;</type>
+          <declname>collisions</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>limit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCoupling.h" line="26" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCoupling.h" line="17" column="1" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCoupling.h" bodystart="16" bodyend="27"/>
+    <listofallmembers>
+      <member refid="classmtrx_1_1_particle_coupling_1a8bd40a5c9a18caada06264d8dab45485" prot="public" virt="pure-virtual"><scope>mtrx::ParticleCoupling</scope><name>GenerateContact</name></member>
+      <member refid="classmtrx_1_1_particle_coupling_1abeb4b0e35e85cd48eb4620b7cb631368" prot="public" virt="non-virtual"><scope>mtrx::ParticleCoupling</scope><name>GetCurrentLengthSqr</name></member>
+      <member refid="classmtrx_1_1_particle_coupling_1a1404c90a6dcb0d60597a73ae8dd05dab" prot="public" virt="non-virtual"><scope>mtrx::ParticleCoupling</scope><name>ParticleCoupling</name></member>
+      <member refid="classmtrx_1_1_particle_coupling_1aacb85d6fa4de60e539581d394d150aaa" prot="public" virt="non-virtual"><scope>mtrx::ParticleCoupling</scope><name>particles</name></member>
+      <member refid="classmtrx_1_1_particle_coupling_1a0d230af1e21cc10cbd694dbb473bd2a6" prot="public" virt="non-virtual"><scope>mtrx::ParticleCoupling</scope><name>~ParticleCoupling</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

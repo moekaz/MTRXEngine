@@ -1,0 +1,184 @@
+.TH "mtrx::RaycastCollisionUtil" 3 "Sat Dec 7 2019" "MTRX Engine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mtrx::RaycastCollisionUtil \- Utility namespace used for raycasting functionality\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBRaySphereCollision\fP (const glm::vec3 &sphereCenter, float sphereRadius, const glm::vec3 &startPointRay, const glm::vec3 &rayDirection)"
+.br
+.RI "Raycasting onto a sphere collider\&. "
+.ti -1c
+.RI "bool \fBRayCapsuleCollision\fP (const glm::vec3 &startPositionRay, const glm::vec3 &direction, const glm::vec3 &A, const glm::vec3 &B, float capsRadius)"
+.br
+.RI "Raycasting onto a capsule collider\&. "
+.ti -1c
+.RI "bool \fBRayBoxCollision\fP (const glm::vec3 &rayStart, const glm::vec3 &rayDirection, const glm::vec3 &center, const glm::vec3 *axes, const float *halfExtents)"
+.br
+.RI "Raycasting onto a box collider\&. "
+.ti -1c
+.RI "\fBCollider\fP * \fBRaycastFiltered\fP (const std::map< int, \fBCollider\fP * > &colliders, const std::vector< \fBCollider\fP * > &filterColliders, const glm::vec3 &rayStartPosition, const glm::vec3 &rayDirection)"
+.br
+.RI "NOT TESTED OR USED\&. "
+.ti -1c
+.RI "\fBCollider\fP * \fBRaycastUnfiltered\fP (const std::map< int, \fBCollider\fP * > &colliders, const glm::vec3 &rayStartPosition, const glm::vec3 &rayDirection)"
+.br
+.RI "NOT TESTED OR USED\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Utility namespace used for raycasting functionality\&. 
+
+
+.SH "Function Documentation"
+.PP 
+.SS "bool mtrx::RaycastCollisionUtil::RayBoxCollision (const glm::vec3 & rayStart, const glm::vec3 & rayDirection, const glm::vec3 & center, const glm::vec3 * axes, const float * halfExtents)"
+
+.PP
+Raycasting onto a box collider\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBmtrx::OOBBCollider\fP 
+.PP
+\fBmtrx::AABBCollider\fP 
+.PP
+\fBmtrx::Ray\fP
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIrayStart\fP The starting point of the ray 
+.br
+\fIrayDirection\fP The normalized direction of the ray 
+.br
+\fIcenter\fP The center of the box collider 
+.br
+\fIaxes\fP The axes of the collider 
+.br
+\fIhalfExtents\fP the half extents of the collider 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true The ray and box collide 
+.PP
+false The ray and box do not collide 
+.RE
+.PP
+
+.SS "bool mtrx::RaycastCollisionUtil::RayCapsuleCollision (const glm::vec3 & startPositionRay, const glm::vec3 & direction, const glm::vec3 & A, const glm::vec3 & B, float capsRadius)"
+
+.PP
+Raycasting onto a capsule collider\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBmtrx::CapsuleCollider\fP 
+.PP
+\fBmtrx::Ray\fP
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIstartPositionRay\fP The starting position of the ray 
+.br
+\fIdirection\fP The normalized direction of the ray 
+.br
+\fIA\fP The center of the topmost sphere of the capsule 
+.br
+\fIB\fP The center of the bottommost sphere of the capsule 
+.br
+\fIcapsRadius\fP The radius of the capsule 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true The ray and the capsule collider collide 
+.PP
+false The ray and the capsule collider do not collide 
+.RE
+.PP
+
+.SS "\fBCollider\fP* mtrx::RaycastCollisionUtil::RaycastFiltered (const std::map< int, \fBCollider\fP * > & colliders, const std::vector< \fBCollider\fP * > & filterColliders, const glm::vec3 & rayStartPosition, const glm::vec3 & rayDirection)"
+
+.PP
+NOT TESTED OR USED\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcolliders\fP 
+.br
+\fIfilterColliders\fP 
+.br
+\fIrayStartPosition\fP 
+.br
+\fIrayDirection\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Collider* 
+.RE
+.PP
+
+.SS "\fBCollider\fP* mtrx::RaycastCollisionUtil::RaycastUnfiltered (const std::map< int, \fBCollider\fP * > & colliders, const glm::vec3 & rayStartPosition, const glm::vec3 & rayDirection)"
+
+.PP
+NOT TESTED OR USED\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcolliders\fP 
+.br
+\fIrayStartPosition\fP 
+.br
+\fIrayDirection\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Collider* 
+.RE
+.PP
+
+.SS "bool mtrx::RaycastCollisionUtil::RaySphereCollision (const glm::vec3 & sphereCenter, float sphereRadius, const glm::vec3 & startPointRay, const glm::vec3 & rayDirection)"
+
+.PP
+Raycasting onto a sphere collider\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBmtrx::SphereCollider\fP 
+.PP
+\fBmtrx::Ray\fP
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIsphereCenter\fP Center of the sphere collider 
+.br
+\fIsphereRadius\fP Radius of the sphere collider 
+.br
+\fIstartPointRay\fP Start point of the ray 
+.br
+\fIrayDirection\fP Normalized direction of the ray 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true The ray and the sphere collider collide 
+.PP
+false The ray and the sphere collider do not collide 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MTRX Engine from the source code\&.

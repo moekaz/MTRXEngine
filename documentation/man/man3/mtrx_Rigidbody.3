@@ -1,0 +1,331 @@
+.TH "mtrx::Rigidbody" 3 "Sat Dec 7 2019" "MTRX Engine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mtrx::Rigidbody \- Implementation of rigidbodies with rigidbody dynamics newtonian force integration and rotational forces\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Rigidbody\&.h>\fP
+.PP
+Inherits \fBmtrx::Body\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRigidbody\fP (float mass=MAX_MASS, bool iskinematic=false, const glm::vec3 &position=glm::vec3(), const glm::quat &orientation=glm::angleAxis(0\&.f, glm::vec3(0, 1, 0)), const glm::vec3 &scale=glm::vec3(1, 1, 1), const glm::mat3 &inertiaTensor=glm::mat3(1\&.0f))"
+.br
+.RI "Construct a new \fBRigidbody\fP object\&. "
+.ti -1c
+.RI "\fB~Rigidbody\fP ()=default"
+.br
+.RI "Destroy the \fBRigidbody\fP object\&. "
+.ti -1c
+.RI "void \fBSetInverseInertiaTensor\fP (const glm::mat3 &inertiaTensor)"
+.br
+.RI "Set the Inverse Inertia Tensor of the body\&. "
+.ti -1c
+.RI "void \fBSetAngularDamping\fP (float angularDamping)"
+.br
+.RI "Set the Angular Damping of the rigidbody Angular damping allows us to dampen torque forces applied to the body as a function of time\&. "
+.ti -1c
+.RI "void \fBSetOrientation\fP (glm::quat &orientation)"
+.br
+.RI "Set the Orientation of the body\&. "
+.ti -1c
+.RI "void \fBSetRotation\fP (glm::vec3 &rotation)"
+.br
+.RI "Set the Rotation value of the rigidbody This rotation value is used to generate torque forces\&. "
+.ti -1c
+.RI "void \fBSetIsKinematic\fP (bool kinematic)"
+.br
+.RI "Set the kinematic value\&. "
+.ti -1c
+.RI "glm::mat3 & \fBGetInverseInertiaTensor\fP ()"
+.br
+.RI "Get the Inverse Inertia Tensor of the body\&. "
+.ti -1c
+.RI "float \fBGetAngularDamping\fP () const"
+.br
+.RI "Get the Angular Damping of the body\&. "
+.ti -1c
+.RI "glm::mat3x4 \fBGetObjToWorldMat\fP ()"
+.br
+.RI "Get the Obj To World Mat\&. "
+.ti -1c
+.RI "glm::vec3 & \fBGetRotation\fP ()"
+.br
+.RI "Get the Rotation of the body\&. "
+.ti -1c
+.RI "bool \fBGetIsKinematic\fP ()"
+.br
+.RI "Get whether the body is kinematic\&. "
+.ti -1c
+.RI "glm::mat3 \fBCalculateIITWorld\fP ()"
+.br
+.RI "Calculating the inverse inertia tensor in world space\&. "
+.ti -1c
+.RI "void \fBAddTorque\fP (const glm::vec3 &torque)"
+.br
+.RI "Add a torque force\&. "
+.ti -1c
+.RI "void \fBClearAccumulators\fP () override"
+.br
+.RI "Clear acculmulators of rigidbody\&. "
+.ti -1c
+.RI "void \fBIntegrate\fP (float deltaTime) override"
+.br
+.RI "Integrate the values of the rigidbody\&. "
+.ti -1c
+.RI "void \fBCalculateObjToWorldMat\fP ()"
+.br
+.RI "Calculate object space to world space matrix\&. "
+.ti -1c
+.RI "void \fBAddForceAtPoint\fP (const glm::vec3 &force, const glm::vec3 &point)"
+.br
+.RI "Add a force at a certain point in space\&. "
+.ti -1c
+.RI "void \fBCalculateBodyData\fP ()"
+.br
+.RI "Update some of the information of the rigidbody\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "glm::vec3 \fBrotation\fP"
+.br
+.ti -1c
+.RI "glm::mat3 \fBinverseInertiaTensor\fP"
+.br
+.ti -1c
+.RI "glm::mat3x4 \fBobjToWorldMat\fP"
+.br
+.ti -1c
+.RI "glm::vec3 \fBaccumTorque\fP"
+.br
+.ti -1c
+.RI "float \fBangularDamping\fP"
+.br
+.ti -1c
+.RI "bool \fBisKinematic\fP"
+.br
+.ti -1c
+.RI "\fBObjectAxes\fP \fBaxes\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Implementation of rigidbodies with rigidbody dynamics newtonian force integration and rotational forces\&. 
+
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "mtrx::Rigidbody::Rigidbody (float mass = \fCMAX_MASS\fP, bool iskinematic = \fCfalse\fP, const glm::vec3 & position = \fCglm::vec3()\fP, const glm::quat & orientation = \fCglm::angleAxis(0\&.f, glm::vec3(0, 1, 0))\fP, const glm::vec3 & scale = \fCglm::vec3(1, 1, 1)\fP, const glm::mat3 & inertiaTensor = \fCglm::mat3(1\&.0f)\fP)"
+
+.PP
+Construct a new \fBRigidbody\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImass\fP The mass of the rigidbody 
+.br
+\fIiskinematic\fP Whether the rigidbody is kinematic\&. A kinematic object does not affect other rigidbodies in the simulation 
+.br
+\fIposition\fP The position of the rigidbody 
+.br
+\fIorientation\fP The orientation of the rigidbody 
+.br
+\fIscale\fP The scale of the rigidbody 
+.br
+\fIinertiaTensor\fP The inertia tensor of the rigidbody 
+.RE
+.PP
+
+.SS "mtrx::Rigidbody::~Rigidbody ()\fC [default]\fP"
+
+.PP
+Destroy the \fBRigidbody\fP object\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void mtrx::Rigidbody::AddForceAtPoint (const glm::vec3 & force, const glm::vec3 & point)"
+
+.PP
+Add a force at a certain point in space\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIforce\fP The force that we want to add 
+.br
+\fIpoint\fP The point upon which to apply the force 
+.RE
+.PP
+
+.SS "void mtrx::Rigidbody::AddTorque (const glm::vec3 & torque)\fC [inline]\fP"
+
+.PP
+Add a torque force\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItorque\fP The torque force that we want to add 
+.RE
+.PP
+
+.SS "void mtrx::Rigidbody::CalculateBodyData ()"
+
+.PP
+Update some of the information of the rigidbody\&. 
+.SS "glm::mat3 mtrx::Rigidbody::CalculateIITWorld ()\fC [inline]\fP"
+
+.PP
+Calculating the inverse inertia tensor in world space\&. 
+.PP
+\fBReturns\fP
+.RS 4
+glm::mat3 Inverse inertia tensor in world space 
+.RE
+.PP
+
+.SS "void mtrx::Rigidbody::CalculateObjToWorldMat ()"
+
+.PP
+Calculate object space to world space matrix\&. 
+.SS "void mtrx::Rigidbody::ClearAccumulators ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Clear acculmulators of rigidbody\&. 
+.PP
+Implements \fBmtrx::Body\fP\&.
+.SS "float mtrx::Rigidbody::GetAngularDamping () const\fC [inline]\fP"
+
+.PP
+Get the Angular Damping of the body\&. 
+.PP
+\fBReturns\fP
+.RS 4
+float The value of the angular damping 
+.RE
+.PP
+
+.SS "glm::mat3& mtrx::Rigidbody::GetInverseInertiaTensor ()\fC [inline]\fP"
+
+.PP
+Get the Inverse Inertia Tensor of the body\&. 
+.PP
+\fBReturns\fP
+.RS 4
+glm::mat3& The inver inertia tensor 
+.RE
+.PP
+
+.SS "bool mtrx::Rigidbody::GetIsKinematic ()\fC [inline]\fP"
+
+.PP
+Get whether the body is kinematic\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true The body is kinematic 
+.PP
+false The body is not kinematic 
+.RE
+.PP
+
+.SS "glm::mat3x4 mtrx::Rigidbody::GetObjToWorldMat ()\fC [inline]\fP"
+
+.PP
+Get the Obj To World Mat\&. 
+.PP
+\fBReturns\fP
+.RS 4
+glm::mat3x4 The object space to world matrix 
+.RE
+.PP
+
+.SS "glm::vec3& mtrx::Rigidbody::GetRotation ()\fC [inline]\fP"
+
+.PP
+Get the Rotation of the body\&. 
+.PP
+\fBReturns\fP
+.RS 4
+glm::vec3& The rotation of the body 
+.RE
+.PP
+
+.SS "void mtrx::Rigidbody::Integrate (float deltaTime)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Integrate the values of the rigidbody\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdeltaTime\fP The time elapsed by previous frame 
+.RE
+.PP
+
+.PP
+Implements \fBmtrx::Body\fP\&.
+.SS "void mtrx::Rigidbody::SetAngularDamping (float angularDamping)\fC [inline]\fP"
+
+.PP
+Set the Angular Damping of the rigidbody Angular damping allows us to dampen torque forces applied to the body as a function of time\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIangularDamping\fP The new value of angular damping 
+.RE
+.PP
+
+.SS "void mtrx::Rigidbody::SetInverseInertiaTensor (const glm::mat3 & inertiaTensor)"
+
+.PP
+Set the Inverse Inertia Tensor of the body\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinertiaTensor\fP The inertia tensor that we will calculate the inverse of 
+.RE
+.PP
+
+.SS "void mtrx::Rigidbody::SetIsKinematic (bool kinematic)\fC [inline]\fP"
+
+.PP
+Set the kinematic value\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIkinematic\fP the new value of whether the body is kinematic 
+.RE
+.PP
+
+.SS "void mtrx::Rigidbody::SetOrientation (glm::quat & orientation)\fC [inline]\fP"
+
+.PP
+Set the Orientation of the body\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIorientation\fP The new orientation of the body 
+.RE
+.PP
+
+.SS "void mtrx::Rigidbody::SetRotation (glm::vec3 & rotation)\fC [inline]\fP"
+
+.PP
+Set the Rotation value of the rigidbody This rotation value is used to generate torque forces\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrotation\fP The new value of the rotation 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MTRX Engine from the source code\&.

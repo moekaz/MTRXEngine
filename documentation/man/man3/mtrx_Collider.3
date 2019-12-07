@@ -1,0 +1,350 @@
+.TH "mtrx::Collider" 3 "Sat Dec 7 2019" "MTRX Engine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mtrx::Collider \- Basic API for all colliders\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Collider\&.h>\fP
+.PP
+Inherited by \fBmtrx::CapsuleCollider\fP, \fBmtrx::ConvexShapeCollider\fP, and \fBmtrx::SphereCollider\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCollider\fP (const \fBColliderType\fP &colliderType, const glm::vec3 &center=glm::vec3(), const glm::quat &orientation=glm::angleAxis(0\&.f, worldUp), const glm::vec3 &scale=glm::vec3(1\&.f, 1\&.f, 1\&.f), bool isConvex=false)"
+.br
+.RI "Construct a new \fBCollider\fP object\&. "
+.ti -1c
+.RI "\fBCollider\fP (const \fBColliderType\fP &colliderType, const \fBTransform\fP &transform, bool isConvex=false)"
+.br
+.RI "Construct a new \fBCollider\fP object\&. "
+.ti -1c
+.RI "virtual \fB~Collider\fP ()=default"
+.br
+.RI "Destroy the \fBCollider\fP object\&. "
+.ti -1c
+.RI "virtual bool \fBRaycastCollision\fP (const \fBRay\fP &ray)=0"
+.br
+.RI "Raycasting function that all colliders should have\&. "
+.ti -1c
+.RI "bool \fBCheckCollision\fP (const \fBCollider\fP &collider)"
+.br
+.RI "Check for collision with another collider\&. "
+.ti -1c
+.RI "const glm::vec3 & \fBGetPosition\fP () const"
+.br
+.RI "Get the Position of the collider\&. "
+.ti -1c
+.RI "const glm::vec3 & \fBGetScale\fP () const"
+.br
+.RI "Get the Scale of the collider\&. "
+.ti -1c
+.RI "const glm::quat & \fBGetOrientation\fP () const"
+.br
+.RI "Get the Orientation of the collider\&. "
+.ti -1c
+.RI "const \fBColliderType\fP & \fBGetColliderType\fP () const"
+.br
+.RI "Get the \fBCollider\fP Type of collider\&. "
+.ti -1c
+.RI "const int \fBGetColliderId\fP () const"
+.br
+.RI "Get the \fBCollider\fP Id of the collider\&. "
+.ti -1c
+.RI "const bool \fBIsConvex\fP () const"
+.br
+.RI "Is this collider convex\&. "
+.ti -1c
+.RI "const glm::vec3 \fBGetForward\fP () const"
+.br
+.RI "Get the Forward axis vector\&. "
+.ti -1c
+.RI "const glm::vec3 \fBGetSide\fP () const"
+.br
+.RI "Get the Side axis vector\&. "
+.ti -1c
+.RI "const glm::vec3 \fBGetUp\fP () const"
+.br
+.RI "Get the Up axis vector\&. "
+.ti -1c
+.RI "virtual void \fBSetPosition\fP (const glm::vec3 &center)"
+.br
+.RI "Set the Position of the collider\&. "
+.ti -1c
+.RI "virtual void \fBSetScale\fP (const glm::vec3 &scale)"
+.br
+.RI "Set the Scale of the collider\&. "
+.ti -1c
+.RI "virtual void \fBSetOrientation\fP (const glm::quat &orientation)"
+.br
+.RI "Set the Orientation of the collider\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBcolliderId\fP"
+.br
+.ti -1c
+.RI "\fBColliderType\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "bool \fBisConvexShape\fP"
+.br
+.ti -1c
+.RI "\fBTransform\fP \fBtransform\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static int \fBid\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Basic API for all colliders\&. 
+
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "mtrx::Collider::Collider (const \fBColliderType\fP & colliderType, const glm::vec3 & center = \fCglm::vec3()\fP, const glm::quat & orientation = \fCglm::angleAxis(0\&.f, worldUp)\fP, const glm::vec3 & scale = \fCglm::vec3(1\&.f, 1\&.f, 1\&.f)\fP, bool isConvex = \fCfalse\fP)"
+
+.PP
+Construct a new \fBCollider\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcolliderType\fP The type of the collider 
+.br
+\fIcenter\fP Center of the collider 
+.br
+\fIorientation\fP Orientation of the collider 
+.br
+\fIscale\fP The scale of the collider 
+.br
+\fIisConvex\fP Whether collider is a convex shape collider 
+.RE
+.PP
+
+.SS "mtrx::Collider::Collider (const \fBColliderType\fP & colliderType, const \fBTransform\fP & transform, bool isConvex = \fCfalse\fP)"
+
+.PP
+Construct a new \fBCollider\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcolliderType\fP The type of the collider 
+.br
+\fItransform\fP The transform of the collider 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBmtrx::Transform\fP 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIisConvex\fP Whether the collider is a convex shape collider 
+.RE
+.PP
+
+.SS "virtual mtrx::Collider::~Collider ()\fC [virtual]\fP, \fC [default]\fP"
+
+.PP
+Destroy the \fBCollider\fP object\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool mtrx::Collider::CheckCollision (const \fBCollider\fP & collider)\fC [inline]\fP"
+
+.PP
+Check for collision with another collider\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcollider\fP The collider that we want to check for collision 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true The collider is colliding with this collider 
+.PP
+false The collider is not colliding with this collider 
+.RE
+.PP
+
+.SS "const int mtrx::Collider::GetColliderId () const\fC [inline]\fP"
+
+.PP
+Get the \fBCollider\fP Id of the collider\&. 
+.PP
+\fBReturns\fP
+.RS 4
+const int Value of the Id of the collider 
+.RE
+.PP
+
+.SS "const \fBColliderType\fP& mtrx::Collider::GetColliderType () const\fC [inline]\fP"
+
+.PP
+Get the \fBCollider\fP Type of collider\&. 
+.PP
+\fBReturns\fP
+.RS 4
+const ColliderType& Enum collider type value 
+.RE
+.PP
+
+.SS "const glm::vec3 mtrx::Collider::GetForward () const\fC [inline]\fP"
+
+.PP
+Get the Forward axis vector\&. 
+.PP
+\fBReturns\fP
+.RS 4
+const glm::vec3 The forward vector of this collider 
+.RE
+.PP
+
+.SS "const glm::quat& mtrx::Collider::GetOrientation () const\fC [inline]\fP"
+
+.PP
+Get the Orientation of the collider\&. 
+.PP
+\fBReturns\fP
+.RS 4
+const glm::quat& The current orientation of the collider 
+.RE
+.PP
+
+.SS "const glm::vec3& mtrx::Collider::GetPosition () const\fC [inline]\fP"
+
+.PP
+Get the Position of the collider\&. 
+.PP
+\fBReturns\fP
+.RS 4
+const glm::vec3& current position of the collider 
+.RE
+.PP
+
+.SS "const glm::vec3& mtrx::Collider::GetScale () const\fC [inline]\fP"
+
+.PP
+Get the Scale of the collider\&. 
+.PP
+\fBReturns\fP
+.RS 4
+const glm::vec3& The current scale of the collider 
+.RE
+.PP
+
+.SS "const glm::vec3 mtrx::Collider::GetSide () const\fC [inline]\fP"
+
+.PP
+Get the Side axis vector\&. 
+.PP
+\fBReturns\fP
+.RS 4
+const glm::vec3 The side axis vector of the collider 
+.RE
+.PP
+
+.SS "const glm::vec3 mtrx::Collider::GetUp () const\fC [inline]\fP"
+
+.PP
+Get the Up axis vector\&. 
+.PP
+\fBReturns\fP
+.RS 4
+const glm::vec3 the up axis vector of the collider 
+.RE
+.PP
+
+.SS "const bool mtrx::Collider::IsConvex () const\fC [inline]\fP"
+
+.PP
+Is this collider convex\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true The collider is a convex shape 
+.PP
+false The collider is not a convex shape 
+.RE
+.PP
+
+.SS "virtual bool mtrx::Collider::RaycastCollision (const \fBRay\fP & ray)\fC [pure virtual]\fP"
+
+.PP
+Raycasting function that all colliders should have\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIray\fP \fBRay\fP that we want to cast 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBmtrx::Ray\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true The ray and the collider collide 
+.PP
+false The ray and the collider do not collide 
+.RE
+.PP
+
+.PP
+Implemented in \fBmtrx::ConvexShapeCollider\fP, \fBmtrx::SphereCollider\fP, \fBmtrx::CapsuleCollider\fP, \fBmtrx::OOBBCollider\fP, and \fBmtrx::AABBCollider\fP\&.
+.SS "virtual void mtrx::Collider::SetOrientation (const glm::quat & orientation)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Set the Orientation of the collider\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIorientation\fP The new orientation of the collider 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBmtrx::ConvexShapeCollider\fP, \fBmtrx::CapsuleCollider\fP, and \fBmtrx::AABBCollider\fP\&.
+.SS "virtual void mtrx::Collider::SetPosition (const glm::vec3 & center)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Set the Position of the collider\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcenter\fP The center position of this collider 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBmtrx::CapsuleCollider\fP, and \fBmtrx::ConvexShapeCollider\fP\&.
+.SS "virtual void mtrx::Collider::SetScale (const glm::vec3 & scale)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Set the Scale of the collider\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIscale\fP The new scale of the collider 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBmtrx::SphereCollider\fP, \fBmtrx::CapsuleCollider\fP, \fBmtrx::ConvexShapeCollider\fP, \fBmtrx::AABBCollider\fP, and \fBmtrx::OOBBCollider\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MTRX Engine from the source code\&.

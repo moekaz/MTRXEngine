@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="dir_7357b0537c39116b195b6d8d98ce1935" kind="dir">
+    <compoundname>C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/ParticleGenerators</compoundname>
+    <innerfile refid="_i_particle_force_generator_8h">IParticleForceGenerator.h</innerfile>
+    <innerfile refid="p___anchored_spring_force_generator_8h">p_AnchoredSpringForceGenerator.h</innerfile>
+    <innerfile refid="p___bungee_spring_force_generator_8h">p_BungeeSpringForceGenerator.h</innerfile>
+    <innerfile refid="p___buoyancy_force_generator_8h">p_BuoyancyForceGenerator.h</innerfile>
+    <innerfile refid="p___default_spring_force_generator_8h">p_DefaultSpringForceGenerator.h</innerfile>
+    <innerfile refid="p___drag_force_generator_8h">p_DragForceGenerator.h</innerfile>
+    <innerfile refid="p___force_generation_registry_8h">p_ForceGenerationRegistry.h</innerfile>
+    <innerfile refid="p___gravity_force_generator_8h">p_GravityForceGenerator.h</innerfile>
+    <innerfile refid="p___stiff_spring_force_generator_8h">p_StiffSpringForceGenerator.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/ParticleGenerators/"/>
+  </compounddef>
+</doxygen>

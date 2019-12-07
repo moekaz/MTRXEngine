@@ -1,11 +1,3 @@
-/*
-	Author: Mohamed Kazma
-	Description: A basic particle mass that will have a position velocity and acceleration 
-	without including anything complicated like orientation etc...
-	
-	MOSTLY DEPRECATED
-*/
-
 #pragma once
 
 #include <entities/IIntegratable.h>

@@ -1,0 +1,385 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="classmtrx_1_1_transform" kind="class" language="C++" prot="public">
+    <compoundname>mtrx::Transform</compoundname>
+    <includes refid="_transform_8h" local="no">Transform.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmtrx_1_1_transform_1a43726b26b35b73735f16c69dde6f2b51" prot="private" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 mtrx::Transform::position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" line="117" column="11" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmtrx_1_1_transform_1ad48f2797e6cb5f2115bf4faa97ab153d" prot="private" static="no" mutable="no">
+        <type>glm::quat</type>
+        <definition>glm::quat mtrx::Transform::orientation</definition>
+        <argsstring></argsstring>
+        <name>orientation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" line="118" column="11" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmtrx_1_1_transform_1afda64668c25c4a4aeda88c1a0da28fca" prot="private" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 mtrx::Transform::scale</definition>
+        <argsstring></argsstring>
+        <name>scale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" line="119" column="11" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmtrx_1_1_transform_1aad6a8f3e87607d86939d0ebe3427c2c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mtrx::Transform::Transform</definition>
+        <argsstring>(const glm::vec3 &amp;position=glm::vec3(), const glm::quat &amp;orientation=glm::angleAxis(0.f, worldUp), const glm::vec3 &amp;scale=glm::vec3(1, 1, 1))</argsstring>
+        <name>Transform</name>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>position</declname>
+          <defval>glm::vec3()</defval>
+        </param>
+        <param>
+          <type>const glm::quat &amp;</type>
+          <declname>orientation</declname>
+          <defval>glm::angleAxis(0.f, worldUp)</defval>
+        </param>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>scale</declname>
+          <defval>glm::vec3(1, 1, 1)</defval>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classmtrx_1_1_transform" kindref="compound">Transform</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>orientation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" line="23" column="1" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" bodystart="23" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_transform_1a4ac51d84ec5cd2267a2046c17772868c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mtrx::Transform::~Transform</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Transform</name>
+        <briefdescription>
+<para>Destroy the <ref refid="classmtrx_1_1_transform" kindref="compound">Transform</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" line="31" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_transform_1a22d3a1dc822cf410de92966c10f0cccd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mtrx::Transform::Translate</definition>
+        <argsstring>(const glm::vec3 &amp;translationVec)</argsstring>
+        <name>Translate</name>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>translationVec</declname>
+        </param>
+        <briefdescription>
+<para>Translate the position vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>translationVec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector used to translate the position of the transform </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" line="38" column="13" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_transform_1ab54ebee6fa9775358903ad0631c1df42" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mtrx::Transform::Rotate</definition>
+        <argsstring>(const glm::quat &amp;rotation)</argsstring>
+        <name>Rotate</name>
+        <param>
+          <type>const glm::quat &amp;</type>
+          <declname>rotation</declname>
+        </param>
+        <briefdescription>
+<para>Rotate the orientation value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rotation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rotation quaternion that we want to rotate the orientation with </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" line="45" column="13" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_transform_1a8331eb2b5ad4a290f9cb1484534dcf27" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mtrx::Transform::SetPosition</definition>
+        <argsstring>(const glm::vec3 &amp;pos)</argsstring>
+        <name>SetPosition</name>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Set the Position vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new position value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" line="54" column="13" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_transform_1a33f418bc15f821e731162fb8fe745aef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mtrx::Transform::SetOrientation</definition>
+        <argsstring>(const glm::quat &amp;orientation)</argsstring>
+        <name>SetOrientation</name>
+        <param>
+          <type>const glm::quat &amp;</type>
+          <declname>orientation</declname>
+        </param>
+        <briefdescription>
+<para>Set the Orientation quaternion. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>orientation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new orientation value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" line="61" column="13" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" bodystart="61" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_transform_1a429a326ae889a31f433cf5f68d70af1e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mtrx::Transform::SetScale</definition>
+        <argsstring>(const glm::vec3 &amp;scale)</argsstring>
+        <name>SetScale</name>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+<para>Set the Scale vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new scale value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" line="68" column="13" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_transform_1ab81c0229523bf29ea35a7a24fcff597e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const glm::vec3 &amp;</type>
+        <definition>const glm::vec3&amp; mtrx::Transform::GetPosition</definition>
+        <argsstring>() const</argsstring>
+        <name>GetPosition</name>
+        <briefdescription>
+<para>Get the Position vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>const glm::vec3&amp; Position value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" line="77" column="24" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" bodystart="77" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_transform_1a58b3e889aa1c031c3857ba7525e352b0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const glm::quat &amp;</type>
+        <definition>const glm::quat&amp; mtrx::Transform::GetOrientation</definition>
+        <argsstring>() const</argsstring>
+        <name>GetOrientation</name>
+        <briefdescription>
+<para>Get the Orientation quaternion. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>const glm::quat&amp; Orientation value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" line="84" column="24" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" bodystart="84" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_transform_1ad127e9a69dcf84bb098dfa8a6c2af22d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const glm::vec3 &amp;</type>
+        <definition>const glm::vec3&amp; mtrx::Transform::GetScale</definition>
+        <argsstring>() const</argsstring>
+        <name>GetScale</name>
+        <briefdescription>
+<para>Get the Scale vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>const glm::vec3&amp; Scale value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" line="91" column="24" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" bodystart="91" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_transform_1a5d0c4605858e295f2d32eee8fb9bb571" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>glm::vec3 &amp;</type>
+        <definition>glm::vec3&amp; mtrx::Transform::GetPosition</definition>
+        <argsstring>()</argsstring>
+        <name>GetPosition</name>
+        <briefdescription>
+<para>Get the Position vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>glm::vec3&amp; Position value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" line="100" column="18" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" bodystart="100" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_transform_1a402a968097c9b71087899fb08bdb5059" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>glm::quat &amp;</type>
+        <definition>glm::quat&amp; mtrx::Transform::GetOrientation</definition>
+        <argsstring>()</argsstring>
+        <name>GetOrientation</name>
+        <briefdescription>
+<para>Get the Orientation quaternion. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>glm::quat&amp; Orientation value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" line="107" column="18" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" bodystart="107" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_transform_1ab58b1746ddeb685e4cc05687f66d802d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>glm::vec3 &amp;</type>
+        <definition>glm::vec3&amp; mtrx::Transform::GetScale</definition>
+        <argsstring>()</argsstring>
+        <name>GetScale</name>
+        <briefdescription>
+<para>Get the Scale vctor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>glm::vec3&amp; Scale vector </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" line="114" column="18" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" bodystart="114" bodyend="114"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Wrapper implementation of a transform that holds position, orientation, scale values and some functionality based on these values. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" line="13" column="1" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/Transform.h" bodystart="12" bodyend="120"/>
+    <listofallmembers>
+      <member refid="classmtrx_1_1_transform_1a58b3e889aa1c031c3857ba7525e352b0" prot="public" virt="non-virtual"><scope>mtrx::Transform</scope><name>GetOrientation</name></member>
+      <member refid="classmtrx_1_1_transform_1a402a968097c9b71087899fb08bdb5059" prot="public" virt="non-virtual"><scope>mtrx::Transform</scope><name>GetOrientation</name></member>
+      <member refid="classmtrx_1_1_transform_1ab81c0229523bf29ea35a7a24fcff597e" prot="public" virt="non-virtual"><scope>mtrx::Transform</scope><name>GetPosition</name></member>
+      <member refid="classmtrx_1_1_transform_1a5d0c4605858e295f2d32eee8fb9bb571" prot="public" virt="non-virtual"><scope>mtrx::Transform</scope><name>GetPosition</name></member>
+      <member refid="classmtrx_1_1_transform_1ad127e9a69dcf84bb098dfa8a6c2af22d" prot="public" virt="non-virtual"><scope>mtrx::Transform</scope><name>GetScale</name></member>
+      <member refid="classmtrx_1_1_transform_1ab58b1746ddeb685e4cc05687f66d802d" prot="public" virt="non-virtual"><scope>mtrx::Transform</scope><name>GetScale</name></member>
+      <member refid="classmtrx_1_1_transform_1ad48f2797e6cb5f2115bf4faa97ab153d" prot="private" virt="non-virtual"><scope>mtrx::Transform</scope><name>orientation</name></member>
+      <member refid="classmtrx_1_1_transform_1a43726b26b35b73735f16c69dde6f2b51" prot="private" virt="non-virtual"><scope>mtrx::Transform</scope><name>position</name></member>
+      <member refid="classmtrx_1_1_transform_1ab54ebee6fa9775358903ad0631c1df42" prot="public" virt="non-virtual"><scope>mtrx::Transform</scope><name>Rotate</name></member>
+      <member refid="classmtrx_1_1_transform_1afda64668c25c4a4aeda88c1a0da28fca" prot="private" virt="non-virtual"><scope>mtrx::Transform</scope><name>scale</name></member>
+      <member refid="classmtrx_1_1_transform_1a33f418bc15f821e731162fb8fe745aef" prot="public" virt="non-virtual"><scope>mtrx::Transform</scope><name>SetOrientation</name></member>
+      <member refid="classmtrx_1_1_transform_1a8331eb2b5ad4a290f9cb1484534dcf27" prot="public" virt="non-virtual"><scope>mtrx::Transform</scope><name>SetPosition</name></member>
+      <member refid="classmtrx_1_1_transform_1a429a326ae889a31f433cf5f68d70af1e" prot="public" virt="non-virtual"><scope>mtrx::Transform</scope><name>SetScale</name></member>
+      <member refid="classmtrx_1_1_transform_1aad6a8f3e87607d86939d0ebe3427c2c7" prot="public" virt="non-virtual"><scope>mtrx::Transform</scope><name>Transform</name></member>
+      <member refid="classmtrx_1_1_transform_1a22d3a1dc822cf410de92966c10f0cccd" prot="public" virt="non-virtual"><scope>mtrx::Transform</scope><name>Translate</name></member>
+      <member refid="classmtrx_1_1_transform_1a4ac51d84ec5cd2267a2046c17772868c" prot="public" virt="non-virtual"><scope>mtrx::Transform</scope><name>~Transform</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

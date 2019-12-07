@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="dir_cab12f65e8dc04280660a3bb9abb9c33" kind="dir">
+    <compoundname>C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers</compoundname>
+    <innerdir refid="dir_9f9a41b3c21dc3f26dc26fb65c0828b3">C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders</innerdir>
+    <innerdir refid="dir_63305fab0db907be762bc6579124e034">C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/entities</innerdir>
+    <innerdir refid="dir_ffbadaee7cf52f3ed5f5b0e676c83adb">C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators</innerdir>
+    <innerdir refid="dir_29259fdef0e42ff0d9ee4351c851be8a">C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/log</innerdir>
+    <innerdir refid="dir_e69e1485f6b1af872ba5f9a0ef1a029f">C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math</innerdir>
+    <innerdir refid="dir_e16e1e8a5c8b8f4e86022af71cb060c6">C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils</innerdir>
+    <innerfile refid="_defs_8h">Defs.h</innerfile>
+    <innerfile refid="mtrx_dynamic_world_8h">mtrxDynamicWorld.h</innerfile>
+    <innerfile refid="_particle_cable_coupling_8h">ParticleCableCoupling.h</innerfile>
+    <innerfile refid="_particle_collision_8h">ParticleCollision.h</innerfile>
+    <innerfile refid="_particle_collision_generator_8h">ParticleCollisionGenerator.h</innerfile>
+    <innerfile refid="_particle_collision_resolver_8h">ParticleCollisionResolver.h</innerfile>
+    <innerfile refid="_particle_coupling_8h">ParticleCoupling.h</innerfile>
+    <innerfile refid="_particle_rod_coupling_8h">ParticleRodCoupling.h</innerfile>
+    <innerfile refid="_precompiled_header_8h">PrecompiledHeader.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/"/>
+  </compounddef>
+</doxygen>

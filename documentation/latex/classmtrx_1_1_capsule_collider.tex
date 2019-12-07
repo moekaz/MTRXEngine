@@ -1,0 +1,270 @@
+\hypertarget{classmtrx_1_1_capsule_collider}{}\doxysection{mtrx\+::Capsule\+Collider Class Reference}
+\label{classmtrx_1_1_capsule_collider}\index{mtrx::CapsuleCollider@{mtrx::CapsuleCollider}}
+
+
+Implementation of Capsule colliders.  
+
+
+
+
+{\ttfamily \#include $<$Capsule\+Collider.\+h$>$}
+
+Inheritance diagram for mtrx\+::Capsule\+Collider\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmtrx_1_1_capsule_collider}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmtrx_1_1_capsule_collider_a42d9edb44be1a7eeade2abbf3458880f}{Capsule\+Collider}} (const glm\+::vec3 \&center=glm\+::vec3(), const glm\+::quat \&orientation=glm\+::angle\+Axis(0.f, world\+Up), const glm\+::vec3 \&scale=glm\+::vec3(1, 1, 1), float radii=0.\+5f, float height=1.f)
+\begin{DoxyCompactList}\small\item\em Construct a new Capsule \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmtrx_1_1_capsule_collider_ad3c23d2999f7455d5c996ce23936be70}{Capsule\+Collider}} (const \mbox{\hyperlink{classmtrx_1_1_transform}{Transform}} \&transform=\mbox{\hyperlink{classmtrx_1_1_transform}{Transform}}(), float radii=0.\+5f, float height=1.f)
+\begin{DoxyCompactList}\small\item\em Construct a new Capsule \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classmtrx_1_1_capsule_collider_a02743857bd1509db5bf941f6fb65d4fd}{$\sim$\+Capsule\+Collider}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the Capsule \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} object. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classmtrx_1_1_capsule_collider_a17f41f46bd503f7c7906c6246cbfcb26}{Raycast\+Collision}} (const \mbox{\hyperlink{classmtrx_1_1_ray}{Ray}} \&ray) override
+\begin{DoxyCompactList}\small\item\em Raycast ray and capsule collider collision detection algorithm. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classmtrx_1_1_capsule_collider_a6c07f06cdae55cf18f0492a9177583b0}{Get\+Radii}} () const
+\begin{DoxyCompactList}\small\item\em Get the Radii of the capsule colldier. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classmtrx_1_1_capsule_collider_a25f17c3041b19b174c94c40dd248dc9e}{Get\+Height}} () const
+\begin{DoxyCompactList}\small\item\em Get the Height of the capsule collider. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_capsule_collider_ab0ac72254b0d912a5e772ee703526616}{Set\+Radii}} (float radius)
+\begin{DoxyCompactList}\small\item\em Set the Radii of the capsule collider. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_capsule_collider_a74a6c21ad7fdf6dee9bceab58628abb5}{Set\+Height}} (float height)
+\begin{DoxyCompactList}\small\item\em Set the Height of the capsule collider. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmtrx_1_1_capsule_collider_ae1c97f035b4a0d26c7f680780ecc6996}{Set\+Scale}} (const glm\+::vec3 \&scale) override
+\begin{DoxyCompactList}\small\item\em Set the Scale of the capsule collider Only the X and Y values of the scale are the only applicable values on the collider The Z value is ignored. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmtrx_1_1_capsule_collider_ad8b6a634528473222da22557d2d25764}{Set\+Position}} (const glm\+::vec3 \&position) override
+\begin{DoxyCompactList}\small\item\em Set the Position of the capsile collider. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmtrx_1_1_capsule_collider_a03a6476613b7f81a5250eee613c7ed2f}{Set\+Orientation}} (const glm\+::quat \&orientation) override
+\begin{DoxyCompactList}\small\item\em Set the Orientation of the capsule collider. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_capsule_collider_af92fb8f542f9ec4241bda096c59f3bae}\label{classmtrx_1_1_capsule_collider_af92fb8f542f9ec4241bda096c59f3bae}} 
+glm\+::vec3 {\bfseries A}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_capsule_collider_ae4ded291442f1c3b578a00b3e55bab39}\label{classmtrx_1_1_capsule_collider_ae4ded291442f1c3b578a00b3e55bab39}} 
+glm\+::vec3 {\bfseries B}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_capsule_collider_a665fc7c17aea3fd6f0ec648411b8deb7}\label{classmtrx_1_1_capsule_collider_a665fc7c17aea3fd6f0ec648411b8deb7}} 
+float {\bfseries radii}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_capsule_collider_aba4278877bb5969cd382bfb641bdc120}\label{classmtrx_1_1_capsule_collider_aba4278877bb5969cd382bfb641bdc120}} 
+float {\bfseries height}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Implementation of Capsule colliders. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmtrx_1_1_capsule_collider_a42d9edb44be1a7eeade2abbf3458880f}\label{classmtrx_1_1_capsule_collider_a42d9edb44be1a7eeade2abbf3458880f}} 
+\index{mtrx::CapsuleCollider@{mtrx::CapsuleCollider}!CapsuleCollider@{CapsuleCollider}}
+\index{CapsuleCollider@{CapsuleCollider}!mtrx::CapsuleCollider@{mtrx::CapsuleCollider}}
+\doxysubsubsection{\texorpdfstring{CapsuleCollider()}{CapsuleCollider()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily mtrx\+::\+Capsule\+Collider\+::\+Capsule\+Collider (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{center = {\ttfamily glm\+:\+:vec3()},  }\item[{const glm\+::quat \&}]{orientation = {\ttfamily glm\+:\+:angleAxis(0.f,~worldUp)},  }\item[{const glm\+::vec3 \&}]{scale = {\ttfamily glm\+:\+:vec3(1,~1,~1)},  }\item[{float}]{radii = {\ttfamily 0.5f},  }\item[{float}]{height = {\ttfamily 1.f} }\end{DoxyParamCaption})}
+
+
+
+Construct a new Capsule \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em center} & Center of the capsule collider \\
+\hline
+{\em orientation} & Orientation of the capsule collider \\
+\hline
+{\em scale} & Scale of the capsule collider \\
+\hline
+{\em radii} & Radii of the spheres of the capsule collider \\
+\hline
+{\em height} & Height of the capsule collider \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_capsule_collider_ad3c23d2999f7455d5c996ce23936be70}\label{classmtrx_1_1_capsule_collider_ad3c23d2999f7455d5c996ce23936be70}} 
+\index{mtrx::CapsuleCollider@{mtrx::CapsuleCollider}!CapsuleCollider@{CapsuleCollider}}
+\index{CapsuleCollider@{CapsuleCollider}!mtrx::CapsuleCollider@{mtrx::CapsuleCollider}}
+\doxysubsubsection{\texorpdfstring{CapsuleCollider()}{CapsuleCollider()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily mtrx\+::\+Capsule\+Collider\+::\+Capsule\+Collider (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmtrx_1_1_transform}{Transform}} \&}]{transform = {\ttfamily \mbox{\hyperlink{classmtrx_1_1_transform}{Transform}}()},  }\item[{float}]{radii = {\ttfamily 0.5f},  }\item[{float}]{height = {\ttfamily 1.f} }\end{DoxyParamCaption})}
+
+
+
+Construct a new Capsule \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transform} & The transform that the capsule collider will use \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classmtrx_1_1_transform}{mtrx\+::\+Transform}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em radii} & Radii of the spheres of the capsule collider \\
+\hline
+{\em height} & Height of the capsule collider \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_capsule_collider_a02743857bd1509db5bf941f6fb65d4fd}\label{classmtrx_1_1_capsule_collider_a02743857bd1509db5bf941f6fb65d4fd}} 
+\index{mtrx::CapsuleCollider@{mtrx::CapsuleCollider}!````~CapsuleCollider@{$\sim$CapsuleCollider}}
+\index{````~CapsuleCollider@{$\sim$CapsuleCollider}!mtrx::CapsuleCollider@{mtrx::CapsuleCollider}}
+\doxysubsubsection{\texorpdfstring{$\sim$CapsuleCollider()}{~CapsuleCollider()}}
+{\footnotesize\ttfamily virtual mtrx\+::\+Capsule\+Collider\+::$\sim$\+Capsule\+Collider (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destroy the Capsule \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmtrx_1_1_capsule_collider_a25f17c3041b19b174c94c40dd248dc9e}\label{classmtrx_1_1_capsule_collider_a25f17c3041b19b174c94c40dd248dc9e}} 
+\index{mtrx::CapsuleCollider@{mtrx::CapsuleCollider}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!mtrx::CapsuleCollider@{mtrx::CapsuleCollider}}
+\doxysubsubsection{\texorpdfstring{GetHeight()}{GetHeight()}}
+{\footnotesize\ttfamily float mtrx\+::\+Capsule\+Collider\+::\+Get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Height of the capsule collider. 
+
+\begin{DoxyReturn}{Returns}
+float The height of the capsule collider 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_capsule_collider_a6c07f06cdae55cf18f0492a9177583b0}\label{classmtrx_1_1_capsule_collider_a6c07f06cdae55cf18f0492a9177583b0}} 
+\index{mtrx::CapsuleCollider@{mtrx::CapsuleCollider}!GetRadii@{GetRadii}}
+\index{GetRadii@{GetRadii}!mtrx::CapsuleCollider@{mtrx::CapsuleCollider}}
+\doxysubsubsection{\texorpdfstring{GetRadii()}{GetRadii()}}
+{\footnotesize\ttfamily float mtrx\+::\+Capsule\+Collider\+::\+Get\+Radii (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Radii of the capsule colldier. 
+
+\begin{DoxyReturn}{Returns}
+float The radii of the capsule collider 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_capsule_collider_a17f41f46bd503f7c7906c6246cbfcb26}\label{classmtrx_1_1_capsule_collider_a17f41f46bd503f7c7906c6246cbfcb26}} 
+\index{mtrx::CapsuleCollider@{mtrx::CapsuleCollider}!RaycastCollision@{RaycastCollision}}
+\index{RaycastCollision@{RaycastCollision}!mtrx::CapsuleCollider@{mtrx::CapsuleCollider}}
+\doxysubsubsection{\texorpdfstring{RaycastCollision()}{RaycastCollision()}}
+{\footnotesize\ttfamily virtual bool mtrx\+::\+Capsule\+Collider\+::\+Raycast\+Collision (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmtrx_1_1_ray}{Ray}} \&}]{ray }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Raycast ray and capsule collider collision detection algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & \mbox{\hyperlink{classmtrx_1_1_ray}{Ray}} used for raycast check \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classmtrx_1_1_ray}{mtrx\+::\+Ray}} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+true The ray and capsule collider collide 
+
+false the ray and the capsule collider do not collide 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classmtrx_1_1_collider_a361c341b949adf2508c46389f8b4509d}{mtrx\+::\+Collider}}.
+
+\mbox{\Hypertarget{classmtrx_1_1_capsule_collider_a74a6c21ad7fdf6dee9bceab58628abb5}\label{classmtrx_1_1_capsule_collider_a74a6c21ad7fdf6dee9bceab58628abb5}} 
+\index{mtrx::CapsuleCollider@{mtrx::CapsuleCollider}!SetHeight@{SetHeight}}
+\index{SetHeight@{SetHeight}!mtrx::CapsuleCollider@{mtrx::CapsuleCollider}}
+\doxysubsubsection{\texorpdfstring{SetHeight()}{SetHeight()}}
+{\footnotesize\ttfamily void mtrx\+::\+Capsule\+Collider\+::\+Set\+Height (\begin{DoxyParamCaption}\item[{float}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the Height of the capsule collider. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em height} & The new value of the height \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_capsule_collider_a03a6476613b7f81a5250eee613c7ed2f}\label{classmtrx_1_1_capsule_collider_a03a6476613b7f81a5250eee613c7ed2f}} 
+\index{mtrx::CapsuleCollider@{mtrx::CapsuleCollider}!SetOrientation@{SetOrientation}}
+\index{SetOrientation@{SetOrientation}!mtrx::CapsuleCollider@{mtrx::CapsuleCollider}}
+\doxysubsubsection{\texorpdfstring{SetOrientation()}{SetOrientation()}}
+{\footnotesize\ttfamily virtual void mtrx\+::\+Capsule\+Collider\+::\+Set\+Orientation (\begin{DoxyParamCaption}\item[{const glm\+::quat \&}]{orientation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the Orientation of the capsule collider. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em orientation} & The new orientation of the capsule collider \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classmtrx_1_1_collider_ac69efe7d26d9e600154f601cbcc30849}{mtrx\+::\+Collider}}.
+
+\mbox{\Hypertarget{classmtrx_1_1_capsule_collider_ad8b6a634528473222da22557d2d25764}\label{classmtrx_1_1_capsule_collider_ad8b6a634528473222da22557d2d25764}} 
+\index{mtrx::CapsuleCollider@{mtrx::CapsuleCollider}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!mtrx::CapsuleCollider@{mtrx::CapsuleCollider}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily virtual void mtrx\+::\+Capsule\+Collider\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the Position of the capsile collider. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The new position of the capsule collider \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classmtrx_1_1_collider_a0bbed70b7af99a1469b3da9eac7df531}{mtrx\+::\+Collider}}.
+
+\mbox{\Hypertarget{classmtrx_1_1_capsule_collider_ab0ac72254b0d912a5e772ee703526616}\label{classmtrx_1_1_capsule_collider_ab0ac72254b0d912a5e772ee703526616}} 
+\index{mtrx::CapsuleCollider@{mtrx::CapsuleCollider}!SetRadii@{SetRadii}}
+\index{SetRadii@{SetRadii}!mtrx::CapsuleCollider@{mtrx::CapsuleCollider}}
+\doxysubsubsection{\texorpdfstring{SetRadii()}{SetRadii()}}
+{\footnotesize\ttfamily void mtrx\+::\+Capsule\+Collider\+::\+Set\+Radii (\begin{DoxyParamCaption}\item[{float}]{radius }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the Radii of the capsule collider. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & The new value of radius \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_capsule_collider_ae1c97f035b4a0d26c7f680780ecc6996}\label{classmtrx_1_1_capsule_collider_ae1c97f035b4a0d26c7f680780ecc6996}} 
+\index{mtrx::CapsuleCollider@{mtrx::CapsuleCollider}!SetScale@{SetScale}}
+\index{SetScale@{SetScale}!mtrx::CapsuleCollider@{mtrx::CapsuleCollider}}
+\doxysubsubsection{\texorpdfstring{SetScale()}{SetScale()}}
+{\footnotesize\ttfamily virtual void mtrx\+::\+Capsule\+Collider\+::\+Set\+Scale (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the Scale of the capsule collider Only the X and Y values of the scale are the only applicable values on the collider The Z value is ignored. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scale} & The new scale of the collider \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classmtrx_1_1_collider_a81b9373f9d09221753255046b9279a5d}{mtrx\+::\+Collider}}.
+

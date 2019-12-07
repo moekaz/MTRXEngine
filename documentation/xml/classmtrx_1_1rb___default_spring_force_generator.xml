@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="classmtrx_1_1rb___default_spring_force_generator" kind="class" language="C++" prot="public">
+    <compoundname>mtrx::rb_DefaultSpringForceGenerator</compoundname>
+    <basecompoundref refid="classmtrx_1_1_i_rigidbody_force_generator" prot="public" virt="non-virtual">mtrx::IRigidbodyForceGenerator</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classmtrx_1_1rb___default_spring_force_generator_1acb2b5e2233db37b7d5a86620de17b9b6" prot="public" static="no" mutable="no">
+        <type><ref refid="classmtrx_1_1_rigidbody" kindref="compound">Rigidbody</ref> *</type>
+        <definition>Rigidbody* mtrx::rb_DefaultSpringForceGenerator::secondParticle</definition>
+        <argsstring></argsstring>
+        <name>secondParticle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/RigidbodyGenerators/rb_DefaultSpringForceGenerator.h" line="19" column="11" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/RigidbodyGenerators/rb_DefaultSpringForceGenerator.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmtrx_1_1rb___default_spring_force_generator_1a96d351aadc08a8926bf6d07e0a683e53" prot="public" static="no" mutable="no">
+        <type>SpringData</type>
+        <definition>SpringData mtrx::rb_DefaultSpringForceGenerator::spring</definition>
+        <argsstring></argsstring>
+        <name>spring</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/RigidbodyGenerators/rb_DefaultSpringForceGenerator.h" line="20" column="12" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/RigidbodyGenerators/rb_DefaultSpringForceGenerator.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmtrx_1_1rb___default_spring_force_generator_1a3a7614dedd985b8b8f4075945d0a9b63" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void mtrx::rb_DefaultSpringForceGenerator::UpdateForces</definition>
+        <argsstring>(Rigidbody *rb, float deltaTime) override</argsstring>
+        <name>UpdateForces</name>
+        <param>
+          <type><ref refid="classmtrx_1_1_rigidbody" kindref="compound">Rigidbody</ref> *</type>
+          <declname>rb</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/RigidbodyGenerators/rb_DefaultSpringForceGenerator.h" line="23" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1rb___default_spring_force_generator_1af4dad3ae23f2609a62ee423000cab280" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mtrx::rb_DefaultSpringForceGenerator::rb_DefaultSpringForceGenerator</definition>
+        <argsstring>(Rigidbody *secondParticle, float stiffness, float restLength)</argsstring>
+        <name>rb_DefaultSpringForceGenerator</name>
+        <param>
+          <type><ref refid="classmtrx_1_1_rigidbody" kindref="compound">Rigidbody</ref> *</type>
+          <declname>secondParticle</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>stiffness</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>restLength</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/RigidbodyGenerators/rb_DefaultSpringForceGenerator.h" line="25" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1rb___default_spring_force_generator_1a3b7ad753e25e6e1e9efc9844c8a30959" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mtrx::rb_DefaultSpringForceGenerator::~rb_DefaultSpringForceGenerator</definition>
+        <argsstring>()</argsstring>
+        <name>~rb_DefaultSpringForceGenerator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/RigidbodyGenerators/rb_DefaultSpringForceGenerator.h" line="26" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>mtrx::rb_DefaultSpringForceGenerator</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mtrx::IRigidbodyForceGenerator</label>
+        <link refid="classmtrx_1_1_i_rigidbody_force_generator"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>mtrx::Body</label>
+        <link refid="classmtrx_1_1_body"/>
+        <childnode refid="5" relation="private-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>transform</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>mtrx::Transform</label>
+        <link refid="classmtrx_1_1_transform"/>
+      </node>
+      <node id="1">
+        <label>mtrx::rb_DefaultSpringForceGenerator</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>secondParticle</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>mtrx::Rigidbody</label>
+        <link refid="classmtrx_1_1_rigidbody"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>axes</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>mtrx::IIntegratable</label>
+        <link refid="classmtrx_1_1_i_integratable"/>
+      </node>
+      <node id="7">
+        <label>mtrx::ObjectAxes</label>
+        <link refid="structmtrx_1_1_object_axes"/>
+      </node>
+      <node id="2">
+        <label>mtrx::IRigidbodyForceGenerator</label>
+        <link refid="classmtrx_1_1_i_rigidbody_force_generator"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/RigidbodyGenerators/rb_DefaultSpringForceGenerator.h" line="17" column="1" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/RigidbodyGenerators/rb_DefaultSpringForceGenerator.h" bodystart="16" bodyend="27"/>
+    <listofallmembers>
+      <member refid="classmtrx_1_1rb___default_spring_force_generator_1af4dad3ae23f2609a62ee423000cab280" prot="public" virt="non-virtual"><scope>mtrx::rb_DefaultSpringForceGenerator</scope><name>rb_DefaultSpringForceGenerator</name></member>
+      <member refid="classmtrx_1_1rb___default_spring_force_generator_1acb2b5e2233db37b7d5a86620de17b9b6" prot="public" virt="non-virtual"><scope>mtrx::rb_DefaultSpringForceGenerator</scope><name>secondParticle</name></member>
+      <member refid="classmtrx_1_1rb___default_spring_force_generator_1a96d351aadc08a8926bf6d07e0a683e53" prot="public" virt="non-virtual"><scope>mtrx::rb_DefaultSpringForceGenerator</scope><name>spring</name></member>
+      <member refid="classmtrx_1_1rb___default_spring_force_generator_1a3a7614dedd985b8b8f4075945d0a9b63" prot="public" virt="virtual"><scope>mtrx::rb_DefaultSpringForceGenerator</scope><name>UpdateForces</name></member>
+      <member refid="classmtrx_1_1rb___default_spring_force_generator_1a3b7ad753e25e6e1e9efc9844c8a30959" prot="public" virt="non-virtual"><scope>mtrx::rb_DefaultSpringForceGenerator</scope><name>~rb_DefaultSpringForceGenerator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

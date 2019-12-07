@@ -1,0 +1,186 @@
+\hypertarget{classmtrx_1_1_o_o_b_b_collider}{}\doxysection{mtrx\+::O\+O\+B\+B\+Collider Class Reference}
+\label{classmtrx_1_1_o_o_b_b_collider}\index{mtrx::OOBBCollider@{mtrx::OOBBCollider}}
+
+
+Implementation of O\+O\+B\+Bs.  
+
+
+
+
+{\ttfamily \#include $<$O\+O\+B\+B\+Collider.\+h$>$}
+
+Inheritance diagram for mtrx\+::O\+O\+B\+B\+Collider\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classmtrx_1_1_o_o_b_b_collider}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmtrx_1_1_o_o_b_b_collider_aa935b9c99cb1457ed328783fb9a4baed}{O\+O\+B\+B\+Collider}} (const glm\+::vec3 \&center=glm\+::vec3(), const glm\+::quat \&orientation=glm\+::angle\+Axis(0.f, glm\+::vec3(0, 1, 0)), const glm\+::vec3 \&scale=glm\+::vec3(1, 1, 1))
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classmtrx_1_1_o_o_b_b_collider}{O\+O\+B\+B\+Collider}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmtrx_1_1_o_o_b_b_collider_aa07bada37be7dcff9152dafc3f79e0b8}{O\+O\+B\+B\+Collider}} (const \mbox{\hyperlink{classmtrx_1_1_transform}{Transform}} \&transform=\mbox{\hyperlink{classmtrx_1_1_transform}{Transform}}())
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classmtrx_1_1_o_o_b_b_collider}{O\+O\+B\+B\+Collider}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classmtrx_1_1_o_o_b_b_collider_acefb2d3f5f2a316b772d5f5b1aab5967}{$\sim$\+O\+O\+B\+B\+Collider}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classmtrx_1_1_o_o_b_b_collider}{O\+O\+B\+B\+Collider}} object. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classmtrx_1_1_o_o_b_b_collider_afa990f428f3044ceb1639816f5d98278}{Raycast\+Collision}} (const \mbox{\hyperlink{classmtrx_1_1_ray}{Ray}} \&ray) override
+\begin{DoxyCompactList}\small\item\em Raycast O\+O\+BB collision detection algorithm. \end{DoxyCompactList}\item 
+const glm\+::vec3 $\ast$ \mbox{\hyperlink{classmtrx_1_1_o_o_b_b_collider_a08ab41dae178a7f064c7992c9c2c07b1}{Get\+Axes}} () const
+\begin{DoxyCompactList}\small\item\em Get the Axes of the collider. \end{DoxyCompactList}\item 
+const float $\ast$ \mbox{\hyperlink{classmtrx_1_1_o_o_b_b_collider_a8c524feaabb957a4ed3f4cd212e1c365}{Get\+Half\+Extents}} () const
+\begin{DoxyCompactList}\small\item\em Get the Half Extents of the O\+O\+BB collider. \end{DoxyCompactList}\item 
+float $\ast$ \mbox{\hyperlink{classmtrx_1_1_o_o_b_b_collider_a102dd48abba7ddeb8919f757a6485cb8}{Get\+Half\+Extents}} ()
+\begin{DoxyCompactList}\small\item\em Get the Half Extents of the O\+O\+BB collider. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmtrx_1_1_o_o_b_b_collider_a7fe953f72faabf2998e9856d68b119f6}{Set\+Scale}} (const glm\+::vec3 \&scale) override
+\begin{DoxyCompactList}\small\item\em Set the Scale of the collider. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_o_o_b_b_collider_a68b31d56da9a4bdb2a5c27984be40118}\label{classmtrx_1_1_o_o_b_b_collider_a68b31d56da9a4bdb2a5c27984be40118}} 
+float {\bfseries half\+Extents} \mbox{[}3\mbox{]}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_o_o_b_b_collider_a3f2a7b598c4de9158c575c081e96862b}\label{classmtrx_1_1_o_o_b_b_collider_a3f2a7b598c4de9158c575c081e96862b}} 
+\mbox{\hyperlink{structmtrx_1_1_object_axes}{Object\+Axes}} {\bfseries axes}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Implementation of O\+O\+B\+Bs. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmtrx_1_1_o_o_b_b_collider_aa935b9c99cb1457ed328783fb9a4baed}\label{classmtrx_1_1_o_o_b_b_collider_aa935b9c99cb1457ed328783fb9a4baed}} 
+\index{mtrx::OOBBCollider@{mtrx::OOBBCollider}!OOBBCollider@{OOBBCollider}}
+\index{OOBBCollider@{OOBBCollider}!mtrx::OOBBCollider@{mtrx::OOBBCollider}}
+\doxysubsubsection{\texorpdfstring{OOBBCollider()}{OOBBCollider()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily mtrx\+::\+O\+O\+B\+B\+Collider\+::\+O\+O\+B\+B\+Collider (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{center = {\ttfamily glm\+:\+:vec3()},  }\item[{const glm\+::quat \&}]{orientation = {\ttfamily glm\+:\+:angleAxis(0.f,~glm\+:\+:vec3(0,~1,~0))},  }\item[{const glm\+::vec3 \&}]{scale = {\ttfamily glm\+:\+:vec3(1,~1,~1)} }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classmtrx_1_1_o_o_b_b_collider}{O\+O\+B\+B\+Collider}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em center} & Center of the collider \\
+\hline
+{\em orientation} & Orientation of the collider \\
+\hline
+{\em scale} & The scale of the collider \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_o_o_b_b_collider_aa07bada37be7dcff9152dafc3f79e0b8}\label{classmtrx_1_1_o_o_b_b_collider_aa07bada37be7dcff9152dafc3f79e0b8}} 
+\index{mtrx::OOBBCollider@{mtrx::OOBBCollider}!OOBBCollider@{OOBBCollider}}
+\index{OOBBCollider@{OOBBCollider}!mtrx::OOBBCollider@{mtrx::OOBBCollider}}
+\doxysubsubsection{\texorpdfstring{OOBBCollider()}{OOBBCollider()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily mtrx\+::\+O\+O\+B\+B\+Collider\+::\+O\+O\+B\+B\+Collider (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmtrx_1_1_transform}{Transform}} \&}]{transform = {\ttfamily \mbox{\hyperlink{classmtrx_1_1_transform}{Transform}}()} }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classmtrx_1_1_o_o_b_b_collider}{O\+O\+B\+B\+Collider}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transform} & The transform of the collider @mtrx\+::\+Transform \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_o_o_b_b_collider_acefb2d3f5f2a316b772d5f5b1aab5967}\label{classmtrx_1_1_o_o_b_b_collider_acefb2d3f5f2a316b772d5f5b1aab5967}} 
+\index{mtrx::OOBBCollider@{mtrx::OOBBCollider}!````~OOBBCollider@{$\sim$OOBBCollider}}
+\index{````~OOBBCollider@{$\sim$OOBBCollider}!mtrx::OOBBCollider@{mtrx::OOBBCollider}}
+\doxysubsubsection{\texorpdfstring{$\sim$OOBBCollider()}{~OOBBCollider()}}
+{\footnotesize\ttfamily virtual mtrx\+::\+O\+O\+B\+B\+Collider\+::$\sim$\+O\+O\+B\+B\+Collider (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destroy the \mbox{\hyperlink{classmtrx_1_1_o_o_b_b_collider}{O\+O\+B\+B\+Collider}} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmtrx_1_1_o_o_b_b_collider_a08ab41dae178a7f064c7992c9c2c07b1}\label{classmtrx_1_1_o_o_b_b_collider_a08ab41dae178a7f064c7992c9c2c07b1}} 
+\index{mtrx::OOBBCollider@{mtrx::OOBBCollider}!GetAxes@{GetAxes}}
+\index{GetAxes@{GetAxes}!mtrx::OOBBCollider@{mtrx::OOBBCollider}}
+\doxysubsubsection{\texorpdfstring{GetAxes()}{GetAxes()}}
+{\footnotesize\ttfamily const glm\+::vec3$\ast$ mtrx\+::\+O\+O\+B\+B\+Collider\+::\+Get\+Axes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Axes of the collider. 
+
+\begin{DoxyReturn}{Returns}
+const glm\+::vec3$\ast$ Array of the axes of the O\+O\+BB 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_o_o_b_b_collider_a102dd48abba7ddeb8919f757a6485cb8}\label{classmtrx_1_1_o_o_b_b_collider_a102dd48abba7ddeb8919f757a6485cb8}} 
+\index{mtrx::OOBBCollider@{mtrx::OOBBCollider}!GetHalfExtents@{GetHalfExtents}}
+\index{GetHalfExtents@{GetHalfExtents}!mtrx::OOBBCollider@{mtrx::OOBBCollider}}
+\doxysubsubsection{\texorpdfstring{GetHalfExtents()}{GetHalfExtents()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily float$\ast$ mtrx\+::\+O\+O\+B\+B\+Collider\+::\+Get\+Half\+Extents (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Half Extents of the O\+O\+BB collider. 
+
+\begin{DoxyReturn}{Returns}
+float$\ast$ The half extents of the collider 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_o_o_b_b_collider_a8c524feaabb957a4ed3f4cd212e1c365}\label{classmtrx_1_1_o_o_b_b_collider_a8c524feaabb957a4ed3f4cd212e1c365}} 
+\index{mtrx::OOBBCollider@{mtrx::OOBBCollider}!GetHalfExtents@{GetHalfExtents}}
+\index{GetHalfExtents@{GetHalfExtents}!mtrx::OOBBCollider@{mtrx::OOBBCollider}}
+\doxysubsubsection{\texorpdfstring{GetHalfExtents()}{GetHalfExtents()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const float$\ast$ mtrx\+::\+O\+O\+B\+B\+Collider\+::\+Get\+Half\+Extents (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Half Extents of the O\+O\+BB collider. 
+
+\begin{DoxyReturn}{Returns}
+const float$\ast$ The half extents of the collider 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_o_o_b_b_collider_afa990f428f3044ceb1639816f5d98278}\label{classmtrx_1_1_o_o_b_b_collider_afa990f428f3044ceb1639816f5d98278}} 
+\index{mtrx::OOBBCollider@{mtrx::OOBBCollider}!RaycastCollision@{RaycastCollision}}
+\index{RaycastCollision@{RaycastCollision}!mtrx::OOBBCollider@{mtrx::OOBBCollider}}
+\doxysubsubsection{\texorpdfstring{RaycastCollision()}{RaycastCollision()}}
+{\footnotesize\ttfamily virtual bool mtrx\+::\+O\+O\+B\+B\+Collider\+::\+Raycast\+Collision (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmtrx_1_1_ray}{Ray}} \&}]{ray }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Raycast O\+O\+BB collision detection algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & \mbox{\hyperlink{classmtrx_1_1_ray}{Ray}} that we want to check collision for \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classmtrx_1_1_ray}{mtrx\+::\+Ray}} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+true The ray and collider collide 
+
+false The ray and collider do not collide 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classmtrx_1_1_convex_shape_collider_a44fba7247c98212c60e0eec4e16e74ec}{mtrx\+::\+Convex\+Shape\+Collider}}.
+
+\mbox{\Hypertarget{classmtrx_1_1_o_o_b_b_collider_a7fe953f72faabf2998e9856d68b119f6}\label{classmtrx_1_1_o_o_b_b_collider_a7fe953f72faabf2998e9856d68b119f6}} 
+\index{mtrx::OOBBCollider@{mtrx::OOBBCollider}!SetScale@{SetScale}}
+\index{SetScale@{SetScale}!mtrx::OOBBCollider@{mtrx::OOBBCollider}}
+\doxysubsubsection{\texorpdfstring{SetScale()}{SetScale()}}
+{\footnotesize\ttfamily virtual void mtrx\+::\+O\+O\+B\+B\+Collider\+::\+Set\+Scale (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the Scale of the collider. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scale} & The scale of the collider \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classmtrx_1_1_convex_shape_collider_a1de37ecfb1bd42e43201c09c6e5a980f}{mtrx\+::\+Convex\+Shape\+Collider}}.
+

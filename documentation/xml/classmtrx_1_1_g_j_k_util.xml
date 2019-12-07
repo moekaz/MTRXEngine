@@ -1,0 +1,638 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="classmtrx_1_1_g_j_k_util" kind="class" language="C++" prot="public">
+    <compoundname>mtrx::GJKUtil</compoundname>
+    <includes refid="_g_j_k_util_8h" local="no">GJKUtil.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classmtrx_1_1_g_j_k_util_1a0676f37bb47ba75595fda8cab87d1a25" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Iterator</type>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>std::enable_if_t&lt;std::is_same&lt;glm::vec3*, typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;::value&gt;</defval>
+          </param>
+          <param>
+            <type>typename Iterator1</type>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>std::enable_if_t&lt;std::is_same&lt;glm::vec3*, typename std::iterator_traits&lt;Iterator1&gt;::value_type&gt;::value&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>static bool mtrx::GJKUtil::Collision</definition>
+        <argsstring>(const Iterator &amp;startVertices1, const Iterator &amp;endVertices1, const Iterator1 &amp;startVertices2, const Iterator1 &amp;endVertices2)</argsstring>
+        <name>Collision</name>
+        <param>
+          <type>const Iterator &amp;</type>
+          <declname>startVertices1</declname>
+        </param>
+        <param>
+          <type>const Iterator &amp;</type>
+          <declname>endVertices1</declname>
+        </param>
+        <param>
+          <type>const Iterator1 &amp;</type>
+          <declname>startVertices2</declname>
+        </param>
+        <param>
+          <type>const Iterator1 &amp;</type>
+          <declname>endVertices2</declname>
+        </param>
+        <briefdescription>
+<para>Implementation of GJK Collision detection algorithm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classmtrx_1_1_convex_shape_collider" kindref="compound">mtrx::ConvexShapeCollider</ref></para>
+</simplesect>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Iterator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of iterator we will use for vertices </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::enable_if_t&lt;std::is_same&lt;glm::vec3*</parametername>
+<parametername>typename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::iterator_traits&lt;Iterator&gt;::value_type&gt;::value&gt; Iterator template checks </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Iterator1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of iterator we will use for vertices </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::enable_if_t&lt;std::is_same&lt;glm::vec3*</parametername>
+<parametername>typename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::iterator_traits&lt;Iterator1&gt;::value_type&gt;::value&gt; Iterator template checks </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>startVertices1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator to the beginning of the first vertex list for first convex shape </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>endVertices1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator to the end of the first vertex list of the first convex shape </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>startVertices2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator to the beginning of the second vertex list for the second convex shape </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>endVertices2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator to the end of the second vertex list of the second convex shape <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true The 2 convex shape colliders collide </para>
+</simplesect>
+<simplesect kind="return"><para>false The 2 convex shape colliders do not collide </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/GJKUtil.h" line="41" column="13" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/GJKUtil.h" bodystart="41" bodyend="74"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classmtrx_1_1_g_j_k_util_1a9e68403818421587aac7e036d5aeb201" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool mtrx::GJKUtil::UpdateSimplex</definition>
+        <argsstring>(Simplex &amp;simplex, glm::vec3 &amp;direction, glm::vec3 &amp;a)</argsstring>
+        <name>UpdateSimplex</name>
+        <param>
+          <type><ref refid="structmtrx_1_1_simplex" kindref="compound">Simplex</ref> &amp;</type>
+          <declname>simplex</declname>
+        </param>
+        <param>
+          <type>glm::vec3 &amp;</type>
+          <declname>direction</declname>
+        </param>
+        <param>
+          <type>glm::vec3 &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+<para>Update the simplex values or return a collision. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>simplex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The simplex generated to be modified according the the new vertices </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The direction that we will be finding points using </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The newest point to be added to the simplex </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true The simplex encapsulates the origin and thus there exists a collision </para>
+</simplesect>
+<simplesect kind="return"><para>false The simplex does not encapsule the origin and thus modified the simplex to continue search </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/GJKUtil.h" line="89" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_g_j_k_util_1ae4b560a0ef48d5bb02a4468db89ab2d3" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool mtrx::GJKUtil::TriangleSimplexUpdate</definition>
+        <argsstring>(Simplex &amp;simplex, glm::vec3 &amp;direction, glm::vec3 &amp;a)</argsstring>
+        <name>TriangleSimplexUpdate</name>
+        <param>
+          <type><ref refid="structmtrx_1_1_simplex" kindref="compound">Simplex</ref> &amp;</type>
+          <declname>simplex</declname>
+        </param>
+        <param>
+          <type>glm::vec3 &amp;</type>
+          <declname>direction</declname>
+        </param>
+        <param>
+          <type>glm::vec3 &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+<para>Updating the simplex values from a triangle simplex. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>simplex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The simplex we want to update </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The direction for the search </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new vector that we got from the support function </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classmtrx_1_1_g_j_k_util_1a2f7779fb20f5aed2ed712c490fc1434d" kindref="member">mtrx::GJKUtil::Support</ref> </para>
+</simplesect>
+<simplesect kind="return"><para>true N/A as a triangle simplex cannot encapsulate a point in 3d space </para>
+</simplesect>
+<simplesect kind="return"><para>false Always returned </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/GJKUtil.h" line="101" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_g_j_k_util_1a38687a641072632e6f767cf92f44f5be" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool mtrx::GJKUtil::TetrahedronSimplexUpdate</definition>
+        <argsstring>(Simplex &amp;simplex, glm::vec3 &amp;direction, glm::vec3 &amp;a)</argsstring>
+        <name>TetrahedronSimplexUpdate</name>
+        <param>
+          <type><ref refid="structmtrx_1_1_simplex" kindref="compound">Simplex</ref> &amp;</type>
+          <declname>simplex</declname>
+        </param>
+        <param>
+          <type>glm::vec3 &amp;</type>
+          <declname>direction</declname>
+        </param>
+        <param>
+          <type>glm::vec3 &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+<para>Update the simplex based upon a tetrahedron simplex. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>simplex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The simplex we want to update </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The direction that we are searching with </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new vertex generated from the support function </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classmtrx_1_1_g_j_k_util_1a2f7779fb20f5aed2ed712c490fc1434d" kindref="member">mtrx::GJKUtil::Support</ref> </para>
+</simplesect>
+<simplesect kind="return"><para>true The tetrahedron encapsulate the origin signifying a collision </para>
+</simplesect>
+<simplesect kind="return"><para>false The tetrahedron does not encapsulate the origin and thus the simplex needs to be modified or recalculated </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/GJKUtil.h" line="113" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_g_j_k_util_1a14612192183700ab5461b35bf37bcf01" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mtrx::GJKUtil::TetrahedronChecks</definition>
+        <argsstring>(Simplex &amp;simplex, glm::vec3 &amp;AO, glm::vec3 &amp;AB, glm::vec3 &amp;AC, glm::vec3 &amp;ABC, glm::vec3 &amp;direction, glm::vec3 &amp;a)</argsstring>
+        <name>TetrahedronChecks</name>
+        <param>
+          <type><ref refid="structmtrx_1_1_simplex" kindref="compound">Simplex</ref> &amp;</type>
+          <declname>simplex</declname>
+        </param>
+        <param>
+          <type>glm::vec3 &amp;</type>
+          <declname>AO</declname>
+        </param>
+        <param>
+          <type>glm::vec3 &amp;</type>
+          <declname>AB</declname>
+        </param>
+        <param>
+          <type>glm::vec3 &amp;</type>
+          <declname>AC</declname>
+        </param>
+        <param>
+          <type>glm::vec3 &amp;</type>
+          <declname>ABC</declname>
+        </param>
+        <param>
+          <type>glm::vec3 &amp;</type>
+          <declname>direction</declname>
+        </param>
+        <param>
+          <type>glm::vec3 &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+<para>Utility function for updating tetrahedron simplex knowing that there is no collision. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>simplex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The simplex that we want to modify </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>AO</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Line of the triangle &apos;AO&apos; </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>AB</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Line of the triangle &apos;AB&apos; </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>AC</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Line of the triangle &apos;AC&apos; </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ABC</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>normal of the the plane ABC of the triangle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The direction vector of the search </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new vector from the support functionality </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classmtrx_1_1_g_j_k_util_1a2f7779fb20f5aed2ed712c490fc1434d" kindref="member">mtrx::GJKUtil::Support</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/GJKUtil.h" line="127" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_g_j_k_util_1a2f7779fb20f5aed2ed712c490fc1434d" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Iterator</type>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>std::enable_if_t&lt;std::is_same&lt;glm::vec3*, typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;::value&gt;</defval>
+          </param>
+          <param>
+            <type>typename Iterator1</type>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>std::enable_if_t&lt;std::is_same&lt;glm::vec3*, typename std::iterator_traits&lt;Iterator1&gt;::value_type&gt;::value&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type>glm::vec3</type>
+        <definition>static glm::vec3 mtrx::GJKUtil::Support</definition>
+        <argsstring>(const Iterator &amp;startVertices1, const Iterator &amp;endVertices1, const Iterator1 &amp;startVertices2, const Iterator1 &amp;endVertices2, const glm::vec3 &amp;direction)</argsstring>
+        <name>Support</name>
+        <param>
+          <type>const Iterator &amp;</type>
+          <declname>startVertices1</declname>
+        </param>
+        <param>
+          <type>const Iterator &amp;</type>
+          <declname>endVertices1</declname>
+        </param>
+        <param>
+          <type>const Iterator1 &amp;</type>
+          <declname>startVertices2</declname>
+        </param>
+        <param>
+          <type>const Iterator1 &amp;</type>
+          <declname>endVertices2</declname>
+        </param>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+<para>Support functionality for convex shape collider gives us a point in Minkowski space that is closest to the direction vector given. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Iterator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of iterator we will use for vertices </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::enable_if_t&lt;std::is_same&lt;glm::vec3*</parametername>
+<parametername>typename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::iterator_traits&lt;Iterator&gt;::value_type&gt;::value&gt; Iterator template checks </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Iterator1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of iterator we will use for vertices </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::enable_if_t&lt;std::is_same&lt;glm::vec3*</parametername>
+<parametername>typename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::iterator_traits&lt;Iterator1&gt;::value_type&gt;::value&gt; Iterator template checks </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>startVertices1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator to the beginning of the first vertex list for first convex shape </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>endVertices1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator to the end of the first vertex list of the first convex shape </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>startVertices2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator to the beginning of the second vertex list for the second convex shape </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>endVertices2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator to the end of the second vertex list of the second convex shape <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The direction that we want to find a vertex in the direction of </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>glm::vec3 A vertex in minkowski space in the direction given to be added to the simplex </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/GJKUtil.h" line="148" column="18" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/GJKUtil.h" bodystart="148" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_g_j_k_util_1a97c239cfe54183c4424054070a63b8d2" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Iterator</type>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>std::enable_if_t&lt;std::is_same&lt;glm::vec3*, typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;::value&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type>glm::vec3 *</type>
+        <definition>static glm::vec3* mtrx::GJKUtil::FarthestPointInDirection</definition>
+        <argsstring>(const Iterator &amp;startVertices, const Iterator &amp;endVertices, const glm::vec3 &amp;direction)</argsstring>
+        <name>FarthestPointInDirection</name>
+        <param>
+          <type>const Iterator &amp;</type>
+          <declname>startVertices</declname>
+        </param>
+        <param>
+          <type>const Iterator &amp;</type>
+          <declname>endVertices</declname>
+        </param>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+<para>Get a point in the vertex list that is closest (direction-wise) to the direction vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Iterator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of iterator we will use for vertices </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::enable_if_t&lt;std::is_same&lt;glm::vec3*</parametername>
+<parametername>typename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::iterator_traits&lt;Iterator&gt;::value_type&gt;::value&gt; Iterator template checks </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>startVertices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator to the beginning of the vertex list <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>endVertices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator to the end of the vertex list </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The direction vector used to find the farthest point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>glm::vec3* The farthest point with the give direction </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/GJKUtil.h" line="170" column="18" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/GJKUtil.h" bodystart="170" bodyend="189"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Utility class for the implementation of the GJK algorithm used for collision detection between convex shape colliders. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classmtrx_1_1_convex_shape_collider" kindref="compound">mtrx::ConvexShapeCollider</ref></para>
+</simplesect>
+Some resources on the algorithm:</para>
+<para><ref refid="" kindref="compound"><ulink url="http://www.dyn4j.org/2010/04/gjk-gilbert-johnson-keerthi/#gjk-minkowski">http://www.dyn4j.org/2010/04/gjk-gilbert-johnson-keerthi/#gjk-minkowski</ulink>  <ulink url="http://vec3.ca/gjk/implementation/">http://vec3.ca/gjk/implementation/</ulink>  <ulink url="http://in2gpu.com/2014/05/18/gjk-algorithm-3d/">http://in2gpu.com/2014/05/18/gjk-algorithm-3d/</ulink> </ref></para>
+    </detaileddescription>
+    <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/GJKUtil.h" line="22" column="1" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/GJKUtil.h" bodystart="21" bodyend="190"/>
+    <listofallmembers>
+      <member refid="classmtrx_1_1_g_j_k_util_1a0676f37bb47ba75595fda8cab87d1a25" prot="public" virt="non-virtual"><scope>mtrx::GJKUtil</scope><name>Collision</name></member>
+      <member refid="classmtrx_1_1_g_j_k_util_1a97c239cfe54183c4424054070a63b8d2" prot="private" virt="non-virtual"><scope>mtrx::GJKUtil</scope><name>FarthestPointInDirection</name></member>
+      <member refid="classmtrx_1_1_g_j_k_util_1a2f7779fb20f5aed2ed712c490fc1434d" prot="private" virt="non-virtual"><scope>mtrx::GJKUtil</scope><name>Support</name></member>
+      <member refid="classmtrx_1_1_g_j_k_util_1a14612192183700ab5461b35bf37bcf01" prot="private" virt="non-virtual"><scope>mtrx::GJKUtil</scope><name>TetrahedronChecks</name></member>
+      <member refid="classmtrx_1_1_g_j_k_util_1a38687a641072632e6f767cf92f44f5be" prot="private" virt="non-virtual"><scope>mtrx::GJKUtil</scope><name>TetrahedronSimplexUpdate</name></member>
+      <member refid="classmtrx_1_1_g_j_k_util_1ae4b560a0ef48d5bb02a4468db89ab2d3" prot="private" virt="non-virtual"><scope>mtrx::GJKUtil</scope><name>TriangleSimplexUpdate</name></member>
+      <member refid="classmtrx_1_1_g_j_k_util_1a9e68403818421587aac7e036d5aeb201" prot="private" virt="non-virtual"><scope>mtrx::GJKUtil</scope><name>UpdateSimplex</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

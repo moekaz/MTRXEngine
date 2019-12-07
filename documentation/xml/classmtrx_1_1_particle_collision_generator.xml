@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="classmtrx_1_1_particle_collision_generator" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>mtrx::ParticleCollisionGenerator</compoundname>
+    <derivedcompoundref refid="classmtrx_1_1_particle_coupling" prot="public" virt="non-virtual">mtrx::ParticleCoupling</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmtrx_1_1_particle_collision_generator_1a2264f9492f4abc9941dff51b096162f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void mtrx::ParticleCollisionGenerator::GenerateContact</definition>
+        <argsstring>(std::list&lt; ParticleCollision &gt; &amp;collisions, unsigned int limit)=0</argsstring>
+        <name>GenerateContact</name>
+        <param>
+          <type>std::list&lt; ParticleCollision &gt; &amp;</type>
+          <declname>collisions</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>limit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCollisionGenerator.h" line="17" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCollisionGenerator.h" line="14" column="1" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCollisionGenerator.h" bodystart="13" bodyend="18"/>
+    <listofallmembers>
+      <member refid="classmtrx_1_1_particle_collision_generator_1a2264f9492f4abc9941dff51b096162f5" prot="public" virt="pure-virtual"><scope>mtrx::ParticleCollisionGenerator</scope><name>GenerateContact</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

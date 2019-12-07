@@ -1,0 +1,49 @@
+.TH "md__c_1__users_mohamed__desktop__m_t_r_x_engine__r_e_a_d_m_e" 3 "Sat Dec 7 2019" "MTRX Engine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+md__c_1__users_mohamed__desktop__m_t_r_x_engine__r_e_a_d_m_e \- MTRXEngine 
+
+.SH "Author:"
+.PP
+Mohamed Kazma
+.SH "Description:"
+.PP
+A basic C++ based physics engine which uses some libraries like GLM, SPDLOG, GLAD, GLFW\&.
+.PP
+.IP "\(bu" 2
+Implements rigidbody dynamics with force and torque integration\&.
+.IP "\(bu" 2
+Implements force generators that can be used to simulate certain forces like gravity, drag, buoyancy, stiff springs, etc\&.\&.\&.
+.IP "\(bu" 2
+Implements a basic collision detection system with basic bounding volumes (sphere, capsule, box)\&.
+.IP "\(bu" 2
+Implements convex shape colliders with GJK Collision detection
+.IP "\(bu" 2
+Basic raycasting that can be used to grab a certain collider using a certain ray with the option to filter out certain colliders
+.IP "\(bu" 2
+Very rough implementation of Bounding Volume Hierarchies(untested) that can be used to optimize collision detection checks
+.PP
+.SH "Book Sources"
+.PP
+These are some of the books that i have used as inspiration: 
+.PP
+.nf
+Real-Time Collision Detection - Christer Ericson
+Game Physics Engine Development - Ian Millington
+Game Engine Architecture - Jason Gregory
+
+.fi
+.PP
+.SH "Fixing timesteps:"
+.PP
+https://web.archive.org/web/20180321070852/https://.gafferongames.com/post/fix_your_timestep
+.SH "GJK implementation sources:"
+.PP
+https://caseymuratori.com/blog_0003 http://www.dyn4j.org/2010/04/gjk-gilbert-johnson-keerthi/#gjk-minkowski http://vec3.ca/gjk/implementation/ http://in2gpu.com/2014/05/18/gjk-algorithm-3d/
+.SH "Segment-Segment minimum distance implementation:"
+.PP
+http://geomalgorithms.com/a07-_distance.html#dist3D_Segment_to_Segment
+.SH "TRELLO"
+.PP
+https://trello.com/b/Cwb55iBt/mtrx-engine 

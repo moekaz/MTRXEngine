@@ -1,0 +1,203 @@
+\hypertarget{classmtrx_1_1_log_manager}{}\doxysection{mtrx\+::Log\+Manager Class Reference}
+\label{classmtrx_1_1_log_manager}\index{mtrx::LogManager@{mtrx::LogManager}}
+
+
+Logger wrapper for logging functionality in the engine.  
+
+
+
+
+{\ttfamily \#include $<$Log\+Manager.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classmtrx_1_1_log_manager_acb9d322b8284e46ec429b6f0d445427a}{warn}} (const T \&msg)
+\begin{DoxyCompactList}\small\item\em Wrapper for logging a warning. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classmtrx_1_1_log_manager_af067ca8af09f2dceca45ff436cfa22ef}{info}} (const T \&msg)
+\begin{DoxyCompactList}\small\item\em Wrapper for logging an info level message. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classmtrx_1_1_log_manager_a645d3ea96b2145dfcd55f108ab818b8f}{trace}} (const T \&msg)
+\begin{DoxyCompactList}\small\item\em Wrapper for logging a trace level message. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classmtrx_1_1_log_manager_a842f15a9f58197cb5e8a6380c0047049}{error}} (const T \&msg)
+\begin{DoxyCompactList}\small\item\em Wrapper for logging an error level message. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classmtrx_1_1_log_manager_ab5b51ab0722d8554d8c2d39ecea53ec2}{critical}} (const T \&msg)
+\begin{DoxyCompactList}\small\item\em Wrapper for logging a critical level message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classmtrx_1_1_log_manager}{Log\+Manager}} \& \mbox{\hyperlink{classmtrx_1_1_log_manager_a6622c1c97e9ee654ba180d6c635956f6}{Get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Get the singleton logger instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmtrx_1_1_log_manager_ae3522f53c6a43c365ff9fb0310b7f5de}{Create\+Log\+Directory}} ()
+\begin{DoxyCompactList}\small\item\em Create The log directory that we will use for logging if it does not exist. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmtrx_1_1_log_manager_af6b40b40ca4df77a9cf5a79deb037008}{Log\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Log Manager object. This object is a singleton so it will be constructed once. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmtrx_1_1_log_manager_a11032b98eebde361cdfcc8903200f7c8}\label{classmtrx_1_1_log_manager_a11032b98eebde361cdfcc8903200f7c8}} 
+{\bfseries Log\+Manager} (const \mbox{\hyperlink{classmtrx_1_1_log_manager}{Log\+Manager}} \&)=delete
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_log_manager_a075894c972fcc7d6e1d387ca1b3a2819}\label{classmtrx_1_1_log_manager_a075894c972fcc7d6e1d387ca1b3a2819}} 
+{\bfseries Log\+Manager} (const \mbox{\hyperlink{classmtrx_1_1_log_manager}{Log\+Manager}} \&\&)=delete
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_log_manager_a0ace6f79ebb0e6d649a9a4fd7f6468e3}\label{classmtrx_1_1_log_manager_a0ace6f79ebb0e6d649a9a4fd7f6468e3}} 
+\mbox{\hyperlink{classmtrx_1_1_log_manager}{Log\+Manager}} \& {\bfseries operator=} (const \mbox{\hyperlink{classmtrx_1_1_log_manager}{Log\+Manager}} \&)=delete
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_log_manager_a320f696cfb34d3957a5e5669269c8dce}\label{classmtrx_1_1_log_manager_a320f696cfb34d3957a5e5669269c8dce}} 
+\mbox{\hyperlink{classmtrx_1_1_log_manager}{Log\+Manager}} \& {\bfseries operator=} (const \mbox{\hyperlink{classmtrx_1_1_log_manager}{Log\+Manager}} \&\&)=delete
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_log_manager_a0daed2a89828a3c673a018f97fb77664}\label{classmtrx_1_1_log_manager_a0daed2a89828a3c673a018f97fb77664}} 
+std\+::shared\+\_\+ptr$<$ spdlog\+::logger $>$ {\bfseries mtrx\+Logger}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Logger wrapper for logging functionality in the engine. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmtrx_1_1_log_manager_af6b40b40ca4df77a9cf5a79deb037008}\label{classmtrx_1_1_log_manager_af6b40b40ca4df77a9cf5a79deb037008}} 
+\index{mtrx::LogManager@{mtrx::LogManager}!LogManager@{LogManager}}
+\index{LogManager@{LogManager}!mtrx::LogManager@{mtrx::LogManager}}
+\doxysubsubsection{\texorpdfstring{LogManager()}{LogManager()}}
+{\footnotesize\ttfamily mtrx\+::\+Log\+Manager\+::\+Log\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Construct a new Log Manager object. This object is a singleton so it will be constructed once. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmtrx_1_1_log_manager_ae3522f53c6a43c365ff9fb0310b7f5de}\label{classmtrx_1_1_log_manager_ae3522f53c6a43c365ff9fb0310b7f5de}} 
+\index{mtrx::LogManager@{mtrx::LogManager}!CreateLogDirectory@{CreateLogDirectory}}
+\index{CreateLogDirectory@{CreateLogDirectory}!mtrx::LogManager@{mtrx::LogManager}}
+\doxysubsubsection{\texorpdfstring{CreateLogDirectory()}{CreateLogDirectory()}}
+{\footnotesize\ttfamily void mtrx\+::\+Log\+Manager\+::\+Create\+Log\+Directory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create The log directory that we will use for logging if it does not exist. 
+
+\mbox{\Hypertarget{classmtrx_1_1_log_manager_ab5b51ab0722d8554d8c2d39ecea53ec2}\label{classmtrx_1_1_log_manager_ab5b51ab0722d8554d8c2d39ecea53ec2}} 
+\index{mtrx::LogManager@{mtrx::LogManager}!critical@{critical}}
+\index{critical@{critical}!mtrx::LogManager@{mtrx::LogManager}}
+\doxysubsubsection{\texorpdfstring{critical()}{critical()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void mtrx\+::\+Log\+Manager\+::critical (\begin{DoxyParamCaption}\item[{const T \&}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Wrapper for logging a critical level message. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of warning that we will be logging \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The message that we log \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_log_manager_a842f15a9f58197cb5e8a6380c0047049}\label{classmtrx_1_1_log_manager_a842f15a9f58197cb5e8a6380c0047049}} 
+\index{mtrx::LogManager@{mtrx::LogManager}!error@{error}}
+\index{error@{error}!mtrx::LogManager@{mtrx::LogManager}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void mtrx\+::\+Log\+Manager\+::error (\begin{DoxyParamCaption}\item[{const T \&}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Wrapper for logging an error level message. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of warning that we will be logging \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The message that we log \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_log_manager_a6622c1c97e9ee654ba180d6c635956f6}\label{classmtrx_1_1_log_manager_a6622c1c97e9ee654ba180d6c635956f6}} 
+\index{mtrx::LogManager@{mtrx::LogManager}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!mtrx::LogManager@{mtrx::LogManager}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classmtrx_1_1_log_manager}{Log\+Manager}}\& mtrx\+::\+Log\+Manager\+::\+Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the singleton logger instance. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classmtrx_1_1_log_manager}{Log\+Manager}}\& The instance of the logger that we will be using 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_log_manager_af067ca8af09f2dceca45ff436cfa22ef}\label{classmtrx_1_1_log_manager_af067ca8af09f2dceca45ff436cfa22ef}} 
+\index{mtrx::LogManager@{mtrx::LogManager}!info@{info}}
+\index{info@{info}!mtrx::LogManager@{mtrx::LogManager}}
+\doxysubsubsection{\texorpdfstring{info()}{info()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void mtrx\+::\+Log\+Manager\+::info (\begin{DoxyParamCaption}\item[{const T \&}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Wrapper for logging an info level message. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of warning that we will be logging \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The message that we log \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_log_manager_a645d3ea96b2145dfcd55f108ab818b8f}\label{classmtrx_1_1_log_manager_a645d3ea96b2145dfcd55f108ab818b8f}} 
+\index{mtrx::LogManager@{mtrx::LogManager}!trace@{trace}}
+\index{trace@{trace}!mtrx::LogManager@{mtrx::LogManager}}
+\doxysubsubsection{\texorpdfstring{trace()}{trace()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void mtrx\+::\+Log\+Manager\+::trace (\begin{DoxyParamCaption}\item[{const T \&}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Wrapper for logging a trace level message. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of warning that we will be logging \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The message that we log \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_log_manager_acb9d322b8284e46ec429b6f0d445427a}\label{classmtrx_1_1_log_manager_acb9d322b8284e46ec429b6f0d445427a}} 
+\index{mtrx::LogManager@{mtrx::LogManager}!warn@{warn}}
+\index{warn@{warn}!mtrx::LogManager@{mtrx::LogManager}}
+\doxysubsubsection{\texorpdfstring{warn()}{warn()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void mtrx\+::\+Log\+Manager\+::warn (\begin{DoxyParamCaption}\item[{const T \&}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Wrapper for logging a warning. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of warning that we will be logging \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The message that we log \\
+\hline
+\end{DoxyParams}

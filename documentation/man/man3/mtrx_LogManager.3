@@ -1,0 +1,186 @@
+.TH "mtrx::LogManager" 3 "Sat Dec 7 2019" "MTRX Engine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mtrx::LogManager \- Logger wrapper for logging functionality in the engine\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <LogManager\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T > void \fBwarn\fP (const T &msg)"
+.br
+.RI "Wrapper for logging a warning\&. "
+.ti -1c
+.RI "template<typename T > void \fBinfo\fP (const T &msg)"
+.br
+.RI "Wrapper for logging an info level message\&. "
+.ti -1c
+.RI "template<typename T > void \fBtrace\fP (const T &msg)"
+.br
+.RI "Wrapper for logging a trace level message\&. "
+.ti -1c
+.RI "template<typename T > void \fBerror\fP (const T &msg)"
+.br
+.RI "Wrapper for logging an error level message\&. "
+.ti -1c
+.RI "template<typename T > void \fBcritical\fP (const T &msg)"
+.br
+.RI "Wrapper for logging a critical level message\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBLogManager\fP & \fBGetInstance\fP ()"
+.br
+.RI "Get the singleton logger instance\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBCreateLogDirectory\fP ()"
+.br
+.RI "Create The log directory that we will use for logging if it does not exist\&. "
+.ti -1c
+.RI "\fBLogManager\fP ()"
+.br
+.RI "Construct a new Log Manager object\&. This object is a singleton so it will be constructed once\&. "
+.ti -1c
+.RI "\fBLogManager\fP (const \fBLogManager\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBLogManager\fP (const \fBLogManager\fP &&)=delete"
+.br
+.ti -1c
+.RI "\fBLogManager\fP & \fBoperator=\fP (const \fBLogManager\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBLogManager\fP & \fBoperator=\fP (const \fBLogManager\fP &&)=delete"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::shared_ptr< spdlog::logger > \fBmtrxLogger\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Logger wrapper for logging functionality in the engine\&. 
+
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "mtrx::LogManager::LogManager ()\fC [private]\fP"
+
+.PP
+Construct a new Log Manager object\&. This object is a singleton so it will be constructed once\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void mtrx::LogManager::CreateLogDirectory ()\fC [private]\fP"
+
+.PP
+Create The log directory that we will use for logging if it does not exist\&. 
+.SS "template<typename T > void mtrx::LogManager::critical (const T & msg)\fC [inline]\fP"
+
+.PP
+Wrapper for logging a critical level message\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP Type of warning that we will be logging 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fImsg\fP The message that we log 
+.RE
+.PP
+
+.SS "template<typename T > void mtrx::LogManager::error (const T & msg)\fC [inline]\fP"
+
+.PP
+Wrapper for logging an error level message\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP Type of warning that we will be logging 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fImsg\fP The message that we log 
+.RE
+.PP
+
+.SS "static \fBLogManager\fP& mtrx::LogManager::GetInstance ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Get the singleton logger instance\&. 
+.PP
+\fBReturns\fP
+.RS 4
+\fBLogManager\fP& The instance of the logger that we will be using 
+.RE
+.PP
+
+.SS "template<typename T > void mtrx::LogManager::info (const T & msg)\fC [inline]\fP"
+
+.PP
+Wrapper for logging an info level message\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP Type of warning that we will be logging 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fImsg\fP The message that we log 
+.RE
+.PP
+
+.SS "template<typename T > void mtrx::LogManager::trace (const T & msg)\fC [inline]\fP"
+
+.PP
+Wrapper for logging a trace level message\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP Type of warning that we will be logging 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fImsg\fP The message that we log 
+.RE
+.PP
+
+.SS "template<typename T > void mtrx::LogManager::warn (const T & msg)\fC [inline]\fP"
+
+.PP
+Wrapper for logging a warning\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP Type of warning that we will be logging 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fImsg\fP The message that we log 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MTRX Engine from the source code\&.

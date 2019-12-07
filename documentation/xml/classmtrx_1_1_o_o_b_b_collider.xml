@@ -1,0 +1,349 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="classmtrx_1_1_o_o_b_b_collider" kind="class" language="C++" prot="public">
+    <compoundname>mtrx::OOBBCollider</compoundname>
+    <basecompoundref refid="classmtrx_1_1_convex_shape_collider" prot="public" virt="non-virtual">mtrx::ConvexShapeCollider</basecompoundref>
+    <includes refid="_o_o_b_b_collider_8h" local="no">OOBBCollider.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmtrx_1_1_o_o_b_b_collider_1a68b31d56da9a4bdb2a5c27984be40118" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float mtrx::OOBBCollider::halfExtents[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>halfExtents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/OOBBCollider.h" line="96" column="7" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/OOBBCollider.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmtrx_1_1_o_o_b_b_collider_1a3f2a7b598c4de9158c575c081e96862b" prot="private" static="no" mutable="yes">
+        <type><ref refid="structmtrx_1_1_object_axes" kindref="compound">ObjectAxes</ref></type>
+        <definition>ObjectAxes mtrx::OOBBCollider::axes</definition>
+        <argsstring></argsstring>
+        <name>axes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/OOBBCollider.h" line="97" column="20" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/OOBBCollider.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmtrx_1_1_o_o_b_b_collider_1aa935b9c99cb1457ed328783fb9a4baed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mtrx::OOBBCollider::OOBBCollider</definition>
+        <argsstring>(const glm::vec3 &amp;center=glm::vec3(), const glm::quat &amp;orientation=glm::angleAxis(0.f, glm::vec3(0, 1, 0)), const glm::vec3 &amp;scale=glm::vec3(1, 1, 1))</argsstring>
+        <name>OOBBCollider</name>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>center</declname>
+          <defval>glm::vec3()</defval>
+        </param>
+        <param>
+          <type>const glm::quat &amp;</type>
+          <declname>orientation</declname>
+          <defval>glm::angleAxis(0.f, glm::vec3(0, 1, 0))</defval>
+        </param>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>scale</declname>
+          <defval>glm::vec3(1, 1, 1)</defval>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classmtrx_1_1_o_o_b_b_collider" kindref="compound">OOBBCollider</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>center</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Center of the collider </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>orientation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Orientation of the collider </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scale of the collider </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/OOBBCollider.h" line="23" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_o_o_b_b_collider_1aa07bada37be7dcff9152dafc3f79e0b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mtrx::OOBBCollider::OOBBCollider</definition>
+        <argsstring>(const Transform &amp;transform=Transform())</argsstring>
+        <name>OOBBCollider</name>
+        <param>
+          <type>const <ref refid="classmtrx_1_1_transform" kindref="compound">Transform</ref> &amp;</type>
+          <declname>transform</declname>
+          <defval><ref refid="classmtrx_1_1_transform" kindref="compound">Transform</ref>()</defval>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classmtrx_1_1_o_o_b_b_collider" kindref="compound">OOBBCollider</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The transform of the collider @mtrx::Transform </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/OOBBCollider.h" line="30" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_o_o_b_b_collider_1acefb2d3f5f2a316b772d5f5b1aab5967" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual mtrx::OOBBCollider::~OOBBCollider</definition>
+        <argsstring>()=default</argsstring>
+        <name>~OOBBCollider</name>
+        <briefdescription>
+<para>Destroy the <ref refid="classmtrx_1_1_o_o_b_b_collider" kindref="compound">OOBBCollider</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/OOBBCollider.h" line="36" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_o_o_b_b_collider_1afa990f428f3044ceb1639816f5d98278" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool mtrx::OOBBCollider::RaycastCollision</definition>
+        <argsstring>(const Ray &amp;ray) override</argsstring>
+        <name>RaycastCollision</name>
+        <reimplements refid="classmtrx_1_1_convex_shape_collider_1a44fba7247c98212c60e0eec4e16e74ec">RaycastCollision</reimplements>
+        <param>
+          <type>const <ref refid="classmtrx_1_1_ray" kindref="compound">Ray</ref> &amp;</type>
+          <declname>ray</declname>
+        </param>
+        <briefdescription>
+<para>Raycast OOBB collision detection algorithm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classmtrx_1_1_ray" kindref="compound">Ray</ref> that we want to check collision for </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classmtrx_1_1_ray" kindref="compound">mtrx::Ray</ref> </para>
+</simplesect>
+<simplesect kind="return"><para>true The ray and collider collide </para>
+</simplesect>
+<simplesect kind="return"><para>false The ray and collider do not collide </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/OOBBCollider.h" line="45" column="21" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/OOBBCollider.h" bodystart="45" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_o_o_b_b_collider_1a08ab41dae178a7f064c7992c9c2c07b1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const glm::vec3 *</type>
+        <definition>const glm::vec3* mtrx::OOBBCollider::GetAxes</definition>
+        <argsstring>() const</argsstring>
+        <name>GetAxes</name>
+        <briefdescription>
+<para>Get the Axes of the collider. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>const glm::vec3* Array of the axes of the OOBB </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/OOBBCollider.h" line="55" column="24" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/OOBBCollider.h" bodystart="55" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_o_o_b_b_collider_1a8c524feaabb957a4ed3f4cd212e1c365" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const float *</type>
+        <definition>const float* mtrx::OOBBCollider::GetHalfExtents</definition>
+        <argsstring>() const</argsstring>
+        <name>GetHalfExtents</name>
+        <briefdescription>
+<para>Get the Half Extents of the OOBB collider. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>const float* The half extents of the collider </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/OOBBCollider.h" line="72" column="20" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/OOBBCollider.h" bodystart="72" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_o_o_b_b_collider_1a102dd48abba7ddeb8919f757a6485cb8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float *</type>
+        <definition>float* mtrx::OOBBCollider::GetHalfExtents</definition>
+        <argsstring>()</argsstring>
+        <name>GetHalfExtents</name>
+        <briefdescription>
+<para>Get the Half Extents of the OOBB collider. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>float* The half extents of the collider </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/OOBBCollider.h" line="79" column="14" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/OOBBCollider.h" bodystart="79" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_o_o_b_b_collider_1a7fe953f72faabf2998e9856d68b119f6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void mtrx::OOBBCollider::SetScale</definition>
+        <argsstring>(const glm::vec3 &amp;scale) override</argsstring>
+        <name>SetScale</name>
+        <reimplements refid="classmtrx_1_1_convex_shape_collider_1a1de37ecfb1bd42e43201c09c6e5a980f">SetScale</reimplements>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+<para>Set the Scale of the collider. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scale of the collider </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/OOBBCollider.h" line="86" column="21" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/OOBBCollider.h" bodystart="86" bodyend="93"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Implementation of OOBBs. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>mtrx::Collider</label>
+        <link refid="classmtrx_1_1_collider"/>
+      </node>
+      <node id="2">
+        <label>mtrx::ConvexShapeCollider</label>
+        <link refid="classmtrx_1_1_convex_shape_collider"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>mtrx::OOBBCollider</label>
+        <link refid="classmtrx_1_1_o_o_b_b_collider"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>mtrx::Transform</label>
+        <link refid="classmtrx_1_1_transform"/>
+      </node>
+      <node id="5">
+        <label>mtrx::ObjectAxes</label>
+        <link refid="structmtrx_1_1_object_axes"/>
+      </node>
+      <node id="3">
+        <label>mtrx::Collider</label>
+        <link refid="classmtrx_1_1_collider"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>transform</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mtrx::ConvexShapeCollider</label>
+        <link refid="classmtrx_1_1_convex_shape_collider"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>mtrx::OOBBCollider</label>
+        <link refid="classmtrx_1_1_o_o_b_b_collider"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>axes</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/OOBBCollider.h" line="13" column="1" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/OOBBCollider.h" bodystart="12" bodyend="98"/>
+    <listofallmembers>
+      <member refid="classmtrx_1_1_o_o_b_b_collider_1a3f2a7b598c4de9158c575c081e96862b" prot="private" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>axes</name></member>
+      <member refid="classmtrx_1_1_collider_1af8b907eaf8cb13316dce419f595371df" prot="public" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>CheckCollision</name></member>
+      <member refid="classmtrx_1_1_collider_1a897ee0f8baa05f825be5f96a2abc3bd1" prot="public" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>Collider</name></member>
+      <member refid="classmtrx_1_1_collider_1a1af6daddbfaa7ba34f33845de3b05457" prot="public" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>Collider</name></member>
+      <member refid="classmtrx_1_1_collider_1a8abb09a0eee536698d5a7b5d270ed584" prot="protected" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>colliderId</name></member>
+      <member refid="classmtrx_1_1_convex_shape_collider_1a0f07c2d77aa82d29e5a3dd8d925f1d72" prot="public" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>ConvexShapeCollider</name></member>
+      <member refid="classmtrx_1_1_convex_shape_collider_1af75db8ad0803ab9654f9cd7809a9531d" prot="public" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>ConvexShapeCollider</name></member>
+      <member refid="classmtrx_1_1_convex_shape_collider_1aedd243fcc1e07eacab102dace67a3ce3" prot="public" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>ConvexShapeCollider</name></member>
+      <member refid="classmtrx_1_1_convex_shape_collider_1ad74b9852fb1dbc2eb916d1fc6193a349" prot="public" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>ConvexShapeCollider</name></member>
+      <member refid="classmtrx_1_1_o_o_b_b_collider_1a08ab41dae178a7f064c7992c9c2c07b1" prot="public" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>GetAxes</name></member>
+      <member refid="classmtrx_1_1_collider_1ac43e5d476507344a3340bae5451ad616" prot="public" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>GetColliderId</name></member>
+      <member refid="classmtrx_1_1_collider_1aa0eb9dee1d98fd45df1ef8cbfa0e43be" prot="public" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>GetColliderType</name></member>
+      <member refid="classmtrx_1_1_collider_1afccd3a798fc870d4acbb3c7a3f783c05" prot="public" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>GetForward</name></member>
+      <member refid="classmtrx_1_1_o_o_b_b_collider_1a8c524feaabb957a4ed3f4cd212e1c365" prot="public" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>GetHalfExtents</name></member>
+      <member refid="classmtrx_1_1_o_o_b_b_collider_1a102dd48abba7ddeb8919f757a6485cb8" prot="public" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>GetHalfExtents</name></member>
+      <member refid="classmtrx_1_1_convex_shape_collider_1a1034fa2d6f51a20b12b060a6264d9cc2" prot="public" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>GetModelMatrix</name></member>
+      <member refid="classmtrx_1_1_collider_1ad22caa3bdd6a81cc511a0f9141d8e5ee" prot="public" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>GetOrientation</name></member>
+      <member refid="classmtrx_1_1_collider_1a6dca0e6b7f19c5582a312af54c34d8e1" prot="public" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>GetPosition</name></member>
+      <member refid="classmtrx_1_1_collider_1a0e7750440d8bf791c85b87d2e6a6f33a" prot="public" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>GetScale</name></member>
+      <member refid="classmtrx_1_1_collider_1a59a39aa74953a4a6d228fec5bf3028e8" prot="public" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>GetSide</name></member>
+      <member refid="classmtrx_1_1_collider_1ac946675c7e0ae86dc77459742511b9ae" prot="public" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>GetUp</name></member>
+      <member refid="classmtrx_1_1_convex_shape_collider_1a73739e13e64f22f948e306e1794ea418" prot="public" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>GetVertices</name></member>
+      <member refid="classmtrx_1_1_o_o_b_b_collider_1a68b31d56da9a4bdb2a5c27984be40118" prot="private" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>halfExtents</name></member>
+      <member refid="classmtrx_1_1_collider_1a3c8cc45f3a2b276157ea474620f5dcb7" prot="private" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>id</name></member>
+      <member refid="classmtrx_1_1_collider_1a056bd024840f5c426fdb9157fd81cf37" prot="public" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>IsConvex</name></member>
+      <member refid="classmtrx_1_1_collider_1ad0f9075538c6a8c50ab2137f9172a201" prot="protected" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>isConvexShape</name></member>
+      <member refid="classmtrx_1_1_o_o_b_b_collider_1aa935b9c99cb1457ed328783fb9a4baed" prot="public" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>OOBBCollider</name></member>
+      <member refid="classmtrx_1_1_o_o_b_b_collider_1aa07bada37be7dcff9152dafc3f79e0b8" prot="public" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>OOBBCollider</name></member>
+      <member refid="classmtrx_1_1_o_o_b_b_collider_1afa990f428f3044ceb1639816f5d98278" prot="public" virt="virtual"><scope>mtrx::OOBBCollider</scope><name>RaycastCollision</name></member>
+      <member refid="classmtrx_1_1_convex_shape_collider_1af86aa5dae629acb4076d15dcad004c7c" prot="public" virt="virtual"><scope>mtrx::OOBBCollider</scope><name>SetOrientation</name></member>
+      <member refid="classmtrx_1_1_convex_shape_collider_1ab6be6d11c7ef35fa0efa1743ffd82db7" prot="public" virt="virtual"><scope>mtrx::OOBBCollider</scope><name>SetPosition</name></member>
+      <member refid="classmtrx_1_1_o_o_b_b_collider_1a7fe953f72faabf2998e9856d68b119f6" prot="public" virt="virtual"><scope>mtrx::OOBBCollider</scope><name>SetScale</name></member>
+      <member refid="classmtrx_1_1_collider_1a812b71180496a530dc1a3a1750e4efb1" prot="protected" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>transform</name></member>
+      <member refid="classmtrx_1_1_convex_shape_collider_1ab221d490ddcf43f3726fd68cb57e254c" prot="protected" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>transformedVertices</name></member>
+      <member refid="classmtrx_1_1_convex_shape_collider_1a936c2679fccd46d85a33d2abfdca4d31" prot="protected" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>transformModified</name></member>
+      <member refid="classmtrx_1_1_collider_1adf1662048ee02d5d96d430a8a3875433" prot="protected" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>type</name></member>
+      <member refid="classmtrx_1_1_convex_shape_collider_1ade75a49d458581c1a5f52fae1c511a6e" prot="protected" virt="non-virtual"><scope>mtrx::OOBBCollider</scope><name>vertices</name></member>
+      <member refid="classmtrx_1_1_collider_1a3d27ae263e0cc1f15b14ec09a715ab7d" prot="public" virt="virtual"><scope>mtrx::OOBBCollider</scope><name>~Collider</name></member>
+      <member refid="classmtrx_1_1_convex_shape_collider_1a3e5b9ef9fc9e22f83abcc20186f2afd2" prot="public" virt="virtual"><scope>mtrx::OOBBCollider</scope><name>~ConvexShapeCollider</name></member>
+      <member refid="classmtrx_1_1_o_o_b_b_collider_1acefb2d3f5f2a316b772d5f5b1aab5967" prot="public" virt="virtual"><scope>mtrx::OOBBCollider</scope><name>~OOBBCollider</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

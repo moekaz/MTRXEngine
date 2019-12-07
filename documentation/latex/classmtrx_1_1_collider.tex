@@ -1,0 +1,367 @@
+\hypertarget{classmtrx_1_1_collider}{}\doxysection{mtrx\+::Collider Class Reference}
+\label{classmtrx_1_1_collider}\index{mtrx::Collider@{mtrx::Collider}}
+
+
+Basic A\+PI for all colliders.  
+
+
+
+
+{\ttfamily \#include $<$Collider.\+h$>$}
+
+Inheritance diagram for mtrx\+::Collider\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classmtrx_1_1_collider}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmtrx_1_1_collider_a897ee0f8baa05f825be5f96a2abc3bd1}{Collider}} (const \mbox{\hyperlink{namespacemtrx_aba70c7f807f8a862fb9a10445ec82e7c}{Collider\+Type}} \&collider\+Type, const glm\+::vec3 \&center=glm\+::vec3(), const glm\+::quat \&orientation=glm\+::angle\+Axis(0.f, world\+Up), const glm\+::vec3 \&scale=glm\+::vec3(1.f, 1.f, 1.f), bool is\+Convex=false)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmtrx_1_1_collider_a1af6daddbfaa7ba34f33845de3b05457}{Collider}} (const \mbox{\hyperlink{namespacemtrx_aba70c7f807f8a862fb9a10445ec82e7c}{Collider\+Type}} \&collider\+Type, const \mbox{\hyperlink{classmtrx_1_1_transform}{Transform}} \&transform, bool is\+Convex=false)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classmtrx_1_1_collider_a3d27ae263e0cc1f15b14ec09a715ab7d}{$\sim$\+Collider}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} object. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classmtrx_1_1_collider_a361c341b949adf2508c46389f8b4509d}{Raycast\+Collision}} (const \mbox{\hyperlink{classmtrx_1_1_ray}{Ray}} \&ray)=0
+\begin{DoxyCompactList}\small\item\em Raycasting function that all colliders should have. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmtrx_1_1_collider_af8b907eaf8cb13316dce419f595371df}{Check\+Collision}} (const \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} \&collider)
+\begin{DoxyCompactList}\small\item\em Check for collision with another collider. \end{DoxyCompactList}\item 
+const glm\+::vec3 \& \mbox{\hyperlink{classmtrx_1_1_collider_a6dca0e6b7f19c5582a312af54c34d8e1}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Get the Position of the collider. \end{DoxyCompactList}\item 
+const glm\+::vec3 \& \mbox{\hyperlink{classmtrx_1_1_collider_a0e7750440d8bf791c85b87d2e6a6f33a}{Get\+Scale}} () const
+\begin{DoxyCompactList}\small\item\em Get the Scale of the collider. \end{DoxyCompactList}\item 
+const glm\+::quat \& \mbox{\hyperlink{classmtrx_1_1_collider_ad22caa3bdd6a81cc511a0f9141d8e5ee}{Get\+Orientation}} () const
+\begin{DoxyCompactList}\small\item\em Get the Orientation of the collider. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{namespacemtrx_aba70c7f807f8a862fb9a10445ec82e7c}{Collider\+Type}} \& \mbox{\hyperlink{classmtrx_1_1_collider_aa0eb9dee1d98fd45df1ef8cbfa0e43be}{Get\+Collider\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} Type of collider. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{classmtrx_1_1_collider_ac43e5d476507344a3340bae5451ad616}{Get\+Collider\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} Id of the collider. \end{DoxyCompactList}\item 
+const bool \mbox{\hyperlink{classmtrx_1_1_collider_a056bd024840f5c426fdb9157fd81cf37}{Is\+Convex}} () const
+\begin{DoxyCompactList}\small\item\em Is this collider convex. \end{DoxyCompactList}\item 
+const glm\+::vec3 \mbox{\hyperlink{classmtrx_1_1_collider_afccd3a798fc870d4acbb3c7a3f783c05}{Get\+Forward}} () const
+\begin{DoxyCompactList}\small\item\em Get the Forward axis vector. \end{DoxyCompactList}\item 
+const glm\+::vec3 \mbox{\hyperlink{classmtrx_1_1_collider_a59a39aa74953a4a6d228fec5bf3028e8}{Get\+Side}} () const
+\begin{DoxyCompactList}\small\item\em Get the Side axis vector. \end{DoxyCompactList}\item 
+const glm\+::vec3 \mbox{\hyperlink{classmtrx_1_1_collider_ac946675c7e0ae86dc77459742511b9ae}{Get\+Up}} () const
+\begin{DoxyCompactList}\small\item\em Get the Up axis vector. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmtrx_1_1_collider_a0bbed70b7af99a1469b3da9eac7df531}{Set\+Position}} (const glm\+::vec3 \&center)
+\begin{DoxyCompactList}\small\item\em Set the Position of the collider. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmtrx_1_1_collider_a81b9373f9d09221753255046b9279a5d}{Set\+Scale}} (const glm\+::vec3 \&scale)
+\begin{DoxyCompactList}\small\item\em Set the Scale of the collider. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmtrx_1_1_collider_ac69efe7d26d9e600154f601cbcc30849}{Set\+Orientation}} (const glm\+::quat \&orientation)
+\begin{DoxyCompactList}\small\item\em Set the Orientation of the collider. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_collider_a8abb09a0eee536698d5a7b5d270ed584}\label{classmtrx_1_1_collider_a8abb09a0eee536698d5a7b5d270ed584}} 
+int {\bfseries collider\+Id}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_collider_adf1662048ee02d5d96d430a8a3875433}\label{classmtrx_1_1_collider_adf1662048ee02d5d96d430a8a3875433}} 
+\mbox{\hyperlink{namespacemtrx_aba70c7f807f8a862fb9a10445ec82e7c}{Collider\+Type}} {\bfseries type}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_collider_ad0f9075538c6a8c50ab2137f9172a201}\label{classmtrx_1_1_collider_ad0f9075538c6a8c50ab2137f9172a201}} 
+bool {\bfseries is\+Convex\+Shape}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_collider_a812b71180496a530dc1a3a1750e4efb1}\label{classmtrx_1_1_collider_a812b71180496a530dc1a3a1750e4efb1}} 
+\mbox{\hyperlink{classmtrx_1_1_transform}{Transform}} {\bfseries transform}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_collider_a3c8cc45f3a2b276157ea474620f5dcb7}\label{classmtrx_1_1_collider_a3c8cc45f3a2b276157ea474620f5dcb7}} 
+static int {\bfseries id}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Basic A\+PI for all colliders. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmtrx_1_1_collider_a897ee0f8baa05f825be5f96a2abc3bd1}\label{classmtrx_1_1_collider_a897ee0f8baa05f825be5f96a2abc3bd1}} 
+\index{mtrx::Collider@{mtrx::Collider}!Collider@{Collider}}
+\index{Collider@{Collider}!mtrx::Collider@{mtrx::Collider}}
+\doxysubsubsection{\texorpdfstring{Collider()}{Collider()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily mtrx\+::\+Collider\+::\+Collider (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacemtrx_aba70c7f807f8a862fb9a10445ec82e7c}{Collider\+Type}} \&}]{collider\+Type,  }\item[{const glm\+::vec3 \&}]{center = {\ttfamily glm\+:\+:vec3()},  }\item[{const glm\+::quat \&}]{orientation = {\ttfamily glm\+:\+:angleAxis(0.f,~worldUp)},  }\item[{const glm\+::vec3 \&}]{scale = {\ttfamily glm\+:\+:vec3(1.f,~1.f,~1.f)},  }\item[{bool}]{is\+Convex = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collider\+Type} & The type of the collider \\
+\hline
+{\em center} & Center of the collider \\
+\hline
+{\em orientation} & Orientation of the collider \\
+\hline
+{\em scale} & The scale of the collider \\
+\hline
+{\em is\+Convex} & Whether collider is a convex shape collider \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_collider_a1af6daddbfaa7ba34f33845de3b05457}\label{classmtrx_1_1_collider_a1af6daddbfaa7ba34f33845de3b05457}} 
+\index{mtrx::Collider@{mtrx::Collider}!Collider@{Collider}}
+\index{Collider@{Collider}!mtrx::Collider@{mtrx::Collider}}
+\doxysubsubsection{\texorpdfstring{Collider()}{Collider()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily mtrx\+::\+Collider\+::\+Collider (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacemtrx_aba70c7f807f8a862fb9a10445ec82e7c}{Collider\+Type}} \&}]{collider\+Type,  }\item[{const \mbox{\hyperlink{classmtrx_1_1_transform}{Transform}} \&}]{transform,  }\item[{bool}]{is\+Convex = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collider\+Type} & The type of the collider \\
+\hline
+{\em transform} & The transform of the collider \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classmtrx_1_1_transform}{mtrx\+::\+Transform}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Convex} & Whether the collider is a convex shape collider \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_collider_a3d27ae263e0cc1f15b14ec09a715ab7d}\label{classmtrx_1_1_collider_a3d27ae263e0cc1f15b14ec09a715ab7d}} 
+\index{mtrx::Collider@{mtrx::Collider}!````~Collider@{$\sim$Collider}}
+\index{````~Collider@{$\sim$Collider}!mtrx::Collider@{mtrx::Collider}}
+\doxysubsubsection{\texorpdfstring{$\sim$Collider()}{~Collider()}}
+{\footnotesize\ttfamily virtual mtrx\+::\+Collider\+::$\sim$\+Collider (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destroy the \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmtrx_1_1_collider_af8b907eaf8cb13316dce419f595371df}\label{classmtrx_1_1_collider_af8b907eaf8cb13316dce419f595371df}} 
+\index{mtrx::Collider@{mtrx::Collider}!CheckCollision@{CheckCollision}}
+\index{CheckCollision@{CheckCollision}!mtrx::Collider@{mtrx::Collider}}
+\doxysubsubsection{\texorpdfstring{CheckCollision()}{CheckCollision()}}
+{\footnotesize\ttfamily bool mtrx\+::\+Collider\+::\+Check\+Collision (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} \&}]{collider }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check for collision with another collider. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collider} & The collider that we want to check for collision \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true The collider is colliding with this collider 
+
+false The collider is not colliding with this collider 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_collider_ac43e5d476507344a3340bae5451ad616}\label{classmtrx_1_1_collider_ac43e5d476507344a3340bae5451ad616}} 
+\index{mtrx::Collider@{mtrx::Collider}!GetColliderId@{GetColliderId}}
+\index{GetColliderId@{GetColliderId}!mtrx::Collider@{mtrx::Collider}}
+\doxysubsubsection{\texorpdfstring{GetColliderId()}{GetColliderId()}}
+{\footnotesize\ttfamily const int mtrx\+::\+Collider\+::\+Get\+Collider\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} Id of the collider. 
+
+\begin{DoxyReturn}{Returns}
+const int Value of the Id of the collider 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_collider_aa0eb9dee1d98fd45df1ef8cbfa0e43be}\label{classmtrx_1_1_collider_aa0eb9dee1d98fd45df1ef8cbfa0e43be}} 
+\index{mtrx::Collider@{mtrx::Collider}!GetColliderType@{GetColliderType}}
+\index{GetColliderType@{GetColliderType}!mtrx::Collider@{mtrx::Collider}}
+\doxysubsubsection{\texorpdfstring{GetColliderType()}{GetColliderType()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacemtrx_aba70c7f807f8a862fb9a10445ec82e7c}{Collider\+Type}}\& mtrx\+::\+Collider\+::\+Get\+Collider\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} Type of collider. 
+
+\begin{DoxyReturn}{Returns}
+const Collider\+Type\& Enum collider type value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_collider_afccd3a798fc870d4acbb3c7a3f783c05}\label{classmtrx_1_1_collider_afccd3a798fc870d4acbb3c7a3f783c05}} 
+\index{mtrx::Collider@{mtrx::Collider}!GetForward@{GetForward}}
+\index{GetForward@{GetForward}!mtrx::Collider@{mtrx::Collider}}
+\doxysubsubsection{\texorpdfstring{GetForward()}{GetForward()}}
+{\footnotesize\ttfamily const glm\+::vec3 mtrx\+::\+Collider\+::\+Get\+Forward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Forward axis vector. 
+
+\begin{DoxyReturn}{Returns}
+const glm\+::vec3 The forward vector of this collider 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_collider_ad22caa3bdd6a81cc511a0f9141d8e5ee}\label{classmtrx_1_1_collider_ad22caa3bdd6a81cc511a0f9141d8e5ee}} 
+\index{mtrx::Collider@{mtrx::Collider}!GetOrientation@{GetOrientation}}
+\index{GetOrientation@{GetOrientation}!mtrx::Collider@{mtrx::Collider}}
+\doxysubsubsection{\texorpdfstring{GetOrientation()}{GetOrientation()}}
+{\footnotesize\ttfamily const glm\+::quat\& mtrx\+::\+Collider\+::\+Get\+Orientation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Orientation of the collider. 
+
+\begin{DoxyReturn}{Returns}
+const glm\+::quat\& The current orientation of the collider 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_collider_a6dca0e6b7f19c5582a312af54c34d8e1}\label{classmtrx_1_1_collider_a6dca0e6b7f19c5582a312af54c34d8e1}} 
+\index{mtrx::Collider@{mtrx::Collider}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!mtrx::Collider@{mtrx::Collider}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily const glm\+::vec3\& mtrx\+::\+Collider\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Position of the collider. 
+
+\begin{DoxyReturn}{Returns}
+const glm\+::vec3\& current position of the collider 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_collider_a0e7750440d8bf791c85b87d2e6a6f33a}\label{classmtrx_1_1_collider_a0e7750440d8bf791c85b87d2e6a6f33a}} 
+\index{mtrx::Collider@{mtrx::Collider}!GetScale@{GetScale}}
+\index{GetScale@{GetScale}!mtrx::Collider@{mtrx::Collider}}
+\doxysubsubsection{\texorpdfstring{GetScale()}{GetScale()}}
+{\footnotesize\ttfamily const glm\+::vec3\& mtrx\+::\+Collider\+::\+Get\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Scale of the collider. 
+
+\begin{DoxyReturn}{Returns}
+const glm\+::vec3\& The current scale of the collider 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_collider_a59a39aa74953a4a6d228fec5bf3028e8}\label{classmtrx_1_1_collider_a59a39aa74953a4a6d228fec5bf3028e8}} 
+\index{mtrx::Collider@{mtrx::Collider}!GetSide@{GetSide}}
+\index{GetSide@{GetSide}!mtrx::Collider@{mtrx::Collider}}
+\doxysubsubsection{\texorpdfstring{GetSide()}{GetSide()}}
+{\footnotesize\ttfamily const glm\+::vec3 mtrx\+::\+Collider\+::\+Get\+Side (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Side axis vector. 
+
+\begin{DoxyReturn}{Returns}
+const glm\+::vec3 The side axis vector of the collider 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_collider_ac946675c7e0ae86dc77459742511b9ae}\label{classmtrx_1_1_collider_ac946675c7e0ae86dc77459742511b9ae}} 
+\index{mtrx::Collider@{mtrx::Collider}!GetUp@{GetUp}}
+\index{GetUp@{GetUp}!mtrx::Collider@{mtrx::Collider}}
+\doxysubsubsection{\texorpdfstring{GetUp()}{GetUp()}}
+{\footnotesize\ttfamily const glm\+::vec3 mtrx\+::\+Collider\+::\+Get\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Up axis vector. 
+
+\begin{DoxyReturn}{Returns}
+const glm\+::vec3 the up axis vector of the collider 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_collider_a056bd024840f5c426fdb9157fd81cf37}\label{classmtrx_1_1_collider_a056bd024840f5c426fdb9157fd81cf37}} 
+\index{mtrx::Collider@{mtrx::Collider}!IsConvex@{IsConvex}}
+\index{IsConvex@{IsConvex}!mtrx::Collider@{mtrx::Collider}}
+\doxysubsubsection{\texorpdfstring{IsConvex()}{IsConvex()}}
+{\footnotesize\ttfamily const bool mtrx\+::\+Collider\+::\+Is\+Convex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Is this collider convex. 
+
+\begin{DoxyReturn}{Returns}
+true The collider is a convex shape 
+
+false The collider is not a convex shape 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_collider_a361c341b949adf2508c46389f8b4509d}\label{classmtrx_1_1_collider_a361c341b949adf2508c46389f8b4509d}} 
+\index{mtrx::Collider@{mtrx::Collider}!RaycastCollision@{RaycastCollision}}
+\index{RaycastCollision@{RaycastCollision}!mtrx::Collider@{mtrx::Collider}}
+\doxysubsubsection{\texorpdfstring{RaycastCollision()}{RaycastCollision()}}
+{\footnotesize\ttfamily virtual bool mtrx\+::\+Collider\+::\+Raycast\+Collision (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmtrx_1_1_ray}{Ray}} \&}]{ray }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Raycasting function that all colliders should have. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & \mbox{\hyperlink{classmtrx_1_1_ray}{Ray}} that we want to cast \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classmtrx_1_1_ray}{mtrx\+::\+Ray}} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+true The ray and the collider collide 
+
+false The ray and the collider do not collide 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classmtrx_1_1_convex_shape_collider_a44fba7247c98212c60e0eec4e16e74ec}{mtrx\+::\+Convex\+Shape\+Collider}}, \mbox{\hyperlink{classmtrx_1_1_sphere_collider_adf3567008a057fe1332d922b7f82c29e}{mtrx\+::\+Sphere\+Collider}}, \mbox{\hyperlink{classmtrx_1_1_capsule_collider_a17f41f46bd503f7c7906c6246cbfcb26}{mtrx\+::\+Capsule\+Collider}}, \mbox{\hyperlink{classmtrx_1_1_o_o_b_b_collider_afa990f428f3044ceb1639816f5d98278}{mtrx\+::\+O\+O\+B\+B\+Collider}}, and \mbox{\hyperlink{classmtrx_1_1_a_a_b_b_collider_ac618c2f04d88d448668dcc7efbf513e3}{mtrx\+::\+A\+A\+B\+B\+Collider}}.
+
+\mbox{\Hypertarget{classmtrx_1_1_collider_ac69efe7d26d9e600154f601cbcc30849}\label{classmtrx_1_1_collider_ac69efe7d26d9e600154f601cbcc30849}} 
+\index{mtrx::Collider@{mtrx::Collider}!SetOrientation@{SetOrientation}}
+\index{SetOrientation@{SetOrientation}!mtrx::Collider@{mtrx::Collider}}
+\doxysubsubsection{\texorpdfstring{SetOrientation()}{SetOrientation()}}
+{\footnotesize\ttfamily virtual void mtrx\+::\+Collider\+::\+Set\+Orientation (\begin{DoxyParamCaption}\item[{const glm\+::quat \&}]{orientation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set the Orientation of the collider. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em orientation} & The new orientation of the collider \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classmtrx_1_1_convex_shape_collider_af86aa5dae629acb4076d15dcad004c7c}{mtrx\+::\+Convex\+Shape\+Collider}}, \mbox{\hyperlink{classmtrx_1_1_capsule_collider_a03a6476613b7f81a5250eee613c7ed2f}{mtrx\+::\+Capsule\+Collider}}, and \mbox{\hyperlink{classmtrx_1_1_a_a_b_b_collider_a50a3eed64eb69d3568386978181026da}{mtrx\+::\+A\+A\+B\+B\+Collider}}.
+
+\mbox{\Hypertarget{classmtrx_1_1_collider_a0bbed70b7af99a1469b3da9eac7df531}\label{classmtrx_1_1_collider_a0bbed70b7af99a1469b3da9eac7df531}} 
+\index{mtrx::Collider@{mtrx::Collider}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!mtrx::Collider@{mtrx::Collider}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily virtual void mtrx\+::\+Collider\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{center }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set the Position of the collider. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em center} & The center position of this collider \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classmtrx_1_1_capsule_collider_ad8b6a634528473222da22557d2d25764}{mtrx\+::\+Capsule\+Collider}}, and \mbox{\hyperlink{classmtrx_1_1_convex_shape_collider_ab6be6d11c7ef35fa0efa1743ffd82db7}{mtrx\+::\+Convex\+Shape\+Collider}}.
+
+\mbox{\Hypertarget{classmtrx_1_1_collider_a81b9373f9d09221753255046b9279a5d}\label{classmtrx_1_1_collider_a81b9373f9d09221753255046b9279a5d}} 
+\index{mtrx::Collider@{mtrx::Collider}!SetScale@{SetScale}}
+\index{SetScale@{SetScale}!mtrx::Collider@{mtrx::Collider}}
+\doxysubsubsection{\texorpdfstring{SetScale()}{SetScale()}}
+{\footnotesize\ttfamily virtual void mtrx\+::\+Collider\+::\+Set\+Scale (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set the Scale of the collider. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scale} & The new scale of the collider \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classmtrx_1_1_sphere_collider_ad238eaded51ef815efaf350a632d4ed0}{mtrx\+::\+Sphere\+Collider}}, \mbox{\hyperlink{classmtrx_1_1_capsule_collider_ae1c97f035b4a0d26c7f680780ecc6996}{mtrx\+::\+Capsule\+Collider}}, \mbox{\hyperlink{classmtrx_1_1_convex_shape_collider_a1de37ecfb1bd42e43201c09c6e5a980f}{mtrx\+::\+Convex\+Shape\+Collider}}, \mbox{\hyperlink{classmtrx_1_1_a_a_b_b_collider_ac0cc88fabe8819ec1578d8999e248eaf}{mtrx\+::\+A\+A\+B\+B\+Collider}}, and \mbox{\hyperlink{classmtrx_1_1_o_o_b_b_collider_a7fe953f72faabf2998e9856d68b119f6}{mtrx\+::\+O\+O\+B\+B\+Collider}}.
+

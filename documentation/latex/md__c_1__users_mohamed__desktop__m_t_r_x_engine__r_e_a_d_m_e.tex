@@ -1,0 +1,22 @@
+\hypertarget{md__c_1__users_mohamed__desktop__m_t_r_x_engine__r_e_a_d_m_e_autotoc_md1}{}\doxysection{Author\+:}\label{md__c_1__users_mohamed__desktop__m_t_r_x_engine__r_e_a_d_m_e_autotoc_md1}
+Mohamed Kazma\hypertarget{md__c_1__users_mohamed__desktop__m_t_r_x_engine__r_e_a_d_m_e_autotoc_md2}{}\doxysection{Description\+:}\label{md__c_1__users_mohamed__desktop__m_t_r_x_engine__r_e_a_d_m_e_autotoc_md2}
+A basic C++ based physics engine which uses some libraries like G\+LM, S\+P\+D\+L\+OG, G\+L\+AD, G\+L\+FW.
+
+
+\begin{DoxyItemize}
+\item Implements rigidbody dynamics with force and torque integration.
+\item Implements force generators that can be used to simulate certain forces like gravity, drag, buoyancy, stiff springs, etc...
+\item Implements a basic collision detection system with basic bounding volumes (sphere, capsule, box).
+\item Implements convex shape colliders with G\+JK Collision detection
+\item Basic raycasting that can be used to grab a certain collider using a certain ray with the option to filter out certain colliders
+\item Very rough implementation of Bounding Volume Hierarchies(untested) that can be used to optimize collision detection checks
+\end{DoxyItemize}\hypertarget{md__c_1__users_mohamed__desktop__m_t_r_x_engine__r_e_a_d_m_e_autotoc_md3}{}\doxysection{Book Sources}\label{md__c_1__users_mohamed__desktop__m_t_r_x_engine__r_e_a_d_m_e_autotoc_md3}
+These are some of the books that i have used as inspiration\+: \begin{DoxyVerb}Real-Time Collision Detection - Christer Ericson
+Game Physics Engine Development - Ian Millington
+Game Engine Architecture - Jason Gregory
+\end{DoxyVerb}
+\hypertarget{md__c_1__users_mohamed__desktop__m_t_r_x_engine__r_e_a_d_m_e_autotoc_md4}{}\doxysection{Fixing timesteps\+:}\label{md__c_1__users_mohamed__desktop__m_t_r_x_engine__r_e_a_d_m_e_autotoc_md4}
+\href{https://web.archive.org/web/20180321070852/https://.gafferongames.com/post/fix_your_timestep}{\texttt{ https\+://web.\+archive.\+org/web/20180321070852/https\+://.\+gafferongames.\+com/post/fix\+\_\+your\+\_\+timestep}}\hypertarget{md__c_1__users_mohamed__desktop__m_t_r_x_engine__r_e_a_d_m_e_autotoc_md5}{}\doxysection{G\+J\+K implementation sources\+:}\label{md__c_1__users_mohamed__desktop__m_t_r_x_engine__r_e_a_d_m_e_autotoc_md5}
+\href{https://caseymuratori.com/blog_0003}{\texttt{ https\+://caseymuratori.\+com/blog\+\_\+0003}} \href{http://www.dyn4j.org/2010/04/gjk-gilbert-johnson-keerthi/\#gjk-minkowski}{\texttt{ http\+://www.\+dyn4j.\+org/2010/04/gjk-\/gilbert-\/johnson-\/keerthi/\#gjk-\/minkowski}} \href{http://vec3.ca/gjk/implementation/}{\texttt{ http\+://vec3.\+ca/gjk/implementation/}} \href{http://in2gpu.com/2014/05/18/gjk-algorithm-3d/}{\texttt{ http\+://in2gpu.\+com/2014/05/18/gjk-\/algorithm-\/3d/}}\hypertarget{md__c_1__users_mohamed__desktop__m_t_r_x_engine__r_e_a_d_m_e_autotoc_md6}{}\doxysection{Segment-\/\+Segment minimum distance implementation\+:}\label{md__c_1__users_mohamed__desktop__m_t_r_x_engine__r_e_a_d_m_e_autotoc_md6}
+\href{http://geomalgorithms.com/a07-_distance.html\#dist3D_Segment_to_Segment}{\texttt{ http\+://geomalgorithms.\+com/a07-\/\+\_\+distance.\+html\#dist3\+D\+\_\+\+Segment\+\_\+to\+\_\+\+Segment}}\hypertarget{md__c_1__users_mohamed__desktop__m_t_r_x_engine__r_e_a_d_m_e_autotoc_md7}{}\doxysection{T\+R\+E\+L\+LO}\label{md__c_1__users_mohamed__desktop__m_t_r_x_engine__r_e_a_d_m_e_autotoc_md7}
+\href{https://trello.com/b/Cwb55iBt/mtrx-engine}{\texttt{ https\+://trello.\+com/b/\+Cwb55i\+Bt/mtrx-\/engine}} 

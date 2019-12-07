@@ -1,0 +1,264 @@
+\hypertarget{classmtrx_1_1_g_j_k_util}{}\doxysection{mtrx\+::G\+J\+K\+Util Class Reference}
+\label{classmtrx_1_1_g_j_k_util}\index{mtrx::GJKUtil@{mtrx::GJKUtil}}
+
+
+Utility class for the implementation of the G\+JK algorithm used for collision detection between convex shape colliders.  
+
+
+
+
+{\ttfamily \#include $<$G\+J\+K\+Util.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Iterator , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$, typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$\+::value$>$, typename Iterator1 , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$, typename std\+::iterator\+\_\+traits$<$\+Iterator1$>$\+::value\+\_\+type$>$\+::value$>$$>$ }\\static bool \mbox{\hyperlink{classmtrx_1_1_g_j_k_util_a0676f37bb47ba75595fda8cab87d1a25}{Collision}} (const Iterator \&start\+Vertices1, const Iterator \&end\+Vertices1, const Iterator1 \&start\+Vertices2, const Iterator1 \&end\+Vertices2)
+\begin{DoxyCompactList}\small\item\em Implementation of G\+JK Collision detection algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classmtrx_1_1_g_j_k_util_a9e68403818421587aac7e036d5aeb201}{Update\+Simplex}} (\mbox{\hyperlink{structmtrx_1_1_simplex}{Simplex}} \&simplex, glm\+::vec3 \&direction, glm\+::vec3 \&a)
+\begin{DoxyCompactList}\small\item\em Update the simplex values or return a collision. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classmtrx_1_1_g_j_k_util_ae4b560a0ef48d5bb02a4468db89ab2d3}{Triangle\+Simplex\+Update}} (\mbox{\hyperlink{structmtrx_1_1_simplex}{Simplex}} \&simplex, glm\+::vec3 \&direction, glm\+::vec3 \&a)
+\begin{DoxyCompactList}\small\item\em Updating the simplex values from a triangle simplex. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classmtrx_1_1_g_j_k_util_a38687a641072632e6f767cf92f44f5be}{Tetrahedron\+Simplex\+Update}} (\mbox{\hyperlink{structmtrx_1_1_simplex}{Simplex}} \&simplex, glm\+::vec3 \&direction, glm\+::vec3 \&a)
+\begin{DoxyCompactList}\small\item\em Update the simplex based upon a tetrahedron simplex. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classmtrx_1_1_g_j_k_util_a14612192183700ab5461b35bf37bcf01}{Tetrahedron\+Checks}} (\mbox{\hyperlink{structmtrx_1_1_simplex}{Simplex}} \&simplex, glm\+::vec3 \&AO, glm\+::vec3 \&AB, glm\+::vec3 \&AC, glm\+::vec3 \&A\+BC, glm\+::vec3 \&direction, glm\+::vec3 \&a)
+\begin{DoxyCompactList}\small\item\em Utility function for updating tetrahedron simplex knowing that there is no collision. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$, typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$\+::value$>$, typename Iterator1 , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$, typename std\+::iterator\+\_\+traits$<$\+Iterator1$>$\+::value\+\_\+type$>$\+::value$>$$>$ }\\static glm\+::vec3 \mbox{\hyperlink{classmtrx_1_1_g_j_k_util_a2f7779fb20f5aed2ed712c490fc1434d}{Support}} (const Iterator \&start\+Vertices1, const Iterator \&end\+Vertices1, const Iterator1 \&start\+Vertices2, const Iterator1 \&end\+Vertices2, const glm\+::vec3 \&direction)
+\begin{DoxyCompactList}\small\item\em Support functionality for convex shape collider gives us a point in Minkowski space that is closest to the direction vector given. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$, typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$\+::value$>$$>$ }\\static glm\+::vec3 $\ast$ \mbox{\hyperlink{classmtrx_1_1_g_j_k_util_a97c239cfe54183c4424054070a63b8d2}{Farthest\+Point\+In\+Direction}} (const Iterator \&start\+Vertices, const Iterator \&end\+Vertices, const glm\+::vec3 \&direction)
+\begin{DoxyCompactList}\small\item\em Get a point in the vertex list that is closest (direction-\/wise) to the direction vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Utility class for the implementation of the G\+JK algorithm used for collision detection between convex shape colliders. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classmtrx_1_1_convex_shape_collider}{mtrx\+::\+Convex\+Shape\+Collider}}
+\end{DoxySeeAlso}
+Some resources on the algorithm\+:
+
+\mbox{\hyperlink{}{\href{http://www.dyn4j.org/2010/04/gjk-gilbert-johnson-keerthi/\#gjk-minkowski}{\texttt{ http\+://www.\+dyn4j.\+org/2010/04/gjk-\/gilbert-\/johnson-\/keerthi/\#gjk-\/minkowski}}  \href{http://vec3.ca/gjk/implementation/}{\texttt{ http\+://vec3.\+ca/gjk/implementation/}}  \href{http://in2gpu.com/2014/05/18/gjk-algorithm-3d/}{\texttt{ http\+://in2gpu.\+com/2014/05/18/gjk-\/algorithm-\/3d/}} }}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmtrx_1_1_g_j_k_util_a0676f37bb47ba75595fda8cab87d1a25}\label{classmtrx_1_1_g_j_k_util_a0676f37bb47ba75595fda8cab87d1a25}} 
+\index{mtrx::GJKUtil@{mtrx::GJKUtil}!Collision@{Collision}}
+\index{Collision@{Collision}!mtrx::GJKUtil@{mtrx::GJKUtil}}
+\doxysubsubsection{\texorpdfstring{Collision()}{Collision()}}
+{\footnotesize\ttfamily template$<$typename Iterator , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$, typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$\+::value$>$, typename Iterator1 , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$, typename std\+::iterator\+\_\+traits$<$\+Iterator1$>$\+::value\+\_\+type$>$\+::value$>$$>$ \\
+static bool mtrx\+::\+G\+J\+K\+Util\+::\+Collision (\begin{DoxyParamCaption}\item[{const Iterator \&}]{start\+Vertices1,  }\item[{const Iterator \&}]{end\+Vertices1,  }\item[{const Iterator1 \&}]{start\+Vertices2,  }\item[{const Iterator1 \&}]{end\+Vertices2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Implementation of G\+JK Collision detection algorithm. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classmtrx_1_1_convex_shape_collider}{mtrx\+::\+Convex\+Shape\+Collider}}
+\end{DoxySeeAlso}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Iterator} & The type of iterator we will use for vertices \\
+\hline
+{\em std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$,typename} & std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$\+::value$>$ Iterator template checks \\
+\hline
+{\em Iterator1} & The type of iterator we will use for vertices \\
+\hline
+{\em std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$,typename} & std\+::iterator\+\_\+traits$<$\+Iterator1$>$\+::value\+\_\+type$>$\+::value$>$ Iterator template checks \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Vertices1} & Iterator to the beginning of the first vertex list for first convex shape \\
+\hline
+{\em end\+Vertices1} & Iterator to the end of the first vertex list of the first convex shape \\
+\hline
+{\em start\+Vertices2} & Iterator to the beginning of the second vertex list for the second convex shape \\
+\hline
+{\em end\+Vertices2} & Iterator to the end of the second vertex list of the second convex shape ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true The 2 convex shape colliders collide 
+
+false The 2 convex shape colliders do not collide 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_g_j_k_util_a97c239cfe54183c4424054070a63b8d2}\label{classmtrx_1_1_g_j_k_util_a97c239cfe54183c4424054070a63b8d2}} 
+\index{mtrx::GJKUtil@{mtrx::GJKUtil}!FarthestPointInDirection@{FarthestPointInDirection}}
+\index{FarthestPointInDirection@{FarthestPointInDirection}!mtrx::GJKUtil@{mtrx::GJKUtil}}
+\doxysubsubsection{\texorpdfstring{FarthestPointInDirection()}{FarthestPointInDirection()}}
+{\footnotesize\ttfamily template$<$typename Iterator , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$, typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$\+::value$>$$>$ \\
+static glm\+::vec3$\ast$ mtrx\+::\+G\+J\+K\+Util\+::\+Farthest\+Point\+In\+Direction (\begin{DoxyParamCaption}\item[{const Iterator \&}]{start\+Vertices,  }\item[{const Iterator \&}]{end\+Vertices,  }\item[{const glm\+::vec3 \&}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Get a point in the vertex list that is closest (direction-\/wise) to the direction vector. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Iterator} & The type of iterator we will use for vertices \\
+\hline
+{\em std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$,typename} & std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$\+::value$>$ Iterator template checks \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Vertices} & Iterator to the beginning of the vertex list ~\newline
+ \\
+\hline
+{\em end\+Vertices} & Iterator to the end of the vertex list \\
+\hline
+{\em direction} & The direction vector used to find the farthest point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+glm\+::vec3$\ast$ The farthest point with the give direction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_g_j_k_util_a2f7779fb20f5aed2ed712c490fc1434d}\label{classmtrx_1_1_g_j_k_util_a2f7779fb20f5aed2ed712c490fc1434d}} 
+\index{mtrx::GJKUtil@{mtrx::GJKUtil}!Support@{Support}}
+\index{Support@{Support}!mtrx::GJKUtil@{mtrx::GJKUtil}}
+\doxysubsubsection{\texorpdfstring{Support()}{Support()}}
+{\footnotesize\ttfamily template$<$typename Iterator , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$, typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$\+::value$>$, typename Iterator1 , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$, typename std\+::iterator\+\_\+traits$<$\+Iterator1$>$\+::value\+\_\+type$>$\+::value$>$$>$ \\
+static glm\+::vec3 mtrx\+::\+G\+J\+K\+Util\+::\+Support (\begin{DoxyParamCaption}\item[{const Iterator \&}]{start\+Vertices1,  }\item[{const Iterator \&}]{end\+Vertices1,  }\item[{const Iterator1 \&}]{start\+Vertices2,  }\item[{const Iterator1 \&}]{end\+Vertices2,  }\item[{const glm\+::vec3 \&}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Support functionality for convex shape collider gives us a point in Minkowski space that is closest to the direction vector given. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Iterator} & The type of iterator we will use for vertices \\
+\hline
+{\em std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$,typename} & std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$\+::value$>$ Iterator template checks \\
+\hline
+{\em Iterator1} & The type of iterator we will use for vertices \\
+\hline
+{\em std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$,typename} & std\+::iterator\+\_\+traits$<$\+Iterator1$>$\+::value\+\_\+type$>$\+::value$>$ Iterator template checks \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Vertices1} & Iterator to the beginning of the first vertex list for first convex shape \\
+\hline
+{\em end\+Vertices1} & Iterator to the end of the first vertex list of the first convex shape \\
+\hline
+{\em start\+Vertices2} & Iterator to the beginning of the second vertex list for the second convex shape \\
+\hline
+{\em end\+Vertices2} & Iterator to the end of the second vertex list of the second convex shape ~\newline
+ \\
+\hline
+{\em direction} & The direction that we want to find a vertex in the direction of \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+glm\+::vec3 A vertex in minkowski space in the direction given to be added to the simplex 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_g_j_k_util_a14612192183700ab5461b35bf37bcf01}\label{classmtrx_1_1_g_j_k_util_a14612192183700ab5461b35bf37bcf01}} 
+\index{mtrx::GJKUtil@{mtrx::GJKUtil}!TetrahedronChecks@{TetrahedronChecks}}
+\index{TetrahedronChecks@{TetrahedronChecks}!mtrx::GJKUtil@{mtrx::GJKUtil}}
+\doxysubsubsection{\texorpdfstring{TetrahedronChecks()}{TetrahedronChecks()}}
+{\footnotesize\ttfamily static void mtrx\+::\+G\+J\+K\+Util\+::\+Tetrahedron\+Checks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmtrx_1_1_simplex}{Simplex}} \&}]{simplex,  }\item[{glm\+::vec3 \&}]{AO,  }\item[{glm\+::vec3 \&}]{AB,  }\item[{glm\+::vec3 \&}]{AC,  }\item[{glm\+::vec3 \&}]{A\+BC,  }\item[{glm\+::vec3 \&}]{direction,  }\item[{glm\+::vec3 \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Utility function for updating tetrahedron simplex knowing that there is no collision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em simplex} & The simplex that we want to modify \\
+\hline
+{\em AO} & Line of the triangle \textquotesingle{}AO\textquotesingle{} \\
+\hline
+{\em AB} & Line of the triangle \textquotesingle{}AB\textquotesingle{} \\
+\hline
+{\em AC} & Line of the triangle \textquotesingle{}AC\textquotesingle{} \\
+\hline
+{\em A\+BC} & normal of the the plane A\+BC of the triangle \\
+\hline
+{\em direction} & The direction vector of the search \\
+\hline
+{\em a} & The new vector from the support functionality \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classmtrx_1_1_g_j_k_util_a2f7779fb20f5aed2ed712c490fc1434d}{mtrx\+::\+G\+J\+K\+Util\+::\+Support}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classmtrx_1_1_g_j_k_util_a38687a641072632e6f767cf92f44f5be}\label{classmtrx_1_1_g_j_k_util_a38687a641072632e6f767cf92f44f5be}} 
+\index{mtrx::GJKUtil@{mtrx::GJKUtil}!TetrahedronSimplexUpdate@{TetrahedronSimplexUpdate}}
+\index{TetrahedronSimplexUpdate@{TetrahedronSimplexUpdate}!mtrx::GJKUtil@{mtrx::GJKUtil}}
+\doxysubsubsection{\texorpdfstring{TetrahedronSimplexUpdate()}{TetrahedronSimplexUpdate()}}
+{\footnotesize\ttfamily static bool mtrx\+::\+G\+J\+K\+Util\+::\+Tetrahedron\+Simplex\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmtrx_1_1_simplex}{Simplex}} \&}]{simplex,  }\item[{glm\+::vec3 \&}]{direction,  }\item[{glm\+::vec3 \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Update the simplex based upon a tetrahedron simplex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em simplex} & The simplex we want to update \\
+\hline
+{\em direction} & The direction that we are searching with \\
+\hline
+{\em a} & The new vertex generated from the support function \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classmtrx_1_1_g_j_k_util_a2f7779fb20f5aed2ed712c490fc1434d}{mtrx\+::\+G\+J\+K\+Util\+::\+Support}} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+true The tetrahedron encapsulate the origin signifying a collision 
+
+false The tetrahedron does not encapsulate the origin and thus the simplex needs to be modified or recalculated 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_g_j_k_util_ae4b560a0ef48d5bb02a4468db89ab2d3}\label{classmtrx_1_1_g_j_k_util_ae4b560a0ef48d5bb02a4468db89ab2d3}} 
+\index{mtrx::GJKUtil@{mtrx::GJKUtil}!TriangleSimplexUpdate@{TriangleSimplexUpdate}}
+\index{TriangleSimplexUpdate@{TriangleSimplexUpdate}!mtrx::GJKUtil@{mtrx::GJKUtil}}
+\doxysubsubsection{\texorpdfstring{TriangleSimplexUpdate()}{TriangleSimplexUpdate()}}
+{\footnotesize\ttfamily static bool mtrx\+::\+G\+J\+K\+Util\+::\+Triangle\+Simplex\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmtrx_1_1_simplex}{Simplex}} \&}]{simplex,  }\item[{glm\+::vec3 \&}]{direction,  }\item[{glm\+::vec3 \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Updating the simplex values from a triangle simplex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em simplex} & The simplex we want to update \\
+\hline
+{\em direction} & The direction for the search \\
+\hline
+{\em a} & The new vector that we got from the support function \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classmtrx_1_1_g_j_k_util_a2f7779fb20f5aed2ed712c490fc1434d}{mtrx\+::\+G\+J\+K\+Util\+::\+Support}} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+true N/A as a triangle simplex cannot encapsulate a point in 3d space 
+
+false Always returned 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_g_j_k_util_a9e68403818421587aac7e036d5aeb201}\label{classmtrx_1_1_g_j_k_util_a9e68403818421587aac7e036d5aeb201}} 
+\index{mtrx::GJKUtil@{mtrx::GJKUtil}!UpdateSimplex@{UpdateSimplex}}
+\index{UpdateSimplex@{UpdateSimplex}!mtrx::GJKUtil@{mtrx::GJKUtil}}
+\doxysubsubsection{\texorpdfstring{UpdateSimplex()}{UpdateSimplex()}}
+{\footnotesize\ttfamily static bool mtrx\+::\+G\+J\+K\+Util\+::\+Update\+Simplex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmtrx_1_1_simplex}{Simplex}} \&}]{simplex,  }\item[{glm\+::vec3 \&}]{direction,  }\item[{glm\+::vec3 \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Update the simplex values or return a collision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em simplex} & The simplex generated to be modified according the the new vertices \\
+\hline
+{\em direction} & The direction that we will be finding points using \\
+\hline
+{\em a} & The newest point to be added to the simplex \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true The simplex encapsulates the origin and thus there exists a collision 
+
+false The simplex does not encapsule the origin and thus modified the simplex to continue search 
+\end{DoxyReturn}

@@ -1,0 +1,245 @@
+.TH "mtrx" 3 "Sat Dec 7 2019" "MTRX Engine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mtrx
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBColliderDetectionUtil\fP"
+.br
+.RI "Utility namespace used for resolving collision detection algorithms to be used based on collider types\&. "
+.ti -1c
+.RI " \fBCollisionUtil\fP"
+.br
+.RI "Namespace used to define some collision detection algorithms that are used to check for collision between different colliders\&. None of these functions require colliders themselves, They use mostly primitive classes instead\&. "
+.ti -1c
+.RI " \fBPhysicsUtil\fP"
+.br
+.RI "Utility namespace for some basic calculations that are useful for collision detection and other physics related functionality\&. "
+.ti -1c
+.RI " \fBRaycastCollisionUtil\fP"
+.br
+.RI "Utility namespace used for raycasting functionality\&. "
+.in -1c
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBAABBCollider\fP"
+.br
+.RI "Implmentation of an Axis Aligned Bounding Box used for collision systems\&. "
+.ti -1c
+.RI "class \fBBody\fP"
+.br
+.RI "Implementation of a basic particle body\&. "
+.ti -1c
+.RI "class \fBBVHNode\fP"
+.br
+.RI "An implementation of a BVH node used for Bounding Volume Hierarchies\&. "
+.ti -1c
+.RI "class \fBCapsuleCollider\fP"
+.br
+.RI "Implementation of Capsule colliders\&. "
+.ti -1c
+.RI "class \fBCollider\fP"
+.br
+.RI "Basic API for all colliders\&. "
+.ti -1c
+.RI "class \fBCollisionSystem\fP"
+.br
+.RI "The collision detection system of the engine\&. "
+.ti -1c
+.RI "class \fBConvexShapeCollider\fP"
+.br
+.RI "Implementation of a Convex Shape collider\&. "
+.ti -1c
+.RI "class \fBGameTime\fP"
+.br
+.RI "Basic implementation of time values mostly used for the calculation of delta time\&. "
+.ti -1c
+.RI "class \fBGJKUtil\fP"
+.br
+.RI "Utility class for the implementation of the GJK algorithm used for collision detection between convex shape colliders\&. "
+.ti -1c
+.RI "class \fBIBoundingVolume\fP"
+.br
+.RI "Interface used to define a bounding volume that can be used in a Bounding volume Hierarchy\&. "
+.ti -1c
+.RI "class \fBIIntegratable\fP"
+.br
+.RI "Interface for integration PS: Not used that much really\&. "
+.ti -1c
+.RI "class \fBIRigidbodyForceGenerator\fP"
+.br
+.RI "Force generation interface used to apply forces on rigidbodies\&. "
+.ti -1c
+.RI "class \fBLogManager\fP"
+.br
+.RI "Logger wrapper for logging functionality in the engine\&. "
+.ti -1c
+.RI "class \fBmtrxDynamicWorld\fP"
+.br
+.RI "Entry point of the user to the engine\&. This class defines the API that user will be using to interface with the engine\&. "
+.ti -1c
+.RI "struct \fBObjectAxes\fP"
+.br
+.RI "The axes that define an objects world\&. "
+.ti -1c
+.RI "class \fBOOBBCollider\fP"
+.br
+.RI "Implementation of OOBBs\&. "
+.ti -1c
+.RI "struct \fBPotentialCollision\fP"
+.br
+.RI "Potential collisions struct\&. "
+.ti -1c
+.RI "class \fBRay\fP"
+.br
+.RI "Implementation of a ray\&. "
+.ti -1c
+.RI "class \fBrb_BuoyancyForceGenerator\fP"
+.br
+.RI "Implementation of a buoyancy force generator for rigidbodies\&. "
+.ti -1c
+.RI "class \fBrb_ForceGenerationRegistry\fP"
+.br
+.RI "Registry for force generators used to map a rigidbody to all of the force generators that are to be applied to said rigidbody\&. "
+.ti -1c
+.RI "class \fBrb_GravityForceGenerator\fP"
+.br
+.RI "Implementation of gravitational force generator\&. "
+.ti -1c
+.RI "class \fBRigidbody\fP"
+.br
+.RI "Implementation of rigidbodies with rigidbody dynamics newtonian force integration and rotational forces\&. "
+.ti -1c
+.RI "class \fBRigidbodyManager\fP"
+.br
+.RI "Manager of rigidbodies\&. "
+.ti -1c
+.RI "struct \fBSimplex\fP"
+.br
+.RI "Simplest shape that can encapsulate a point in 3d space Used within GJK collision detection algorithm\&. "
+.ti -1c
+.RI "class \fBSphereCollider\fP"
+.br
+.RI "Implmentation of a Sphere collider used in collision systems\&. "
+.ti -1c
+.RI "class \fBTransform\fP"
+.br
+.RI "Wrapper implementation of a transform that holds position, orientation, scale values and some functionality based on these values\&. "
+.ti -1c
+.RI "struct \fBTriangle\fP"
+.br
+.RI "Struct for storing a triangle\&. "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBColliderType\fP : char { \fBSphere\fP, \fBAABB\fP, \fBOOBB\fP, \fBCapsule\fP, \fBConvexShape\fP }"
+.br
+.RI "Type of colliders that are supported in the engine\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "static int \fBRandomInt\fP (int min, int max)"
+.br
+.RI "Generating a random integer between 2 integer values\&. "
+.ti -1c
+.RI "static glm::mat3 \fBGenerateCuboidIT\fP (float mass, float *extents)"
+.br
+.RI "Generate a cuboid inertia tensor\&. "
+.ti -1c
+.RI "static glm::mat3 \fBGenerateSphereIT\fP (float mass, float radius)"
+.br
+.RI "Generate a sphere inertia tensor\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "static float \fBgravity\fP = 9\&.81f"
+.br
+.ti -1c
+.RI "static std::string \fBprojectDir\fP = std::filesystem::current_path()\&.string()"
+.br
+.ti -1c
+.RI "static const glm::vec3 \fBworldUp\fP = glm::vec3(0\&.f, 1\&.f, 0\&.f)"
+.br
+.ti -1c
+.RI "static const glm::vec3 \fBworldSide\fP = glm::vec3(1\&.f, 0\&.f, 0\&.f)"
+.br
+.ti -1c
+.RI "static const glm::vec3 \fBworldForward\fP = glm::vec3(0\&.f, 0\&.f, \-1\&.f)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+DEPRECATED DO NOT USE THIS 
+.SH "Function Documentation"
+.PP 
+.SS "static glm::mat3 mtrx::GenerateCuboidIT (float mass, float * extents)\fC [static]\fP"
+
+.PP
+Generate a cuboid inertia tensor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImass\fP Mass of the cuboid 
+.br
+\fIextents\fP The extents of the cuboid 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+glm::mat3 The inertia tensor generated 
+.RE
+.PP
+
+.SS "static glm::mat3 mtrx::GenerateSphereIT (float mass, float radius)\fC [static]\fP"
+
+.PP
+Generate a sphere inertia tensor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImass\fP The mass of the sphere 
+.br
+\fIradius\fP The radius of the sphere 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+glm::mat3 The generated inertia tensor 
+.RE
+.PP
+
+.SS "static int mtrx::RandomInt (int min, int max)\fC [static]\fP"
+
+.PP
+Generating a random integer between 2 integer values\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImin\fP Minimum integer value (inclusive) 
+.br
+\fImax\fP Maximum integer value (exclusive) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int A random integer within the range of min and max 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MTRX Engine from the source code\&.

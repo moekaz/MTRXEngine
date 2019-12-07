@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="classmtrx_1_1rb___bungee_spring_force_generator" kind="class" language="C++" prot="public">
+    <compoundname>mtrx::rb_BungeeSpringForceGenerator</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">mtrx::rb_AnchoredSpringForceGenerator</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmtrx_1_1rb___bungee_spring_force_generator_1a6df7bed551b9eec36ff9ff5d74b2d667" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mtrx::rb_BungeeSpringForceGenerator::rb_BungeeSpringForceGenerator</definition>
+        <argsstring>(glm::vec3 *anchorPoint, float stiffness, float restLength)</argsstring>
+        <name>rb_BungeeSpringForceGenerator</name>
+        <param>
+          <type>glm::vec3 *</type>
+          <declname>anchorPoint</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>stiffness</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>restLength</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/RigidbodyGenerators/rb_BungeeSpringForceGenerator.h" line="11" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1rb___bungee_spring_force_generator_1a723f3547b7b3cbf152b61f93aca1c53b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mtrx::rb_BungeeSpringForceGenerator::~rb_BungeeSpringForceGenerator</definition>
+        <argsstring>()</argsstring>
+        <name>~rb_BungeeSpringForceGenerator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/RigidbodyGenerators/rb_BungeeSpringForceGenerator.h" line="12" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1rb___bungee_spring_force_generator_1aef4e1e3535288d05eaf495c688de8cde" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void mtrx::rb_BungeeSpringForceGenerator::UpdateForces</definition>
+        <argsstring>(Rigidbody *rb, float deltaTime) override</argsstring>
+        <name>UpdateForces</name>
+        <param>
+          <type><ref refid="classmtrx_1_1_rigidbody" kindref="compound">Rigidbody</ref> *</type>
+          <declname>rb</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/RigidbodyGenerators/rb_BungeeSpringForceGenerator.h" line="14" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/RigidbodyGenerators/rb_BungeeSpringForceGenerator.h" line="9" column="1" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/RigidbodyGenerators/rb_BungeeSpringForceGenerator.h" bodystart="8" bodyend="15"/>
+    <listofallmembers>
+      <member refid="classmtrx_1_1rb___anchored_spring_force_generator_1a3ddb432caae052fcbc5197af6a404280" prot="public" virt="non-virtual"><scope>mtrx::rb_BungeeSpringForceGenerator</scope><name>anchorPoint</name></member>
+      <member refid="classmtrx_1_1rb___anchored_spring_force_generator_1a1b1c0398d02b7195340168134af43655" prot="public" virt="non-virtual"><scope>mtrx::rb_BungeeSpringForceGenerator</scope><name>rb_AnchoredSpringForceGenerator</name></member>
+      <member refid="classmtrx_1_1rb___bungee_spring_force_generator_1a6df7bed551b9eec36ff9ff5d74b2d667" prot="public" virt="non-virtual"><scope>mtrx::rb_BungeeSpringForceGenerator</scope><name>rb_BungeeSpringForceGenerator</name></member>
+      <member refid="classmtrx_1_1rb___anchored_spring_force_generator_1a0ffc1323a785189d9325f05ce5c3571f" prot="public" virt="non-virtual"><scope>mtrx::rb_BungeeSpringForceGenerator</scope><name>SetAnchorPoint</name></member>
+      <member refid="classmtrx_1_1rb___anchored_spring_force_generator_1a1f2b8878a0c7b974574cbebec1719f63" prot="public" virt="non-virtual"><scope>mtrx::rb_BungeeSpringForceGenerator</scope><name>spring</name></member>
+      <member refid="classmtrx_1_1rb___bungee_spring_force_generator_1aef4e1e3535288d05eaf495c688de8cde" prot="public" virt="virtual"><scope>mtrx::rb_BungeeSpringForceGenerator</scope><name>UpdateForces</name></member>
+      <member refid="classmtrx_1_1rb___anchored_spring_force_generator_1aa6e3c9930a02d662b86eaa2cd0ed9754" prot="public" virt="non-virtual"><scope>mtrx::rb_BungeeSpringForceGenerator</scope><name>~rb_AnchoredSpringForceGenerator</name></member>
+      <member refid="classmtrx_1_1rb___bungee_spring_force_generator_1a723f3547b7b3cbf152b61f93aca1c53b" prot="public" virt="non-virtual"><scope>mtrx::rb_BungeeSpringForceGenerator</scope><name>~rb_BungeeSpringForceGenerator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

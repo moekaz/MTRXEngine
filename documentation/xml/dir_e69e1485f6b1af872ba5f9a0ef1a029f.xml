@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="dir_e69e1485f6b1af872ba5f9a0ef1a029f" kind="dir">
+    <compoundname>C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math</compoundname>
+    <innerfile refid="_game_time_8h">GameTime.h</innerfile>
+    <innerfile refid="_mat3_8h">Mat3.h</innerfile>
+    <innerfile refid="_ray_8h">Ray.h</innerfile>
+    <innerfile refid="_transform_8h">Transform.h</innerfile>
+    <innerfile refid="_vector3_d_8h">Vector3D.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,478 @@
+.TH "mtrx::CollisionUtil" 3 "Sat Dec 7 2019" "MTRX Engine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mtrx::CollisionUtil \- Namespace used to define some collision detection algorithms that are used to check for collision between different colliders\&. None of these functions require colliders themselves, They use mostly primitive classes instead\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBSphereSphereCollision\fP (const glm::vec3 &center1, const glm::vec3 &center2, float radius1, float radius2)"
+.br
+.RI "Sphere Sphere collision detection algorithm\&. "
+.ti -1c
+.RI "bool \fBSphereCapsuleCollision\fP (const glm::vec3 &center1, const glm::vec3 &center2, float radius1, float radius2, const glm::vec3 &A, const glm::vec3 &B)"
+.br
+.RI "Sphere Capsule collision detection algorithm\&. "
+.ti -1c
+.RI "bool \fBSphereAABBCollision\fP (const glm::vec3 &center, const float radius, const glm::vec3 &center1, const float *halfExtents)"
+.br
+.RI "Sphere AABB collider collision detection algorithm\&. "
+.ti -1c
+.RI "bool \fBSphereOOBBCollision\fP (const glm::vec3 &center, const float radius, const glm::vec3 &center1, const glm::vec3 *axes, const float *halfExtents)"
+.br
+.RI "Sphere OOBB collider collision detection algorithm\&. "
+.ti -1c
+.RI "bool \fBCapsuleCapsuleCollision\fP (const glm::vec3 &A1, const glm::vec3 &B1, const glm::vec3 &A2, const glm::vec3 &B2, float radius1, float radius2)"
+.br
+.RI "Capsule Capsule collision detection algorithm\&. "
+.ti -1c
+.RI "bool \fBCapsuleAABBCollision\fP (const glm::vec3 &A, const glm::vec3 &B, const float radii, const glm::vec3 &center, const float *halfExtents)"
+.br
+.RI "Capsule AABB collision detection algorithm\&. "
+.ti -1c
+.RI "bool \fBAABBCollision\fP (const glm::vec3 &center, const float *halfExtents, const glm::vec3 &center1, const float *halfExtents1)"
+.br
+.RI "AABB AABB collision detection algorithm\&. "
+.ti -1c
+.RI "template<typename Iterator , typename  = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator>::value_type>::value>, typename Iterator1 , typename  = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator1>::value_type>::value>> bool \fBConvexShapeCollision\fP (const Iterator &startVertices1, const Iterator &endVertices1, const Iterator1 &startVertices2, const Iterator1 &endVertices2)"
+.br
+.RI "Convex Shape collision detection algorithm\&. Uses GJK collision detection algorithm\&. "
+.ti -1c
+.RI "template<typename Iterator , typename  = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator>::value_type>::value>> bool \fBConvexShapeCapsuleCollision\fP (const Iterator &startVertices, const Iterator &endVertices, const int size, const glm::vec3 &A, const glm::vec3 &B, const float radii)"
+.br
+.RI "Convex Shape Capsule collision detection algorithm\&. "
+.ti -1c
+.RI "template<typename Iterator , typename  = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator>::value_type>::value>> bool \fBCapsuleOOBBCollision\fP (const glm::vec3 &A, const glm::vec3 &B, float radii, const Iterator &startVertices, const Iterator &endVertices, const int size)"
+.br
+.RI "Capsule OOBB Collision detection algorithm\&. "
+.ti -1c
+.RI "template<typename Iterator , typename  = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator>::value_type>::value>, typename Iterator1 , typename  = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator1>::value_type>::value>> bool \fBAABBOOBBCollision\fP (const Iterator &startVertices1, const Iterator &endVertices1, const Iterator1 &startVertices2, const Iterator1 &endVertices2)"
+.br
+.RI "AABB and OOBB collision detection algorithm\&. "
+.ti -1c
+.RI "template<typename Iterator , typename  = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator>::value_type>::value>, typename Iterator1 , typename  = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator1>::value_type>::value>> bool \fBOOBBCollision\fP (const Iterator &startVertices1, const Iterator &endVertices1, const Iterator1 &startVertices2, const Iterator1 &endVertices2)"
+.br
+.RI "OOBB and OOBB collision detection algorithm\&. "
+.ti -1c
+.RI "template<typename Iterator , typename  = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator>::value_type>::value>> bool \fBConvexShapeSphereCollision\fP (const Iterator &startVertices, const Iterator &endVertices, const int size, const glm::vec3 &center, const float radius)"
+.br
+.RI "Convex Shape Sphere collision detection algorithm\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Namespace used to define some collision detection algorithms that are used to check for collision between different colliders\&. None of these functions require colliders themselves, They use mostly primitive classes instead\&. 
+
+
+.SH "Function Documentation"
+.PP 
+.SS "bool mtrx::CollisionUtil::AABBCollision (const glm::vec3 & center, const float * halfExtents, const glm::vec3 & center1, const float * halfExtents1)"
+
+.PP
+AABB AABB collision detection algorithm\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcenter\fP Center of the first AABB collider 
+.br
+\fIhalfExtents\fP Half extents of the first AABB collider 
+.br
+\fIcenter1\fP Center of the second AABB collider 
+.br
+\fIhalfExtents1\fP Half extents of the second AABB collider 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true The AABB colliders collide 
+.PP
+false The AABB colliders do not collide 
+.RE
+.PP
+
+.SS "template<typename Iterator , typename  = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator>::value_type>::value>, typename Iterator1 , typename  = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator1>::value_type>::value>> bool mtrx::CollisionUtil::AABBOOBBCollision (const Iterator & startVertices1, const Iterator & endVertices1, const Iterator1 & startVertices2, const Iterator1 & endVertices2)"
+
+.PP
+AABB and OOBB collision detection algorithm\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBmtrx::CollisionUtil::ConvexShapeCollision\fP
+.RE
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIIterator\fP An iterator type for the data structure that holds the vertices 
+.br
+\fIstd::enable_if_t<std::is_same<glm::vec3*,typename\fP std::iterator_traits<Iterator>::value_type>::value> Template parameter check 
+.br
+\fIIterator1\fP An iterator type for the data structure that holds the vertices 
+.br
+\fIstd::enable_if_t<std::is_same<glm::vec3*,typename\fP std::iterator_traits<Iterator1>::value_type>::value> Template parameter check 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIstartVertices1\fP Iterator to the beginning of the vertex list of the AABB 
+.br
+\fIendVertices1\fP Iterator to the end of the vertex list of the AABB 
+.br
+\fIstartVertices2\fP Iterator to the beginning of the vertex list of the OOBB 
+.br
+\fIendVertices2\fP Iterator to the end of the vertex list of the OOBB 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true The AABB and OOBB colliders collide 
+.PP
+false The AABB and OOBB colliders do not collide 
+.RE
+.PP
+
+.SS "bool mtrx::CollisionUtil::CapsuleAABBCollision (const glm::vec3 & A, const glm::vec3 & B, const float radii, const glm::vec3 & center, const float * halfExtents)"
+
+.PP
+Capsule AABB collision detection algorithm\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIA\fP Center of the topmost sphere for capsule 
+.br
+\fIB\fP Center of the bottommost sphere for capsule 
+.br
+\fIradii\fP Radii of the capsule 
+.br
+\fIcenter\fP Center of the AABB collider 
+.br
+\fIhalfExtents\fP Half extents of the AABB collider 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true The capsule and AABB colliders collide 
+.PP
+false The capsule and AABB colliders do not collide 
+.RE
+.PP
+
+.SS "bool mtrx::CollisionUtil::CapsuleCapsuleCollision (const glm::vec3 & A1, const glm::vec3 & B1, const glm::vec3 & A2, const glm::vec3 & B2, float radius1, float radius2)"
+
+.PP
+Capsule Capsule collision detection algorithm\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIA1\fP Center of topmost sphere for first capsule 
+.br
+\fIB1\fP Center of bottommost sphere for first capsule 
+.br
+\fIA2\fP Center of topmost sphere for second capsule 
+.br
+\fIB2\fP Center of bottommost sphere for second capsule 
+.br
+\fIradius1\fP Radius of first capsule 
+.br
+\fIradius2\fP Radius of second capsule 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true Capsule colliders collide 
+.PP
+false Capsule colliders do not collide 
+.RE
+.PP
+
+.SS "template<typename Iterator , typename  = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator>::value_type>::value>> bool mtrx::CollisionUtil::CapsuleOOBBCollision (const glm::vec3 & A, const glm::vec3 & B, float radii, const Iterator & startVertices, const Iterator & endVertices, const int size)"
+
+.PP
+Capsule OOBB Collision detection algorithm\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIIterator\fP An iterator type for the data structure that holds the vertices 
+.br
+\fIstd::enable_if_t<std::is_same<glm::vec3*,typename\fP std::iterator_traits<Iterator>::value_type>::value> Template parameter check 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIA\fP Center of topmost sphere of capsule collider 
+.br
+\fIB\fP Center of bottommost sphere of capsule collider 
+.br
+\fIradii\fP Radii of the capsule collider 
+.br
+\fIstartVertices\fP Iterator to the beginning of the vertices list 
+.br
+\fIendVertices\fP Iterator to the end of the vertices list 
+.br
+\fIsize\fP Number of vertices 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true The capsule and OOBB colliders collide 
+.PP
+false The capsule and OOBB colliders do not collide 
+.RE
+.PP
+
+.SS "template<typename Iterator , typename  = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator>::value_type>::value>> bool mtrx::CollisionUtil::ConvexShapeCapsuleCollision (const Iterator & startVertices, const Iterator & endVertices, const int size, const glm::vec3 & A, const glm::vec3 & B, const float radii)"
+
+.PP
+Convex Shape Capsule collision detection algorithm\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIIterator\fP An iterator type for the data structure that holds the vertices 
+.br
+\fIstd::enable_if_t<std::is_same<glm::vec3*,typename\fP std::iterator_traits<Iterator>::value_type>::value> Template parameter check 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIstartVertices\fP Iterator to the beginning of the vertex list 
+.br
+\fIendVertices\fP Iterator to the end of the vertex list 
+.br
+\fIsize\fP Number of vertices 
+.br
+\fIA\fP Center of the topmost sphere in the capsule collider 
+.br
+\fIB\fP Center of the bottommost sphere in the capsule collider 
+.br
+\fIradii\fP Radii of the capsule collider 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true The convex shape and capsule colliders collide 
+.PP
+false The convex shape and capsule colliders collide 
+.RE
+.PP
+
+.SS "template<typename Iterator , typename  = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator>::value_type>::value>, typename Iterator1 , typename  = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator1>::value_type>::value>> bool mtrx::CollisionUtil::ConvexShapeCollision (const Iterator & startVertices1, const Iterator & endVertices1, const Iterator1 & startVertices2, const Iterator1 & endVertices2)"
+
+.PP
+Convex Shape collision detection algorithm\&. Uses GJK collision detection algorithm\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBmtrx::GJKUtil\fP
+.RE
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIIterator\fP An iterator type for the data structure that holds the vertices 
+.br
+\fIstd::enable_if_t<std::is_same<glm::vec3*,typename\fP std::iterator_traits<Iterator>::value_type>::value> Template parameter check 
+.br
+\fIIterator1\fP An iterator type for the data structure that holds the vertices 
+.br
+\fIstd::enable_if_t<std::is_same<glm::vec3*,typename\fP std::iterator_traits<Iterator1>::value_type>::value> Template parameter check 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIstartVertices1\fP Iterator to the beginning of the vertex list for first convex collider 
+.br
+\fIendVertices1\fP Iterator to the end of the vertex list for first convex collider 
+.br
+\fIstartVertices2\fP Iterator to the beginning of the vertex list for the second convex shape collider 
+.br
+\fIendVertices2\fP Iterator to the end of the vertex list for the second convex shape collider 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true The convex shape colliders collide 
+.PP
+false The convex shape colliders do not collide 
+.RE
+.PP
+
+.SS "template<typename Iterator , typename  = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator>::value_type>::value>> bool mtrx::CollisionUtil::ConvexShapeSphereCollision (const Iterator & startVertices, const Iterator & endVertices, const int size, const glm::vec3 & center, const float radius)"
+
+.PP
+Convex Shape Sphere collision detection algorithm\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIIterator\fP An iterator type for the data structure that holds the vertices 
+.br
+\fIstd::enable_if_t<std::is_same<glm::vec3*,typename\fP std::iterator_traits<Iterator>::value_type>::value> Template parameter check 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIstartVertices\fP Iterator to the beginning of the vertex list of the convex shape 
+.br
+\fIendVertices\fP Iterator to the end of the vertex list of the convex shape 
+.br
+\fIsize\fP Number of vertices of convex shape collider 
+.br
+\fIcenter\fP Center of the sphere collider 
+.br
+\fIradius\fP Radius of the sphere collider 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true The convex shape and sphere colliders collide 
+.PP
+false The convex shape and sphere colliders do not collide 
+.RE
+.PP
+
+.SS "template<typename Iterator , typename  = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator>::value_type>::value>, typename Iterator1 , typename  = std::enable_if_t<std::is_same<glm::vec3*, typename std::iterator_traits<Iterator1>::value_type>::value>> bool mtrx::CollisionUtil::OOBBCollision (const Iterator & startVertices1, const Iterator & endVertices1, const Iterator1 & startVertices2, const Iterator1 & endVertices2)"
+
+.PP
+OOBB and OOBB collision detection algorithm\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBmtrx::CollisionUtil::ConvexShapeCollision\fP
+.RE
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIIterator\fP An iterator type for the data structure that holds the vertices 
+.br
+\fIstd::enable_if_t<std::is_same<glm::vec3*,typename\fP std::iterator_traits<Iterator>::value_type>::value> Template parameter check 
+.br
+\fIIterator1\fP An iterator type for the data structure that holds the vertices 
+.br
+\fIstd::enable_if_t<std::is_same<glm::vec3*,typename\fP std::iterator_traits<Iterator1>::value_type>::value> Template parameter check 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIstartVertices1\fP Iterator to the beginning of the vertex list of the first OOBB 
+.br
+\fIendVertices1\fP Iterator to the end of the vertex list of the first OOBB 
+.br
+\fIstartVertices2\fP Iterator to the beginning of the vertex list of the second OOBB 
+.br
+\fIendVertices2\fP Iterator to the end of the vertex list of the second OOBB 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true The OOBB colliders collide 
+.PP
+false The OOBB colliders do not collide 
+.RE
+.PP
+
+.SS "bool mtrx::CollisionUtil::SphereAABBCollision (const glm::vec3 & center, const float radius, const glm::vec3 & center1, const float * halfExtents)"
+
+.PP
+Sphere AABB collider collision detection algorithm\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcenter\fP Center of the sphere collider 
+.br
+\fIradius\fP Radius of the sphere collider 
+.br
+\fIcenter1\fP Center of the AABB collider 
+.br
+\fIhalfExtents\fP Half Extents of the AABB collider 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true The sphere and AABB colliders collide 
+.PP
+false The sphere and AABB colliders do not collide 
+.RE
+.PP
+
+.SS "bool mtrx::CollisionUtil::SphereCapsuleCollision (const glm::vec3 & center1, const glm::vec3 & center2, float radius1, float radius2, const glm::vec3 & A, const glm::vec3 & B)"
+
+.PP
+Sphere Capsule collision detection algorithm\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcenter1\fP Center of the sphere collider 
+.br
+\fIcenter2\fP Center of the capsule collider 
+.br
+\fIradius1\fP Radius of the sphere collider 
+.br
+\fIradius2\fP Radius of the capsule collider 
+.br
+\fIA\fP Topmost sphere center for capsule collider 
+.br
+\fIB\fP Bottommost sphere center for capsule collider 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true The sphere and capsule colliders collide 
+.PP
+false The sphere and capsule colliders do not collide 
+.RE
+.PP
+
+.SS "bool mtrx::CollisionUtil::SphereOOBBCollision (const glm::vec3 & center, const float radius, const glm::vec3 & center1, const glm::vec3 * axes, const float * halfExtents)"
+
+.PP
+Sphere OOBB collider collision detection algorithm\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcenter\fP Center of the sphere collider 
+.br
+\fIradius\fP Radius of the sphere collider 
+.br
+\fIcenter1\fP Center of the OOBB collider 
+.br
+\fIaxes\fP Axes that define the OOBB world 
+.br
+\fIhalfExtents\fP Half extent values of OOBB colliders 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true Sphere and OOBB colliders collide 
+.PP
+false Sphere and OOBB colliders do not collide 
+.RE
+.PP
+
+.SS "bool mtrx::CollisionUtil::SphereSphereCollision (const glm::vec3 & center1, const glm::vec3 & center2, float radius1, float radius2)"
+
+.PP
+Sphere Sphere collision detection algorithm\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcenter1\fP Center of the first sphere collider 
+.br
+\fIcenter2\fP Center of the second sphere collider 
+.br
+\fIradius1\fP Radius of the first sphere collider 
+.br
+\fIradius2\fP Radius of the second sphere collider 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true The 2 sphere colliders collide 
+.PP
+false The 2 sphere colliders do not collide 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MTRX Engine from the source code\&.

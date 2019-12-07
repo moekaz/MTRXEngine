@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>MTRXEngine</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Author:</highlight></codeline>
+<codeline><highlight class="normal">Mohamed<sp/>Kazma</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Description:</highlight></codeline>
+<codeline><highlight class="normal">A<sp/>basic<sp/>C++<sp/>based<sp/>physics<sp/>engine<sp/>which<sp/>uses<sp/>some<sp/>libraries<sp/>like<sp/>GLM,<sp/>SPDLOG,<sp/>GLAD,<sp/>GLFW.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Implements<sp/>rigidbody<sp/>dynamics<sp/>with<sp/>force<sp/>and<sp/>torque<sp/>integration.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Implements<sp/>force<sp/>generators<sp/>that<sp/>can<sp/>be<sp/>used<sp/>to<sp/>simulate<sp/>certain<sp/>forces<sp/>like<sp/>gravity,<sp/>drag,<sp/>buoyancy,<sp/>stiff<sp/>springs,<sp/>etc...</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Implements<sp/>a<sp/>basic<sp/>collision<sp/>detection<sp/>system<sp/>with<sp/>basic<sp/>bounding<sp/>volumes<sp/>(sphere,<sp/>capsule,<sp/>box).</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Implements<sp/>convex<sp/>shape<sp/>colliders<sp/>with<sp/>GJK<sp/>Collision<sp/>detection</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Basic<sp/>raycasting<sp/>that<sp/>can<sp/>be<sp/>used<sp/>to<sp/>grab<sp/>a<sp/>certain<sp/>collider<sp/>using<sp/>a<sp/>certain<sp/>ray<sp/>with<sp/>the<sp/>option<sp/>to<sp/>filter<sp/>out<sp/>certain<sp/>colliders</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Very<sp/>rough<sp/>implementation<sp/>of<sp/>Bounding<sp/>Volume<sp/>Hierarchies(untested)<sp/>that<sp/>can<sp/>be<sp/>used<sp/>to<sp/>optimize<sp/>collision<sp/>detection<sp/>checks</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Book<sp/>Sources</highlight></codeline>
+<codeline><highlight class="normal">These<sp/>are<sp/>some<sp/>of<sp/>the<sp/>books<sp/>that<sp/>i<sp/>have<sp/>used<sp/>as<sp/>inspiration:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Real-Time<sp/>Collision<sp/>Detection<sp/>-<sp/>Christer<sp/>Ericson</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Game<sp/>Physics<sp/>Engine<sp/>Development<sp/>-<sp/>Ian<sp/>Millington</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Game<sp/>Engine<sp/>Architecture<sp/>-<sp/>Jason<sp/>Gregory</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Fixing<sp/>timesteps:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>https://web.archive.org/web/20180321070852/https://.gafferongames.com/post/fix_your_timestep</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>GJK<sp/>implementation<sp/>sources:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>https://caseymuratori.com/blog_0003</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>http://www.dyn4j.org/2010/04/gjk-gilbert-johnson-keerthi/#gjk-minkowski</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>http://vec3.ca/gjk/implementation/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>http://in2gpu.com/2014/05/18/gjk-algorithm-3d/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Segment-Segment<sp/>minimum<sp/>distance<sp/>implementation:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>http://geomalgorithms.com/a07-_distance.html#dist3D_Segment_to_Segment</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>TRELLO</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>https://trello.com/b/Cwb55iBt/mtrx-engine</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/mohamed/Desktop/MTRXEngine/README.md"/>
+  </compounddef>
+</doxygen>

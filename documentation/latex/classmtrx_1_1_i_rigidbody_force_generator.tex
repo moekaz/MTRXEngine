@@ -1,0 +1,51 @@
+\hypertarget{classmtrx_1_1_i_rigidbody_force_generator}{}\doxysection{mtrx\+::I\+Rigidbody\+Force\+Generator Class Reference}
+\label{classmtrx_1_1_i_rigidbody_force_generator}\index{mtrx::IRigidbodyForceGenerator@{mtrx::IRigidbodyForceGenerator}}
+
+
+Force generation interface used to apply forces on rigidbodies.  
+
+
+
+
+{\ttfamily \#include $<$I\+Rigidbody\+Force\+Generator.\+h$>$}
+
+Inheritance diagram for mtrx\+::I\+Rigidbody\+Force\+Generator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmtrx_1_1_i_rigidbody_force_generator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classmtrx_1_1_i_rigidbody_force_generator_aa429c1a254391fa5bc36c77dbe3105bc}{Update\+Forces}} (\mbox{\hyperlink{classmtrx_1_1_rigidbody}{Rigidbody}} $\ast$rb, float delta\+Time)=0
+\begin{DoxyCompactList}\small\item\em Apply a certain force onto the given rigidbodies. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Force generation interface used to apply forces on rigidbodies. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmtrx_1_1_i_rigidbody_force_generator_aa429c1a254391fa5bc36c77dbe3105bc}\label{classmtrx_1_1_i_rigidbody_force_generator_aa429c1a254391fa5bc36c77dbe3105bc}} 
+\index{mtrx::IRigidbodyForceGenerator@{mtrx::IRigidbodyForceGenerator}!UpdateForces@{UpdateForces}}
+\index{UpdateForces@{UpdateForces}!mtrx::IRigidbodyForceGenerator@{mtrx::IRigidbodyForceGenerator}}
+\doxysubsubsection{\texorpdfstring{UpdateForces()}{UpdateForces()}}
+{\footnotesize\ttfamily virtual void mtrx\+::\+I\+Rigidbody\+Force\+Generator\+::\+Update\+Forces (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmtrx_1_1_rigidbody}{Rigidbody}} $\ast$}]{rb,  }\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Apply a certain force onto the given rigidbodies. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rb} & The rigidbody we want to apply the force onto \\
+\hline
+{\em delta\+Time} & The time elapsed since the previous frame \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classmtrx_1_1rb___buoyancy_force_generator_a8b9cfb2fc7a59337a698aed194574148}{mtrx\+::rb\+\_\+\+Buoyancy\+Force\+Generator}}, and \mbox{\hyperlink{classmtrx_1_1rb___gravity_force_generator_a979205b2435decf38d4b495fbce01a48}{mtrx\+::rb\+\_\+\+Gravity\+Force\+Generator}}.
+

@@ -5,9 +5,8 @@
 
 namespace mtrx
 {
-	// Potential collision with bodies (dunno if we do this with bodies(particles and rigidbodies or just rigidbodies))
 	/**
-	 * @brief 
+	 * @brief Potential collisions struct 
 	 * 
 	 */
 	struct PotentialCollision
@@ -16,9 +15,9 @@ namespace mtrx
 	};
 
 	/**
-	 * @brief 
+	 * @brief An implementation of a BVH node used for Bounding Volume Hierarchies 
 	 * 
-	 * @tparam BoundingVolume 
+	 * @tparam BoundingVolume The type of bounding volume that will be used within the hierarchy
 	 */
 	template<class BoundingVolume>
 	class BVHNode

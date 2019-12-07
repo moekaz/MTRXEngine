@@ -1,0 +1,177 @@
+\hypertarget{namespacemtrx_1_1_collider_detection_util}{}\doxysection{mtrx\+::Collider\+Detection\+Util Namespace Reference}
+\label{namespacemtrx_1_1_collider_detection_util}\index{mtrx::ColliderDetectionUtil@{mtrx::ColliderDetectionUtil}}
+
+
+Utility namespace used for resolving collision detection algorithms to be used based on collider types.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacemtrx_1_1_collider_detection_util_ac77fc578372668ca2d94530f7e5f14a9}{Collide}} (const \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} \&collider1, const \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} \&collider2)
+\begin{DoxyCompactList}\small\item\em Check for whether 2 colliders collide. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacemtrx_1_1_collider_detection_util_a83f4a41260f33cb092a25f754cc3f978}{Sphere\+Collision\+Options}} (const \mbox{\hyperlink{classmtrx_1_1_sphere_collider}{Sphere\+Collider}} \&sph\+Collider, const \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} \&collider)
+\begin{DoxyCompactList}\small\item\em Collision algorithm options for sphere colliders. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacemtrx_1_1_collider_detection_util_a0d03f406930dcf4a27c960a313e18443}{A\+A\+B\+B\+Collision\+Options}} (const \mbox{\hyperlink{classmtrx_1_1_a_a_b_b_collider}{A\+A\+B\+B\+Collider}} \&aabb, const \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} \&collider)
+\begin{DoxyCompactList}\small\item\em Collision algorithm options for A\+A\+BB colliders. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacemtrx_1_1_collider_detection_util_afe2bd5be5b56798365e58ce26b61ac19}{O\+O\+B\+B\+Collision\+Options}} (const \mbox{\hyperlink{classmtrx_1_1_o_o_b_b_collider}{O\+O\+B\+B\+Collider}} \&oobb, const \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} \&collider)
+\begin{DoxyCompactList}\small\item\em Collision algorithm options for O\+O\+BB colliders. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacemtrx_1_1_collider_detection_util_a767bbb02f31fba82dc433def365c33b2}{Capsule\+Collision\+Options}} (const \mbox{\hyperlink{classmtrx_1_1_capsule_collider}{Capsule\+Collider}} \&cap\+Collider, const \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} \&collider)
+\begin{DoxyCompactList}\small\item\em Collision algorithm options for capsule colliders @mtrx\+::\+Capsule\+Collider. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacemtrx_1_1_collider_detection_util_a08d951ddbcee8094a314edface8d4881}{Convex\+Shape\+Collision\+Options}} (const \mbox{\hyperlink{classmtrx_1_1_convex_shape_collider}{Convex\+Shape\+Collider}} \&convex\+Collider, const \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} \&collider)
+\begin{DoxyCompactList}\small\item\em Collision algotithm options for convex shape colliders. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Utility namespace used for resolving collision detection algorithms to be used based on collider types. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{namespacemtrx_aba70c7f807f8a862fb9a10445ec82e7c}{mtrx\+::\+Collider\+Type}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacemtrx_1_1_collider_detection_util_a0d03f406930dcf4a27c960a313e18443}\label{namespacemtrx_1_1_collider_detection_util_a0d03f406930dcf4a27c960a313e18443}} 
+\index{mtrx::ColliderDetectionUtil@{mtrx::ColliderDetectionUtil}!AABBCollisionOptions@{AABBCollisionOptions}}
+\index{AABBCollisionOptions@{AABBCollisionOptions}!mtrx::ColliderDetectionUtil@{mtrx::ColliderDetectionUtil}}
+\doxysubsubsection{\texorpdfstring{AABBCollisionOptions()}{AABBCollisionOptions()}}
+{\footnotesize\ttfamily bool mtrx\+::\+Collider\+Detection\+Util\+::\+A\+A\+B\+B\+Collision\+Options (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmtrx_1_1_a_a_b_b_collider}{A\+A\+B\+B\+Collider}} \&}]{aabb,  }\item[{const \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} \&}]{collider }\end{DoxyParamCaption})}
+
+
+
+Collision algorithm options for A\+A\+BB colliders. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classmtrx_1_1_a_a_b_b_collider}{mtrx\+::\+A\+A\+B\+B\+Collider}}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em aabb} & The aabb collider \\
+\hline
+{\em collider} & The other collider \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true The 2 colliders collide 
+
+false The 2 colliders do not collide 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_collider_detection_util_a767bbb02f31fba82dc433def365c33b2}\label{namespacemtrx_1_1_collider_detection_util_a767bbb02f31fba82dc433def365c33b2}} 
+\index{mtrx::ColliderDetectionUtil@{mtrx::ColliderDetectionUtil}!CapsuleCollisionOptions@{CapsuleCollisionOptions}}
+\index{CapsuleCollisionOptions@{CapsuleCollisionOptions}!mtrx::ColliderDetectionUtil@{mtrx::ColliderDetectionUtil}}
+\doxysubsubsection{\texorpdfstring{CapsuleCollisionOptions()}{CapsuleCollisionOptions()}}
+{\footnotesize\ttfamily bool mtrx\+::\+Collider\+Detection\+Util\+::\+Capsule\+Collision\+Options (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmtrx_1_1_capsule_collider}{Capsule\+Collider}} \&}]{cap\+Collider,  }\item[{const \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} \&}]{collider }\end{DoxyParamCaption})}
+
+
+
+Collision algorithm options for capsule colliders @mtrx\+::\+Capsule\+Collider. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cap\+Collider} & The capsule collider \\
+\hline
+{\em collider} & The other collider \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true The 2 colliders collide 
+
+false The 2 colliders do not collide 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_collider_detection_util_ac77fc578372668ca2d94530f7e5f14a9}\label{namespacemtrx_1_1_collider_detection_util_ac77fc578372668ca2d94530f7e5f14a9}} 
+\index{mtrx::ColliderDetectionUtil@{mtrx::ColliderDetectionUtil}!Collide@{Collide}}
+\index{Collide@{Collide}!mtrx::ColliderDetectionUtil@{mtrx::ColliderDetectionUtil}}
+\doxysubsubsection{\texorpdfstring{Collide()}{Collide()}}
+{\footnotesize\ttfamily bool mtrx\+::\+Collider\+Detection\+Util\+::\+Collide (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} \&}]{collider1,  }\item[{const \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} \&}]{collider2 }\end{DoxyParamCaption})}
+
+
+
+Check for whether 2 colliders collide. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collider1} & The first collider \\
+\hline
+{\em collider2} & The second collider \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true The 2 colliders collide 
+
+false the 2 colliders do not collide 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_collider_detection_util_a08d951ddbcee8094a314edface8d4881}\label{namespacemtrx_1_1_collider_detection_util_a08d951ddbcee8094a314edface8d4881}} 
+\index{mtrx::ColliderDetectionUtil@{mtrx::ColliderDetectionUtil}!ConvexShapeCollisionOptions@{ConvexShapeCollisionOptions}}
+\index{ConvexShapeCollisionOptions@{ConvexShapeCollisionOptions}!mtrx::ColliderDetectionUtil@{mtrx::ColliderDetectionUtil}}
+\doxysubsubsection{\texorpdfstring{ConvexShapeCollisionOptions()}{ConvexShapeCollisionOptions()}}
+{\footnotesize\ttfamily bool mtrx\+::\+Collider\+Detection\+Util\+::\+Convex\+Shape\+Collision\+Options (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmtrx_1_1_convex_shape_collider}{Convex\+Shape\+Collider}} \&}]{convex\+Collider,  }\item[{const \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} \&}]{collider }\end{DoxyParamCaption})}
+
+
+
+Collision algotithm options for convex shape colliders. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classmtrx_1_1_convex_shape_collider}{mtrx\+::\+Convex\+Shape\+Collider}}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em convex\+Collider} & The convex shape collider \\
+\hline
+{\em collider} & The other collider \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true The 2 colliders collide 
+
+false The 2 colliders do not collide 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_collider_detection_util_afe2bd5be5b56798365e58ce26b61ac19}\label{namespacemtrx_1_1_collider_detection_util_afe2bd5be5b56798365e58ce26b61ac19}} 
+\index{mtrx::ColliderDetectionUtil@{mtrx::ColliderDetectionUtil}!OOBBCollisionOptions@{OOBBCollisionOptions}}
+\index{OOBBCollisionOptions@{OOBBCollisionOptions}!mtrx::ColliderDetectionUtil@{mtrx::ColliderDetectionUtil}}
+\doxysubsubsection{\texorpdfstring{OOBBCollisionOptions()}{OOBBCollisionOptions()}}
+{\footnotesize\ttfamily bool mtrx\+::\+Collider\+Detection\+Util\+::\+O\+O\+B\+B\+Collision\+Options (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmtrx_1_1_o_o_b_b_collider}{O\+O\+B\+B\+Collider}} \&}]{oobb,  }\item[{const \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} \&}]{collider }\end{DoxyParamCaption})}
+
+
+
+Collision algorithm options for O\+O\+BB colliders. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classmtrx_1_1_o_o_b_b_collider}{mtrx\+::\+O\+O\+B\+B\+Collider}}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em oobb} & The O\+O\+BB collider \\
+\hline
+{\em collider} & The other collider \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true The 2 colliders collide 
+
+false The 2 colliders do not collide 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_collider_detection_util_a83f4a41260f33cb092a25f754cc3f978}\label{namespacemtrx_1_1_collider_detection_util_a83f4a41260f33cb092a25f754cc3f978}} 
+\index{mtrx::ColliderDetectionUtil@{mtrx::ColliderDetectionUtil}!SphereCollisionOptions@{SphereCollisionOptions}}
+\index{SphereCollisionOptions@{SphereCollisionOptions}!mtrx::ColliderDetectionUtil@{mtrx::ColliderDetectionUtil}}
+\doxysubsubsection{\texorpdfstring{SphereCollisionOptions()}{SphereCollisionOptions()}}
+{\footnotesize\ttfamily bool mtrx\+::\+Collider\+Detection\+Util\+::\+Sphere\+Collision\+Options (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmtrx_1_1_sphere_collider}{Sphere\+Collider}} \&}]{sph\+Collider,  }\item[{const \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} \&}]{collider }\end{DoxyParamCaption})}
+
+
+
+Collision algorithm options for sphere colliders. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classmtrx_1_1_sphere_collider}{mtrx\+::\+Sphere\+Collider}}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em sph\+Collider} & The sphere collider \\
+\hline
+{\em collider} & The other collider \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true The 2 colliders collide 
+
+false The 2 colliders do not collide 
+\end{DoxyReturn}

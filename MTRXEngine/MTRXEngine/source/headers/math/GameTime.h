@@ -2,6 +2,10 @@
 
 namespace mtrx
 {
+	/**
+	 * @brief Basic implementation of time values mostly used for the calculation of delta time
+	 * 
+	 */
 	class GameTime
 	{
 	public:

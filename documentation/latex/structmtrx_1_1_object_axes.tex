@@ -1,0 +1,45 @@
+\hypertarget{structmtrx_1_1_object_axes}{}\doxysection{mtrx\+::Object\+Axes Struct Reference}
+\label{structmtrx_1_1_object_axes}\index{mtrx::ObjectAxes@{mtrx::ObjectAxes}}
+
+
+The axes that define an objects world.  
+
+
+
+
+{\ttfamily \#include $<$Defs.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structmtrx_1_1_object_axes_a9535236c0e1176194671be6ed3d808d7}\label{structmtrx_1_1_object_axes_a9535236c0e1176194671be6ed3d808d7}} 
+glm\+::vec3 \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (int index)
+\item 
+\mbox{\Hypertarget{structmtrx_1_1_object_axes_a08ef2d38b89e2133af1f3becfe22a4b1}\label{structmtrx_1_1_object_axes_a08ef2d38b89e2133af1f3becfe22a4b1}} 
+const glm\+::vec3 \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (int index) const
+\item 
+\mbox{\Hypertarget{structmtrx_1_1_object_axes_a41bf635d79b9baae006b905f3c35cd81}\label{structmtrx_1_1_object_axes_a41bf635d79b9baae006b905f3c35cd81}} 
+{\bfseries Object\+Axes} (const glm\+::vec3 \&forward=glm\+::vec3(0, 0, -\/1), const glm\+::vec3 \&up=glm\+::vec3(0, 1, 0), const glm\+::vec3 \&side=glm\+::vec3(1, 0, 0))
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structmtrx_1_1_object_axes_aa4ddf9c70541dbb5596d2f226a7c073c}\label{structmtrx_1_1_object_axes_aa4ddf9c70541dbb5596d2f226a7c073c}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\mbox{\Hypertarget{unionmtrx_1_1_object_axes_1_1_0d0_abb77733ac4559602dcaa1cc041cdbcac}\label{unionmtrx_1_1_object_axes_1_1_0d0_abb77733ac4559602dcaa1cc041cdbcac}} 
+\>struct \{\\
+\>\>glm::vec3 {\bfseries side}\\
+\>\>glm::vec3 {\bfseries up}\\
+\>\>glm::vec3 {\bfseries forward}\\
+\>\} \\
+\>glm::vec3 {\bfseries axes} \mbox{[}3\mbox{]}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The axes that define an objects world. 
+

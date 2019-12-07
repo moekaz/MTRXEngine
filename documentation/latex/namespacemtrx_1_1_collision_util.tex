@@ -1,0 +1,473 @@
+\hypertarget{namespacemtrx_1_1_collision_util}{}\doxysection{mtrx\+::Collision\+Util Namespace Reference}
+\label{namespacemtrx_1_1_collision_util}\index{mtrx::CollisionUtil@{mtrx::CollisionUtil}}
+
+
+Namespace used to define some collision detection algorithms that are used to check for collision between different colliders. None of these functions require colliders themselves, They use mostly primitive classes instead.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacemtrx_1_1_collision_util_a25655a61b608ba45dbd96e1bbdcbcb37}{Sphere\+Sphere\+Collision}} (const glm\+::vec3 \&center1, const glm\+::vec3 \&center2, float radius1, float radius2)
+\begin{DoxyCompactList}\small\item\em Sphere Sphere collision detection algorithm. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacemtrx_1_1_collision_util_a058033b88ee093be57383c8e83cd11af}{Sphere\+Capsule\+Collision}} (const glm\+::vec3 \&center1, const glm\+::vec3 \&center2, float radius1, float radius2, const glm\+::vec3 \&A, const glm\+::vec3 \&B)
+\begin{DoxyCompactList}\small\item\em Sphere Capsule collision detection algorithm. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacemtrx_1_1_collision_util_afb7d2a9972902c2bb02ea8bd304c78e7}{Sphere\+A\+A\+B\+B\+Collision}} (const glm\+::vec3 \&center, const float radius, const glm\+::vec3 \&center1, const float $\ast$half\+Extents)
+\begin{DoxyCompactList}\small\item\em Sphere A\+A\+BB collider collision detection algorithm. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacemtrx_1_1_collision_util_a5bad6fd1b06278cf9d1dda3b2e39de83}{Sphere\+O\+O\+B\+B\+Collision}} (const glm\+::vec3 \&center, const float radius, const glm\+::vec3 \&center1, const glm\+::vec3 $\ast$axes, const float $\ast$half\+Extents)
+\begin{DoxyCompactList}\small\item\em Sphere O\+O\+BB collider collision detection algorithm. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacemtrx_1_1_collision_util_a7d3bc9990e9c0e816aeae56126aaaa25}{Capsule\+Capsule\+Collision}} (const glm\+::vec3 \&A1, const glm\+::vec3 \&B1, const glm\+::vec3 \&A2, const glm\+::vec3 \&B2, float radius1, float radius2)
+\begin{DoxyCompactList}\small\item\em Capsule Capsule collision detection algorithm. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacemtrx_1_1_collision_util_ac0847bd3390425b25ff591aa74f1f412}{Capsule\+A\+A\+B\+B\+Collision}} (const glm\+::vec3 \&A, const glm\+::vec3 \&B, const float radii, const glm\+::vec3 \&center, const float $\ast$half\+Extents)
+\begin{DoxyCompactList}\small\item\em Capsule A\+A\+BB collision detection algorithm. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacemtrx_1_1_collision_util_a5f6358f639b903628ca5addc5ff1a451}{A\+A\+B\+B\+Collision}} (const glm\+::vec3 \&center, const float $\ast$half\+Extents, const glm\+::vec3 \&center1, const float $\ast$half\+Extents1)
+\begin{DoxyCompactList}\small\item\em A\+A\+BB A\+A\+BB collision detection algorithm. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$, typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$\+::value$>$, typename Iterator1 , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$, typename std\+::iterator\+\_\+traits$<$\+Iterator1$>$\+::value\+\_\+type$>$\+::value$>$$>$ }\\bool \mbox{\hyperlink{namespacemtrx_1_1_collision_util_a3a98a1e19066de38a68db34e6c183a7c}{Convex\+Shape\+Collision}} (const Iterator \&start\+Vertices1, const Iterator \&end\+Vertices1, const Iterator1 \&start\+Vertices2, const Iterator1 \&end\+Vertices2)
+\begin{DoxyCompactList}\small\item\em Convex Shape collision detection algorithm. Uses G\+JK collision detection algorithm. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$, typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$\+::value$>$$>$ }\\bool \mbox{\hyperlink{namespacemtrx_1_1_collision_util_a8efc8de6ee21149f34b5e7cd77fe1a2c}{Convex\+Shape\+Capsule\+Collision}} (const Iterator \&start\+Vertices, const Iterator \&end\+Vertices, const int size, const glm\+::vec3 \&A, const glm\+::vec3 \&B, const float radii)
+\begin{DoxyCompactList}\small\item\em Convex Shape Capsule collision detection algorithm. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$, typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$\+::value$>$$>$ }\\bool \mbox{\hyperlink{namespacemtrx_1_1_collision_util_a871e293d9a5b8a3a07f5d98fa927743a}{Capsule\+O\+O\+B\+B\+Collision}} (const glm\+::vec3 \&A, const glm\+::vec3 \&B, float radii, const Iterator \&start\+Vertices, const Iterator \&end\+Vertices, const int size)
+\begin{DoxyCompactList}\small\item\em Capsule O\+O\+BB Collision detection algorithm. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$, typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$\+::value$>$, typename Iterator1 , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$, typename std\+::iterator\+\_\+traits$<$\+Iterator1$>$\+::value\+\_\+type$>$\+::value$>$$>$ }\\bool \mbox{\hyperlink{namespacemtrx_1_1_collision_util_a63e108082c43adf2c015f65f7b75830f}{A\+A\+B\+B\+O\+O\+B\+B\+Collision}} (const Iterator \&start\+Vertices1, const Iterator \&end\+Vertices1, const Iterator1 \&start\+Vertices2, const Iterator1 \&end\+Vertices2)
+\begin{DoxyCompactList}\small\item\em A\+A\+BB and O\+O\+BB collision detection algorithm. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$, typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$\+::value$>$, typename Iterator1 , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$, typename std\+::iterator\+\_\+traits$<$\+Iterator1$>$\+::value\+\_\+type$>$\+::value$>$$>$ }\\bool \mbox{\hyperlink{namespacemtrx_1_1_collision_util_a389b40f189ad059f0366228ec61d5cb4}{O\+O\+B\+B\+Collision}} (const Iterator \&start\+Vertices1, const Iterator \&end\+Vertices1, const Iterator1 \&start\+Vertices2, const Iterator1 \&end\+Vertices2)
+\begin{DoxyCompactList}\small\item\em O\+O\+BB and O\+O\+BB collision detection algorithm. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$, typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$\+::value$>$$>$ }\\bool \mbox{\hyperlink{namespacemtrx_1_1_collision_util_a4244615348b7ba8a7733587cdd3a2ca7}{Convex\+Shape\+Sphere\+Collision}} (const Iterator \&start\+Vertices, const Iterator \&end\+Vertices, const int size, const glm\+::vec3 \&center, const float radius)
+\begin{DoxyCompactList}\small\item\em Convex Shape Sphere collision detection algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Namespace used to define some collision detection algorithms that are used to check for collision between different colliders. None of these functions require colliders themselves, They use mostly primitive classes instead. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacemtrx_1_1_collision_util_a5f6358f639b903628ca5addc5ff1a451}\label{namespacemtrx_1_1_collision_util_a5f6358f639b903628ca5addc5ff1a451}} 
+\index{mtrx::CollisionUtil@{mtrx::CollisionUtil}!AABBCollision@{AABBCollision}}
+\index{AABBCollision@{AABBCollision}!mtrx::CollisionUtil@{mtrx::CollisionUtil}}
+\doxysubsubsection{\texorpdfstring{AABBCollision()}{AABBCollision()}}
+{\footnotesize\ttfamily bool mtrx\+::\+Collision\+Util\+::\+A\+A\+B\+B\+Collision (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{center,  }\item[{const float $\ast$}]{half\+Extents,  }\item[{const glm\+::vec3 \&}]{center1,  }\item[{const float $\ast$}]{half\+Extents1 }\end{DoxyParamCaption})}
+
+
+
+A\+A\+BB A\+A\+BB collision detection algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em center} & Center of the first A\+A\+BB collider \\
+\hline
+{\em half\+Extents} & Half extents of the first A\+A\+BB collider \\
+\hline
+{\em center1} & Center of the second A\+A\+BB collider \\
+\hline
+{\em half\+Extents1} & Half extents of the second A\+A\+BB collider \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true The A\+A\+BB colliders collide 
+
+false The A\+A\+BB colliders do not collide 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_collision_util_a63e108082c43adf2c015f65f7b75830f}\label{namespacemtrx_1_1_collision_util_a63e108082c43adf2c015f65f7b75830f}} 
+\index{mtrx::CollisionUtil@{mtrx::CollisionUtil}!AABBOOBBCollision@{AABBOOBBCollision}}
+\index{AABBOOBBCollision@{AABBOOBBCollision}!mtrx::CollisionUtil@{mtrx::CollisionUtil}}
+\doxysubsubsection{\texorpdfstring{AABBOOBBCollision()}{AABBOOBBCollision()}}
+{\footnotesize\ttfamily template$<$typename Iterator , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$, typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$\+::value$>$, typename Iterator1 , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$, typename std\+::iterator\+\_\+traits$<$\+Iterator1$>$\+::value\+\_\+type$>$\+::value$>$$>$ \\
+bool mtrx\+::\+Collision\+Util\+::\+A\+A\+B\+B\+O\+O\+B\+B\+Collision (\begin{DoxyParamCaption}\item[{const Iterator \&}]{start\+Vertices1,  }\item[{const Iterator \&}]{end\+Vertices1,  }\item[{const Iterator1 \&}]{start\+Vertices2,  }\item[{const Iterator1 \&}]{end\+Vertices2 }\end{DoxyParamCaption})}
+
+
+
+A\+A\+BB and O\+O\+BB collision detection algorithm. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{namespacemtrx_1_1_collision_util_a3a98a1e19066de38a68db34e6c183a7c}{mtrx\+::\+Collision\+Util\+::\+Convex\+Shape\+Collision}}
+\end{DoxySeeAlso}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Iterator} & An iterator type for the data structure that holds the vertices \\
+\hline
+{\em std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$,typename} & std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$\+::value$>$ Template parameter check \\
+\hline
+{\em Iterator1} & An iterator type for the data structure that holds the vertices \\
+\hline
+{\em std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$,typename} & std\+::iterator\+\_\+traits$<$\+Iterator1$>$\+::value\+\_\+type$>$\+::value$>$ Template parameter check \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Vertices1} & Iterator to the beginning of the vertex list of the A\+A\+BB \\
+\hline
+{\em end\+Vertices1} & Iterator to the end of the vertex list of the A\+A\+BB \\
+\hline
+{\em start\+Vertices2} & Iterator to the beginning of the vertex list of the O\+O\+BB \\
+\hline
+{\em end\+Vertices2} & Iterator to the end of the vertex list of the O\+O\+BB \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true The A\+A\+BB and O\+O\+BB colliders collide 
+
+false The A\+A\+BB and O\+O\+BB colliders do not collide 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_collision_util_ac0847bd3390425b25ff591aa74f1f412}\label{namespacemtrx_1_1_collision_util_ac0847bd3390425b25ff591aa74f1f412}} 
+\index{mtrx::CollisionUtil@{mtrx::CollisionUtil}!CapsuleAABBCollision@{CapsuleAABBCollision}}
+\index{CapsuleAABBCollision@{CapsuleAABBCollision}!mtrx::CollisionUtil@{mtrx::CollisionUtil}}
+\doxysubsubsection{\texorpdfstring{CapsuleAABBCollision()}{CapsuleAABBCollision()}}
+{\footnotesize\ttfamily bool mtrx\+::\+Collision\+Util\+::\+Capsule\+A\+A\+B\+B\+Collision (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{A,  }\item[{const glm\+::vec3 \&}]{B,  }\item[{const float}]{radii,  }\item[{const glm\+::vec3 \&}]{center,  }\item[{const float $\ast$}]{half\+Extents }\end{DoxyParamCaption})}
+
+
+
+Capsule A\+A\+BB collision detection algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & Center of the topmost sphere for capsule \\
+\hline
+{\em B} & Center of the bottommost sphere for capsule \\
+\hline
+{\em radii} & Radii of the capsule \\
+\hline
+{\em center} & Center of the A\+A\+BB collider \\
+\hline
+{\em half\+Extents} & Half extents of the A\+A\+BB collider \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true The capsule and A\+A\+BB colliders collide 
+
+false The capsule and A\+A\+BB colliders do not collide 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_collision_util_a7d3bc9990e9c0e816aeae56126aaaa25}\label{namespacemtrx_1_1_collision_util_a7d3bc9990e9c0e816aeae56126aaaa25}} 
+\index{mtrx::CollisionUtil@{mtrx::CollisionUtil}!CapsuleCapsuleCollision@{CapsuleCapsuleCollision}}
+\index{CapsuleCapsuleCollision@{CapsuleCapsuleCollision}!mtrx::CollisionUtil@{mtrx::CollisionUtil}}
+\doxysubsubsection{\texorpdfstring{CapsuleCapsuleCollision()}{CapsuleCapsuleCollision()}}
+{\footnotesize\ttfamily bool mtrx\+::\+Collision\+Util\+::\+Capsule\+Capsule\+Collision (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{A1,  }\item[{const glm\+::vec3 \&}]{B1,  }\item[{const glm\+::vec3 \&}]{A2,  }\item[{const glm\+::vec3 \&}]{B2,  }\item[{float}]{radius1,  }\item[{float}]{radius2 }\end{DoxyParamCaption})}
+
+
+
+Capsule Capsule collision detection algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A1} & Center of topmost sphere for first capsule \\
+\hline
+{\em B1} & Center of bottommost sphere for first capsule \\
+\hline
+{\em A2} & Center of topmost sphere for second capsule \\
+\hline
+{\em B2} & Center of bottommost sphere for second capsule \\
+\hline
+{\em radius1} & Radius of first capsule \\
+\hline
+{\em radius2} & Radius of second capsule \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Capsule colliders collide 
+
+false Capsule colliders do not collide 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_collision_util_a871e293d9a5b8a3a07f5d98fa927743a}\label{namespacemtrx_1_1_collision_util_a871e293d9a5b8a3a07f5d98fa927743a}} 
+\index{mtrx::CollisionUtil@{mtrx::CollisionUtil}!CapsuleOOBBCollision@{CapsuleOOBBCollision}}
+\index{CapsuleOOBBCollision@{CapsuleOOBBCollision}!mtrx::CollisionUtil@{mtrx::CollisionUtil}}
+\doxysubsubsection{\texorpdfstring{CapsuleOOBBCollision()}{CapsuleOOBBCollision()}}
+{\footnotesize\ttfamily template$<$typename Iterator , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$, typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$\+::value$>$$>$ \\
+bool mtrx\+::\+Collision\+Util\+::\+Capsule\+O\+O\+B\+B\+Collision (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{A,  }\item[{const glm\+::vec3 \&}]{B,  }\item[{float}]{radii,  }\item[{const Iterator \&}]{start\+Vertices,  }\item[{const Iterator \&}]{end\+Vertices,  }\item[{const int}]{size }\end{DoxyParamCaption})}
+
+
+
+Capsule O\+O\+BB Collision detection algorithm. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Iterator} & An iterator type for the data structure that holds the vertices \\
+\hline
+{\em std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$,typename} & std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$\+::value$>$ Template parameter check \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em A} & Center of topmost sphere of capsule collider \\
+\hline
+{\em B} & Center of bottommost sphere of capsule collider \\
+\hline
+{\em radii} & Radii of the capsule collider \\
+\hline
+{\em start\+Vertices} & Iterator to the beginning of the vertices list \\
+\hline
+{\em end\+Vertices} & Iterator to the end of the vertices list \\
+\hline
+{\em size} & Number of vertices \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true The capsule and O\+O\+BB colliders collide 
+
+false The capsule and O\+O\+BB colliders do not collide 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_collision_util_a8efc8de6ee21149f34b5e7cd77fe1a2c}\label{namespacemtrx_1_1_collision_util_a8efc8de6ee21149f34b5e7cd77fe1a2c}} 
+\index{mtrx::CollisionUtil@{mtrx::CollisionUtil}!ConvexShapeCapsuleCollision@{ConvexShapeCapsuleCollision}}
+\index{ConvexShapeCapsuleCollision@{ConvexShapeCapsuleCollision}!mtrx::CollisionUtil@{mtrx::CollisionUtil}}
+\doxysubsubsection{\texorpdfstring{ConvexShapeCapsuleCollision()}{ConvexShapeCapsuleCollision()}}
+{\footnotesize\ttfamily template$<$typename Iterator , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$, typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$\+::value$>$$>$ \\
+bool mtrx\+::\+Collision\+Util\+::\+Convex\+Shape\+Capsule\+Collision (\begin{DoxyParamCaption}\item[{const Iterator \&}]{start\+Vertices,  }\item[{const Iterator \&}]{end\+Vertices,  }\item[{const int}]{size,  }\item[{const glm\+::vec3 \&}]{A,  }\item[{const glm\+::vec3 \&}]{B,  }\item[{const float}]{radii }\end{DoxyParamCaption})}
+
+
+
+Convex Shape Capsule collision detection algorithm. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Iterator} & An iterator type for the data structure that holds the vertices \\
+\hline
+{\em std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$,typename} & std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$\+::value$>$ Template parameter check \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Vertices} & Iterator to the beginning of the vertex list \\
+\hline
+{\em end\+Vertices} & Iterator to the end of the vertex list \\
+\hline
+{\em size} & Number of vertices \\
+\hline
+{\em A} & Center of the topmost sphere in the capsule collider \\
+\hline
+{\em B} & Center of the bottommost sphere in the capsule collider \\
+\hline
+{\em radii} & Radii of the capsule collider \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true The convex shape and capsule colliders collide 
+
+false The convex shape and capsule colliders collide 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_collision_util_a3a98a1e19066de38a68db34e6c183a7c}\label{namespacemtrx_1_1_collision_util_a3a98a1e19066de38a68db34e6c183a7c}} 
+\index{mtrx::CollisionUtil@{mtrx::CollisionUtil}!ConvexShapeCollision@{ConvexShapeCollision}}
+\index{ConvexShapeCollision@{ConvexShapeCollision}!mtrx::CollisionUtil@{mtrx::CollisionUtil}}
+\doxysubsubsection{\texorpdfstring{ConvexShapeCollision()}{ConvexShapeCollision()}}
+{\footnotesize\ttfamily template$<$typename Iterator , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$, typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$\+::value$>$, typename Iterator1 , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$, typename std\+::iterator\+\_\+traits$<$\+Iterator1$>$\+::value\+\_\+type$>$\+::value$>$$>$ \\
+bool mtrx\+::\+Collision\+Util\+::\+Convex\+Shape\+Collision (\begin{DoxyParamCaption}\item[{const Iterator \&}]{start\+Vertices1,  }\item[{const Iterator \&}]{end\+Vertices1,  }\item[{const Iterator1 \&}]{start\+Vertices2,  }\item[{const Iterator1 \&}]{end\+Vertices2 }\end{DoxyParamCaption})}
+
+
+
+Convex Shape collision detection algorithm. Uses G\+JK collision detection algorithm. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classmtrx_1_1_g_j_k_util}{mtrx\+::\+G\+J\+K\+Util}}
+\end{DoxySeeAlso}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Iterator} & An iterator type for the data structure that holds the vertices \\
+\hline
+{\em std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$,typename} & std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$\+::value$>$ Template parameter check \\
+\hline
+{\em Iterator1} & An iterator type for the data structure that holds the vertices \\
+\hline
+{\em std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$,typename} & std\+::iterator\+\_\+traits$<$\+Iterator1$>$\+::value\+\_\+type$>$\+::value$>$ Template parameter check \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Vertices1} & Iterator to the beginning of the vertex list for first convex collider \\
+\hline
+{\em end\+Vertices1} & Iterator to the end of the vertex list for first convex collider \\
+\hline
+{\em start\+Vertices2} & Iterator to the beginning of the vertex list for the second convex shape collider \\
+\hline
+{\em end\+Vertices2} & Iterator to the end of the vertex list for the second convex shape collider \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true The convex shape colliders collide 
+
+false The convex shape colliders do not collide 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_collision_util_a4244615348b7ba8a7733587cdd3a2ca7}\label{namespacemtrx_1_1_collision_util_a4244615348b7ba8a7733587cdd3a2ca7}} 
+\index{mtrx::CollisionUtil@{mtrx::CollisionUtil}!ConvexShapeSphereCollision@{ConvexShapeSphereCollision}}
+\index{ConvexShapeSphereCollision@{ConvexShapeSphereCollision}!mtrx::CollisionUtil@{mtrx::CollisionUtil}}
+\doxysubsubsection{\texorpdfstring{ConvexShapeSphereCollision()}{ConvexShapeSphereCollision()}}
+{\footnotesize\ttfamily template$<$typename Iterator , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$, typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$\+::value$>$$>$ \\
+bool mtrx\+::\+Collision\+Util\+::\+Convex\+Shape\+Sphere\+Collision (\begin{DoxyParamCaption}\item[{const Iterator \&}]{start\+Vertices,  }\item[{const Iterator \&}]{end\+Vertices,  }\item[{const int}]{size,  }\item[{const glm\+::vec3 \&}]{center,  }\item[{const float}]{radius }\end{DoxyParamCaption})}
+
+
+
+Convex Shape Sphere collision detection algorithm. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Iterator} & An iterator type for the data structure that holds the vertices \\
+\hline
+{\em std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$,typename} & std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$\+::value$>$ Template parameter check \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Vertices} & Iterator to the beginning of the vertex list of the convex shape \\
+\hline
+{\em end\+Vertices} & Iterator to the end of the vertex list of the convex shape \\
+\hline
+{\em size} & Number of vertices of convex shape collider \\
+\hline
+{\em center} & Center of the sphere collider \\
+\hline
+{\em radius} & Radius of the sphere collider \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true The convex shape and sphere colliders collide 
+
+false The convex shape and sphere colliders do not collide 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_collision_util_a389b40f189ad059f0366228ec61d5cb4}\label{namespacemtrx_1_1_collision_util_a389b40f189ad059f0366228ec61d5cb4}} 
+\index{mtrx::CollisionUtil@{mtrx::CollisionUtil}!OOBBCollision@{OOBBCollision}}
+\index{OOBBCollision@{OOBBCollision}!mtrx::CollisionUtil@{mtrx::CollisionUtil}}
+\doxysubsubsection{\texorpdfstring{OOBBCollision()}{OOBBCollision()}}
+{\footnotesize\ttfamily template$<$typename Iterator , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$, typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$\+::value$>$, typename Iterator1 , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$, typename std\+::iterator\+\_\+traits$<$\+Iterator1$>$\+::value\+\_\+type$>$\+::value$>$$>$ \\
+bool mtrx\+::\+Collision\+Util\+::\+O\+O\+B\+B\+Collision (\begin{DoxyParamCaption}\item[{const Iterator \&}]{start\+Vertices1,  }\item[{const Iterator \&}]{end\+Vertices1,  }\item[{const Iterator1 \&}]{start\+Vertices2,  }\item[{const Iterator1 \&}]{end\+Vertices2 }\end{DoxyParamCaption})}
+
+
+
+O\+O\+BB and O\+O\+BB collision detection algorithm. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{namespacemtrx_1_1_collision_util_a3a98a1e19066de38a68db34e6c183a7c}{mtrx\+::\+Collision\+Util\+::\+Convex\+Shape\+Collision}}
+\end{DoxySeeAlso}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Iterator} & An iterator type for the data structure that holds the vertices \\
+\hline
+{\em std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$,typename} & std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$\+::value$>$ Template parameter check \\
+\hline
+{\em Iterator1} & An iterator type for the data structure that holds the vertices \\
+\hline
+{\em std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$,typename} & std\+::iterator\+\_\+traits$<$\+Iterator1$>$\+::value\+\_\+type$>$\+::value$>$ Template parameter check \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Vertices1} & Iterator to the beginning of the vertex list of the first O\+O\+BB \\
+\hline
+{\em end\+Vertices1} & Iterator to the end of the vertex list of the first O\+O\+BB \\
+\hline
+{\em start\+Vertices2} & Iterator to the beginning of the vertex list of the second O\+O\+BB \\
+\hline
+{\em end\+Vertices2} & Iterator to the end of the vertex list of the second O\+O\+BB \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true The O\+O\+BB colliders collide 
+
+false The O\+O\+BB colliders do not collide 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_collision_util_afb7d2a9972902c2bb02ea8bd304c78e7}\label{namespacemtrx_1_1_collision_util_afb7d2a9972902c2bb02ea8bd304c78e7}} 
+\index{mtrx::CollisionUtil@{mtrx::CollisionUtil}!SphereAABBCollision@{SphereAABBCollision}}
+\index{SphereAABBCollision@{SphereAABBCollision}!mtrx::CollisionUtil@{mtrx::CollisionUtil}}
+\doxysubsubsection{\texorpdfstring{SphereAABBCollision()}{SphereAABBCollision()}}
+{\footnotesize\ttfamily bool mtrx\+::\+Collision\+Util\+::\+Sphere\+A\+A\+B\+B\+Collision (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{center,  }\item[{const float}]{radius,  }\item[{const glm\+::vec3 \&}]{center1,  }\item[{const float $\ast$}]{half\+Extents }\end{DoxyParamCaption})}
+
+
+
+Sphere A\+A\+BB collider collision detection algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em center} & Center of the sphere collider \\
+\hline
+{\em radius} & Radius of the sphere collider \\
+\hline
+{\em center1} & Center of the A\+A\+BB collider \\
+\hline
+{\em half\+Extents} & Half Extents of the A\+A\+BB collider \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true The sphere and A\+A\+BB colliders collide 
+
+false The sphere and A\+A\+BB colliders do not collide 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_collision_util_a058033b88ee093be57383c8e83cd11af}\label{namespacemtrx_1_1_collision_util_a058033b88ee093be57383c8e83cd11af}} 
+\index{mtrx::CollisionUtil@{mtrx::CollisionUtil}!SphereCapsuleCollision@{SphereCapsuleCollision}}
+\index{SphereCapsuleCollision@{SphereCapsuleCollision}!mtrx::CollisionUtil@{mtrx::CollisionUtil}}
+\doxysubsubsection{\texorpdfstring{SphereCapsuleCollision()}{SphereCapsuleCollision()}}
+{\footnotesize\ttfamily bool mtrx\+::\+Collision\+Util\+::\+Sphere\+Capsule\+Collision (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{center1,  }\item[{const glm\+::vec3 \&}]{center2,  }\item[{float}]{radius1,  }\item[{float}]{radius2,  }\item[{const glm\+::vec3 \&}]{A,  }\item[{const glm\+::vec3 \&}]{B }\end{DoxyParamCaption})}
+
+
+
+Sphere Capsule collision detection algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em center1} & Center of the sphere collider \\
+\hline
+{\em center2} & Center of the capsule collider \\
+\hline
+{\em radius1} & Radius of the sphere collider \\
+\hline
+{\em radius2} & Radius of the capsule collider \\
+\hline
+{\em A} & Topmost sphere center for capsule collider \\
+\hline
+{\em B} & Bottommost sphere center for capsule collider \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true The sphere and capsule colliders collide 
+
+false The sphere and capsule colliders do not collide 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_collision_util_a5bad6fd1b06278cf9d1dda3b2e39de83}\label{namespacemtrx_1_1_collision_util_a5bad6fd1b06278cf9d1dda3b2e39de83}} 
+\index{mtrx::CollisionUtil@{mtrx::CollisionUtil}!SphereOOBBCollision@{SphereOOBBCollision}}
+\index{SphereOOBBCollision@{SphereOOBBCollision}!mtrx::CollisionUtil@{mtrx::CollisionUtil}}
+\doxysubsubsection{\texorpdfstring{SphereOOBBCollision()}{SphereOOBBCollision()}}
+{\footnotesize\ttfamily bool mtrx\+::\+Collision\+Util\+::\+Sphere\+O\+O\+B\+B\+Collision (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{center,  }\item[{const float}]{radius,  }\item[{const glm\+::vec3 \&}]{center1,  }\item[{const glm\+::vec3 $\ast$}]{axes,  }\item[{const float $\ast$}]{half\+Extents }\end{DoxyParamCaption})}
+
+
+
+Sphere O\+O\+BB collider collision detection algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em center} & Center of the sphere collider \\
+\hline
+{\em radius} & Radius of the sphere collider \\
+\hline
+{\em center1} & Center of the O\+O\+BB collider \\
+\hline
+{\em axes} & Axes that define the O\+O\+BB world \\
+\hline
+{\em half\+Extents} & Half extent values of O\+O\+BB colliders \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Sphere and O\+O\+BB colliders collide 
+
+false Sphere and O\+O\+BB colliders do not collide 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_collision_util_a25655a61b608ba45dbd96e1bbdcbcb37}\label{namespacemtrx_1_1_collision_util_a25655a61b608ba45dbd96e1bbdcbcb37}} 
+\index{mtrx::CollisionUtil@{mtrx::CollisionUtil}!SphereSphereCollision@{SphereSphereCollision}}
+\index{SphereSphereCollision@{SphereSphereCollision}!mtrx::CollisionUtil@{mtrx::CollisionUtil}}
+\doxysubsubsection{\texorpdfstring{SphereSphereCollision()}{SphereSphereCollision()}}
+{\footnotesize\ttfamily bool mtrx\+::\+Collision\+Util\+::\+Sphere\+Sphere\+Collision (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{center1,  }\item[{const glm\+::vec3 \&}]{center2,  }\item[{float}]{radius1,  }\item[{float}]{radius2 }\end{DoxyParamCaption})}
+
+
+
+Sphere Sphere collision detection algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em center1} & Center of the first sphere collider \\
+\hline
+{\em center2} & Center of the second sphere collider \\
+\hline
+{\em radius1} & Radius of the first sphere collider \\
+\hline
+{\em radius2} & Radius of the second sphere collider \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true The 2 sphere colliders collide 
+
+false The 2 sphere colliders do not collide 
+\end{DoxyReturn}

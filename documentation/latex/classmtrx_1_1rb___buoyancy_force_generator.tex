@@ -1,0 +1,112 @@
+\hypertarget{classmtrx_1_1rb___buoyancy_force_generator}{}\doxysection{mtrx\+::rb\+\_\+\+Buoyancy\+Force\+Generator Class Reference}
+\label{classmtrx_1_1rb___buoyancy_force_generator}\index{mtrx::rb\_BuoyancyForceGenerator@{mtrx::rb\_BuoyancyForceGenerator}}
+
+
+Implementation of a buoyancy force generator for rigidbodies.  
+
+
+
+
+{\ttfamily \#include $<$rb\+\_\+\+Buoyancy\+Force\+Generator.\+h$>$}
+
+Inheritance diagram for mtrx\+::rb\+\_\+\+Buoyancy\+Force\+Generator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmtrx_1_1rb___buoyancy_force_generator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmtrx_1_1rb___buoyancy_force_generator_ac864ddb60ee859773232d6aa03510dd6}{rb\+\_\+\+Buoyancy\+Force\+Generator}} (const glm\+::vec3 \&gravity, float volume\+Body, float body\+Half\+Extent, float liquid\+Height=0.f, float density=1000.f)
+\begin{DoxyCompactList}\small\item\em Construct a new rb Buoyancy\+Force\+Generator object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmtrx_1_1rb___buoyancy_force_generator_aba306d9176ce0e7601a5d3a0c8b6813c}{$\sim$rb\+\_\+\+Buoyancy\+Force\+Generator}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the rb Buoyancy\+Force\+Generator object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmtrx_1_1rb___buoyancy_force_generator_a8b9cfb2fc7a59337a698aed194574148}{Update\+Forces}} (\mbox{\hyperlink{classmtrx_1_1_rigidbody}{Rigidbody}} $\ast$rb, float delta\+Time) override
+\begin{DoxyCompactList}\small\item\em The implementation of the buoyancy force. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1rb___buoyancy_force_generator_a1efedba97c95abeb31992970b7d0ee42}\label{classmtrx_1_1rb___buoyancy_force_generator_a1efedba97c95abeb31992970b7d0ee42}} 
+float {\bfseries liquid\+Density}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1rb___buoyancy_force_generator_a1a546d68550e78b3bc5b6e56c3c18f7d}\label{classmtrx_1_1rb___buoyancy_force_generator_a1a546d68550e78b3bc5b6e56c3c18f7d}} 
+float {\bfseries liquid\+Level}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1rb___buoyancy_force_generator_abb6922fa3f90c12d247dcfa98fe8d3a8}\label{classmtrx_1_1rb___buoyancy_force_generator_abb6922fa3f90c12d247dcfa98fe8d3a8}} 
+float {\bfseries body\+Half\+Extent}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1rb___buoyancy_force_generator_a9143b9fa951ed2c4dfc6c9e8ef1d9003}\label{classmtrx_1_1rb___buoyancy_force_generator_a9143b9fa951ed2c4dfc6c9e8ef1d9003}} 
+float {\bfseries volume\+Body}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1rb___buoyancy_force_generator_ac52ccff59d368e38ec4af535ee177b03}\label{classmtrx_1_1rb___buoyancy_force_generator_ac52ccff59d368e38ec4af535ee177b03}} 
+glm\+::vec3 {\bfseries gravitational\+Acceleration}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1rb___buoyancy_force_generator_ad3d63f6f2781fa02aa16da43befc413d}\label{classmtrx_1_1rb___buoyancy_force_generator_ad3d63f6f2781fa02aa16da43befc413d}} 
+glm\+::vec3 {\bfseries center\+Of\+Buoyancy}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of a buoyancy force generator for rigidbodies. 
+
+This force generator generally assumes that the objects behaves more like a A\+A\+BB We do not calculate the point of collision with the liquid plane and how much of the object is submerged if it is not perpendicular to the liquid plane 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmtrx_1_1rb___buoyancy_force_generator_ac864ddb60ee859773232d6aa03510dd6}\label{classmtrx_1_1rb___buoyancy_force_generator_ac864ddb60ee859773232d6aa03510dd6}} 
+\index{mtrx::rb\_BuoyancyForceGenerator@{mtrx::rb\_BuoyancyForceGenerator}!rb\_BuoyancyForceGenerator@{rb\_BuoyancyForceGenerator}}
+\index{rb\_BuoyancyForceGenerator@{rb\_BuoyancyForceGenerator}!mtrx::rb\_BuoyancyForceGenerator@{mtrx::rb\_BuoyancyForceGenerator}}
+\doxysubsubsection{\texorpdfstring{rb\_BuoyancyForceGenerator()}{rb\_BuoyancyForceGenerator()}}
+{\footnotesize\ttfamily mtrx\+::rb\+\_\+\+Buoyancy\+Force\+Generator\+::rb\+\_\+\+Buoyancy\+Force\+Generator (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{gravity,  }\item[{float}]{volume\+Body,  }\item[{float}]{body\+Half\+Extent,  }\item[{float}]{liquid\+Height = {\ttfamily 0.f},  }\item[{float}]{density = {\ttfamily 1000.f} }\end{DoxyParamCaption})}
+
+
+
+Construct a new rb Buoyancy\+Force\+Generator object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gravity} & The gravitational acceleration used by the generator \\
+\hline
+{\em volume\+Body} & The volume of the body \\
+\hline
+{\em body\+Half\+Extent} & The half extent of the body \\
+\hline
+{\em liquid\+Height} & The height of the liquid that would represent the liquid\textquotesingle{}s plane \\
+\hline
+{\em density} & The density of the liquid \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1rb___buoyancy_force_generator_aba306d9176ce0e7601a5d3a0c8b6813c}\label{classmtrx_1_1rb___buoyancy_force_generator_aba306d9176ce0e7601a5d3a0c8b6813c}} 
+\index{mtrx::rb\_BuoyancyForceGenerator@{mtrx::rb\_BuoyancyForceGenerator}!````~rb\_BuoyancyForceGenerator@{$\sim$rb\_BuoyancyForceGenerator}}
+\index{````~rb\_BuoyancyForceGenerator@{$\sim$rb\_BuoyancyForceGenerator}!mtrx::rb\_BuoyancyForceGenerator@{mtrx::rb\_BuoyancyForceGenerator}}
+\doxysubsubsection{\texorpdfstring{$\sim$rb\_BuoyancyForceGenerator()}{~rb\_BuoyancyForceGenerator()}}
+{\footnotesize\ttfamily mtrx\+::rb\+\_\+\+Buoyancy\+Force\+Generator\+::$\sim$rb\+\_\+\+Buoyancy\+Force\+Generator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the rb Buoyancy\+Force\+Generator object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmtrx_1_1rb___buoyancy_force_generator_a8b9cfb2fc7a59337a698aed194574148}\label{classmtrx_1_1rb___buoyancy_force_generator_a8b9cfb2fc7a59337a698aed194574148}} 
+\index{mtrx::rb\_BuoyancyForceGenerator@{mtrx::rb\_BuoyancyForceGenerator}!UpdateForces@{UpdateForces}}
+\index{UpdateForces@{UpdateForces}!mtrx::rb\_BuoyancyForceGenerator@{mtrx::rb\_BuoyancyForceGenerator}}
+\doxysubsubsection{\texorpdfstring{UpdateForces()}{UpdateForces()}}
+{\footnotesize\ttfamily virtual void mtrx\+::rb\+\_\+\+Buoyancy\+Force\+Generator\+::\+Update\+Forces (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmtrx_1_1_rigidbody}{Rigidbody}} $\ast$}]{rb,  }\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+The implementation of the buoyancy force. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rb} & The rigidbody to apply the buoyancy force \\
+\hline
+{\em delta\+Time} & The time elapsed since the last frame \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmtrx_1_1_i_rigidbody_force_generator_aa429c1a254391fa5bc36c77dbe3105bc}{mtrx\+::\+I\+Rigidbody\+Force\+Generator}}.
+

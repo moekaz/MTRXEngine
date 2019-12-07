@@ -10,7 +10,7 @@
 namespace mtrx
 {
 	/**
-	 * The collision detection system of the engine
+	 * @brief The collision detection system of the engine
 	 * 
 	 */
 	class CollisionSystem

@@ -1,0 +1,106 @@
+\hypertarget{classmtrx_1_1_rigidbody_manager}{}\doxysection{mtrx\+::Rigidbody\+Manager Class Reference}
+\label{classmtrx_1_1_rigidbody_manager}\index{mtrx::RigidbodyManager@{mtrx::RigidbodyManager}}
+
+
+Manager of rigidbodies.  
+
+
+
+
+{\ttfamily \#include $<$Rigidbody\+Manager.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmtrx_1_1_rigidbody_manager_ab52ca00665fd9d16f573fa88bc8afdba}{Rigidbody\+Manager}} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classmtrx_1_1_rigidbody}{Rigidbody}} Manager object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmtrx_1_1_rigidbody_manager_ade8662fe917c2ac0f9f3f2ad476c6784}{$\sim$\+Rigidbody\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classmtrx_1_1_rigidbody}{Rigidbody}} Manager object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_rigidbody_manager_a002b709cb161b8fbcdc268c8e46b03b9}{Integrate}} (float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Integrate all entities of the game world. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_rigidbody_manager_aee4db6da13a963c3300ea0865d70be24}{Integrate\+Rigidbodies}} (float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Integrate rigidbodies. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_rigidbody_manager_a41d0d06e1f2043c84870565ab36b5e9c}{Update\+Forces}} (float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Update the forces applied to the rigidbodies by updating the force generators. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_manager_a0c2383c2960f530355f7460155e73c37}\label{classmtrx_1_1_rigidbody_manager_a0c2383c2960f530355f7460155e73c37}} 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{classmtrx_1_1_rigidbody}{Rigidbody}} $\ast$, \mbox{\hyperlink{classmtrx_1_1rb___force_generation_registry}{rb\+\_\+\+Force\+Generation\+Registry}} $>$ {\bfseries rigidbody\+Registry}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manager of rigidbodies. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_manager_ab52ca00665fd9d16f573fa88bc8afdba}\label{classmtrx_1_1_rigidbody_manager_ab52ca00665fd9d16f573fa88bc8afdba}} 
+\index{mtrx::RigidbodyManager@{mtrx::RigidbodyManager}!RigidbodyManager@{RigidbodyManager}}
+\index{RigidbodyManager@{RigidbodyManager}!mtrx::RigidbodyManager@{mtrx::RigidbodyManager}}
+\doxysubsubsection{\texorpdfstring{RigidbodyManager()}{RigidbodyManager()}}
+{\footnotesize\ttfamily mtrx\+::\+Rigidbody\+Manager\+::\+Rigidbody\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construct a new \mbox{\hyperlink{classmtrx_1_1_rigidbody}{Rigidbody}} Manager object. 
+
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_manager_ade8662fe917c2ac0f9f3f2ad476c6784}\label{classmtrx_1_1_rigidbody_manager_ade8662fe917c2ac0f9f3f2ad476c6784}} 
+\index{mtrx::RigidbodyManager@{mtrx::RigidbodyManager}!````~RigidbodyManager@{$\sim$RigidbodyManager}}
+\index{````~RigidbodyManager@{$\sim$RigidbodyManager}!mtrx::RigidbodyManager@{mtrx::RigidbodyManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$RigidbodyManager()}{~RigidbodyManager()}}
+{\footnotesize\ttfamily mtrx\+::\+Rigidbody\+Manager\+::$\sim$\+Rigidbody\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the \mbox{\hyperlink{classmtrx_1_1_rigidbody}{Rigidbody}} Manager object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_manager_a002b709cb161b8fbcdc268c8e46b03b9}\label{classmtrx_1_1_rigidbody_manager_a002b709cb161b8fbcdc268c8e46b03b9}} 
+\index{mtrx::RigidbodyManager@{mtrx::RigidbodyManager}!Integrate@{Integrate}}
+\index{Integrate@{Integrate}!mtrx::RigidbodyManager@{mtrx::RigidbodyManager}}
+\doxysubsubsection{\texorpdfstring{Integrate()}{Integrate()}}
+{\footnotesize\ttfamily void mtrx\+::\+Rigidbody\+Manager\+::\+Integrate (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})}
+
+
+
+Integrate all entities of the game world. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The time elapsed between frames \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_manager_aee4db6da13a963c3300ea0865d70be24}\label{classmtrx_1_1_rigidbody_manager_aee4db6da13a963c3300ea0865d70be24}} 
+\index{mtrx::RigidbodyManager@{mtrx::RigidbodyManager}!IntegrateRigidbodies@{IntegrateRigidbodies}}
+\index{IntegrateRigidbodies@{IntegrateRigidbodies}!mtrx::RigidbodyManager@{mtrx::RigidbodyManager}}
+\doxysubsubsection{\texorpdfstring{IntegrateRigidbodies()}{IntegrateRigidbodies()}}
+{\footnotesize\ttfamily void mtrx\+::\+Rigidbody\+Manager\+::\+Integrate\+Rigidbodies (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})}
+
+
+
+Integrate rigidbodies. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The time elapsed between frames \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_manager_a41d0d06e1f2043c84870565ab36b5e9c}\label{classmtrx_1_1_rigidbody_manager_a41d0d06e1f2043c84870565ab36b5e9c}} 
+\index{mtrx::RigidbodyManager@{mtrx::RigidbodyManager}!UpdateForces@{UpdateForces}}
+\index{UpdateForces@{UpdateForces}!mtrx::RigidbodyManager@{mtrx::RigidbodyManager}}
+\doxysubsubsection{\texorpdfstring{UpdateForces()}{UpdateForces()}}
+{\footnotesize\ttfamily void mtrx\+::\+Rigidbody\+Manager\+::\+Update\+Forces (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})}
+
+
+
+Update the forces applied to the rigidbodies by updating the force generators. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The time elapsed between frames \\
+\hline
+\end{DoxyParams}

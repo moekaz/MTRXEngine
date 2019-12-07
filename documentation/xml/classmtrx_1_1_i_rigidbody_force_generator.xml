@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="classmtrx_1_1_i_rigidbody_force_generator" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>mtrx::IRigidbodyForceGenerator</compoundname>
+    <derivedcompoundref refid="classmtrx_1_1rb___anchored_spring_force_generator" prot="public" virt="non-virtual">mtrx::rb_AnchoredSpringForceGenerator</derivedcompoundref>
+    <derivedcompoundref refid="classmtrx_1_1rb___buoyancy_force_generator" prot="public" virt="non-virtual">mtrx::rb_BuoyancyForceGenerator</derivedcompoundref>
+    <derivedcompoundref refid="classmtrx_1_1rb___default_spring_force_generator" prot="public" virt="non-virtual">mtrx::rb_DefaultSpringForceGenerator</derivedcompoundref>
+    <derivedcompoundref refid="classmtrx_1_1rb___drag_force_generator" prot="public" virt="non-virtual">mtrx::rb_DragForceGenerator</derivedcompoundref>
+    <derivedcompoundref refid="classmtrx_1_1rb___gravity_force_generator" prot="public" virt="non-virtual">mtrx::rb_GravityForceGenerator</derivedcompoundref>
+    <derivedcompoundref refid="classmtrx_1_1rb___stiff_spring_force_generator" prot="public" virt="non-virtual">mtrx::rb_StiffSpringForceGenerator</derivedcompoundref>
+    <includes refid="_i_rigidbody_force_generator_8h" local="no">IRigidbodyForceGenerator.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmtrx_1_1_i_rigidbody_force_generator_1aa429c1a254391fa5bc36c77dbe3105bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void mtrx::IRigidbodyForceGenerator::UpdateForces</definition>
+        <argsstring>(Rigidbody *rb, float deltaTime)=0</argsstring>
+        <name>UpdateForces</name>
+        <reimplementedby refid="classmtrx_1_1rb___gravity_force_generator_1a979205b2435decf38d4b495fbce01a48">UpdateForces</reimplementedby>
+        <reimplementedby refid="classmtrx_1_1rb___buoyancy_force_generator_1a8b9cfb2fc7a59337a698aed194574148">UpdateForces</reimplementedby>
+        <param>
+          <type><ref refid="classmtrx_1_1_rigidbody" kindref="compound">Rigidbody</ref> *</type>
+          <declname>rb</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+<para>Apply a certain force onto the given rigidbodies. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rigidbody we want to apply the force onto </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>deltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time elapsed since the previous frame </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/RigidbodyGenerators/IRigidbodyForceGenerator.h" line="21" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Force generation interface used to apply forces on rigidbodies. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>mtrx::rb_BuoyancyForceGenerator</label>
+        <link refid="classmtrx_1_1rb___buoyancy_force_generator"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>mtrx::rb_GravityForceGenerator</label>
+        <link refid="classmtrx_1_1rb___gravity_force_generator"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>mtrx::IRigidbodyForceGenerator</label>
+        <link refid="classmtrx_1_1_i_rigidbody_force_generator"/>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/RigidbodyGenerators/IRigidbodyForceGenerator.h" line="12" column="1" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/RigidbodyGenerators/IRigidbodyForceGenerator.h" bodystart="11" bodyend="22"/>
+    <listofallmembers>
+      <member refid="classmtrx_1_1_i_rigidbody_force_generator_1aa429c1a254391fa5bc36c77dbe3105bc" prot="public" virt="pure-virtual"><scope>mtrx::IRigidbodyForceGenerator</scope><name>UpdateForces</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -8,7 +8,7 @@
 namespace mtrx
 {
 	/**
-	 * Implementation of Capsule colliders
+	 * @brief Implementation of Capsule colliders
 	 * 
 	 */
 	class CapsuleCollider : public Collider

@@ -1,0 +1,345 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}M\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}T\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}R\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}X\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Engine}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Author\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Description\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Book Sources}{1}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Fixing timesteps\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:}{1}{section.1.4}%
+\contentsline {section}{\numberline {1.5}G\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}J\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}K implementation sources\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:}{2}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Segment-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Segment minimum distance implementation\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:}{2}{section.1.6}%
+\contentsline {section}{\numberline {1.7}T\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}R\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}E\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}L\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}LO}{2}{section.1.7}%
+\contentsline {chapter}{\numberline {2}Namespace Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Namespace List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Hierarchical Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Class Hierarchy}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Class Index}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Class List}{7}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Namespace Documentation}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}mtrx Namespace Reference}{9}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Detailed Description}{11}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Function Documentation}{11}{subsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.1}GenerateCuboidIT()}{11}{subsubsection.5.1.2.1}%
+\contentsline {subsubsection}{\numberline {5.1.2.2}GenerateSphereIT()}{11}{subsubsection.5.1.2.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.3}RandomInt()}{12}{subsubsection.5.1.2.3}%
+\contentsline {section}{\numberline {5.2}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Collider\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Detection\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Util Namespace Reference}{12}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Detailed Description}{13}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Function Documentation}{13}{subsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.2.1}AABBCollisionOptions()}{13}{subsubsection.5.2.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2.2}CapsuleCollisionOptions()}{13}{subsubsection.5.2.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.2.3}Collide()}{14}{subsubsection.5.2.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.2.4}ConvexShapeCollisionOptions()}{14}{subsubsection.5.2.2.4}%
+\contentsline {subsubsection}{\numberline {5.2.2.5}OOBBCollisionOptions()}{15}{subsubsection.5.2.2.5}%
+\contentsline {subsubsection}{\numberline {5.2.2.6}SphereCollisionOptions()}{15}{subsubsection.5.2.2.6}%
+\contentsline {section}{\numberline {5.3}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Collision\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Util Namespace Reference}{16}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Detailed Description}{17}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Function Documentation}{17}{subsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.2.1}AABBCollision()}{17}{subsubsection.5.3.2.1}%
+\contentsline {subsubsection}{\numberline {5.3.2.2}AABBOOBBCollision()}{18}{subsubsection.5.3.2.2}%
+\contentsline {subsubsection}{\numberline {5.3.2.3}CapsuleAABBCollision()}{18}{subsubsection.5.3.2.3}%
+\contentsline {subsubsection}{\numberline {5.3.2.4}CapsuleCapsuleCollision()}{19}{subsubsection.5.3.2.4}%
+\contentsline {subsubsection}{\numberline {5.3.2.5}CapsuleOOBBCollision()}{19}{subsubsection.5.3.2.5}%
+\contentsline {subsubsection}{\numberline {5.3.2.6}ConvexShapeCapsuleCollision()}{20}{subsubsection.5.3.2.6}%
+\contentsline {subsubsection}{\numberline {5.3.2.7}ConvexShapeCollision()}{21}{subsubsection.5.3.2.7}%
+\contentsline {subsubsection}{\numberline {5.3.2.8}ConvexShapeSphereCollision()}{22}{subsubsection.5.3.2.8}%
+\contentsline {subsubsection}{\numberline {5.3.2.9}OOBBCollision()}{22}{subsubsection.5.3.2.9}%
+\contentsline {subsubsection}{\numberline {5.3.2.10}SphereAABBCollision()}{23}{subsubsection.5.3.2.10}%
+\contentsline {subsubsection}{\numberline {5.3.2.11}SphereCapsuleCollision()}{24}{subsubsection.5.3.2.11}%
+\contentsline {subsubsection}{\numberline {5.3.2.12}SphereOOBBCollision()}{24}{subsubsection.5.3.2.12}%
+\contentsline {subsubsection}{\numberline {5.3.2.13}SphereSphereCollision()}{26}{subsubsection.5.3.2.13}%
+\contentsline {section}{\numberline {5.4}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Physics\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Util Namespace Reference}{26}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Detailed Description}{27}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Function Documentation}{27}{subsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.2.1}Ease()}{28}{subsubsection.5.4.2.1}%
+\contentsline {subsubsection}{\numberline {5.4.2.2}Lerp()}{28}{subsubsection.5.4.2.2}%
+\contentsline {subsubsection}{\numberline {5.4.2.3}MinDistanceSquaredLineSegmentRay()}{28}{subsubsection.5.4.2.3}%
+\contentsline {subsubsection}{\numberline {5.4.2.4}MinDistanceSquaredLineSegmentTriangle()}{30}{subsubsection.5.4.2.4}%
+\contentsline {subsubsection}{\numberline {5.4.2.5}MinDistanceSquaredPointAABB()}{30}{subsubsection.5.4.2.5}%
+\contentsline {subsubsection}{\numberline {5.4.2.6}MinDistanceSquaredPointRay()}{31}{subsubsection.5.4.2.6}%
+\contentsline {subsubsection}{\numberline {5.4.2.7}MinDistanceSquaredPointSegment()}{31}{subsubsection.5.4.2.7}%
+\contentsline {subsubsection}{\numberline {5.4.2.8}MinDistanceSquaredPointTriangle()}{32}{subsubsection.5.4.2.8}%
+\contentsline {subsubsection}{\numberline {5.4.2.9}MinDistanceSquaredTwoSegments()}{32}{subsubsection.5.4.2.9}%
+\contentsline {subsubsection}{\numberline {5.4.2.10}MinDistanceTwoLines()}{33}{subsubsection.5.4.2.10}%
+\contentsline {subsubsection}{\numberline {5.4.2.11}Slerp()}{33}{subsubsection.5.4.2.11}%
+\contentsline {subsubsection}{\numberline {5.4.2.12}TriangulateConvexShape()}{34}{subsubsection.5.4.2.12}%
+\contentsline {subsubsection}{\numberline {5.4.2.13}TripleCross()}{34}{subsubsection.5.4.2.13}%
+\contentsline {section}{\numberline {5.5}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Raycast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Collision\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Util Namespace Reference}{35}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Detailed Description}{35}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Function Documentation}{35}{subsection.5.5.2}%
+\contentsline {subsubsection}{\numberline {5.5.2.1}RayBoxCollision()}{35}{subsubsection.5.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.5.2.2}RayCapsuleCollision()}{36}{subsubsection.5.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.5.2.3}RaycastFiltered()}{37}{subsubsection.5.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.5.2.4}RaycastUnfiltered()}{37}{subsubsection.5.5.2.4}%
+\contentsline {subsubsection}{\numberline {5.5.2.5}RaySphereCollision()}{37}{subsubsection.5.5.2.5}%
+\contentsline {chapter}{\numberline {6}Class Documentation}{39}{chapter.6}%
+\contentsline {section}{\numberline {6.1}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}B\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}B\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Collider Class Reference}{39}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Detailed Description}{40}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Constructor \& Destructor Documentation}{40}{subsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}AABBCollider()}{40}{subsubsection.6.1.2.1}%
+\contentsline {subsubsection}{\numberline {6.1.2.2}$\sim $AABBCollider()}{40}{subsubsection.6.1.2.2}%
+\contentsline {subsection}{\numberline {6.1.3}Member Function Documentation}{40}{subsection.6.1.3}%
+\contentsline {subsubsection}{\numberline {6.1.3.1}GetAxes()}{41}{subsubsection.6.1.3.1}%
+\contentsline {subsubsection}{\numberline {6.1.3.2}GetHalfExtents()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{41}{subsubsection.6.1.3.2}%
+\contentsline {subsubsection}{\numberline {6.1.3.3}GetHalfExtents()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{41}{subsubsection.6.1.3.3}%
+\contentsline {subsubsection}{\numberline {6.1.3.4}GetSize()}{41}{subsubsection.6.1.3.4}%
+\contentsline {subsubsection}{\numberline {6.1.3.5}RaycastCollision()}{41}{subsubsection.6.1.3.5}%
+\contentsline {subsubsection}{\numberline {6.1.3.6}SetOrientation()}{42}{subsubsection.6.1.3.6}%
+\contentsline {subsubsection}{\numberline {6.1.3.7}SetScale()}{42}{subsubsection.6.1.3.7}%
+\contentsline {section}{\numberline {6.2}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Body Class Reference}{43}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Detailed Description}{44}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Constructor \& Destructor Documentation}{44}{subsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.2.1}Body()}{44}{subsubsection.6.2.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2.2}$\sim $Body()}{45}{subsubsection.6.2.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Member Function Documentation}{45}{subsection.6.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.3.1}AddForce()}{45}{subsubsection.6.2.3.1}%
+\contentsline {subsubsection}{\numberline {6.2.3.2}ClearAccumulators()}{45}{subsubsection.6.2.3.2}%
+\contentsline {subsubsection}{\numberline {6.2.3.3}GetAcceleration()}{45}{subsubsection.6.2.3.3}%
+\contentsline {subsubsection}{\numberline {6.2.3.4}GetAccumForces()}{46}{subsubsection.6.2.3.4}%
+\contentsline {subsubsection}{\numberline {6.2.3.5}GetDamping()}{46}{subsubsection.6.2.3.5}%
+\contentsline {subsubsection}{\numberline {6.2.3.6}GetInverseMass()}{46}{subsubsection.6.2.3.6}%
+\contentsline {subsubsection}{\numberline {6.2.3.7}GetIsInfiniteMass()}{46}{subsubsection.6.2.3.7}%
+\contentsline {subsubsection}{\numberline {6.2.3.8}GetMass()}{47}{subsubsection.6.2.3.8}%
+\contentsline {subsubsection}{\numberline {6.2.3.9}GetOrientation()}{47}{subsubsection.6.2.3.9}%
+\contentsline {subsubsection}{\numberline {6.2.3.10}GetPosition()}{47}{subsubsection.6.2.3.10}%
+\contentsline {subsubsection}{\numberline {6.2.3.11}GetTransform()}{47}{subsubsection.6.2.3.11}%
+\contentsline {subsubsection}{\numberline {6.2.3.12}GetVelocity()}{48}{subsubsection.6.2.3.12}%
+\contentsline {subsubsection}{\numberline {6.2.3.13}Integrate()}{48}{subsubsection.6.2.3.13}%
+\contentsline {subsubsection}{\numberline {6.2.3.14}SetAcceleration()}{48}{subsubsection.6.2.3.14}%
+\contentsline {subsubsection}{\numberline {6.2.3.15}SetInverseMass()}{48}{subsubsection.6.2.3.15}%
+\contentsline {subsubsection}{\numberline {6.2.3.16}SetLinearDamping()}{49}{subsubsection.6.2.3.16}%
+\contentsline {subsubsection}{\numberline {6.2.3.17}SetMass()}{49}{subsubsection.6.2.3.17}%
+\contentsline {subsubsection}{\numberline {6.2.3.18}SetPosition()}{49}{subsubsection.6.2.3.18}%
+\contentsline {subsubsection}{\numberline {6.2.3.19}SetVelocity()}{50}{subsubsection.6.2.3.19}%
+\contentsline {section}{\numberline {6.3}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::B\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}V\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}H\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node$<$ Bounding\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Volume $>$ Class Template Reference}{50}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Detailed Description}{50}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Constructor \& Destructor Documentation}{51}{subsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.1}BVHNode()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{51}{subsubsection.6.3.2.1}%
+\contentsline {subsubsection}{\numberline {6.3.2.2}BVHNode()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{51}{subsubsection.6.3.2.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.3}$\sim $BVHNode()}{51}{subsubsection.6.3.2.3}%
+\contentsline {subsection}{\numberline {6.3.3}Member Function Documentation}{52}{subsection.6.3.3}%
+\contentsline {subsubsection}{\numberline {6.3.3.1}DescendA()}{52}{subsubsection.6.3.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.3.2}GetPotentialContacts()}{52}{subsubsection.6.3.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.3.3}Insert()}{52}{subsubsection.6.3.3.3}%
+\contentsline {subsubsection}{\numberline {6.3.3.4}IsCollision()}{53}{subsubsection.6.3.3.4}%
+\contentsline {subsubsection}{\numberline {6.3.3.5}IsLeaf()}{53}{subsubsection.6.3.3.5}%
+\contentsline {subsubsection}{\numberline {6.3.3.6}RecalculateBoundingVolume()}{53}{subsubsection.6.3.3.6}%
+\contentsline {section}{\numberline {6.4}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Capsule\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Collider Class Reference}{54}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Detailed Description}{55}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Constructor \& Destructor Documentation}{55}{subsection.6.4.2}%
+\contentsline {subsubsection}{\numberline {6.4.2.1}CapsuleCollider()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{55}{subsubsection.6.4.2.1}%
+\contentsline {subsubsection}{\numberline {6.4.2.2}CapsuleCollider()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{55}{subsubsection.6.4.2.2}%
+\contentsline {subsubsection}{\numberline {6.4.2.3}$\sim $CapsuleCollider()}{56}{subsubsection.6.4.2.3}%
+\contentsline {subsection}{\numberline {6.4.3}Member Function Documentation}{56}{subsection.6.4.3}%
+\contentsline {subsubsection}{\numberline {6.4.3.1}GetHeight()}{56}{subsubsection.6.4.3.1}%
+\contentsline {subsubsection}{\numberline {6.4.3.2}GetRadii()}{56}{subsubsection.6.4.3.2}%
+\contentsline {subsubsection}{\numberline {6.4.3.3}RaycastCollision()}{56}{subsubsection.6.4.3.3}%
+\contentsline {subsubsection}{\numberline {6.4.3.4}SetHeight()}{57}{subsubsection.6.4.3.4}%
+\contentsline {subsubsection}{\numberline {6.4.3.5}SetOrientation()}{57}{subsubsection.6.4.3.5}%
+\contentsline {subsubsection}{\numberline {6.4.3.6}SetPosition()}{57}{subsubsection.6.4.3.6}%
+\contentsline {subsubsection}{\numberline {6.4.3.7}SetRadii()}{58}{subsubsection.6.4.3.7}%
+\contentsline {subsubsection}{\numberline {6.4.3.8}SetScale()}{58}{subsubsection.6.4.3.8}%
+\contentsline {section}{\numberline {6.5}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Collider Class Reference}{58}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Detailed Description}{60}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Constructor \& Destructor Documentation}{60}{subsection.6.5.2}%
+\contentsline {subsubsection}{\numberline {6.5.2.1}Collider()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{60}{subsubsection.6.5.2.1}%
+\contentsline {subsubsection}{\numberline {6.5.2.2}Collider()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{60}{subsubsection.6.5.2.2}%
+\contentsline {subsubsection}{\numberline {6.5.2.3}$\sim $Collider()}{61}{subsubsection.6.5.2.3}%
+\contentsline {subsection}{\numberline {6.5.3}Member Function Documentation}{61}{subsection.6.5.3}%
+\contentsline {subsubsection}{\numberline {6.5.3.1}CheckCollision()}{61}{subsubsection.6.5.3.1}%
+\contentsline {subsubsection}{\numberline {6.5.3.2}GetColliderId()}{61}{subsubsection.6.5.3.2}%
+\contentsline {subsubsection}{\numberline {6.5.3.3}GetColliderType()}{62}{subsubsection.6.5.3.3}%
+\contentsline {subsubsection}{\numberline {6.5.3.4}GetForward()}{62}{subsubsection.6.5.3.4}%
+\contentsline {subsubsection}{\numberline {6.5.3.5}GetOrientation()}{62}{subsubsection.6.5.3.5}%
+\contentsline {subsubsection}{\numberline {6.5.3.6}GetPosition()}{62}{subsubsection.6.5.3.6}%
+\contentsline {subsubsection}{\numberline {6.5.3.7}GetScale()}{63}{subsubsection.6.5.3.7}%
+\contentsline {subsubsection}{\numberline {6.5.3.8}GetSide()}{63}{subsubsection.6.5.3.8}%
+\contentsline {subsubsection}{\numberline {6.5.3.9}GetUp()}{63}{subsubsection.6.5.3.9}%
+\contentsline {subsubsection}{\numberline {6.5.3.10}IsConvex()}{63}{subsubsection.6.5.3.10}%
+\contentsline {subsubsection}{\numberline {6.5.3.11}RaycastCollision()}{63}{subsubsection.6.5.3.11}%
+\contentsline {subsubsection}{\numberline {6.5.3.12}SetOrientation()}{64}{subsubsection.6.5.3.12}%
+\contentsline {subsubsection}{\numberline {6.5.3.13}SetPosition()}{64}{subsubsection.6.5.3.13}%
+\contentsline {subsubsection}{\numberline {6.5.3.14}SetScale()}{65}{subsubsection.6.5.3.14}%
+\contentsline {section}{\numberline {6.6}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Collision\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}System Class Reference}{65}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Detailed Description}{65}{subsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6.2}Constructor \& Destructor Documentation}{65}{subsection.6.6.2}%
+\contentsline {subsubsection}{\numberline {6.6.2.1}CollisionSystem()}{65}{subsubsection.6.6.2.1}%
+\contentsline {section}{\numberline {6.7}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Convex\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shape\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Collider Class Reference}{66}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Detailed Description}{67}{subsection.6.7.1}%
+\contentsline {subsection}{\numberline {6.7.2}Constructor \& Destructor Documentation}{67}{subsection.6.7.2}%
+\contentsline {subsubsection}{\numberline {6.7.2.1}ConvexShapeCollider()\hspace {0.1cm}{\footnotesize \ttfamily [1/4]}}{67}{subsubsection.6.7.2.1}%
+\contentsline {subsubsection}{\numberline {6.7.2.2}ConvexShapeCollider()\hspace {0.1cm}{\footnotesize \ttfamily [2/4]}}{67}{subsubsection.6.7.2.2}%
+\contentsline {subsubsection}{\numberline {6.7.2.3}ConvexShapeCollider()\hspace {0.1cm}{\footnotesize \ttfamily [3/4]}}{68}{subsubsection.6.7.2.3}%
+\contentsline {subsubsection}{\numberline {6.7.2.4}ConvexShapeCollider()\hspace {0.1cm}{\footnotesize \ttfamily [4/4]}}{68}{subsubsection.6.7.2.4}%
+\contentsline {subsubsection}{\numberline {6.7.2.5}$\sim $ConvexShapeCollider()}{69}{subsubsection.6.7.2.5}%
+\contentsline {subsection}{\numberline {6.7.3}Member Function Documentation}{69}{subsection.6.7.3}%
+\contentsline {subsubsection}{\numberline {6.7.3.1}GetModelMatrix()}{69}{subsubsection.6.7.3.1}%
+\contentsline {subsubsection}{\numberline {6.7.3.2}GetVertices()}{70}{subsubsection.6.7.3.2}%
+\contentsline {subsubsection}{\numberline {6.7.3.3}RaycastCollision()}{70}{subsubsection.6.7.3.3}%
+\contentsline {subsubsection}{\numberline {6.7.3.4}SetOrientation()}{70}{subsubsection.6.7.3.4}%
+\contentsline {subsubsection}{\numberline {6.7.3.5}SetPosition()}{71}{subsubsection.6.7.3.5}%
+\contentsline {subsubsection}{\numberline {6.7.3.6}SetScale()}{71}{subsubsection.6.7.3.6}%
+\contentsline {section}{\numberline {6.8}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Time Class Reference}{71}{section.6.8}%
+\contentsline {subsection}{\numberline {6.8.1}Detailed Description}{72}{subsection.6.8.1}%
+\contentsline {subsection}{\numberline {6.8.2}Member Function Documentation}{72}{subsection.6.8.2}%
+\contentsline {subsubsection}{\numberline {6.8.2.1}CalculateDeltaTime()}{72}{subsubsection.6.8.2.1}%
+\contentsline {subsubsection}{\numberline {6.8.2.2}FindTimeDiffSeconds()}{72}{subsubsection.6.8.2.2}%
+\contentsline {subsubsection}{\numberline {6.8.2.3}GetTime()}{72}{subsubsection.6.8.2.3}%
+\contentsline {subsubsection}{\numberline {6.8.2.4}GetTimeSeconds()}{73}{subsubsection.6.8.2.4}%
+\contentsline {subsubsection}{\numberline {6.8.2.5}Init()}{73}{subsubsection.6.8.2.5}%
+\contentsline {subsubsection}{\numberline {6.8.2.6}Update()}{73}{subsubsection.6.8.2.6}%
+\contentsline {section}{\numberline {6.9}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::G\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}J\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}K\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Util Class Reference}{73}{section.6.9}%
+\contentsline {subsection}{\numberline {6.9.1}Detailed Description}{74}{subsection.6.9.1}%
+\contentsline {subsection}{\numberline {6.9.2}Member Function Documentation}{74}{subsection.6.9.2}%
+\contentsline {subsubsection}{\numberline {6.9.2.1}Collision()}{74}{subsubsection.6.9.2.1}%
+\contentsline {subsubsection}{\numberline {6.9.2.2}FarthestPointInDirection()}{75}{subsubsection.6.9.2.2}%
+\contentsline {subsubsection}{\numberline {6.9.2.3}Support()}{76}{subsubsection.6.9.2.3}%
+\contentsline {subsubsection}{\numberline {6.9.2.4}TetrahedronChecks()}{76}{subsubsection.6.9.2.4}%
+\contentsline {subsubsection}{\numberline {6.9.2.5}TetrahedronSimplexUpdate()}{77}{subsubsection.6.9.2.5}%
+\contentsline {subsubsection}{\numberline {6.9.2.6}TriangleSimplexUpdate()}{78}{subsubsection.6.9.2.6}%
+\contentsline {subsubsection}{\numberline {6.9.2.7}UpdateSimplex()}{78}{subsubsection.6.9.2.7}%
+\contentsline {section}{\numberline {6.10}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::I\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Bounding\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Volume Class Reference}{78}{section.6.10}%
+\contentsline {subsection}{\numberline {6.10.1}Detailed Description}{79}{subsection.6.10.1}%
+\contentsline {section}{\numberline {6.11}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::I\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Integratable Class Reference}{79}{section.6.11}%
+\contentsline {subsection}{\numberline {6.11.1}Detailed Description}{79}{subsection.6.11.1}%
+\contentsline {subsection}{\numberline {6.11.2}Member Function Documentation}{80}{subsection.6.11.2}%
+\contentsline {subsubsection}{\numberline {6.11.2.1}Integrate()}{80}{subsubsection.6.11.2.1}%
+\contentsline {section}{\numberline {6.12}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::I\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rigidbody\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Force\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Generator Class Reference}{80}{section.6.12}%
+\contentsline {subsection}{\numberline {6.12.1}Detailed Description}{80}{subsection.6.12.1}%
+\contentsline {subsection}{\numberline {6.12.2}Member Function Documentation}{80}{subsection.6.12.2}%
+\contentsline {subsubsection}{\numberline {6.12.2.1}UpdateForces()}{80}{subsubsection.6.12.2.1}%
+\contentsline {section}{\numberline {6.13}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Log\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager Class Reference}{81}{section.6.13}%
+\contentsline {subsection}{\numberline {6.13.1}Detailed Description}{82}{subsection.6.13.1}%
+\contentsline {subsection}{\numberline {6.13.2}Constructor \& Destructor Documentation}{82}{subsection.6.13.2}%
+\contentsline {subsubsection}{\numberline {6.13.2.1}LogManager()}{82}{subsubsection.6.13.2.1}%
+\contentsline {subsection}{\numberline {6.13.3}Member Function Documentation}{82}{subsection.6.13.3}%
+\contentsline {subsubsection}{\numberline {6.13.3.1}CreateLogDirectory()}{82}{subsubsection.6.13.3.1}%
+\contentsline {subsubsection}{\numberline {6.13.3.2}critical()}{82}{subsubsection.6.13.3.2}%
+\contentsline {subsubsection}{\numberline {6.13.3.3}error()}{83}{subsubsection.6.13.3.3}%
+\contentsline {subsubsection}{\numberline {6.13.3.4}GetInstance()}{83}{subsubsection.6.13.3.4}%
+\contentsline {subsubsection}{\numberline {6.13.3.5}info()}{83}{subsubsection.6.13.3.5}%
+\contentsline {subsubsection}{\numberline {6.13.3.6}trace()}{84}{subsubsection.6.13.3.6}%
+\contentsline {subsubsection}{\numberline {6.13.3.7}warn()}{84}{subsubsection.6.13.3.7}%
+\contentsline {section}{\numberline {6.14}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Dynamic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}World Class Reference}{84}{section.6.14}%
+\contentsline {subsection}{\numberline {6.14.1}Detailed Description}{85}{subsection.6.14.1}%
+\contentsline {subsection}{\numberline {6.14.2}Constructor \& Destructor Documentation}{85}{subsection.6.14.2}%
+\contentsline {subsubsection}{\numberline {6.14.2.1}mtrxDynamicWorld()}{85}{subsubsection.6.14.2.1}%
+\contentsline {subsubsection}{\numberline {6.14.2.2}$\sim $mtrxDynamicWorld()}{86}{subsubsection.6.14.2.2}%
+\contentsline {subsection}{\numberline {6.14.3}Member Function Documentation}{86}{subsection.6.14.3}%
+\contentsline {subsubsection}{\numberline {6.14.3.1}AddCollider()}{86}{subsubsection.6.14.3.1}%
+\contentsline {subsubsection}{\numberline {6.14.3.2}AddForceGenerator()}{86}{subsubsection.6.14.3.2}%
+\contentsline {subsubsection}{\numberline {6.14.3.3}AddRigidbody()}{86}{subsubsection.6.14.3.3}%
+\contentsline {subsubsection}{\numberline {6.14.3.4}RemoveCollider()}{87}{subsubsection.6.14.3.4}%
+\contentsline {subsubsection}{\numberline {6.14.3.5}RemoveForceGenerator()}{87}{subsubsection.6.14.3.5}%
+\contentsline {subsubsection}{\numberline {6.14.3.6}RemoveRigidbody()}{87}{subsubsection.6.14.3.6}%
+\contentsline {subsubsection}{\numberline {6.14.3.7}Update()}{88}{subsubsection.6.14.3.7}%
+\contentsline {section}{\numberline {6.15}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Object\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Axes Struct Reference}{88}{section.6.15}%
+\contentsline {subsection}{\numberline {6.15.1}Detailed Description}{88}{subsection.6.15.1}%
+\contentsline {section}{\numberline {6.16}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::O\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}O\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}B\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}B\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Collider Class Reference}{89}{section.6.16}%
+\contentsline {subsection}{\numberline {6.16.1}Detailed Description}{89}{subsection.6.16.1}%
+\contentsline {subsection}{\numberline {6.16.2}Constructor \& Destructor Documentation}{90}{subsection.6.16.2}%
+\contentsline {subsubsection}{\numberline {6.16.2.1}OOBBCollider()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{90}{subsubsection.6.16.2.1}%
+\contentsline {subsubsection}{\numberline {6.16.2.2}OOBBCollider()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{90}{subsubsection.6.16.2.2}%
+\contentsline {subsubsection}{\numberline {6.16.2.3}$\sim $OOBBCollider()}{90}{subsubsection.6.16.2.3}%
+\contentsline {subsection}{\numberline {6.16.3}Member Function Documentation}{90}{subsection.6.16.3}%
+\contentsline {subsubsection}{\numberline {6.16.3.1}GetAxes()}{91}{subsubsection.6.16.3.1}%
+\contentsline {subsubsection}{\numberline {6.16.3.2}GetHalfExtents()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{91}{subsubsection.6.16.3.2}%
+\contentsline {subsubsection}{\numberline {6.16.3.3}GetHalfExtents()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{91}{subsubsection.6.16.3.3}%
+\contentsline {subsubsection}{\numberline {6.16.3.4}RaycastCollision()}{91}{subsubsection.6.16.3.4}%
+\contentsline {subsubsection}{\numberline {6.16.3.5}SetScale()}{92}{subsubsection.6.16.3.5}%
+\contentsline {section}{\numberline {6.17}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Potential\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Collision Struct Reference}{92}{section.6.17}%
+\contentsline {subsection}{\numberline {6.17.1}Detailed Description}{92}{subsection.6.17.1}%
+\contentsline {section}{\numberline {6.18}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Ray Class Reference}{92}{section.6.18}%
+\contentsline {subsection}{\numberline {6.18.1}Detailed Description}{93}{subsection.6.18.1}%
+\contentsline {subsection}{\numberline {6.18.2}Constructor \& Destructor Documentation}{93}{subsection.6.18.2}%
+\contentsline {subsubsection}{\numberline {6.18.2.1}Ray()}{93}{subsubsection.6.18.2.1}%
+\contentsline {subsubsection}{\numberline {6.18.2.2}$\sim $Ray()}{93}{subsubsection.6.18.2.2}%
+\contentsline {section}{\numberline {6.19}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::rb\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Buoyancy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Force\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Generator Class Reference}{93}{section.6.19}%
+\contentsline {subsection}{\numberline {6.19.1}Detailed Description}{94}{subsection.6.19.1}%
+\contentsline {subsection}{\numberline {6.19.2}Constructor \& Destructor Documentation}{94}{subsection.6.19.2}%
+\contentsline {subsubsection}{\numberline {6.19.2.1}rb\_BuoyancyForceGenerator()}{94}{subsubsection.6.19.2.1}%
+\contentsline {subsubsection}{\numberline {6.19.2.2}$\sim $rb\_BuoyancyForceGenerator()}{95}{subsubsection.6.19.2.2}%
+\contentsline {subsection}{\numberline {6.19.3}Member Function Documentation}{95}{subsection.6.19.3}%
+\contentsline {subsubsection}{\numberline {6.19.3.1}UpdateForces()}{95}{subsubsection.6.19.3.1}%
+\contentsline {section}{\numberline {6.20}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::rb\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Force\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Generation\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Registry Class Reference}{95}{section.6.20}%
+\contentsline {subsection}{\numberline {6.20.1}Detailed Description}{96}{subsection.6.20.1}%
+\contentsline {subsection}{\numberline {6.20.2}Constructor \& Destructor Documentation}{96}{subsection.6.20.2}%
+\contentsline {subsubsection}{\numberline {6.20.2.1}rb\_ForceGenerationRegistry()}{96}{subsubsection.6.20.2.1}%
+\contentsline {subsubsection}{\numberline {6.20.2.2}$\sim $rb\_ForceGenerationRegistry()}{96}{subsubsection.6.20.2.2}%
+\contentsline {subsection}{\numberline {6.20.3}Member Function Documentation}{96}{subsection.6.20.3}%
+\contentsline {subsubsection}{\numberline {6.20.3.1}AddForceGenerator()}{96}{subsubsection.6.20.3.1}%
+\contentsline {subsubsection}{\numberline {6.20.3.2}RemoveForceGenerator()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{97}{subsubsection.6.20.3.2}%
+\contentsline {subsubsection}{\numberline {6.20.3.3}RemoveForceGenerator()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{97}{subsubsection.6.20.3.3}%
+\contentsline {subsubsection}{\numberline {6.20.3.4}UpdateForceGenerators()}{97}{subsubsection.6.20.3.4}%
+\contentsline {section}{\numberline {6.21}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::rb\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Gravity\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Force\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Generator Class Reference}{98}{section.6.21}%
+\contentsline {subsection}{\numberline {6.21.1}Detailed Description}{98}{subsection.6.21.1}%
+\contentsline {subsection}{\numberline {6.21.2}Constructor \& Destructor Documentation}{98}{subsection.6.21.2}%
+\contentsline {subsubsection}{\numberline {6.21.2.1}rb\_GravityForceGenerator()}{98}{subsubsection.6.21.2.1}%
+\contentsline {subsubsection}{\numberline {6.21.2.2}$\sim $rb\_GravityForceGenerator()}{99}{subsubsection.6.21.2.2}%
+\contentsline {subsection}{\numberline {6.21.3}Member Function Documentation}{99}{subsection.6.21.3}%
+\contentsline {subsubsection}{\numberline {6.21.3.1}UpdateForces()}{99}{subsubsection.6.21.3.1}%
+\contentsline {section}{\numberline {6.22}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Rigidbody Class Reference}{99}{section.6.22}%
+\contentsline {subsection}{\numberline {6.22.1}Detailed Description}{101}{subsection.6.22.1}%
+\contentsline {subsection}{\numberline {6.22.2}Constructor \& Destructor Documentation}{101}{subsection.6.22.2}%
+\contentsline {subsubsection}{\numberline {6.22.2.1}Rigidbody()}{101}{subsubsection.6.22.2.1}%
+\contentsline {subsubsection}{\numberline {6.22.2.2}$\sim $Rigidbody()}{101}{subsubsection.6.22.2.2}%
+\contentsline {subsection}{\numberline {6.22.3}Member Function Documentation}{101}{subsection.6.22.3}%
+\contentsline {subsubsection}{\numberline {6.22.3.1}AddForceAtPoint()}{102}{subsubsection.6.22.3.1}%
+\contentsline {subsubsection}{\numberline {6.22.3.2}AddTorque()}{103}{subsubsection.6.22.3.2}%
+\contentsline {subsubsection}{\numberline {6.22.3.3}CalculateBodyData()}{103}{subsubsection.6.22.3.3}%
+\contentsline {subsubsection}{\numberline {6.22.3.4}CalculateIITWorld()}{103}{subsubsection.6.22.3.4}%
+\contentsline {subsubsection}{\numberline {6.22.3.5}CalculateObjToWorldMat()}{103}{subsubsection.6.22.3.5}%
+\contentsline {subsubsection}{\numberline {6.22.3.6}ClearAccumulators()}{104}{subsubsection.6.22.3.6}%
+\contentsline {subsubsection}{\numberline {6.22.3.7}GetAngularDamping()}{104}{subsubsection.6.22.3.7}%
+\contentsline {subsubsection}{\numberline {6.22.3.8}GetInverseInertiaTensor()}{104}{subsubsection.6.22.3.8}%
+\contentsline {subsubsection}{\numberline {6.22.3.9}GetIsKinematic()}{104}{subsubsection.6.22.3.9}%
+\contentsline {subsubsection}{\numberline {6.22.3.10}GetObjToWorldMat()}{105}{subsubsection.6.22.3.10}%
+\contentsline {subsubsection}{\numberline {6.22.3.11}GetRotation()}{105}{subsubsection.6.22.3.11}%
+\contentsline {subsubsection}{\numberline {6.22.3.12}Integrate()}{105}{subsubsection.6.22.3.12}%
+\contentsline {subsubsection}{\numberline {6.22.3.13}SetAngularDamping()}{105}{subsubsection.6.22.3.13}%
+\contentsline {subsubsection}{\numberline {6.22.3.14}SetInverseInertiaTensor()}{106}{subsubsection.6.22.3.14}%
+\contentsline {subsubsection}{\numberline {6.22.3.15}SetIsKinematic()}{106}{subsubsection.6.22.3.15}%
+\contentsline {subsubsection}{\numberline {6.22.3.16}SetOrientation()}{106}{subsubsection.6.22.3.16}%
+\contentsline {subsubsection}{\numberline {6.22.3.17}SetRotation()}{107}{subsubsection.6.22.3.17}%
+\contentsline {section}{\numberline {6.23}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Rigidbody\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager Class Reference}{107}{section.6.23}%
+\contentsline {subsection}{\numberline {6.23.1}Detailed Description}{107}{subsection.6.23.1}%
+\contentsline {subsection}{\numberline {6.23.2}Constructor \& Destructor Documentation}{107}{subsection.6.23.2}%
+\contentsline {subsubsection}{\numberline {6.23.2.1}RigidbodyManager()}{108}{subsubsection.6.23.2.1}%
+\contentsline {subsubsection}{\numberline {6.23.2.2}$\sim $RigidbodyManager()}{108}{subsubsection.6.23.2.2}%
+\contentsline {subsection}{\numberline {6.23.3}Member Function Documentation}{108}{subsection.6.23.3}%
+\contentsline {subsubsection}{\numberline {6.23.3.1}Integrate()}{108}{subsubsection.6.23.3.1}%
+\contentsline {subsubsection}{\numberline {6.23.3.2}IntegrateRigidbodies()}{108}{subsubsection.6.23.3.2}%
+\contentsline {subsubsection}{\numberline {6.23.3.3}UpdateForces()}{108}{subsubsection.6.23.3.3}%
+\contentsline {section}{\numberline {6.24}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Simplex Struct Reference}{109}{section.6.24}%
+\contentsline {subsection}{\numberline {6.24.1}Detailed Description}{109}{subsection.6.24.1}%
+\contentsline {section}{\numberline {6.25}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Sphere\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Collider Class Reference}{109}{section.6.25}%
+\contentsline {subsection}{\numberline {6.25.1}Detailed Description}{110}{subsection.6.25.1}%
+\contentsline {subsection}{\numberline {6.25.2}Constructor \& Destructor Documentation}{110}{subsection.6.25.2}%
+\contentsline {subsubsection}{\numberline {6.25.2.1}SphereCollider()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{110}{subsubsection.6.25.2.1}%
+\contentsline {subsubsection}{\numberline {6.25.2.2}SphereCollider()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{111}{subsubsection.6.25.2.2}%
+\contentsline {subsubsection}{\numberline {6.25.2.3}SphereCollider()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{111}{subsubsection.6.25.2.3}%
+\contentsline {subsubsection}{\numberline {6.25.2.4}$\sim $SphereCollider()}{112}{subsubsection.6.25.2.4}%
+\contentsline {subsection}{\numberline {6.25.3}Member Function Documentation}{112}{subsection.6.25.3}%
+\contentsline {subsubsection}{\numberline {6.25.3.1}GetGrowth()}{112}{subsubsection.6.25.3.1}%
+\contentsline {subsubsection}{\numberline {6.25.3.2}GetRadius()}{112}{subsubsection.6.25.3.2}%
+\contentsline {subsubsection}{\numberline {6.25.3.3}GetSize()}{112}{subsubsection.6.25.3.3}%
+\contentsline {subsubsection}{\numberline {6.25.3.4}RaycastCollision()}{113}{subsubsection.6.25.3.4}%
+\contentsline {subsubsection}{\numberline {6.25.3.5}SetRadius()}{113}{subsubsection.6.25.3.5}%
+\contentsline {subsubsection}{\numberline {6.25.3.6}SetScale()}{113}{subsubsection.6.25.3.6}%
+\contentsline {section}{\numberline {6.26}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Transform Class Reference}{114}{section.6.26}%
+\contentsline {subsection}{\numberline {6.26.1}Detailed Description}{114}{subsection.6.26.1}%
+\contentsline {subsection}{\numberline {6.26.2}Constructor \& Destructor Documentation}{115}{subsection.6.26.2}%
+\contentsline {subsubsection}{\numberline {6.26.2.1}Transform()}{115}{subsubsection.6.26.2.1}%
+\contentsline {subsubsection}{\numberline {6.26.2.2}$\sim $Transform()}{115}{subsubsection.6.26.2.2}%
+\contentsline {subsection}{\numberline {6.26.3}Member Function Documentation}{115}{subsection.6.26.3}%
+\contentsline {subsubsection}{\numberline {6.26.3.1}GetOrientation()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{115}{subsubsection.6.26.3.1}%
+\contentsline {subsubsection}{\numberline {6.26.3.2}GetOrientation()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{116}{subsubsection.6.26.3.2}%
+\contentsline {subsubsection}{\numberline {6.26.3.3}GetPosition()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{116}{subsubsection.6.26.3.3}%
+\contentsline {subsubsection}{\numberline {6.26.3.4}GetPosition()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{116}{subsubsection.6.26.3.4}%
+\contentsline {subsubsection}{\numberline {6.26.3.5}GetScale()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{116}{subsubsection.6.26.3.5}%
+\contentsline {subsubsection}{\numberline {6.26.3.6}GetScale()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{117}{subsubsection.6.26.3.6}%
+\contentsline {subsubsection}{\numberline {6.26.3.7}Rotate()}{117}{subsubsection.6.26.3.7}%
+\contentsline {subsubsection}{\numberline {6.26.3.8}SetOrientation()}{118}{subsubsection.6.26.3.8}%
+\contentsline {subsubsection}{\numberline {6.26.3.9}SetPosition()}{118}{subsubsection.6.26.3.9}%
+\contentsline {subsubsection}{\numberline {6.26.3.10}SetScale()}{118}{subsubsection.6.26.3.10}%
+\contentsline {subsubsection}{\numberline {6.26.3.11}Translate()}{119}{subsubsection.6.26.3.11}%
+\contentsline {section}{\numberline {6.27}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Triangle Struct Reference}{119}{section.6.27}%
+\contentsline {subsection}{\numberline {6.27.1}Detailed Description}{119}{subsection.6.27.1}%
+\contentsline {chapter}{Index}{121}{section*.86}%

@@ -1,0 +1,340 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="classmtrx_1_1mtrx_dynamic_world" kind="class" language="C++" prot="public">
+    <compoundname>mtrx::mtrxDynamicWorld</compoundname>
+    <includes refid="mtrx_dynamic_world_8h" local="no">mtrxDynamicWorld.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classmtrx_1_1mtrx_dynamic_world_1a74aa1d8098135c81d3daedac512d2b7c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float mtrx::mtrxDynamicWorld::accumulator</definition>
+        <argsstring></argsstring>
+        <name>accumulator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/mtrxDynamicWorld.h" line="17" column="7" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/mtrxDynamicWorld.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmtrx_1_1mtrx_dynamic_world_1a4094bc6b09bfcbb175d389d83f26c017" prot="private" static="no" mutable="no">
+        <type><ref refid="classmtrx_1_1_rigidbody_manager" kindref="compound">RigidbodyManager</ref></type>
+        <definition>RigidbodyManager mtrx::mtrxDynamicWorld::m_rbManager</definition>
+        <argsstring></argsstring>
+        <name>m_rbManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/mtrxDynamicWorld.h" line="97" column="18" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/mtrxDynamicWorld.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmtrx_1_1mtrx_dynamic_world_1a2cde36f5db12630ebc48c877640482b1" prot="private" static="no" mutable="no">
+        <type><ref refid="classmtrx_1_1_collision_system" kindref="compound">CollisionSystem</ref></type>
+        <definition>CollisionSystem mtrx::mtrxDynamicWorld::m_CollisionSystem</definition>
+        <argsstring></argsstring>
+        <name>m_CollisionSystem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/mtrxDynamicWorld.h" line="98" column="17" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/mtrxDynamicWorld.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmtrx_1_1mtrx_dynamic_world_1ae5a8f4039816f4cba7e0139025573171" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mtrx::mtrxDynamicWorld::mtrxDynamicWorld</definition>
+        <argsstring>()</argsstring>
+        <name>mtrxDynamicWorld</name>
+        <briefdescription>
+<para>Construct a new mtrx Dynamic World object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/mtrxDynamicWorld.h" line="23" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1mtrx_dynamic_world_1a95ed219a5d1a739de770967591bc5b02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mtrx::mtrxDynamicWorld::~mtrxDynamicWorld</definition>
+        <argsstring>()=default</argsstring>
+        <name>~mtrxDynamicWorld</name>
+        <briefdescription>
+<para>Destroy the mtrx Dynamic World object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/mtrxDynamicWorld.h" line="29" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1mtrx_dynamic_world_1ad0f051b32fd667f1580e00ac1f71b803" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mtrx::mtrxDynamicWorld::Update</definition>
+        <argsstring>(float dt)</argsstring>
+        <name>Update</name>
+        <param>
+          <type>float</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>Update the game world. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time elapsed since the last frame </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/mtrxDynamicWorld.h" line="36" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1mtrx_dynamic_world_1a2324f42e0ec5ac3c57913f740e121f32" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mtrx::mtrxDynamicWorld::AddRigidbody</definition>
+        <argsstring>(Rigidbody *rb)</argsstring>
+        <name>AddRigidbody</name>
+        <param>
+          <type><ref refid="classmtrx_1_1_rigidbody" kindref="compound">Rigidbody</ref> *</type>
+          <declname>rb</declname>
+        </param>
+        <briefdescription>
+<para>Add a rigidbody to the rigidbody manager. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rigidbody we want to add to the manager </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/mtrxDynamicWorld.h" line="43" column="13" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/mtrxDynamicWorld.h" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1mtrx_dynamic_world_1ab176745dd01bccdd52e11719be9719aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mtrx::mtrxDynamicWorld::RemoveRigidbody</definition>
+        <argsstring>(Rigidbody *rb)</argsstring>
+        <name>RemoveRigidbody</name>
+        <param>
+          <type><ref refid="classmtrx_1_1_rigidbody" kindref="compound">Rigidbody</ref> *</type>
+          <declname>rb</declname>
+        </param>
+        <briefdescription>
+<para>Remove a rigidbody from the rigidbody manager. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rigidbody we want to remove </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/mtrxDynamicWorld.h" line="50" column="13" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/mtrxDynamicWorld.h" bodystart="50" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1mtrx_dynamic_world_1a640d482c593bf5a6d57afaa0f445bc2c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mtrx::mtrxDynamicWorld::AddForceGenerator</definition>
+        <argsstring>(Rigidbody *rb, const std::shared_ptr&lt; IRigidbodyForceGenerator &gt; &amp;forceGenerator)</argsstring>
+        <name>AddForceGenerator</name>
+        <param>
+          <type><ref refid="classmtrx_1_1_rigidbody" kindref="compound">Rigidbody</ref> *</type>
+          <declname>rb</declname>
+        </param>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="classmtrx_1_1_i_rigidbody_force_generator" kindref="compound">IRigidbodyForceGenerator</ref> &gt; &amp;</type>
+          <declname>forceGenerator</declname>
+        </param>
+        <briefdescription>
+<para>Add a force generator to the rigidbody manager. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rigidbody we want to add the force generator to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>forceGenerator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The force generator we want to add </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/mtrxDynamicWorld.h" line="62" column="13" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/mtrxDynamicWorld.h" bodystart="62" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1mtrx_dynamic_world_1a46156a86ef4722f0c324b943277d53fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mtrx::mtrxDynamicWorld::RemoveForceGenerator</definition>
+        <argsstring>(Rigidbody *rb, const std::shared_ptr&lt; IRigidbodyForceGenerator &gt; &amp;generator)</argsstring>
+        <name>RemoveForceGenerator</name>
+        <param>
+          <type><ref refid="classmtrx_1_1_rigidbody" kindref="compound">Rigidbody</ref> *</type>
+          <declname>rb</declname>
+        </param>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="classmtrx_1_1_i_rigidbody_force_generator" kindref="compound">IRigidbodyForceGenerator</ref> &gt; &amp;</type>
+          <declname>generator</declname>
+        </param>
+        <briefdescription>
+<para>Remove a rigidbody from the rigidbody manager. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rigidbody we want to remove the rigidbody from </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>generator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The force generator that we want to remove </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/mtrxDynamicWorld.h" line="73" column="13" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/mtrxDynamicWorld.h" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1mtrx_dynamic_world_1a77d829c67eb514fdadb9310613e3bb20" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mtrx::mtrxDynamicWorld::AddCollider</definition>
+        <argsstring>(Collider *col)</argsstring>
+        <name>AddCollider</name>
+        <param>
+          <type><ref refid="classmtrx_1_1_collider" kindref="compound">Collider</ref> *</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Add a collider to the collision system. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>col</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The collider that we want to add </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/mtrxDynamicWorld.h" line="83" column="13" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/mtrxDynamicWorld.h" bodystart="83" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1mtrx_dynamic_world_1a6b32bb87f20b9f21237be8d5e3241d49" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mtrx::mtrxDynamicWorld::RemoveCollider</definition>
+        <argsstring>(Collider *col)</argsstring>
+        <name>RemoveCollider</name>
+        <param>
+          <type><ref refid="classmtrx_1_1_collider" kindref="compound">Collider</ref> *</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Remove a collider to the collision system. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>col</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The collider that we want to remove </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/mtrxDynamicWorld.h" line="90" column="13" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/mtrxDynamicWorld.h" bodystart="90" bodyend="94"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Entry point of the user to the engine. This class defines the API that user will be using to interface with the engine. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>mtrx::RigidbodyManager</label>
+        <link refid="classmtrx_1_1_rigidbody_manager"/>
+      </node>
+      <node id="1">
+        <label>mtrx::mtrxDynamicWorld</label>
+        <link refid="classmtrx_1_1mtrx_dynamic_world"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_CollisionSystem</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_rbManager</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mtrx::CollisionSystem</label>
+        <link refid="classmtrx_1_1_collision_system"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/mtrxDynamicWorld.h" line="15" column="1" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/mtrxDynamicWorld.h" bodystart="14" bodyend="100"/>
+    <listofallmembers>
+      <member refid="classmtrx_1_1mtrx_dynamic_world_1a74aa1d8098135c81d3daedac512d2b7c" prot="public" virt="non-virtual"><scope>mtrx::mtrxDynamicWorld</scope><name>accumulator</name></member>
+      <member refid="classmtrx_1_1mtrx_dynamic_world_1a77d829c67eb514fdadb9310613e3bb20" prot="public" virt="non-virtual"><scope>mtrx::mtrxDynamicWorld</scope><name>AddCollider</name></member>
+      <member refid="classmtrx_1_1mtrx_dynamic_world_1a640d482c593bf5a6d57afaa0f445bc2c" prot="public" virt="non-virtual"><scope>mtrx::mtrxDynamicWorld</scope><name>AddForceGenerator</name></member>
+      <member refid="classmtrx_1_1mtrx_dynamic_world_1a2324f42e0ec5ac3c57913f740e121f32" prot="public" virt="non-virtual"><scope>mtrx::mtrxDynamicWorld</scope><name>AddRigidbody</name></member>
+      <member refid="classmtrx_1_1mtrx_dynamic_world_1a2cde36f5db12630ebc48c877640482b1" prot="private" virt="non-virtual"><scope>mtrx::mtrxDynamicWorld</scope><name>m_CollisionSystem</name></member>
+      <member refid="classmtrx_1_1mtrx_dynamic_world_1a4094bc6b09bfcbb175d389d83f26c017" prot="private" virt="non-virtual"><scope>mtrx::mtrxDynamicWorld</scope><name>m_rbManager</name></member>
+      <member refid="classmtrx_1_1mtrx_dynamic_world_1ae5a8f4039816f4cba7e0139025573171" prot="public" virt="non-virtual"><scope>mtrx::mtrxDynamicWorld</scope><name>mtrxDynamicWorld</name></member>
+      <member refid="classmtrx_1_1mtrx_dynamic_world_1a6b32bb87f20b9f21237be8d5e3241d49" prot="public" virt="non-virtual"><scope>mtrx::mtrxDynamicWorld</scope><name>RemoveCollider</name></member>
+      <member refid="classmtrx_1_1mtrx_dynamic_world_1a46156a86ef4722f0c324b943277d53fa" prot="public" virt="non-virtual"><scope>mtrx::mtrxDynamicWorld</scope><name>RemoveForceGenerator</name></member>
+      <member refid="classmtrx_1_1mtrx_dynamic_world_1ab176745dd01bccdd52e11719be9719aa" prot="public" virt="non-virtual"><scope>mtrx::mtrxDynamicWorld</scope><name>RemoveRigidbody</name></member>
+      <member refid="classmtrx_1_1mtrx_dynamic_world_1ad0f051b32fd667f1580e00ac1f71b803" prot="public" virt="non-virtual"><scope>mtrx::mtrxDynamicWorld</scope><name>Update</name></member>
+      <member refid="classmtrx_1_1mtrx_dynamic_world_1a95ed219a5d1a739de770967591bc5b02" prot="public" virt="non-virtual"><scope>mtrx::mtrxDynamicWorld</scope><name>~mtrxDynamicWorld</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

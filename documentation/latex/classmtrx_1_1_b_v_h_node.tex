@@ -1,0 +1,219 @@
+\hypertarget{classmtrx_1_1_b_v_h_node}{}\doxysection{mtrx\+::B\+V\+H\+Node$<$ Bounding\+Volume $>$ Class Template Reference}
+\label{classmtrx_1_1_b_v_h_node}\index{mtrx::BVHNode$<$ BoundingVolume $>$@{mtrx::BVHNode$<$ BoundingVolume $>$}}
+
+
+An implementation of a B\+VH node used for Bounding Volume Hierarchies.  
+
+
+
+
+{\ttfamily \#include $<$B\+V\+H\+Node.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmtrx_1_1_b_v_h_node_ad3e9ed341472167207c019d44f9f52b4}{B\+V\+H\+Node}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classmtrx_1_1_b_v_h_node}{B\+V\+H\+Node}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmtrx_1_1_b_v_h_node_a78280fc6963d765bea61c8168aefcef3}{B\+V\+H\+Node}} (\mbox{\hyperlink{classmtrx_1_1_b_v_h_node}{B\+V\+H\+Node}}$<$ Bounding\+Volume $>$ $\ast$parent, Bounding\+Volume \&volume, \mbox{\hyperlink{classmtrx_1_1_body}{Body}} $\ast$body=nullptr)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classmtrx_1_1_b_v_h_node}{B\+V\+H\+Node}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmtrx_1_1_b_v_h_node_a0e13a063022682d02e158c14237cd005}{$\sim$\+B\+V\+H\+Node}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classmtrx_1_1_b_v_h_node}{B\+V\+H\+Node}} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmtrx_1_1_b_v_h_node_a7cfbe8e7e5a37e42322fd6e88dd94af7}{Is\+Leaf}} ()
+\begin{DoxyCompactList}\small\item\em Check whether this node is a leaf. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmtrx_1_1_b_v_h_node_a378321dfc68909846c42554f6136bd99}{Is\+Collision}} (\mbox{\hyperlink{classmtrx_1_1_b_v_h_node}{B\+V\+H\+Node}}$<$ Bounding\+Volume $>$ \&other)
+\begin{DoxyCompactList}\small\item\em Check whether 2 nodes collide by checking that the bounding volumes collide. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmtrx_1_1_b_v_h_node_af7a9afc9700be22acaf4ebb633ed3be5}{DescendA}} (\mbox{\hyperlink{classmtrx_1_1_b_v_h_node}{B\+V\+H\+Node}}$<$ Bounding\+Volume $>$ \&a, \mbox{\hyperlink{classmtrx_1_1_b_v_h_node}{B\+V\+H\+Node}}$<$ Bounding\+Volume $>$ \&b)
+\begin{DoxyCompactList}\small\item\em Utility function that allows that helps with figuring out which direction in the structure we want to go down when trying to find potential contacts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_b_v_h_node_aa0a6d380d24568116bde3b573bdc5a66}{Get\+Potential\+Contacts}} (std\+::list$<$ \mbox{\hyperlink{structmtrx_1_1_potential_collision}{Potential\+Collision}} $>$ \&potential\+Collisions)
+\begin{DoxyCompactList}\small\item\em Get the Potential Contacts that could occur from the hierarchy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_b_v_h_node_a32e8ee4ec9e39976e3b53a25da45e629}{Insert}} (\mbox{\hyperlink{classmtrx_1_1_body}{Body}} $\ast$body, \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} \&collider)
+\begin{DoxyCompactList}\small\item\em Insert collider as a leaf of the stucture. We attempt to add it in a position in the tree where we would get the least amount of growth. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_b_v_h_node_ac052b562541a10478199340659459036}{Recalculate\+Bounding\+Volume}} ()
+\begin{DoxyCompactList}\small\item\em Recalculate the bounding volumes after the structure has been modified. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_b_v_h_node_a1e5da85a3c68456536ba0d1bbdd03240}\label{classmtrx_1_1_b_v_h_node_a1e5da85a3c68456536ba0d1bbdd03240}} 
+\mbox{\hyperlink{classmtrx_1_1_b_v_h_node}{B\+V\+H\+Node}}$<$ Bounding\+Volume $>$ $\ast$ {\bfseries parent}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_b_v_h_node_aae66056fac0a6e9fc1117fb9dcf13a37}\label{classmtrx_1_1_b_v_h_node_aae66056fac0a6e9fc1117fb9dcf13a37}} 
+\mbox{\hyperlink{classmtrx_1_1_b_v_h_node}{B\+V\+H\+Node}}$<$ Bounding\+Volume $>$ $\ast$ {\bfseries children} \mbox{[}2\mbox{]}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_b_v_h_node_a48d13adcc887b9d6cf9b53e71a5ac17c}\label{classmtrx_1_1_b_v_h_node_a48d13adcc887b9d6cf9b53e71a5ac17c}} 
+Bounding\+Volume {\bfseries volume}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_b_v_h_node_a103f6e89fadbd2fff814b72d7b9f6186}\label{classmtrx_1_1_b_v_h_node_a103f6e89fadbd2fff814b72d7b9f6186}} 
+\mbox{\hyperlink{classmtrx_1_1_body}{Body}} $\ast$ {\bfseries body}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class Bounding\+Volume$>$\newline
+class mtrx\+::\+B\+V\+H\+Node$<$ Bounding\+Volume $>$}
+
+An implementation of a B\+VH node used for Bounding Volume Hierarchies. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Bounding\+Volume} & The type of bounding volume that will be used within the hierarchy \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmtrx_1_1_b_v_h_node_ad3e9ed341472167207c019d44f9f52b4}\label{classmtrx_1_1_b_v_h_node_ad3e9ed341472167207c019d44f9f52b4}} 
+\index{mtrx::BVHNode$<$ BoundingVolume $>$@{mtrx::BVHNode$<$ BoundingVolume $>$}!BVHNode@{BVHNode}}
+\index{BVHNode@{BVHNode}!mtrx::BVHNode$<$ BoundingVolume $>$@{mtrx::BVHNode$<$ BoundingVolume $>$}}
+\doxysubsubsection{\texorpdfstring{BVHNode()}{BVHNode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Bounding\+Volume$>$ \\
+\mbox{\hyperlink{classmtrx_1_1_b_v_h_node}{mtrx\+::\+B\+V\+H\+Node}}$<$ Bounding\+Volume $>$\+::\mbox{\hyperlink{classmtrx_1_1_b_v_h_node}{B\+V\+H\+Node}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classmtrx_1_1_b_v_h_node}{B\+V\+H\+Node}} object. 
+
+\mbox{\Hypertarget{classmtrx_1_1_b_v_h_node_a78280fc6963d765bea61c8168aefcef3}\label{classmtrx_1_1_b_v_h_node_a78280fc6963d765bea61c8168aefcef3}} 
+\index{mtrx::BVHNode$<$ BoundingVolume $>$@{mtrx::BVHNode$<$ BoundingVolume $>$}!BVHNode@{BVHNode}}
+\index{BVHNode@{BVHNode}!mtrx::BVHNode$<$ BoundingVolume $>$@{mtrx::BVHNode$<$ BoundingVolume $>$}}
+\doxysubsubsection{\texorpdfstring{BVHNode()}{BVHNode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Bounding\+Volume$>$ \\
+\mbox{\hyperlink{classmtrx_1_1_b_v_h_node}{mtrx\+::\+B\+V\+H\+Node}}$<$ Bounding\+Volume $>$\+::\mbox{\hyperlink{classmtrx_1_1_b_v_h_node}{B\+V\+H\+Node}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmtrx_1_1_b_v_h_node}{B\+V\+H\+Node}}$<$ Bounding\+Volume $>$ $\ast$}]{parent,  }\item[{Bounding\+Volume \&}]{volume,  }\item[{\mbox{\hyperlink{classmtrx_1_1_body}{Body}} $\ast$}]{body = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classmtrx_1_1_b_v_h_node}{B\+V\+H\+Node}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Parent of this node \\
+\hline
+{\em volume} & The bounding volume/collider used \\
+\hline
+{\em body} & The body that the \mbox{\hyperlink{classmtrx_1_1_b_v_h_node}{B\+V\+H\+Node}} represents \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classmtrx_1_1_body}{mtrx\+::\+Body}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classmtrx_1_1_b_v_h_node_a0e13a063022682d02e158c14237cd005}\label{classmtrx_1_1_b_v_h_node_a0e13a063022682d02e158c14237cd005}} 
+\index{mtrx::BVHNode$<$ BoundingVolume $>$@{mtrx::BVHNode$<$ BoundingVolume $>$}!````~BVHNode@{$\sim$BVHNode}}
+\index{````~BVHNode@{$\sim$BVHNode}!mtrx::BVHNode$<$ BoundingVolume $>$@{mtrx::BVHNode$<$ BoundingVolume $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$BVHNode()}{~BVHNode()}}
+{\footnotesize\ttfamily template$<$class Bounding\+Volume$>$ \\
+\mbox{\hyperlink{classmtrx_1_1_b_v_h_node}{mtrx\+::\+B\+V\+H\+Node}}$<$ Bounding\+Volume $>$\+::$\sim$\mbox{\hyperlink{classmtrx_1_1_b_v_h_node}{B\+V\+H\+Node}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the \mbox{\hyperlink{classmtrx_1_1_b_v_h_node}{B\+V\+H\+Node}} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmtrx_1_1_b_v_h_node_af7a9afc9700be22acaf4ebb633ed3be5}\label{classmtrx_1_1_b_v_h_node_af7a9afc9700be22acaf4ebb633ed3be5}} 
+\index{mtrx::BVHNode$<$ BoundingVolume $>$@{mtrx::BVHNode$<$ BoundingVolume $>$}!DescendA@{DescendA}}
+\index{DescendA@{DescendA}!mtrx::BVHNode$<$ BoundingVolume $>$@{mtrx::BVHNode$<$ BoundingVolume $>$}}
+\doxysubsubsection{\texorpdfstring{DescendA()}{DescendA()}}
+{\footnotesize\ttfamily template$<$class Bounding\+Volume$>$ \\
+bool \mbox{\hyperlink{classmtrx_1_1_b_v_h_node}{mtrx\+::\+B\+V\+H\+Node}}$<$ Bounding\+Volume $>$\+::DescendA (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmtrx_1_1_b_v_h_node}{B\+V\+H\+Node}}$<$ Bounding\+Volume $>$ \&}]{a,  }\item[{\mbox{\hyperlink{classmtrx_1_1_b_v_h_node}{B\+V\+H\+Node}}$<$ Bounding\+Volume $>$ \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Utility function that allows that helps with figuring out which direction in the structure we want to go down when trying to find potential contacts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+{\em b} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_b_v_h_node_aa0a6d380d24568116bde3b573bdc5a66}\label{classmtrx_1_1_b_v_h_node_aa0a6d380d24568116bde3b573bdc5a66}} 
+\index{mtrx::BVHNode$<$ BoundingVolume $>$@{mtrx::BVHNode$<$ BoundingVolume $>$}!GetPotentialContacts@{GetPotentialContacts}}
+\index{GetPotentialContacts@{GetPotentialContacts}!mtrx::BVHNode$<$ BoundingVolume $>$@{mtrx::BVHNode$<$ BoundingVolume $>$}}
+\doxysubsubsection{\texorpdfstring{GetPotentialContacts()}{GetPotentialContacts()}}
+{\footnotesize\ttfamily template$<$class Bounding\+Volume$>$ \\
+void \mbox{\hyperlink{classmtrx_1_1_b_v_h_node}{mtrx\+::\+B\+V\+H\+Node}}$<$ Bounding\+Volume $>$\+::Get\+Potential\+Contacts (\begin{DoxyParamCaption}\item[{std\+::list$<$ \mbox{\hyperlink{structmtrx_1_1_potential_collision}{Potential\+Collision}} $>$ \&}]{potential\+Collisions }\end{DoxyParamCaption})}
+
+
+
+Get the Potential Contacts that could occur from the hierarchy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em potential\+Collisions} & Structure to store the potential collsions \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structmtrx_1_1_potential_collision}{mtrx\+::\+Potential\+Collision}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classmtrx_1_1_b_v_h_node_a32e8ee4ec9e39976e3b53a25da45e629}\label{classmtrx_1_1_b_v_h_node_a32e8ee4ec9e39976e3b53a25da45e629}} 
+\index{mtrx::BVHNode$<$ BoundingVolume $>$@{mtrx::BVHNode$<$ BoundingVolume $>$}!Insert@{Insert}}
+\index{Insert@{Insert}!mtrx::BVHNode$<$ BoundingVolume $>$@{mtrx::BVHNode$<$ BoundingVolume $>$}}
+\doxysubsubsection{\texorpdfstring{Insert()}{Insert()}}
+{\footnotesize\ttfamily template$<$class Bounding\+Volume$>$ \\
+void \mbox{\hyperlink{classmtrx_1_1_b_v_h_node}{mtrx\+::\+B\+V\+H\+Node}}$<$ Bounding\+Volume $>$\+::Insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmtrx_1_1_body}{Body}} $\ast$}]{body,  }\item[{\mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} \&}]{collider }\end{DoxyParamCaption})}
+
+
+
+Insert collider as a leaf of the stucture. We attempt to add it in a position in the tree where we would get the least amount of growth. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em body} & The body that we want to add \\
+\hline
+{\em collider} & The bounding volume that we want to add \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_b_v_h_node_a378321dfc68909846c42554f6136bd99}\label{classmtrx_1_1_b_v_h_node_a378321dfc68909846c42554f6136bd99}} 
+\index{mtrx::BVHNode$<$ BoundingVolume $>$@{mtrx::BVHNode$<$ BoundingVolume $>$}!IsCollision@{IsCollision}}
+\index{IsCollision@{IsCollision}!mtrx::BVHNode$<$ BoundingVolume $>$@{mtrx::BVHNode$<$ BoundingVolume $>$}}
+\doxysubsubsection{\texorpdfstring{IsCollision()}{IsCollision()}}
+{\footnotesize\ttfamily template$<$class Bounding\+Volume$>$ \\
+bool \mbox{\hyperlink{classmtrx_1_1_b_v_h_node}{mtrx\+::\+B\+V\+H\+Node}}$<$ Bounding\+Volume $>$\+::Is\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmtrx_1_1_b_v_h_node}{B\+V\+H\+Node}}$<$ Bounding\+Volume $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check whether 2 nodes collide by checking that the bounding volumes collide. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \mbox{\hyperlink{classmtrx_1_1_b_v_h_node}{B\+V\+H\+Node}} that we want to check collision with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true The 2 nodes collide 
+
+false The 2 nodes do not collide 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_b_v_h_node_a7cfbe8e7e5a37e42322fd6e88dd94af7}\label{classmtrx_1_1_b_v_h_node_a7cfbe8e7e5a37e42322fd6e88dd94af7}} 
+\index{mtrx::BVHNode$<$ BoundingVolume $>$@{mtrx::BVHNode$<$ BoundingVolume $>$}!IsLeaf@{IsLeaf}}
+\index{IsLeaf@{IsLeaf}!mtrx::BVHNode$<$ BoundingVolume $>$@{mtrx::BVHNode$<$ BoundingVolume $>$}}
+\doxysubsubsection{\texorpdfstring{IsLeaf()}{IsLeaf()}}
+{\footnotesize\ttfamily template$<$class Bounding\+Volume$>$ \\
+bool \mbox{\hyperlink{classmtrx_1_1_b_v_h_node}{mtrx\+::\+B\+V\+H\+Node}}$<$ Bounding\+Volume $>$\+::Is\+Leaf (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check whether this node is a leaf. 
+
+\begin{DoxyReturn}{Returns}
+true This node is a leaf 
+
+false This node is not a leaf and has at least one child 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_b_v_h_node_ac052b562541a10478199340659459036}\label{classmtrx_1_1_b_v_h_node_ac052b562541a10478199340659459036}} 
+\index{mtrx::BVHNode$<$ BoundingVolume $>$@{mtrx::BVHNode$<$ BoundingVolume $>$}!RecalculateBoundingVolume@{RecalculateBoundingVolume}}
+\index{RecalculateBoundingVolume@{RecalculateBoundingVolume}!mtrx::BVHNode$<$ BoundingVolume $>$@{mtrx::BVHNode$<$ BoundingVolume $>$}}
+\doxysubsubsection{\texorpdfstring{RecalculateBoundingVolume()}{RecalculateBoundingVolume()}}
+{\footnotesize\ttfamily template$<$class Bounding\+Volume$>$ \\
+void \mbox{\hyperlink{classmtrx_1_1_b_v_h_node}{mtrx\+::\+B\+V\+H\+Node}}$<$ Bounding\+Volume $>$\+::Recalculate\+Bounding\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Recalculate the bounding volumes after the structure has been modified. 
+

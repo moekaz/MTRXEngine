@@ -6,8 +6,8 @@
 namespace mtrx
 {
 	/**
-	 * Namespace used to define some collision detection algorithms that are used to check for collision 
-	 * between different colliders. None of these functions require colliders themselves, They use mostly 
+	 * @brief Namespace used to define some collision detection algorithms that are used to check for collision between different colliders. 
+	 * None of these functions require colliders themselves, They use mostly 
 	 * primitive classes instead.
 	 * 
 	 */

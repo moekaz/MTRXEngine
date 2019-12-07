@@ -1,0 +1,102 @@
+.TH "mtrx::rb_BuoyancyForceGenerator" 3 "Sat Dec 7 2019" "MTRX Engine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mtrx::rb_BuoyancyForceGenerator \- Implementation of a buoyancy force generator for rigidbodies\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <rb_BuoyancyForceGenerator\&.h>\fP
+.PP
+Inherits \fBmtrx::IRigidbodyForceGenerator\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBrb_BuoyancyForceGenerator\fP (const glm::vec3 &gravity, float volumeBody, float bodyHalfExtent, float liquidHeight=0\&.f, float density=1000\&.f)"
+.br
+.RI "Construct a new rb BuoyancyForceGenerator object\&. "
+.ti -1c
+.RI "\fB~rb_BuoyancyForceGenerator\fP ()"
+.br
+.RI "Destroy the rb BuoyancyForceGenerator object\&. "
+.ti -1c
+.RI "virtual void \fBUpdateForces\fP (\fBRigidbody\fP *rb, float deltaTime) override"
+.br
+.RI "The implementation of the buoyancy force\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "float \fBliquidDensity\fP"
+.br
+.ti -1c
+.RI "float \fBliquidLevel\fP"
+.br
+.ti -1c
+.RI "float \fBbodyHalfExtent\fP"
+.br
+.ti -1c
+.RI "float \fBvolumeBody\fP"
+.br
+.ti -1c
+.RI "glm::vec3 \fBgravitationalAcceleration\fP"
+.br
+.ti -1c
+.RI "glm::vec3 \fBcenterOfBuoyancy\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Implementation of a buoyancy force generator for rigidbodies\&. 
+
+This force generator generally assumes that the objects behaves more like a AABB We do not calculate the point of collision with the liquid plane and how much of the object is submerged if it is not perpendicular to the liquid plane 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "mtrx::rb_BuoyancyForceGenerator::rb_BuoyancyForceGenerator (const glm::vec3 & gravity, float volumeBody, float bodyHalfExtent, float liquidHeight = \fC0\&.f\fP, float density = \fC1000\&.f\fP)"
+
+.PP
+Construct a new rb BuoyancyForceGenerator object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIgravity\fP The gravitational acceleration used by the generator 
+.br
+\fIvolumeBody\fP The volume of the body 
+.br
+\fIbodyHalfExtent\fP The half extent of the body 
+.br
+\fIliquidHeight\fP The height of the liquid that would represent the liquid's plane 
+.br
+\fIdensity\fP The density of the liquid 
+.RE
+.PP
+
+.SS "mtrx::rb_BuoyancyForceGenerator::~rb_BuoyancyForceGenerator ()"
+
+.PP
+Destroy the rb BuoyancyForceGenerator object\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void mtrx::rb_BuoyancyForceGenerator::UpdateForces (\fBRigidbody\fP * rb, float deltaTime)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+The implementation of the buoyancy force\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrb\fP The rigidbody to apply the buoyancy force 
+.br
+\fIdeltaTime\fP The time elapsed since the last frame 
+.RE
+.PP
+
+.PP
+Implements \fBmtrx::IRigidbodyForceGenerator\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MTRX Engine from the source code\&.

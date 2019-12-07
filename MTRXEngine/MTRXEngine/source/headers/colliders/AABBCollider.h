@@ -6,7 +6,7 @@
 namespace mtrx
 {
 	/**
-	 * Implmentation of an Axis Aligned Bounding Box used for collision systems
+	 * @brief Implmentation of an Axis Aligned Bounding Box used for collision systems
 	 * 
 	 */
 	class AABBCollider : public ConvexShapeCollider, IBoundingVolume

@@ -1,0 +1,222 @@
+.TH "mtrx::SphereCollider" 3 "Sat Dec 7 2019" "MTRX Engine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mtrx::SphereCollider \- Implmentation of a Sphere collider used in collision systems\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SphereCollider\&.h>\fP
+.PP
+Inherits \fBmtrx::Collider\fP, and \fBmtrx::IBoundingVolume\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSphereCollider\fP (const glm::vec3 &center=glm::vec3(), const glm::quat &orientation=glm::angleAxis(0\&.f, worldUp), const glm::vec3 &scale=glm::vec3(1, 1, 1), float radius=0\&.5)"
+.br
+.RI "Construct a new Sphere \fBCollider\fP object\&. "
+.ti -1c
+.RI "\fBSphereCollider\fP (const \fBTransform\fP &transform=\fBTransform\fP(), float radius=0\&.5)"
+.br
+.RI "Construct a new Sphere \fBCollider\fP object\&. "
+.ti -1c
+.RI "\fBSphereCollider\fP (const \fBSphereCollider\fP &collider1, const \fBSphereCollider\fP &collider2)"
+.br
+.RI "Construct a new Sphere \fBCollider\fP object that encompass 2 sphere colliders (used within the context of BVH construction mainly) "
+.ti -1c
+.RI "virtual \fB~SphereCollider\fP ()=default"
+.br
+.RI "Destroy the Sphere \fBCollider\fP object\&. "
+.ti -1c
+.RI "virtual bool \fBRaycastCollision\fP (const \fBRay\fP &ray) override"
+.br
+.RI "Raycast collision check for sphere colliders\&. "
+.ti -1c
+.RI "virtual float \fBGetSize\fP () override"
+.br
+.RI "Get the Size of the sphere (4/3 * PI * radius^3) "
+.ti -1c
+.RI "virtual float \fBGetGrowth\fP (const \fBSphereCollider\fP &sphereCollider)"
+.br
+.RI "Get the Growth when creating a sphere collider between this collider and another sphere collider (for BVH construction) "
+.ti -1c
+.RI "float \fBGetRadius\fP () const"
+.br
+.RI "Get the Radius of the collider\&. "
+.ti -1c
+.RI "void \fBSetRadius\fP (float radius)"
+.br
+.RI "Set the Radius of the collider\&. "
+.ti -1c
+.RI "virtual void \fBSetScale\fP (const glm::vec3 &scale) override"
+.br
+.RI "Set the Scale of the sphere collider\&. Only the X coordinate of the scale affects the collider, other coordinates are ignored\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "float \fBradius\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Implmentation of a Sphere collider used in collision systems\&. 
+
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "mtrx::SphereCollider::SphereCollider (const glm::vec3 & center = \fCglm::vec3()\fP, const glm::quat & orientation = \fCglm::angleAxis(0\&.f, worldUp)\fP, const glm::vec3 & scale = \fCglm::vec3(1, 1, 1)\fP, float radius = \fC0\&.5\fP)"
+
+.PP
+Construct a new Sphere \fBCollider\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcenter\fP Center position of the sphere 
+.br
+\fIorientation\fP The orientation of the sphere 
+.br
+\fIscale\fP The scale of the sphere (influences the radius of the collider) 
+.br
+\fIradius\fP The default radius of the sphere 
+.RE
+.PP
+
+.SS "mtrx::SphereCollider::SphereCollider (const \fBTransform\fP & transform = \fC\fBTransform\fP()\fP, float radius = \fC0\&.5\fP)"
+
+.PP
+Construct a new Sphere \fBCollider\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItransform\fP The transform of the sphere (position, orientation, scale) 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBmtrx::Transform\fP 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIradius\fP the default radius of the sphere 
+.RE
+.PP
+
+.SS "mtrx::SphereCollider::SphereCollider (const \fBSphereCollider\fP & collider1, const \fBSphereCollider\fP & collider2)"
+
+.PP
+Construct a new Sphere \fBCollider\fP object that encompass 2 sphere colliders (used within the context of BVH construction mainly) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcollider1\fP First sphere collider 
+.br
+\fIcollider2\fP Second sphere collider 
+.RE
+.PP
+
+.SS "virtual mtrx::SphereCollider::~SphereCollider ()\fC [virtual]\fP, \fC [default]\fP"
+
+.PP
+Destroy the Sphere \fBCollider\fP object\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual float mtrx::SphereCollider::GetGrowth (const \fBSphereCollider\fP & sphereCollider)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Get the Growth when creating a sphere collider between this collider and another sphere collider (for BVH construction) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsphereCollider\fP the sphere collider that we want to add 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+float The growth value of the resulting sphere collider 
+.RE
+.PP
+
+.SS "float mtrx::SphereCollider::GetRadius () const\fC [inline]\fP"
+
+.PP
+Get the Radius of the collider\&. 
+.PP
+\fBReturns\fP
+.RS 4
+float Radius of collider 
+.RE
+.PP
+
+.SS "virtual float mtrx::SphereCollider::GetSize ()\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Get the Size of the sphere (4/3 * PI * radius^3) 
+.PP
+\fBReturns\fP
+.RS 4
+float 
+.RE
+.PP
+
+.PP
+Implements \fBmtrx::IBoundingVolume\fP\&.
+.SS "virtual bool mtrx::SphereCollider::RaycastCollision (const \fBRay\fP & ray)\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Raycast collision check for sphere colliders\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIray\fP The ray that we are check for collision on 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBmtrx::Ray\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true The ray and the sphere collide 
+.PP
+false The ray and the sphere do not collide 
+.RE
+.PP
+
+.PP
+Implements \fBmtrx::Collider\fP\&.
+.SS "void mtrx::SphereCollider::SetRadius (float radius)\fC [inline]\fP"
+
+.PP
+Set the Radius of the collider\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIradius\fP The value we want to set the radius to 
+.RE
+.PP
+
+.SS "virtual void mtrx::SphereCollider::SetScale (const glm::vec3 & scale)\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Set the Scale of the sphere collider\&. Only the X coordinate of the scale affects the collider, other coordinates are ignored\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIscale\fP The value of the scale that we want to set the collider to 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBmtrx::Collider\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MTRX Engine from the source code\&.

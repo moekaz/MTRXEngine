@@ -1,0 +1,173 @@
+\hypertarget{namespacemtrx_1_1_raycast_collision_util}{}\doxysection{mtrx\+::Raycast\+Collision\+Util Namespace Reference}
+\label{namespacemtrx_1_1_raycast_collision_util}\index{mtrx::RaycastCollisionUtil@{mtrx::RaycastCollisionUtil}}
+
+
+Utility namespace used for raycasting functionality.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacemtrx_1_1_raycast_collision_util_a9ade4a9f4a42e0942669f7e1e1532bd4}{Ray\+Sphere\+Collision}} (const glm\+::vec3 \&sphere\+Center, float sphere\+Radius, const glm\+::vec3 \&start\+Point\+Ray, const glm\+::vec3 \&ray\+Direction)
+\begin{DoxyCompactList}\small\item\em Raycasting onto a sphere collider. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacemtrx_1_1_raycast_collision_util_ab4d2464cead181062893def44dba015e}{Ray\+Capsule\+Collision}} (const glm\+::vec3 \&start\+Position\+Ray, const glm\+::vec3 \&direction, const glm\+::vec3 \&A, const glm\+::vec3 \&B, float caps\+Radius)
+\begin{DoxyCompactList}\small\item\em Raycasting onto a capsule collider. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacemtrx_1_1_raycast_collision_util_a51b04fb66e7ff65a36760ae7719f53a9}{Ray\+Box\+Collision}} (const glm\+::vec3 \&ray\+Start, const glm\+::vec3 \&ray\+Direction, const glm\+::vec3 \&center, const glm\+::vec3 $\ast$axes, const float $\ast$half\+Extents)
+\begin{DoxyCompactList}\small\item\em Raycasting onto a box collider. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} $\ast$ \mbox{\hyperlink{namespacemtrx_1_1_raycast_collision_util_aaf0e7f72e77797fed30e2468c8e34eeb}{Raycast\+Filtered}} (const std\+::map$<$ int, \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} $\ast$ $>$ \&colliders, const std\+::vector$<$ \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} $\ast$ $>$ \&filter\+Colliders, const glm\+::vec3 \&ray\+Start\+Position, const glm\+::vec3 \&ray\+Direction)
+\begin{DoxyCompactList}\small\item\em N\+OT T\+E\+S\+T\+ED OR U\+S\+ED. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} $\ast$ \mbox{\hyperlink{namespacemtrx_1_1_raycast_collision_util_a58671bfdaddc9adb4510553f29a1c4e9}{Raycast\+Unfiltered}} (const std\+::map$<$ int, \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} $\ast$ $>$ \&colliders, const glm\+::vec3 \&ray\+Start\+Position, const glm\+::vec3 \&ray\+Direction)
+\begin{DoxyCompactList}\small\item\em N\+OT T\+E\+S\+T\+ED OR U\+S\+ED. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Utility namespace used for raycasting functionality. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacemtrx_1_1_raycast_collision_util_a51b04fb66e7ff65a36760ae7719f53a9}\label{namespacemtrx_1_1_raycast_collision_util_a51b04fb66e7ff65a36760ae7719f53a9}} 
+\index{mtrx::RaycastCollisionUtil@{mtrx::RaycastCollisionUtil}!RayBoxCollision@{RayBoxCollision}}
+\index{RayBoxCollision@{RayBoxCollision}!mtrx::RaycastCollisionUtil@{mtrx::RaycastCollisionUtil}}
+\doxysubsubsection{\texorpdfstring{RayBoxCollision()}{RayBoxCollision()}}
+{\footnotesize\ttfamily bool mtrx\+::\+Raycast\+Collision\+Util\+::\+Ray\+Box\+Collision (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{ray\+Start,  }\item[{const glm\+::vec3 \&}]{ray\+Direction,  }\item[{const glm\+::vec3 \&}]{center,  }\item[{const glm\+::vec3 $\ast$}]{axes,  }\item[{const float $\ast$}]{half\+Extents }\end{DoxyParamCaption})}
+
+
+
+Raycasting onto a box collider. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classmtrx_1_1_o_o_b_b_collider}{mtrx\+::\+O\+O\+B\+B\+Collider}} 
+
+\mbox{\hyperlink{classmtrx_1_1_a_a_b_b_collider}{mtrx\+::\+A\+A\+B\+B\+Collider}} 
+
+\mbox{\hyperlink{classmtrx_1_1_ray}{mtrx\+::\+Ray}}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em ray\+Start} & The starting point of the ray \\
+\hline
+{\em ray\+Direction} & The normalized direction of the ray \\
+\hline
+{\em center} & The center of the box collider \\
+\hline
+{\em axes} & The axes of the collider \\
+\hline
+{\em half\+Extents} & the half extents of the collider \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true The ray and box collide 
+
+false The ray and box do not collide 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_raycast_collision_util_ab4d2464cead181062893def44dba015e}\label{namespacemtrx_1_1_raycast_collision_util_ab4d2464cead181062893def44dba015e}} 
+\index{mtrx::RaycastCollisionUtil@{mtrx::RaycastCollisionUtil}!RayCapsuleCollision@{RayCapsuleCollision}}
+\index{RayCapsuleCollision@{RayCapsuleCollision}!mtrx::RaycastCollisionUtil@{mtrx::RaycastCollisionUtil}}
+\doxysubsubsection{\texorpdfstring{RayCapsuleCollision()}{RayCapsuleCollision()}}
+{\footnotesize\ttfamily bool mtrx\+::\+Raycast\+Collision\+Util\+::\+Ray\+Capsule\+Collision (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{start\+Position\+Ray,  }\item[{const glm\+::vec3 \&}]{direction,  }\item[{const glm\+::vec3 \&}]{A,  }\item[{const glm\+::vec3 \&}]{B,  }\item[{float}]{caps\+Radius }\end{DoxyParamCaption})}
+
+
+
+Raycasting onto a capsule collider. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classmtrx_1_1_capsule_collider}{mtrx\+::\+Capsule\+Collider}} 
+
+\mbox{\hyperlink{classmtrx_1_1_ray}{mtrx\+::\+Ray}}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Position\+Ray} & The starting position of the ray \\
+\hline
+{\em direction} & The normalized direction of the ray \\
+\hline
+{\em A} & The center of the topmost sphere of the capsule \\
+\hline
+{\em B} & The center of the bottommost sphere of the capsule \\
+\hline
+{\em caps\+Radius} & The radius of the capsule \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true The ray and the capsule collider collide 
+
+false The ray and the capsule collider do not collide 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_raycast_collision_util_aaf0e7f72e77797fed30e2468c8e34eeb}\label{namespacemtrx_1_1_raycast_collision_util_aaf0e7f72e77797fed30e2468c8e34eeb}} 
+\index{mtrx::RaycastCollisionUtil@{mtrx::RaycastCollisionUtil}!RaycastFiltered@{RaycastFiltered}}
+\index{RaycastFiltered@{RaycastFiltered}!mtrx::RaycastCollisionUtil@{mtrx::RaycastCollisionUtil}}
+\doxysubsubsection{\texorpdfstring{RaycastFiltered()}{RaycastFiltered()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}}$\ast$ mtrx\+::\+Raycast\+Collision\+Util\+::\+Raycast\+Filtered (\begin{DoxyParamCaption}\item[{const std\+::map$<$ int, \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} $\ast$ $>$ \&}]{colliders,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} $\ast$ $>$ \&}]{filter\+Colliders,  }\item[{const glm\+::vec3 \&}]{ray\+Start\+Position,  }\item[{const glm\+::vec3 \&}]{ray\+Direction }\end{DoxyParamCaption})}
+
+
+
+N\+OT T\+E\+S\+T\+ED OR U\+S\+ED. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em colliders} & \\
+\hline
+{\em filter\+Colliders} & \\
+\hline
+{\em ray\+Start\+Position} & \\
+\hline
+{\em ray\+Direction} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Collider$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_raycast_collision_util_a58671bfdaddc9adb4510553f29a1c4e9}\label{namespacemtrx_1_1_raycast_collision_util_a58671bfdaddc9adb4510553f29a1c4e9}} 
+\index{mtrx::RaycastCollisionUtil@{mtrx::RaycastCollisionUtil}!RaycastUnfiltered@{RaycastUnfiltered}}
+\index{RaycastUnfiltered@{RaycastUnfiltered}!mtrx::RaycastCollisionUtil@{mtrx::RaycastCollisionUtil}}
+\doxysubsubsection{\texorpdfstring{RaycastUnfiltered()}{RaycastUnfiltered()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}}$\ast$ mtrx\+::\+Raycast\+Collision\+Util\+::\+Raycast\+Unfiltered (\begin{DoxyParamCaption}\item[{const std\+::map$<$ int, \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} $\ast$ $>$ \&}]{colliders,  }\item[{const glm\+::vec3 \&}]{ray\+Start\+Position,  }\item[{const glm\+::vec3 \&}]{ray\+Direction }\end{DoxyParamCaption})}
+
+
+
+N\+OT T\+E\+S\+T\+ED OR U\+S\+ED. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em colliders} & \\
+\hline
+{\em ray\+Start\+Position} & \\
+\hline
+{\em ray\+Direction} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Collider$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_raycast_collision_util_a9ade4a9f4a42e0942669f7e1e1532bd4}\label{namespacemtrx_1_1_raycast_collision_util_a9ade4a9f4a42e0942669f7e1e1532bd4}} 
+\index{mtrx::RaycastCollisionUtil@{mtrx::RaycastCollisionUtil}!RaySphereCollision@{RaySphereCollision}}
+\index{RaySphereCollision@{RaySphereCollision}!mtrx::RaycastCollisionUtil@{mtrx::RaycastCollisionUtil}}
+\doxysubsubsection{\texorpdfstring{RaySphereCollision()}{RaySphereCollision()}}
+{\footnotesize\ttfamily bool mtrx\+::\+Raycast\+Collision\+Util\+::\+Ray\+Sphere\+Collision (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{sphere\+Center,  }\item[{float}]{sphere\+Radius,  }\item[{const glm\+::vec3 \&}]{start\+Point\+Ray,  }\item[{const glm\+::vec3 \&}]{ray\+Direction }\end{DoxyParamCaption})}
+
+
+
+Raycasting onto a sphere collider. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classmtrx_1_1_sphere_collider}{mtrx\+::\+Sphere\+Collider}} 
+
+\mbox{\hyperlink{classmtrx_1_1_ray}{mtrx\+::\+Ray}}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em sphere\+Center} & Center of the sphere collider \\
+\hline
+{\em sphere\+Radius} & Radius of the sphere collider \\
+\hline
+{\em start\+Point\+Ray} & Start point of the ray \\
+\hline
+{\em ray\+Direction} & Normalized direction of the ray \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true The ray and the sphere collider collide 
+
+false The ray and the sphere collider do not collide 
+\end{DoxyReturn}

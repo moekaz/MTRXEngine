@@ -1,0 +1,400 @@
+\hypertarget{classmtrx_1_1_body}{}\doxysection{mtrx\+::Body Class Reference}
+\label{classmtrx_1_1_body}\index{mtrx::Body@{mtrx::Body}}
+
+
+Implementation of a basic particle body.  
+
+
+
+
+{\ttfamily \#include $<$Body.\+h$>$}
+
+Inheritance diagram for mtrx\+::Body\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classmtrx_1_1_body}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmtrx_1_1_body_a7a4c5e198af72feb53858862c931061c}{Body}} (const glm\+::vec3 \&position=glm\+::vec3(), const glm\+::quat \&orientation=glm\+::quat(), const glm\+::vec3 \&scale=glm\+::vec3(), const float mass=M\+A\+X\+\_\+\+M\+A\+SS)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classmtrx_1_1_body}{Body}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classmtrx_1_1_body_a2785fca109e166b5c5d45db1b38c38dc}{$\sim$\+Body}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classmtrx_1_1_body}{Body}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_body_a53b1287b73ec47ee2dd12ac707ab1cd5}{Add\+Force}} (const glm\+::vec3 \&force)
+\begin{DoxyCompactList}\small\item\em Adding a force vector at the center of gravity of the body. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmtrx_1_1_body_a84c78a39b0133cc83279ef3184923487}{Integrate}} (float delta\+Time)=0
+\begin{DoxyCompactList}\small\item\em Integrating the forces applied to the body. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmtrx_1_1_body_a0080c70c519850e2644233aba78b34e8}{Clear\+Accumulators}} ()=0
+\begin{DoxyCompactList}\small\item\em Clearing the accumulators of the body. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_body_a0031fc617536db45b761c4a06d6d1c2d}{Set\+Inverse\+Mass}} (const float inverse\+Mass)
+\begin{DoxyCompactList}\small\item\em Set the Inverse Mass of the body. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_body_a64aca7d223825ced434d82dac4d07894}{Set\+Position}} (const glm\+::vec3 \&position)
+\begin{DoxyCompactList}\small\item\em Set the Position of the body. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_body_ac0be253dd711b412b890cb93fc463916}{Set\+Velocity}} (const glm\+::vec3 \&velocity)
+\begin{DoxyCompactList}\small\item\em Set the Velocity of the body. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_body_ae414507343efd9db5b8d25c0cc756833}{Set\+Acceleration}} (const glm\+::vec3 \&acceleration)
+\begin{DoxyCompactList}\small\item\em Set the Acceleration of the body. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_body_a34174bf1b830d4612fe81ad57881c6b8}{Set\+Linear\+Damping}} (const float damping)
+\begin{DoxyCompactList}\small\item\em Set the Linear Damping of the body. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_body_afbcd2ba726afc0b7f0fe7be714700bce}{Set\+Mass}} (const float mass)
+\begin{DoxyCompactList}\small\item\em Set the mass of the body. \end{DoxyCompactList}\item 
+glm\+::quat \& \mbox{\hyperlink{classmtrx_1_1_body_a48cca0e976f3366b89895f8914d5cbf9}{Get\+Orientation}} ()
+\begin{DoxyCompactList}\small\item\em Get the Orientation of the body. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmtrx_1_1_body_a9663bf0a999b7cb11c5e0811aa55d1e5}{Get\+Is\+Infinite\+Mass}} ()
+\begin{DoxyCompactList}\small\item\em Checking whether we this body is of infinite mass by checking that the inverse mass is 0. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classmtrx_1_1_body_ae43c88a3dddee1538fdb03d7df2ea386}{Get\+Inverse\+Mass}} () const
+\begin{DoxyCompactList}\small\item\em Get the Inverse Mass of the body. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classmtrx_1_1_body_a40a8628a4f4afab000cd4403bca2d881}{Get\+Damping}} () const
+\begin{DoxyCompactList}\small\item\em Get the linear damping of the body. \end{DoxyCompactList}\item 
+glm\+::vec3 \& \mbox{\hyperlink{classmtrx_1_1_body_a1c5804b393a71296a4bbd75376ee9f65}{Get\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Get the Position of the body. \end{DoxyCompactList}\item 
+glm\+::vec3 \& \mbox{\hyperlink{classmtrx_1_1_body_a7b479086ce0da500829d1450a2c463e9}{Get\+Velocity}} ()
+\begin{DoxyCompactList}\small\item\em Get the Velocity of the body. \end{DoxyCompactList}\item 
+glm\+::vec3 \& \mbox{\hyperlink{classmtrx_1_1_body_a698b85966ec6c5d62c4e48341bd54e53}{Get\+Acceleration}} ()
+\begin{DoxyCompactList}\small\item\em Get the Acceleration of the body. \end{DoxyCompactList}\item 
+glm\+::vec3 \& \mbox{\hyperlink{classmtrx_1_1_body_ae5a0abd0bf98dff559d7908b14c28f18}{Get\+Accum\+Forces}} ()
+\begin{DoxyCompactList}\small\item\em Get the accumulated forces applied on the body. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmtrx_1_1_transform}{Transform}} \& \mbox{\hyperlink{classmtrx_1_1_body_aa3c81e1dea71472177a2f155742380e5}{Get\+Transform}} ()
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{classmtrx_1_1_transform}{Transform}} of the body. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classmtrx_1_1_body_af8522fa93cdcd293a4158f6706d6a1aa}{Get\+Mass}} () const
+\begin{DoxyCompactList}\small\item\em Get the Mass of the body. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_body_a04a7b478f36e5275994c161ba50c674f}\label{classmtrx_1_1_body_a04a7b478f36e5275994c161ba50c674f}} 
+\mbox{\hyperlink{classmtrx_1_1_transform}{Transform}} {\bfseries transform}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_body_aab973a149d64c114165b4617dcfe7013}\label{classmtrx_1_1_body_aab973a149d64c114165b4617dcfe7013}} 
+glm\+::vec3 {\bfseries velocity}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_body_a84062092bf0153dac01e6f53b1f38ff3}\label{classmtrx_1_1_body_a84062092bf0153dac01e6f53b1f38ff3}} 
+glm\+::vec3 {\bfseries acceleration}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_body_ac8352a27c8057002cf19f5179863f0b4}\label{classmtrx_1_1_body_ac8352a27c8057002cf19f5179863f0b4}} 
+glm\+::vec3 {\bfseries accum\+Forces}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_body_a73b28247b7bc3c9e00067b32ed6122ec}\label{classmtrx_1_1_body_a73b28247b7bc3c9e00067b32ed6122ec}} 
+float {\bfseries linear\+Damping}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_body_ab19356a752ad6f8e254834174f1aec14}\label{classmtrx_1_1_body_ab19356a752ad6f8e254834174f1aec14}} 
+float {\bfseries inverse\+Mass}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Implementation of a basic particle body. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmtrx_1_1_body_a7a4c5e198af72feb53858862c931061c}\label{classmtrx_1_1_body_a7a4c5e198af72feb53858862c931061c}} 
+\index{mtrx::Body@{mtrx::Body}!Body@{Body}}
+\index{Body@{Body}!mtrx::Body@{mtrx::Body}}
+\doxysubsubsection{\texorpdfstring{Body()}{Body()}}
+{\footnotesize\ttfamily mtrx\+::\+Body\+::\+Body (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{position = {\ttfamily glm\+:\+:vec3()},  }\item[{const glm\+::quat \&}]{orientation = {\ttfamily glm\+:\+:quat()},  }\item[{const glm\+::vec3 \&}]{scale = {\ttfamily glm\+:\+:vec3()},  }\item[{const float}]{mass = {\ttfamily MAX\+\_\+MASS} }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classmtrx_1_1_body}{Body}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position of the body \\
+\hline
+{\em orientation} & Orientation of the body \\
+\hline
+{\em scale} & Scale of the body \\
+\hline
+{\em mass} & Mass of the body \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_body_a2785fca109e166b5c5d45db1b38c38dc}\label{classmtrx_1_1_body_a2785fca109e166b5c5d45db1b38c38dc}} 
+\index{mtrx::Body@{mtrx::Body}!````~Body@{$\sim$Body}}
+\index{````~Body@{$\sim$Body}!mtrx::Body@{mtrx::Body}}
+\doxysubsubsection{\texorpdfstring{$\sim$Body()}{~Body()}}
+{\footnotesize\ttfamily virtual mtrx\+::\+Body\+::$\sim$\+Body (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destroy the \mbox{\hyperlink{classmtrx_1_1_body}{Body}} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmtrx_1_1_body_a53b1287b73ec47ee2dd12ac707ab1cd5}\label{classmtrx_1_1_body_a53b1287b73ec47ee2dd12ac707ab1cd5}} 
+\index{mtrx::Body@{mtrx::Body}!AddForce@{AddForce}}
+\index{AddForce@{AddForce}!mtrx::Body@{mtrx::Body}}
+\doxysubsubsection{\texorpdfstring{AddForce()}{AddForce()}}
+{\footnotesize\ttfamily void mtrx\+::\+Body\+::\+Add\+Force (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{force }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adding a force vector at the center of gravity of the body. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em force} & The force vector that we will be added to the body\textquotesingle{}s force accumulator \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_body_a0080c70c519850e2644233aba78b34e8}\label{classmtrx_1_1_body_a0080c70c519850e2644233aba78b34e8}} 
+\index{mtrx::Body@{mtrx::Body}!ClearAccumulators@{ClearAccumulators}}
+\index{ClearAccumulators@{ClearAccumulators}!mtrx::Body@{mtrx::Body}}
+\doxysubsubsection{\texorpdfstring{ClearAccumulators()}{ClearAccumulators()}}
+{\footnotesize\ttfamily virtual void mtrx\+::\+Body\+::\+Clear\+Accumulators (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Clearing the accumulators of the body. 
+
+
+
+Implemented in \mbox{\hyperlink{classmtrx_1_1_rigidbody_acf418f9a9cf3daa8401f40d607d4594f}{mtrx\+::\+Rigidbody}}.
+
+\mbox{\Hypertarget{classmtrx_1_1_body_a698b85966ec6c5d62c4e48341bd54e53}\label{classmtrx_1_1_body_a698b85966ec6c5d62c4e48341bd54e53}} 
+\index{mtrx::Body@{mtrx::Body}!GetAcceleration@{GetAcceleration}}
+\index{GetAcceleration@{GetAcceleration}!mtrx::Body@{mtrx::Body}}
+\doxysubsubsection{\texorpdfstring{GetAcceleration()}{GetAcceleration()}}
+{\footnotesize\ttfamily glm\+::vec3\& mtrx\+::\+Body\+::\+Get\+Acceleration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Acceleration of the body. 
+
+\begin{DoxyReturn}{Returns}
+glm\+::vec3\& The value of the acceleration 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_body_ae5a0abd0bf98dff559d7908b14c28f18}\label{classmtrx_1_1_body_ae5a0abd0bf98dff559d7908b14c28f18}} 
+\index{mtrx::Body@{mtrx::Body}!GetAccumForces@{GetAccumForces}}
+\index{GetAccumForces@{GetAccumForces}!mtrx::Body@{mtrx::Body}}
+\doxysubsubsection{\texorpdfstring{GetAccumForces()}{GetAccumForces()}}
+{\footnotesize\ttfamily glm\+::vec3\& mtrx\+::\+Body\+::\+Get\+Accum\+Forces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the accumulated forces applied on the body. 
+
+\begin{DoxyReturn}{Returns}
+glm\+::vec3\& The value of the accumulated forces 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_body_a40a8628a4f4afab000cd4403bca2d881}\label{classmtrx_1_1_body_a40a8628a4f4afab000cd4403bca2d881}} 
+\index{mtrx::Body@{mtrx::Body}!GetDamping@{GetDamping}}
+\index{GetDamping@{GetDamping}!mtrx::Body@{mtrx::Body}}
+\doxysubsubsection{\texorpdfstring{GetDamping()}{GetDamping()}}
+{\footnotesize\ttfamily float mtrx\+::\+Body\+::\+Get\+Damping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the linear damping of the body. 
+
+\begin{DoxyReturn}{Returns}
+float The value of the linear damping 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_body_ae43c88a3dddee1538fdb03d7df2ea386}\label{classmtrx_1_1_body_ae43c88a3dddee1538fdb03d7df2ea386}} 
+\index{mtrx::Body@{mtrx::Body}!GetInverseMass@{GetInverseMass}}
+\index{GetInverseMass@{GetInverseMass}!mtrx::Body@{mtrx::Body}}
+\doxysubsubsection{\texorpdfstring{GetInverseMass()}{GetInverseMass()}}
+{\footnotesize\ttfamily float mtrx\+::\+Body\+::\+Get\+Inverse\+Mass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Inverse Mass of the body. 
+
+\begin{DoxyReturn}{Returns}
+float The value of the inverse mass of the body 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_body_a9663bf0a999b7cb11c5e0811aa55d1e5}\label{classmtrx_1_1_body_a9663bf0a999b7cb11c5e0811aa55d1e5}} 
+\index{mtrx::Body@{mtrx::Body}!GetIsInfiniteMass@{GetIsInfiniteMass}}
+\index{GetIsInfiniteMass@{GetIsInfiniteMass}!mtrx::Body@{mtrx::Body}}
+\doxysubsubsection{\texorpdfstring{GetIsInfiniteMass()}{GetIsInfiniteMass()}}
+{\footnotesize\ttfamily bool mtrx\+::\+Body\+::\+Get\+Is\+Infinite\+Mass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checking whether we this body is of infinite mass by checking that the inverse mass is 0. 
+
+\begin{DoxyReturn}{Returns}
+true The body is of infinite mass 
+
+false The body is not of infinite mass 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_body_af8522fa93cdcd293a4158f6706d6a1aa}\label{classmtrx_1_1_body_af8522fa93cdcd293a4158f6706d6a1aa}} 
+\index{mtrx::Body@{mtrx::Body}!GetMass@{GetMass}}
+\index{GetMass@{GetMass}!mtrx::Body@{mtrx::Body}}
+\doxysubsubsection{\texorpdfstring{GetMass()}{GetMass()}}
+{\footnotesize\ttfamily float mtrx\+::\+Body\+::\+Get\+Mass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the Mass of the body. 
+
+\begin{DoxyReturn}{Returns}
+float The mass of the body 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_body_a48cca0e976f3366b89895f8914d5cbf9}\label{classmtrx_1_1_body_a48cca0e976f3366b89895f8914d5cbf9}} 
+\index{mtrx::Body@{mtrx::Body}!GetOrientation@{GetOrientation}}
+\index{GetOrientation@{GetOrientation}!mtrx::Body@{mtrx::Body}}
+\doxysubsubsection{\texorpdfstring{GetOrientation()}{GetOrientation()}}
+{\footnotesize\ttfamily glm\+::quat\& mtrx\+::\+Body\+::\+Get\+Orientation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Orientation of the body. 
+
+\begin{DoxyReturn}{Returns}
+glm\+::quat\& The quaternion orientation value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_body_a1c5804b393a71296a4bbd75376ee9f65}\label{classmtrx_1_1_body_a1c5804b393a71296a4bbd75376ee9f65}} 
+\index{mtrx::Body@{mtrx::Body}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!mtrx::Body@{mtrx::Body}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily glm\+::vec3\& mtrx\+::\+Body\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Position of the body. 
+
+\begin{DoxyReturn}{Returns}
+glm\+::vec3\& The position value of the body 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_body_aa3c81e1dea71472177a2f155742380e5}\label{classmtrx_1_1_body_aa3c81e1dea71472177a2f155742380e5}} 
+\index{mtrx::Body@{mtrx::Body}!GetTransform@{GetTransform}}
+\index{GetTransform@{GetTransform}!mtrx::Body@{mtrx::Body}}
+\doxysubsubsection{\texorpdfstring{GetTransform()}{GetTransform()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmtrx_1_1_transform}{Transform}}\& mtrx\+::\+Body\+::\+Get\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the \mbox{\hyperlink{classmtrx_1_1_transform}{Transform}} of the body. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classmtrx_1_1_transform}{Transform}}\& The transform of the body 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_body_a7b479086ce0da500829d1450a2c463e9}\label{classmtrx_1_1_body_a7b479086ce0da500829d1450a2c463e9}} 
+\index{mtrx::Body@{mtrx::Body}!GetVelocity@{GetVelocity}}
+\index{GetVelocity@{GetVelocity}!mtrx::Body@{mtrx::Body}}
+\doxysubsubsection{\texorpdfstring{GetVelocity()}{GetVelocity()}}
+{\footnotesize\ttfamily glm\+::vec3\& mtrx\+::\+Body\+::\+Get\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Velocity of the body. 
+
+\begin{DoxyReturn}{Returns}
+glm\+::vec3\& The value of the velocity 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_body_a84c78a39b0133cc83279ef3184923487}\label{classmtrx_1_1_body_a84c78a39b0133cc83279ef3184923487}} 
+\index{mtrx::Body@{mtrx::Body}!Integrate@{Integrate}}
+\index{Integrate@{Integrate}!mtrx::Body@{mtrx::Body}}
+\doxysubsubsection{\texorpdfstring{Integrate()}{Integrate()}}
+{\footnotesize\ttfamily virtual void mtrx\+::\+Body\+::\+Integrate (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Integrating the forces applied to the body. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The time elapsed between frames \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmtrx_1_1_i_integratable_a072fe34891d78e09486d082583988c7d}{mtrx\+::\+I\+Integratable}}.
+
+
+
+Implemented in \mbox{\hyperlink{classmtrx_1_1_rigidbody_a7002d5a155bc0a1dbdfa5a0aeb5a46bf}{mtrx\+::\+Rigidbody}}.
+
+\mbox{\Hypertarget{classmtrx_1_1_body_ae414507343efd9db5b8d25c0cc756833}\label{classmtrx_1_1_body_ae414507343efd9db5b8d25c0cc756833}} 
+\index{mtrx::Body@{mtrx::Body}!SetAcceleration@{SetAcceleration}}
+\index{SetAcceleration@{SetAcceleration}!mtrx::Body@{mtrx::Body}}
+\doxysubsubsection{\texorpdfstring{SetAcceleration()}{SetAcceleration()}}
+{\footnotesize\ttfamily void mtrx\+::\+Body\+::\+Set\+Acceleration (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{acceleration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the Acceleration of the body. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em acceleration} & The new acceleration value of the body \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_body_a0031fc617536db45b761c4a06d6d1c2d}\label{classmtrx_1_1_body_a0031fc617536db45b761c4a06d6d1c2d}} 
+\index{mtrx::Body@{mtrx::Body}!SetInverseMass@{SetInverseMass}}
+\index{SetInverseMass@{SetInverseMass}!mtrx::Body@{mtrx::Body}}
+\doxysubsubsection{\texorpdfstring{SetInverseMass()}{SetInverseMass()}}
+{\footnotesize\ttfamily void mtrx\+::\+Body\+::\+Set\+Inverse\+Mass (\begin{DoxyParamCaption}\item[{const float}]{inverse\+Mass }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the Inverse Mass of the body. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inverse\+Mass} & The new value of the inverse mass \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_body_a34174bf1b830d4612fe81ad57881c6b8}\label{classmtrx_1_1_body_a34174bf1b830d4612fe81ad57881c6b8}} 
+\index{mtrx::Body@{mtrx::Body}!SetLinearDamping@{SetLinearDamping}}
+\index{SetLinearDamping@{SetLinearDamping}!mtrx::Body@{mtrx::Body}}
+\doxysubsubsection{\texorpdfstring{SetLinearDamping()}{SetLinearDamping()}}
+{\footnotesize\ttfamily void mtrx\+::\+Body\+::\+Set\+Linear\+Damping (\begin{DoxyParamCaption}\item[{const float}]{damping }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the Linear Damping of the body. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em damping} & the new linear damping value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_body_afbcd2ba726afc0b7f0fe7be714700bce}\label{classmtrx_1_1_body_afbcd2ba726afc0b7f0fe7be714700bce}} 
+\index{mtrx::Body@{mtrx::Body}!SetMass@{SetMass}}
+\index{SetMass@{SetMass}!mtrx::Body@{mtrx::Body}}
+\doxysubsubsection{\texorpdfstring{SetMass()}{SetMass()}}
+{\footnotesize\ttfamily void mtrx\+::\+Body\+::\+Set\+Mass (\begin{DoxyParamCaption}\item[{const float}]{mass }\end{DoxyParamCaption})}
+
+
+
+Set the mass of the body. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mass} & The new value of the mass \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_body_a64aca7d223825ced434d82dac4d07894}\label{classmtrx_1_1_body_a64aca7d223825ced434d82dac4d07894}} 
+\index{mtrx::Body@{mtrx::Body}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!mtrx::Body@{mtrx::Body}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily void mtrx\+::\+Body\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the Position of the body. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The new position of the body \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_body_ac0be253dd711b412b890cb93fc463916}\label{classmtrx_1_1_body_ac0be253dd711b412b890cb93fc463916}} 
+\index{mtrx::Body@{mtrx::Body}!SetVelocity@{SetVelocity}}
+\index{SetVelocity@{SetVelocity}!mtrx::Body@{mtrx::Body}}
+\doxysubsubsection{\texorpdfstring{SetVelocity()}{SetVelocity()}}
+{\footnotesize\ttfamily void mtrx\+::\+Body\+::\+Set\+Velocity (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{velocity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the Velocity of the body. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em velocity} & The new velocity value of the body \\
+\hline
+\end{DoxyParams}

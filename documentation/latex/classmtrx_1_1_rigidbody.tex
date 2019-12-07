@@ -1,0 +1,369 @@
+\hypertarget{classmtrx_1_1_rigidbody}{}\doxysection{mtrx\+::Rigidbody Class Reference}
+\label{classmtrx_1_1_rigidbody}\index{mtrx::Rigidbody@{mtrx::Rigidbody}}
+
+
+Implementation of rigidbodies with rigidbody dynamics newtonian force integration and rotational forces.  
+
+
+
+
+{\ttfamily \#include $<$Rigidbody.\+h$>$}
+
+Inheritance diagram for mtrx\+::Rigidbody\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classmtrx_1_1_rigidbody}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmtrx_1_1_rigidbody_a42a8ea123c8c05769e646b1e320d649a}{Rigidbody}} (float mass=M\+A\+X\+\_\+\+M\+A\+SS, bool iskinematic=false, const glm\+::vec3 \&position=glm\+::vec3(), const glm\+::quat \&orientation=glm\+::angle\+Axis(0.f, glm\+::vec3(0, 1, 0)), const glm\+::vec3 \&scale=glm\+::vec3(1, 1, 1), const glm\+::mat3 \&inertia\+Tensor=glm\+::mat3(1.\+0f))
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classmtrx_1_1_rigidbody}{Rigidbody}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmtrx_1_1_rigidbody_af14290171239ff48768a813b4be18973}{$\sim$\+Rigidbody}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classmtrx_1_1_rigidbody}{Rigidbody}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_rigidbody_af211b5d887926f56819be103acb87601}{Set\+Inverse\+Inertia\+Tensor}} (const glm\+::mat3 \&inertia\+Tensor)
+\begin{DoxyCompactList}\small\item\em Set the Inverse Inertia Tensor of the body. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_rigidbody_a6d405e86674e7b972b6dac8399b67c4c}{Set\+Angular\+Damping}} (float angular\+Damping)
+\begin{DoxyCompactList}\small\item\em Set the Angular Damping of the rigidbody Angular damping allows us to dampen torque forces applied to the body as a function of time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_rigidbody_a1e065382d9fb4792b5c0b3c44d2fa2d9}{Set\+Orientation}} (glm\+::quat \&orientation)
+\begin{DoxyCompactList}\small\item\em Set the Orientation of the body. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_rigidbody_a2ea618bfa2582351fe678732ddaaac21}{Set\+Rotation}} (glm\+::vec3 \&rotation)
+\begin{DoxyCompactList}\small\item\em Set the Rotation value of the rigidbody This rotation value is used to generate torque forces. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_rigidbody_a8924fc836d641645545967a8f9d597a0}{Set\+Is\+Kinematic}} (bool kinematic)
+\begin{DoxyCompactList}\small\item\em Set the kinematic value. \end{DoxyCompactList}\item 
+glm\+::mat3 \& \mbox{\hyperlink{classmtrx_1_1_rigidbody_a97a357735b238b89617c239f02b5f0f7}{Get\+Inverse\+Inertia\+Tensor}} ()
+\begin{DoxyCompactList}\small\item\em Get the Inverse Inertia Tensor of the body. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classmtrx_1_1_rigidbody_afbf0cbe150482320dd67725188af59ab}{Get\+Angular\+Damping}} () const
+\begin{DoxyCompactList}\small\item\em Get the Angular Damping of the body. \end{DoxyCompactList}\item 
+glm\+::mat3x4 \mbox{\hyperlink{classmtrx_1_1_rigidbody_aa260080a5e415c0ecc059254fbbabb07}{Get\+Obj\+To\+World\+Mat}} ()
+\begin{DoxyCompactList}\small\item\em Get the Obj To World Mat. \end{DoxyCompactList}\item 
+glm\+::vec3 \& \mbox{\hyperlink{classmtrx_1_1_rigidbody_a6690f4c3a02bbcddb74fb0e056480ac3}{Get\+Rotation}} ()
+\begin{DoxyCompactList}\small\item\em Get the Rotation of the body. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmtrx_1_1_rigidbody_a853ef16a2e765e40255b3e62cb50b6d3}{Get\+Is\+Kinematic}} ()
+\begin{DoxyCompactList}\small\item\em Get whether the body is kinematic. \end{DoxyCompactList}\item 
+glm\+::mat3 \mbox{\hyperlink{classmtrx_1_1_rigidbody_af093fef269dac835d233d3d43eef02b6}{Calculate\+I\+I\+T\+World}} ()
+\begin{DoxyCompactList}\small\item\em Calculating the inverse inertia tensor in world space. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_rigidbody_a23904a24080b161312bfc0734a64de3b}{Add\+Torque}} (const glm\+::vec3 \&torque)
+\begin{DoxyCompactList}\small\item\em Add a torque force. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_rigidbody_acf418f9a9cf3daa8401f40d607d4594f}{Clear\+Accumulators}} () override
+\begin{DoxyCompactList}\small\item\em Clear acculmulators of rigidbody. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_rigidbody_a7002d5a155bc0a1dbdfa5a0aeb5a46bf}{Integrate}} (float delta\+Time) override
+\begin{DoxyCompactList}\small\item\em Integrate the values of the rigidbody. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_rigidbody_ae86166e8ce2f6eab660da644d0697995}{Calculate\+Obj\+To\+World\+Mat}} ()
+\begin{DoxyCompactList}\small\item\em Calculate object space to world space matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_rigidbody_a68188cc7105320d5a7cb39cac9002fba}{Add\+Force\+At\+Point}} (const glm\+::vec3 \&force, const glm\+::vec3 \&point)
+\begin{DoxyCompactList}\small\item\em Add a force at a certain point in space. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_rigidbody_a41635ac1ae40c4057cbc438751428cc9}{Calculate\+Body\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Update some of the information of the rigidbody. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_a68e6ecc68099682e0699c1f9a9618983}\label{classmtrx_1_1_rigidbody_a68e6ecc68099682e0699c1f9a9618983}} 
+glm\+::vec3 {\bfseries rotation}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_aff6814447b805cd56289c5013391cc54}\label{classmtrx_1_1_rigidbody_aff6814447b805cd56289c5013391cc54}} 
+glm\+::mat3 {\bfseries inverse\+Inertia\+Tensor}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_a880ad32d920e1bc9b97d02e449cf40a8}\label{classmtrx_1_1_rigidbody_a880ad32d920e1bc9b97d02e449cf40a8}} 
+glm\+::mat3x4 {\bfseries obj\+To\+World\+Mat}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_acffffd7e2acf4cf3e034a34ff31db23f}\label{classmtrx_1_1_rigidbody_acffffd7e2acf4cf3e034a34ff31db23f}} 
+glm\+::vec3 {\bfseries accum\+Torque}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_a998a8563a43b3ec9c77bf32d5241b759}\label{classmtrx_1_1_rigidbody_a998a8563a43b3ec9c77bf32d5241b759}} 
+float {\bfseries angular\+Damping}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_af6828890817ddc621c1af663b1ecd8f7}\label{classmtrx_1_1_rigidbody_af6828890817ddc621c1af663b1ecd8f7}} 
+bool {\bfseries is\+Kinematic}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_a9f8a76a828601bb64b16672524c4aed3}\label{classmtrx_1_1_rigidbody_a9f8a76a828601bb64b16672524c4aed3}} 
+\mbox{\hyperlink{structmtrx_1_1_object_axes}{Object\+Axes}} {\bfseries axes}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Implementation of rigidbodies with rigidbody dynamics newtonian force integration and rotational forces. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_a42a8ea123c8c05769e646b1e320d649a}\label{classmtrx_1_1_rigidbody_a42a8ea123c8c05769e646b1e320d649a}} 
+\index{mtrx::Rigidbody@{mtrx::Rigidbody}!Rigidbody@{Rigidbody}}
+\index{Rigidbody@{Rigidbody}!mtrx::Rigidbody@{mtrx::Rigidbody}}
+\doxysubsubsection{\texorpdfstring{Rigidbody()}{Rigidbody()}}
+{\footnotesize\ttfamily mtrx\+::\+Rigidbody\+::\+Rigidbody (\begin{DoxyParamCaption}\item[{float}]{mass = {\ttfamily MAX\+\_\+MASS},  }\item[{bool}]{iskinematic = {\ttfamily false},  }\item[{const glm\+::vec3 \&}]{position = {\ttfamily glm\+:\+:vec3()},  }\item[{const glm\+::quat \&}]{orientation = {\ttfamily glm\+:\+:angleAxis(0.f,~glm\+:\+:vec3(0,~1,~0))},  }\item[{const glm\+::vec3 \&}]{scale = {\ttfamily glm\+:\+:vec3(1,~1,~1)},  }\item[{const glm\+::mat3 \&}]{inertia\+Tensor = {\ttfamily glm\+:\+:mat3(1.0f)} }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classmtrx_1_1_rigidbody}{Rigidbody}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mass} & The mass of the rigidbody \\
+\hline
+{\em iskinematic} & Whether the rigidbody is kinematic. A kinematic object does not affect other rigidbodies in the simulation \\
+\hline
+{\em position} & The position of the rigidbody \\
+\hline
+{\em orientation} & The orientation of the rigidbody \\
+\hline
+{\em scale} & The scale of the rigidbody \\
+\hline
+{\em inertia\+Tensor} & The inertia tensor of the rigidbody \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_af14290171239ff48768a813b4be18973}\label{classmtrx_1_1_rigidbody_af14290171239ff48768a813b4be18973}} 
+\index{mtrx::Rigidbody@{mtrx::Rigidbody}!````~Rigidbody@{$\sim$Rigidbody}}
+\index{````~Rigidbody@{$\sim$Rigidbody}!mtrx::Rigidbody@{mtrx::Rigidbody}}
+\doxysubsubsection{\texorpdfstring{$\sim$Rigidbody()}{~Rigidbody()}}
+{\footnotesize\ttfamily mtrx\+::\+Rigidbody\+::$\sim$\+Rigidbody (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destroy the \mbox{\hyperlink{classmtrx_1_1_rigidbody}{Rigidbody}} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_a68188cc7105320d5a7cb39cac9002fba}\label{classmtrx_1_1_rigidbody_a68188cc7105320d5a7cb39cac9002fba}} 
+\index{mtrx::Rigidbody@{mtrx::Rigidbody}!AddForceAtPoint@{AddForceAtPoint}}
+\index{AddForceAtPoint@{AddForceAtPoint}!mtrx::Rigidbody@{mtrx::Rigidbody}}
+\doxysubsubsection{\texorpdfstring{AddForceAtPoint()}{AddForceAtPoint()}}
+{\footnotesize\ttfamily void mtrx\+::\+Rigidbody\+::\+Add\+Force\+At\+Point (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{force,  }\item[{const glm\+::vec3 \&}]{point }\end{DoxyParamCaption})}
+
+
+
+Add a force at a certain point in space. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em force} & The force that we want to add \\
+\hline
+{\em point} & The point upon which to apply the force \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_a23904a24080b161312bfc0734a64de3b}\label{classmtrx_1_1_rigidbody_a23904a24080b161312bfc0734a64de3b}} 
+\index{mtrx::Rigidbody@{mtrx::Rigidbody}!AddTorque@{AddTorque}}
+\index{AddTorque@{AddTorque}!mtrx::Rigidbody@{mtrx::Rigidbody}}
+\doxysubsubsection{\texorpdfstring{AddTorque()}{AddTorque()}}
+{\footnotesize\ttfamily void mtrx\+::\+Rigidbody\+::\+Add\+Torque (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{torque }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a torque force. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em torque} & The torque force that we want to add \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_a41635ac1ae40c4057cbc438751428cc9}\label{classmtrx_1_1_rigidbody_a41635ac1ae40c4057cbc438751428cc9}} 
+\index{mtrx::Rigidbody@{mtrx::Rigidbody}!CalculateBodyData@{CalculateBodyData}}
+\index{CalculateBodyData@{CalculateBodyData}!mtrx::Rigidbody@{mtrx::Rigidbody}}
+\doxysubsubsection{\texorpdfstring{CalculateBodyData()}{CalculateBodyData()}}
+{\footnotesize\ttfamily void mtrx\+::\+Rigidbody\+::\+Calculate\+Body\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update some of the information of the rigidbody. 
+
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_af093fef269dac835d233d3d43eef02b6}\label{classmtrx_1_1_rigidbody_af093fef269dac835d233d3d43eef02b6}} 
+\index{mtrx::Rigidbody@{mtrx::Rigidbody}!CalculateIITWorld@{CalculateIITWorld}}
+\index{CalculateIITWorld@{CalculateIITWorld}!mtrx::Rigidbody@{mtrx::Rigidbody}}
+\doxysubsubsection{\texorpdfstring{CalculateIITWorld()}{CalculateIITWorld()}}
+{\footnotesize\ttfamily glm\+::mat3 mtrx\+::\+Rigidbody\+::\+Calculate\+I\+I\+T\+World (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculating the inverse inertia tensor in world space. 
+
+\begin{DoxyReturn}{Returns}
+glm\+::mat3 Inverse inertia tensor in world space 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_ae86166e8ce2f6eab660da644d0697995}\label{classmtrx_1_1_rigidbody_ae86166e8ce2f6eab660da644d0697995}} 
+\index{mtrx::Rigidbody@{mtrx::Rigidbody}!CalculateObjToWorldMat@{CalculateObjToWorldMat}}
+\index{CalculateObjToWorldMat@{CalculateObjToWorldMat}!mtrx::Rigidbody@{mtrx::Rigidbody}}
+\doxysubsubsection{\texorpdfstring{CalculateObjToWorldMat()}{CalculateObjToWorldMat()}}
+{\footnotesize\ttfamily void mtrx\+::\+Rigidbody\+::\+Calculate\+Obj\+To\+World\+Mat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculate object space to world space matrix. 
+
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_acf418f9a9cf3daa8401f40d607d4594f}\label{classmtrx_1_1_rigidbody_acf418f9a9cf3daa8401f40d607d4594f}} 
+\index{mtrx::Rigidbody@{mtrx::Rigidbody}!ClearAccumulators@{ClearAccumulators}}
+\index{ClearAccumulators@{ClearAccumulators}!mtrx::Rigidbody@{mtrx::Rigidbody}}
+\doxysubsubsection{\texorpdfstring{ClearAccumulators()}{ClearAccumulators()}}
+{\footnotesize\ttfamily void mtrx\+::\+Rigidbody\+::\+Clear\+Accumulators (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Clear acculmulators of rigidbody. 
+
+
+
+Implements \mbox{\hyperlink{classmtrx_1_1_body_a0080c70c519850e2644233aba78b34e8}{mtrx\+::\+Body}}.
+
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_afbf0cbe150482320dd67725188af59ab}\label{classmtrx_1_1_rigidbody_afbf0cbe150482320dd67725188af59ab}} 
+\index{mtrx::Rigidbody@{mtrx::Rigidbody}!GetAngularDamping@{GetAngularDamping}}
+\index{GetAngularDamping@{GetAngularDamping}!mtrx::Rigidbody@{mtrx::Rigidbody}}
+\doxysubsubsection{\texorpdfstring{GetAngularDamping()}{GetAngularDamping()}}
+{\footnotesize\ttfamily float mtrx\+::\+Rigidbody\+::\+Get\+Angular\+Damping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Angular Damping of the body. 
+
+\begin{DoxyReturn}{Returns}
+float The value of the angular damping 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_a97a357735b238b89617c239f02b5f0f7}\label{classmtrx_1_1_rigidbody_a97a357735b238b89617c239f02b5f0f7}} 
+\index{mtrx::Rigidbody@{mtrx::Rigidbody}!GetInverseInertiaTensor@{GetInverseInertiaTensor}}
+\index{GetInverseInertiaTensor@{GetInverseInertiaTensor}!mtrx::Rigidbody@{mtrx::Rigidbody}}
+\doxysubsubsection{\texorpdfstring{GetInverseInertiaTensor()}{GetInverseInertiaTensor()}}
+{\footnotesize\ttfamily glm\+::mat3\& mtrx\+::\+Rigidbody\+::\+Get\+Inverse\+Inertia\+Tensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Inverse Inertia Tensor of the body. 
+
+\begin{DoxyReturn}{Returns}
+glm\+::mat3\& The inver inertia tensor 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_a853ef16a2e765e40255b3e62cb50b6d3}\label{classmtrx_1_1_rigidbody_a853ef16a2e765e40255b3e62cb50b6d3}} 
+\index{mtrx::Rigidbody@{mtrx::Rigidbody}!GetIsKinematic@{GetIsKinematic}}
+\index{GetIsKinematic@{GetIsKinematic}!mtrx::Rigidbody@{mtrx::Rigidbody}}
+\doxysubsubsection{\texorpdfstring{GetIsKinematic()}{GetIsKinematic()}}
+{\footnotesize\ttfamily bool mtrx\+::\+Rigidbody\+::\+Get\+Is\+Kinematic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get whether the body is kinematic. 
+
+\begin{DoxyReturn}{Returns}
+true The body is kinematic 
+
+false The body is not kinematic 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_aa260080a5e415c0ecc059254fbbabb07}\label{classmtrx_1_1_rigidbody_aa260080a5e415c0ecc059254fbbabb07}} 
+\index{mtrx::Rigidbody@{mtrx::Rigidbody}!GetObjToWorldMat@{GetObjToWorldMat}}
+\index{GetObjToWorldMat@{GetObjToWorldMat}!mtrx::Rigidbody@{mtrx::Rigidbody}}
+\doxysubsubsection{\texorpdfstring{GetObjToWorldMat()}{GetObjToWorldMat()}}
+{\footnotesize\ttfamily glm\+::mat3x4 mtrx\+::\+Rigidbody\+::\+Get\+Obj\+To\+World\+Mat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Obj To World Mat. 
+
+\begin{DoxyReturn}{Returns}
+glm\+::mat3x4 The object space to world matrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_a6690f4c3a02bbcddb74fb0e056480ac3}\label{classmtrx_1_1_rigidbody_a6690f4c3a02bbcddb74fb0e056480ac3}} 
+\index{mtrx::Rigidbody@{mtrx::Rigidbody}!GetRotation@{GetRotation}}
+\index{GetRotation@{GetRotation}!mtrx::Rigidbody@{mtrx::Rigidbody}}
+\doxysubsubsection{\texorpdfstring{GetRotation()}{GetRotation()}}
+{\footnotesize\ttfamily glm\+::vec3\& mtrx\+::\+Rigidbody\+::\+Get\+Rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Rotation of the body. 
+
+\begin{DoxyReturn}{Returns}
+glm\+::vec3\& The rotation of the body 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_a7002d5a155bc0a1dbdfa5a0aeb5a46bf}\label{classmtrx_1_1_rigidbody_a7002d5a155bc0a1dbdfa5a0aeb5a46bf}} 
+\index{mtrx::Rigidbody@{mtrx::Rigidbody}!Integrate@{Integrate}}
+\index{Integrate@{Integrate}!mtrx::Rigidbody@{mtrx::Rigidbody}}
+\doxysubsubsection{\texorpdfstring{Integrate()}{Integrate()}}
+{\footnotesize\ttfamily void mtrx\+::\+Rigidbody\+::\+Integrate (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Integrate the values of the rigidbody. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The time elapsed by previous frame \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmtrx_1_1_body_a84c78a39b0133cc83279ef3184923487}{mtrx\+::\+Body}}.
+
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_a6d405e86674e7b972b6dac8399b67c4c}\label{classmtrx_1_1_rigidbody_a6d405e86674e7b972b6dac8399b67c4c}} 
+\index{mtrx::Rigidbody@{mtrx::Rigidbody}!SetAngularDamping@{SetAngularDamping}}
+\index{SetAngularDamping@{SetAngularDamping}!mtrx::Rigidbody@{mtrx::Rigidbody}}
+\doxysubsubsection{\texorpdfstring{SetAngularDamping()}{SetAngularDamping()}}
+{\footnotesize\ttfamily void mtrx\+::\+Rigidbody\+::\+Set\+Angular\+Damping (\begin{DoxyParamCaption}\item[{float}]{angular\+Damping }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the Angular Damping of the rigidbody Angular damping allows us to dampen torque forces applied to the body as a function of time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angular\+Damping} & The new value of angular damping \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_af211b5d887926f56819be103acb87601}\label{classmtrx_1_1_rigidbody_af211b5d887926f56819be103acb87601}} 
+\index{mtrx::Rigidbody@{mtrx::Rigidbody}!SetInverseInertiaTensor@{SetInverseInertiaTensor}}
+\index{SetInverseInertiaTensor@{SetInverseInertiaTensor}!mtrx::Rigidbody@{mtrx::Rigidbody}}
+\doxysubsubsection{\texorpdfstring{SetInverseInertiaTensor()}{SetInverseInertiaTensor()}}
+{\footnotesize\ttfamily void mtrx\+::\+Rigidbody\+::\+Set\+Inverse\+Inertia\+Tensor (\begin{DoxyParamCaption}\item[{const glm\+::mat3 \&}]{inertia\+Tensor }\end{DoxyParamCaption})}
+
+
+
+Set the Inverse Inertia Tensor of the body. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inertia\+Tensor} & The inertia tensor that we will calculate the inverse of \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_a8924fc836d641645545967a8f9d597a0}\label{classmtrx_1_1_rigidbody_a8924fc836d641645545967a8f9d597a0}} 
+\index{mtrx::Rigidbody@{mtrx::Rigidbody}!SetIsKinematic@{SetIsKinematic}}
+\index{SetIsKinematic@{SetIsKinematic}!mtrx::Rigidbody@{mtrx::Rigidbody}}
+\doxysubsubsection{\texorpdfstring{SetIsKinematic()}{SetIsKinematic()}}
+{\footnotesize\ttfamily void mtrx\+::\+Rigidbody\+::\+Set\+Is\+Kinematic (\begin{DoxyParamCaption}\item[{bool}]{kinematic }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the kinematic value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kinematic} & the new value of whether the body is kinematic \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_a1e065382d9fb4792b5c0b3c44d2fa2d9}\label{classmtrx_1_1_rigidbody_a1e065382d9fb4792b5c0b3c44d2fa2d9}} 
+\index{mtrx::Rigidbody@{mtrx::Rigidbody}!SetOrientation@{SetOrientation}}
+\index{SetOrientation@{SetOrientation}!mtrx::Rigidbody@{mtrx::Rigidbody}}
+\doxysubsubsection{\texorpdfstring{SetOrientation()}{SetOrientation()}}
+{\footnotesize\ttfamily void mtrx\+::\+Rigidbody\+::\+Set\+Orientation (\begin{DoxyParamCaption}\item[{glm\+::quat \&}]{orientation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the Orientation of the body. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em orientation} & The new orientation of the body \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_rigidbody_a2ea618bfa2582351fe678732ddaaac21}\label{classmtrx_1_1_rigidbody_a2ea618bfa2582351fe678732ddaaac21}} 
+\index{mtrx::Rigidbody@{mtrx::Rigidbody}!SetRotation@{SetRotation}}
+\index{SetRotation@{SetRotation}!mtrx::Rigidbody@{mtrx::Rigidbody}}
+\doxysubsubsection{\texorpdfstring{SetRotation()}{SetRotation()}}
+{\footnotesize\ttfamily void mtrx\+::\+Rigidbody\+::\+Set\+Rotation (\begin{DoxyParamCaption}\item[{glm\+::vec3 \&}]{rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the Rotation value of the rigidbody This rotation value is used to generate torque forces. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rotation} & The new value of the rotation \\
+\hline
+\end{DoxyParams}

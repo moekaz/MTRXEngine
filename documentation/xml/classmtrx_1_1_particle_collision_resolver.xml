@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="classmtrx_1_1_particle_collision_resolver" kind="class" language="C++" prot="public">
+    <compoundname>mtrx::ParticleCollisionResolver</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmtrx_1_1_particle_collision_resolver_1a328fa508106113159d038be8780d5dc1" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int mtrx::ParticleCollisionResolver::numIterations</definition>
+        <argsstring></argsstring>
+        <name>numIterations</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCollisionResolver.h" line="23" column="14" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCollisionResolver.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmtrx_1_1_particle_collision_resolver_1a11b64f1c8f056a836f8357d186dffed3" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int mtrx::ParticleCollisionResolver::currentIterations</definition>
+        <argsstring></argsstring>
+        <name>currentIterations</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCollisionResolver.h" line="24" column="14" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCollisionResolver.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmtrx_1_1_particle_collision_resolver_1a9dc87fd89cb12763abb97df32f06c723" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mtrx::ParticleCollisionResolver::ParticleCollisionResolver</definition>
+        <argsstring>(unsigned int numIterations)</argsstring>
+        <name>ParticleCollisionResolver</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>numIterations</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCollisionResolver.h" line="16" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_particle_collision_resolver_1a2171638f40c06fe272ffe89cf4527df5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mtrx::ParticleCollisionResolver::~ParticleCollisionResolver</definition>
+        <argsstring>()</argsstring>
+        <name>~ParticleCollisionResolver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCollisionResolver.h" line="17" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_particle_collision_resolver_1afdd730a5b4b3f2b8771065b5e93f6574" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mtrx::ParticleCollisionResolver::SetIterations</definition>
+        <argsstring>(unsigned int iterations)</argsstring>
+        <name>SetIterations</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>iterations</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCollisionResolver.h" line="19" column="13" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCollisionResolver.h" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_particle_collision_resolver_1abfcd6e0f2e8029fb85a09709a68d34ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mtrx::ParticleCollisionResolver::ResolveContacts</definition>
+        <argsstring>(std::list&lt; ParticleCollision &gt; &amp;particleCollisions)</argsstring>
+        <name>ResolveContacts</name>
+        <param>
+          <type>std::list&lt; ParticleCollision &gt; &amp;</type>
+          <declname>particleCollisions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCollisionResolver.h" line="20" column="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCollisionResolver.h" line="14" column="1" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/ParticleCollisionResolver.h" bodystart="13" bodyend="25"/>
+    <listofallmembers>
+      <member refid="classmtrx_1_1_particle_collision_resolver_1a11b64f1c8f056a836f8357d186dffed3" prot="private" virt="non-virtual"><scope>mtrx::ParticleCollisionResolver</scope><name>currentIterations</name></member>
+      <member refid="classmtrx_1_1_particle_collision_resolver_1a328fa508106113159d038be8780d5dc1" prot="private" virt="non-virtual"><scope>mtrx::ParticleCollisionResolver</scope><name>numIterations</name></member>
+      <member refid="classmtrx_1_1_particle_collision_resolver_1a9dc87fd89cb12763abb97df32f06c723" prot="public" virt="non-virtual"><scope>mtrx::ParticleCollisionResolver</scope><name>ParticleCollisionResolver</name></member>
+      <member refid="classmtrx_1_1_particle_collision_resolver_1abfcd6e0f2e8029fb85a09709a68d34ef" prot="public" virt="non-virtual"><scope>mtrx::ParticleCollisionResolver</scope><name>ResolveContacts</name></member>
+      <member refid="classmtrx_1_1_particle_collision_resolver_1afdd730a5b4b3f2b8771065b5e93f6574" prot="public" virt="non-virtual"><scope>mtrx::ParticleCollisionResolver</scope><name>SetIterations</name></member>
+      <member refid="classmtrx_1_1_particle_collision_resolver_1a2171638f40c06fe272ffe89cf4527df5" prot="public" virt="non-virtual"><scope>mtrx::ParticleCollisionResolver</scope><name>~ParticleCollisionResolver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="structmtrx_1_1_triangle" kind="struct" language="C++" prot="public">
+    <compoundname>mtrx::Triangle</compoundname>
+    <includes refid="_defs_8h" local="no">Defs.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmtrx_1_1_triangle_1aec6d48acc0a27e90fcbf2ebb31bdb7ea" prot="public" static="no" mutable="no">
+        <type>glm::vec3 *</type>
+        <definition>glm::vec3* mtrx::Triangle::a</definition>
+        <argsstring></argsstring>
+        <name>a</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" line="76" column="11" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmtrx_1_1_triangle_1a3f6dae4d7a4494eeb46eeef2b1121066" prot="public" static="no" mutable="no">
+        <type>glm::vec3 *</type>
+        <definition>glm::vec3* mtrx::Triangle::b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" line="77" column="11" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmtrx_1_1_triangle_1a88f60e57e36d2bb60f0bbebfadd980a1" prot="public" static="no" mutable="no">
+        <type>glm::vec3 *</type>
+        <definition>glm::vec3* mtrx::Triangle::c</definition>
+        <argsstring></argsstring>
+        <name>c</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" line="78" column="11" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmtrx_1_1_triangle_1ae1fc761598a5bf556d7afb7cfc0175f2" prot="public" static="no" mutable="no">
+        <type>glm::vec3 *</type>
+        <definition>glm::vec3* mtrx::Triangle::pts[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>pts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" line="81" column="11" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmtrx_1_1_triangle_1aa2620164f6fe3ea6c1e3ace2cbb60b57" prot="public" static="no" mutable="no">
+        <type>union mtrx::Triangle::@4</type>
+        <definition>union mtrx::Triangle::@4 mtrx::Triangle::@5</definition>
+        <argsstring></argsstring>
+        <name>@5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" line="82" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structmtrx_1_1_triangle_1a77386818983bcec610783134e288b8ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mtrx::Triangle::Triangle</definition>
+        <argsstring>()</argsstring>
+        <name>Triangle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" line="84" column="1" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" bodystart="84" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="structmtrx_1_1_triangle_1a3a2ea407c366b4a7af9ad32f83085ff3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mtrx::Triangle::Triangle</definition>
+        <argsstring>(glm::vec3 *a, glm::vec3 *b, glm::vec3 *c)</argsstring>
+        <name>Triangle</name>
+        <param>
+          <type>glm::vec3 *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>glm::vec3 *</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>glm::vec3 *</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" line="85" column="1" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" bodystart="85" bodyend="85"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Struct for storing a triangle. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" line="71" column="1" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/Defs.h" bodystart="70" bodyend="86"/>
+    <listofallmembers>
+      <member refid="structmtrx_1_1_triangle_1aec6d48acc0a27e90fcbf2ebb31bdb7ea" prot="public" virt="non-virtual"><scope>mtrx::Triangle</scope><name>a</name></member>
+      <member refid="structmtrx_1_1_triangle_1a3f6dae4d7a4494eeb46eeef2b1121066" prot="public" virt="non-virtual"><scope>mtrx::Triangle</scope><name>b</name></member>
+      <member refid="structmtrx_1_1_triangle_1a88f60e57e36d2bb60f0bbebfadd980a1" prot="public" virt="non-virtual"><scope>mtrx::Triangle</scope><name>c</name></member>
+      <member refid="structmtrx_1_1_triangle_1ae1fc761598a5bf556d7afb7cfc0175f2" prot="public" virt="non-virtual"><scope>mtrx::Triangle</scope><name>pts</name></member>
+      <member refid="structmtrx_1_1_triangle_1a77386818983bcec610783134e288b8ef" prot="public" virt="non-virtual"><scope>mtrx::Triangle</scope><name>Triangle</name></member>
+      <member refid="structmtrx_1_1_triangle_1a3a2ea407c366b4a7af9ad32f83085ff3" prot="public" virt="non-virtual"><scope>mtrx::Triangle</scope><name>Triangle</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

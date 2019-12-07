@@ -1,0 +1,125 @@
+\hypertarget{classmtrx_1_1rb___force_generation_registry}{}\doxysection{mtrx\+::rb\+\_\+\+Force\+Generation\+Registry Class Reference}
+\label{classmtrx_1_1rb___force_generation_registry}\index{mtrx::rb\_ForceGenerationRegistry@{mtrx::rb\_ForceGenerationRegistry}}
+
+
+Registry for force generators used to map a rigidbody to all of the force generators that are to be applied to said rigidbody.  
+
+
+
+
+{\ttfamily \#include $<$rb\+\_\+\+Force\+Generation\+Registry.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmtrx_1_1rb___force_generation_registry_a140bdc715dd2a19f0a40c11734b94fbe}{rb\+\_\+\+Force\+Generation\+Registry}} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new rb Force\+Generation\+Registry object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmtrx_1_1rb___force_generation_registry_a6bafa507f64f33a433bbf1d14f013372}{$\sim$rb\+\_\+\+Force\+Generation\+Registry}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the rb Force\+Generation\+Registry object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1rb___force_generation_registry_a28d04550b1d052bc07bb8a1fe144c59a}{Add\+Force\+Generator}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmtrx_1_1_i_rigidbody_force_generator}{I\+Rigidbody\+Force\+Generator}} $>$ \&force\+Generator)
+\begin{DoxyCompactList}\small\item\em Add a force generator to the registry. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1rb___force_generation_registry_a073b4ebafc75121ebe5012e3e3925b7f}{Remove\+Force\+Generator}} (const int index)
+\begin{DoxyCompactList}\small\item\em Remove a force generator from registry by index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1rb___force_generation_registry_a0970f5e29c6ff0e05d537c3e2a62808e}{Remove\+Force\+Generator}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmtrx_1_1_i_rigidbody_force_generator}{I\+Rigidbody\+Force\+Generator}} $>$ \&force\+Generator)
+\begin{DoxyCompactList}\small\item\em Remove force generator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1rb___force_generation_registry_a2317b527b35f8b249b827958f063a3f5}{Update\+Force\+Generators}} (\mbox{\hyperlink{classmtrx_1_1_rigidbody}{Rigidbody}} $\ast$rb, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Apply the force generators onto the rigidbody. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1rb___force_generation_registry_aa9e9c149a7659c3ba13be0c553fae29e}\label{classmtrx_1_1rb___force_generation_registry_aa9e9c149a7659c3ba13be0c553fae29e}} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmtrx_1_1_i_rigidbody_force_generator}{I\+Rigidbody\+Force\+Generator}} $>$ $>$ {\bfseries force\+Generators}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Registry for force generators used to map a rigidbody to all of the force generators that are to be applied to said rigidbody. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmtrx_1_1rb___force_generation_registry_a140bdc715dd2a19f0a40c11734b94fbe}\label{classmtrx_1_1rb___force_generation_registry_a140bdc715dd2a19f0a40c11734b94fbe}} 
+\index{mtrx::rb\_ForceGenerationRegistry@{mtrx::rb\_ForceGenerationRegistry}!rb\_ForceGenerationRegistry@{rb\_ForceGenerationRegistry}}
+\index{rb\_ForceGenerationRegistry@{rb\_ForceGenerationRegistry}!mtrx::rb\_ForceGenerationRegistry@{mtrx::rb\_ForceGenerationRegistry}}
+\doxysubsubsection{\texorpdfstring{rb\_ForceGenerationRegistry()}{rb\_ForceGenerationRegistry()}}
+{\footnotesize\ttfamily mtrx\+::rb\+\_\+\+Force\+Generation\+Registry\+::rb\+\_\+\+Force\+Generation\+Registry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construct a new rb Force\+Generation\+Registry object. 
+
+\mbox{\Hypertarget{classmtrx_1_1rb___force_generation_registry_a6bafa507f64f33a433bbf1d14f013372}\label{classmtrx_1_1rb___force_generation_registry_a6bafa507f64f33a433bbf1d14f013372}} 
+\index{mtrx::rb\_ForceGenerationRegistry@{mtrx::rb\_ForceGenerationRegistry}!````~rb\_ForceGenerationRegistry@{$\sim$rb\_ForceGenerationRegistry}}
+\index{````~rb\_ForceGenerationRegistry@{$\sim$rb\_ForceGenerationRegistry}!mtrx::rb\_ForceGenerationRegistry@{mtrx::rb\_ForceGenerationRegistry}}
+\doxysubsubsection{\texorpdfstring{$\sim$rb\_ForceGenerationRegistry()}{~rb\_ForceGenerationRegistry()}}
+{\footnotesize\ttfamily mtrx\+::rb\+\_\+\+Force\+Generation\+Registry\+::$\sim$rb\+\_\+\+Force\+Generation\+Registry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destroy the rb Force\+Generation\+Registry object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmtrx_1_1rb___force_generation_registry_a28d04550b1d052bc07bb8a1fe144c59a}\label{classmtrx_1_1rb___force_generation_registry_a28d04550b1d052bc07bb8a1fe144c59a}} 
+\index{mtrx::rb\_ForceGenerationRegistry@{mtrx::rb\_ForceGenerationRegistry}!AddForceGenerator@{AddForceGenerator}}
+\index{AddForceGenerator@{AddForceGenerator}!mtrx::rb\_ForceGenerationRegistry@{mtrx::rb\_ForceGenerationRegistry}}
+\doxysubsubsection{\texorpdfstring{AddForceGenerator()}{AddForceGenerator()}}
+{\footnotesize\ttfamily void mtrx\+::rb\+\_\+\+Force\+Generation\+Registry\+::\+Add\+Force\+Generator (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmtrx_1_1_i_rigidbody_force_generator}{I\+Rigidbody\+Force\+Generator}} $>$ \&}]{force\+Generator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a force generator to the registry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em force\+Generator} & The force generator to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1rb___force_generation_registry_a073b4ebafc75121ebe5012e3e3925b7f}\label{classmtrx_1_1rb___force_generation_registry_a073b4ebafc75121ebe5012e3e3925b7f}} 
+\index{mtrx::rb\_ForceGenerationRegistry@{mtrx::rb\_ForceGenerationRegistry}!RemoveForceGenerator@{RemoveForceGenerator}}
+\index{RemoveForceGenerator@{RemoveForceGenerator}!mtrx::rb\_ForceGenerationRegistry@{mtrx::rb\_ForceGenerationRegistry}}
+\doxysubsubsection{\texorpdfstring{RemoveForceGenerator()}{RemoveForceGenerator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void mtrx\+::rb\+\_\+\+Force\+Generation\+Registry\+::\+Remove\+Force\+Generator (\begin{DoxyParamCaption}\item[{const int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove a force generator from registry by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The position of the force generator \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1rb___force_generation_registry_a0970f5e29c6ff0e05d537c3e2a62808e}\label{classmtrx_1_1rb___force_generation_registry_a0970f5e29c6ff0e05d537c3e2a62808e}} 
+\index{mtrx::rb\_ForceGenerationRegistry@{mtrx::rb\_ForceGenerationRegistry}!RemoveForceGenerator@{RemoveForceGenerator}}
+\index{RemoveForceGenerator@{RemoveForceGenerator}!mtrx::rb\_ForceGenerationRegistry@{mtrx::rb\_ForceGenerationRegistry}}
+\doxysubsubsection{\texorpdfstring{RemoveForceGenerator()}{RemoveForceGenerator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mtrx\+::rb\+\_\+\+Force\+Generation\+Registry\+::\+Remove\+Force\+Generator (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmtrx_1_1_i_rigidbody_force_generator}{I\+Rigidbody\+Force\+Generator}} $>$ \&}]{force\+Generator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove force generator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em force\+Generator} & The force generator that we want to remove \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1rb___force_generation_registry_a2317b527b35f8b249b827958f063a3f5}\label{classmtrx_1_1rb___force_generation_registry_a2317b527b35f8b249b827958f063a3f5}} 
+\index{mtrx::rb\_ForceGenerationRegistry@{mtrx::rb\_ForceGenerationRegistry}!UpdateForceGenerators@{UpdateForceGenerators}}
+\index{UpdateForceGenerators@{UpdateForceGenerators}!mtrx::rb\_ForceGenerationRegistry@{mtrx::rb\_ForceGenerationRegistry}}
+\doxysubsubsection{\texorpdfstring{UpdateForceGenerators()}{UpdateForceGenerators()}}
+{\footnotesize\ttfamily void mtrx\+::rb\+\_\+\+Force\+Generation\+Registry\+::\+Update\+Force\+Generators (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmtrx_1_1_rigidbody}{Rigidbody}} $\ast$}]{rb,  }\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Apply the force generators onto the rigidbody. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rb} & The rigidbody we want to apply the forces to \\
+\hline
+{\em delta\+Time} & The time elapsed from last frame \\
+\hline
+\end{DoxyParams}

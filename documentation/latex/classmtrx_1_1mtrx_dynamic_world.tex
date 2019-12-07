@@ -1,0 +1,187 @@
+\hypertarget{classmtrx_1_1mtrx_dynamic_world}{}\doxysection{mtrx\+::mtrx\+Dynamic\+World Class Reference}
+\label{classmtrx_1_1mtrx_dynamic_world}\index{mtrx::mtrxDynamicWorld@{mtrx::mtrxDynamicWorld}}
+
+
+Entry point of the user to the engine. This class defines the A\+PI that user will be using to interface with the engine.  
+
+
+
+
+{\ttfamily \#include $<$mtrx\+Dynamic\+World.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmtrx_1_1mtrx_dynamic_world_ae5a8f4039816f4cba7e0139025573171}{mtrx\+Dynamic\+World}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new mtrx Dynamic World object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmtrx_1_1mtrx_dynamic_world_a95ed219a5d1a739de770967591bc5b02}{$\sim$mtrx\+Dynamic\+World}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the mtrx Dynamic World object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1mtrx_dynamic_world_ad0f051b32fd667f1580e00ac1f71b803}{Update}} (float dt)
+\begin{DoxyCompactList}\small\item\em Update the game world. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1mtrx_dynamic_world_a2324f42e0ec5ac3c57913f740e121f32}{Add\+Rigidbody}} (\mbox{\hyperlink{classmtrx_1_1_rigidbody}{Rigidbody}} $\ast$rb)
+\begin{DoxyCompactList}\small\item\em Add a rigidbody to the rigidbody manager. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1mtrx_dynamic_world_ab176745dd01bccdd52e11719be9719aa}{Remove\+Rigidbody}} (\mbox{\hyperlink{classmtrx_1_1_rigidbody}{Rigidbody}} $\ast$rb)
+\begin{DoxyCompactList}\small\item\em Remove a rigidbody from the rigidbody manager. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1mtrx_dynamic_world_a640d482c593bf5a6d57afaa0f445bc2c}{Add\+Force\+Generator}} (\mbox{\hyperlink{classmtrx_1_1_rigidbody}{Rigidbody}} $\ast$rb, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmtrx_1_1_i_rigidbody_force_generator}{I\+Rigidbody\+Force\+Generator}} $>$ \&force\+Generator)
+\begin{DoxyCompactList}\small\item\em Add a force generator to the rigidbody manager. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1mtrx_dynamic_world_a46156a86ef4722f0c324b943277d53fa}{Remove\+Force\+Generator}} (\mbox{\hyperlink{classmtrx_1_1_rigidbody}{Rigidbody}} $\ast$rb, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmtrx_1_1_i_rigidbody_force_generator}{I\+Rigidbody\+Force\+Generator}} $>$ \&generator)
+\begin{DoxyCompactList}\small\item\em Remove a rigidbody from the rigidbody manager. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1mtrx_dynamic_world_a77d829c67eb514fdadb9310613e3bb20}{Add\+Collider}} (\mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} $\ast$col)
+\begin{DoxyCompactList}\small\item\em Add a collider to the collision system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1mtrx_dynamic_world_a6b32bb87f20b9f21237be8d5e3241d49}{Remove\+Collider}} (\mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} $\ast$col)
+\begin{DoxyCompactList}\small\item\em Remove a collider to the collision system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1mtrx_dynamic_world_a74aa1d8098135c81d3daedac512d2b7c}\label{classmtrx_1_1mtrx_dynamic_world_a74aa1d8098135c81d3daedac512d2b7c}} 
+float {\bfseries accumulator}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1mtrx_dynamic_world_a4094bc6b09bfcbb175d389d83f26c017}\label{classmtrx_1_1mtrx_dynamic_world_a4094bc6b09bfcbb175d389d83f26c017}} 
+\mbox{\hyperlink{classmtrx_1_1_rigidbody_manager}{Rigidbody\+Manager}} {\bfseries m\+\_\+rb\+Manager}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1mtrx_dynamic_world_a2cde36f5db12630ebc48c877640482b1}\label{classmtrx_1_1mtrx_dynamic_world_a2cde36f5db12630ebc48c877640482b1}} 
+\mbox{\hyperlink{classmtrx_1_1_collision_system}{Collision\+System}} {\bfseries m\+\_\+\+Collision\+System}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Entry point of the user to the engine. This class defines the A\+PI that user will be using to interface with the engine. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmtrx_1_1mtrx_dynamic_world_ae5a8f4039816f4cba7e0139025573171}\label{classmtrx_1_1mtrx_dynamic_world_ae5a8f4039816f4cba7e0139025573171}} 
+\index{mtrx::mtrxDynamicWorld@{mtrx::mtrxDynamicWorld}!mtrxDynamicWorld@{mtrxDynamicWorld}}
+\index{mtrxDynamicWorld@{mtrxDynamicWorld}!mtrx::mtrxDynamicWorld@{mtrx::mtrxDynamicWorld}}
+\doxysubsubsection{\texorpdfstring{mtrxDynamicWorld()}{mtrxDynamicWorld()}}
+{\footnotesize\ttfamily mtrx\+::mtrx\+Dynamic\+World\+::mtrx\+Dynamic\+World (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new mtrx Dynamic World object. 
+
+\mbox{\Hypertarget{classmtrx_1_1mtrx_dynamic_world_a95ed219a5d1a739de770967591bc5b02}\label{classmtrx_1_1mtrx_dynamic_world_a95ed219a5d1a739de770967591bc5b02}} 
+\index{mtrx::mtrxDynamicWorld@{mtrx::mtrxDynamicWorld}!````~mtrxDynamicWorld@{$\sim$mtrxDynamicWorld}}
+\index{````~mtrxDynamicWorld@{$\sim$mtrxDynamicWorld}!mtrx::mtrxDynamicWorld@{mtrx::mtrxDynamicWorld}}
+\doxysubsubsection{\texorpdfstring{$\sim$mtrxDynamicWorld()}{~mtrxDynamicWorld()}}
+{\footnotesize\ttfamily mtrx\+::mtrx\+Dynamic\+World\+::$\sim$mtrx\+Dynamic\+World (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destroy the mtrx Dynamic World object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmtrx_1_1mtrx_dynamic_world_a77d829c67eb514fdadb9310613e3bb20}\label{classmtrx_1_1mtrx_dynamic_world_a77d829c67eb514fdadb9310613e3bb20}} 
+\index{mtrx::mtrxDynamicWorld@{mtrx::mtrxDynamicWorld}!AddCollider@{AddCollider}}
+\index{AddCollider@{AddCollider}!mtrx::mtrxDynamicWorld@{mtrx::mtrxDynamicWorld}}
+\doxysubsubsection{\texorpdfstring{AddCollider()}{AddCollider()}}
+{\footnotesize\ttfamily void mtrx\+::mtrx\+Dynamic\+World\+::\+Add\+Collider (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} $\ast$}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a collider to the collision system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em col} & The collider that we want to add \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1mtrx_dynamic_world_a640d482c593bf5a6d57afaa0f445bc2c}\label{classmtrx_1_1mtrx_dynamic_world_a640d482c593bf5a6d57afaa0f445bc2c}} 
+\index{mtrx::mtrxDynamicWorld@{mtrx::mtrxDynamicWorld}!AddForceGenerator@{AddForceGenerator}}
+\index{AddForceGenerator@{AddForceGenerator}!mtrx::mtrxDynamicWorld@{mtrx::mtrxDynamicWorld}}
+\doxysubsubsection{\texorpdfstring{AddForceGenerator()}{AddForceGenerator()}}
+{\footnotesize\ttfamily void mtrx\+::mtrx\+Dynamic\+World\+::\+Add\+Force\+Generator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmtrx_1_1_rigidbody}{Rigidbody}} $\ast$}]{rb,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmtrx_1_1_i_rigidbody_force_generator}{I\+Rigidbody\+Force\+Generator}} $>$ \&}]{force\+Generator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a force generator to the rigidbody manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rb} & The rigidbody we want to add the force generator to \\
+\hline
+{\em force\+Generator} & The force generator we want to add \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1mtrx_dynamic_world_a2324f42e0ec5ac3c57913f740e121f32}\label{classmtrx_1_1mtrx_dynamic_world_a2324f42e0ec5ac3c57913f740e121f32}} 
+\index{mtrx::mtrxDynamicWorld@{mtrx::mtrxDynamicWorld}!AddRigidbody@{AddRigidbody}}
+\index{AddRigidbody@{AddRigidbody}!mtrx::mtrxDynamicWorld@{mtrx::mtrxDynamicWorld}}
+\doxysubsubsection{\texorpdfstring{AddRigidbody()}{AddRigidbody()}}
+{\footnotesize\ttfamily void mtrx\+::mtrx\+Dynamic\+World\+::\+Add\+Rigidbody (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmtrx_1_1_rigidbody}{Rigidbody}} $\ast$}]{rb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a rigidbody to the rigidbody manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rb} & The rigidbody we want to add to the manager \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1mtrx_dynamic_world_a6b32bb87f20b9f21237be8d5e3241d49}\label{classmtrx_1_1mtrx_dynamic_world_a6b32bb87f20b9f21237be8d5e3241d49}} 
+\index{mtrx::mtrxDynamicWorld@{mtrx::mtrxDynamicWorld}!RemoveCollider@{RemoveCollider}}
+\index{RemoveCollider@{RemoveCollider}!mtrx::mtrxDynamicWorld@{mtrx::mtrxDynamicWorld}}
+\doxysubsubsection{\texorpdfstring{RemoveCollider()}{RemoveCollider()}}
+{\footnotesize\ttfamily void mtrx\+::mtrx\+Dynamic\+World\+::\+Remove\+Collider (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} $\ast$}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove a collider to the collision system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em col} & The collider that we want to remove \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1mtrx_dynamic_world_a46156a86ef4722f0c324b943277d53fa}\label{classmtrx_1_1mtrx_dynamic_world_a46156a86ef4722f0c324b943277d53fa}} 
+\index{mtrx::mtrxDynamicWorld@{mtrx::mtrxDynamicWorld}!RemoveForceGenerator@{RemoveForceGenerator}}
+\index{RemoveForceGenerator@{RemoveForceGenerator}!mtrx::mtrxDynamicWorld@{mtrx::mtrxDynamicWorld}}
+\doxysubsubsection{\texorpdfstring{RemoveForceGenerator()}{RemoveForceGenerator()}}
+{\footnotesize\ttfamily void mtrx\+::mtrx\+Dynamic\+World\+::\+Remove\+Force\+Generator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmtrx_1_1_rigidbody}{Rigidbody}} $\ast$}]{rb,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmtrx_1_1_i_rigidbody_force_generator}{I\+Rigidbody\+Force\+Generator}} $>$ \&}]{generator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove a rigidbody from the rigidbody manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rb} & The rigidbody we want to remove the rigidbody from \\
+\hline
+{\em generator} & The force generator that we want to remove \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1mtrx_dynamic_world_ab176745dd01bccdd52e11719be9719aa}\label{classmtrx_1_1mtrx_dynamic_world_ab176745dd01bccdd52e11719be9719aa}} 
+\index{mtrx::mtrxDynamicWorld@{mtrx::mtrxDynamicWorld}!RemoveRigidbody@{RemoveRigidbody}}
+\index{RemoveRigidbody@{RemoveRigidbody}!mtrx::mtrxDynamicWorld@{mtrx::mtrxDynamicWorld}}
+\doxysubsubsection{\texorpdfstring{RemoveRigidbody()}{RemoveRigidbody()}}
+{\footnotesize\ttfamily void mtrx\+::mtrx\+Dynamic\+World\+::\+Remove\+Rigidbody (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmtrx_1_1_rigidbody}{Rigidbody}} $\ast$}]{rb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove a rigidbody from the rigidbody manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rb} & The rigidbody we want to remove \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1mtrx_dynamic_world_ad0f051b32fd667f1580e00ac1f71b803}\label{classmtrx_1_1mtrx_dynamic_world_ad0f051b32fd667f1580e00ac1f71b803}} 
+\index{mtrx::mtrxDynamicWorld@{mtrx::mtrxDynamicWorld}!Update@{Update}}
+\index{Update@{Update}!mtrx::mtrxDynamicWorld@{mtrx::mtrxDynamicWorld}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void mtrx\+::mtrx\+Dynamic\+World\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})}
+
+
+
+Update the game world. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & The time elapsed since the last frame \\
+\hline
+\end{DoxyParams}

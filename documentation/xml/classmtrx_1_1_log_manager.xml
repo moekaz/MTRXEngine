@@ -1,0 +1,368 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="classmtrx_1_1_log_manager" kind="class" language="C++" prot="public">
+    <compoundname>mtrx::LogManager</compoundname>
+    <includes refid="_log_manager_8h" local="no">LogManager.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmtrx_1_1_log_manager_1a0daed2a89828a3c673a018f97fb77664" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; spdlog::logger &gt;</type>
+        <definition>std::shared_ptr&lt;spdlog::logger&gt; mtrx::LogManager::mtrxLogger</definition>
+        <argsstring></argsstring>
+        <name>mtrxLogger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/log/LogManager.h" line="79" column="17" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/log/LogManager.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classmtrx_1_1_log_manager_1a6622c1c97e9ee654ba180d6c635956f6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmtrx_1_1_log_manager" kindref="compound">LogManager</ref> &amp;</type>
+        <definition>static LogManager&amp; mtrx::LogManager::GetInstance</definition>
+        <argsstring>()</argsstring>
+        <name>GetInstance</name>
+        <briefdescription>
+<para>Get the singleton logger instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classmtrx_1_1_log_manager" kindref="compound">LogManager</ref>&amp; The instance of the logger that we will be using </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/log/LogManager.h" line="27" column="26" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/log/LogManager.h" bodystart="27" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmtrx_1_1_log_manager_1acb9d322b8284e46ec429b6f0d445427a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void mtrx::LogManager::warn</definition>
+        <argsstring>(const T &amp;msg)</argsstring>
+        <name>warn</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Wrapper for logging a warning. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of warning that we will be logging </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message that we log </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/log/LogManager.h" line="40" column="13" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/log/LogManager.h" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_log_manager_1af067ca8af09f2dceca45ff436cfa22ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void mtrx::LogManager::info</definition>
+        <argsstring>(const T &amp;msg)</argsstring>
+        <name>info</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Wrapper for logging an info level message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of warning that we will be logging </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message that we log </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/log/LogManager.h" line="49" column="13" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/log/LogManager.h" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_log_manager_1a645d3ea96b2145dfcd55f108ab818b8f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void mtrx::LogManager::trace</definition>
+        <argsstring>(const T &amp;msg)</argsstring>
+        <name>trace</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Wrapper for logging a trace level message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of warning that we will be logging </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message that we log </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/log/LogManager.h" line="58" column="13" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/log/LogManager.h" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_log_manager_1a842f15a9f58197cb5e8a6380c0047049" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void mtrx::LogManager::error</definition>
+        <argsstring>(const T &amp;msg)</argsstring>
+        <name>error</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Wrapper for logging an error level message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of warning that we will be logging </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message that we log </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/log/LogManager.h" line="67" column="13" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/log/LogManager.h" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_log_manager_1ab5b51ab0722d8554d8c2d39ecea53ec2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void mtrx::LogManager::critical</definition>
+        <argsstring>(const T &amp;msg)</argsstring>
+        <name>critical</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Wrapper for logging a critical level message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of warning that we will be logging </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message that we log </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/log/LogManager.h" line="76" column="13" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/log/LogManager.h" bodystart="76" bodyend="76"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classmtrx_1_1_log_manager_1ae3522f53c6a43c365ff9fb0310b7f5de" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mtrx::LogManager::CreateLogDirectory</definition>
+        <argsstring>()</argsstring>
+        <name>CreateLogDirectory</name>
+        <briefdescription>
+<para>Create The log directory that we will use for logging if it does not exist. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/log/LogManager.h" line="85" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_log_manager_1af6b40b40ca4df77a9cf5a79deb037008" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mtrx::LogManager::LogManager</definition>
+        <argsstring>()</argsstring>
+        <name>LogManager</name>
+        <briefdescription>
+<para>Construct a new Log Manager object. This object is a singleton so it will be constructed once. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/log/LogManager.h" line="92" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_log_manager_1a11032b98eebde361cdfcc8903200f7c8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mtrx::LogManager::LogManager</definition>
+        <argsstring>(const LogManager &amp;)=delete</argsstring>
+        <name>LogManager</name>
+        <param>
+          <type>const <ref refid="classmtrx_1_1_log_manager" kindref="compound">LogManager</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/log/LogManager.h" line="95" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_log_manager_1a075894c972fcc7d6e1d387ca1b3a2819" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mtrx::LogManager::LogManager</definition>
+        <argsstring>(const LogManager &amp;&amp;)=delete</argsstring>
+        <name>LogManager</name>
+        <param>
+          <type>const <ref refid="classmtrx_1_1_log_manager" kindref="compound">LogManager</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/log/LogManager.h" line="96" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_log_manager_1a0ace6f79ebb0e6d649a9a4fd7f6468e3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmtrx_1_1_log_manager" kindref="compound">LogManager</ref> &amp;</type>
+        <definition>LogManager&amp; mtrx::LogManager::operator=</definition>
+        <argsstring>(const LogManager &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classmtrx_1_1_log_manager" kindref="compound">LogManager</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/log/LogManager.h" line="98" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_log_manager_1a320f696cfb34d3957a5e5669269c8dce" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmtrx_1_1_log_manager" kindref="compound">LogManager</ref> &amp;</type>
+        <definition>LogManager&amp; mtrx::LogManager::operator=</definition>
+        <argsstring>(const LogManager &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classmtrx_1_1_log_manager" kindref="compound">LogManager</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/log/LogManager.h" line="99" column="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Logger wrapper for logging functionality in the engine. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/log/LogManager.h" line="20" column="1" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/log/LogManager.h" bodystart="19" bodyend="100"/>
+    <listofallmembers>
+      <member refid="classmtrx_1_1_log_manager_1ae3522f53c6a43c365ff9fb0310b7f5de" prot="private" virt="non-virtual"><scope>mtrx::LogManager</scope><name>CreateLogDirectory</name></member>
+      <member refid="classmtrx_1_1_log_manager_1ab5b51ab0722d8554d8c2d39ecea53ec2" prot="public" virt="non-virtual"><scope>mtrx::LogManager</scope><name>critical</name></member>
+      <member refid="classmtrx_1_1_log_manager_1a842f15a9f58197cb5e8a6380c0047049" prot="public" virt="non-virtual"><scope>mtrx::LogManager</scope><name>error</name></member>
+      <member refid="classmtrx_1_1_log_manager_1a6622c1c97e9ee654ba180d6c635956f6" prot="public" virt="non-virtual"><scope>mtrx::LogManager</scope><name>GetInstance</name></member>
+      <member refid="classmtrx_1_1_log_manager_1af067ca8af09f2dceca45ff436cfa22ef" prot="public" virt="non-virtual"><scope>mtrx::LogManager</scope><name>info</name></member>
+      <member refid="classmtrx_1_1_log_manager_1af6b40b40ca4df77a9cf5a79deb037008" prot="private" virt="non-virtual"><scope>mtrx::LogManager</scope><name>LogManager</name></member>
+      <member refid="classmtrx_1_1_log_manager_1a11032b98eebde361cdfcc8903200f7c8" prot="private" virt="non-virtual"><scope>mtrx::LogManager</scope><name>LogManager</name></member>
+      <member refid="classmtrx_1_1_log_manager_1a075894c972fcc7d6e1d387ca1b3a2819" prot="private" virt="non-virtual"><scope>mtrx::LogManager</scope><name>LogManager</name></member>
+      <member refid="classmtrx_1_1_log_manager_1a0daed2a89828a3c673a018f97fb77664" prot="private" virt="non-virtual"><scope>mtrx::LogManager</scope><name>mtrxLogger</name></member>
+      <member refid="classmtrx_1_1_log_manager_1a0ace6f79ebb0e6d649a9a4fd7f6468e3" prot="private" virt="non-virtual"><scope>mtrx::LogManager</scope><name>operator=</name></member>
+      <member refid="classmtrx_1_1_log_manager_1a320f696cfb34d3957a5e5669269c8dce" prot="private" virt="non-virtual"><scope>mtrx::LogManager</scope><name>operator=</name></member>
+      <member refid="classmtrx_1_1_log_manager_1a645d3ea96b2145dfcd55f108ab818b8f" prot="public" virt="non-virtual"><scope>mtrx::LogManager</scope><name>trace</name></member>
+      <member refid="classmtrx_1_1_log_manager_1acb9d322b8284e46ec429b6f0d445427a" prot="public" virt="non-virtual"><scope>mtrx::LogManager</scope><name>warn</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

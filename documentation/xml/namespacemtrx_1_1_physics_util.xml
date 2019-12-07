@@ -1,0 +1,798 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="namespacemtrx_1_1_physics_util" kind="namespace" language="C++">
+    <compoundname>mtrx::PhysicsUtil</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacemtrx_1_1_physics_util_1a82b7dc1049d74ce11316522e047e28b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 mtrx::PhysicsUtil::TripleCross</definition>
+        <argsstring>(const glm::vec3 &amp;a, const glm::vec3 &amp;b, const glm::vec3 &amp;c)</argsstring>
+        <name>TripleCross</name>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Implementation of triple cross product. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Third vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>glm::vec3 The result of the triple cross product </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/PhysicsUtil.h" line="24" column="11" declfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/PhysicsUtil.h" declline="24" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemtrx_1_1_physics_util_1a10b9e39ab7b8486226c4084a33c2e32c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float mtrx::PhysicsUtil::MinDistanceTwoLines</definition>
+        <argsstring>(const glm::vec3 &amp;A, const glm::vec3 &amp;B, const glm::vec3 &amp;C, const glm::vec3 &amp;D)</argsstring>
+        <name>MinDistanceTwoLines</name>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>A</declname>
+        </param>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>B</declname>
+        </param>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>C</declname>
+        </param>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>D</declname>
+        </param>
+        <briefdescription>
+<para>Minimum distance squared between 2 infinite line. The square of the minimum distance is used for optimization purposes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>A</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Point on first line </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>B</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Point on first line </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>C</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Point on second line </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Point on second line </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>float The minimum distance squared between the 2 infinite lines </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/PhysicsUtil.h" line="35" column="7" declfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/PhysicsUtil.h" declline="35" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemtrx_1_1_physics_util_1aa710864e0ad3e7a7b0c66841e73d0053" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float mtrx::PhysicsUtil::MinDistanceSquaredTwoSegments</definition>
+        <argsstring>(const glm::vec3 &amp;A, const glm::vec3 &amp;B, const glm::vec3 &amp;C, const glm::vec3 &amp;D)</argsstring>
+        <name>MinDistanceSquaredTwoSegments</name>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>A</declname>
+        </param>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>B</declname>
+        </param>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>C</declname>
+        </param>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>D</declname>
+        </param>
+        <briefdescription>
+<para>Minimum distance squared between 2 line segments. The square of the minimum distance is used for optimization purposes <ref refid="" kindref="compound">http://geomalgorithms.com/a07-_distance.html#dist3D_Segment_to_Segment.</ref></para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>A</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First end of the line segment </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>B</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second end of the line segment </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>C</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First end of the second line segment </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second end of the second line segment </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>float The minimum distance squared between 2 line segments </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/PhysicsUtil.h" line="47" column="7" declfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/PhysicsUtil.h" declline="47" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemtrx_1_1_physics_util_1af5b0f0fd3ad66a518d3f8ed549ac53ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; float, glm::vec3 &gt;</type>
+        <definition>std::pair&lt;float, glm::vec3&gt; mtrx::PhysicsUtil::MinDistanceSquaredPointRay</definition>
+        <argsstring>(const glm::vec3 &amp;point, const glm::vec3 &amp;startPointRay, const glm::vec3 &amp;rayDirection)</argsstring>
+        <name>MinDistanceSquaredPointRay</name>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>startPointRay</declname>
+        </param>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>rayDirection</declname>
+        </param>
+        <briefdescription>
+<para>Minimum distance squared of a point and ray. The square of the minimum distance is used for optimization purposes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A point in 3d space we want to check the distance for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>startPointRay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Start point of the ray </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rayDirection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The normalized direction of the ray </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::pair&lt;float, glm::vec3&gt; The minimum distance squared and the closest point </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/PhysicsUtil.h" line="57" column="11" declfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/PhysicsUtil.h" declline="57" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemtrx_1_1_physics_util_1a8bfc1b573238623026f3d7d9b507b3ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; float, glm::vec3 &gt;</type>
+        <definition>std::pair&lt;float, glm::vec3&gt; mtrx::PhysicsUtil::MinDistanceSquaredPointSegment</definition>
+        <argsstring>(const glm::vec3 &amp;A, const glm::vec3 &amp;B, const glm::vec3 &amp;C)</argsstring>
+        <name>MinDistanceSquaredPointSegment</name>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>A</declname>
+        </param>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>B</declname>
+        </param>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>C</declname>
+        </param>
+        <briefdescription>
+<para>Minimum distance squared of a point and a line segment. The square of the minimum distance is used for optimization purposes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>A</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The point we want to check the distance for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>B</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first end point of the line segment </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>C</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second end point of the line segment </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::pair&lt;float, glm::vec3&gt; The minimum distance squared and the closest point </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/PhysicsUtil.h" line="67" column="11" declfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/PhysicsUtil.h" declline="67" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemtrx_1_1_physics_util_1a7361309066fc8dac4e23734f96111d0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float mtrx::PhysicsUtil::MinDistanceSquaredLineSegmentRay</definition>
+        <argsstring>(const glm::vec3 &amp;a, const glm::vec3 &amp;b, const glm::vec3 &amp;rayStart, const glm::vec3 &amp;rayDirection)</argsstring>
+        <name>MinDistanceSquaredLineSegmentRay</name>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>rayStart</declname>
+        </param>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>rayDirection</declname>
+        </param>
+        <briefdescription>
+<para>Minimum distance squared Line segment and ray. Can be broken down into a line segment minimum distance squared. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>mtrx::PhysicsUtil::MinimumDistanceSquaredTwoSegments The square of the minimum distance is used for optimization purposes</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first end point of the line segment </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second end point of the line segment </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rayStart</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The starting point of the ray </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rayDirection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The normalized direction of the ray </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>float The minimum distance squared of the line segment and the ray </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/PhysicsUtil.h" line="79" column="7" declfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/PhysicsUtil.h" declline="79" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemtrx_1_1_physics_util_1a8adf3f94936a17666f63e28d96335559" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float mtrx::PhysicsUtil::MinDistanceSquaredPointTriangle</definition>
+        <argsstring>(const glm::vec3 &amp;pt, const glm::vec3 &amp;a, const glm::vec3 &amp;b, const glm::vec3 &amp;c)</argsstring>
+        <name>MinDistanceSquaredPointTriangle</name>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Minimum distance squared between a point and triangle. The square of the minimum distance is used for optimization purposes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The point we want to check the distance for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first point of the triangle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second point of the triangle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The third point of the triangle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>float The minimum distance squared </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/PhysicsUtil.h" line="90" column="7" declfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/PhysicsUtil.h" declline="90" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemtrx_1_1_physics_util_1a26f7db1dab57d281e712b87f058beda4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float mtrx::PhysicsUtil::MinDistanceSquaredLineSegmentTriangle</definition>
+        <argsstring>(const glm::vec3 &amp;a, const glm::vec3 &amp;b, const glm::vec3 &amp;c, const glm::vec3 &amp;d, const glm::vec3 &amp;e)</argsstring>
+        <name>MinDistanceSquaredLineSegmentTriangle</name>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Minimum distance squared of line segment and triangle. The square of the minimum distance is used for optimization purposes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first end point of the line segment </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second end point of the line segment </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First point of the triangle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second point of the triangle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Third point of the triangle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>float The minimum distance squared between the line segment and the triangle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/PhysicsUtil.h" line="102" column="7" declfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/PhysicsUtil.h" declline="102" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemtrx_1_1_physics_util_1a94232e4bae6379d6135956109640f232" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; float, glm::vec3 &gt;</type>
+        <definition>std::pair&lt;float, glm::vec3&gt; mtrx::PhysicsUtil::MinDistanceSquaredPointAABB</definition>
+        <argsstring>(const glm::vec3 &amp;pt, const glm::vec3 &amp;center, const float *halfExtents)</argsstring>
+        <name>MinDistanceSquaredPointAABB</name>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>center</declname>
+        </param>
+        <param>
+          <type>const float *</type>
+          <declname>halfExtents</declname>
+        </param>
+        <briefdescription>
+<para>Minimum distance squared between a point and an AABB. The square of the minimum distance is used for optimization purposes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The point we want to check the distance for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>center</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The center of the AABB collider </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classmtrx_1_1_a_a_b_b_collider" kindref="compound">mtrx::AABBCollider</ref> </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>halfExtents</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The half extents of the <ref refid="classmtrx_1_1_a_a_b_b_collider" kindref="compound">AABBCollider</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classmtrx_1_1_a_a_b_b_collider" kindref="compound">mtrx::AABBCollider</ref> </para>
+</simplesect>
+<simplesect kind="return"><para>std::pair&lt;float, glm::vec3&gt; The minimum distance squared and the closest point </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/PhysicsUtil.h" line="112" column="11" declfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/PhysicsUtil.h" declline="112" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemtrx_1_1_physics_util_1a8c85bfef95fee864c6160aaede5cbc5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>glm::quat</type>
+        <definition>glm::quat mtrx::PhysicsUtil::Slerp</definition>
+        <argsstring>(const glm::quat &amp;firstRotation, const glm::quat &amp;secondRotation, float t)</argsstring>
+        <name>Slerp</name>
+        <param>
+          <type>const glm::quat &amp;</type>
+          <declname>firstRotation</declname>
+        </param>
+        <param>
+          <type>const glm::quat &amp;</type>
+          <declname>secondRotation</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Implementation of Slerp which is a lerp for rotations. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>firstRotation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start position of the rotation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>secondRotation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>End position of the rotation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>parameter between [0, 1] to interpolate between the 2 rotations </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>glm::quat The rotation interpolated between the 2 rotations </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/PhysicsUtil.h" line="122" column="11" declfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/PhysicsUtil.h" declline="122" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemtrx_1_1_physics_util_1a9c08bc8c83923700f188ed3910aacdf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 mtrx::PhysicsUtil::Lerp</definition>
+        <argsstring>(const glm::vec3 &amp;startingPosition, const glm::vec3 &amp;destination, float t)</argsstring>
+        <name>Lerp</name>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>startingPosition</declname>
+        </param>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>destination</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Implementation of linear interpolation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>startingPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Start position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>destination</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>End position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter between [0, 1] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>glm::vec3 A vector between the 2 vectors influenced by the t value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/PhysicsUtil.h" line="132" column="11" declfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/PhysicsUtil.h" declline="132" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemtrx_1_1_physics_util_1af55a0fd74660eb03d28d61f2d2b67eef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float mtrx::PhysicsUtil::Ease</definition>
+        <argsstring>(float t)</argsstring>
+        <name>Ease</name>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Easing function for the t parameter to be used for lerping functions. The easing function is a half sin curve that allows for a slow start and a slow end. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter between [0, 1] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>float New t value according to the easing function </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/PhysicsUtil.h" line="141" column="7" declfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/PhysicsUtil.h" declline="141" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemtrx_1_1_physics_util_1a0e6250e1e574e74da2a60d898246dba7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Iterator</type>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>std::enable_if_t&lt;std::is_same&lt;glm::vec3*, typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;::value&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; <ref refid="structmtrx_1_1_triangle" kindref="compound">Triangle</ref> &gt;</type>
+        <definition>std::vector&lt;Triangle&gt; mtrx::PhysicsUtil::TriangulateConvexShape</definition>
+        <argsstring>(const Iterator &amp;startVertices, const Iterator &amp;endVertices, const int size)</argsstring>
+        <name>TriangulateConvexShape</name>
+        <param>
+          <type>const Iterator &amp;</type>
+          <declname>startVertices</declname>
+        </param>
+        <param>
+          <type>const Iterator &amp;</type>
+          <declname>endVertices</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Triangulating a convex shape by fan triangulation which is using the first vertex as a starting point for all triangules and fanning out to the other vertices. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Iterator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator type that is used by the collection of vertices </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::enable_if_t&lt;std::is_same&lt;glm::vec3*</parametername>
+<parametername>typename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::iterator_traits&lt;Iterator&gt;::value_type&gt;::value&gt; Iterator template check </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>startVertices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator to the beginning of the vertex list </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>endVertices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator to the end of the vertex list </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the vertex list </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;Triangle&gt; A vector of triangles representing the triangulated mesh </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/PhysicsUtil.h" line="155" column="13" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/PhysicsUtil.h" bodystart="155" bodyend="167"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Utility namespace for some basic calculations that are useful for collision detection and other physics related functionality. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/utils/PhysicsUtil.h" line="15" column="1"/>
+  </compounddef>
+</doxygen>

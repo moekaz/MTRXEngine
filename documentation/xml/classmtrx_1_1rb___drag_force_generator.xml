@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="classmtrx_1_1rb___drag_force_generator" kind="class" language="C++" prot="public">
+    <compoundname>mtrx::rb_DragForceGenerator</compoundname>
+    <basecompoundref refid="classmtrx_1_1_i_rigidbody_force_generator" prot="public" virt="non-virtual">mtrx::IRigidbodyForceGenerator</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classmtrx_1_1rb___drag_force_generator_1a6ee77c1b1eeb9ebf1f2796ed11101d54" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float mtrx::rb_DragForceGenerator::k1</definition>
+        <argsstring></argsstring>
+        <name>k1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/RigidbodyGenerators/rb_DragForceGenerator.h" line="16" column="7" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/RigidbodyGenerators/rb_DragForceGenerator.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmtrx_1_1rb___drag_force_generator_1a3423e91d0b50e3f4229a5dd8d436a4ea" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float mtrx::rb_DragForceGenerator::k2</definition>
+        <argsstring></argsstring>
+        <name>k2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/RigidbodyGenerators/rb_DragForceGenerator.h" line="17" column="7" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/RigidbodyGenerators/rb_DragForceGenerator.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmtrx_1_1rb___drag_force_generator_1a1b9cbd4856570ec17348543b29ad9821" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void mtrx::rb_DragForceGenerator::UpdateForces</definition>
+        <argsstring>(Rigidbody *rb, float deltaTime) override</argsstring>
+        <name>UpdateForces</name>
+        <param>
+          <type><ref refid="classmtrx_1_1_rigidbody" kindref="compound">Rigidbody</ref> *</type>
+          <declname>rb</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/RigidbodyGenerators/rb_DragForceGenerator.h" line="20" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1rb___drag_force_generator_1a383c6d074944b82c248ece75cc444bef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mtrx::rb_DragForceGenerator::rb_DragForceGenerator</definition>
+        <argsstring>(float k1, float k2)</argsstring>
+        <name>rb_DragForceGenerator</name>
+        <param>
+          <type>float</type>
+          <declname>k1</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>k2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/RigidbodyGenerators/rb_DragForceGenerator.h" line="22" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1rb___drag_force_generator_1a6890d178fab4322d1e432fd4787f9069" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mtrx::rb_DragForceGenerator::~rb_DragForceGenerator</definition>
+        <argsstring>()</argsstring>
+        <name>~rb_DragForceGenerator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/RigidbodyGenerators/rb_DragForceGenerator.h" line="23" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1rb___drag_force_generator_1a32f631897a3b5a470e3bbc8c70f4d36e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mtrx::rb_DragForceGenerator::setK1</definition>
+        <argsstring>(float k1)</argsstring>
+        <name>setK1</name>
+        <param>
+          <type>float</type>
+          <declname>k1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/RigidbodyGenerators/rb_DragForceGenerator.h" line="25" column="13" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/RigidbodyGenerators/rb_DragForceGenerator.h" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1rb___drag_force_generator_1a7d01f579ef4eda26a4b60a03ab295a0c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mtrx::rb_DragForceGenerator::setK2</definition>
+        <argsstring>(float k2)</argsstring>
+        <name>setK2</name>
+        <param>
+          <type>float</type>
+          <declname>k2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/RigidbodyGenerators/rb_DragForceGenerator.h" line="26" column="13" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/RigidbodyGenerators/rb_DragForceGenerator.h" bodystart="26" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>mtrx::rb_DragForceGenerator</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mtrx::IRigidbodyForceGenerator</label>
+        <link refid="classmtrx_1_1_i_rigidbody_force_generator"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>mtrx::rb_DragForceGenerator</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mtrx::IRigidbodyForceGenerator</label>
+        <link refid="classmtrx_1_1_i_rigidbody_force_generator"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/RigidbodyGenerators/rb_DragForceGenerator.h" line="14" column="1" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/RigidbodyGenerators/rb_DragForceGenerator.h" bodystart="13" bodyend="27"/>
+    <listofallmembers>
+      <member refid="classmtrx_1_1rb___drag_force_generator_1a6ee77c1b1eeb9ebf1f2796ed11101d54" prot="public" virt="non-virtual"><scope>mtrx::rb_DragForceGenerator</scope><name>k1</name></member>
+      <member refid="classmtrx_1_1rb___drag_force_generator_1a3423e91d0b50e3f4229a5dd8d436a4ea" prot="public" virt="non-virtual"><scope>mtrx::rb_DragForceGenerator</scope><name>k2</name></member>
+      <member refid="classmtrx_1_1rb___drag_force_generator_1a383c6d074944b82c248ece75cc444bef" prot="public" virt="non-virtual"><scope>mtrx::rb_DragForceGenerator</scope><name>rb_DragForceGenerator</name></member>
+      <member refid="classmtrx_1_1rb___drag_force_generator_1a32f631897a3b5a470e3bbc8c70f4d36e" prot="public" virt="non-virtual"><scope>mtrx::rb_DragForceGenerator</scope><name>setK1</name></member>
+      <member refid="classmtrx_1_1rb___drag_force_generator_1a7d01f579ef4eda26a4b60a03ab295a0c" prot="public" virt="non-virtual"><scope>mtrx::rb_DragForceGenerator</scope><name>setK2</name></member>
+      <member refid="classmtrx_1_1rb___drag_force_generator_1a1b9cbd4856570ec17348543b29ad9821" prot="public" virt="virtual"><scope>mtrx::rb_DragForceGenerator</scope><name>UpdateForces</name></member>
+      <member refid="classmtrx_1_1rb___drag_force_generator_1a6890d178fab4322d1e432fd4787f9069" prot="public" virt="non-virtual"><scope>mtrx::rb_DragForceGenerator</scope><name>~rb_DragForceGenerator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

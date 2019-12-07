@@ -1,0 +1,503 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="classmtrx_1_1_capsule_collider" kind="class" language="C++" prot="public">
+    <compoundname>mtrx::CapsuleCollider</compoundname>
+    <basecompoundref refid="classmtrx_1_1_collider" prot="public" virt="non-virtual">mtrx::Collider</basecompoundref>
+    <includes refid="_capsule_collider_8h" local="no">CapsuleCollider.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classmtrx_1_1_capsule_collider_1af92fb8f542f9ec4241bda096c59f3bae" prot="public" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 mtrx::CapsuleCollider::A</definition>
+        <argsstring></argsstring>
+        <name>A</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CapsuleCollider.h" line="17" column="11" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CapsuleCollider.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmtrx_1_1_capsule_collider_1ae4ded291442f1c3b578a00b3e55bab39" prot="public" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 mtrx::CapsuleCollider::B</definition>
+        <argsstring></argsstring>
+        <name>B</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CapsuleCollider.h" line="18" column="11" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CapsuleCollider.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmtrx_1_1_capsule_collider_1a665fc7c17aea3fd6f0ec648411b8deb7" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float mtrx::CapsuleCollider::radii</definition>
+        <argsstring></argsstring>
+        <name>radii</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CapsuleCollider.h" line="133" column="7" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CapsuleCollider.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmtrx_1_1_capsule_collider_1aba4278877bb5969cd382bfb641bdc120" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float mtrx::CapsuleCollider::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CapsuleCollider.h" line="134" column="7" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CapsuleCollider.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmtrx_1_1_capsule_collider_1a42d9edb44be1a7eeade2abbf3458880f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mtrx::CapsuleCollider::CapsuleCollider</definition>
+        <argsstring>(const glm::vec3 &amp;center=glm::vec3(), const glm::quat &amp;orientation=glm::angleAxis(0.f, worldUp), const glm::vec3 &amp;scale=glm::vec3(1, 1, 1), float radii=0.5f, float height=1.f)</argsstring>
+        <name>CapsuleCollider</name>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>center</declname>
+          <defval>glm::vec3()</defval>
+        </param>
+        <param>
+          <type>const glm::quat &amp;</type>
+          <declname>orientation</declname>
+          <defval>glm::angleAxis(0.f, worldUp)</defval>
+        </param>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>scale</declname>
+          <defval>glm::vec3(1, 1, 1)</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>radii</declname>
+          <defval>0.5f</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>height</declname>
+          <defval>1.f</defval>
+        </param>
+        <briefdescription>
+<para>Construct a new Capsule <ref refid="classmtrx_1_1_collider" kindref="compound">Collider</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>center</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Center of the capsule collider </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>orientation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Orientation of the capsule collider </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scale of the capsule collider </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>radii</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Radii of the spheres of the capsule collider </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Height of the capsule collider </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CapsuleCollider.h" line="29" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_capsule_collider_1ad3c23d2999f7455d5c996ce23936be70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mtrx::CapsuleCollider::CapsuleCollider</definition>
+        <argsstring>(const Transform &amp;transform=Transform(), float radii=0.5f, float height=1.f)</argsstring>
+        <name>CapsuleCollider</name>
+        <param>
+          <type>const <ref refid="classmtrx_1_1_transform" kindref="compound">Transform</ref> &amp;</type>
+          <declname>transform</declname>
+          <defval><ref refid="classmtrx_1_1_transform" kindref="compound">Transform</ref>()</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>radii</declname>
+          <defval>0.5f</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>height</declname>
+          <defval>1.f</defval>
+        </param>
+        <briefdescription>
+<para>Construct a new Capsule <ref refid="classmtrx_1_1_collider" kindref="compound">Collider</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The transform that the capsule collider will use </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classmtrx_1_1_transform" kindref="compound">mtrx::Transform</ref> </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>radii</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Radii of the spheres of the capsule collider </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Height of the capsule collider </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CapsuleCollider.h" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_capsule_collider_1a02743857bd1509db5bf941f6fb65d4fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual mtrx::CapsuleCollider::~CapsuleCollider</definition>
+        <argsstring>()=default</argsstring>
+        <name>~CapsuleCollider</name>
+        <briefdescription>
+<para>Destroy the Capsule <ref refid="classmtrx_1_1_collider" kindref="compound">Collider</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CapsuleCollider.h" line="44" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_capsule_collider_1a17f41f46bd503f7c7906c6246cbfcb26" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool mtrx::CapsuleCollider::RaycastCollision</definition>
+        <argsstring>(const Ray &amp;ray) override</argsstring>
+        <name>RaycastCollision</name>
+        <reimplements refid="classmtrx_1_1_collider_1a361c341b949adf2508c46389f8b4509d">RaycastCollision</reimplements>
+        <param>
+          <type>const <ref refid="classmtrx_1_1_ray" kindref="compound">Ray</ref> &amp;</type>
+          <declname>ray</declname>
+        </param>
+        <briefdescription>
+<para>Raycast ray and capsule collider collision detection algorithm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classmtrx_1_1_ray" kindref="compound">Ray</ref> used for raycast check </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classmtrx_1_1_ray" kindref="compound">mtrx::Ray</ref> </para>
+</simplesect>
+<simplesect kind="return"><para>true The ray and capsule collider collide </para>
+</simplesect>
+<simplesect kind="return"><para>false the ray and the capsule collider do not collide </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CapsuleCollider.h" line="53" column="14" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CapsuleCollider.h" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_capsule_collider_1a6c07f06cdae55cf18f0492a9177583b0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float mtrx::CapsuleCollider::GetRadii</definition>
+        <argsstring>() const</argsstring>
+        <name>GetRadii</name>
+        <briefdescription>
+<para>Get the Radii of the capsule colldier. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>float The radii of the capsule collider </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CapsuleCollider.h" line="60" column="14" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CapsuleCollider.h" bodystart="60" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_capsule_collider_1a25f17c3041b19b174c94c40dd248dc9e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float mtrx::CapsuleCollider::GetHeight</definition>
+        <argsstring>() const</argsstring>
+        <name>GetHeight</name>
+        <briefdescription>
+<para>Get the Height of the capsule collider. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>float The height of the capsule collider </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CapsuleCollider.h" line="67" column="14" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CapsuleCollider.h" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_capsule_collider_1ab0ac72254b0d912a5e772ee703526616" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mtrx::CapsuleCollider::SetRadii</definition>
+        <argsstring>(float radius)</argsstring>
+        <name>SetRadii</name>
+        <param>
+          <type>float</type>
+          <declname>radius</declname>
+        </param>
+        <briefdescription>
+<para>Set the Radii of the capsule collider. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new value of radius </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CapsuleCollider.h" line="74" column="13" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CapsuleCollider.h" bodystart="74" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_capsule_collider_1a74a6c21ad7fdf6dee9bceab58628abb5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mtrx::CapsuleCollider::SetHeight</definition>
+        <argsstring>(float height)</argsstring>
+        <name>SetHeight</name>
+        <param>
+          <type>float</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Set the Height of the capsule collider. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new value of the height </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CapsuleCollider.h" line="85" column="13" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CapsuleCollider.h" bodystart="85" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_capsule_collider_1ae1c97f035b4a0d26c7f680780ecc6996" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void mtrx::CapsuleCollider::SetScale</definition>
+        <argsstring>(const glm::vec3 &amp;scale) override</argsstring>
+        <name>SetScale</name>
+        <reimplements refid="classmtrx_1_1_collider_1a81b9373f9d09221753255046b9279a5d">SetScale</reimplements>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+<para>Set the Scale of the capsule collider Only the X and Y values of the scale are the only applicable values on the collider The Z value is ignored. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new scale of the collider </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CapsuleCollider.h" line="98" column="21" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CapsuleCollider.h" bodystart="98" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_capsule_collider_1ad8b6a634528473222da22557d2d25764" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void mtrx::CapsuleCollider::SetPosition</definition>
+        <argsstring>(const glm::vec3 &amp;position) override</argsstring>
+        <name>SetPosition</name>
+        <reimplements refid="classmtrx_1_1_collider_1a0bbed70b7af99a1469b3da9eac7df531">SetPosition</reimplements>
+        <param>
+          <type>const glm::vec3 &amp;</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>Set the Position of the capsile collider. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new position of the capsule collider </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CapsuleCollider.h" line="112" column="21" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CapsuleCollider.h" bodystart="112" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_capsule_collider_1a03a6476613b7f81a5250eee613c7ed2f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void mtrx::CapsuleCollider::SetOrientation</definition>
+        <argsstring>(const glm::quat &amp;orientation) override</argsstring>
+        <name>SetOrientation</name>
+        <reimplements refid="classmtrx_1_1_collider_1ac69efe7d26d9e600154f601cbcc30849">SetOrientation</reimplements>
+        <param>
+          <type>const glm::quat &amp;</type>
+          <declname>orientation</declname>
+        </param>
+        <briefdescription>
+<para>Set the Orientation of the capsule collider. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>orientation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new orientation of the capsule collider </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CapsuleCollider.h" line="125" column="21" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CapsuleCollider.h" bodystart="125" bodyend="130"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Implementation of Capsule colliders. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>mtrx::CapsuleCollider</label>
+        <link refid="classmtrx_1_1_capsule_collider"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mtrx::Collider</label>
+        <link refid="classmtrx_1_1_collider"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>mtrx::Transform</label>
+        <link refid="classmtrx_1_1_transform"/>
+      </node>
+      <node id="1">
+        <label>mtrx::CapsuleCollider</label>
+        <link refid="classmtrx_1_1_capsule_collider"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mtrx::Collider</label>
+        <link refid="classmtrx_1_1_collider"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>transform</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CapsuleCollider.h" line="15" column="1" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CapsuleCollider.h" bodystart="14" bodyend="135"/>
+    <listofallmembers>
+      <member refid="classmtrx_1_1_capsule_collider_1af92fb8f542f9ec4241bda096c59f3bae" prot="public" virt="non-virtual"><scope>mtrx::CapsuleCollider</scope><name>A</name></member>
+      <member refid="classmtrx_1_1_capsule_collider_1ae4ded291442f1c3b578a00b3e55bab39" prot="public" virt="non-virtual"><scope>mtrx::CapsuleCollider</scope><name>B</name></member>
+      <member refid="classmtrx_1_1_capsule_collider_1a42d9edb44be1a7eeade2abbf3458880f" prot="public" virt="non-virtual"><scope>mtrx::CapsuleCollider</scope><name>CapsuleCollider</name></member>
+      <member refid="classmtrx_1_1_capsule_collider_1ad3c23d2999f7455d5c996ce23936be70" prot="public" virt="non-virtual"><scope>mtrx::CapsuleCollider</scope><name>CapsuleCollider</name></member>
+      <member refid="classmtrx_1_1_collider_1af8b907eaf8cb13316dce419f595371df" prot="public" virt="non-virtual"><scope>mtrx::CapsuleCollider</scope><name>CheckCollision</name></member>
+      <member refid="classmtrx_1_1_collider_1a897ee0f8baa05f825be5f96a2abc3bd1" prot="public" virt="non-virtual"><scope>mtrx::CapsuleCollider</scope><name>Collider</name></member>
+      <member refid="classmtrx_1_1_collider_1a1af6daddbfaa7ba34f33845de3b05457" prot="public" virt="non-virtual"><scope>mtrx::CapsuleCollider</scope><name>Collider</name></member>
+      <member refid="classmtrx_1_1_collider_1a8abb09a0eee536698d5a7b5d270ed584" prot="protected" virt="non-virtual"><scope>mtrx::CapsuleCollider</scope><name>colliderId</name></member>
+      <member refid="classmtrx_1_1_collider_1ac43e5d476507344a3340bae5451ad616" prot="public" virt="non-virtual"><scope>mtrx::CapsuleCollider</scope><name>GetColliderId</name></member>
+      <member refid="classmtrx_1_1_collider_1aa0eb9dee1d98fd45df1ef8cbfa0e43be" prot="public" virt="non-virtual"><scope>mtrx::CapsuleCollider</scope><name>GetColliderType</name></member>
+      <member refid="classmtrx_1_1_collider_1afccd3a798fc870d4acbb3c7a3f783c05" prot="public" virt="non-virtual"><scope>mtrx::CapsuleCollider</scope><name>GetForward</name></member>
+      <member refid="classmtrx_1_1_capsule_collider_1a25f17c3041b19b174c94c40dd248dc9e" prot="public" virt="non-virtual"><scope>mtrx::CapsuleCollider</scope><name>GetHeight</name></member>
+      <member refid="classmtrx_1_1_collider_1ad22caa3bdd6a81cc511a0f9141d8e5ee" prot="public" virt="non-virtual"><scope>mtrx::CapsuleCollider</scope><name>GetOrientation</name></member>
+      <member refid="classmtrx_1_1_collider_1a6dca0e6b7f19c5582a312af54c34d8e1" prot="public" virt="non-virtual"><scope>mtrx::CapsuleCollider</scope><name>GetPosition</name></member>
+      <member refid="classmtrx_1_1_capsule_collider_1a6c07f06cdae55cf18f0492a9177583b0" prot="public" virt="non-virtual"><scope>mtrx::CapsuleCollider</scope><name>GetRadii</name></member>
+      <member refid="classmtrx_1_1_collider_1a0e7750440d8bf791c85b87d2e6a6f33a" prot="public" virt="non-virtual"><scope>mtrx::CapsuleCollider</scope><name>GetScale</name></member>
+      <member refid="classmtrx_1_1_collider_1a59a39aa74953a4a6d228fec5bf3028e8" prot="public" virt="non-virtual"><scope>mtrx::CapsuleCollider</scope><name>GetSide</name></member>
+      <member refid="classmtrx_1_1_collider_1ac946675c7e0ae86dc77459742511b9ae" prot="public" virt="non-virtual"><scope>mtrx::CapsuleCollider</scope><name>GetUp</name></member>
+      <member refid="classmtrx_1_1_capsule_collider_1aba4278877bb5969cd382bfb641bdc120" prot="private" virt="non-virtual"><scope>mtrx::CapsuleCollider</scope><name>height</name></member>
+      <member refid="classmtrx_1_1_collider_1a3c8cc45f3a2b276157ea474620f5dcb7" prot="private" virt="non-virtual"><scope>mtrx::CapsuleCollider</scope><name>id</name></member>
+      <member refid="classmtrx_1_1_collider_1a056bd024840f5c426fdb9157fd81cf37" prot="public" virt="non-virtual"><scope>mtrx::CapsuleCollider</scope><name>IsConvex</name></member>
+      <member refid="classmtrx_1_1_collider_1ad0f9075538c6a8c50ab2137f9172a201" prot="protected" virt="non-virtual"><scope>mtrx::CapsuleCollider</scope><name>isConvexShape</name></member>
+      <member refid="classmtrx_1_1_capsule_collider_1a665fc7c17aea3fd6f0ec648411b8deb7" prot="private" virt="non-virtual"><scope>mtrx::CapsuleCollider</scope><name>radii</name></member>
+      <member refid="classmtrx_1_1_capsule_collider_1a17f41f46bd503f7c7906c6246cbfcb26" prot="public" virt="virtual"><scope>mtrx::CapsuleCollider</scope><name>RaycastCollision</name></member>
+      <member refid="classmtrx_1_1_capsule_collider_1a74a6c21ad7fdf6dee9bceab58628abb5" prot="public" virt="non-virtual"><scope>mtrx::CapsuleCollider</scope><name>SetHeight</name></member>
+      <member refid="classmtrx_1_1_capsule_collider_1a03a6476613b7f81a5250eee613c7ed2f" prot="public" virt="virtual"><scope>mtrx::CapsuleCollider</scope><name>SetOrientation</name></member>
+      <member refid="classmtrx_1_1_capsule_collider_1ad8b6a634528473222da22557d2d25764" prot="public" virt="virtual"><scope>mtrx::CapsuleCollider</scope><name>SetPosition</name></member>
+      <member refid="classmtrx_1_1_capsule_collider_1ab0ac72254b0d912a5e772ee703526616" prot="public" virt="non-virtual"><scope>mtrx::CapsuleCollider</scope><name>SetRadii</name></member>
+      <member refid="classmtrx_1_1_capsule_collider_1ae1c97f035b4a0d26c7f680780ecc6996" prot="public" virt="virtual"><scope>mtrx::CapsuleCollider</scope><name>SetScale</name></member>
+      <member refid="classmtrx_1_1_collider_1a812b71180496a530dc1a3a1750e4efb1" prot="protected" virt="non-virtual"><scope>mtrx::CapsuleCollider</scope><name>transform</name></member>
+      <member refid="classmtrx_1_1_collider_1adf1662048ee02d5d96d430a8a3875433" prot="protected" virt="non-virtual"><scope>mtrx::CapsuleCollider</scope><name>type</name></member>
+      <member refid="classmtrx_1_1_capsule_collider_1a02743857bd1509db5bf941f6fb65d4fd" prot="public" virt="virtual"><scope>mtrx::CapsuleCollider</scope><name>~CapsuleCollider</name></member>
+      <member refid="classmtrx_1_1_collider_1a3d27ae263e0cc1f15b14ec09a715ab7d" prot="public" virt="virtual"><scope>mtrx::CapsuleCollider</scope><name>~Collider</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

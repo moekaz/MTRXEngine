@@ -1,0 +1,174 @@
+.TH "mtrx::OOBBCollider" 3 "Sat Dec 7 2019" "MTRX Engine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mtrx::OOBBCollider \- Implementation of OOBBs\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <OOBBCollider\&.h>\fP
+.PP
+Inherits \fBmtrx::ConvexShapeCollider\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBOOBBCollider\fP (const glm::vec3 &center=glm::vec3(), const glm::quat &orientation=glm::angleAxis(0\&.f, glm::vec3(0, 1, 0)), const glm::vec3 &scale=glm::vec3(1, 1, 1))"
+.br
+.RI "Construct a new \fBOOBBCollider\fP object\&. "
+.ti -1c
+.RI "\fBOOBBCollider\fP (const \fBTransform\fP &transform=\fBTransform\fP())"
+.br
+.RI "Construct a new \fBOOBBCollider\fP object\&. "
+.ti -1c
+.RI "virtual \fB~OOBBCollider\fP ()=default"
+.br
+.RI "Destroy the \fBOOBBCollider\fP object\&. "
+.ti -1c
+.RI "virtual bool \fBRaycastCollision\fP (const \fBRay\fP &ray) override"
+.br
+.RI "Raycast OOBB collision detection algorithm\&. "
+.ti -1c
+.RI "const glm::vec3 * \fBGetAxes\fP () const"
+.br
+.RI "Get the Axes of the collider\&. "
+.ti -1c
+.RI "const float * \fBGetHalfExtents\fP () const"
+.br
+.RI "Get the Half Extents of the OOBB collider\&. "
+.ti -1c
+.RI "float * \fBGetHalfExtents\fP ()"
+.br
+.RI "Get the Half Extents of the OOBB collider\&. "
+.ti -1c
+.RI "virtual void \fBSetScale\fP (const glm::vec3 &scale) override"
+.br
+.RI "Set the Scale of the collider\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "float \fBhalfExtents\fP [3]"
+.br
+.ti -1c
+.RI "\fBObjectAxes\fP \fBaxes\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Implementation of OOBBs\&. 
+
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "mtrx::OOBBCollider::OOBBCollider (const glm::vec3 & center = \fCglm::vec3()\fP, const glm::quat & orientation = \fCglm::angleAxis(0\&.f, glm::vec3(0, 1, 0))\fP, const glm::vec3 & scale = \fCglm::vec3(1, 1, 1)\fP)"
+
+.PP
+Construct a new \fBOOBBCollider\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcenter\fP Center of the collider 
+.br
+\fIorientation\fP Orientation of the collider 
+.br
+\fIscale\fP The scale of the collider 
+.RE
+.PP
+
+.SS "mtrx::OOBBCollider::OOBBCollider (const \fBTransform\fP & transform = \fC\fBTransform\fP()\fP)"
+
+.PP
+Construct a new \fBOOBBCollider\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItransform\fP The transform of the collider @mtrx::Transform 
+.RE
+.PP
+
+.SS "virtual mtrx::OOBBCollider::~OOBBCollider ()\fC [virtual]\fP, \fC [default]\fP"
+
+.PP
+Destroy the \fBOOBBCollider\fP object\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "const glm::vec3* mtrx::OOBBCollider::GetAxes () const\fC [inline]\fP"
+
+.PP
+Get the Axes of the collider\&. 
+.PP
+\fBReturns\fP
+.RS 4
+const glm::vec3* Array of the axes of the OOBB 
+.RE
+.PP
+
+.SS "float* mtrx::OOBBCollider::GetHalfExtents ()\fC [inline]\fP"
+
+.PP
+Get the Half Extents of the OOBB collider\&. 
+.PP
+\fBReturns\fP
+.RS 4
+float* The half extents of the collider 
+.RE
+.PP
+
+.SS "const float* mtrx::OOBBCollider::GetHalfExtents () const\fC [inline]\fP"
+
+.PP
+Get the Half Extents of the OOBB collider\&. 
+.PP
+\fBReturns\fP
+.RS 4
+const float* The half extents of the collider 
+.RE
+.PP
+
+.SS "virtual bool mtrx::OOBBCollider::RaycastCollision (const \fBRay\fP & ray)\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Raycast OOBB collision detection algorithm\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIray\fP \fBRay\fP that we want to check collision for 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBmtrx::Ray\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true The ray and collider collide 
+.PP
+false The ray and collider do not collide 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBmtrx::ConvexShapeCollider\fP\&.
+.SS "virtual void mtrx::OOBBCollider::SetScale (const glm::vec3 & scale)\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Set the Scale of the collider\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIscale\fP The scale of the collider 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBmtrx::ConvexShapeCollider\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MTRX Engine from the source code\&.

@@ -1,0 +1,245 @@
+\hypertarget{classmtrx_1_1_transform}{}\doxysection{mtrx\+::Transform Class Reference}
+\label{classmtrx_1_1_transform}\index{mtrx::Transform@{mtrx::Transform}}
+
+
+Wrapper implementation of a transform that holds position, orientation, scale values and some functionality based on these values.  
+
+
+
+
+{\ttfamily \#include $<$Transform.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmtrx_1_1_transform_aad6a8f3e87607d86939d0ebe3427c2c7}{Transform}} (const glm\+::vec3 \&position=glm\+::vec3(), const glm\+::quat \&orientation=glm\+::angle\+Axis(0.f, world\+Up), const glm\+::vec3 \&scale=glm\+::vec3(1, 1, 1))
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classmtrx_1_1_transform}{Transform}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmtrx_1_1_transform_a4ac51d84ec5cd2267a2046c17772868c}{$\sim$\+Transform}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classmtrx_1_1_transform}{Transform}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_transform_a22d3a1dc822cf410de92966c10f0cccd}{Translate}} (const glm\+::vec3 \&translation\+Vec)
+\begin{DoxyCompactList}\small\item\em Translate the position vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_transform_ab54ebee6fa9775358903ad0631c1df42}{Rotate}} (const glm\+::quat \&rotation)
+\begin{DoxyCompactList}\small\item\em Rotate the orientation value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_transform_a8331eb2b5ad4a290f9cb1484534dcf27}{Set\+Position}} (const glm\+::vec3 \&pos)
+\begin{DoxyCompactList}\small\item\em Set the Position vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_transform_a33f418bc15f821e731162fb8fe745aef}{Set\+Orientation}} (const glm\+::quat \&orientation)
+\begin{DoxyCompactList}\small\item\em Set the Orientation quaternion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmtrx_1_1_transform_a429a326ae889a31f433cf5f68d70af1e}{Set\+Scale}} (const glm\+::vec3 \&scale)
+\begin{DoxyCompactList}\small\item\em Set the Scale vector. \end{DoxyCompactList}\item 
+const glm\+::vec3 \& \mbox{\hyperlink{classmtrx_1_1_transform_ab81c0229523bf29ea35a7a24fcff597e}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Get the Position vector. \end{DoxyCompactList}\item 
+const glm\+::quat \& \mbox{\hyperlink{classmtrx_1_1_transform_a58b3e889aa1c031c3857ba7525e352b0}{Get\+Orientation}} () const
+\begin{DoxyCompactList}\small\item\em Get the Orientation quaternion. \end{DoxyCompactList}\item 
+const glm\+::vec3 \& \mbox{\hyperlink{classmtrx_1_1_transform_ad127e9a69dcf84bb098dfa8a6c2af22d}{Get\+Scale}} () const
+\begin{DoxyCompactList}\small\item\em Get the Scale vector. \end{DoxyCompactList}\item 
+glm\+::vec3 \& \mbox{\hyperlink{classmtrx_1_1_transform_a5d0c4605858e295f2d32eee8fb9bb571}{Get\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Get the Position vector. \end{DoxyCompactList}\item 
+glm\+::quat \& \mbox{\hyperlink{classmtrx_1_1_transform_a402a968097c9b71087899fb08bdb5059}{Get\+Orientation}} ()
+\begin{DoxyCompactList}\small\item\em Get the Orientation quaternion. \end{DoxyCompactList}\item 
+glm\+::vec3 \& \mbox{\hyperlink{classmtrx_1_1_transform_ab58b1746ddeb685e4cc05687f66d802d}{Get\+Scale}} ()
+\begin{DoxyCompactList}\small\item\em Get the Scale vctor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_transform_a43726b26b35b73735f16c69dde6f2b51}\label{classmtrx_1_1_transform_a43726b26b35b73735f16c69dde6f2b51}} 
+glm\+::vec3 {\bfseries position}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_transform_ad48f2797e6cb5f2115bf4faa97ab153d}\label{classmtrx_1_1_transform_ad48f2797e6cb5f2115bf4faa97ab153d}} 
+glm\+::quat {\bfseries orientation}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_transform_afda64668c25c4a4aeda88c1a0da28fca}\label{classmtrx_1_1_transform_afda64668c25c4a4aeda88c1a0da28fca}} 
+glm\+::vec3 {\bfseries scale}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Wrapper implementation of a transform that holds position, orientation, scale values and some functionality based on these values. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmtrx_1_1_transform_aad6a8f3e87607d86939d0ebe3427c2c7}\label{classmtrx_1_1_transform_aad6a8f3e87607d86939d0ebe3427c2c7}} 
+\index{mtrx::Transform@{mtrx::Transform}!Transform@{Transform}}
+\index{Transform@{Transform}!mtrx::Transform@{mtrx::Transform}}
+\doxysubsubsection{\texorpdfstring{Transform()}{Transform()}}
+{\footnotesize\ttfamily mtrx\+::\+Transform\+::\+Transform (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{position = {\ttfamily glm\+:\+:vec3()},  }\item[{const glm\+::quat \&}]{orientation = {\ttfamily glm\+:\+:angleAxis(0.f,~worldUp)},  }\item[{const glm\+::vec3 \&}]{scale = {\ttfamily glm\+:\+:vec3(1,~1,~1)} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{classmtrx_1_1_transform}{Transform}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+{\em orientation} & \\
+\hline
+{\em scale} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_transform_a4ac51d84ec5cd2267a2046c17772868c}\label{classmtrx_1_1_transform_a4ac51d84ec5cd2267a2046c17772868c}} 
+\index{mtrx::Transform@{mtrx::Transform}!````~Transform@{$\sim$Transform}}
+\index{````~Transform@{$\sim$Transform}!mtrx::Transform@{mtrx::Transform}}
+\doxysubsubsection{\texorpdfstring{$\sim$Transform()}{~Transform()}}
+{\footnotesize\ttfamily mtrx\+::\+Transform\+::$\sim$\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destroy the \mbox{\hyperlink{classmtrx_1_1_transform}{Transform}} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmtrx_1_1_transform_a402a968097c9b71087899fb08bdb5059}\label{classmtrx_1_1_transform_a402a968097c9b71087899fb08bdb5059}} 
+\index{mtrx::Transform@{mtrx::Transform}!GetOrientation@{GetOrientation}}
+\index{GetOrientation@{GetOrientation}!mtrx::Transform@{mtrx::Transform}}
+\doxysubsubsection{\texorpdfstring{GetOrientation()}{GetOrientation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily glm\+::quat\& mtrx\+::\+Transform\+::\+Get\+Orientation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Orientation quaternion. 
+
+\begin{DoxyReturn}{Returns}
+glm\+::quat\& Orientation value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_transform_a58b3e889aa1c031c3857ba7525e352b0}\label{classmtrx_1_1_transform_a58b3e889aa1c031c3857ba7525e352b0}} 
+\index{mtrx::Transform@{mtrx::Transform}!GetOrientation@{GetOrientation}}
+\index{GetOrientation@{GetOrientation}!mtrx::Transform@{mtrx::Transform}}
+\doxysubsubsection{\texorpdfstring{GetOrientation()}{GetOrientation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const glm\+::quat\& mtrx\+::\+Transform\+::\+Get\+Orientation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Orientation quaternion. 
+
+\begin{DoxyReturn}{Returns}
+const glm\+::quat\& Orientation value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_transform_a5d0c4605858e295f2d32eee8fb9bb571}\label{classmtrx_1_1_transform_a5d0c4605858e295f2d32eee8fb9bb571}} 
+\index{mtrx::Transform@{mtrx::Transform}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!mtrx::Transform@{mtrx::Transform}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily glm\+::vec3\& mtrx\+::\+Transform\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Position vector. 
+
+\begin{DoxyReturn}{Returns}
+glm\+::vec3\& Position value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_transform_ab81c0229523bf29ea35a7a24fcff597e}\label{classmtrx_1_1_transform_ab81c0229523bf29ea35a7a24fcff597e}} 
+\index{mtrx::Transform@{mtrx::Transform}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!mtrx::Transform@{mtrx::Transform}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const glm\+::vec3\& mtrx\+::\+Transform\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Position vector. 
+
+\begin{DoxyReturn}{Returns}
+const glm\+::vec3\& Position value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_transform_ab58b1746ddeb685e4cc05687f66d802d}\label{classmtrx_1_1_transform_ab58b1746ddeb685e4cc05687f66d802d}} 
+\index{mtrx::Transform@{mtrx::Transform}!GetScale@{GetScale}}
+\index{GetScale@{GetScale}!mtrx::Transform@{mtrx::Transform}}
+\doxysubsubsection{\texorpdfstring{GetScale()}{GetScale()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily glm\+::vec3\& mtrx\+::\+Transform\+::\+Get\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Scale vctor. 
+
+\begin{DoxyReturn}{Returns}
+glm\+::vec3\& Scale vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_transform_ad127e9a69dcf84bb098dfa8a6c2af22d}\label{classmtrx_1_1_transform_ad127e9a69dcf84bb098dfa8a6c2af22d}} 
+\index{mtrx::Transform@{mtrx::Transform}!GetScale@{GetScale}}
+\index{GetScale@{GetScale}!mtrx::Transform@{mtrx::Transform}}
+\doxysubsubsection{\texorpdfstring{GetScale()}{GetScale()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const glm\+::vec3\& mtrx\+::\+Transform\+::\+Get\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Scale vector. 
+
+\begin{DoxyReturn}{Returns}
+const glm\+::vec3\& Scale value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_transform_ab54ebee6fa9775358903ad0631c1df42}\label{classmtrx_1_1_transform_ab54ebee6fa9775358903ad0631c1df42}} 
+\index{mtrx::Transform@{mtrx::Transform}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!mtrx::Transform@{mtrx::Transform}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}}
+{\footnotesize\ttfamily void mtrx\+::\+Transform\+::\+Rotate (\begin{DoxyParamCaption}\item[{const glm\+::quat \&}]{rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Rotate the orientation value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rotation} & The rotation quaternion that we want to rotate the orientation with \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_transform_a33f418bc15f821e731162fb8fe745aef}\label{classmtrx_1_1_transform_a33f418bc15f821e731162fb8fe745aef}} 
+\index{mtrx::Transform@{mtrx::Transform}!SetOrientation@{SetOrientation}}
+\index{SetOrientation@{SetOrientation}!mtrx::Transform@{mtrx::Transform}}
+\doxysubsubsection{\texorpdfstring{SetOrientation()}{SetOrientation()}}
+{\footnotesize\ttfamily void mtrx\+::\+Transform\+::\+Set\+Orientation (\begin{DoxyParamCaption}\item[{const glm\+::quat \&}]{orientation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the Orientation quaternion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em orientation} & The new orientation value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_transform_a8331eb2b5ad4a290f9cb1484534dcf27}\label{classmtrx_1_1_transform_a8331eb2b5ad4a290f9cb1484534dcf27}} 
+\index{mtrx::Transform@{mtrx::Transform}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!mtrx::Transform@{mtrx::Transform}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily void mtrx\+::\+Transform\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the Position vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & The new position value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_transform_a429a326ae889a31f433cf5f68d70af1e}\label{classmtrx_1_1_transform_a429a326ae889a31f433cf5f68d70af1e}} 
+\index{mtrx::Transform@{mtrx::Transform}!SetScale@{SetScale}}
+\index{SetScale@{SetScale}!mtrx::Transform@{mtrx::Transform}}
+\doxysubsubsection{\texorpdfstring{SetScale()}{SetScale()}}
+{\footnotesize\ttfamily void mtrx\+::\+Transform\+::\+Set\+Scale (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the Scale vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scale} & The new scale value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmtrx_1_1_transform_a22d3a1dc822cf410de92966c10f0cccd}\label{classmtrx_1_1_transform_a22d3a1dc822cf410de92966c10f0cccd}} 
+\index{mtrx::Transform@{mtrx::Transform}!Translate@{Translate}}
+\index{Translate@{Translate}!mtrx::Transform@{mtrx::Transform}}
+\doxysubsubsection{\texorpdfstring{Translate()}{Translate()}}
+{\footnotesize\ttfamily void mtrx\+::\+Transform\+::\+Translate (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{translation\+Vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Translate the position vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em translation\+Vec} & Vector used to translate the position of the transform \\
+\hline
+\end{DoxyParams}

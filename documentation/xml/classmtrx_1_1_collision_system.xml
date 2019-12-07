@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="classmtrx_1_1_collision_system" kind="class" language="C++" prot="public">
+    <compoundname>mtrx::CollisionSystem</compoundname>
+    <includes refid="_collision_system_8h" local="no">CollisionSystem.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classmtrx_1_1_collision_system_1ab037eda910b3705cab692b33187fa37a" prot="public" static="no" mutable="no">
+        <type>std::unordered_set&lt; <ref refid="classmtrx_1_1_collider" kindref="compound">Collider</ref> * &gt;</type>
+        <definition>std::unordered_set&lt;Collider*&gt; mtrx::CollisionSystem::colliders</definition>
+        <argsstring></argsstring>
+        <name>colliders</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CollisionSystem.h" line="19" column="20" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CollisionSystem.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmtrx_1_1_collision_system_1a804db0ff221125514b3a3fb6f1c776a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mtrx::CollisionSystem::CollisionSystem</definition>
+        <argsstring>()</argsstring>
+        <name>CollisionSystem</name>
+        <briefdescription>
+<para>Construct a new Collision System object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CollisionSystem.h" line="25" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_collision_system_1a85a33c2f85241d34838e235e39db4121" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mtrx::CollisionSystem::~CollisionSystem</definition>
+        <argsstring>()</argsstring>
+        <name>~CollisionSystem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CollisionSystem.h" line="26" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The collision detection system of the engine. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CollisionSystem.h" line="17" column="1" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/colliders/CollisionSystem.h" bodystart="16" bodyend="27"/>
+    <listofallmembers>
+      <member refid="classmtrx_1_1_collision_system_1ab037eda910b3705cab692b33187fa37a" prot="public" virt="non-virtual"><scope>mtrx::CollisionSystem</scope><name>colliders</name></member>
+      <member refid="classmtrx_1_1_collision_system_1a804db0ff221125514b3a3fb6f1c776a7" prot="public" virt="non-virtual"><scope>mtrx::CollisionSystem</scope><name>CollisionSystem</name></member>
+      <member refid="classmtrx_1_1_collision_system_1a85a33c2f85241d34838e235e39db4121" prot="public" virt="non-virtual"><scope>mtrx::CollisionSystem</scope><name>~CollisionSystem</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

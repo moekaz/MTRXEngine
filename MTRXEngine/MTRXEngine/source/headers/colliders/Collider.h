@@ -7,6 +7,10 @@
 
 namespace mtrx
 {
+	/**
+	 * @brief Basic API for all colliders 
+	 * 
+	 */
 	class Collider
 	{
 	public:	

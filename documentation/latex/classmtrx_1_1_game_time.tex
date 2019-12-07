@@ -1,0 +1,101 @@
+\hypertarget{classmtrx_1_1_game_time}{}\doxysection{mtrx\+::Game\+Time Class Reference}
+\label{classmtrx_1_1_game_time}\index{mtrx::GameTime@{mtrx::GameTime}}
+
+
+Basic implementation of time values mostly used for the calculation of delta time.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Time.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{classmtrx_1_1_game_time_a5c09ad3946e0304b5b70b80899f27db1}{Find\+Time\+Diff\+Seconds}} (const std\+::chrono\+::high\+\_\+resolution\+\_\+clock\+::time\+\_\+point \&t1, const std\+::chrono\+::high\+\_\+resolution\+\_\+clock\+::time\+\_\+point \&t2)
+\item 
+static void \mbox{\hyperlink{classmtrx_1_1_game_time_ae78a0555f4beae4be6b20512ff072edc}{Init}} ()
+\item 
+static void \mbox{\hyperlink{classmtrx_1_1_game_time_a3784ef14533d719b2136baa6778684dc}{Update}} ()
+\item 
+static float \mbox{\hyperlink{classmtrx_1_1_game_time_a67174402a4c857539c43d0a3c97df4dc}{Get\+Time\+Seconds}} ()
+\item 
+static std\+::chrono\+::high\+\_\+resolution\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{classmtrx_1_1_game_time_af222f2504c46b7d9bbd1080a512f8d2d}{Get\+Time}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_game_time_a7ef234e3f67d1b8148c6bc83979a6c48}\label{classmtrx_1_1_game_time_a7ef234e3f67d1b8148c6bc83979a6c48}} 
+static float {\bfseries delta\+Time}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classmtrx_1_1_game_time_a7dee5b099466a0ba3bbf981a526daf08}{Calculate\+Delta\+Time}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_game_time_a383b723460d50e4de8c45d3d1afde4ac}\label{classmtrx_1_1_game_time_a383b723460d50e4de8c45d3d1afde4ac}} 
+static const std\+::chrono\+::high\+\_\+resolution\+\_\+clock\+::time\+\_\+point {\bfseries start\+Time}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_game_time_ac0446adf1fd22f6e345e8d4e199d0438}\label{classmtrx_1_1_game_time_ac0446adf1fd22f6e345e8d4e199d0438}} 
+static std\+::chrono\+::high\+\_\+resolution\+\_\+clock\+::time\+\_\+point {\bfseries current\+Time}
+\item 
+\mbox{\Hypertarget{classmtrx_1_1_game_time_a48eb3cf7c0de1965e6610525d6715c0a}\label{classmtrx_1_1_game_time_a48eb3cf7c0de1965e6610525d6715c0a}} 
+static std\+::chrono\+::high\+\_\+resolution\+\_\+clock\+::time\+\_\+point {\bfseries prev\+Current\+Time}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Basic implementation of time values mostly used for the calculation of delta time. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmtrx_1_1_game_time_a7dee5b099466a0ba3bbf981a526daf08}\label{classmtrx_1_1_game_time_a7dee5b099466a0ba3bbf981a526daf08}} 
+\index{mtrx::GameTime@{mtrx::GameTime}!CalculateDeltaTime@{CalculateDeltaTime}}
+\index{CalculateDeltaTime@{CalculateDeltaTime}!mtrx::GameTime@{mtrx::GameTime}}
+\doxysubsubsection{\texorpdfstring{CalculateDeltaTime()}{CalculateDeltaTime()}}
+{\footnotesize\ttfamily static void mtrx\+::\+Game\+Time\+::\+Calculate\+Delta\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Calculate delta time \mbox{\Hypertarget{classmtrx_1_1_game_time_a5c09ad3946e0304b5b70b80899f27db1}\label{classmtrx_1_1_game_time_a5c09ad3946e0304b5b70b80899f27db1}} 
+\index{mtrx::GameTime@{mtrx::GameTime}!FindTimeDiffSeconds@{FindTimeDiffSeconds}}
+\index{FindTimeDiffSeconds@{FindTimeDiffSeconds}!mtrx::GameTime@{mtrx::GameTime}}
+\doxysubsubsection{\texorpdfstring{FindTimeDiffSeconds()}{FindTimeDiffSeconds()}}
+{\footnotesize\ttfamily static double mtrx\+::\+Game\+Time\+::\+Find\+Time\+Diff\+Seconds (\begin{DoxyParamCaption}\item[{const std\+::chrono\+::high\+\_\+resolution\+\_\+clock\+::time\+\_\+point \&}]{t1,  }\item[{const std\+::chrono\+::high\+\_\+resolution\+\_\+clock\+::time\+\_\+point \&}]{t2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+The time difference between 2 timepoints in seconds its a double for more precision 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_game_time_af222f2504c46b7d9bbd1080a512f8d2d}\label{classmtrx_1_1_game_time_af222f2504c46b7d9bbd1080a512f8d2d}} 
+\index{mtrx::GameTime@{mtrx::GameTime}!GetTime@{GetTime}}
+\index{GetTime@{GetTime}!mtrx::GameTime@{mtrx::GameTime}}
+\doxysubsubsection{\texorpdfstring{GetTime()}{GetTime()}}
+{\footnotesize\ttfamily static std\+::chrono\+::high\+\_\+resolution\+\_\+clock\+::time\+\_\+point mtrx\+::\+Game\+Time\+::\+Get\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+Wrapper for getting the current time 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_game_time_a67174402a4c857539c43d0a3c97df4dc}\label{classmtrx_1_1_game_time_a67174402a4c857539c43d0a3c97df4dc}} 
+\index{mtrx::GameTime@{mtrx::GameTime}!GetTimeSeconds@{GetTimeSeconds}}
+\index{GetTimeSeconds@{GetTimeSeconds}!mtrx::GameTime@{mtrx::GameTime}}
+\doxysubsubsection{\texorpdfstring{GetTimeSeconds()}{GetTimeSeconds()}}
+{\footnotesize\ttfamily static float mtrx\+::\+Game\+Time\+::\+Get\+Time\+Seconds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+time elapsed since the start of the application 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmtrx_1_1_game_time_ae78a0555f4beae4be6b20512ff072edc}\label{classmtrx_1_1_game_time_ae78a0555f4beae4be6b20512ff072edc}} 
+\index{mtrx::GameTime@{mtrx::GameTime}!Init@{Init}}
+\index{Init@{Init}!mtrx::GameTime@{mtrx::GameTime}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily static void mtrx\+::\+Game\+Time\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Initialization code \mbox{\Hypertarget{classmtrx_1_1_game_time_a3784ef14533d719b2136baa6778684dc}\label{classmtrx_1_1_game_time_a3784ef14533d719b2136baa6778684dc}} 
+\index{mtrx::GameTime@{mtrx::GameTime}!Update@{Update}}
+\index{Update@{Update}!mtrx::GameTime@{mtrx::GameTime}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily static void mtrx\+::\+Game\+Time\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Update time values for calculating delta time 

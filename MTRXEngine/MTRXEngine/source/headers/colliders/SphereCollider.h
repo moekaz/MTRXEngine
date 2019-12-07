@@ -8,7 +8,7 @@
 namespace mtrx
 {
 	/**
-	 * Implmentation of a Sphere collider used in collision systems
+	 * @brief Implmentation of a Sphere collider used in collision systems
 	 * 
 	 */
 	class SphereCollider : public Collider, public IBoundingVolume

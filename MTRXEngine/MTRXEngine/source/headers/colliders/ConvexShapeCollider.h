@@ -8,7 +8,7 @@
 namespace mtrx
 {
 	/**
-	 * Implementation of a Convex Shape collider
+	 * @brief Implementation of a Convex Shape collider
 	 * 
 	 */
 	class ConvexShapeCollider : public Collider

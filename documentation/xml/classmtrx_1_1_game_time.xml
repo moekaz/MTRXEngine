@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="classmtrx_1_1_game_time" kind="class" language="C++" prot="public">
+    <compoundname>mtrx::GameTime</compoundname>
+    <includes refid="_game_time_8h" local="no">GameTime.h</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classmtrx_1_1_game_time_1a7ef234e3f67d1b8148c6bc83979a6c48" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float mtrx::GameTime::deltaTime</definition>
+        <argsstring></argsstring>
+        <name>deltaTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/GameTime.h" line="12" column="14" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/GameTime.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classmtrx_1_1_game_time_1a383b723460d50e4de8c45d3d1afde4ac" prot="private" static="yes" mutable="no">
+        <type>const std::chrono::high_resolution_clock::time_point</type>
+        <definition>const std::chrono::high_resolution_clock::time_point mtrx::GameTime::startTime</definition>
+        <argsstring></argsstring>
+        <name>startTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/GameTime.h" line="49" column="61" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/GameTime.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmtrx_1_1_game_time_1ac0446adf1fd22f6e345e8d4e199d0438" prot="private" static="yes" mutable="no">
+        <type>std::chrono::high_resolution_clock::time_point</type>
+        <definition>std::chrono::high_resolution_clock::time_point mtrx::GameTime::currentTime</definition>
+        <argsstring></argsstring>
+        <name>currentTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/GameTime.h" line="50" column="55" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/GameTime.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmtrx_1_1_game_time_1a48eb3cf7c0de1965e6610525d6715c0a" prot="private" static="yes" mutable="no">
+        <type>std::chrono::high_resolution_clock::time_point</type>
+        <definition>std::chrono::high_resolution_clock::time_point mtrx::GameTime::prevCurrentTime</definition>
+        <argsstring></argsstring>
+        <name>prevCurrentTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/GameTime.h" line="51" column="55" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/GameTime.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classmtrx_1_1_game_time_1a5c09ad3946e0304b5b70b80899f27db1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double mtrx::GameTime::FindTimeDiffSeconds</definition>
+        <argsstring>(const std::chrono::high_resolution_clock::time_point &amp;t1, const std::chrono::high_resolution_clock::time_point &amp;t2)</argsstring>
+        <name>FindTimeDiffSeconds</name>
+        <param>
+          <type>const std::chrono::high_resolution_clock::time_point &amp;</type>
+          <declname>t1</declname>
+        </param>
+        <param>
+          <type>const std::chrono::high_resolution_clock::time_point &amp;</type>
+          <declname>t2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The time difference between 2 timepoints in seconds its a double for more precision </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/GameTime.h" line="18" column="22" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/GameTime.h" bodystart="18" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_game_time_1ae78a0555f4beae4be6b20512ff072edc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mtrx::GameTime::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialization code </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/GameTime.h" line="26" column="20" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/GameTime.h" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_game_time_1a3784ef14533d719b2136baa6778684dc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mtrx::GameTime::Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Update time values for calculating delta time </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/GameTime.h" line="31" column="20" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/GameTime.h" bodystart="31" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_game_time_1a67174402a4c857539c43d0a3c97df4dc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>static float mtrx::GameTime::GetTimeSeconds</definition>
+        <argsstring>()</argsstring>
+        <name>GetTimeSeconds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>time elapsed since the start of the application </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/GameTime.h" line="41" column="21" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/GameTime.h" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1_game_time_1af222f2504c46b7d9bbd1080a512f8d2d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::chrono::high_resolution_clock::time_point</type>
+        <definition>static std::chrono::high_resolution_clock::time_point mtrx::GameTime::GetTime</definition>
+        <argsstring>()</argsstring>
+        <name>GetTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Wrapper for getting the current time </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/GameTime.h" line="46" column="62" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/GameTime.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classmtrx_1_1_game_time_1a7dee5b099466a0ba3bbf981a526daf08" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mtrx::GameTime::CalculateDeltaTime</definition>
+        <argsstring>()</argsstring>
+        <name>CalculateDeltaTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculate delta time </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/GameTime.h" line="56" column="20" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/GameTime.h" bodystart="56" bodyend="59"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Basic implementation of time values mostly used for the calculation of delta time. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/GameTime.h" line="10" column="1" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/math/GameTime.h" bodystart="9" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classmtrx_1_1_game_time_1a7dee5b099466a0ba3bbf981a526daf08" prot="private" virt="non-virtual"><scope>mtrx::GameTime</scope><name>CalculateDeltaTime</name></member>
+      <member refid="classmtrx_1_1_game_time_1ac0446adf1fd22f6e345e8d4e199d0438" prot="private" virt="non-virtual"><scope>mtrx::GameTime</scope><name>currentTime</name></member>
+      <member refid="classmtrx_1_1_game_time_1a7ef234e3f67d1b8148c6bc83979a6c48" prot="public" virt="non-virtual"><scope>mtrx::GameTime</scope><name>deltaTime</name></member>
+      <member refid="classmtrx_1_1_game_time_1a5c09ad3946e0304b5b70b80899f27db1" prot="public" virt="non-virtual"><scope>mtrx::GameTime</scope><name>FindTimeDiffSeconds</name></member>
+      <member refid="classmtrx_1_1_game_time_1af222f2504c46b7d9bbd1080a512f8d2d" prot="public" virt="non-virtual"><scope>mtrx::GameTime</scope><name>GetTime</name></member>
+      <member refid="classmtrx_1_1_game_time_1a67174402a4c857539c43d0a3c97df4dc" prot="public" virt="non-virtual"><scope>mtrx::GameTime</scope><name>GetTimeSeconds</name></member>
+      <member refid="classmtrx_1_1_game_time_1ae78a0555f4beae4be6b20512ff072edc" prot="public" virt="non-virtual"><scope>mtrx::GameTime</scope><name>Init</name></member>
+      <member refid="classmtrx_1_1_game_time_1a48eb3cf7c0de1965e6610525d6715c0a" prot="private" virt="non-virtual"><scope>mtrx::GameTime</scope><name>prevCurrentTime</name></member>
+      <member refid="classmtrx_1_1_game_time_1a383b723460d50e4de8c45d3d1afde4ac" prot="private" virt="non-virtual"><scope>mtrx::GameTime</scope><name>startTime</name></member>
+      <member refid="classmtrx_1_1_game_time_1a3784ef14533d719b2136baa6778684dc" prot="public" virt="non-virtual"><scope>mtrx::GameTime</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

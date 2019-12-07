@@ -17,10 +17,18 @@ namespace mtrx
 	static const glm::vec3 worldSide = glm::vec3(1.f, 0.f, 0.f);
 	static const glm::vec3 worldForward = glm::vec3(0.f, 0.f, -1.f);
 
-	// Supported collider types
+	/**
+	 * @enum mtrx::ColliderType 
+	 * 
+	 * @brief Type of colliders that are supported in the engine 
+	 * 
+	 */
 	enum class ColliderType : char { Sphere, AABB, OOBB, Capsule, ConvexShape, };
 
-	// The axes that define an objects world 
+	/**
+	 * @brief The axes that define an objects world
+	 * 
+	 */
 	struct ObjectAxes
 	{
 		union
@@ -42,7 +50,11 @@ namespace mtrx
 		{}
 	};
 	
-	// Simplest shape that can encapsulate a point in 3d space
+	/**
+	 * @brief Simplest shape that can encapsulate a point in 3d space
+	 * Used within GJK collision detection algorithm
+	 * 
+	 */
 	struct Simplex
 	{
 		glm::vec3 b;
@@ -51,7 +63,10 @@ namespace mtrx
 		unsigned int size;
 	};
 
-	// Store a triangle
+	/**
+	 * @brief Struct for storing a triangle
+	 * 
+	 */
 	struct Triangle
 	{
 		union
@@ -70,12 +85,26 @@ namespace mtrx
 		Triangle(glm::vec3* a, glm::vec3* b, glm::vec3* c) : a(a), b(b), c(c) {}
 	};
 
-	// Random int that is inclusive on min and exclusive on max
+	/**
+	 * @brief Generating a random integer between 2 integer values 
+	 * 
+	 * 
+	 * @param min Minimum integer value (inclusive)
+	 * @param max Maximum integer value (exclusive)
+	 * @return int A random integer within the range of min and max
+	 */
 	static int RandomInt(int min, int max)
 	{
 		return rand() % (max - min) + min;
 	}
 
+	/**
+	 * @brief Generate a cuboid inertia tensor
+	 * 
+	 * @param mass Mass of the cuboid
+	 * @param extents The extents of the cuboid
+	 * @return glm::mat3 The inertia tensor generated 
+	 */
 	static glm::mat3 GenerateCuboidIT(float mass, float* extents)
 	{
 		// 1/12 = 0.083333... 
@@ -84,6 +113,13 @@ namespace mtrx
 			0.f, 0.f, 0.0833333333f * mass * (extents[0] * extents[0] + extents[1] * extents[1]));
 	}
 
+	/**
+	 * @brief Generate a sphere inertia tensor
+	 * 
+	 * @param mass The mass of the sphere
+	 * @param radius The radius of the sphere
+	 * @return glm::mat3 The generated inertia tensor
+	 */
 	static glm::mat3 GenerateSphereIT(float mass, float radius)
 	{
 		float diagonal = 0.4f * mass * radius;

@@ -1,0 +1,233 @@
+.TH "mtrx::Transform" 3 "Sat Dec 7 2019" "MTRX Engine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mtrx::Transform \- Wrapper implementation of a transform that holds position, orientation, scale values and some functionality based on these values\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Transform\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTransform\fP (const glm::vec3 &position=glm::vec3(), const glm::quat &orientation=glm::angleAxis(0\&.f, worldUp), const glm::vec3 &scale=glm::vec3(1, 1, 1))"
+.br
+.RI "Construct a new \fBTransform\fP object\&. "
+.ti -1c
+.RI "\fB~Transform\fP ()=default"
+.br
+.RI "Destroy the \fBTransform\fP object\&. "
+.ti -1c
+.RI "void \fBTranslate\fP (const glm::vec3 &translationVec)"
+.br
+.RI "Translate the position vector\&. "
+.ti -1c
+.RI "void \fBRotate\fP (const glm::quat &rotation)"
+.br
+.RI "Rotate the orientation value\&. "
+.ti -1c
+.RI "void \fBSetPosition\fP (const glm::vec3 &pos)"
+.br
+.RI "Set the Position vector\&. "
+.ti -1c
+.RI "void \fBSetOrientation\fP (const glm::quat &orientation)"
+.br
+.RI "Set the Orientation quaternion\&. "
+.ti -1c
+.RI "void \fBSetScale\fP (const glm::vec3 &scale)"
+.br
+.RI "Set the Scale vector\&. "
+.ti -1c
+.RI "const glm::vec3 & \fBGetPosition\fP () const"
+.br
+.RI "Get the Position vector\&. "
+.ti -1c
+.RI "const glm::quat & \fBGetOrientation\fP () const"
+.br
+.RI "Get the Orientation quaternion\&. "
+.ti -1c
+.RI "const glm::vec3 & \fBGetScale\fP () const"
+.br
+.RI "Get the Scale vector\&. "
+.ti -1c
+.RI "glm::vec3 & \fBGetPosition\fP ()"
+.br
+.RI "Get the Position vector\&. "
+.ti -1c
+.RI "glm::quat & \fBGetOrientation\fP ()"
+.br
+.RI "Get the Orientation quaternion\&. "
+.ti -1c
+.RI "glm::vec3 & \fBGetScale\fP ()"
+.br
+.RI "Get the Scale vctor\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "glm::vec3 \fBposition\fP"
+.br
+.ti -1c
+.RI "glm::quat \fBorientation\fP"
+.br
+.ti -1c
+.RI "glm::vec3 \fBscale\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Wrapper implementation of a transform that holds position, orientation, scale values and some functionality based on these values\&. 
+
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "mtrx::Transform::Transform (const glm::vec3 & position = \fCglm::vec3()\fP, const glm::quat & orientation = \fCglm::angleAxis(0\&.f, worldUp)\fP, const glm::vec3 & scale = \fCglm::vec3(1, 1, 1)\fP)\fC [inline]\fP"
+
+.PP
+Construct a new \fBTransform\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIposition\fP 
+.br
+\fIorientation\fP 
+.br
+\fIscale\fP 
+.RE
+.PP
+
+.SS "mtrx::Transform::~Transform ()\fC [default]\fP"
+
+.PP
+Destroy the \fBTransform\fP object\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "glm::quat& mtrx::Transform::GetOrientation ()\fC [inline]\fP"
+
+.PP
+Get the Orientation quaternion\&. 
+.PP
+\fBReturns\fP
+.RS 4
+glm::quat& Orientation value 
+.RE
+.PP
+
+.SS "const glm::quat& mtrx::Transform::GetOrientation () const\fC [inline]\fP"
+
+.PP
+Get the Orientation quaternion\&. 
+.PP
+\fBReturns\fP
+.RS 4
+const glm::quat& Orientation value 
+.RE
+.PP
+
+.SS "glm::vec3& mtrx::Transform::GetPosition ()\fC [inline]\fP"
+
+.PP
+Get the Position vector\&. 
+.PP
+\fBReturns\fP
+.RS 4
+glm::vec3& Position value 
+.RE
+.PP
+
+.SS "const glm::vec3& mtrx::Transform::GetPosition () const\fC [inline]\fP"
+
+.PP
+Get the Position vector\&. 
+.PP
+\fBReturns\fP
+.RS 4
+const glm::vec3& Position value 
+.RE
+.PP
+
+.SS "glm::vec3& mtrx::Transform::GetScale ()\fC [inline]\fP"
+
+.PP
+Get the Scale vctor\&. 
+.PP
+\fBReturns\fP
+.RS 4
+glm::vec3& Scale vector 
+.RE
+.PP
+
+.SS "const glm::vec3& mtrx::Transform::GetScale () const\fC [inline]\fP"
+
+.PP
+Get the Scale vector\&. 
+.PP
+\fBReturns\fP
+.RS 4
+const glm::vec3& Scale value 
+.RE
+.PP
+
+.SS "void mtrx::Transform::Rotate (const glm::quat & rotation)\fC [inline]\fP"
+
+.PP
+Rotate the orientation value\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrotation\fP The rotation quaternion that we want to rotate the orientation with 
+.RE
+.PP
+
+.SS "void mtrx::Transform::SetOrientation (const glm::quat & orientation)\fC [inline]\fP"
+
+.PP
+Set the Orientation quaternion\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIorientation\fP The new orientation value 
+.RE
+.PP
+
+.SS "void mtrx::Transform::SetPosition (const glm::vec3 & pos)\fC [inline]\fP"
+
+.PP
+Set the Position vector\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP The new position value 
+.RE
+.PP
+
+.SS "void mtrx::Transform::SetScale (const glm::vec3 & scale)\fC [inline]\fP"
+
+.PP
+Set the Scale vector\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIscale\fP The new scale value 
+.RE
+.PP
+
+.SS "void mtrx::Transform::Translate (const glm::vec3 & translationVec)\fC [inline]\fP"
+
+.PP
+Translate the position vector\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItranslationVec\fP Vector used to translate the position of the transform 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MTRX Engine from the source code\&.

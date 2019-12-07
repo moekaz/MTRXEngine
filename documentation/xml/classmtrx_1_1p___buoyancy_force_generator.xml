@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="classmtrx_1_1p___buoyancy_force_generator" kind="class" language="C++" prot="public">
+    <compoundname>mtrx::p_BuoyancyForceGenerator</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">mtrx::IParticleForceGenerator</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classmtrx_1_1p___buoyancy_force_generator_1ab83c861e1d4e41143bb780ec0e0e70fd" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float mtrx::p_BuoyancyForceGenerator::liquidHeight</definition>
+        <argsstring></argsstring>
+        <name>liquidHeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/ParticleGenerators/p_BuoyancyForceGenerator.h" line="18" column="7" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/ParticleGenerators/p_BuoyancyForceGenerator.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmtrx_1_1p___buoyancy_force_generator_1a8fa05b6a586249701c28893a22df1401" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float mtrx::p_BuoyancyForceGenerator::maxParticleDepth</definition>
+        <argsstring></argsstring>
+        <name>maxParticleDepth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/ParticleGenerators/p_BuoyancyForceGenerator.h" line="19" column="7" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/ParticleGenerators/p_BuoyancyForceGenerator.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmtrx_1_1p___buoyancy_force_generator_1ac17aaf5289dc435fc12c563b2fda59d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void mtrx::p_BuoyancyForceGenerator::UpdateForces</definition>
+        <argsstring>(Particle *particle) override</argsstring>
+        <name>UpdateForces</name>
+        <param>
+          <type>Particle *</type>
+          <declname>particle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/ParticleGenerators/p_BuoyancyForceGenerator.h" line="21" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1p___buoyancy_force_generator_1a0bb270ca93a377407c088ff2343350a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mtrx::p_BuoyancyForceGenerator::p_BuoyancyForceGenerator</definition>
+        <argsstring>(float density, float volume, float maxPaticleDepth)</argsstring>
+        <name>p_BuoyancyForceGenerator</name>
+        <param>
+          <type>float</type>
+          <declname>density</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>volume</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>maxPaticleDepth</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/ParticleGenerators/p_BuoyancyForceGenerator.h" line="23" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmtrx_1_1p___buoyancy_force_generator_1aba5f7e2f158e629c1a9fe32b1c30d588" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mtrx::p_BuoyancyForceGenerator::~p_BuoyancyForceGenerator</definition>
+        <argsstring>()</argsstring>
+        <name>~p_BuoyancyForceGenerator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/ParticleGenerators/p_BuoyancyForceGenerator.h" line="24" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/ParticleGenerators/p_BuoyancyForceGenerator.h" line="15" column="1" bodyfile="C:/Users/mohamed/Desktop/MTRXEngine/MTRXEngine/MTRXEngine/source/headers/forceGenerators/ParticleGenerators/p_BuoyancyForceGenerator.h" bodystart="14" bodyend="25"/>
+    <listofallmembers>
+      <member refid="classmtrx_1_1p___buoyancy_force_generator_1ab83c861e1d4e41143bb780ec0e0e70fd" prot="public" virt="non-virtual"><scope>mtrx::p_BuoyancyForceGenerator</scope><name>liquidHeight</name></member>
+      <member refid="classmtrx_1_1p___buoyancy_force_generator_1a8fa05b6a586249701c28893a22df1401" prot="public" virt="non-virtual"><scope>mtrx::p_BuoyancyForceGenerator</scope><name>maxParticleDepth</name></member>
+      <member refid="classmtrx_1_1p___buoyancy_force_generator_1a0bb270ca93a377407c088ff2343350a5" prot="public" virt="non-virtual"><scope>mtrx::p_BuoyancyForceGenerator</scope><name>p_BuoyancyForceGenerator</name></member>
+      <member refid="classmtrx_1_1p___buoyancy_force_generator_1ac17aaf5289dc435fc12c563b2fda59d6" prot="public" virt="virtual"><scope>mtrx::p_BuoyancyForceGenerator</scope><name>UpdateForces</name></member>
+      <member refid="classmtrx_1_1p___buoyancy_force_generator_1aba5f7e2f158e629c1a9fe32b1c30d588" prot="public" virt="non-virtual"><scope>mtrx::p_BuoyancyForceGenerator</scope><name>~p_BuoyancyForceGenerator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

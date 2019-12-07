@@ -6,7 +6,7 @@
 namespace mtrx
 {
 	/**
-	 * Implementation of OOBBs 
+	 * @brief Implementation of OOBBs 
 	 * 
 	 */
 	class OOBBCollider : public ConvexShapeCollider

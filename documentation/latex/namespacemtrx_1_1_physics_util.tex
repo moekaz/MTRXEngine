@@ -1,0 +1,358 @@
+\hypertarget{namespacemtrx_1_1_physics_util}{}\doxysection{mtrx\+::Physics\+Util Namespace Reference}
+\label{namespacemtrx_1_1_physics_util}\index{mtrx::PhysicsUtil@{mtrx::PhysicsUtil}}
+
+
+Utility namespace for some basic calculations that are useful for collision detection and other physics related functionality.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+glm\+::vec3 \mbox{\hyperlink{namespacemtrx_1_1_physics_util_a82b7dc1049d74ce11316522e047e28b5}{Triple\+Cross}} (const glm\+::vec3 \&a, const glm\+::vec3 \&b, const glm\+::vec3 \&c)
+\begin{DoxyCompactList}\small\item\em Implementation of triple cross product. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{namespacemtrx_1_1_physics_util_a10b9e39ab7b8486226c4084a33c2e32c}{Min\+Distance\+Two\+Lines}} (const glm\+::vec3 \&A, const glm\+::vec3 \&B, const glm\+::vec3 \&C, const glm\+::vec3 \&D)
+\begin{DoxyCompactList}\small\item\em Minimum distance squared between 2 infinite line. The square of the minimum distance is used for optimization purposes. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{namespacemtrx_1_1_physics_util_aa710864e0ad3e7a7b0c66841e73d0053}{Min\+Distance\+Squared\+Two\+Segments}} (const glm\+::vec3 \&A, const glm\+::vec3 \&B, const glm\+::vec3 \&C, const glm\+::vec3 \&D)
+\begin{DoxyCompactList}\small\item\em Minimum distance squared between 2 line segments. The square of the minimum distance is used for optimization purposes \mbox{\hyperlink{}{http\+://geomalgorithms.\+com/a07-\/\+\_\+distance.\+html\#dist3\+D\+\_\+\+Segment\+\_\+to\+\_\+\+Segment.}}\end{DoxyCompactList}\item 
+std\+::pair$<$ float, glm\+::vec3 $>$ \mbox{\hyperlink{namespacemtrx_1_1_physics_util_af5b0f0fd3ad66a518d3f8ed549ac53ec}{Min\+Distance\+Squared\+Point\+Ray}} (const glm\+::vec3 \&point, const glm\+::vec3 \&start\+Point\+Ray, const glm\+::vec3 \&ray\+Direction)
+\begin{DoxyCompactList}\small\item\em Minimum distance squared of a point and ray. The square of the minimum distance is used for optimization purposes. \end{DoxyCompactList}\item 
+std\+::pair$<$ float, glm\+::vec3 $>$ \mbox{\hyperlink{namespacemtrx_1_1_physics_util_a8bfc1b573238623026f3d7d9b507b3ca}{Min\+Distance\+Squared\+Point\+Segment}} (const glm\+::vec3 \&A, const glm\+::vec3 \&B, const glm\+::vec3 \&C)
+\begin{DoxyCompactList}\small\item\em Minimum distance squared of a point and a line segment. The square of the minimum distance is used for optimization purposes. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{namespacemtrx_1_1_physics_util_a7361309066fc8dac4e23734f96111d0a}{Min\+Distance\+Squared\+Line\+Segment\+Ray}} (const glm\+::vec3 \&a, const glm\+::vec3 \&b, const glm\+::vec3 \&ray\+Start, const glm\+::vec3 \&ray\+Direction)
+\begin{DoxyCompactList}\small\item\em Minimum distance squared Line segment and ray. Can be broken down into a line segment minimum distance squared. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{namespacemtrx_1_1_physics_util_a8adf3f94936a17666f63e28d96335559}{Min\+Distance\+Squared\+Point\+Triangle}} (const glm\+::vec3 \&pt, const glm\+::vec3 \&a, const glm\+::vec3 \&b, const glm\+::vec3 \&c)
+\begin{DoxyCompactList}\small\item\em Minimum distance squared between a point and triangle. The square of the minimum distance is used for optimization purposes. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{namespacemtrx_1_1_physics_util_a26f7db1dab57d281e712b87f058beda4}{Min\+Distance\+Squared\+Line\+Segment\+Triangle}} (const glm\+::vec3 \&a, const glm\+::vec3 \&b, const glm\+::vec3 \&c, const glm\+::vec3 \&d, const glm\+::vec3 \&e)
+\begin{DoxyCompactList}\small\item\em Minimum distance squared of line segment and triangle. The square of the minimum distance is used for optimization purposes. \end{DoxyCompactList}\item 
+std\+::pair$<$ float, glm\+::vec3 $>$ \mbox{\hyperlink{namespacemtrx_1_1_physics_util_a94232e4bae6379d6135956109640f232}{Min\+Distance\+Squared\+Point\+A\+A\+BB}} (const glm\+::vec3 \&pt, const glm\+::vec3 \&center, const float $\ast$half\+Extents)
+\begin{DoxyCompactList}\small\item\em Minimum distance squared between a point and an A\+A\+BB. The square of the minimum distance is used for optimization purposes. \end{DoxyCompactList}\item 
+glm\+::quat \mbox{\hyperlink{namespacemtrx_1_1_physics_util_a8c85bfef95fee864c6160aaede5cbc5a}{Slerp}} (const glm\+::quat \&first\+Rotation, const glm\+::quat \&second\+Rotation, float t)
+\begin{DoxyCompactList}\small\item\em Implementation of Slerp which is a lerp for rotations. \end{DoxyCompactList}\item 
+glm\+::vec3 \mbox{\hyperlink{namespacemtrx_1_1_physics_util_a9c08bc8c83923700f188ed3910aacdf7}{Lerp}} (const glm\+::vec3 \&starting\+Position, const glm\+::vec3 \&destination, float t)
+\begin{DoxyCompactList}\small\item\em Implementation of linear interpolation. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{namespacemtrx_1_1_physics_util_af55a0fd74660eb03d28d61f2d2b67eef}{Ease}} (float t)
+\begin{DoxyCompactList}\small\item\em Easing function for the t parameter to be used for lerping functions. The easing function is a half sin curve that allows for a slow start and a slow end. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$, typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$\+::value$>$$>$ }\\std\+::vector$<$ \mbox{\hyperlink{structmtrx_1_1_triangle}{Triangle}} $>$ \mbox{\hyperlink{namespacemtrx_1_1_physics_util_a0e6250e1e574e74da2a60d898246dba7}{Triangulate\+Convex\+Shape}} (const Iterator \&start\+Vertices, const Iterator \&end\+Vertices, const int size)
+\begin{DoxyCompactList}\small\item\em Triangulating a convex shape by fan triangulation which is using the first vertex as a starting point for all triangules and fanning out to the other vertices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Utility namespace for some basic calculations that are useful for collision detection and other physics related functionality. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacemtrx_1_1_physics_util_af55a0fd74660eb03d28d61f2d2b67eef}\label{namespacemtrx_1_1_physics_util_af55a0fd74660eb03d28d61f2d2b67eef}} 
+\index{mtrx::PhysicsUtil@{mtrx::PhysicsUtil}!Ease@{Ease}}
+\index{Ease@{Ease}!mtrx::PhysicsUtil@{mtrx::PhysicsUtil}}
+\doxysubsubsection{\texorpdfstring{Ease()}{Ease()}}
+{\footnotesize\ttfamily float mtrx\+::\+Physics\+Util\+::\+Ease (\begin{DoxyParamCaption}\item[{float}]{t }\end{DoxyParamCaption})}
+
+
+
+Easing function for the t parameter to be used for lerping functions. The easing function is a half sin curve that allows for a slow start and a slow end. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Parameter between \mbox{[}0, 1\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float New t value according to the easing function 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_physics_util_a9c08bc8c83923700f188ed3910aacdf7}\label{namespacemtrx_1_1_physics_util_a9c08bc8c83923700f188ed3910aacdf7}} 
+\index{mtrx::PhysicsUtil@{mtrx::PhysicsUtil}!Lerp@{Lerp}}
+\index{Lerp@{Lerp}!mtrx::PhysicsUtil@{mtrx::PhysicsUtil}}
+\doxysubsubsection{\texorpdfstring{Lerp()}{Lerp()}}
+{\footnotesize\ttfamily glm\+::vec3 mtrx\+::\+Physics\+Util\+::\+Lerp (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{starting\+Position,  }\item[{const glm\+::vec3 \&}]{destination,  }\item[{float}]{t }\end{DoxyParamCaption})}
+
+
+
+Implementation of linear interpolation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em starting\+Position} & Start position \\
+\hline
+{\em destination} & End position \\
+\hline
+{\em t} & Parameter between \mbox{[}0, 1\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+glm\+::vec3 A vector between the 2 vectors influenced by the t value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_physics_util_a7361309066fc8dac4e23734f96111d0a}\label{namespacemtrx_1_1_physics_util_a7361309066fc8dac4e23734f96111d0a}} 
+\index{mtrx::PhysicsUtil@{mtrx::PhysicsUtil}!MinDistanceSquaredLineSegmentRay@{MinDistanceSquaredLineSegmentRay}}
+\index{MinDistanceSquaredLineSegmentRay@{MinDistanceSquaredLineSegmentRay}!mtrx::PhysicsUtil@{mtrx::PhysicsUtil}}
+\doxysubsubsection{\texorpdfstring{MinDistanceSquaredLineSegmentRay()}{MinDistanceSquaredLineSegmentRay()}}
+{\footnotesize\ttfamily float mtrx\+::\+Physics\+Util\+::\+Min\+Distance\+Squared\+Line\+Segment\+Ray (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{a,  }\item[{const glm\+::vec3 \&}]{b,  }\item[{const glm\+::vec3 \&}]{ray\+Start,  }\item[{const glm\+::vec3 \&}]{ray\+Direction }\end{DoxyParamCaption})}
+
+
+
+Minimum distance squared Line segment and ray. Can be broken down into a line segment minimum distance squared. 
+
+\begin{DoxySeeAlso}{See also}
+mtrx\+::\+Physics\+Util\+::\+Minimum\+Distance\+Squared\+Two\+Segments The square of the minimum distance is used for optimization purposes
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The first end point of the line segment \\
+\hline
+{\em b} & The second end point of the line segment \\
+\hline
+{\em ray\+Start} & The starting point of the ray \\
+\hline
+{\em ray\+Direction} & The normalized direction of the ray \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float The minimum distance squared of the line segment and the ray 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_physics_util_a26f7db1dab57d281e712b87f058beda4}\label{namespacemtrx_1_1_physics_util_a26f7db1dab57d281e712b87f058beda4}} 
+\index{mtrx::PhysicsUtil@{mtrx::PhysicsUtil}!MinDistanceSquaredLineSegmentTriangle@{MinDistanceSquaredLineSegmentTriangle}}
+\index{MinDistanceSquaredLineSegmentTriangle@{MinDistanceSquaredLineSegmentTriangle}!mtrx::PhysicsUtil@{mtrx::PhysicsUtil}}
+\doxysubsubsection{\texorpdfstring{MinDistanceSquaredLineSegmentTriangle()}{MinDistanceSquaredLineSegmentTriangle()}}
+{\footnotesize\ttfamily float mtrx\+::\+Physics\+Util\+::\+Min\+Distance\+Squared\+Line\+Segment\+Triangle (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{a,  }\item[{const glm\+::vec3 \&}]{b,  }\item[{const glm\+::vec3 \&}]{c,  }\item[{const glm\+::vec3 \&}]{d,  }\item[{const glm\+::vec3 \&}]{e }\end{DoxyParamCaption})}
+
+
+
+Minimum distance squared of line segment and triangle. The square of the minimum distance is used for optimization purposes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The first end point of the line segment \\
+\hline
+{\em b} & The second end point of the line segment \\
+\hline
+{\em c} & First point of the triangle \\
+\hline
+{\em d} & Second point of the triangle \\
+\hline
+{\em e} & Third point of the triangle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float The minimum distance squared between the line segment and the triangle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_physics_util_a94232e4bae6379d6135956109640f232}\label{namespacemtrx_1_1_physics_util_a94232e4bae6379d6135956109640f232}} 
+\index{mtrx::PhysicsUtil@{mtrx::PhysicsUtil}!MinDistanceSquaredPointAABB@{MinDistanceSquaredPointAABB}}
+\index{MinDistanceSquaredPointAABB@{MinDistanceSquaredPointAABB}!mtrx::PhysicsUtil@{mtrx::PhysicsUtil}}
+\doxysubsubsection{\texorpdfstring{MinDistanceSquaredPointAABB()}{MinDistanceSquaredPointAABB()}}
+{\footnotesize\ttfamily std\+::pair$<$float, glm\+::vec3$>$ mtrx\+::\+Physics\+Util\+::\+Min\+Distance\+Squared\+Point\+A\+A\+BB (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{pt,  }\item[{const glm\+::vec3 \&}]{center,  }\item[{const float $\ast$}]{half\+Extents }\end{DoxyParamCaption})}
+
+
+
+Minimum distance squared between a point and an A\+A\+BB. The square of the minimum distance is used for optimization purposes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pt} & The point we want to check the distance for \\
+\hline
+{\em center} & The center of the A\+A\+BB collider \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classmtrx_1_1_a_a_b_b_collider}{mtrx\+::\+A\+A\+B\+B\+Collider}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em half\+Extents} & The half extents of the \mbox{\hyperlink{classmtrx_1_1_a_a_b_b_collider}{A\+A\+B\+B\+Collider}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classmtrx_1_1_a_a_b_b_collider}{mtrx\+::\+A\+A\+B\+B\+Collider}} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+std\+::pair$<$float, glm\+::vec3$>$ The minimum distance squared and the closest point 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_physics_util_af5b0f0fd3ad66a518d3f8ed549ac53ec}\label{namespacemtrx_1_1_physics_util_af5b0f0fd3ad66a518d3f8ed549ac53ec}} 
+\index{mtrx::PhysicsUtil@{mtrx::PhysicsUtil}!MinDistanceSquaredPointRay@{MinDistanceSquaredPointRay}}
+\index{MinDistanceSquaredPointRay@{MinDistanceSquaredPointRay}!mtrx::PhysicsUtil@{mtrx::PhysicsUtil}}
+\doxysubsubsection{\texorpdfstring{MinDistanceSquaredPointRay()}{MinDistanceSquaredPointRay()}}
+{\footnotesize\ttfamily std\+::pair$<$float, glm\+::vec3$>$ mtrx\+::\+Physics\+Util\+::\+Min\+Distance\+Squared\+Point\+Ray (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{point,  }\item[{const glm\+::vec3 \&}]{start\+Point\+Ray,  }\item[{const glm\+::vec3 \&}]{ray\+Direction }\end{DoxyParamCaption})}
+
+
+
+Minimum distance squared of a point and ray. The square of the minimum distance is used for optimization purposes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & A point in 3d space we want to check the distance for \\
+\hline
+{\em start\+Point\+Ray} & Start point of the ray \\
+\hline
+{\em ray\+Direction} & The normalized direction of the ray \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::pair$<$float, glm\+::vec3$>$ The minimum distance squared and the closest point 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_physics_util_a8bfc1b573238623026f3d7d9b507b3ca}\label{namespacemtrx_1_1_physics_util_a8bfc1b573238623026f3d7d9b507b3ca}} 
+\index{mtrx::PhysicsUtil@{mtrx::PhysicsUtil}!MinDistanceSquaredPointSegment@{MinDistanceSquaredPointSegment}}
+\index{MinDistanceSquaredPointSegment@{MinDistanceSquaredPointSegment}!mtrx::PhysicsUtil@{mtrx::PhysicsUtil}}
+\doxysubsubsection{\texorpdfstring{MinDistanceSquaredPointSegment()}{MinDistanceSquaredPointSegment()}}
+{\footnotesize\ttfamily std\+::pair$<$float, glm\+::vec3$>$ mtrx\+::\+Physics\+Util\+::\+Min\+Distance\+Squared\+Point\+Segment (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{A,  }\item[{const glm\+::vec3 \&}]{B,  }\item[{const glm\+::vec3 \&}]{C }\end{DoxyParamCaption})}
+
+
+
+Minimum distance squared of a point and a line segment. The square of the minimum distance is used for optimization purposes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & The point we want to check the distance for \\
+\hline
+{\em B} & The first end point of the line segment \\
+\hline
+{\em C} & The second end point of the line segment \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::pair$<$float, glm\+::vec3$>$ The minimum distance squared and the closest point 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_physics_util_a8adf3f94936a17666f63e28d96335559}\label{namespacemtrx_1_1_physics_util_a8adf3f94936a17666f63e28d96335559}} 
+\index{mtrx::PhysicsUtil@{mtrx::PhysicsUtil}!MinDistanceSquaredPointTriangle@{MinDistanceSquaredPointTriangle}}
+\index{MinDistanceSquaredPointTriangle@{MinDistanceSquaredPointTriangle}!mtrx::PhysicsUtil@{mtrx::PhysicsUtil}}
+\doxysubsubsection{\texorpdfstring{MinDistanceSquaredPointTriangle()}{MinDistanceSquaredPointTriangle()}}
+{\footnotesize\ttfamily float mtrx\+::\+Physics\+Util\+::\+Min\+Distance\+Squared\+Point\+Triangle (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{pt,  }\item[{const glm\+::vec3 \&}]{a,  }\item[{const glm\+::vec3 \&}]{b,  }\item[{const glm\+::vec3 \&}]{c }\end{DoxyParamCaption})}
+
+
+
+Minimum distance squared between a point and triangle. The square of the minimum distance is used for optimization purposes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pt} & The point we want to check the distance for \\
+\hline
+{\em a} & The first point of the triangle \\
+\hline
+{\em b} & The second point of the triangle \\
+\hline
+{\em c} & The third point of the triangle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float The minimum distance squared 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_physics_util_aa710864e0ad3e7a7b0c66841e73d0053}\label{namespacemtrx_1_1_physics_util_aa710864e0ad3e7a7b0c66841e73d0053}} 
+\index{mtrx::PhysicsUtil@{mtrx::PhysicsUtil}!MinDistanceSquaredTwoSegments@{MinDistanceSquaredTwoSegments}}
+\index{MinDistanceSquaredTwoSegments@{MinDistanceSquaredTwoSegments}!mtrx::PhysicsUtil@{mtrx::PhysicsUtil}}
+\doxysubsubsection{\texorpdfstring{MinDistanceSquaredTwoSegments()}{MinDistanceSquaredTwoSegments()}}
+{\footnotesize\ttfamily float mtrx\+::\+Physics\+Util\+::\+Min\+Distance\+Squared\+Two\+Segments (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{A,  }\item[{const glm\+::vec3 \&}]{B,  }\item[{const glm\+::vec3 \&}]{C,  }\item[{const glm\+::vec3 \&}]{D }\end{DoxyParamCaption})}
+
+
+
+Minimum distance squared between 2 line segments. The square of the minimum distance is used for optimization purposes \mbox{\hyperlink{}{http\+://geomalgorithms.\+com/a07-\/\+\_\+distance.\+html\#dist3\+D\+\_\+\+Segment\+\_\+to\+\_\+\+Segment.}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & First end of the line segment \\
+\hline
+{\em B} & Second end of the line segment \\
+\hline
+{\em C} & First end of the second line segment \\
+\hline
+{\em D} & Second end of the second line segment \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float The minimum distance squared between 2 line segments 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_physics_util_a10b9e39ab7b8486226c4084a33c2e32c}\label{namespacemtrx_1_1_physics_util_a10b9e39ab7b8486226c4084a33c2e32c}} 
+\index{mtrx::PhysicsUtil@{mtrx::PhysicsUtil}!MinDistanceTwoLines@{MinDistanceTwoLines}}
+\index{MinDistanceTwoLines@{MinDistanceTwoLines}!mtrx::PhysicsUtil@{mtrx::PhysicsUtil}}
+\doxysubsubsection{\texorpdfstring{MinDistanceTwoLines()}{MinDistanceTwoLines()}}
+{\footnotesize\ttfamily float mtrx\+::\+Physics\+Util\+::\+Min\+Distance\+Two\+Lines (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{A,  }\item[{const glm\+::vec3 \&}]{B,  }\item[{const glm\+::vec3 \&}]{C,  }\item[{const glm\+::vec3 \&}]{D }\end{DoxyParamCaption})}
+
+
+
+Minimum distance squared between 2 infinite line. The square of the minimum distance is used for optimization purposes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & Point on first line \\
+\hline
+{\em B} & Point on first line \\
+\hline
+{\em C} & Point on second line \\
+\hline
+{\em D} & Point on second line \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float The minimum distance squared between the 2 infinite lines 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_physics_util_a8c85bfef95fee864c6160aaede5cbc5a}\label{namespacemtrx_1_1_physics_util_a8c85bfef95fee864c6160aaede5cbc5a}} 
+\index{mtrx::PhysicsUtil@{mtrx::PhysicsUtil}!Slerp@{Slerp}}
+\index{Slerp@{Slerp}!mtrx::PhysicsUtil@{mtrx::PhysicsUtil}}
+\doxysubsubsection{\texorpdfstring{Slerp()}{Slerp()}}
+{\footnotesize\ttfamily glm\+::quat mtrx\+::\+Physics\+Util\+::\+Slerp (\begin{DoxyParamCaption}\item[{const glm\+::quat \&}]{first\+Rotation,  }\item[{const glm\+::quat \&}]{second\+Rotation,  }\item[{float}]{t }\end{DoxyParamCaption})}
+
+
+
+Implementation of Slerp which is a lerp for rotations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first\+Rotation} & start position of the rotation \\
+\hline
+{\em second\+Rotation} & End position of the rotation \\
+\hline
+{\em t} & parameter between \mbox{[}0, 1\mbox{]} to interpolate between the 2 rotations \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+glm\+::quat The rotation interpolated between the 2 rotations 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_physics_util_a0e6250e1e574e74da2a60d898246dba7}\label{namespacemtrx_1_1_physics_util_a0e6250e1e574e74da2a60d898246dba7}} 
+\index{mtrx::PhysicsUtil@{mtrx::PhysicsUtil}!TriangulateConvexShape@{TriangulateConvexShape}}
+\index{TriangulateConvexShape@{TriangulateConvexShape}!mtrx::PhysicsUtil@{mtrx::PhysicsUtil}}
+\doxysubsubsection{\texorpdfstring{TriangulateConvexShape()}{TriangulateConvexShape()}}
+{\footnotesize\ttfamily template$<$typename Iterator , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$, typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$\+::value$>$$>$ \\
+std\+::vector$<$\mbox{\hyperlink{structmtrx_1_1_triangle}{Triangle}}$>$ mtrx\+::\+Physics\+Util\+::\+Triangulate\+Convex\+Shape (\begin{DoxyParamCaption}\item[{const Iterator \&}]{start\+Vertices,  }\item[{const Iterator \&}]{end\+Vertices,  }\item[{const int}]{size }\end{DoxyParamCaption})}
+
+
+
+Triangulating a convex shape by fan triangulation which is using the first vertex as a starting point for all triangules and fanning out to the other vertices. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Iterator} & Iterator type that is used by the collection of vertices \\
+\hline
+{\em std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same$<$glm\+::vec3$\ast$,typename} & std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$\+::value$>$ Iterator template check \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Vertices} & Iterator to the beginning of the vertex list \\
+\hline
+{\em end\+Vertices} & Iterator to the end of the vertex list \\
+\hline
+{\em size} & The size of the vertex list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Triangle$>$ A vector of triangles representing the triangulated mesh 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemtrx_1_1_physics_util_a82b7dc1049d74ce11316522e047e28b5}\label{namespacemtrx_1_1_physics_util_a82b7dc1049d74ce11316522e047e28b5}} 
+\index{mtrx::PhysicsUtil@{mtrx::PhysicsUtil}!TripleCross@{TripleCross}}
+\index{TripleCross@{TripleCross}!mtrx::PhysicsUtil@{mtrx::PhysicsUtil}}
+\doxysubsubsection{\texorpdfstring{TripleCross()}{TripleCross()}}
+{\footnotesize\ttfamily glm\+::vec3 mtrx\+::\+Physics\+Util\+::\+Triple\+Cross (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{a,  }\item[{const glm\+::vec3 \&}]{b,  }\item[{const glm\+::vec3 \&}]{c }\end{DoxyParamCaption})}
+
+
+
+Implementation of triple cross product. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & First vector \\
+\hline
+{\em b} & Second vector \\
+\hline
+{\em c} & Third vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+glm\+::vec3 The result of the triple cross product 
+\end{DoxyReturn}
