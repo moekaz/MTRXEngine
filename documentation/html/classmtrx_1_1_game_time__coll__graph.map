@@ -1,0 +1,3 @@
+<map id="mtrx::GameTime" name="mtrx::GameTime">
+<area shape="rect" id="node1" title="Basic implementation of time values mostly used for the calculation of delta time." alt="" coords="5,5,169,200"/>
+</map>

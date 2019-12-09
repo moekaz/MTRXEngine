@@ -10,7 +10,7 @@ namespace mtrx
 			return PhysicsUtil::MinDistanceSquaredPointRay(sphereCenter, startPointRay, rayDirection).first <= sphereRadius * sphereRadius;
 		}
 
-		bool RayBoxCollision(const glm::vec3& rayStart, const glm::vec3& rayDirection, const glm::vec3& center, const glm::vec3* axes, const float* halfExtents)
+		bool RayAABBCollision(const glm::vec3& rayStart, const glm::vec3& rayDirection, const glm::vec3& center, const glm::vec3* axes, const float* halfExtents)
 		{
 			glm::vec3 min = glm::vec3(center[0] - ((*axes)[0] * halfExtents[0]), center[1] - ((*axes)[1] * halfExtents[1]), center[2] - ((*axes)[2] * halfExtents[2]));
 			glm::vec3 max = glm::vec3(center[0] + ((*axes)[0] * halfExtents[0]), center[1] + ((*axes)[1] * halfExtents[1]), center[2] + ((*axes)[2] * halfExtents[2]));

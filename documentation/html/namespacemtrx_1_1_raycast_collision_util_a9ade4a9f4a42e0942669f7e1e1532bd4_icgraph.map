@@ -1,0 +1,4 @@
+<map id="mtrx::RaycastCollisionUtil::RaySphereCollision" name="mtrx::RaycastCollisionUtil::RaySphereCollision">
+<area shape="rect" id="node1" title="Raycasting onto a sphere collider." alt="" coords="193,5,365,47"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_sphere_collider.html#adf3567008a057fe1332d922b7f82c29e" title="Raycast collision check for sphere colliders." alt="" coords="5,5,145,47"/>
+</map>

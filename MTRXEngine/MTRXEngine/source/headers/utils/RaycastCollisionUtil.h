@@ -48,7 +48,7 @@ namespace mtrx
 		 * @return true The ray and box collide
 		 * @return false The ray and box do not collide
 		 */
-		bool RayBoxCollision(const glm::vec3& rayStart, const glm::vec3& rayDirection, const glm::vec3& center, const glm::vec3* axes, const float* halfExtents);
+		bool RayAABBCollision(const glm::vec3& rayStart, const glm::vec3& rayDirection, const glm::vec3& center, const glm::vec3* axes, const float* halfExtents);
 
 		/**
 		 * @brief NOT TESTED OR USED

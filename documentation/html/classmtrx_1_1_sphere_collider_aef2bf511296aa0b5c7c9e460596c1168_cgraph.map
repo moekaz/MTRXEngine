@@ -1,0 +1,4 @@
+<map id="mtrx::SphereCollider::SetRadius" name="mtrx::SphereCollider::SetRadius">
+<area shape="rect" id="node1" title="Set the Radius of the collider." alt="" coords="5,5,145,47"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_transform.html#ad127e9a69dcf84bb098dfa8a6c2af22d" title="Get the Scale vector." alt="" coords="193,13,368,39"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="mtrx::ConvexShapeCollider::SetOrientation" name="mtrx::ConvexShapeCollider::SetOrientation">
+<area shape="rect" id="node1" title="Set the Orientation of the collider." alt="" coords="5,5,184,47"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_collider.html#ac69efe7d26d9e600154f601cbcc30849" title="Set the Orientation of the collider." alt="" coords="232,13,423,39"/>
+<area shape="rect" id="node3" href="$classmtrx_1_1_transform.html#a33f418bc15f821e731162fb8fe745aef" title="Set the Orientation quaternion." alt="" coords="471,13,675,39"/>
+</map>

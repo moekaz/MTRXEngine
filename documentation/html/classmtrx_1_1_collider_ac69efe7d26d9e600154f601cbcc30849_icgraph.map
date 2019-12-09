@@ -1,0 +1,5 @@
+<map id="mtrx::Collider::SetOrientation" name="mtrx::Collider::SetOrientation">
+<area shape="rect" id="node1" title="Set the Orientation of the collider." alt="" coords="232,46,423,73"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_convex_shape_collider.html#af86aa5dae629acb4076d15dcad004c7c" title="Set the Orientation of the collider." alt="" coords="5,5,184,47"/>
+<area shape="rect" id="node3" href="$classmtrx_1_1_capsule_collider.html#a03a6476613b7f81a5250eee613c7ed2f" title="Set the Orientation of the capsule collider." alt="" coords="21,71,168,112"/>
+</map>

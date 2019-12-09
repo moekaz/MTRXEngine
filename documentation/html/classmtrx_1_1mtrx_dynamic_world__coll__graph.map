@@ -1,0 +1,5 @@
+<map id="mtrx::mtrxDynamicWorld" name="mtrx::mtrxDynamicWorld">
+<area shape="rect" id="node1" title="Entry point of the user to the engine. This class defines the API that user will be using to interfac..." alt="" coords="82,204,261,399"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_collision_system.html" title="The collision detection system of the engine." alt="" coords="5,27,156,119"/>
+<area shape="rect" id="node3" href="$classmtrx_1_1_rigidbody_manager.html" title="Manager of rigidbodies." alt="" coords="181,5,343,141"/>
+</map>

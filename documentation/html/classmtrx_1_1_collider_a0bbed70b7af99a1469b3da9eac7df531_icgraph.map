@@ -1,0 +1,5 @@
+<map id="mtrx::Collider::SetPosition" name="mtrx::Collider::SetPosition">
+<area shape="rect" id="node1" title="Set the Position of the collider." alt="" coords="232,46,407,73"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_convex_shape_collider.html#ab6be6d11c7ef35fa0efa1743ffd82db7" title="Set the Position of the convex shape collider." alt="" coords="5,5,184,47"/>
+<area shape="rect" id="node3" href="$classmtrx_1_1_capsule_collider.html#ad8b6a634528473222da22557d2d25764" title="Set the Position of the capsile collider." alt="" coords="21,71,168,112"/>
+</map>

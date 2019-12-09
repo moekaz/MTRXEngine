@@ -1,0 +1,6 @@
+<map id="mtrx::AABBCollider::SetScale" name="mtrx::AABBCollider::SetScale">
+<area shape="rect" id="node1" title="Set the Scale object overriden to modify the halfExtents to represent scale change." alt="" coords="5,23,140,65"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_transform.html#ad127e9a69dcf84bb098dfa8a6c2af22d" title="Get the Scale vector." alt="" coords="188,5,363,32"/>
+<area shape="rect" id="node3" href="$classmtrx_1_1_collider.html#a81b9373f9d09221753255046b9279a5d" title="Set the Scale of the collider." alt="" coords="195,56,355,83"/>
+<area shape="rect" id="node4" href="$classmtrx_1_1_transform.html#a429a326ae889a31f433cf5f68d70af1e" title="Set the Scale vector." alt="" coords="411,56,585,83"/>
+</map>

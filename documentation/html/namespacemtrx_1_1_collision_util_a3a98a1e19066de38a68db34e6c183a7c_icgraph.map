@@ -1,0 +1,5 @@
+<map id="mtrx::CollisionUtil::ConvexShapeCollision" name="mtrx::CollisionUtil::ConvexShapeCollision">
+<area shape="rect" id="node1" title="Convex Shape collision detection algorithm. Uses GJK collision detection algorithm." alt="" coords="207,39,365,80"/>
+<area shape="rect" id="node2" href="$namespacemtrx_1_1_collision_util.html#a63e108082c43adf2c015f65f7b75830f" title="AABB and OOBB collision detection algorithm." alt="" coords="5,5,159,47"/>
+<area shape="rect" id="node3" href="$namespacemtrx_1_1_collision_util.html#a389b40f189ad059f0366228ec61d5cb4" title="OOBB and OOBB collision detection algorithm." alt="" coords="20,71,144,112"/>
+</map>

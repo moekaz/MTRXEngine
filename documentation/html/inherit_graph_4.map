@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classmtrx_1_1_collider.html" title="Basic API for all colliders." alt="" coords="35,56,133,83"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_capsule_collider.html" title="Implementation of Capsule colliders." alt="" coords="227,5,373,32"/>
+<area shape="rect" id="node3" href="$classmtrx_1_1_convex_shape_collider.html" title="Implementation of a Convex Shape collider." alt="" coords="211,56,389,83"/>
+<area shape="rect" id="node6" href="$classmtrx_1_1_sphere_collider.html" title="Implmentation of a Sphere collider used in collision systems." alt="" coords="230,107,370,133"/>
+<area shape="rect" id="node4" href="$classmtrx_1_1_a_a_b_b_collider.html" title="Implmentation of an Axis Aligned Bounding Box used for collision systems." alt="" coords="439,132,573,159"/>
+<area shape="rect" id="node5" href="$classmtrx_1_1_o_o_b_b_collider.html" title="Implementation of OOBBs." alt="" coords="437,56,575,83"/>
+<area shape="rect" id="node7" href="$classmtrx_1_1_i_bounding_volume.html" title="Interface used to define a bounding volume that can be used in a Bounding volume Hierarchy." alt="" coords="5,132,163,159"/>
+</map>

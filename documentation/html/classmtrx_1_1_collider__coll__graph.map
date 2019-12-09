@@ -1,0 +1,4 @@
+<map id="mtrx::Collider" name="mtrx::Collider">
+<area shape="rect" id="node1" title="Basic API for all colliders." alt="" coords="5,351,144,707"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_transform.html" title="Wrapper implementation of a transform that holds position, orientation, scale values and some functio..." alt="" coords="11,5,138,288"/>
+</map>

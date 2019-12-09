@@ -1,0 +1,9 @@
+<map id="mtrx::CapsuleCollider::SetScale" name="mtrx::CapsuleCollider::SetScale">
+<area shape="rect" id="node1" title="Set the Scale of the capsule collider Only the X and Y values of the scale are the only applicable va..." alt="" coords="5,49,152,90"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_collider.html#a6dca0e6b7f19c5582a312af54c34d8e1" title="Get the Position of the collider." alt="" coords="200,5,375,32"/>
+<area shape="rect" id="node4" href="$classmtrx_1_1_collider.html#ac946675c7e0ae86dc77459742511b9ae" title="Get the Up axis vector." alt="" coords="215,56,359,83"/>
+<area shape="rect" id="node6" href="$classmtrx_1_1_collider.html#a81b9373f9d09221753255046b9279a5d" title="Set the Scale of the collider." alt="" coords="207,107,367,133"/>
+<area shape="rect" id="node3" href="$classmtrx_1_1_transform.html#ab81c0229523bf29ea35a7a24fcff597e" title="Get the Position vector." alt="" coords="431,5,620,32"/>
+<area shape="rect" id="node5" href="$classmtrx_1_1_transform.html#a58b3e889aa1c031c3857ba7525e352b0" title="Get the Orientation quaternion." alt="" coords="423,56,628,83"/>
+<area shape="rect" id="node7" href="$classmtrx_1_1_transform.html#a429a326ae889a31f433cf5f68d70af1e" title="Set the Scale vector." alt="" coords="438,107,613,133"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="mtrx::CapsuleCollider" name="mtrx::CapsuleCollider">
+<area shape="rect" id="node1" title="Implementation of Capsule colliders." alt="" coords="5,424,152,692"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_collider.html" title="Basic API for all colliders." alt="" coords="9,5,148,376"/>
+</map>

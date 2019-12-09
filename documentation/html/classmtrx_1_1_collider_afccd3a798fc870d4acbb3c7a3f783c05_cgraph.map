@@ -1,0 +1,4 @@
+<map id="mtrx::Collider::GetForward" name="mtrx::Collider::GetForward">
+<area shape="rect" id="node1" title="Get the Forward axis vector." alt="" coords="5,5,180,32"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_transform.html#a58b3e889aa1c031c3857ba7525e352b0" title="Get the Orientation quaternion." alt="" coords="228,5,433,32"/>
+</map>

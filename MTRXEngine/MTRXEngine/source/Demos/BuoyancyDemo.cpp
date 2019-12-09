@@ -2,7 +2,9 @@
 #include <../Demos/BuoyancyDemo.h>
 
 BuoyancyDemo::BuoyancyDemo() : Demo("Buoyancy Demo", 1280, 720)
-{}
+{
+	application.window.SetVsync(true);
+}
 
 void BuoyancyDemo::Update()
 {

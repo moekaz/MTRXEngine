@@ -1,0 +1,6 @@
+<map id="mtrx::PhysicsUtil::TriangulateConvexShape" name="mtrx::PhysicsUtil::TriangulateConvexShape">
+<area shape="rect" id="node1" title="Triangulating a convex shape by fan triangulation which is using the first vertex as a starting point..." alt="" coords="471,39,635,80"/>
+<area shape="rect" id="node2" href="$namespacemtrx_1_1_collision_util.html#a8efc8de6ee21149f34b5e7cd77fe1a2c" title="Convex Shape Capsule collision detection algorithm." alt="" coords="217,5,423,47"/>
+<area shape="rect" id="node4" href="$namespacemtrx_1_1_collision_util.html#a4244615348b7ba8a7733587cdd3a2ca7" title="Convex Shape Sphere collision detection algorithm." alt="" coords="221,71,419,112"/>
+<area shape="rect" id="node3" href="$namespacemtrx_1_1_collision_util.html#a871e293d9a5b8a3a07f5d98fa927743a" title="Capsule OOBB Collision detection algorithm." alt="" coords="5,5,169,47"/>
+</map>

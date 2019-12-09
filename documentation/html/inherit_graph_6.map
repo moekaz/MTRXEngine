@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classmtrx_1_1_i_rigidbody_force_generator.html" title="Force generation interface used to apply forces on rigidbodies." alt="" coords="5,31,212,57"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1rb___buoyancy_force_generator.html" title="Implementation of a buoyancy force generator for rigidbodies." alt="" coords="260,5,483,32"/>
+<area shape="rect" id="node3" href="$classmtrx_1_1rb___gravity_force_generator.html" title="Implementation of gravitational force generator." alt="" coords="269,56,473,83"/>
+</map>

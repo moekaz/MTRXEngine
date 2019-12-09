@@ -1,0 +1,5 @@
+<map id="mtrx::IBoundingVolume" name="mtrx::IBoundingVolume">
+<area shape="rect" id="node1" title="Interface used to define a bounding volume that can be used in a Bounding volume Hierarchy." alt="" coords="77,5,235,83"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_a_a_b_b_collider.html" title="Implmentation of an Axis Aligned Bounding Box used for collision systems." alt="" coords="5,131,144,340"/>
+<area shape="rect" id="node3" href="$classmtrx_1_1_sphere_collider.html" title="Implmentation of a Sphere collider used in collision systems." alt="" coords="169,131,309,340"/>
+</map>

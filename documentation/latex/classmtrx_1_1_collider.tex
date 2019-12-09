@@ -9,12 +9,14 @@ Basic A\+PI for all colliders.
 
 {\ttfamily \#include $<$Collider.\+h$>$}
 
-Inheritance diagram for mtrx\+::Collider\+:\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=3.000000cm]{classmtrx_1_1_collider}
-\end{center}
-\end{figure}
+
+
+Inheritance diagram for mtrx\+::Collider\+:
+% FIG 0
+
+
+Collaboration diagram for mtrx\+::Collider\+:
+% FIG 1
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -162,6 +164,8 @@ true The collider is colliding with this collider
 
 false The collider is not colliding with this collider 
 \end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 2
 \mbox{\Hypertarget{classmtrx_1_1_collider_ac43e5d476507344a3340bae5451ad616}\label{classmtrx_1_1_collider_ac43e5d476507344a3340bae5451ad616}} 
 \index{mtrx::Collider@{mtrx::Collider}!GetColliderId@{GetColliderId}}
 \index{GetColliderId@{GetColliderId}!mtrx::Collider@{mtrx::Collider}}
@@ -201,6 +205,10 @@ Get the Forward axis vector.
 \begin{DoxyReturn}{Returns}
 const glm\+::vec3 The forward vector of this collider 
 \end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
 \mbox{\Hypertarget{classmtrx_1_1_collider_ad22caa3bdd6a81cc511a0f9141d8e5ee}\label{classmtrx_1_1_collider_ad22caa3bdd6a81cc511a0f9141d8e5ee}} 
 \index{mtrx::Collider@{mtrx::Collider}!GetOrientation@{GetOrientation}}
 \index{GetOrientation@{GetOrientation}!mtrx::Collider@{mtrx::Collider}}
@@ -214,6 +222,8 @@ Get the Orientation of the collider.
 \begin{DoxyReturn}{Returns}
 const glm\+::quat\& The current orientation of the collider 
 \end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 5
 \mbox{\Hypertarget{classmtrx_1_1_collider_a6dca0e6b7f19c5582a312af54c34d8e1}\label{classmtrx_1_1_collider_a6dca0e6b7f19c5582a312af54c34d8e1}} 
 \index{mtrx::Collider@{mtrx::Collider}!GetPosition@{GetPosition}}
 \index{GetPosition@{GetPosition}!mtrx::Collider@{mtrx::Collider}}
@@ -227,6 +237,10 @@ Get the Position of the collider.
 \begin{DoxyReturn}{Returns}
 const glm\+::vec3\& current position of the collider 
 \end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 6
+Here is the caller graph for this function\+:
+% FIG 7
 \mbox{\Hypertarget{classmtrx_1_1_collider_a0e7750440d8bf791c85b87d2e6a6f33a}\label{classmtrx_1_1_collider_a0e7750440d8bf791c85b87d2e6a6f33a}} 
 \index{mtrx::Collider@{mtrx::Collider}!GetScale@{GetScale}}
 \index{GetScale@{GetScale}!mtrx::Collider@{mtrx::Collider}}
@@ -240,6 +254,8 @@ Get the Scale of the collider.
 \begin{DoxyReturn}{Returns}
 const glm\+::vec3\& The current scale of the collider 
 \end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 8
 \mbox{\Hypertarget{classmtrx_1_1_collider_a59a39aa74953a4a6d228fec5bf3028e8}\label{classmtrx_1_1_collider_a59a39aa74953a4a6d228fec5bf3028e8}} 
 \index{mtrx::Collider@{mtrx::Collider}!GetSide@{GetSide}}
 \index{GetSide@{GetSide}!mtrx::Collider@{mtrx::Collider}}
@@ -253,6 +269,10 @@ Get the Side axis vector.
 \begin{DoxyReturn}{Returns}
 const glm\+::vec3 The side axis vector of the collider 
 \end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 9
+Here is the caller graph for this function\+:
+% FIG 10
 \mbox{\Hypertarget{classmtrx_1_1_collider_ac946675c7e0ae86dc77459742511b9ae}\label{classmtrx_1_1_collider_ac946675c7e0ae86dc77459742511b9ae}} 
 \index{mtrx::Collider@{mtrx::Collider}!GetUp@{GetUp}}
 \index{GetUp@{GetUp}!mtrx::Collider@{mtrx::Collider}}
@@ -266,6 +286,10 @@ Get the Up axis vector.
 \begin{DoxyReturn}{Returns}
 const glm\+::vec3 the up axis vector of the collider 
 \end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 11
+Here is the caller graph for this function\+:
+% FIG 12
 \mbox{\Hypertarget{classmtrx_1_1_collider_a056bd024840f5c426fdb9157fd81cf37}\label{classmtrx_1_1_collider_a056bd024840f5c426fdb9157fd81cf37}} 
 \index{mtrx::Collider@{mtrx::Collider}!IsConvex@{IsConvex}}
 \index{IsConvex@{IsConvex}!mtrx::Collider@{mtrx::Collider}}
@@ -327,6 +351,10 @@ Set the Orientation of the collider.
 
 Reimplemented in \mbox{\hyperlink{classmtrx_1_1_convex_shape_collider_af86aa5dae629acb4076d15dcad004c7c}{mtrx\+::\+Convex\+Shape\+Collider}}, \mbox{\hyperlink{classmtrx_1_1_capsule_collider_a03a6476613b7f81a5250eee613c7ed2f}{mtrx\+::\+Capsule\+Collider}}, and \mbox{\hyperlink{classmtrx_1_1_a_a_b_b_collider_a50a3eed64eb69d3568386978181026da}{mtrx\+::\+A\+A\+B\+B\+Collider}}.
 
+Here is the call graph for this function\+:
+% FIG 13
+Here is the caller graph for this function\+:
+% FIG 14
 \mbox{\Hypertarget{classmtrx_1_1_collider_a0bbed70b7af99a1469b3da9eac7df531}\label{classmtrx_1_1_collider_a0bbed70b7af99a1469b3da9eac7df531}} 
 \index{mtrx::Collider@{mtrx::Collider}!SetPosition@{SetPosition}}
 \index{SetPosition@{SetPosition}!mtrx::Collider@{mtrx::Collider}}
@@ -346,6 +374,10 @@ Set the Position of the collider.
 
 Reimplemented in \mbox{\hyperlink{classmtrx_1_1_capsule_collider_ad8b6a634528473222da22557d2d25764}{mtrx\+::\+Capsule\+Collider}}, and \mbox{\hyperlink{classmtrx_1_1_convex_shape_collider_ab6be6d11c7ef35fa0efa1743ffd82db7}{mtrx\+::\+Convex\+Shape\+Collider}}.
 
+Here is the call graph for this function\+:
+% FIG 15
+Here is the caller graph for this function\+:
+% FIG 16
 \mbox{\Hypertarget{classmtrx_1_1_collider_a81b9373f9d09221753255046b9279a5d}\label{classmtrx_1_1_collider_a81b9373f9d09221753255046b9279a5d}} 
 \index{mtrx::Collider@{mtrx::Collider}!SetScale@{SetScale}}
 \index{SetScale@{SetScale}!mtrx::Collider@{mtrx::Collider}}
@@ -365,3 +397,7 @@ Set the Scale of the collider.
 
 Reimplemented in \mbox{\hyperlink{classmtrx_1_1_sphere_collider_ad238eaded51ef815efaf350a632d4ed0}{mtrx\+::\+Sphere\+Collider}}, \mbox{\hyperlink{classmtrx_1_1_capsule_collider_ae1c97f035b4a0d26c7f680780ecc6996}{mtrx\+::\+Capsule\+Collider}}, \mbox{\hyperlink{classmtrx_1_1_convex_shape_collider_a1de37ecfb1bd42e43201c09c6e5a980f}{mtrx\+::\+Convex\+Shape\+Collider}}, \mbox{\hyperlink{classmtrx_1_1_a_a_b_b_collider_ac0cc88fabe8819ec1578d8999e248eaf}{mtrx\+::\+A\+A\+B\+B\+Collider}}, and \mbox{\hyperlink{classmtrx_1_1_o_o_b_b_collider_a7fe953f72faabf2998e9856d68b119f6}{mtrx\+::\+O\+O\+B\+B\+Collider}}.
 
+Here is the call graph for this function\+:
+% FIG 17
+Here is the caller graph for this function\+:
+% FIG 18

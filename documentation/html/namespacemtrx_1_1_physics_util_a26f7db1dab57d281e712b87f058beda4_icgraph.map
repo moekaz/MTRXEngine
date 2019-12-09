@@ -1,0 +1,5 @@
+<map id="mtrx::PhysicsUtil::MinDistanceSquaredLineSegmentTriangle" name="mtrx::PhysicsUtil::MinDistanceSquaredLineSegmentTriangle">
+<area shape="rect" id="node1" title="Minimum distance squared of line segment and triangle. The square of the minimum distance is used for..." alt="" coords="471,5,689,61"/>
+<area shape="rect" id="node2" href="$namespacemtrx_1_1_collision_util.html#a8efc8de6ee21149f34b5e7cd77fe1a2c" title="Convex Shape Capsule collision detection algorithm." alt="" coords="217,13,423,54"/>
+<area shape="rect" id="node3" href="$namespacemtrx_1_1_collision_util.html#a871e293d9a5b8a3a07f5d98fa927743a" title="Capsule OOBB Collision detection algorithm." alt="" coords="5,13,169,54"/>
+</map>

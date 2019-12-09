@@ -1,0 +1,7 @@
+<map id="mtrx::Transform::SetOrientation" name="mtrx::Transform::SetOrientation">
+<area shape="rect" id="node1" title="Set the Orientation quaternion." alt="" coords="484,31,688,57"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_rigidbody.html#a1e065382d9fb4792b5c0b3c44d2fa2d9" title="Set the Orientation of the body." alt="" coords="232,5,436,32"/>
+<area shape="rect" id="node3" href="$classmtrx_1_1_collider.html#ac69efe7d26d9e600154f601cbcc30849" title="Set the Orientation of the collider." alt="" coords="239,56,429,83"/>
+<area shape="rect" id="node4" href="$classmtrx_1_1_convex_shape_collider.html#af86aa5dae629acb4076d15dcad004c7c" title="Set the Orientation of the collider." alt="" coords="5,15,184,57"/>
+<area shape="rect" id="node5" href="$classmtrx_1_1_capsule_collider.html#a03a6476613b7f81a5250eee613c7ed2f" title="Set the Orientation of the capsule collider." alt="" coords="21,81,168,122"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="mtrx::Rigidbody::SetOrientation" name="mtrx::Rigidbody::SetOrientation">
+<area shape="rect" id="node1" title="Set the Orientation of the body." alt="" coords="5,5,209,32"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_transform.html#a33f418bc15f821e731162fb8fe745aef" title="Set the Orientation quaternion." alt="" coords="257,5,461,32"/>
+</map>

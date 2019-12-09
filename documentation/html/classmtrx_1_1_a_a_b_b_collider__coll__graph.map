@@ -1,0 +1,8 @@
+<map id="mtrx::AABBCollider" name="mtrx::AABBCollider">
+<area shape="rect" id="node1" title="Implmentation of an Axis Aligned Bounding Box used for collision systems." alt="" coords="217,1072,356,1267"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_convex_shape_collider.html" title="Implementation of a Convex Shape collider." alt="" coords="5,756,184,1009"/>
+<area shape="rect" id="node3" href="$classmtrx_1_1_collider.html" title="Basic API for all colliders." alt="" coords="25,351,164,707"/>
+<area shape="rect" id="node4" href="$classmtrx_1_1_transform.html" title="Wrapper implementation of a transform that holds position, orientation, scale values and some functio..." alt="" coords="31,5,158,288"/>
+<area shape="rect" id="node5" href="$classmtrx_1_1_i_bounding_volume.html" title="Interface used to define a bounding volume that can be used in a Bounding volume Hierarchy." alt="" coords="208,844,365,921"/>
+<area shape="rect" id="node6" href="$structmtrx_1_1_object_axes.html" title="The axes that define an objects world." alt="" coords="390,800,514,965"/>
+</map>

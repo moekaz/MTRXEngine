@@ -4,6 +4,7 @@
 CollisionDemo::CollisionDemo() : Demo("COLLISION DEMO", 1366, 768)
 {
 	//application.inputSystem->ToggleCursor();
+	application.window.SetVsync(true);
 
 	srand((unsigned int)time(0)); // Seed for random
 

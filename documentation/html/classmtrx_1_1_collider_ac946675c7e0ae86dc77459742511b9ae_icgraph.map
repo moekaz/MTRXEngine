@@ -1,0 +1,7 @@
+<map id="mtrx::Collider::GetUp" name="mtrx::Collider::GetUp">
+<area shape="rect" id="node1" title="Get the Up axis vector." alt="" coords="385,78,529,105"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_o_o_b_b_collider.html#a08ab41dae178a7f064c7992c9c2c07b1" title="Get the Axes of the collider." alt="" coords="195,5,333,47"/>
+<area shape="rect" id="node4" href="$classmtrx_1_1_capsule_collider.html#a03a6476613b7f81a5250eee613c7ed2f" title="Set the Orientation of the capsule collider." alt="" coords="191,71,337,112"/>
+<area shape="rect" id="node5" href="$classmtrx_1_1_capsule_collider.html#ae1c97f035b4a0d26c7f680780ecc6996" title="Set the Scale of the capsule collider Only the X and Y values of the scale are the only applicable va..." alt="" coords="191,136,337,177"/>
+<area shape="rect" id="node3" href="$classmtrx_1_1_o_o_b_b_collider.html#afa990f428f3044ceb1639816f5d98278" title="Raycast OOBB collision detection algorithm." alt="" coords="5,5,143,47"/>
+</map>

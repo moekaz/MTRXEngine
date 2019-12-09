@@ -1,0 +1,12 @@
+<map id="mtrx::Transform::GetOrientation" name="mtrx::Transform::GetOrientation">
+<area shape="rect" id="node1" title="Get the Orientation quaternion." alt="" coords="624,107,829,133"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_collider.html#afccd3a798fc870d4acbb3c7a3f783c05" title="Get the Forward axis vector." alt="" coords="393,5,568,32"/>
+<area shape="rect" id="node5" href="$classmtrx_1_1_collider.html#ad22caa3bdd6a81cc511a0f9141d8e5ee" title="Get the Orientation of the collider." alt="" coords="385,56,576,83"/>
+<area shape="rect" id="node6" href="$classmtrx_1_1_body.html#a48cca0e976f3366b89895f8914d5cbf9" title="Get the Orientation of the body." alt="" coords="391,107,570,133"/>
+<area shape="rect" id="node7" href="$classmtrx_1_1_collider.html#a59a39aa74953a4a6d228fec5bf3028e8" title="Get the Side axis vector." alt="" coords="403,157,558,184"/>
+<area shape="rect" id="node8" href="$classmtrx_1_1_collider.html#ac946675c7e0ae86dc77459742511b9ae" title="Get the Up axis vector." alt="" coords="409,208,553,235"/>
+<area shape="rect" id="node3" href="$classmtrx_1_1_o_o_b_b_collider.html#a08ab41dae178a7f064c7992c9c2c07b1" title="Get the Axes of the collider." alt="" coords="195,135,333,177"/>
+<area shape="rect" id="node4" href="$classmtrx_1_1_o_o_b_b_collider.html#afa990f428f3044ceb1639816f5d98278" title="Raycast OOBB collision detection algorithm." alt="" coords="5,135,143,177"/>
+<area shape="rect" id="node9" href="$classmtrx_1_1_capsule_collider.html#a03a6476613b7f81a5250eee613c7ed2f" title="Set the Orientation of the capsule collider." alt="" coords="191,201,337,242"/>
+<area shape="rect" id="node10" href="$classmtrx_1_1_capsule_collider.html#ae1c97f035b4a0d26c7f680780ecc6996" title="Set the Scale of the capsule collider Only the X and Y values of the scale are the only applicable va..." alt="" coords="191,266,337,307"/>
+</map>

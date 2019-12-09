@@ -1,0 +1,5 @@
+<map id="mtrx::SphereCollider" name="mtrx::SphereCollider">
+<area shape="rect" id="node1" title="Implmentation of a Sphere collider used in collision systems." alt="" coords="90,424,230,633"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_collider.html" title="Basic API for all colliders." alt="" coords="5,5,144,376"/>
+<area shape="rect" id="node3" href="$classmtrx_1_1_i_bounding_volume.html" title="Interface used to define a bounding volume that can be used in a Bounding volume Hierarchy." alt="" coords="168,152,325,229"/>
+</map>

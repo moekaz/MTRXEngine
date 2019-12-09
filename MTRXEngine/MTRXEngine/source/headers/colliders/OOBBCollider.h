@@ -35,17 +35,17 @@ namespace mtrx
 		 */
 		virtual ~OOBBCollider() = default;
 
-		/**
-		 * @brief Raycast OOBB collision detection algorithm
-		 * 
-		 * @param ray Ray that we want to check collision for @see mtrx::Ray
-		 * @return true The ray and collider collide
-		 * @return false The ray and collider do not collide
-		 */
-		virtual inline bool RaycastCollision(const Ray& ray) override
-		{
-			return RaycastCollisionUtil::RayBoxCollision(ray.startPosition, ray.direction, GetPosition(), GetAxes(), halfExtents);
-		}
+		///**
+		// * @brief Raycast OOBB collision detection algorithm
+		// * 
+		// * @param ray Ray that we want to check collision for @see mtrx::Ray
+		// * @return true The ray and collider collide
+		// * @return false The ray and collider do not collide
+		// */
+		//virtual inline bool RaycastCollision(const Ray& ray) override
+		//{
+		//	return RaycastCollisionUtil::RayBoxCollision(ray.startPosition, ray.direction, GetPosition(), GetAxes(), halfExtents);
+		//}
 		
 		/**
 		 * @brief Get the Axes of the collider

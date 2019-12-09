@@ -9,6 +9,10 @@ Utility class for the implementation of the G\+JK algorithm used for collision d
 
 {\ttfamily \#include $<$G\+J\+K\+Util.\+h$>$}
 
+
+
+Collaboration diagram for mtrx\+::G\+J\+K\+Util\+:
+% FIG 0
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -84,6 +88,10 @@ true The 2 convex shape colliders collide
 
 false The 2 convex shape colliders do not collide 
 \end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 1
+Here is the caller graph for this function\+:
+% FIG 2
 \mbox{\Hypertarget{classmtrx_1_1_g_j_k_util_a97c239cfe54183c4424054070a63b8d2}\label{classmtrx_1_1_g_j_k_util_a97c239cfe54183c4424054070a63b8d2}} 
 \index{mtrx::GJKUtil@{mtrx::GJKUtil}!FarthestPointInDirection@{FarthestPointInDirection}}
 \index{FarthestPointInDirection@{FarthestPointInDirection}!mtrx::GJKUtil@{mtrx::GJKUtil}}
@@ -115,6 +123,8 @@ Get a point in the vertex list that is closest (direction-\/wise) to the directi
 \begin{DoxyReturn}{Returns}
 glm\+::vec3$\ast$ The farthest point with the give direction 
 \end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 3
 \mbox{\Hypertarget{classmtrx_1_1_g_j_k_util_a2f7779fb20f5aed2ed712c490fc1434d}\label{classmtrx_1_1_g_j_k_util_a2f7779fb20f5aed2ed712c490fc1434d}} 
 \index{mtrx::GJKUtil@{mtrx::GJKUtil}!Support@{Support}}
 \index{Support@{Support}!mtrx::GJKUtil@{mtrx::GJKUtil}}
@@ -154,6 +164,10 @@ Support functionality for convex shape collider gives us a point in Minkowski sp
 \begin{DoxyReturn}{Returns}
 glm\+::vec3 A vertex in minkowski space in the direction given to be added to the simplex 
 \end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
 \mbox{\Hypertarget{classmtrx_1_1_g_j_k_util_a14612192183700ab5461b35bf37bcf01}\label{classmtrx_1_1_g_j_k_util_a14612192183700ab5461b35bf37bcf01}} 
 \index{mtrx::GJKUtil@{mtrx::GJKUtil}!TetrahedronChecks@{TetrahedronChecks}}
 \index{TetrahedronChecks@{TetrahedronChecks}!mtrx::GJKUtil@{mtrx::GJKUtil}}
@@ -262,3 +276,5 @@ true The simplex encapsulates the origin and thus there exists a collision
 
 false The simplex does not encapsule the origin and thus modified the simplex to continue search 
 \end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 6

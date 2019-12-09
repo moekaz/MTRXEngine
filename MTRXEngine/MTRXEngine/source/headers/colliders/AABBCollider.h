@@ -38,7 +38,7 @@ namespace mtrx
 		 */
 		virtual inline bool RaycastCollision(const Ray& ray) override
 		{
-			return RaycastCollisionUtil::RayBoxCollision(ray.startPosition, ray.direction, GetPosition(), axes.axes, halfExtents);
+			return RaycastCollisionUtil::RayAABBCollision(ray.startPosition, ray.direction, GetPosition(), axes.axes, halfExtents);
 		}
 
 		/**

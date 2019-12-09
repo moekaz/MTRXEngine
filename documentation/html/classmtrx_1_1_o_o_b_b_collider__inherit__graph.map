@@ -1,0 +1,5 @@
+<map id="mtrx::OOBBCollider" name="mtrx::OOBBCollider">
+<area shape="rect" id="node1" title="Implementation of OOBBs." alt="" coords="25,725,164,920"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_convex_shape_collider.html" title="Implementation of a Convex Shape collider." alt="" coords="5,424,184,677"/>
+<area shape="rect" id="node3" href="$classmtrx_1_1_collider.html" title="Basic API for all colliders." alt="" coords="25,5,164,376"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classmtrx_1_1_i_integratable.html" title="Interface for integration PS: Not used that much really." alt="" coords="5,5,132,32"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_body.html" title="Implementation of a basic particle body." alt="" coords="180,5,267,32"/>
+<area shape="rect" id="node3" href="$classmtrx_1_1_rigidbody.html" title="Implementation of rigidbodies with rigidbody dynamics newtonian force integration and rotational forc..." alt="" coords="315,5,428,32"/>
+</map>

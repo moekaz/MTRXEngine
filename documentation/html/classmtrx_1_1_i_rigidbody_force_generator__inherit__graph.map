@@ -1,0 +1,5 @@
+<map id="mtrx::IRigidbodyForceGenerator" name="mtrx::IRigidbodyForceGenerator">
+<area shape="rect" id="node1" title="Force generation interface used to apply forces on rigidbodies." alt="" coords="132,5,339,83"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1rb___buoyancy_force_generator.html" title="Implementation of a buoyancy force generator for rigidbodies." alt="" coords="5,131,228,311"/>
+<area shape="rect" id="node3" href="$classmtrx_1_1rb___gravity_force_generator.html" title="Implementation of gravitational force generator." alt="" coords="252,167,456,274"/>
+</map>

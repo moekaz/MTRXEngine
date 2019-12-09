@@ -1,0 +1,4 @@
+<map id="mtrx::ColliderDetectionUtil::Collide" name="mtrx::ColliderDetectionUtil::Collide">
+<area shape="rect" id="node1" title="Check for whether 2 colliders collide." alt="" coords="247,5,420,47"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_collider.html#af8b907eaf8cb13316dce419f595371df" title="Check for collision with another collider." alt="" coords="5,13,199,39"/>
+</map>

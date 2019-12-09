@@ -1,6 +1,6 @@
 #include <PrecompiledHeader.h>
 
-#define DEMO 3
+#define DEMO 4
 
 #if DEMO == 1
 	#include <../Demos/ProjectileDemo.h>

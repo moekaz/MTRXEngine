@@ -1,0 +1,6 @@
+<map id="mtrx::AABBCollider::RaycastCollision" name="mtrx::AABBCollider::RaycastCollision">
+<area shape="rect" id="node1" title="Collision function between a ray and an AABB." alt="" coords="5,27,140,69"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_collider.html#a6dca0e6b7f19c5582a312af54c34d8e1" title="Get the Position of the collider." alt="" coords="188,5,363,32"/>
+<area shape="rect" id="node4" href="$namespacemtrx_1_1_raycast_collision_util.html#a51b04fb66e7ff65a36760ae7719f53a9" title="Raycasting onto a box collider." alt="" coords="189,57,361,98"/>
+<area shape="rect" id="node3" href="$classmtrx_1_1_transform.html#ab81c0229523bf29ea35a7a24fcff597e" title="Get the Position vector." alt="" coords="411,5,600,32"/>
+</map>

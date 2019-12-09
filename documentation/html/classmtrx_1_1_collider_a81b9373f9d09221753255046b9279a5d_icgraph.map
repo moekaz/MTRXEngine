@@ -1,0 +1,8 @@
+<map id="mtrx::Collider::SetScale" name="mtrx::Collider::SetScale">
+<area shape="rect" id="node1" title="Set the Scale of the collider." alt="" coords="232,143,392,170"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_o_o_b_b_collider.html#a7fe953f72faabf2998e9856d68b119f6" title="Set the Scale of the collider." alt="" coords="26,5,163,47"/>
+<area shape="rect" id="node3" href="$classmtrx_1_1_a_a_b_b_collider.html#ac0cc88fabe8819ec1578d8999e248eaf" title="Set the Scale object overriden to modify the halfExtents to represent scale change." alt="" coords="27,71,162,112"/>
+<area shape="rect" id="node4" href="$classmtrx_1_1_convex_shape_collider.html#a1de37ecfb1bd42e43201c09c6e5a980f" title="Set the Scale of the collider." alt="" coords="5,136,184,177"/>
+<area shape="rect" id="node5" href="$classmtrx_1_1_capsule_collider.html#ae1c97f035b4a0d26c7f680780ecc6996" title="Set the Scale of the capsule collider Only the X and Y values of the scale are the only applicable va..." alt="" coords="21,201,168,243"/>
+<area shape="rect" id="node6" href="$classmtrx_1_1_sphere_collider.html#ad238eaded51ef815efaf350a632d4ed0" title="Set the Scale of the sphere collider. Only the X coordinate of the scale affects the collider,..." alt="" coords="25,267,165,308"/>
+</map>

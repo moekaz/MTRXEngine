@@ -1,0 +1,5 @@
+<map id="mtrx::Rigidbody" name="mtrx::Rigidbody">
+<area shape="rect" id="node1" title="Implementation of rigidbodies with rigidbody dynamics newtonian force integration and rotational forc..." alt="" coords="5,623,192,1052"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_body.html" title="Implementation of a basic particle body." alt="" coords="23,131,175,575"/>
+<area shape="rect" id="node3" href="$classmtrx_1_1_i_integratable.html" title="Interface for integration PS: Not used that much really." alt="" coords="35,5,162,83"/>
+</map>

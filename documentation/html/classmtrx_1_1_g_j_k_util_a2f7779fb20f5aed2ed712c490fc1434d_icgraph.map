@@ -1,0 +1,7 @@
+<map id="mtrx::GJKUtil::Support" name="mtrx::GJKUtil::Support">
+<area shape="rect" id="node1" title="Support functionality for convex shape collider gives us a point in Minkowski space that is closest t..." alt="" coords="619,46,772,73"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_g_j_k_util.html#a0676f37bb47ba75595fda8cab87d1a25" title="Implementation of GJK Collision detection algorithm." alt="" coords="413,46,571,73"/>
+<area shape="rect" id="node3" href="$namespacemtrx_1_1_collision_util.html#a3a98a1e19066de38a68db34e6c183a7c" title="Convex Shape collision detection algorithm. Uses GJK collision detection algorithm." alt="" coords="207,39,365,80"/>
+<area shape="rect" id="node4" href="$namespacemtrx_1_1_collision_util.html#a63e108082c43adf2c015f65f7b75830f" title="AABB and OOBB collision detection algorithm." alt="" coords="5,5,159,47"/>
+<area shape="rect" id="node5" href="$namespacemtrx_1_1_collision_util.html#a389b40f189ad059f0366228ec61d5cb4" title="OOBB and OOBB collision detection algorithm." alt="" coords="20,71,144,112"/>
+</map>

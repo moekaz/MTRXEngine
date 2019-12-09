@@ -1,0 +1,4 @@
+<map id="mtrx::OOBBCollider::GetAxes" name="mtrx::OOBBCollider::GetAxes">
+<area shape="rect" id="node1" title="Get the Axes of the collider." alt="" coords="191,5,328,47"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_o_o_b_b_collider.html#afa990f428f3044ceb1639816f5d98278" title="Raycast OOBB collision detection algorithm." alt="" coords="5,5,143,47"/>
+</map>

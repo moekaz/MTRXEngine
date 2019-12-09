@@ -1,0 +1,9 @@
+<map id="mtrx::CapsuleCollider::SetOrientation" name="mtrx::CapsuleCollider::SetOrientation">
+<area shape="rect" id="node1" title="Set the Orientation of the capsule collider." alt="" coords="5,49,152,90"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_collider.html#a6dca0e6b7f19c5582a312af54c34d8e1" title="Get the Position of the collider." alt="" coords="208,5,383,32"/>
+<area shape="rect" id="node4" href="$classmtrx_1_1_collider.html#ac946675c7e0ae86dc77459742511b9ae" title="Get the Up axis vector." alt="" coords="223,56,367,83"/>
+<area shape="rect" id="node6" href="$classmtrx_1_1_collider.html#ac69efe7d26d9e600154f601cbcc30849" title="Set the Orientation of the collider." alt="" coords="200,107,391,133"/>
+<area shape="rect" id="node3" href="$classmtrx_1_1_transform.html#ab81c0229523bf29ea35a7a24fcff597e" title="Get the Position vector." alt="" coords="447,5,636,32"/>
+<area shape="rect" id="node5" href="$classmtrx_1_1_transform.html#a58b3e889aa1c031c3857ba7525e352b0" title="Get the Orientation quaternion." alt="" coords="439,56,644,83"/>
+<area shape="rect" id="node7" href="$classmtrx_1_1_transform.html#a33f418bc15f821e731162fb8fe745aef" title="Set the Orientation quaternion." alt="" coords="439,107,643,133"/>
+</map>

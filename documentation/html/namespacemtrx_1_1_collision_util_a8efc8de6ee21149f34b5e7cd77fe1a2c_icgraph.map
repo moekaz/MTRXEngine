@@ -1,0 +1,4 @@
+<map id="mtrx::CollisionUtil::ConvexShapeCapsuleCollision" name="mtrx::CollisionUtil::ConvexShapeCapsuleCollision">
+<area shape="rect" id="node1" title="Convex Shape Capsule collision detection algorithm." alt="" coords="217,5,423,47"/>
+<area shape="rect" id="node2" href="$namespacemtrx_1_1_collision_util.html#a871e293d9a5b8a3a07f5d98fa927743a" title="Capsule OOBB Collision detection algorithm." alt="" coords="5,5,169,47"/>
+</map>

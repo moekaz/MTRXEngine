@@ -1,0 +1,4 @@
+<map id="mtrx::Collider::SetScale" name="mtrx::Collider::SetScale">
+<area shape="rect" id="node1" title="Set the Scale of the collider." alt="" coords="5,5,165,32"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_transform.html#a429a326ae889a31f433cf5f68d70af1e" title="Set the Scale vector." alt="" coords="213,5,388,32"/>
+</map>

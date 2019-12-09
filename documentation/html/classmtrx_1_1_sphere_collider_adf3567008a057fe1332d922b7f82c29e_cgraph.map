@@ -1,0 +1,6 @@
+<map id="mtrx::SphereCollider::RaycastCollision" name="mtrx::SphereCollider::RaycastCollision">
+<area shape="rect" id="node1" title="Raycast collision check for sphere colliders." alt="" coords="5,27,145,69"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_collider.html#a6dca0e6b7f19c5582a312af54c34d8e1" title="Get the Position of the collider." alt="" coords="193,5,368,32"/>
+<area shape="rect" id="node4" href="$namespacemtrx_1_1_raycast_collision_util.html#a9ade4a9f4a42e0942669f7e1e1532bd4" title="Raycasting onto a sphere collider." alt="" coords="195,57,367,98"/>
+<area shape="rect" id="node3" href="$classmtrx_1_1_transform.html#ab81c0229523bf29ea35a7a24fcff597e" title="Get the Position vector." alt="" coords="416,5,605,32"/>
+</map>

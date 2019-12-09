@@ -1,0 +1,4 @@
+<map id="mtrx::PhysicsUtil::MinDistanceSquaredPointTriangle" name="mtrx::PhysicsUtil::MinDistanceSquaredPointTriangle">
+<area shape="rect" id="node1" title="Minimum distance squared between a point and triangle. The square of the minimum distance is used for..." alt="" coords="252,5,469,47"/>
+<area shape="rect" id="node2" href="$namespacemtrx_1_1_collision_util.html#a4244615348b7ba8a7733587cdd3a2ca7" title="Convex Shape Sphere collision detection algorithm." alt="" coords="5,5,204,47"/>
+</map>

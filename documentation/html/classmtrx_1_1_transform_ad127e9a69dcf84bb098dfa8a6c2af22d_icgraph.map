@@ -1,0 +1,9 @@
+<map id="mtrx::Transform::GetScale" name="mtrx::Transform::GetScale">
+<area shape="rect" id="node1" title="Get the Scale vector." alt="" coords="215,163,389,189"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_collider.html#a0e7750440d8bf791c85b87d2e6a6f33a" title="Get the Scale of the collider." alt="" coords="5,5,167,32"/>
+<area shape="rect" id="node3" href="$classmtrx_1_1_capsule_collider.html#a74a6c21ad7fdf6dee9bceab58628abb5" title="Set the Height of the capsule collider." alt="" coords="13,57,159,98"/>
+<area shape="rect" id="node4" href="$classmtrx_1_1_capsule_collider.html#ab0ac72254b0d912a5e772ee703526616" title="Set the Radii of the capsule collider." alt="" coords="13,122,159,163"/>
+<area shape="rect" id="node5" href="$classmtrx_1_1_sphere_collider.html#aef2bf511296aa0b5c7c9e460596c1168" title="Set the Radius of the collider." alt="" coords="16,187,156,229"/>
+<area shape="rect" id="node6" href="$classmtrx_1_1_o_o_b_b_collider.html#a7fe953f72faabf2998e9856d68b119f6" title="Set the Scale of the collider." alt="" coords="17,253,155,294"/>
+<area shape="rect" id="node7" href="$classmtrx_1_1_a_a_b_b_collider.html#ac0cc88fabe8819ec1578d8999e248eaf" title="Set the Scale object overriden to modify the halfExtents to represent scale change." alt="" coords="19,318,153,359"/>
+</map>

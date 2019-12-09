@@ -1,0 +1,11 @@
+<map id="mtrx::OOBBCollider::RaycastCollision" name="mtrx::OOBBCollider::RaycastCollision">
+<area shape="rect" id="node1" title="Raycast OOBB collision detection algorithm." alt="" coords="5,139,143,181"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_o_o_b_b_collider.html#a08ab41dae178a7f064c7992c9c2c07b1" title="Get the Axes of the collider." alt="" coords="209,59,347,101"/>
+<area shape="rect" id="node7" href="$classmtrx_1_1_collider.html#a6dca0e6b7f19c5582a312af54c34d8e1" title="Get the Position of the collider." alt="" coords="191,147,365,173"/>
+<area shape="rect" id="node9" href="$namespacemtrx_1_1_raycast_collision_util.html#a51b04fb66e7ff65a36760ae7719f53a9" title="Raycasting onto a box collider." alt="" coords="192,198,364,239"/>
+<area shape="rect" id="node3" href="$classmtrx_1_1_collider.html#afccd3a798fc870d4acbb3c7a3f783c05" title="Get the Forward axis vector." alt="" coords="421,5,595,32"/>
+<area shape="rect" id="node5" href="$classmtrx_1_1_collider.html#a59a39aa74953a4a6d228fec5bf3028e8" title="Get the Side axis vector." alt="" coords="431,56,585,83"/>
+<area shape="rect" id="node6" href="$classmtrx_1_1_collider.html#ac946675c7e0ae86dc77459742511b9ae" title="Get the Up axis vector." alt="" coords="436,107,580,133"/>
+<area shape="rect" id="node4" href="$classmtrx_1_1_transform.html#a58b3e889aa1c031c3857ba7525e352b0" title="Get the Orientation quaternion." alt="" coords="651,56,856,83"/>
+<area shape="rect" id="node8" href="$classmtrx_1_1_transform.html#ab81c0229523bf29ea35a7a24fcff597e" title="Get the Position vector." alt="" coords="413,157,603,184"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="mtrx::BVHNode::DescendA" name="mtrx::BVHNode::DescendA">
+<area shape="rect" id="node1" title="Utility function that allows that helps with figuring out which direction in the structure we want to..." alt="" coords="5,5,187,32"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_b_v_h_node.html#a7cfbe8e7e5a37e42322fd6e88dd94af7" title="Check whether this node is a leaf." alt="" coords="235,5,389,32"/>
+</map>

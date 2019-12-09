@@ -6,7 +6,7 @@ ProjectileDemo::ProjectileDemo() : Demo("PROJECTILE DEMO", 1366, 768), projectil
 {
 	UILayer::AddUIPanel(new ProjectileDemoUI("Projectile Demo", glm::vec2(300, 200), &projectileType));
 	application.camera->GetTransform().SetPosition(glm::vec3(0, 0, 60.f));
-	//application.window.SetVsync(true);
+	application.window.SetVsync(true);
 }
 
 void ProjectileDemo::Update()

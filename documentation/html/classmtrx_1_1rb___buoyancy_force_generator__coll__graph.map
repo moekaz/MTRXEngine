@@ -1,0 +1,4 @@
+<map id="mtrx::rb_BuoyancyForceGenerator" name="mtrx::rb_BuoyancyForceGenerator">
+<area shape="rect" id="node1" title="Implementation of a buoyancy force generator for rigidbodies." alt="" coords="5,131,228,311"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_i_rigidbody_force_generator.html" title="Force generation interface used to apply forces on rigidbodies." alt="" coords="13,5,220,83"/>
+</map>

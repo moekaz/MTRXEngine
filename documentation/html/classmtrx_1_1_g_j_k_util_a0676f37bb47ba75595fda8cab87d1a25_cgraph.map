@@ -1,0 +1,7 @@
+<map id="mtrx::GJKUtil::Collision" name="mtrx::GJKUtil::Collision">
+<area shape="rect" id="node1" title="Implementation of GJK Collision detection algorithm." alt="" coords="5,71,163,98"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_g_j_k_util.html#a2f7779fb20f5aed2ed712c490fc1434d" title="Support functionality for convex shape collider gives us a point in Minkowski space that is closest t..." alt="" coords="232,13,385,39"/>
+<area shape="rect" id="node4" href="$namespacemtrx_1_1_physics_util.html#a82b7dc1049d74ce11316522e047e28b5" title="Implementation of triple cross product." alt="" coords="243,64,374,105"/>
+<area shape="rect" id="node5" href="$classmtrx_1_1_g_j_k_util.html#a9e68403818421587aac7e036d5aeb201" title="Update the simplex values or return a collision." alt="" coords="211,130,407,157"/>
+<area shape="rect" id="node3" href="$classmtrx_1_1_g_j_k_util.html#a97c239cfe54183c4424054070a63b8d2" title="Get a point in the vertex list that is closest (direction&#45;wise) to the direction vector." alt="" coords="455,5,641,47"/>
+</map>

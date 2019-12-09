@@ -1,0 +1,4 @@
+<map id="mtrx::GJKUtil::Support" name="mtrx::GJKUtil::Support">
+<area shape="rect" id="node1" title="Support functionality for convex shape collider gives us a point in Minkowski space that is closest t..." alt="" coords="5,13,159,39"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_g_j_k_util.html#a97c239cfe54183c4424054070a63b8d2" title="Get a point in the vertex list that is closest (direction&#45;wise) to the direction vector." alt="" coords="207,5,393,47"/>
+</map>

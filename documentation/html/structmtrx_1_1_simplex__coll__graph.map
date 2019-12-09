@@ -1,0 +1,3 @@
+<map id="mtrx::Simplex" name="mtrx::Simplex">
+<area shape="rect" id="node1" title="Simplest shape that can encapsulate a point in 3d space Used within GJK collision detection algorithm..." alt="" coords="5,5,108,127"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="mtrx::CapsuleCollider::RaycastCollision" name="mtrx::CapsuleCollider::RaycastCollision">
+<area shape="rect" id="node1" title="Raycast ray and capsule collider collision detection algorithm." alt="" coords="5,5,152,47"/>
+<area shape="rect" id="node2" href="$namespacemtrx_1_1_raycast_collision_util.html#ab4d2464cead181062893def44dba015e" title="Raycasting onto a capsule collider." alt="" coords="200,5,372,47"/>
+</map>

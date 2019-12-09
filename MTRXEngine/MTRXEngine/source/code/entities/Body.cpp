@@ -9,9 +9,6 @@ namespace mtrx
 		SetMass(mass);
 	}
 
-	Body::~Body()
-	{}
-
 	void Body::SetMass(const float mass)
 	{
 		if (mass == 0)

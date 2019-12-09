@@ -1,0 +1,8 @@
+<map id="mtrx::Collider" name="mtrx::Collider">
+<area shape="rect" id="node1" title="Basic API for all colliders." alt="" coords="196,5,335,376"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_capsule_collider.html" title="Implementation of Capsule colliders." alt="" coords="5,424,152,692"/>
+<area shape="rect" id="node3" href="$classmtrx_1_1_convex_shape_collider.html" title="Implementation of a Convex Shape collider." alt="" coords="176,431,355,685"/>
+<area shape="rect" id="node6" href="$classmtrx_1_1_sphere_collider.html" title="Implmentation of a Sphere collider used in collision systems." alt="" coords="379,453,519,663"/>
+<area shape="rect" id="node4" href="$classmtrx_1_1_a_a_b_b_collider.html" title="Implmentation of an Axis Aligned Bounding Box used for collision systems." alt="" coords="115,740,253,949"/>
+<area shape="rect" id="node5" href="$classmtrx_1_1_o_o_b_b_collider.html" title="Implementation of OOBBs." alt="" coords="277,747,416,942"/>
+</map>
