@@ -1,9 +1,7 @@
 #pragma once
 
 #include <math/Ray.h>
-#include <utils/CollisionUtil.h>
-#include <utils/RaycastCollisionUtil.h>
-#include <colliders/Collider.h>
+#include <Defs.h>
 
 namespace mtrx
 {

@@ -12,7 +12,7 @@ bool \mbox{\hyperlink{namespacemtrx_1_1_raycast_collision_util_a9ade4a9f4a42e094
 \begin{DoxyCompactList}\small\item\em Raycasting onto a sphere collider. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{namespacemtrx_1_1_raycast_collision_util_ab4d2464cead181062893def44dba015e}{Ray\+Capsule\+Collision}} (const glm\+::vec3 \&start\+Position\+Ray, const glm\+::vec3 \&direction, const glm\+::vec3 \&A, const glm\+::vec3 \&B, float caps\+Radius)
 \begin{DoxyCompactList}\small\item\em Raycasting onto a capsule collider. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{namespacemtrx_1_1_raycast_collision_util_a51b04fb66e7ff65a36760ae7719f53a9}{Ray\+Box\+Collision}} (const glm\+::vec3 \&ray\+Start, const glm\+::vec3 \&ray\+Direction, const glm\+::vec3 \&center, const glm\+::vec3 $\ast$axes, const float $\ast$half\+Extents)
+bool \mbox{\hyperlink{namespacemtrx_1_1_raycast_collision_util_a65463e1ca290b4198c489355a98e43c7}{Ray\+A\+A\+B\+B\+Collision}} (const glm\+::vec3 \&ray\+Start, const glm\+::vec3 \&ray\+Direction, const glm\+::vec3 \&center, const glm\+::vec3 $\ast$axes, const float $\ast$half\+Extents)
 \begin{DoxyCompactList}\small\item\em Raycasting onto a box collider. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} $\ast$ \mbox{\hyperlink{namespacemtrx_1_1_raycast_collision_util_aaf0e7f72e77797fed30e2468c8e34eeb}{Raycast\+Filtered}} (const std\+::map$<$ int, \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} $\ast$ $>$ \&colliders, const std\+::vector$<$ \mbox{\hyperlink{classmtrx_1_1_collider}{Collider}} $\ast$ $>$ \&filter\+Colliders, const glm\+::vec3 \&ray\+Start\+Position, const glm\+::vec3 \&ray\+Direction)
 \begin{DoxyCompactList}\small\item\em N\+OT T\+E\+S\+T\+ED OR U\+S\+ED. \end{DoxyCompactList}\item 
@@ -26,11 +26,11 @@ Utility namespace used for raycasting functionality.
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{namespacemtrx_1_1_raycast_collision_util_a51b04fb66e7ff65a36760ae7719f53a9}\label{namespacemtrx_1_1_raycast_collision_util_a51b04fb66e7ff65a36760ae7719f53a9}} 
-\index{mtrx::RaycastCollisionUtil@{mtrx::RaycastCollisionUtil}!RayBoxCollision@{RayBoxCollision}}
-\index{RayBoxCollision@{RayBoxCollision}!mtrx::RaycastCollisionUtil@{mtrx::RaycastCollisionUtil}}
-\doxysubsubsection{\texorpdfstring{RayBoxCollision()}{RayBoxCollision()}}
-{\footnotesize\ttfamily bool mtrx\+::\+Raycast\+Collision\+Util\+::\+Ray\+Box\+Collision (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{ray\+Start,  }\item[{const glm\+::vec3 \&}]{ray\+Direction,  }\item[{const glm\+::vec3 \&}]{center,  }\item[{const glm\+::vec3 $\ast$}]{axes,  }\item[{const float $\ast$}]{half\+Extents }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{namespacemtrx_1_1_raycast_collision_util_a65463e1ca290b4198c489355a98e43c7}\label{namespacemtrx_1_1_raycast_collision_util_a65463e1ca290b4198c489355a98e43c7}} 
+\index{mtrx::RaycastCollisionUtil@{mtrx::RaycastCollisionUtil}!RayAABBCollision@{RayAABBCollision}}
+\index{RayAABBCollision@{RayAABBCollision}!mtrx::RaycastCollisionUtil@{mtrx::RaycastCollisionUtil}}
+\doxysubsubsection{\texorpdfstring{RayAABBCollision()}{RayAABBCollision()}}
+{\footnotesize\ttfamily bool mtrx\+::\+Raycast\+Collision\+Util\+::\+Ray\+A\+A\+B\+B\+Collision (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{ray\+Start,  }\item[{const glm\+::vec3 \&}]{ray\+Direction,  }\item[{const glm\+::vec3 \&}]{center,  }\item[{const glm\+::vec3 $\ast$}]{axes,  }\item[{const float $\ast$}]{half\+Extents }\end{DoxyParamCaption})}
 
 
 
@@ -61,8 +61,13 @@ true The ray and box collide
 
 false The ray and box do not collide 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:
-% FIG 0
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{namespacemtrx_1_1_raycast_collision_util_a65463e1ca290b4198c489355a98e43c7_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{namespacemtrx_1_1_raycast_collision_util_ab4d2464cead181062893def44dba015e}\label{namespacemtrx_1_1_raycast_collision_util_ab4d2464cead181062893def44dba015e}} 
 \index{mtrx::RaycastCollisionUtil@{mtrx::RaycastCollisionUtil}!RayCapsuleCollision@{RayCapsuleCollision}}
 \index{RayCapsuleCollision@{RayCapsuleCollision}!mtrx::RaycastCollisionUtil@{mtrx::RaycastCollisionUtil}}
@@ -96,8 +101,13 @@ true The ray and the capsule collider collide
 
 false The ray and the capsule collider do not collide 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:
-% FIG 1
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemtrx_1_1_raycast_collision_util_ab4d2464cead181062893def44dba015e_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{namespacemtrx_1_1_raycast_collision_util_aaf0e7f72e77797fed30e2468c8e34eeb}\label{namespacemtrx_1_1_raycast_collision_util_aaf0e7f72e77797fed30e2468c8e34eeb}} 
 \index{mtrx::RaycastCollisionUtil@{mtrx::RaycastCollisionUtil}!RaycastFiltered@{RaycastFiltered}}
 \index{RaycastFiltered@{RaycastFiltered}!mtrx::RaycastCollisionUtil@{mtrx::RaycastCollisionUtil}}
@@ -175,5 +185,10 @@ true The ray and the sphere collider collide
 
 false The ray and the sphere collider do not collide 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:
-% FIG 2
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemtrx_1_1_raycast_collision_util_a9ade4a9f4a42e0942669f7e1e1532bd4_icgraph}
+\end{center}
+\end{figure}

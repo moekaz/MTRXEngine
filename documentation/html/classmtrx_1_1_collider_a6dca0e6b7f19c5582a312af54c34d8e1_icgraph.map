@@ -1,9 +1,8 @@
 <map id="mtrx::Collider::GetPosition" name="mtrx::Collider::GetPosition">
-<area shape="rect" id="node1" title="Get the Position of the collider." alt="" coords="200,177,375,203"/>
+<area shape="rect" id="node1" title="Get the Position of the collider." alt="" coords="200,143,375,170"/>
 <area shape="rect" id="node2" href="$classmtrx_1_1_a_a_b_b_collider.html#ac618c2f04d88d448668dcc7efbf513e3" title="Collision function between a ray and an AABB." alt="" coords="11,5,146,47"/>
-<area shape="rect" id="node3" href="$classmtrx_1_1_o_o_b_b_collider.html#afa990f428f3044ceb1639816f5d98278" title="Raycast OOBB collision detection algorithm." alt="" coords="10,71,147,112"/>
-<area shape="rect" id="node4" href="$classmtrx_1_1_sphere_collider.html#adf3567008a057fe1332d922b7f82c29e" title="Raycast collision check for sphere colliders." alt="" coords="9,136,149,177"/>
-<area shape="rect" id="node5" href="$classmtrx_1_1_capsule_collider.html#a03a6476613b7f81a5250eee613c7ed2f" title="Set the Orientation of the capsule collider." alt="" coords="5,201,152,243"/>
-<area shape="rect" id="node6" href="$classmtrx_1_1_capsule_collider.html#ad8b6a634528473222da22557d2d25764" title="Set the Position of the capsile collider." alt="" coords="5,267,152,308"/>
-<area shape="rect" id="node7" href="$classmtrx_1_1_capsule_collider.html#ae1c97f035b4a0d26c7f680780ecc6996" title="Set the Scale of the capsule collider Only the X and Y values of the scale are the only applicable va..." alt="" coords="5,332,152,373"/>
+<area shape="rect" id="node3" href="$classmtrx_1_1_sphere_collider.html#adf3567008a057fe1332d922b7f82c29e" title="Raycast collision check for sphere colliders." alt="" coords="9,71,149,112"/>
+<area shape="rect" id="node4" href="$classmtrx_1_1_capsule_collider.html#a03a6476613b7f81a5250eee613c7ed2f" title="Set the Orientation of the capsule collider." alt="" coords="5,136,152,177"/>
+<area shape="rect" id="node5" href="$classmtrx_1_1_capsule_collider.html#ad8b6a634528473222da22557d2d25764" title="Set the Position of the capsile collider." alt="" coords="5,201,152,243"/>
+<area shape="rect" id="node6" href="$classmtrx_1_1_capsule_collider.html#ae1c97f035b4a0d26c7f680780ecc6996" title="Set the Scale of the capsule collider Only the X and Y values of the scale are the only applicable va..." alt="" coords="5,267,152,308"/>
 </map>

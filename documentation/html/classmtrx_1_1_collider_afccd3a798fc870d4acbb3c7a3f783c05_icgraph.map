@@ -1,5 +1,4 @@
 <map id="mtrx::Collider::GetForward" name="mtrx::Collider::GetForward">
-<area shape="rect" id="node1" title="Get the Forward axis vector." alt="" coords="376,13,551,39"/>
-<area shape="rect" id="node2" href="$classmtrx_1_1_o_o_b_b_collider.html#a08ab41dae178a7f064c7992c9c2c07b1" title="Get the Axes of the collider." alt="" coords="191,5,328,47"/>
-<area shape="rect" id="node3" href="$classmtrx_1_1_o_o_b_b_collider.html#afa990f428f3044ceb1639816f5d98278" title="Raycast OOBB collision detection algorithm." alt="" coords="5,5,143,47"/>
+<area shape="rect" id="node1" title="Get the Forward axis vector." alt="" coords="191,13,365,39"/>
+<area shape="rect" id="node2" href="$classmtrx_1_1_o_o_b_b_collider.html#a08ab41dae178a7f064c7992c9c2c07b1" title=" " alt="" coords="5,5,143,47"/>
 </map>

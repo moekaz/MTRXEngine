@@ -1,6 +1,6 @@
 <map id="mtrx::ConvexShapeCollider" name="mtrx::ConvexShapeCollider">
 <area shape="rect" id="node1" title="Implementation of a Convex Shape collider." alt="" coords="67,424,245,677"/>
 <area shape="rect" id="node3" href="$classmtrx_1_1_a_a_b_b_collider.html" title="Implmentation of an Axis Aligned Bounding Box used for collision systems." alt="" coords="5,725,144,935"/>
-<area shape="rect" id="node4" href="$classmtrx_1_1_o_o_b_b_collider.html" title="Implementation of OOBBs." alt="" coords="168,733,307,927"/>
+<area shape="rect" id="node4" href="$classmtrx_1_1_o_o_b_b_collider.html" title="Implementation of OOBBs." alt="" coords="169,740,306,920"/>
 <area shape="rect" id="node2" href="$classmtrx_1_1_collider.html" title="Basic API for all colliders." alt="" coords="87,5,225,376"/>
 </map>

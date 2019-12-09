@@ -1,5 +1,5 @@
 <map id="mtrx::OOBBCollider::GetAxes" name="mtrx::OOBBCollider::GetAxes">
-<area shape="rect" id="node1" title="Get the Axes of the collider." alt="" coords="5,49,143,90"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,49,143,90"/>
 <area shape="rect" id="node2" href="$classmtrx_1_1_collider.html#afccd3a798fc870d4acbb3c7a3f783c05" title="Get the Forward axis vector." alt="" coords="191,5,365,32"/>
 <area shape="rect" id="node4" href="$classmtrx_1_1_collider.html#a59a39aa74953a4a6d228fec5bf3028e8" title="Get the Side axis vector." alt="" coords="201,56,355,83"/>
 <area shape="rect" id="node5" href="$classmtrx_1_1_collider.html#ac946675c7e0ae86dc77459742511b9ae" title="Get the Up axis vector." alt="" coords="206,107,350,133"/>

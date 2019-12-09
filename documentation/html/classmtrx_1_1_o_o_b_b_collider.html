@@ -79,16 +79,16 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="_o_o_b_b_collider_8h_source.html">OOBBCollider.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for mtrx::OOBBCollider:</div>
-<div class="dyncontent">
-<div class="center"><img src="classmtrx_1_1_o_o_b_b_collider__inherit__graph.png" border="0" usemap="#mtrx_1_1_o_o_b_b_collider_inherit__map" alt="Inheritance graph"/></div>
-<!-- MAP 0 -->
-</div>
-<div class="dynheader">
 Collaboration diagram for mtrx::OOBBCollider:</div>
 <div class="dyncontent">
 <div class="center"><img src="classmtrx_1_1_o_o_b_b_collider__coll__graph.png" border="0" usemap="#mtrx_1_1_o_o_b_b_collider_coll__map" alt="Collaboration graph"/></div>
-<!-- MAP 1 -->
+<map name="mtrx_1_1_o_o_b_b_collider_coll__map" id="mtrx_1_1_o_o_b_b_collider_coll__map">
+<area shape="rect" title="Implementation of OOBBs." alt="" coords="158,1072,295,1237"/>
+<area shape="rect" href="classmtrx_1_1_convex_shape_collider.html" title="Implementation of a Convex Shape collider." alt="" coords="5,756,184,1009"/>
+<area shape="rect" href="classmtrx_1_1_collider.html" title="Basic API for all colliders." alt="" coords="25,351,164,707"/>
+<area shape="rect" href="classmtrx_1_1_transform.html" title="Wrapper implementation of a transform that holds position, orientation, scale values and some functio..." alt="" coords="31,5,158,288"/>
+<area shape="rect" href="structmtrx_1_1_object_axes.html" title="The axes that define an objects world." alt="" coords="209,800,333,965"/>
+</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -102,11 +102,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acefb2d3f5f2a316b772d5f5b1aab5967"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmtrx_1_1_o_o_b_b_collider.html#acefb2d3f5f2a316b772d5f5b1aab5967">~OOBBCollider</a> ()=default</td></tr>
 <tr class="memdesc:acefb2d3f5f2a316b772d5f5b1aab5967"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="classmtrx_1_1_o_o_b_b_collider.html" title="Implementation of OOBBs.">OOBBCollider</a> object.  <a href="classmtrx_1_1_o_o_b_b_collider.html#acefb2d3f5f2a316b772d5f5b1aab5967">More...</a><br /></td></tr>
 <tr class="separator:acefb2d3f5f2a316b772d5f5b1aab5967"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa990f428f3044ceb1639816f5d98278"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmtrx_1_1_o_o_b_b_collider.html#afa990f428f3044ceb1639816f5d98278">RaycastCollision</a> (const <a class="el" href="classmtrx_1_1_ray.html">Ray</a> &amp;ray) override</td></tr>
-<tr class="memdesc:afa990f428f3044ceb1639816f5d98278"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raycast OOBB collision detection algorithm.  <a href="classmtrx_1_1_o_o_b_b_collider.html#afa990f428f3044ceb1639816f5d98278">More...</a><br /></td></tr>
-<tr class="separator:afa990f428f3044ceb1639816f5d98278"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08ab41dae178a7f064c7992c9c2c07b1"><td class="memItemLeft" align="right" valign="top">const glm::vec3 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmtrx_1_1_o_o_b_b_collider.html#a08ab41dae178a7f064c7992c9c2c07b1">GetAxes</a> () const</td></tr>
-<tr class="memdesc:a08ab41dae178a7f064c7992c9c2c07b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Axes of the collider.  <a href="classmtrx_1_1_o_o_b_b_collider.html#a08ab41dae178a7f064c7992c9c2c07b1">More...</a><br /></td></tr>
 <tr class="separator:a08ab41dae178a7f064c7992c9c2c07b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c524feaabb957a4ed3f4cd212e1c365"><td class="memItemLeft" align="right" valign="top">const float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmtrx_1_1_o_o_b_b_collider.html#a8c524feaabb957a4ed3f4cd212e1c365">GetHalfExtents</a> () const</td></tr>
 <tr class="memdesc:a8c524feaabb957a4ed3f4cd212e1c365"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Half Extents of the OOBB collider.  <a href="classmtrx_1_1_o_o_b_b_collider.html#a8c524feaabb957a4ed3f4cd212e1c365">More...</a><br /></td></tr>
@@ -133,6 +129,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3e5b9ef9fc9e22f83abcc20186f2afd2 inherit pub_methods_classmtrx_1_1_convex_shape_collider"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmtrx_1_1_convex_shape_collider.html#a3e5b9ef9fc9e22f83abcc20186f2afd2">~ConvexShapeCollider</a> ()</td></tr>
 <tr class="memdesc:a3e5b9ef9fc9e22f83abcc20186f2afd2 inherit pub_methods_classmtrx_1_1_convex_shape_collider"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the Convex Shape <a class="el" href="classmtrx_1_1_collider.html" title="Basic API for all colliders.">Collider</a> object.  <a href="classmtrx_1_1_convex_shape_collider.html#a3e5b9ef9fc9e22f83abcc20186f2afd2">More...</a><br /></td></tr>
 <tr class="separator:a3e5b9ef9fc9e22f83abcc20186f2afd2 inherit pub_methods_classmtrx_1_1_convex_shape_collider"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44fba7247c98212c60e0eec4e16e74ec inherit pub_methods_classmtrx_1_1_convex_shape_collider"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmtrx_1_1_convex_shape_collider.html#a44fba7247c98212c60e0eec4e16e74ec">RaycastCollision</a> (const <a class="el" href="classmtrx_1_1_ray.html">Ray</a> &amp;ray) override</td></tr>
+<tr class="memdesc:a44fba7247c98212c60e0eec4e16e74ec inherit pub_methods_classmtrx_1_1_convex_shape_collider"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raycast collision check with convex shape colliders.  <a href="classmtrx_1_1_convex_shape_collider.html#a44fba7247c98212c60e0eec4e16e74ec">More...</a><br /></td></tr>
+<tr class="separator:a44fba7247c98212c60e0eec4e16e74ec inherit pub_methods_classmtrx_1_1_convex_shape_collider"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73739e13e64f22f948e306e1794ea418 inherit pub_methods_classmtrx_1_1_convex_shape_collider"><td class="memItemLeft" align="right" valign="top">std::vector&lt; glm::vec3 * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmtrx_1_1_convex_shape_collider.html#a73739e13e64f22f948e306e1794ea418">GetVertices</a> () const</td></tr>
 <tr class="memdesc:a73739e13e64f22f948e306e1794ea418 inherit pub_methods_classmtrx_1_1_convex_shape_collider"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Vertices of the convex shape collider.  <a href="classmtrx_1_1_convex_shape_collider.html#a73739e13e64f22f948e306e1794ea418">More...</a><br /></td></tr>
 <tr class="separator:a73739e13e64f22f948e306e1794ea418 inherit pub_methods_classmtrx_1_1_convex_shape_collider"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -344,20 +343,27 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isConvexShape</b></td
   </tr>
 </table>
 </div><div class="memdoc">
+<pre class="fragment">         @brief Raycast OOBB collision detection algorithm
 
-<p>Get the Axes of the collider. </p>
-<dl class="section return"><dt>Returns</dt><dd>const glm::vec3* Array of the axes of the OOBB </dd></dl>
-<div class="dynheader">
+         @param ray Ray that we want to check collision for @see mtrx::Ray
+         @return true The ray and collider collide
+         @return false The ray and collider do not collide
+        &amp;zwj;/
+</pre><p> virtual inline bool <a class="el" href="classmtrx_1_1_convex_shape_collider.html#a44fba7247c98212c60e0eec4e16e74ec" title="Raycast collision check with convex shape colliders.">RaycastCollision(const Ray&amp; ray)</a> override { return RaycastCollisionUtil::RayBoxCollision(ray.startPosition, ray.direction, <a class="el" href="classmtrx_1_1_collider.html#a6dca0e6b7f19c5582a312af54c34d8e1" title="Get the Position of the collider.">GetPosition()</a>, <a class="el" href="classmtrx_1_1_o_o_b_b_collider.html#a08ab41dae178a7f064c7992c9c2c07b1">GetAxes()</a>, halfExtents); } </p><pre class="fragment">    /**
+       @brief Get the Axes of the collider
+
+       @return const glm::vec3* Array of the axes of the OOBB
+</pre> <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classmtrx_1_1_o_o_b_b_collider_a08ab41dae178a7f064c7992c9c2c07b1_cgraph.png" border="0" usemap="#classmtrx_1_1_o_o_b_b_collider_a08ab41dae178a7f064c7992c9c2c07b1_cgraph" alt=""/></div>
-<!-- MAP 2 -->
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classmtrx_1_1_o_o_b_b_collider_a08ab41dae178a7f064c7992c9c2c07b1_icgraph.png" border="0" usemap="#classmtrx_1_1_o_o_b_b_collider_a08ab41dae178a7f064c7992c9c2c07b1_icgraph" alt=""/></div>
-<!-- MAP 3 -->
+<map name="classmtrx_1_1_o_o_b_b_collider_a08ab41dae178a7f064c7992c9c2c07b1_cgraph" id="classmtrx_1_1_o_o_b_b_collider_a08ab41dae178a7f064c7992c9c2c07b1_cgraph">
+<area shape="rect" title=" " alt="" coords="5,49,143,90"/>
+<area shape="rect" href="classmtrx_1_1_collider.html#afccd3a798fc870d4acbb3c7a3f783c05" title="Get the Forward axis vector." alt="" coords="191,5,365,32"/>
+<area shape="rect" href="classmtrx_1_1_collider.html#a59a39aa74953a4a6d228fec5bf3028e8" title="Get the Side axis vector." alt="" coords="201,56,355,83"/>
+<area shape="rect" href="classmtrx_1_1_collider.html#ac946675c7e0ae86dc77459742511b9ae" title="Get the Up axis vector." alt="" coords="206,107,350,133"/>
+<area shape="rect" href="classmtrx_1_1_transform.html#a58b3e889aa1c031c3857ba7525e352b0" title="Get the Orientation quaternion." alt="" coords="413,56,619,83"/>
+</map>
 </div>
 
 </div>
@@ -418,52 +424,6 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="afa990f428f3044ceb1639816f5d98278"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa990f428f3044ceb1639816f5d98278">&#9670;&nbsp;</a></span>RaycastCollision()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool mtrx::OOBBCollider::RaycastCollision </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classmtrx_1_1_ray.html">Ray</a> &amp;&#160;</td>
-          <td class="paramname"><em>ray</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Raycast OOBB collision detection algorithm. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ray</td><td><a class="el" href="classmtrx_1_1_ray.html" title="Implementation of a ray.">Ray</a> that we want to check collision for </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classmtrx_1_1_ray.html" title="Implementation of a ray.">mtrx::Ray</a> </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>true The ray and collider collide </dd>
-<dd>
-false The ray and collider do not collide </dd></dl>
-
-<p>Reimplemented from <a class="el" href="classmtrx_1_1_convex_shape_collider.html#a44fba7247c98212c60e0eec4e16e74ec">mtrx::ConvexShapeCollider</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classmtrx_1_1_o_o_b_b_collider_afa990f428f3044ceb1639816f5d98278_cgraph.png" border="0" usemap="#classmtrx_1_1_o_o_b_b_collider_afa990f428f3044ceb1639816f5d98278_cgraph" alt=""/></div>
-<!-- MAP 4 -->
-</div>
-
-</div>
-</div>
 <a id="a7fe953f72faabf2998e9856d68b119f6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7fe953f72faabf2998e9856d68b119f6">&#9670;&nbsp;</a></span>SetScale()</h2>
 
@@ -501,7 +461,12 @@ Here is the call graph for this function:</div>
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classmtrx_1_1_o_o_b_b_collider_a7fe953f72faabf2998e9856d68b119f6_cgraph.png" border="0" usemap="#classmtrx_1_1_o_o_b_b_collider_a7fe953f72faabf2998e9856d68b119f6_cgraph" alt=""/></div>
-<!-- MAP 5 -->
+<map name="classmtrx_1_1_o_o_b_b_collider_a7fe953f72faabf2998e9856d68b119f6_cgraph" id="classmtrx_1_1_o_o_b_b_collider_a7fe953f72faabf2998e9856d68b119f6_cgraph">
+<area shape="rect" title="Set the Scale of the collider." alt="" coords="5,23,143,65"/>
+<area shape="rect" href="classmtrx_1_1_transform.html#ad127e9a69dcf84bb098dfa8a6c2af22d" title="Get the Scale vector." alt="" coords="191,5,365,32"/>
+<area shape="rect" href="classmtrx_1_1_collider.html#a81b9373f9d09221753255046b9279a5d" title="Set the Scale of the collider." alt="" coords="198,56,358,83"/>
+<area shape="rect" href="classmtrx_1_1_transform.html#a429a326ae889a31f433cf5f68d70af1e" title="Set the Scale vector." alt="" coords="413,56,588,83"/>
+</map>
 </div>
 
 </div>

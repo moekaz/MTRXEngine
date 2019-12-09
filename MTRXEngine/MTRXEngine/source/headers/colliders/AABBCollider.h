@@ -2,6 +2,7 @@
 
 #include <colliders/ConvexShapeCollider.h>
 #include <colliders/IBoundingVolume.h>
+#include <utils/RaycastCollisionUtil.h>
 
 namespace mtrx
 {

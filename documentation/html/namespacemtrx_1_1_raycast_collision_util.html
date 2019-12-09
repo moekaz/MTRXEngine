@@ -83,9 +83,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ab4d2464cead181062893def44dba015e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemtrx_1_1_raycast_collision_util.html#ab4d2464cead181062893def44dba015e">RayCapsuleCollision</a> (const glm::vec3 &amp;startPositionRay, const glm::vec3 &amp;direction, const glm::vec3 &amp;A, const glm::vec3 &amp;B, float capsRadius)</td></tr>
 <tr class="memdesc:ab4d2464cead181062893def44dba015e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raycasting onto a capsule collider.  <a href="namespacemtrx_1_1_raycast_collision_util.html#ab4d2464cead181062893def44dba015e">More...</a><br /></td></tr>
 <tr class="separator:ab4d2464cead181062893def44dba015e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51b04fb66e7ff65a36760ae7719f53a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemtrx_1_1_raycast_collision_util.html#a51b04fb66e7ff65a36760ae7719f53a9">RayBoxCollision</a> (const glm::vec3 &amp;rayStart, const glm::vec3 &amp;rayDirection, const glm::vec3 &amp;center, const glm::vec3 *axes, const float *halfExtents)</td></tr>
-<tr class="memdesc:a51b04fb66e7ff65a36760ae7719f53a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raycasting onto a box collider.  <a href="namespacemtrx_1_1_raycast_collision_util.html#a51b04fb66e7ff65a36760ae7719f53a9">More...</a><br /></td></tr>
-<tr class="separator:a51b04fb66e7ff65a36760ae7719f53a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65463e1ca290b4198c489355a98e43c7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemtrx_1_1_raycast_collision_util.html#a65463e1ca290b4198c489355a98e43c7">RayAABBCollision</a> (const glm::vec3 &amp;rayStart, const glm::vec3 &amp;rayDirection, const glm::vec3 &amp;center, const glm::vec3 *axes, const float *halfExtents)</td></tr>
+<tr class="memdesc:a65463e1ca290b4198c489355a98e43c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raycasting onto a box collider.  <a href="namespacemtrx_1_1_raycast_collision_util.html#a65463e1ca290b4198c489355a98e43c7">More...</a><br /></td></tr>
+<tr class="separator:a65463e1ca290b4198c489355a98e43c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf0e7f72e77797fed30e2468c8e34eeb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmtrx_1_1_collider.html">Collider</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemtrx_1_1_raycast_collision_util.html#aaf0e7f72e77797fed30e2468c8e34eeb">RaycastFiltered</a> (const std::map&lt; int, <a class="el" href="classmtrx_1_1_collider.html">Collider</a> * &gt; &amp;colliders, const std::vector&lt; <a class="el" href="classmtrx_1_1_collider.html">Collider</a> * &gt; &amp;filterColliders, const glm::vec3 &amp;rayStartPosition, const glm::vec3 &amp;rayDirection)</td></tr>
 <tr class="memdesc:aaf0e7f72e77797fed30e2468c8e34eeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">NOT TESTED OR USED.  <a href="namespacemtrx_1_1_raycast_collision_util.html#aaf0e7f72e77797fed30e2468c8e34eeb">More...</a><br /></td></tr>
 <tr class="separator:aaf0e7f72e77797fed30e2468c8e34eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -96,14 +96,14 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Utility namespace used for raycasting functionality. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a51b04fb66e7ff65a36760ae7719f53a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51b04fb66e7ff65a36760ae7719f53a9">&#9670;&nbsp;</a></span>RayBoxCollision()</h2>
+<a id="a65463e1ca290b4198c489355a98e43c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65463e1ca290b4198c489355a98e43c7">&#9670;&nbsp;</a></span>RayAABBCollision()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool mtrx::RaycastCollisionUtil::RayBoxCollision </td>
+          <td class="memname">bool mtrx::RaycastCollisionUtil::RayAABBCollision </td>
           <td>(</td>
           <td class="paramtype">const glm::vec3 &amp;&#160;</td>
           <td class="paramname"><em>rayStart</em>, </td>
@@ -162,8 +162,11 @@ false The ray and box do not collide </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacemtrx_1_1_raycast_collision_util_a51b04fb66e7ff65a36760ae7719f53a9_icgraph.png" border="0" usemap="#namespacemtrx_1_1_raycast_collision_util_a51b04fb66e7ff65a36760ae7719f53a9_icgraph" alt=""/></div>
-<!-- MAP 0 -->
+<div class="center"><img src="namespacemtrx_1_1_raycast_collision_util_a65463e1ca290b4198c489355a98e43c7_icgraph.png" border="0" usemap="#namespacemtrx_1_1_raycast_collision_util_a65463e1ca290b4198c489355a98e43c7_icgraph" alt=""/></div>
+<map name="namespacemtrx_1_1_raycast_collision_util_a65463e1ca290b4198c489355a98e43c7_icgraph" id="namespacemtrx_1_1_raycast_collision_util_a65463e1ca290b4198c489355a98e43c7_icgraph">
+<area shape="rect" title="Raycasting onto a box collider." alt="" coords="188,5,360,47"/>
+<area shape="rect" href="classmtrx_1_1_a_a_b_b_collider.html#ac618c2f04d88d448668dcc7efbf513e3" title="Collision function between a ray and an AABB." alt="" coords="5,5,140,47"/>
+</map>
 </div>
 
 </div>
@@ -233,7 +236,10 @@ false The ray and the capsule collider do not collide </dd></dl>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemtrx_1_1_raycast_collision_util_ab4d2464cead181062893def44dba015e_icgraph.png" border="0" usemap="#namespacemtrx_1_1_raycast_collision_util_ab4d2464cead181062893def44dba015e_icgraph" alt=""/></div>
-<!-- MAP 1 -->
+<map name="namespacemtrx_1_1_raycast_collision_util_ab4d2464cead181062893def44dba015e_icgraph" id="namespacemtrx_1_1_raycast_collision_util_ab4d2464cead181062893def44dba015e_icgraph">
+<area shape="rect" title="Raycasting onto a capsule collider." alt="" coords="200,5,372,47"/>
+<area shape="rect" href="classmtrx_1_1_capsule_collider.html#a17f41f46bd503f7c7906c6246cbfcb26" title="Raycast ray and capsule collider collision detection algorithm." alt="" coords="5,5,152,47"/>
+</map>
 </div>
 
 </div>
@@ -393,7 +399,10 @@ false The ray and the sphere collider do not collide </dd></dl>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemtrx_1_1_raycast_collision_util_a9ade4a9f4a42e0942669f7e1e1532bd4_icgraph.png" border="0" usemap="#namespacemtrx_1_1_raycast_collision_util_a9ade4a9f4a42e0942669f7e1e1532bd4_icgraph" alt=""/></div>
-<!-- MAP 2 -->
+<map name="namespacemtrx_1_1_raycast_collision_util_a9ade4a9f4a42e0942669f7e1e1532bd4_icgraph" id="namespacemtrx_1_1_raycast_collision_util_a9ade4a9f4a42e0942669f7e1e1532bd4_icgraph">
+<area shape="rect" title="Raycasting onto a sphere collider." alt="" coords="193,5,365,47"/>
+<area shape="rect" href="classmtrx_1_1_sphere_collider.html#adf3567008a057fe1332d922b7f82c29e" title="Raycast collision check for sphere colliders." alt="" coords="5,5,145,47"/>
+</map>
 </div>
 
 </div>

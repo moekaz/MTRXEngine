@@ -11,12 +11,13 @@ Implementation of O\+O\+B\+Bs.
 
 
 
-Inheritance diagram for mtrx\+::O\+O\+B\+B\+Collider\+:
-% FIG 0
-
-
-Collaboration diagram for mtrx\+::O\+O\+B\+B\+Collider\+:
-% FIG 1
+Collaboration diagram for mtrx\+::O\+O\+B\+B\+Collider\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classmtrx_1_1_o_o_b_b_collider__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -26,10 +27,8 @@ Collaboration diagram for mtrx\+::O\+O\+B\+B\+Collider\+:
 \begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classmtrx_1_1_o_o_b_b_collider}{O\+O\+B\+B\+Collider}} object. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classmtrx_1_1_o_o_b_b_collider_acefb2d3f5f2a316b772d5f5b1aab5967}{$\sim$\+O\+O\+B\+B\+Collider}} ()=default
 \begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classmtrx_1_1_o_o_b_b_collider}{O\+O\+B\+B\+Collider}} object. \end{DoxyCompactList}\item 
-virtual bool \mbox{\hyperlink{classmtrx_1_1_o_o_b_b_collider_afa990f428f3044ceb1639816f5d98278}{Raycast\+Collision}} (const \mbox{\hyperlink{classmtrx_1_1_ray}{Ray}} \&ray) override
-\begin{DoxyCompactList}\small\item\em Raycast O\+O\+BB collision detection algorithm. \end{DoxyCompactList}\item 
 const glm\+::vec3 $\ast$ \mbox{\hyperlink{classmtrx_1_1_o_o_b_b_collider_a08ab41dae178a7f064c7992c9c2c07b1}{Get\+Axes}} () const
-\begin{DoxyCompactList}\small\item\em Get the Axes of the collider. \end{DoxyCompactList}\item 
+\item 
 const float $\ast$ \mbox{\hyperlink{classmtrx_1_1_o_o_b_b_collider_a8c524feaabb957a4ed3f4cd212e1c365}{Get\+Half\+Extents}} () const
 \begin{DoxyCompactList}\small\item\em Get the Half Extents of the O\+O\+BB collider. \end{DoxyCompactList}\item 
 float $\ast$ \mbox{\hyperlink{classmtrx_1_1_o_o_b_b_collider_a102dd48abba7ddeb8919f757a6485cb8}{Get\+Half\+Extents}} ()
@@ -107,17 +106,25 @@ Destroy the \mbox{\hyperlink{classmtrx_1_1_o_o_b_b_collider}{O\+O\+B\+B\+Collide
 \doxysubsubsection{\texorpdfstring{GetAxes()}{GetAxes()}}
 {\footnotesize\ttfamily const glm\+::vec3$\ast$ mtrx\+::\+O\+O\+B\+B\+Collider\+::\+Get\+Axes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
+\begin{DoxyVerb}         @brief Raycast OOBB collision detection algorithm
 
+         @param ray Ray that we want to check collision for @see mtrx::Ray
+         @return true The ray and collider collide
+         @return false The ray and collider do not collide
+        &zwj;/
+\end{DoxyVerb}
+ virtual inline bool \mbox{\hyperlink{classmtrx_1_1_convex_shape_collider_a44fba7247c98212c60e0eec4e16e74ec}{Raycast\+Collision(const Ray\& ray)}} override \{ return Raycast\+Collision\+Util\+::\+Ray\+Box\+Collision(ray.\+start\+Position, ray.\+direction, \mbox{\hyperlink{classmtrx_1_1_collider_a6dca0e6b7f19c5582a312af54c34d8e1}{Get\+Position()}}, \mbox{\hyperlink{classmtrx_1_1_o_o_b_b_collider_a08ab41dae178a7f064c7992c9c2c07b1}{Get\+Axes()}}, half\+Extents); \} \begin{DoxyVerb}    /**
+       @brief Get the Axes of the collider
 
-Get the Axes of the collider. 
-
-\begin{DoxyReturn}{Returns}
-const glm\+::vec3$\ast$ Array of the axes of the O\+O\+BB 
-\end{DoxyReturn}
-Here is the call graph for this function\+:
-% FIG 2
-Here is the caller graph for this function\+:
-% FIG 3
+       @return const glm::vec3* Array of the axes of the OOBB
+\end{DoxyVerb}
+ Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmtrx_1_1_o_o_b_b_collider_a08ab41dae178a7f064c7992c9c2c07b1_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classmtrx_1_1_o_o_b_b_collider_a102dd48abba7ddeb8919f757a6485cb8}\label{classmtrx_1_1_o_o_b_b_collider_a102dd48abba7ddeb8919f757a6485cb8}} 
 \index{mtrx::OOBBCollider@{mtrx::OOBBCollider}!GetHalfExtents@{GetHalfExtents}}
 \index{GetHalfExtents@{GetHalfExtents}!mtrx::OOBBCollider@{mtrx::OOBBCollider}}
@@ -144,35 +151,6 @@ Get the Half Extents of the O\+O\+BB collider.
 \begin{DoxyReturn}{Returns}
 const float$\ast$ The half extents of the collider 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmtrx_1_1_o_o_b_b_collider_afa990f428f3044ceb1639816f5d98278}\label{classmtrx_1_1_o_o_b_b_collider_afa990f428f3044ceb1639816f5d98278}} 
-\index{mtrx::OOBBCollider@{mtrx::OOBBCollider}!RaycastCollision@{RaycastCollision}}
-\index{RaycastCollision@{RaycastCollision}!mtrx::OOBBCollider@{mtrx::OOBBCollider}}
-\doxysubsubsection{\texorpdfstring{RaycastCollision()}{RaycastCollision()}}
-{\footnotesize\ttfamily virtual bool mtrx\+::\+O\+O\+B\+B\+Collider\+::\+Raycast\+Collision (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmtrx_1_1_ray}{Ray}} \&}]{ray }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Raycast O\+O\+BB collision detection algorithm. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em ray} & \mbox{\hyperlink{classmtrx_1_1_ray}{Ray}} that we want to check collision for \\
-\hline
-\end{DoxyParams}
-\begin{DoxySeeAlso}{See also}
-\mbox{\hyperlink{classmtrx_1_1_ray}{mtrx\+::\+Ray}} 
-\end{DoxySeeAlso}
-\begin{DoxyReturn}{Returns}
-true The ray and collider collide 
-
-false The ray and collider do not collide 
-\end{DoxyReturn}
-
-
-Reimplemented from \mbox{\hyperlink{classmtrx_1_1_convex_shape_collider_a44fba7247c98212c60e0eec4e16e74ec}{mtrx\+::\+Convex\+Shape\+Collider}}.
-
-Here is the call graph for this function\+:
-% FIG 4
 \mbox{\Hypertarget{classmtrx_1_1_o_o_b_b_collider_a7fe953f72faabf2998e9856d68b119f6}\label{classmtrx_1_1_o_o_b_b_collider_a7fe953f72faabf2998e9856d68b119f6}} 
 \index{mtrx::OOBBCollider@{mtrx::OOBBCollider}!SetScale@{SetScale}}
 \index{SetScale@{SetScale}!mtrx::OOBBCollider@{mtrx::OOBBCollider}}
@@ -192,5 +170,10 @@ Set the Scale of the collider.
 
 Reimplemented from \mbox{\hyperlink{classmtrx_1_1_convex_shape_collider_a1de37ecfb1bd42e43201c09c6e5a980f}{mtrx\+::\+Convex\+Shape\+Collider}}.
 
-Here is the call graph for this function\+:
-% FIG 5
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmtrx_1_1_o_o_b_b_collider_a7fe953f72faabf2998e9856d68b119f6_cgraph}
+\end{center}
+\end{figure}

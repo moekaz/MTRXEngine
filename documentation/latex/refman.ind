@@ -1,135 +1,135 @@
 \begin{theindex}
 
   \item {$\sim$AABBCollider}
-    \subitem {mtrx::AABBCollider}, \hyperpage{40}
+    \subitem {mtrx::AABBCollider}, \hyperpage{43}
   \item {$\sim$BVHNode}
-    \subitem {mtrx::BVHNode$<$ BoundingVolume $>$}, \hyperpage{52}
+    \subitem {mtrx::BVHNode$<$ BoundingVolume $>$}, \hyperpage{58}
   \item {$\sim$Body}
-    \subitem {mtrx::Body}, \hyperpage{44}
+    \subitem {mtrx::Body}, \hyperpage{49}
   \item {$\sim$CapsuleCollider}
-    \subitem {mtrx::CapsuleCollider}, \hyperpage{56}
+    \subitem {mtrx::CapsuleCollider}, \hyperpage{64}
   \item {$\sim$Collider}
-    \subitem {mtrx::Collider}, \hyperpage{61}
+    \subitem {mtrx::Collider}, \hyperpage{71}
   \item {$\sim$ConvexShapeCollider}
-    \subitem {mtrx::ConvexShapeCollider}, \hyperpage{70}
+    \subitem {mtrx::ConvexShapeCollider}, \hyperpage{87}
   \item {$\sim$OOBBCollider}
-    \subitem {mtrx::OOBBCollider}, \hyperpage{90}
+    \subitem {mtrx::OOBBCollider}, \hyperpage{115}
   \item {$\sim$Ray}
-    \subitem {mtrx::Ray}, \hyperpage{93}
+    \subitem {mtrx::Ray}, \hyperpage{119}
   \item {$\sim$Rigidbody}
-    \subitem {mtrx::Rigidbody}, \hyperpage{101}
+    \subitem {mtrx::Rigidbody}, \hyperpage{129}
   \item {$\sim$RigidbodyManager}
-    \subitem {mtrx::RigidbodyManager}, \hyperpage{107}
+    \subitem {mtrx::RigidbodyManager}, \hyperpage{135}
   \item {$\sim$SphereCollider}
-    \subitem {mtrx::SphereCollider}, \hyperpage{110}
+    \subitem {mtrx::SphereCollider}, \hyperpage{141}
   \item {$\sim$Transform}
-    \subitem {mtrx::Transform}, \hyperpage{114}
+    \subitem {mtrx::Transform}, \hyperpage{145}
   \item {$\sim$mtrxDynamicWorld}
-    \subitem {mtrx::mtrxDynamicWorld}, \hyperpage{86}
+    \subitem {mtrx::mtrxDynamicWorld}, \hyperpage{109}
   \item {$\sim$rb\_BuoyancyForceGenerator}
-    \subitem {mtrx::rb\_BuoyancyForceGenerator}, \hyperpage{95}
+    \subitem {mtrx::rb\_BuoyancyForceGenerator}, \hyperpage{121}
   \item {$\sim$rb\_ForceGenerationRegistry}
-    \subitem {mtrx::rb\_ForceGenerationRegistry}, \hyperpage{96}
+    \subitem {mtrx::rb\_ForceGenerationRegistry}, \hyperpage{123}
   \item {$\sim$rb\_GravityForceGenerator}
-    \subitem {mtrx::rb\_GravityForceGenerator}, \hyperpage{98}
+    \subitem {mtrx::rb\_GravityForceGenerator}, \hyperpage{125}
 
   \indexspace
 
   \item {AABBCollider}
-    \subitem {mtrx::AABBCollider}, \hyperpage{40}
+    \subitem {mtrx::AABBCollider}, \hyperpage{43}
   \item {AABBCollision}
     \subitem {mtrx::CollisionUtil}, \hyperpage{17}
   \item {AABBCollisionOptions}
     \subitem {mtrx::ColliderDetectionUtil}, \hyperpage{13}
   \item {AABBOOBBCollision}
-    \subitem {mtrx::CollisionUtil}, \hyperpage{17}
+    \subitem {mtrx::CollisionUtil}, \hyperpage{18}
   \item {AddCollider}
-    \subitem {mtrx::mtrxDynamicWorld}, \hyperpage{86}
+    \subitem {mtrx::mtrxDynamicWorld}, \hyperpage{109}
   \item {AddForce}
-    \subitem {mtrx::Body}, \hyperpage{44}
+    \subitem {mtrx::Body}, \hyperpage{49}
   \item {AddForceAtPoint}
-    \subitem {mtrx::Rigidbody}, \hyperpage{101}
+    \subitem {mtrx::Rigidbody}, \hyperpage{129}
   \item {AddForceGenerator}
-    \subitem {mtrx::mtrxDynamicWorld}, \hyperpage{87}
-    \subitem {mtrx::rb\_ForceGenerationRegistry}, \hyperpage{96}
+    \subitem {mtrx::mtrxDynamicWorld}, \hyperpage{110}
+    \subitem {mtrx::rb\_ForceGenerationRegistry}, \hyperpage{123}
   \item {AddRigidbody}
-    \subitem {mtrx::mtrxDynamicWorld}, \hyperpage{87}
+    \subitem {mtrx::mtrxDynamicWorld}, \hyperpage{110}
   \item {AddTorque}
-    \subitem {mtrx::Rigidbody}, \hyperpage{102}
+    \subitem {mtrx::Rigidbody}, \hyperpage{130}
 
   \indexspace
 
   \item {Body}
-    \subitem {mtrx::Body}, \hyperpage{44}
+    \subitem {mtrx::Body}, \hyperpage{49}
   \item {BVHNode}
-    \subitem {mtrx::BVHNode$<$ BoundingVolume $>$}, \hyperpage{51}
+    \subitem {mtrx::BVHNode$<$ BoundingVolume $>$}, \hyperpage{57}
 
   \indexspace
 
   \item {CalculateBodyData}
-    \subitem {mtrx::Rigidbody}, \hyperpage{102}
+    \subitem {mtrx::Rigidbody}, \hyperpage{130}
   \item {CalculateDeltaTime}
-    \subitem {mtrx::GameTime}, \hyperpage{73}
+    \subitem {mtrx::GameTime}, \hyperpage{91}
   \item {CalculateIITWorld}
-    \subitem {mtrx::Rigidbody}, \hyperpage{102}
+    \subitem {mtrx::Rigidbody}, \hyperpage{130}
   \item {CalculateObjToWorldMat}
-    \subitem {mtrx::Rigidbody}, \hyperpage{102}
+    \subitem {mtrx::Rigidbody}, \hyperpage{130}
   \item {CapsuleAABBCollision}
-    \subitem {mtrx::CollisionUtil}, \hyperpage{18}
+    \subitem {mtrx::CollisionUtil}, \hyperpage{19}
   \item {CapsuleCapsuleCollision}
     \subitem {mtrx::CollisionUtil}, \hyperpage{19}
   \item {CapsuleCollider}
-    \subitem {mtrx::CapsuleCollider}, \hyperpage{55, 56}
+    \subitem {mtrx::CapsuleCollider}, \hyperpage{63, 64}
   \item {CapsuleCollisionOptions}
     \subitem {mtrx::ColliderDetectionUtil}, \hyperpage{13}
   \item {CapsuleOOBBCollision}
-    \subitem {mtrx::CollisionUtil}, \hyperpage{19}
+    \subitem {mtrx::CollisionUtil}, \hyperpage{20}
   \item {CheckCollision}
-    \subitem {mtrx::Collider}, \hyperpage{62}
+    \subitem {mtrx::Collider}, \hyperpage{72}
   \item {ClearAccumulators}
-    \subitem {mtrx::Body}, \hyperpage{45}
-    \subitem {mtrx::Rigidbody}, \hyperpage{102}
+    \subitem {mtrx::Body}, \hyperpage{50}
+    \subitem {mtrx::Rigidbody}, \hyperpage{130}
   \item {Collide}
     \subitem {mtrx::ColliderDetectionUtil}, \hyperpage{14}
   \item {Collider}
-    \subitem {mtrx::Collider}, \hyperpage{60, 61}
+    \subitem {mtrx::Collider}, \hyperpage{71}
   \item {Collision}
-    \subitem {mtrx::GJKUtil}, \hyperpage{75}
+    \subitem {mtrx::GJKUtil}, \hyperpage{95}
   \item {CollisionSystem}
-    \subitem {mtrx::CollisionSystem}, \hyperpage{66}
+    \subitem {mtrx::CollisionSystem}, \hyperpage{82}
   \item {ConvexShapeCapsuleCollision}
-    \subitem {mtrx::CollisionUtil}, \hyperpage{20}
-  \item {ConvexShapeCollider}
-    \subitem {mtrx::ConvexShapeCollider}, \hyperpage{68, 69}
-  \item {ConvexShapeCollision}
     \subitem {mtrx::CollisionUtil}, \hyperpage{21}
+  \item {ConvexShapeCollider}
+    \subitem {mtrx::ConvexShapeCollider}, \hyperpage{84--86}
+  \item {ConvexShapeCollision}
+    \subitem {mtrx::CollisionUtil}, \hyperpage{22}
   \item {ConvexShapeCollisionOptions}
     \subitem {mtrx::ColliderDetectionUtil}, \hyperpage{14}
   \item {ConvexShapeSphereCollision}
-    \subitem {mtrx::CollisionUtil}, \hyperpage{22}
+    \subitem {mtrx::CollisionUtil}, \hyperpage{23}
   \item {CreateLogDirectory}
-    \subitem {mtrx::LogManager}, \hyperpage{83}
+    \subitem {mtrx::LogManager}, \hyperpage{105}
   \item {critical}
-    \subitem {mtrx::LogManager}, \hyperpage{83}
+    \subitem {mtrx::LogManager}, \hyperpage{105}
 
   \indexspace
 
   \item {DescendA}
-    \subitem {mtrx::BVHNode$<$ BoundingVolume $>$}, \hyperpage{52}
+    \subitem {mtrx::BVHNode$<$ BoundingVolume $>$}, \hyperpage{58}
 
   \indexspace
 
   \item {Ease}
-    \subitem {mtrx::PhysicsUtil}, \hyperpage{27}
+    \subitem {mtrx::PhysicsUtil}, \hyperpage{29}
   \item {error}
-    \subitem {mtrx::LogManager}, \hyperpage{83}
+    \subitem {mtrx::LogManager}, \hyperpage{106}
 
   \indexspace
 
   \item {FarthestPointInDirection}
-    \subitem {mtrx::GJKUtil}, \hyperpage{76}
+    \subitem {mtrx::GJKUtil}, \hyperpage{96}
   \item {FindTimeDiffSeconds}
-    \subitem {mtrx::GameTime}, \hyperpage{73}
+    \subitem {mtrx::GameTime}, \hyperpage{91}
 
   \indexspace
 
@@ -138,524 +138,522 @@
   \item {GenerateSphereIT}
     \subitem {mtrx}, \hyperpage{11}
   \item {GetAcceleration}
-    \subitem {mtrx::Body}, \hyperpage{45}
+    \subitem {mtrx::Body}, \hyperpage{50}
   \item {GetAccumForces}
-    \subitem {mtrx::Body}, \hyperpage{45}
+    \subitem {mtrx::Body}, \hyperpage{50}
   \item {GetAngularDamping}
-    \subitem {mtrx::Rigidbody}, \hyperpage{103}
+    \subitem {mtrx::Rigidbody}, \hyperpage{131}
   \item {GetAxes}
-    \subitem {mtrx::AABBCollider}, \hyperpage{40}
-    \subitem {mtrx::OOBBCollider}, \hyperpage{91}
+    \subitem {mtrx::AABBCollider}, \hyperpage{44}
+    \subitem {mtrx::OOBBCollider}, \hyperpage{115}
   \item {GetColliderId}
-    \subitem {mtrx::Collider}, \hyperpage{62}
+    \subitem {mtrx::Collider}, \hyperpage{72}
   \item {GetColliderType}
-    \subitem {mtrx::Collider}, \hyperpage{62}
+    \subitem {mtrx::Collider}, \hyperpage{72}
   \item {GetDamping}
-    \subitem {mtrx::Body}, \hyperpage{45}
+    \subitem {mtrx::Body}, \hyperpage{50}
   \item {GetForward}
-    \subitem {mtrx::Collider}, \hyperpage{62}
+    \subitem {mtrx::Collider}, \hyperpage{73}
   \item {GetGrowth}
-    \subitem {mtrx::SphereCollider}, \hyperpage{111}
+    \subitem {mtrx::SphereCollider}, \hyperpage{141}
   \item {GetHalfExtents}
-    \subitem {mtrx::AABBCollider}, \hyperpage{40, 41}
-    \subitem {mtrx::OOBBCollider}, \hyperpage{91}
+    \subitem {mtrx::AABBCollider}, \hyperpage{44}
+    \subitem {mtrx::OOBBCollider}, \hyperpage{115, 116}
   \item {GetHeight}
-    \subitem {mtrx::CapsuleCollider}, \hyperpage{57}
+    \subitem {mtrx::CapsuleCollider}, \hyperpage{64}
   \item {GetInstance}
-    \subitem {mtrx::LogManager}, \hyperpage{84}
+    \subitem {mtrx::LogManager}, \hyperpage{106}
   \item {GetInverseInertiaTensor}
-    \subitem {mtrx::Rigidbody}, \hyperpage{103}
+    \subitem {mtrx::Rigidbody}, \hyperpage{131}
   \item {GetInverseMass}
-    \subitem {mtrx::Body}, \hyperpage{45}
+    \subitem {mtrx::Body}, \hyperpage{50}
   \item {GetIsInfiniteMass}
-    \subitem {mtrx::Body}, \hyperpage{46}
+    \subitem {mtrx::Body}, \hyperpage{51}
   \item {GetIsKinematic}
-    \subitem {mtrx::Rigidbody}, \hyperpage{103}
+    \subitem {mtrx::Rigidbody}, \hyperpage{131}
   \item {GetMass}
-    \subitem {mtrx::Body}, \hyperpage{46}
+    \subitem {mtrx::Body}, \hyperpage{51}
   \item {GetModelMatrix}
-    \subitem {mtrx::ConvexShapeCollider}, \hyperpage{70}
+    \subitem {mtrx::ConvexShapeCollider}, \hyperpage{87}
   \item {GetObjToWorldMat}
-    \subitem {mtrx::Rigidbody}, \hyperpage{103}
+    \subitem {mtrx::Rigidbody}, \hyperpage{131}
   \item {GetOrientation}
-    \subitem {mtrx::Body}, \hyperpage{46}
-    \subitem {mtrx::Collider}, \hyperpage{63}
-    \subitem {mtrx::Transform}, \hyperpage{114}
+    \subitem {mtrx::Body}, \hyperpage{51}
+    \subitem {mtrx::Collider}, \hyperpage{73}
+    \subitem {mtrx::Transform}, \hyperpage{146}
   \item {GetPosition}
-    \subitem {mtrx::Body}, \hyperpage{46}
-    \subitem {mtrx::Collider}, \hyperpage{63}
-    \subitem {mtrx::Transform}, \hyperpage{115}
+    \subitem {mtrx::Body}, \hyperpage{51}
+    \subitem {mtrx::Collider}, \hyperpage{74}
+    \subitem {mtrx::Transform}, \hyperpage{146, 147}
   \item {GetPotentialContacts}
-    \subitem {mtrx::BVHNode$<$ BoundingVolume $>$}, \hyperpage{53}
+    \subitem {mtrx::BVHNode$<$ BoundingVolume $>$}, \hyperpage{59}
   \item {GetRadii}
-    \subitem {mtrx::CapsuleCollider}, \hyperpage{57}
+    \subitem {mtrx::CapsuleCollider}, \hyperpage{65}
   \item {GetRadius}
-    \subitem {mtrx::SphereCollider}, \hyperpage{111}
+    \subitem {mtrx::SphereCollider}, \hyperpage{141}
   \item {GetRotation}
-    \subitem {mtrx::Rigidbody}, \hyperpage{104}
+    \subitem {mtrx::Rigidbody}, \hyperpage{132}
   \item {GetScale}
-    \subitem {mtrx::Collider}, \hyperpage{63}
-    \subitem {mtrx::Transform}, \hyperpage{115}
+    \subitem {mtrx::Collider}, \hyperpage{75}
+    \subitem {mtrx::Transform}, \hyperpage{147}
   \item {GetSide}
-    \subitem {mtrx::Collider}, \hyperpage{63}
+    \subitem {mtrx::Collider}, \hyperpage{75}
   \item {GetSize}
-    \subitem {mtrx::AABBCollider}, \hyperpage{41}
-    \subitem {mtrx::SphereCollider}, \hyperpage{111}
+    \subitem {mtrx::AABBCollider}, \hyperpage{44}
+    \subitem {mtrx::SphereCollider}, \hyperpage{142}
   \item {GetTime}
-    \subitem {mtrx::GameTime}, \hyperpage{73}
+    \subitem {mtrx::GameTime}, \hyperpage{91}
   \item {GetTimeSeconds}
-    \subitem {mtrx::GameTime}, \hyperpage{73}
+    \subitem {mtrx::GameTime}, \hyperpage{92}
   \item {GetTransform}
-    \subitem {mtrx::Body}, \hyperpage{47}
+    \subitem {mtrx::Body}, \hyperpage{52}
   \item {GetUp}
-    \subitem {mtrx::Collider}, \hyperpage{64}
+    \subitem {mtrx::Collider}, \hyperpage{76}
   \item {GetVelocity}
-    \subitem {mtrx::Body}, \hyperpage{47}
+    \subitem {mtrx::Body}, \hyperpage{52}
   \item {GetVertices}
-    \subitem {mtrx::ConvexShapeCollider}, \hyperpage{70}
+    \subitem {mtrx::ConvexShapeCollider}, \hyperpage{87}
 
   \indexspace
 
   \item {info}
-    \subitem {mtrx::LogManager}, \hyperpage{84}
+    \subitem {mtrx::LogManager}, \hyperpage{106}
   \item {Init}
-    \subitem {mtrx::GameTime}, \hyperpage{74}
+    \subitem {mtrx::GameTime}, \hyperpage{92}
   \item {Insert}
-    \subitem {mtrx::BVHNode$<$ BoundingVolume $>$}, \hyperpage{53}
+    \subitem {mtrx::BVHNode$<$ BoundingVolume $>$}, \hyperpage{59}
   \item {Integrate}
-    \subitem {mtrx::Body}, \hyperpage{47}
-    \subitem {mtrx::IIntegratable}, \hyperpage{80}
-    \subitem {mtrx::Rigidbody}, \hyperpage{104}
-    \subitem {mtrx::RigidbodyManager}, \hyperpage{107}
+    \subitem {mtrx::Body}, \hyperpage{52}
+    \subitem {mtrx::IIntegratable}, \hyperpage{102}
+    \subitem {mtrx::Rigidbody}, \hyperpage{132}
+    \subitem {mtrx::RigidbodyManager}, \hyperpage{135}
   \item {IntegrateRigidbodies}
-    \subitem {mtrx::RigidbodyManager}, \hyperpage{107}
+    \subitem {mtrx::RigidbodyManager}, \hyperpage{136}
   \item {IsCollision}
-    \subitem {mtrx::BVHNode$<$ BoundingVolume $>$}, \hyperpage{53}
+    \subitem {mtrx::BVHNode$<$ BoundingVolume $>$}, \hyperpage{60}
   \item {IsConvex}
-    \subitem {mtrx::Collider}, \hyperpage{64}
+    \subitem {mtrx::Collider}, \hyperpage{77}
   \item {IsLeaf}
-    \subitem {mtrx::BVHNode$<$ BoundingVolume $>$}, \hyperpage{54}
+    \subitem {mtrx::BVHNode$<$ BoundingVolume $>$}, \hyperpage{60}
 
   \indexspace
 
   \item {Lerp}
-    \subitem {mtrx::PhysicsUtil}, \hyperpage{28}
+    \subitem {mtrx::PhysicsUtil}, \hyperpage{29}
   \item {LogManager}
-    \subitem {mtrx::LogManager}, \hyperpage{83}
+    \subitem {mtrx::LogManager}, \hyperpage{105}
 
   \indexspace
 
   \item {MinDistanceSquaredLineSegmentRay}
-    \subitem {mtrx::PhysicsUtil}, \hyperpage{28}
+    \subitem {mtrx::PhysicsUtil}, \hyperpage{30}
   \item {MinDistanceSquaredLineSegmentTriangle}
     \subitem {mtrx::PhysicsUtil}, \hyperpage{30}
   \item {MinDistanceSquaredPointAABB}
-    \subitem {mtrx::PhysicsUtil}, \hyperpage{30}
+    \subitem {mtrx::PhysicsUtil}, \hyperpage{31}
   \item {MinDistanceSquaredPointRay}
     \subitem {mtrx::PhysicsUtil}, \hyperpage{31}
   \item {MinDistanceSquaredPointSegment}
-    \subitem {mtrx::PhysicsUtil}, \hyperpage{31}
+    \subitem {mtrx::PhysicsUtil}, \hyperpage{32}
   \item {MinDistanceSquaredPointTriangle}
     \subitem {mtrx::PhysicsUtil}, \hyperpage{32}
   \item {MinDistanceSquaredTwoSegments}
-    \subitem {mtrx::PhysicsUtil}, \hyperpage{32}
-  \item {MinDistanceTwoLines}
     \subitem {mtrx::PhysicsUtil}, \hyperpage{33}
+  \item {MinDistanceTwoLines}
+    \subitem {mtrx::PhysicsUtil}, \hyperpage{34}
   \item {mtrx}, \hyperpage{9}
     \subitem {GenerateCuboidIT}, \hyperpage{11}
     \subitem {GenerateSphereIT}, \hyperpage{11}
     \subitem {RandomInt}, \hyperpage{12}
-  \item {mtrx::AABBCollider}, \hyperpage{39}
-    \subitem {$\sim$AABBCollider}, \hyperpage{40}
-    \subitem {AABBCollider}, \hyperpage{40}
-    \subitem {GetAxes}, \hyperpage{40}
-    \subitem {GetHalfExtents}, \hyperpage{40, 41}
-    \subitem {GetSize}, \hyperpage{41}
-    \subitem {RaycastCollision}, \hyperpage{41}
-    \subitem {SetOrientation}, \hyperpage{42}
-    \subitem {SetScale}, \hyperpage{42}
-  \item {mtrx::Body}, \hyperpage{42}
-    \subitem {$\sim$Body}, \hyperpage{44}
-    \subitem {AddForce}, \hyperpage{44}
-    \subitem {Body}, \hyperpage{44}
-    \subitem {ClearAccumulators}, \hyperpage{45}
-    \subitem {GetAcceleration}, \hyperpage{45}
-    \subitem {GetAccumForces}, \hyperpage{45}
-    \subitem {GetDamping}, \hyperpage{45}
-    \subitem {GetInverseMass}, \hyperpage{45}
-    \subitem {GetIsInfiniteMass}, \hyperpage{46}
-    \subitem {GetMass}, \hyperpage{46}
-    \subitem {GetOrientation}, \hyperpage{46}
-    \subitem {GetPosition}, \hyperpage{46}
-    \subitem {GetTransform}, \hyperpage{47}
-    \subitem {GetVelocity}, \hyperpage{47}
-    \subitem {Integrate}, \hyperpage{47}
-    \subitem {SetAcceleration}, \hyperpage{48}
-    \subitem {SetInverseMass}, \hyperpage{48}
-    \subitem {SetLinearDamping}, \hyperpage{48}
-    \subitem {SetMass}, \hyperpage{48}
-    \subitem {SetPosition}, \hyperpage{50}
-    \subitem {SetVelocity}, \hyperpage{50}
-  \item {mtrx::BVHNode$<$ BoundingVolume $>$}, \hyperpage{50}
-    \subitem {$\sim$BVHNode}, \hyperpage{52}
-    \subitem {BVHNode}, \hyperpage{51}
-    \subitem {DescendA}, \hyperpage{52}
-    \subitem {GetPotentialContacts}, \hyperpage{53}
-    \subitem {Insert}, \hyperpage{53}
-    \subitem {IsCollision}, \hyperpage{53}
-    \subitem {IsLeaf}, \hyperpage{54}
-    \subitem {RecalculateBoundingVolume}, \hyperpage{54}
-  \item {mtrx::CapsuleCollider}, \hyperpage{54}
-    \subitem {$\sim$CapsuleCollider}, \hyperpage{56}
-    \subitem {CapsuleCollider}, \hyperpage{55, 56}
-    \subitem {GetHeight}, \hyperpage{57}
-    \subitem {GetRadii}, \hyperpage{57}
-    \subitem {RaycastCollision}, \hyperpage{57}
-    \subitem {SetHeight}, \hyperpage{58}
-    \subitem {SetOrientation}, \hyperpage{58}
-    \subitem {SetPosition}, \hyperpage{58}
-    \subitem {SetRadii}, \hyperpage{58}
-    \subitem {SetScale}, \hyperpage{59}
-  \item {mtrx::Collider}, \hyperpage{59}
-    \subitem {$\sim$Collider}, \hyperpage{61}
-    \subitem {CheckCollision}, \hyperpage{62}
-    \subitem {Collider}, \hyperpage{60, 61}
-    \subitem {GetColliderId}, \hyperpage{62}
-    \subitem {GetColliderType}, \hyperpage{62}
-    \subitem {GetForward}, \hyperpage{62}
-    \subitem {GetOrientation}, \hyperpage{63}
-    \subitem {GetPosition}, \hyperpage{63}
-    \subitem {GetScale}, \hyperpage{63}
-    \subitem {GetSide}, \hyperpage{63}
-    \subitem {GetUp}, \hyperpage{64}
-    \subitem {IsConvex}, \hyperpage{64}
-    \subitem {RaycastCollision}, \hyperpage{64}
-    \subitem {SetOrientation}, \hyperpage{65}
-    \subitem {SetPosition}, \hyperpage{65}
-    \subitem {SetScale}, \hyperpage{65}
+  \item {mtrx::AABBCollider}, \hyperpage{41}
+    \subitem {$\sim$AABBCollider}, \hyperpage{43}
+    \subitem {AABBCollider}, \hyperpage{43}
+    \subitem {GetAxes}, \hyperpage{44}
+    \subitem {GetHalfExtents}, \hyperpage{44}
+    \subitem {GetSize}, \hyperpage{44}
+    \subitem {RaycastCollision}, \hyperpage{44}
+    \subitem {SetOrientation}, \hyperpage{45}
+    \subitem {SetScale}, \hyperpage{45}
+  \item {mtrx::Body}, \hyperpage{46}
+    \subitem {$\sim$Body}, \hyperpage{49}
+    \subitem {AddForce}, \hyperpage{49}
+    \subitem {Body}, \hyperpage{49}
+    \subitem {ClearAccumulators}, \hyperpage{50}
+    \subitem {GetAcceleration}, \hyperpage{50}
+    \subitem {GetAccumForces}, \hyperpage{50}
+    \subitem {GetDamping}, \hyperpage{50}
+    \subitem {GetInverseMass}, \hyperpage{50}
+    \subitem {GetIsInfiniteMass}, \hyperpage{51}
+    \subitem {GetMass}, \hyperpage{51}
+    \subitem {GetOrientation}, \hyperpage{51}
+    \subitem {GetPosition}, \hyperpage{51}
+    \subitem {GetTransform}, \hyperpage{52}
+    \subitem {GetVelocity}, \hyperpage{52}
+    \subitem {Integrate}, \hyperpage{52}
+    \subitem {SetAcceleration}, \hyperpage{53}
+    \subitem {SetInverseMass}, \hyperpage{53}
+    \subitem {SetLinearDamping}, \hyperpage{53}
+    \subitem {SetMass}, \hyperpage{54}
+    \subitem {SetPosition}, \hyperpage{54}
+    \subitem {SetVelocity}, \hyperpage{54}
+  \item {mtrx::BVHNode$<$ BoundingVolume $>$}, \hyperpage{55}
+    \subitem {$\sim$BVHNode}, \hyperpage{58}
+    \subitem {BVHNode}, \hyperpage{57}
+    \subitem {DescendA}, \hyperpage{58}
+    \subitem {GetPotentialContacts}, \hyperpage{59}
+    \subitem {Insert}, \hyperpage{59}
+    \subitem {IsCollision}, \hyperpage{60}
+    \subitem {IsLeaf}, \hyperpage{60}
+    \subitem {RecalculateBoundingVolume}, \hyperpage{60}
+  \item {mtrx::CapsuleCollider}, \hyperpage{61}
+    \subitem {$\sim$CapsuleCollider}, \hyperpage{64}
+    \subitem {CapsuleCollider}, \hyperpage{63, 64}
+    \subitem {GetHeight}, \hyperpage{64}
+    \subitem {GetRadii}, \hyperpage{65}
+    \subitem {RaycastCollision}, \hyperpage{65}
+    \subitem {SetHeight}, \hyperpage{66}
+    \subitem {SetOrientation}, \hyperpage{66}
+    \subitem {SetPosition}, \hyperpage{67}
+    \subitem {SetRadii}, \hyperpage{67}
+    \subitem {SetScale}, \hyperpage{68}
+  \item {mtrx::Collider}, \hyperpage{68}
+    \subitem {$\sim$Collider}, \hyperpage{71}
+    \subitem {CheckCollision}, \hyperpage{72}
+    \subitem {Collider}, \hyperpage{71}
+    \subitem {GetColliderId}, \hyperpage{72}
+    \subitem {GetColliderType}, \hyperpage{72}
+    \subitem {GetForward}, \hyperpage{73}
+    \subitem {GetOrientation}, \hyperpage{73}
+    \subitem {GetPosition}, \hyperpage{74}
+    \subitem {GetScale}, \hyperpage{75}
+    \subitem {GetSide}, \hyperpage{75}
+    \subitem {GetUp}, \hyperpage{76}
+    \subitem {IsConvex}, \hyperpage{77}
+    \subitem {RaycastCollision}, \hyperpage{77}
+    \subitem {SetOrientation}, \hyperpage{78}
+    \subitem {SetPosition}, \hyperpage{79}
+    \subitem {SetScale}, \hyperpage{80}
   \item {mtrx::ColliderDetectionUtil}, \hyperpage{12}
     \subitem {AABBCollisionOptions}, \hyperpage{13}
     \subitem {CapsuleCollisionOptions}, \hyperpage{13}
     \subitem {Collide}, \hyperpage{14}
     \subitem {ConvexShapeCollisionOptions}, \hyperpage{14}
-    \subitem {OOBBCollisionOptions}, \hyperpage{14}
+    \subitem {OOBBCollisionOptions}, \hyperpage{15}
     \subitem {SphereCollisionOptions}, \hyperpage{15}
-  \item {mtrx::CollisionSystem}, \hyperpage{66}
-    \subitem {CollisionSystem}, \hyperpage{66}
+  \item {mtrx::CollisionSystem}, \hyperpage{81}
+    \subitem {CollisionSystem}, \hyperpage{82}
   \item {mtrx::CollisionUtil}, \hyperpage{16}
     \subitem {AABBCollision}, \hyperpage{17}
-    \subitem {AABBOOBBCollision}, \hyperpage{17}
-    \subitem {CapsuleAABBCollision}, \hyperpage{18}
+    \subitem {AABBOOBBCollision}, \hyperpage{18}
+    \subitem {CapsuleAABBCollision}, \hyperpage{19}
     \subitem {CapsuleCapsuleCollision}, \hyperpage{19}
-    \subitem {CapsuleOOBBCollision}, \hyperpage{19}
-    \subitem {ConvexShapeCapsuleCollision}, \hyperpage{20}
-    \subitem {ConvexShapeCollision}, \hyperpage{21}
-    \subitem {ConvexShapeSphereCollision}, \hyperpage{22}
-    \subitem {OOBBCollision}, \hyperpage{22}
-    \subitem {SphereAABBCollision}, \hyperpage{23}
-    \subitem {SphereCapsuleCollision}, \hyperpage{24}
-    \subitem {SphereOOBBCollision}, \hyperpage{24}
-    \subitem {SphereSphereCollision}, \hyperpage{26}
-  \item {mtrx::ConvexShapeCollider}, \hyperpage{67}
-    \subitem {$\sim$ConvexShapeCollider}, \hyperpage{70}
-    \subitem {ConvexShapeCollider}, \hyperpage{68, 69}
-    \subitem {GetModelMatrix}, \hyperpage{70}
-    \subitem {GetVertices}, \hyperpage{70}
-    \subitem {RaycastCollision}, \hyperpage{71}
-    \subitem {SetOrientation}, \hyperpage{71}
-    \subitem {SetPosition}, \hyperpage{71}
-    \subitem {SetScale}, \hyperpage{72}
-  \item {mtrx::GameTime}, \hyperpage{72}
-    \subitem {CalculateDeltaTime}, \hyperpage{73}
-    \subitem {FindTimeDiffSeconds}, \hyperpage{73}
-    \subitem {GetTime}, \hyperpage{73}
-    \subitem {GetTimeSeconds}, \hyperpage{73}
-    \subitem {Init}, \hyperpage{74}
-    \subitem {Update}, \hyperpage{74}
-  \item {mtrx::GJKUtil}, \hyperpage{74}
-    \subitem {Collision}, \hyperpage{75}
-    \subitem {FarthestPointInDirection}, \hyperpage{76}
-    \subitem {Support}, \hyperpage{77}
-    \subitem {TetrahedronChecks}, \hyperpage{77}
-    \subitem {TetrahedronSimplexUpdate}, \hyperpage{78}
-    \subitem {TriangleSimplexUpdate}, \hyperpage{78}
-    \subitem {UpdateSimplex}, \hyperpage{79}
-  \item {mtrx::IBoundingVolume}, \hyperpage{80}
-  \item {mtrx::IIntegratable}, \hyperpage{80}
-    \subitem {Integrate}, \hyperpage{80}
-  \item {mtrx::IRigidbodyForceGenerator}, \hyperpage{81}
-    \subitem {UpdateForces}, \hyperpage{81}
-  \item {mtrx::LogManager}, \hyperpage{82}
-    \subitem {CreateLogDirectory}, \hyperpage{83}
-    \subitem {critical}, \hyperpage{83}
-    \subitem {error}, \hyperpage{83}
-    \subitem {GetInstance}, \hyperpage{84}
-    \subitem {info}, \hyperpage{84}
-    \subitem {LogManager}, \hyperpage{83}
-    \subitem {trace}, \hyperpage{84}
-    \subitem {warn}, \hyperpage{85}
-  \item {mtrx::mtrxDynamicWorld}, \hyperpage{85}
-    \subitem {$\sim$mtrxDynamicWorld}, \hyperpage{86}
-    \subitem {AddCollider}, \hyperpage{86}
-    \subitem {AddForceGenerator}, \hyperpage{87}
-    \subitem {AddRigidbody}, \hyperpage{87}
-    \subitem {mtrxDynamicWorld}, \hyperpage{86}
-    \subitem {RemoveCollider}, \hyperpage{87}
-    \subitem {RemoveForceGenerator}, \hyperpage{87}
-    \subitem {RemoveRigidbody}, \hyperpage{88}
-    \subitem {Update}, \hyperpage{88}
-  \item {mtrx::ObjectAxes}, \hyperpage{88}
-  \item {mtrx::OOBBCollider}, \hyperpage{89}
-    \subitem {$\sim$OOBBCollider}, \hyperpage{90}
-    \subitem {GetAxes}, \hyperpage{91}
-    \subitem {GetHalfExtents}, \hyperpage{91}
-    \subitem {OOBBCollider}, \hyperpage{90}
-    \subitem {RaycastCollision}, \hyperpage{91}
-    \subitem {SetScale}, \hyperpage{92}
-  \item {mtrx::PhysicsUtil}, \hyperpage{26}
-    \subitem {Ease}, \hyperpage{27}
-    \subitem {Lerp}, \hyperpage{28}
-    \subitem {MinDistanceSquaredLineSegmentRay}, \hyperpage{28}
+    \subitem {CapsuleOOBBCollision}, \hyperpage{20}
+    \subitem {ConvexShapeCapsuleCollision}, \hyperpage{21}
+    \subitem {ConvexShapeCollision}, \hyperpage{22}
+    \subitem {ConvexShapeSphereCollision}, \hyperpage{23}
+    \subitem {OOBBCollision}, \hyperpage{24}
+    \subitem {SphereAABBCollision}, \hyperpage{25}
+    \subitem {SphereCapsuleCollision}, \hyperpage{26}
+    \subitem {SphereOOBBCollision}, \hyperpage{26}
+    \subitem {SphereSphereCollision}, \hyperpage{27}
+  \item {mtrx::ConvexShapeCollider}, \hyperpage{82}
+    \subitem {$\sim$ConvexShapeCollider}, \hyperpage{87}
+    \subitem {ConvexShapeCollider}, \hyperpage{84--86}
+    \subitem {GetModelMatrix}, \hyperpage{87}
+    \subitem {GetVertices}, \hyperpage{87}
+    \subitem {RaycastCollision}, \hyperpage{87}
+    \subitem {SetOrientation}, \hyperpage{88}
+    \subitem {SetPosition}, \hyperpage{88}
+    \subitem {SetScale}, \hyperpage{89}
+  \item {mtrx::GameTime}, \hyperpage{89}
+    \subitem {CalculateDeltaTime}, \hyperpage{91}
+    \subitem {FindTimeDiffSeconds}, \hyperpage{91}
+    \subitem {GetTime}, \hyperpage{91}
+    \subitem {GetTimeSeconds}, \hyperpage{92}
+    \subitem {Init}, \hyperpage{92}
+    \subitem {Update}, \hyperpage{93}
+  \item {mtrx::GJKUtil}, \hyperpage{93}
+    \subitem {Collision}, \hyperpage{95}
+    \subitem {FarthestPointInDirection}, \hyperpage{96}
+    \subitem {Support}, \hyperpage{97}
+    \subitem {TetrahedronChecks}, \hyperpage{98}
+    \subitem {TetrahedronSimplexUpdate}, \hyperpage{99}
+    \subitem {TriangleSimplexUpdate}, \hyperpage{99}
+    \subitem {UpdateSimplex}, \hyperpage{100}
+  \item {mtrx::IBoundingVolume}, \hyperpage{101}
+  \item {mtrx::IIntegratable}, \hyperpage{101}
+    \subitem {Integrate}, \hyperpage{102}
+  \item {mtrx::IRigidbodyForceGenerator}, \hyperpage{102}
+    \subitem {UpdateForces}, \hyperpage{103}
+  \item {mtrx::LogManager}, \hyperpage{103}
+    \subitem {CreateLogDirectory}, \hyperpage{105}
+    \subitem {critical}, \hyperpage{105}
+    \subitem {error}, \hyperpage{106}
+    \subitem {GetInstance}, \hyperpage{106}
+    \subitem {info}, \hyperpage{106}
+    \subitem {LogManager}, \hyperpage{105}
+    \subitem {trace}, \hyperpage{107}
+    \subitem {warn}, \hyperpage{107}
+  \item {mtrx::mtrxDynamicWorld}, \hyperpage{108}
+    \subitem {$\sim$mtrxDynamicWorld}, \hyperpage{109}
+    \subitem {AddCollider}, \hyperpage{109}
+    \subitem {AddForceGenerator}, \hyperpage{110}
+    \subitem {AddRigidbody}, \hyperpage{110}
+    \subitem {mtrxDynamicWorld}, \hyperpage{109}
+    \subitem {RemoveCollider}, \hyperpage{110}
+    \subitem {RemoveForceGenerator}, \hyperpage{110}
+    \subitem {RemoveRigidbody}, \hyperpage{111}
+    \subitem {Update}, \hyperpage{111}
+  \item {mtrx::ObjectAxes}, \hyperpage{111}
+  \item {mtrx::OOBBCollider}, \hyperpage{113}
+    \subitem {$\sim$OOBBCollider}, \hyperpage{115}
+    \subitem {GetAxes}, \hyperpage{115}
+    \subitem {GetHalfExtents}, \hyperpage{115, 116}
+    \subitem {OOBBCollider}, \hyperpage{114, 115}
+    \subitem {SetScale}, \hyperpage{116}
+  \item {mtrx::PhysicsUtil}, \hyperpage{28}
+    \subitem {Ease}, \hyperpage{29}
+    \subitem {Lerp}, \hyperpage{29}
+    \subitem {MinDistanceSquaredLineSegmentRay}, \hyperpage{30}
     \subitem {MinDistanceSquaredLineSegmentTriangle}, \hyperpage{30}
-    \subitem {MinDistanceSquaredPointAABB}, \hyperpage{30}
+    \subitem {MinDistanceSquaredPointAABB}, \hyperpage{31}
     \subitem {MinDistanceSquaredPointRay}, \hyperpage{31}
-    \subitem {MinDistanceSquaredPointSegment}, \hyperpage{31}
+    \subitem {MinDistanceSquaredPointSegment}, \hyperpage{32}
     \subitem {MinDistanceSquaredPointTriangle}, \hyperpage{32}
-    \subitem {MinDistanceSquaredTwoSegments}, \hyperpage{32}
-    \subitem {MinDistanceTwoLines}, \hyperpage{33}
-    \subitem {Slerp}, \hyperpage{33}
+    \subitem {MinDistanceSquaredTwoSegments}, \hyperpage{33}
+    \subitem {MinDistanceTwoLines}, \hyperpage{34}
+    \subitem {Slerp}, \hyperpage{34}
     \subitem {TriangulateConvexShape}, \hyperpage{34}
-    \subitem {TripleCross}, \hyperpage{34}
-  \item {mtrx::PotentialCollision}, \hyperpage{92}
-  \item {mtrx::Ray}, \hyperpage{93}
-    \subitem {$\sim$Ray}, \hyperpage{93}
-    \subitem {Ray}, \hyperpage{93}
-  \item {mtrx::RaycastCollisionUtil}, \hyperpage{35}
-    \subitem {RayBoxCollision}, \hyperpage{35}
-    \subitem {RayCapsuleCollision}, \hyperpage{36}
-    \subitem {RaycastFiltered}, \hyperpage{36}
-    \subitem {RaycastUnfiltered}, \hyperpage{37}
-    \subitem {RaySphereCollision}, \hyperpage{37}
-  \item {mtrx::rb\_BuoyancyForceGenerator}, \hyperpage{94}
-    \subitem {$\sim$rb\_BuoyancyForceGenerator}, \hyperpage{95}
-    \subitem {rb\_BuoyancyForceGenerator}, \hyperpage{94}
-    \subitem {UpdateForces}, \hyperpage{95}
-  \item {mtrx::rb\_ForceGenerationRegistry}, \hyperpage{95}
-    \subitem {$\sim$rb\_ForceGenerationRegistry}, \hyperpage{96}
-    \subitem {AddForceGenerator}, \hyperpage{96}
-    \subitem {rb\_ForceGenerationRegistry}, \hyperpage{96}
-    \subitem {RemoveForceGenerator}, \hyperpage{97}
-    \subitem {UpdateForceGenerators}, \hyperpage{97}
-  \item {mtrx::rb\_GravityForceGenerator}, \hyperpage{98}
-    \subitem {$\sim$rb\_GravityForceGenerator}, \hyperpage{98}
-    \subitem {rb\_GravityForceGenerator}, \hyperpage{98}
-    \subitem {UpdateForces}, \hyperpage{99}
-  \item {mtrx::Rigidbody}, \hyperpage{99}
-    \subitem {$\sim$Rigidbody}, \hyperpage{101}
-    \subitem {AddForceAtPoint}, \hyperpage{101}
-    \subitem {AddTorque}, \hyperpage{102}
-    \subitem {CalculateBodyData}, \hyperpage{102}
-    \subitem {CalculateIITWorld}, \hyperpage{102}
-    \subitem {CalculateObjToWorldMat}, \hyperpage{102}
-    \subitem {ClearAccumulators}, \hyperpage{102}
-    \subitem {GetAngularDamping}, \hyperpage{103}
-    \subitem {GetInverseInertiaTensor}, \hyperpage{103}
-    \subitem {GetIsKinematic}, \hyperpage{103}
-    \subitem {GetObjToWorldMat}, \hyperpage{103}
-    \subitem {GetRotation}, \hyperpage{104}
-    \subitem {Integrate}, \hyperpage{104}
-    \subitem {Rigidbody}, \hyperpage{101}
-    \subitem {SetAngularDamping}, \hyperpage{104}
-    \subitem {SetInverseInertiaTensor}, \hyperpage{105}
-    \subitem {SetIsKinematic}, \hyperpage{105}
-    \subitem {SetOrientation}, \hyperpage{105}
-    \subitem {SetRotation}, \hyperpage{105}
-  \item {mtrx::RigidbodyManager}, \hyperpage{106}
-    \subitem {$\sim$RigidbodyManager}, \hyperpage{107}
-    \subitem {Integrate}, \hyperpage{107}
-    \subitem {IntegrateRigidbodies}, \hyperpage{107}
-    \subitem {RigidbodyManager}, \hyperpage{106}
-    \subitem {UpdateForces}, \hyperpage{107}
-  \item {mtrx::Simplex}, \hyperpage{108}
-  \item {mtrx::SphereCollider}, \hyperpage{108}
-    \subitem {$\sim$SphereCollider}, \hyperpage{110}
-    \subitem {GetGrowth}, \hyperpage{111}
-    \subitem {GetRadius}, \hyperpage{111}
-    \subitem {GetSize}, \hyperpage{111}
-    \subitem {RaycastCollision}, \hyperpage{111}
-    \subitem {SetRadius}, \hyperpage{112}
-    \subitem {SetScale}, \hyperpage{112}
-    \subitem {SphereCollider}, \hyperpage{109, 110}
-  \item {mtrx::Transform}, \hyperpage{113}
-    \subitem {$\sim$Transform}, \hyperpage{114}
-    \subitem {GetOrientation}, \hyperpage{114}
-    \subitem {GetPosition}, \hyperpage{115}
-    \subitem {GetScale}, \hyperpage{115}
-    \subitem {Rotate}, \hyperpage{116}
-    \subitem {SetOrientation}, \hyperpage{117}
-    \subitem {SetPosition}, \hyperpage{117}
-    \subitem {SetScale}, \hyperpage{117}
-    \subitem {Transform}, \hyperpage{114}
-    \subitem {Translate}, \hyperpage{117}
-  \item {mtrx::Triangle}, \hyperpage{118}
+    \subitem {TripleCross}, \hyperpage{35}
+  \item {mtrx::PotentialCollision}, \hyperpage{117}
+  \item {mtrx::Ray}, \hyperpage{118}
+    \subitem {$\sim$Ray}, \hyperpage{119}
+    \subitem {Ray}, \hyperpage{118}
+  \item {mtrx::RaycastCollisionUtil}, \hyperpage{36}
+    \subitem {RayAABBCollision}, \hyperpage{37}
+    \subitem {RayCapsuleCollision}, \hyperpage{37}
+    \subitem {RaycastFiltered}, \hyperpage{38}
+    \subitem {RaycastUnfiltered}, \hyperpage{39}
+    \subitem {RaySphereCollision}, \hyperpage{39}
+  \item {mtrx::rb\_BuoyancyForceGenerator}, \hyperpage{119}
+    \subitem {$\sim$rb\_BuoyancyForceGenerator}, \hyperpage{121}
+    \subitem {rb\_BuoyancyForceGenerator}, \hyperpage{120}
+    \subitem {UpdateForces}, \hyperpage{121}
+  \item {mtrx::rb\_ForceGenerationRegistry}, \hyperpage{121}
+    \subitem {$\sim$rb\_ForceGenerationRegistry}, \hyperpage{123}
+    \subitem {AddForceGenerator}, \hyperpage{123}
+    \subitem {rb\_ForceGenerationRegistry}, \hyperpage{122}
+    \subitem {RemoveForceGenerator}, \hyperpage{123}
+    \subitem {UpdateForceGenerators}, \hyperpage{124}
+  \item {mtrx::rb\_GravityForceGenerator}, \hyperpage{124}
+    \subitem {$\sim$rb\_GravityForceGenerator}, \hyperpage{125}
+    \subitem {rb\_GravityForceGenerator}, \hyperpage{125}
+    \subitem {UpdateForces}, \hyperpage{125}
+  \item {mtrx::Rigidbody}, \hyperpage{126}
+    \subitem {$\sim$Rigidbody}, \hyperpage{129}
+    \subitem {AddForceAtPoint}, \hyperpage{129}
+    \subitem {AddTorque}, \hyperpage{130}
+    \subitem {CalculateBodyData}, \hyperpage{130}
+    \subitem {CalculateIITWorld}, \hyperpage{130}
+    \subitem {CalculateObjToWorldMat}, \hyperpage{130}
+    \subitem {ClearAccumulators}, \hyperpage{130}
+    \subitem {GetAngularDamping}, \hyperpage{131}
+    \subitem {GetInverseInertiaTensor}, \hyperpage{131}
+    \subitem {GetIsKinematic}, \hyperpage{131}
+    \subitem {GetObjToWorldMat}, \hyperpage{131}
+    \subitem {GetRotation}, \hyperpage{132}
+    \subitem {Integrate}, \hyperpage{132}
+    \subitem {Rigidbody}, \hyperpage{129}
+    \subitem {SetAngularDamping}, \hyperpage{132}
+    \subitem {SetInverseInertiaTensor}, \hyperpage{133}
+    \subitem {SetIsKinematic}, \hyperpage{133}
+    \subitem {SetOrientation}, \hyperpage{133}
+    \subitem {SetRotation}, \hyperpage{134}
+  \item {mtrx::RigidbodyManager}, \hyperpage{134}
+    \subitem {$\sim$RigidbodyManager}, \hyperpage{135}
+    \subitem {Integrate}, \hyperpage{135}
+    \subitem {IntegrateRigidbodies}, \hyperpage{136}
+    \subitem {RigidbodyManager}, \hyperpage{135}
+    \subitem {UpdateForces}, \hyperpage{136}
+  \item {mtrx::Simplex}, \hyperpage{136}
+  \item {mtrx::SphereCollider}, \hyperpage{137}
+    \subitem {$\sim$SphereCollider}, \hyperpage{141}
+    \subitem {GetGrowth}, \hyperpage{141}
+    \subitem {GetRadius}, \hyperpage{141}
+    \subitem {GetSize}, \hyperpage{142}
+    \subitem {RaycastCollision}, \hyperpage{142}
+    \subitem {SetRadius}, \hyperpage{143}
+    \subitem {SetScale}, \hyperpage{143}
+    \subitem {SphereCollider}, \hyperpage{139, 140}
+  \item {mtrx::Transform}, \hyperpage{144}
+    \subitem {$\sim$Transform}, \hyperpage{145}
+    \subitem {GetOrientation}, \hyperpage{146}
+    \subitem {GetPosition}, \hyperpage{146, 147}
+    \subitem {GetScale}, \hyperpage{147}
+    \subitem {Rotate}, \hyperpage{148}
+    \subitem {SetOrientation}, \hyperpage{149}
+    \subitem {SetPosition}, \hyperpage{149}
+    \subitem {SetScale}, \hyperpage{150}
+    \subitem {Transform}, \hyperpage{145}
+    \subitem {Translate}, \hyperpage{150}
+  \item {mtrx::Triangle}, \hyperpage{150}
   \item {mtrxDynamicWorld}
-    \subitem {mtrx::mtrxDynamicWorld}, \hyperpage{86}
+    \subitem {mtrx::mtrxDynamicWorld}, \hyperpage{109}
 
   \indexspace
 
   \item {OOBBCollider}
-    \subitem {mtrx::OOBBCollider}, \hyperpage{90}
+    \subitem {mtrx::OOBBCollider}, \hyperpage{114, 115}
   \item {OOBBCollision}
-    \subitem {mtrx::CollisionUtil}, \hyperpage{22}
+    \subitem {mtrx::CollisionUtil}, \hyperpage{24}
   \item {OOBBCollisionOptions}
-    \subitem {mtrx::ColliderDetectionUtil}, \hyperpage{14}
+    \subitem {mtrx::ColliderDetectionUtil}, \hyperpage{15}
 
   \indexspace
 
   \item {RandomInt}
     \subitem {mtrx}, \hyperpage{12}
   \item {Ray}
-    \subitem {mtrx::Ray}, \hyperpage{93}
-  \item {RayBoxCollision}
-    \subitem {mtrx::RaycastCollisionUtil}, \hyperpage{35}
+    \subitem {mtrx::Ray}, \hyperpage{118}
+  \item {RayAABBCollision}
+    \subitem {mtrx::RaycastCollisionUtil}, \hyperpage{37}
   \item {RayCapsuleCollision}
-    \subitem {mtrx::RaycastCollisionUtil}, \hyperpage{36}
+    \subitem {mtrx::RaycastCollisionUtil}, \hyperpage{37}
   \item {RaycastCollision}
-    \subitem {mtrx::AABBCollider}, \hyperpage{41}
-    \subitem {mtrx::CapsuleCollider}, \hyperpage{57}
-    \subitem {mtrx::Collider}, \hyperpage{64}
-    \subitem {mtrx::ConvexShapeCollider}, \hyperpage{71}
-    \subitem {mtrx::OOBBCollider}, \hyperpage{91}
-    \subitem {mtrx::SphereCollider}, \hyperpage{111}
+    \subitem {mtrx::AABBCollider}, \hyperpage{44}
+    \subitem {mtrx::CapsuleCollider}, \hyperpage{65}
+    \subitem {mtrx::Collider}, \hyperpage{77}
+    \subitem {mtrx::ConvexShapeCollider}, \hyperpage{87}
+    \subitem {mtrx::SphereCollider}, \hyperpage{142}
   \item {RaycastFiltered}
-    \subitem {mtrx::RaycastCollisionUtil}, \hyperpage{36}
+    \subitem {mtrx::RaycastCollisionUtil}, \hyperpage{38}
   \item {RaycastUnfiltered}
-    \subitem {mtrx::RaycastCollisionUtil}, \hyperpage{37}
+    \subitem {mtrx::RaycastCollisionUtil}, \hyperpage{39}
   \item {RaySphereCollision}
-    \subitem {mtrx::RaycastCollisionUtil}, \hyperpage{37}
+    \subitem {mtrx::RaycastCollisionUtil}, \hyperpage{39}
   \item {rb\_BuoyancyForceGenerator}
-    \subitem {mtrx::rb\_BuoyancyForceGenerator}, \hyperpage{94}
+    \subitem {mtrx::rb\_BuoyancyForceGenerator}, \hyperpage{120}
   \item {rb\_ForceGenerationRegistry}
-    \subitem {mtrx::rb\_ForceGenerationRegistry}, \hyperpage{96}
+    \subitem {mtrx::rb\_ForceGenerationRegistry}, \hyperpage{122}
   \item {rb\_GravityForceGenerator}
-    \subitem {mtrx::rb\_GravityForceGenerator}, \hyperpage{98}
+    \subitem {mtrx::rb\_GravityForceGenerator}, \hyperpage{125}
   \item {RecalculateBoundingVolume}
-    \subitem {mtrx::BVHNode$<$ BoundingVolume $>$}, \hyperpage{54}
+    \subitem {mtrx::BVHNode$<$ BoundingVolume $>$}, \hyperpage{60}
   \item {RemoveCollider}
-    \subitem {mtrx::mtrxDynamicWorld}, \hyperpage{87}
+    \subitem {mtrx::mtrxDynamicWorld}, \hyperpage{110}
   \item {RemoveForceGenerator}
-    \subitem {mtrx::mtrxDynamicWorld}, \hyperpage{87}
-    \subitem {mtrx::rb\_ForceGenerationRegistry}, \hyperpage{97}
+    \subitem {mtrx::mtrxDynamicWorld}, \hyperpage{110}
+    \subitem {mtrx::rb\_ForceGenerationRegistry}, \hyperpage{123}
   \item {RemoveRigidbody}
-    \subitem {mtrx::mtrxDynamicWorld}, \hyperpage{88}
+    \subitem {mtrx::mtrxDynamicWorld}, \hyperpage{111}
   \item {Rigidbody}
-    \subitem {mtrx::Rigidbody}, \hyperpage{101}
+    \subitem {mtrx::Rigidbody}, \hyperpage{129}
   \item {RigidbodyManager}
-    \subitem {mtrx::RigidbodyManager}, \hyperpage{106}
+    \subitem {mtrx::RigidbodyManager}, \hyperpage{135}
   \item {Rotate}
-    \subitem {mtrx::Transform}, \hyperpage{116}
+    \subitem {mtrx::Transform}, \hyperpage{148}
 
   \indexspace
 
   \item {SetAcceleration}
-    \subitem {mtrx::Body}, \hyperpage{48}
+    \subitem {mtrx::Body}, \hyperpage{53}
   \item {SetAngularDamping}
-    \subitem {mtrx::Rigidbody}, \hyperpage{104}
+    \subitem {mtrx::Rigidbody}, \hyperpage{132}
   \item {SetHeight}
-    \subitem {mtrx::CapsuleCollider}, \hyperpage{58}
+    \subitem {mtrx::CapsuleCollider}, \hyperpage{66}
   \item {SetInverseInertiaTensor}
-    \subitem {mtrx::Rigidbody}, \hyperpage{105}
+    \subitem {mtrx::Rigidbody}, \hyperpage{133}
   \item {SetInverseMass}
-    \subitem {mtrx::Body}, \hyperpage{48}
+    \subitem {mtrx::Body}, \hyperpage{53}
   \item {SetIsKinematic}
-    \subitem {mtrx::Rigidbody}, \hyperpage{105}
+    \subitem {mtrx::Rigidbody}, \hyperpage{133}
   \item {SetLinearDamping}
-    \subitem {mtrx::Body}, \hyperpage{48}
+    \subitem {mtrx::Body}, \hyperpage{53}
   \item {SetMass}
-    \subitem {mtrx::Body}, \hyperpage{48}
+    \subitem {mtrx::Body}, \hyperpage{54}
   \item {SetOrientation}
-    \subitem {mtrx::AABBCollider}, \hyperpage{42}
-    \subitem {mtrx::CapsuleCollider}, \hyperpage{58}
-    \subitem {mtrx::Collider}, \hyperpage{65}
-    \subitem {mtrx::ConvexShapeCollider}, \hyperpage{71}
-    \subitem {mtrx::Rigidbody}, \hyperpage{105}
-    \subitem {mtrx::Transform}, \hyperpage{117}
+    \subitem {mtrx::AABBCollider}, \hyperpage{45}
+    \subitem {mtrx::CapsuleCollider}, \hyperpage{66}
+    \subitem {mtrx::Collider}, \hyperpage{78}
+    \subitem {mtrx::ConvexShapeCollider}, \hyperpage{88}
+    \subitem {mtrx::Rigidbody}, \hyperpage{133}
+    \subitem {mtrx::Transform}, \hyperpage{149}
   \item {SetPosition}
-    \subitem {mtrx::Body}, \hyperpage{50}
-    \subitem {mtrx::CapsuleCollider}, \hyperpage{58}
-    \subitem {mtrx::Collider}, \hyperpage{65}
-    \subitem {mtrx::ConvexShapeCollider}, \hyperpage{71}
-    \subitem {mtrx::Transform}, \hyperpage{117}
+    \subitem {mtrx::Body}, \hyperpage{54}
+    \subitem {mtrx::CapsuleCollider}, \hyperpage{67}
+    \subitem {mtrx::Collider}, \hyperpage{79}
+    \subitem {mtrx::ConvexShapeCollider}, \hyperpage{88}
+    \subitem {mtrx::Transform}, \hyperpage{149}
   \item {SetRadii}
-    \subitem {mtrx::CapsuleCollider}, \hyperpage{58}
+    \subitem {mtrx::CapsuleCollider}, \hyperpage{67}
   \item {SetRadius}
-    \subitem {mtrx::SphereCollider}, \hyperpage{112}
+    \subitem {mtrx::SphereCollider}, \hyperpage{143}
   \item {SetRotation}
-    \subitem {mtrx::Rigidbody}, \hyperpage{105}
+    \subitem {mtrx::Rigidbody}, \hyperpage{134}
   \item {SetScale}
-    \subitem {mtrx::AABBCollider}, \hyperpage{42}
-    \subitem {mtrx::CapsuleCollider}, \hyperpage{59}
-    \subitem {mtrx::Collider}, \hyperpage{65}
-    \subitem {mtrx::ConvexShapeCollider}, \hyperpage{72}
-    \subitem {mtrx::OOBBCollider}, \hyperpage{92}
-    \subitem {mtrx::SphereCollider}, \hyperpage{112}
-    \subitem {mtrx::Transform}, \hyperpage{117}
+    \subitem {mtrx::AABBCollider}, \hyperpage{45}
+    \subitem {mtrx::CapsuleCollider}, \hyperpage{68}
+    \subitem {mtrx::Collider}, \hyperpage{80}
+    \subitem {mtrx::ConvexShapeCollider}, \hyperpage{89}
+    \subitem {mtrx::OOBBCollider}, \hyperpage{116}
+    \subitem {mtrx::SphereCollider}, \hyperpage{143}
+    \subitem {mtrx::Transform}, \hyperpage{150}
   \item {SetVelocity}
-    \subitem {mtrx::Body}, \hyperpage{50}
+    \subitem {mtrx::Body}, \hyperpage{54}
   \item {Slerp}
-    \subitem {mtrx::PhysicsUtil}, \hyperpage{33}
+    \subitem {mtrx::PhysicsUtil}, \hyperpage{34}
   \item {SphereAABBCollision}
-    \subitem {mtrx::CollisionUtil}, \hyperpage{23}
+    \subitem {mtrx::CollisionUtil}, \hyperpage{25}
   \item {SphereCapsuleCollision}
-    \subitem {mtrx::CollisionUtil}, \hyperpage{24}
+    \subitem {mtrx::CollisionUtil}, \hyperpage{26}
   \item {SphereCollider}
-    \subitem {mtrx::SphereCollider}, \hyperpage{109, 110}
+    \subitem {mtrx::SphereCollider}, \hyperpage{139, 140}
   \item {SphereCollisionOptions}
     \subitem {mtrx::ColliderDetectionUtil}, \hyperpage{15}
   \item {SphereOOBBCollision}
-    \subitem {mtrx::CollisionUtil}, \hyperpage{24}
-  \item {SphereSphereCollision}
     \subitem {mtrx::CollisionUtil}, \hyperpage{26}
+  \item {SphereSphereCollision}
+    \subitem {mtrx::CollisionUtil}, \hyperpage{27}
   \item {Support}
-    \subitem {mtrx::GJKUtil}, \hyperpage{77}
+    \subitem {mtrx::GJKUtil}, \hyperpage{97}
 
   \indexspace
 
   \item {TetrahedronChecks}
-    \subitem {mtrx::GJKUtil}, \hyperpage{77}
+    \subitem {mtrx::GJKUtil}, \hyperpage{98}
   \item {TetrahedronSimplexUpdate}
-    \subitem {mtrx::GJKUtil}, \hyperpage{78}
+    \subitem {mtrx::GJKUtil}, \hyperpage{99}
   \item {trace}
-    \subitem {mtrx::LogManager}, \hyperpage{84}
+    \subitem {mtrx::LogManager}, \hyperpage{107}
   \item {Transform}
-    \subitem {mtrx::Transform}, \hyperpage{114}
+    \subitem {mtrx::Transform}, \hyperpage{145}
   \item {Translate}
-    \subitem {mtrx::Transform}, \hyperpage{117}
+    \subitem {mtrx::Transform}, \hyperpage{150}
   \item {TriangleSimplexUpdate}
-    \subitem {mtrx::GJKUtil}, \hyperpage{78}
+    \subitem {mtrx::GJKUtil}, \hyperpage{99}
   \item {TriangulateConvexShape}
     \subitem {mtrx::PhysicsUtil}, \hyperpage{34}
   \item {TripleCross}
-    \subitem {mtrx::PhysicsUtil}, \hyperpage{34}
+    \subitem {mtrx::PhysicsUtil}, \hyperpage{35}
 
   \indexspace
 
   \item {Update}
-    \subitem {mtrx::GameTime}, \hyperpage{74}
-    \subitem {mtrx::mtrxDynamicWorld}, \hyperpage{88}
+    \subitem {mtrx::GameTime}, \hyperpage{93}
+    \subitem {mtrx::mtrxDynamicWorld}, \hyperpage{111}
   \item {UpdateForceGenerators}
-    \subitem {mtrx::rb\_ForceGenerationRegistry}, \hyperpage{97}
+    \subitem {mtrx::rb\_ForceGenerationRegistry}, \hyperpage{124}
   \item {UpdateForces}
-    \subitem {mtrx::IRigidbodyForceGenerator}, \hyperpage{81}
-    \subitem {mtrx::rb\_BuoyancyForceGenerator}, \hyperpage{95}
-    \subitem {mtrx::rb\_GravityForceGenerator}, \hyperpage{99}
-    \subitem {mtrx::RigidbodyManager}, \hyperpage{107}
+    \subitem {mtrx::IRigidbodyForceGenerator}, \hyperpage{103}
+    \subitem {mtrx::rb\_BuoyancyForceGenerator}, \hyperpage{121}
+    \subitem {mtrx::rb\_GravityForceGenerator}, \hyperpage{125}
+    \subitem {mtrx::RigidbodyManager}, \hyperpage{136}
   \item {UpdateSimplex}
-    \subitem {mtrx::GJKUtil}, \hyperpage{79}
+    \subitem {mtrx::GJKUtil}, \hyperpage{100}
 
   \indexspace
 
   \item {warn}
-    \subitem {mtrx::LogManager}, \hyperpage{85}
+    \subitem {mtrx::LogManager}, \hyperpage{107}
 
 \end{theindex}
