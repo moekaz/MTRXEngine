@@ -1,6 +1,6 @@
 #include <PrecompiledHeader.h>
 
-#define DEMO 4
+#define DEMO 3
 
 #if DEMO == 1
 	#include <../Demos/ProjectileDemo.h>
@@ -21,14 +21,6 @@ int main()
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 	_CrtSetReportMode(_CRT_ERROR, _CRTDBG_MODE_DEBUG);
 #endif
-
-	// Add these to check allocs
-	//_CrtSetBreakAlloc(509);
-	//_CrtSetBreakAlloc(363);
-	//_CrtSetBreakAlloc(362);
-	//_CrtSetBreakAlloc(361);
-	//_CrtSetBreakAlloc(358);
-	//_CrtSetBreakAlloc(357);
 
 	// Demo application that we want to run
 	std::unique_ptr<Demo> app; 
